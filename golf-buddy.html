@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golf Buddy - AI Golf Coach | Gabriella Systems</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Gabriella Systems</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Products</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-content">
+        <!-- Hero Section -->
+        <section style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 6rem 0 4rem; text-align: center;">
+            <div class="container">
+                <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 2rem;">
+                    <div style="background: rgba(255,255,255,0.2); width: 100px; height: 100px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 2rem; backdrop-filter: blur(10px);">
+                        <i class="fas fa-golf-ball" style="font-size: 3rem; color: white;"></i>
+                    </div>
+                    <div style="text-align: left;">
+                        <h1 style="font-size: 3.5rem; margin-bottom: 0.5rem; font-weight: 700;">Golf Buddy</h1>
+                        <p style="font-size: 1.3rem; opacity: 0.9; margin: 0;">Your AI-Powered Golf Coach</p>
+                    </div>
+                </div>
+                <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto 2rem; opacity: 0.9; line-height: 1.6;">
+                    Transform your golf game with professional-grade swing analysis powered by advanced computer vision technology. 
+                    Get the coaching insights that used to cost $200+ per hour, now available 24/7 at your fingertips.
+                </p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="#features" class="cta-button" style="background: white; color: #667eea; padding: 15px 30px;">
+                        Explore Features
+                    </a>
+                    <a href="#demo" class="cta-button" style="background: rgba(255,255,255,0.2); backdrop-filter: blur(10px); padding: 15px 30px;">
+                        Watch Demo
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Benefits -->
+        <section style="padding: 4rem 0; background: #f8f9fa;">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 3rem; color: #2c3e50;">Why Golf Buddy is a Game Changer</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center;">
+                        <i class="fas fa-dollar-sign" style="font-size: 2.5rem; color: #27ae60; margin-bottom: 1rem;"></i>
+                        <h3>Save Thousands on Coaching</h3>
+                        <p style="color: #666;">Replace expensive $150-250/hour golf lessons with unlimited AI analysis for a fraction of the cost.</p>
+                    </div>
+                    <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center;">
+                        <i class="fas fa-eye" style="font-size: 2.5rem; color: #3498db; margin-bottom: 1rem;"></i>
+                        <h3>See What You Can't See</h3>
+                        <p style="color: #666;">Computer vision captures micro-movements and details that even professional coaches might miss.</p>
+                    </div>
+                    <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center;">
+                        <i class="fas fa-clock" style="font-size: 2.5rem; color: #e74c3c; margin-bottom: 1rem;"></i>
+                        <h3>Practice Anytime, Anywhere</h3>
+                        <p style="color: #666;">No scheduling conflicts or travel time. Get instant feedback whenever you want to practice.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" style="padding: 4rem 0;">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 3rem; color: #2c3e50;">Powerful Features Powered by Computer Vision</h2>
+                
+                <div style="display: grid; gap: 3rem;">
+                    <!-- Feature 1 -->
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+                        <div>
+                            <h3 style="color: #667eea; margin-bottom: 1rem; font-size: 1.8rem;">Real-Time Swing Analysis</h3>
+                            <p style="color: #666; font-size: 1.1rem; margin-bottom: 1.5rem; line-height: 1.6;">
+                                Upload your swing video and watch as Golf Buddy identifies every critical component: 
+                                backswing plane, impact position, follow-through, and timing. Our computer vision 
+                                algorithms process thousands of data points to give you professional-level insights.
+                            </p>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="padding: 0.5rem 0; color: #666;"><i class="fas fa-check" style="color: #27ae60; margin-right: 0.5rem;"></i>Swing plane analysis with 3D visualization</li>
+                                <li style="padding: 0.5rem 0; color: #666;"><i class="fas fa-check" style="color: #27ae60; margin-right: 0.5rem;"></i>Club path and face angle tracking</li>
+                                <li style="padding: 0.5rem 0; color: #666;"><i class="fas fa-check" style="color: #27ae60; margin-right: 0.5rem;"></i>Tempo and rhythm evaluation</li>
+                                <li style="padding: 0.5rem 0; color: #666;"><i class="fas fa-check" style="color: #27ae60; margin-right: 0.5rem;"></i>Body posture and alignment assessment</li>
+                            </ul>
+                        </div>
+                        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); height: 300px; border-radius: 15px; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-video" style="font-size: 4rem; color: white; opacity: 0.8;"></i>
+                        </div>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+                        <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); height: 300px; border-radius: 15px; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-chart-line" style="font-size: 4rem; color: white; opacity: 0.8;"></i>
+                        </div>
+                        <div>
+                            <h3 style="color: #f5576c; margin-bottom: 1rem; font-size: 1.8rem;">Performance Dashboard</h3>
+                            <p style="color: #666; font-size: 1.1rem; margin-bottom: 1.5rem; line-height: 1.6;">
+                                Track your improvement over time with comprehensive analytics. See your consistency scores, 
+                                swing speed trends, and compare your progress against professional benchmarks. 
+                                Our AI identifies patterns and suggests targeted areas for improvement.
+                            </p>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="padding: 0.5rem 0; color: #666;"><i class="fas fa-check" style="color: #27ae60; margin-right: 0.5rem;"></i>Swing consistency scoring</li>
+                                <li style="padding: 0.5rem 0; color: #666;"><i class="fas fa-check" style="color: #27ae60; margin-right: 0.5rem;"></i>Progress tracking over time</li>
+                                <li style="padding: 0.5rem 0; color: #666;"><i class="fas fa-check" style="color: #27ae60; margin-right: 0.5rem;"></i>Comparison with pro golfers</li>
+                                <li style="padding: 0.5rem 0; color: #666;"><i class="fas fa-check" style="color: #27ae60; margin-right: 0.5rem;"></i>Weakness identification</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+                        <div>
+                            <h3 style="color: #4facfe; margin-bottom: 1rem; font-size: 1.8rem;">Personalized Training Plans</h3>
+                            <p style="color: #666; font-size: 1.1rem; margin-bottom: 1.5rem; line-height: 1.6;">
+                                Based on your swing analysis, Golf Buddy creates custom training plans with specific drills 
+                                and exercises. Each recommendation is tailored to address your unique swing characteristics 
+                                and skill level, ensuring maximum improvement efficiency.
+                            </p>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="padding: 0.5rem 0; color: #666;"><i class="fas fa-check" style="color: #27ae60; margin-right: 0.5rem;"></i>Custom drill recommendations</li>
+                                <li style="padding: 0.5rem 0; color: #666;"><i class="fas fa-check" style="color: #27ae60; margin-right: 0.5rem;"></i>Step-by-step improvement guides</li>
+                                <li style="padding: 0.5rem 0; color: #666;"><i class="fas fa-check" style="color: #27ae60; margin-right: 0.5rem;"></i>Skill-level adaptive training</li>
+                                <li style="padding: 0.5rem 0; color: #666;"><i class="fas fa-check" style="color: #27ae60; margin-right: 0.5rem;"></i>Practice session planning</li>
+                            </ul>
+                        </div>
+                        <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); height: 300px; border-radius: 15px; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-clipboard-list" style="font-size: 4rem; color: white; opacity: 0.8;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section style="padding: 4rem 0; background: #f8f9fa;">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 3rem; color: #2c3e50;">Choose Your Golf Buddy Plan</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 1000px; margin: 0 auto;">
+                    
+                    <!-- Basic Plan -->
+                    <div style="background: white; padding: 2.5rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center;">
+                        <h3 style="color: #2c3e50; margin-bottom: 1rem;">Basic</h3>
+                        <div style="margin-bottom: 2rem;">
+                            <span style="font-size: 2.5rem; font-weight: 700; color: #3498db;">$29</span>
+                            <span style="color: #666;">/month</span>
+                        </div>
+                        <ul style="list-style: none; padding: 0; margin-bottom: 2rem; text-align: left;">
+                            <li style="padding: 0.5rem 0; color: #666;"><i class="fas fa-check" style="color: #27ae60; margin-right: 0.5rem;"></i>10 swing analyses per month</li>
+                            <li style="padding: 0.5rem 0; color: #666;"><i class="fas fa-check" style="color: #27ae60; margin-right: 0.5rem;"></i>Basic performance tracking</li>
+                            <li style="padding: 0.5rem 0; color: #666;"><i class="fas fa-check" style="color: #27ae60; margin-right: 0.5rem;"></i>Mobile app access</li>
+                            <li style="padding: 0.5rem 0; color: #666;"><i class="fas fa-check" style="color: #27ae60; margin-right: 0.5rem;"></i>Email support</li>
+                        </ul>
+                        <p style="color: #666; font-size: 0.9rem; margin-bottom: 1.5rem;">Perfect for casual golfers</p>
+                        <a href="contact.html" class="cta-button" style="width: 100%; display: block; text-align: center;">Get Started</a>
+                    </div>
+
+                    <!-- Pro Plan -->
+                    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2.5rem; border-radius: 15px; box-shadow: 0 15px 35px rgba(0,0,0,0.2); text-align: center; transform: scale(1.05); position: relative;">
+                        <div style="background: #f39c12; color: white; padding: 0.5rem 1rem; border-radius: 15px; position: absolute; top: -10px; left: 50%; transform: translateX(-50%); font-size: 0.8rem; font-weight: 600;">MOST POPULAR</div>
+                        <h3 style="margin-bottom: 1rem;">Pro</h3>
+                        <div style="margin-bottom: 2rem;">
+                            <span style="font-size: 2.5rem; font-weight: 700;">$79</span>
+                            <span style="opacity: 0.8;">/month</span>
+                        </div>
+                        <ul style="list-style: none; padding: 0; margin-bottom: 2rem; text-align: left;">
+                            <li style="padding: 0.5rem 0; opacity: 0.9;"><i class="fas fa-check" style="margin-right: 0.5rem;"></i>Unlimited swing analyses</li>
+                            <li style="padding: 0.5rem 0; opacity: 0.9;"><i class="fas fa-check" style="margin-right: 0.5rem;"></i>Advanced 3D visualization</li>
+                            <li style="padding: 0.5rem 0; opacity: 0.9;"><i class="fas fa-check" style="margin-right: 0.5rem;"></i>Personalized training plans</li>
+                            <li style="padding: 0.5rem 0; opacity: 0.9;"><i class="fas fa-check" style="margin-right: 0.5rem;"></i>Progress comparisons</li>
+                            <li style="padding: 0.5rem 0; opacity: 0.9;"><i class="fas fa-check" style="margin-right: 0.5rem;"></i>Priority support</li>
+                        </ul>
+                        <p style="opacity: 0.8; font-size: 0.9rem; margin-bottom: 1.5rem;">For serious golfers</p>
+                        <a href="contact.html" class="cta-button" style="background: white; color: #667eea; width: 100%; display: block; text-align: center;">Get Started</a>
+                    </div>
+
+                    <!-- Enterprise Plan -->
+                    <div style="background: white; padding: 2.5rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center;">
+                        <h3 style="color: #2c3e50; margin-bottom: 1rem;">Enterprise</h3>
+                        <div style="margin-bottom: 2rem;">
+                            <span style="font-size: 2.5rem; font-weight: 700; color: #e74c3c;">$199</span>
+                            <span style="color: #666;">/month</span>
+                        </div>
+                        <ul style="list-style: none; padding: 0; margin-bottom: 2rem; text-align: left;">
+                            <li style="padding: 0.5rem 0; color: #666;"><i class="fas fa-check" style="color: #27ae60; margin-right: 0.5rem;"></i>Everything in Pro</li>
+                            <li style="padding: 0.5rem 0; color: #666;"><i class="fas fa-check" style="color: #27ae60; margin-right: 0.5rem;"></i>Multi-student management</li>
+                            <li style="padding: 0.5rem 0; color: #666;"><i class="fas fa-check" style="color: #27ae60; margin-right: 0.5rem;"></i>Instructor tools</li>
+                            <li style="padding: 0.5rem 0; color: #666;"><i class="fas fa-check" style="color: #27ae60; margin-right: 0.5rem;"></i>White-label options</li>
+                            <li style="padding: 0.5rem 0; color: #666;"><i class="fas fa-check" style="color: #27ae60; margin-right: 0.5rem;"></i>24/7 phone support</li>
+                        </ul>
+                        <p style="color: #666; font-size: 0.9rem; margin-bottom: 1.5rem;">For golf instructors & academies</p>
+                        <a href="contact.html" class="cta-button" style="width: 100%; display: block; text-align: center;">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section style="padding: 4rem 0; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center;">
+            <div class="container">
+                <h2 style="margin-bottom: 1rem;">Ready to Transform Your Golf Game?</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    Join thousands of golfers who have improved their game with Golf Buddy's AI-powered analysis. 
+                    Start your journey to better golf today.
+                </p>
+                <a href="contact.html" class="cta-button" style="background: white; color: #667eea; padding: 15px 40px; font-size: 1.1rem;">
+                    Start Free Trial
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Gabriella Systems. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    
+    <style>
+        @media (max-width: 768px) {
+            .products-grid {
+                grid-template-columns: 1fr !important;
+            }
+            
+            section div[style*="grid-template-columns: 1fr 1fr"] {
+                grid-template-columns: 1fr !important;
+                gap: 2rem !important;
+            }
+            
+            .hero-content > div {
+                flex-direction: column !important;
+                text-align: center !important;
+            }
+            
+            .hero-content > div > div:first-child {
+                margin-right: 0 !important;
+                margin-bottom: 1rem !important;
+            }
+            
+            .hero-content > div > div:last-child {
+                text-align: center !important;
+            }
+        }
+    </style>
+</body>
+</html>
