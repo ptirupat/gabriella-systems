@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Products - Gabriella Systems</title>
+    <title>Platform - Gabriella Systems Cricket Vision</title>
+    <meta name="description" content="Cricket Vision platform for bowling-machine-mounted batsman analysis.">
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -16,122 +17,193 @@
             <div class="nav-menu" id="nav-menu">
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="about.html" class="nav-link">About</a>
-                <a href="services.html" class="nav-link active">Products</a>
+                <a href="services.html" class="nav-link active">Platform</a>
+                <a href="demo.html" class="nav-link">Demo</a>
                 <a href="contact.html" class="nav-link">Contact</a>
             </div>
-            <div class="hamburger" id="hamburger">
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
         </div>
     </nav>
 
-    <main class="page-content">
-        <div class="container">
-            <h1>Our Products</h1>
-            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem; color: #666;">
-                Cutting-edge computer vision products designed to revolutionize sports training and analysis
-            </p>
-            
-            <div class="products-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 3rem; margin-bottom: 4rem;">
-                <div class="product-card" style="background: white; border-radius: 15px; padding: 2.5rem; box-shadow: 0 15px 35px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s ease;">
-                    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 2rem;">
-                        <i class="fas fa-golf-ball" style="font-size: 2.5rem; color: white;"></i>
-                    </div>
-                    <h2 style="color: #2c3e50; margin-bottom: 1rem;">Golf Buddy</h2>
-                    <p style="color: #666; font-size: 1.1rem; margin-bottom: 2rem; line-height: 1.6;">
-                        Your AI-powered golf coach that uses advanced computer vision to automatically analyze every aspect 
-                        of your swing. Get instant shot classification, pose estimation, club detection, speed analysis, 
-                        and distance predictions - all from a simple video upload.
-                    </p>
-                    <div style="margin-bottom: 2rem;">
-                        <h4 style="color: #3498db; margin-bottom: 1rem;">Core Computer Vision Features:</h4>
-                        <ul style="list-style: none; padding: 0; text-align: left;">
-                            <li style="padding: 0.3rem 0; color: #666;"><i class="fas fa-check" style="color: #27ae60; margin-right: 0.5rem;"></i>Shot type classification (drive, chip, putt)</li>
-                            <li style="padding: 0.3rem 0; color: #666;"><i class="fas fa-check" style="color: #27ae60; margin-right: 0.5rem;"></i>Pose estimation & body landmark tracking</li>
-                            <li style="padding: 0.3rem 0; color: #666;"><i class="fas fa-check" style="color: #27ae60; margin-right: 0.5rem;"></i>Automatic club type detection</li>
-                            <li style="padding: 0.3rem 0; color: #666;"><i class="fas fa-check" style="color: #27ae60; margin-right: 0.5rem;"></i>Swing & ball speed estimation</li>
-                            <li style="padding: 0.3rem 0; color: #666;"><i class="fas fa-check" style="color: #27ae60; margin-right: 0.5rem;"></i>Distance prediction analysis</li>
+    <main class="subpage-main">
+        <section class="page-hero">
+            <div class="container narrow">
+                <p class="eyebrow">Cricket Vision Platform</p>
+                <h1>A CV module for bowling-machine batting sessions</h1>
+                <p>
+                    A focused computer vision system for academies, clubs, and players who want
+                    objective batsman feedback from the machine end of the net.
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="product-grid">
+                    <article class="product-card">
+                        <div class="product-icon green">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h2>Vision Module</h2>
+                        <p>
+                            Mount a camera module above or below a bowling machine to capture a repeatable
+                            view of the batsman, ball path, bat, and wicket zone.
+                        </p>
+                        <ul class="check-list">
+                            <li><i class="fas fa-check"></i>Consistent batsman-facing camera angle</li>
+                            <li><i class="fas fa-check"></i>Works with machine-delivered practice balls</li>
+                            <li><i class="fas fa-check"></i>Designed for net sessions and repeatable drills</li>
                         </ul>
-                    </div>
-                    <a href="golf-buddy.html" class="cta-button" style="display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 12px 30px; text-decoration: none; border-radius: 25px; font-weight: 600; transition: transform 0.3s ease;">
-                        Learn More About Golf Buddy
-                    </a>
-                </div>
+                    </article>
 
-                <div class="product-card" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; border-radius: 15px; padding: 2.5rem; box-shadow: 0 15px 35px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s ease;">
-                    <div style="background: rgba(255,255,255,0.2); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 2rem; backdrop-filter: blur(10px);">
-                        <i class="fas fa-circle" style="font-size: 2.5rem; color: white;"></i>
-                    </div>
-                    <h2 style="margin-bottom: 1rem;">Coming Soon</h2>
-                    <h3 style="margin-bottom: 1rem; opacity: 0.9;">Cricket Analyzer</h3>
-                    <p style="opacity: 0.9; font-size: 1.1rem; margin-bottom: 2rem; line-height: 1.6;">
-                        Professional cricket coaching powered by computer vision. Analyze batting techniques, bowling actions, 
-                        and fielding movements with unprecedented accuracy.
+                    <article class="product-card">
+                        <div class="product-icon amber">
+                            <i class="fas fa-location-arrow"></i>
+                        </div>
+                        <h2>Tracking Pipeline</h2>
+                        <p>
+                            Process each clip through the existing Modal pipeline for ball segmentation,
+                            bat segmentation, player pose, depth, aggregation, and speed estimates.
+                        </p>
+                        <ul class="check-list">
+                            <li><i class="fas fa-check"></i>Ball and bat masks, boxes, trails, and centroids</li>
+                            <li><i class="fas fa-check"></i>YOLO-pose landmarks for batsman mechanics</li>
+                            <li><i class="fas fa-check"></i>Depth-assisted ball and bat speed estimates</li>
+                        </ul>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-icon coral">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <h2>Batsman Feedback</h2>
+                        <p>
+                            Turn the analyzed clip into practical feedback for the batsman: what moved,
+                            when impact happened, and which correction should come next.
+                        </p>
+                        <ul class="check-list">
+                            <li><i class="fas fa-check"></i>Impact frame and contact-zone review</li>
+                            <li><i class="fas fa-check"></i>Head, shoulder, wrist, and foot movement cues</li>
+                            <li><i class="fas fa-check"></i>Session trends across repeated deliveries</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section placement-section">
+            <div class="container split-layout">
+                <div>
+                    <p class="eyebrow">Physical setup</p>
+                    <h2>Designed to sit with the bowling machine</h2>
+                    <p>
+                        The static site should make the hardware idea obvious: the CV module belongs at the
+                        machine end, looking down the pitch toward the batsman. Mounting above gives a clean
+                        view over the chute; mounting below keeps the module compact and protected.
                     </p>
-                    <div style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 10px; margin-bottom: 2rem;">
-                        <p style="margin: 0; font-weight: 600;">� Batting stroke analysis</p>
-                        <p style="margin: 0.5rem 0; font-weight: 600;">🎯 Bowling action breakdown</p>
-                        <p style="margin: 0; font-weight: 600;">📊 Shot placement optimization</p>
-                    </div>
-                    <div style="background: rgba(255,255,255,0.2); color: white; padding: 12px 30px; border-radius: 25px; font-weight: 600;">
-                        Launching Q1 2026
+                    <div class="placement-notes">
+                        <div>
+                            <i class="fas fa-arrow-up"></i>
+                            <span>Above-machine mount for a higher view of bat path and body shape</span>
+                        </div>
+                        <div>
+                            <i class="fas fa-arrow-down"></i>
+                            <span>Below-machine mount for a low-profile training-lane setup</span>
+                        </div>
                     </div>
                 </div>
-
-                <div class="product-card" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; border-radius: 15px; padding: 2.5rem; box-shadow: 0 15px 35px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s ease;">
-                    <div style="background: rgba(255,255,255,0.2); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 2rem; backdrop-filter: blur(10px);">
-                        <i class="fas fa-plus" style="font-size: 2.5rem; color: white;"></i>
+                <div class="placement-diagram" aria-label="Bowling machine camera module placement">
+                    <div class="machine-block">
+                        <span class="module module-top">CV</span>
+                        <div class="machine-body">
+                            <i class="fas fa-robot"></i>
+                            <span>Bowling Machine</span>
+                        </div>
+                        <span class="module module-bottom">CV</span>
                     </div>
-                    <h2 style="margin-bottom: 1rem;">Coming Soon</h2>
-                    <h3 style="margin-bottom: 1rem; opacity: 0.9;">More Sports</h3>
-                    <p style="opacity: 0.9; font-size: 1.1rem; margin-bottom: 2rem; line-height: 1.6;">
-                        Expanding our computer vision technology to tennis, basketball, soccer, baseball, swimming, 
-                        and many other sports.
-                    </p>
-                    <div style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 10px; margin-bottom: 2rem;">
-                        <p style="margin: 0; font-weight: 600;">� Tennis serve & stroke analysis</p>
-                        <p style="margin: 0.5rem 0; font-weight: 600;">🏀 Basketball shooting optimization</p>
-                        <p style="margin: 0; font-weight: 600;">⚽ Soccer technique analysis</p>
+                    <div class="pitch-lane">
+                        <span class="delivery-line"></span>
+                        <span class="ball-dot"></span>
                     </div>
-                    <div style="background: rgba(255,255,255,0.2); color: white; padding: 12px 30px; border-radius: 25px; font-weight: 600;">
-                        In Development
+                    <div class="batsman-target">
+                        <i class="fas fa-user"></i>
+                        <span>Batsman</span>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <section style="margin-top: 4rem; text-align: center; background: #f8f9fa; padding: 3rem; border-radius: 15px;">
-                <h2>Powered by Advanced Computer Vision</h2>
-                <p style="margin-bottom: 2rem; font-size: 1.1rem; color: #666; max-width: 600px; margin-left: auto; margin-right: auto;">
-                    All our products leverage cutting-edge computer vision technology to provide professional-grade sports analysis 
-                    that was previously only available to elite athletes.
-                </p>
-                <a href="contact.html" class="cta-button">Get Early Access</a>
-            </section>
-        </div>
+        <section class="section muted-section">
+            <div class="container split-layout">
+                <div>
+                    <p class="eyebrow">Coach workflow</p>
+                    <h2>A practical review layer for batting sessions</h2>
+                    <p>
+                        Cricket Vision organizes clips by batsman, drill, delivery type, and impact result.
+                        Coaches can compare one player against their own prior sessions and repeatable machine settings.
+                    </p>
+                    <a href="demo.html" class="cta-button">View Demo</a>
+                </div>
+                <div class="workflow-list">
+                    <div>
+                        <i class="fas fa-upload"></i>
+                        <span>Capture from the machine end</span>
+                    </div>
+                    <div>
+                        <i class="fas fa-search"></i>
+                        <span>Detect batting phases</span>
+                    </div>
+                    <div>
+                        <i class="fas fa-chart-line"></i>
+                        <span>Compare repeated deliveries</span>
+                    </div>
+                    <div>
+                        <i class="fas fa-clipboard-check"></i>
+                        <span>Share batsman feedback</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-intro">
+                    <p class="eyebrow">Platform outputs</p>
+                    <h2>What the analysis returns</h2>
+                </div>
+                <div class="metrics-grid">
+                    <article class="metric-card">
+                        <span>Bat path</span>
+                        <strong>Arc, angle, timing</strong>
+                    </article>
+                    <article class="metric-card">
+                        <span>Batsman pose</span>
+                        <strong>Pose, balance, alignment</strong>
+                    </article>
+                    <article class="metric-card">
+                        <span>Ball tracking</span>
+                        <strong>Speed, trail, impact frame</strong>
+                    </article>
+                    <article class="metric-card">
+                        <span>Session trends</span>
+                        <strong>Progress across weeks</strong>
+                    </article>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Gabriella Systems. All rights reserved.</p>
+        <div class="container footer-grid">
+            <p>&copy; 2026 Gabriella Systems. All rights reserved.</p>
+            <a href="demo.html">Cricket Vision Demo</a>
         </div>
     </footer>
 
     <script src="script.js"></script>
-    
-    <style>
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-        }
-        
-        @media (max-width: 768px) {
-            .products-grid {
-                grid-template-columns: 1fr !important;
-                gap: 2rem !important;
-            }
-        }
-    </style>
 </body>
 </html>

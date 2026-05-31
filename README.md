@@ -1,35 +1,35 @@
-# Gabriella Systems - AI Golf Video Analysis
+# Gabriella Systems - Cricket Vision Website
 
-A comprehensive website for Gabriella Systems, showcasing our AI-powered golf video analysis platform that helps golfers improve their game through intelligent swing analysis and personalized coaching insights.
+A static website for Gabriella Systems focused on bowling-machine-mounted computer vision for batsman feedback.
 
-## Features
+## Pages
 
-- **Home Page**: Introduction to our AI golf analysis platform
-- **About Page**: Our story, mission, and values focused on golf technology
-- **Services Page**: Detailed breakdown of our AI golf analysis services including:
-  - Swing Analysis
-  - Performance Metrics
-  - Personalized Coaching
-  - Mobile App Integration
-  - Pro Instructor Tools
-  - Advanced Analytics
-- **Contact Page**: Easy way for golfers and instructors to get in touch
+- `index.html`: Cricket Vision landing page with hero image, feature overview, workflow, and demo call to action.
+- `about.html`: Company focus, values, and cricket analysis roadmap.
+- `services.html`: Platform modules for the machine-mounted camera, CV tracking pipeline, and batsman feedback.
+- `demo.html`: Interactive sample batsman analysis dashboard.
+- `contact.html`: Contact form for batting coaches, academies, clubs, and partners.
 
-## Technology Stack
+## Stack
 
 - HTML5
 - CSS3
-- JavaScript (ES6+)
-- Font Awesome Icons
-- Responsive Design
+- JavaScript
+- Font Awesome icons
+- Static generated image asset in `assets/cricket-vision-hero.png`
 
-## Business Focus
+## Local Preview
 
-Gabriella Systems specializes in AI-powered golf video analysis, helping golfers of all skill levels improve their game through:
-- Advanced computer vision technology
-- Machine learning algorithms
-- Personalized coaching recommendations
-- Performance tracking and analytics
-- Professional instructor tools
+Run:
 
-Our platform allows users to upload golf swing videos and receive detailed analysis and improvement suggestions powered by artificial intelligence.
+```bash
+./start-local.sh
+```
+
+Then open `http://127.0.0.1:8765/`.
+
+To use a different port:
+
+```bash
+PORT=9000 ./start-local.sh
+```

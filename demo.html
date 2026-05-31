@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo - Gabriella Systems Cricket Vision</title>
+    <meta name="description" content="Live Cricket Vision demo: ball & bat tracking, player pose, and speed estimation from a single bowling-machine-end camera.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .demo-embed-frame {
+            width: 100%;
+            min-height: 1500px;
+            height: calc(100vh - 60px);
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: var(--soft);
+            box-shadow: 0 10px 28px rgba(17, 32, 29, 0.08);
+        }
+        .demo-note {
+            color: var(--muted);
+            font-size: 0.92rem;
+            margin-top: 0.8rem;
+        }
+        .demo-note i { color: var(--green); }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Gabriella Systems</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Platform</a>
+                <a href="demo.html" class="nav-link active">Demo</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="subpage-main">
+        <section class="demo-hero">
+            <div class="container narrow">
+                <p class="eyebrow">Cricket Vision Demo</p>
+                <h1>Live batting analysis</h1>
+                <p>
+                    Pick a sample clip or upload your own machine-end batting video. The system tracks
+                    the ball and bat, estimates 17-point player pose, and reports ball &amp; bat speed,
+                    depth, and the impact frame — all from a single camera.
+                </p>
+            </div>
+        </section>
+
+        <section class="section demo-workspace">
+            <div class="container">
+                <iframe
+                    class="demo-embed-frame"
+                    src="https://gabriellasystems--cricket-demo-web.modal.run/?embed=1"
+                    title="Cricket Vision interactive demo"
+                    loading="lazy"
+                    allow="fullscreen">
+                </iframe>
+                <p class="demo-note">
+                    <i class="fas fa-circle-info"></i>
+                    Sample clips play instantly. Uploads are processed live on GPU (first run warms up the
+                    models, ~1–3 min). Speeds are camera-only estimates.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <p>&copy; 2026 Gabriella Systems. All rights reserved.</p>
+            <a href="contact.html">Request Access</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

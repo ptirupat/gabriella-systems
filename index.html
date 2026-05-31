@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gabriella Systems - Computer Vision Sports Analysis</title>
+    <title>Gabriella Systems - Cricket Computer Vision Analysis</title>
+    <meta name="description" content="Bowling-machine-mounted computer vision for batsman feedback and batting technique analysis.">
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -16,143 +17,187 @@
             <div class="nav-menu" id="nav-menu">
                 <a href="index.html" class="nav-link active">Home</a>
                 <a href="about.html" class="nav-link">About</a>
-                <a href="services.html" class="nav-link">Products</a>
+                <a href="services.html" class="nav-link">Platform</a>
+                <a href="demo.html" class="nav-link">Demo</a>
                 <a href="contact.html" class="nav-link">Contact</a>
             </div>
-            <div class="hamburger" id="hamburger">
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
         </div>
     </nav>
 
     <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Revolutionary Computer Vision for Sports Analysis</h1>
-                <p>Professional-grade sports coaching insights at a fraction of the cost - powered by advanced computer vision technology</p>
-                <a href="services.html" class="cta-button">Discover the Technology</a>
+        <section class="hero cricket-hero">
+            <div class="container hero-layout">
+                <div class="hero-content">
+                    <p class="eyebrow">Bowling-machine vision module</p>
+                    <h1>Batsman Feedback System</h1>
+                    <p class="hero-copy">
+                        Gabriella Systems places computer vision above or below a bowling machine
+                        to analyze each delivery and give precise feedback to the batsman.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="demo.html" class="cta-button">Launch Demo</a>
+                        <a href="services.html" class="secondary-button">Explore Platform</a>
+                    </div>
+                    <div class="hero-stats" aria-label="Cricket analysis highlights">
+                        <div>
+                            <strong>17</strong>
+                            <span>pose landmarks</span>
+                        </div>
+                        <div>
+                            <strong>2</strong>
+                            <span>tracked objects</span>
+                        </div>
+                        <div>
+                            <strong>24/7</strong>
+                            <span>video review</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="features">
+        <section class="signal-strip">
+            <div class="container signal-grid">
+                <div>
+                    <i class="fas fa-bullseye"></i>
+                    <span>Bat swing path</span>
+                </div>
+                <div>
+                    <i class="fas fa-location-arrow"></i>
+                    <span>Ball trajectory</span>
+                </div>
+                <div>
+                    <i class="fas fa-stopwatch"></i>
+                    <span>Impact timing</span>
+                </div>
+                <div>
+                    <i class="fas fa-chart-line"></i>
+                    <span>Batsman feedback</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section features">
             <div class="container">
-                <h2>Advanced Computer Vision for Sports Analysis</h2>
-                <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem; color: #666; max-width: 800px; margin-left: auto; margin-right: auto;">
-                    At Gabriella Systems, we build cutting-edge computer vision products that automatically analyze athletic movements 
-                    with professional-grade precision. Our AI sees what coaches miss and quantifies every aspect of athletic performance.
-                </p>
+                <div class="section-intro">
+                    <p class="eyebrow">Built for batting practice</p>
+                    <h2>Frame-by-frame insight from the machine end</h2>
+                    <p>
+                        The module watches the batsman from near the bowling machine, detects the player,
+                        bat, ball, and body landmarks, then turns each delivery into coaching-ready metrics.
+                    </p>
+                </div>
                 <div class="features-grid">
-                    <div class="feature-card">
-                        <i class="fas fa-search"></i>
-                        <h3>Movement Classification</h3>
-                        <p>Our computer vision automatically identifies different types of athletic movements and techniques, providing tailored analysis for each motion pattern.</p>
-                    </div>
-                    <div class="feature-card">
-                        <i class="fas fa-user-tag"></i>
-                        <h3>Pose Estimation & Body Tracking</h3>
-                        <p>Advanced pose estimation tracks key body landmarks throughout athletic movements, analyzing posture, alignment, and biomechanics with precision.</p>
-                    </div>
-                    <div class="feature-card">
-                        <i class="fas fa-tools"></i>
-                        <h3>Equipment Detection</h3>
-                        <p>AI instantly recognizes sports equipment and adapts analysis parameters for different tools, from golf clubs to tennis rackets to basketballs.</p>
-                    </div>
-                </div>
-                
-                <div class="features-grid" style="margin-top: 2rem;">
-                    <div class="feature-card">
+                    <article class="feature-card">
+                        <i class="fas fa-user-check"></i>
+                        <h3>Batsman Mechanics</h3>
+                        <p>Track head position, front-foot plant, backlift, impact timing, and shot shape across drives, cuts, pulls, and defensive strokes.</p>
+                    </article>
+                    <article class="feature-card">
+                        <i class="fas fa-video"></i>
+                        <h3>Machine-Mounted Camera</h3>
+                        <p>Place the CV unit above or below a bowling machine for a consistent batsman-facing angle across every ball in the session.</p>
+                    </article>
+                    <article class="feature-card">
                         <i class="fas fa-tachometer-alt"></i>
-                        <h3>Speed & Motion Analysis</h3>
-                        <p>Precise measurement of movement speeds, acceleration, and timing helps athletes understand their power generation and optimize performance.</p>
+                        <h3>Ball and Bat Speed</h3>
+                        <p>Estimate ball speed, bat movement, impact frame, and pose changes from a single camera using the existing CV pipeline.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section technology-band">
+            <div class="container split-layout">
+                <div>
+                    <p class="eyebrow">Computer vision that speaks cricket</p>
+                    <h2>From raw clip to coachable evidence</h2>
+                    <p>
+                        Gabriella Systems identifies batting phases like stance, trigger movement, downswing,
+                        impact, and follow-through. Coaches get objective visual evidence from the same end
+                        as the bowling machine without needing a second camera angle.
+                    </p>
+                    <a href="about.html" class="text-link">How we approach cricket analysis <i class="fas fa-chevron-right"></i></a>
+                </div>
+                <div class="analysis-stack" aria-label="Cricket analysis metrics">
+                    <div class="analysis-row accent-green">
+                        <span>Front-foot stability</span>
+                        <strong>91%</strong>
                     </div>
-                    <div class="feature-card">
-                        <i class="fas fa-chart-line"></i>
-                        <h3>Performance Metrics</h3>
-                        <p>Extract quantified performance data from video analysis, providing measurable insights that replace guesswork with scientific precision.</p>
+                    <div class="analysis-row accent-amber">
+                        <span>Bat face angle</span>
+                        <strong>12 deg open</strong>
                     </div>
-                    <div class="feature-card">
-                        <i class="fas fa-bullseye"></i>
-                        <h3>Accuracy & Prediction</h3>
-                        <p>Advanced algorithms predict outcomes and analyze accuracy patterns, helping athletes understand and improve their consistency.</p>
+                    <div class="analysis-row accent-coral">
+                        <span>Impact frame</span>
+                        <strong>15</strong>
+                    </div>
+                    <div class="analysis-row accent-teal">
+                        <span>Follow-through balance</span>
+                        <strong>86%</strong>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="company-info" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 4rem 0;">
-            <div class="container" style="text-align: center;">
-                <h2>Computer Vision Technology - See Every Detail</h2>
-                <p style="font-size: 1.2rem; margin-bottom: 3rem; opacity: 0.9; max-width: 700px; margin-left: auto; margin-right: auto;">
-                    Our computer vision system automatically extracts precise measurements and classifications from sports videos, 
-                    providing data-driven insights that transform how athletes understand and improve their performance across multiple sports.
-                </p>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; margin-top: 3rem;">
-                    <div>
-                        <i class="fas fa-brain" style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.9;"></i>
-                        <h3>Intelligent Classification</h3>
-                        <p>Automatically identifies movement types, techniques, and equipment from video analysis, ensuring accurate, context-specific feedback for any sport.</p>
-                    </div>
-                    <div>
-                        <i class="fas fa-ruler-combined" style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.9;"></i>
-                        <h3>Precise Measurements</h3>
-                        <p>Extract exact speeds, timing, distances, and performance metrics - quantified data that replaces guesswork with scientific precision across all sports.</p>
-                    </div>
-                    <div>
-                        <i class="fas fa-user-cog" style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.9;"></i>
-                        <h3>Biomechanics Analysis</h3>
-                        <p>Advanced pose estimation tracks key body landmarks throughout athletic movements, analyzing form, technique, and movement patterns frame by frame.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="demo-section" style="background: #f8f9fa; padding: 4rem 0;">
+        <section class="section process-section">
             <div class="container">
-                <h2 style="text-align: center; margin-bottom: 1rem;">Professional Sports Analysis at Your Fingertips</h2>
-                <p style="text-align: center; font-size: 1.1rem; color: #666; margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-                    Skip the $150+ hourly coaching fees. Our computer vision technology delivers the same level of detailed analysis 
-                    that professional athletes receive, but accessible to everyone across multiple sports.
-                </p>
-                <div class="demo-steps" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
-                    <div style="text-align: center; padding: 2rem;">
-                        <div style="background: #3498db; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem; font-weight: bold;">1</div>
-                        <h3>Record Your Movement</h3>
-                        <p>Use any smartphone or camera to record your athletic technique - golf swing, tennis serve, basketball shot, or any sport</p>
-                    </div>
-                    <div style="text-align: center; padding: 2rem;">
-                        <div style="background: #e74c3c; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem; font-weight: bold;">2</div>
-                        <h3>Computer Vision Analysis</h3>
-                        <p>Our advanced algorithms process thousands of data points per second, analyzing biomechanics, equipment, and performance patterns</p>
-                    </div>
-                    <div style="text-align: center; padding: 2rem;">
-                        <div style="background: #27ae60; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem; font-weight: bold;">3</div>
-                        <h3>Professional Insights</h3>
-                        <p>Receive coach-level feedback with specific improvement recommendations, performance metrics, and technique corrections</p>
-                    </div>
+                <div class="section-intro">
+                    <p class="eyebrow">Simple workflow</p>
+                    <h2>A dedicated view of every ball the batsman faces</h2>
                 </div>
-                
-                <div style="background: white; padding: 3rem; border-radius: 15px; margin-top: 3rem; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
-                        <div>
-                            <h3 style="color: #e74c3c; margin-bottom: 1rem;">Traditional Coaching</h3>
-                            <ul style="list-style: none; padding: 0;">
-                                <li style="padding: 0.5rem 0; color: #666;"><i class="fas fa-times" style="color: #e74c3c; margin-right: 0.5rem;"></i>$100-200+ per hour</li>
-                                <li style="padding: 0.5rem 0; color: #666;"><i class="fas fa-times" style="color: #e74c3c; margin-right: 0.5rem;"></i>Limited availability</li>
-                                <li style="padding: 0.5rem 0; color: #666;"><i class="fas fa-times" style="color: #e74c3c; margin-right: 0.5rem;"></i>Subjective feedback</li>
-                                <li style="padding: 0.5rem 0; color: #666;"><i class="fas fa-times" style="color: #e74c3c; margin-right: 0.5rem;"></i>Single sport expertise</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h3 style="color: #27ae60; margin-bottom: 1rem;">Computer Vision Analysis</h3>
-                            <ul style="list-style: none; padding: 0;">
-                                <li style="padding: 0.5rem 0; color: #666;"><i class="fas fa-check" style="color: #27ae60; margin-right: 0.5rem;"></i>Fraction of the cost</li>
-                                <li style="padding: 0.5rem 0; color: #666;"><i class="fas fa-check" style="color: #27ae60; margin-right: 0.5rem;"></i>Available 24/7</li>
-                                <li style="padding: 0.5rem 0; color: #666;"><i class="fas fa-check" style="color: #27ae60; margin-right: 0.5rem;"></i>Objective, data-driven</li>
-                                <li style="padding: 0.5rem 0; color: #666;"><i class="fas fa-check" style="color: #27ae60; margin-right: 0.5rem;"></i>Multi-sport capabilities</li>
-                            </ul>
-                        </div>
+                <div class="steps-grid">
+                    <article class="step-card">
+                        <span>1</span>
+                        <h3>Mount</h3>
+                        <p>Attach the CV module above or below the bowling machine so the camera faces the batsman and the ball path.</p>
+                    </article>
+                    <article class="step-card">
+                        <span>2</span>
+                        <h3>Analyze</h3>
+                        <p>Computer vision extracts batsman pose, bat path, ball tracking, impact timing, and estimated speeds automatically.</p>
+                    </article>
+                    <article class="step-card">
+                        <span>3</span>
+                        <h3>Feedback</h3>
+                        <p>Review objective metrics, annotated frames, and correction priorities with the batsman after each clip or session.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section demo-preview">
+            <div class="container split-layout">
+                <div class="demo-copy">
+                    <p class="eyebrow">Interactive sample</p>
+                    <h2>See a cricket analysis dashboard</h2>
+                    <p>
+                        The demo page mirrors the current upload pipeline: a batsman-facing clip becomes
+                        ball and bat tracking, pose overlays, speed charts, and coaching priorities.
+                    </p>
+                    <a href="demo.html" class="cta-button">Open Demo Page</a>
+                </div>
+                <div class="mini-dashboard" aria-label="Sample cricket dashboard">
+                    <div class="dashboard-header">
+                        <span>Full ball outside off</span>
+                        <strong>Technique score 88</strong>
+                    </div>
+                    <div class="bar-row">
+                        <span>Head stillness</span>
+                        <div><span class="bar-84"></span></div>
+                    </div>
+                    <div class="bar-row">
+                        <span>Stride length</span>
+                        <div><span class="bar-76"></span></div>
+                    </div>
+                    <div class="bar-row">
+                        <span>Impact timing</span>
+                        <div><span class="bar-91"></span></div>
                     </div>
                 </div>
             </div>
@@ -160,29 +205,12 @@
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Gabriella Systems. All rights reserved.</p>
+        <div class="container footer-grid">
+            <p>&copy; 2026 Gabriella Systems. All rights reserved.</p>
+            <a href="demo.html">Cricket Vision Demo</a>
         </div>
     </footer>
 
     <script src="script.js"></script>
-    
-    <style>
-        @media (max-width: 768px) {
-            .demo-section .demo-steps > div:last-child > div:last-child {
-                grid-template-columns: 1fr !important;
-                gap: 2rem !important;
-            }
-            
-            .demo-section .demo-steps > div:last-child > div:last-child > div {
-                text-align: center !important;
-            }
-            
-            .company-info > div > div {
-                grid-template-columns: 1fr !important;
-                gap: 2rem !important;
-            }
-        }
-    </style>
 </body>
 </html>
