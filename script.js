@@ -245,27 +245,52 @@ function renderDemo(data) {
     }
 }
 
+var CONTACT_API = "https://gabriellasystems--cricket-demo-web.modal.run/api/contact";
+
 function handleFormSubmit(event) {
     event.preventDefault();
 
-    const formData = new FormData(event.target);
-    const formObject = {};
-
+    var formData = new FormData(event.target);
+    var body = {};
     formData.forEach(function (value, key) {
-        formObject[key] = value.trim();
+        body[key] = value.trim();
     });
 
-    if (!formObject.name || !formObject.email || !formObject.message) {
+    if (!body.name || !body.email || !body.message) {
         alert("Please fill in all required fields.");
         return;
     }
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formObject.email)) {
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(body.email)) {
         alert("Please enter a valid email address.");
         return;
     }
 
-    alert("Thank you for your message. We will get back to you soon.");
-    event.target.reset();
+    var btn = event.target.querySelector(".submit-btn");
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+
+    fetch(CONTACT_API, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+    })
+        .then(function (res) {
+            if (!res.ok) {
+                return res.json().then(function (d) { throw new Error(d.detail || "Request failed"); });
+            }
+            return res.json();
+        })
+        .then(function () {
+            alert("Thank you for your message. We will get back to you soon.");
+            event.target.reset();
+        })
+        .catch(function (err) {
+            alert("Sorry, your message could not be sent. Please email admin@gabriellasystems.com directly.\n\n(" + err.message + ")");
+        })
+        .finally(function () {
+            btn.disabled = false;
+            btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+        });
 }
