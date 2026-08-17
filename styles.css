@@ -646,6 +646,21 @@ a {
     color: white;
 }
 
+.final-cta {
+    background: var(--teal);
+    color: white;
+    text-align: center;
+}
+
+.final-cta h2,
+.final-cta p {
+    color: white;
+}
+
+.final-cta .hero-actions {
+    justify-content: center;
+}
+
 .placement-notes {
     display: grid;
     gap: 0.85rem;

@@ -66,14 +66,18 @@
                         </div>
                         <h2>Tracking Pipeline</h2>
                         <p>
-                            Process each clip through the existing Modal pipeline for ball segmentation,
-                            bat segmentation, player pose, depth, aggregation, and speed estimates.
+                            Every clip is turned into coach-ready detail: where the ball and bat moved,
+                            how the batsman's body responded, and how fast each delivery and shot traveled.
                         </p>
                         <ul class="check-list">
-                            <li><i class="fas fa-check"></i>Ball and bat masks, boxes, trails, and centroids</li>
-                            <li><i class="fas fa-check"></i>YOLO-pose landmarks for batsman mechanics</li>
-                            <li><i class="fas fa-check"></i>Depth-assisted ball and bat speed estimates</li>
+                            <li><i class="fas fa-check"></i>Ball and bat path, trail, and contact point</li>
+                            <li><i class="fas fa-check"></i>Full-body pose landmarks for batsman mechanics</li>
+                            <li><i class="fas fa-check"></i>Ball and bat speed estimates from a single camera</li>
                         </ul>
+                        <p class="demo-note">
+                            How it works technically: ball &amp; bat segmentation, YOLO-pose landmarks,
+                            depth estimation, and multi-model aggregation.
+                        </p>
                     </article>
 
                     <article class="product-card">
@@ -99,11 +103,10 @@
             <div class="container split-layout">
                 <div>
                     <p class="eyebrow">Physical setup</p>
-                    <h2>Designed to sit with the bowling machine</h2>
+                    <h2>One camera. One consistent angle. Every delivery captured.</h2>
                     <p>
-                        The static site should make the hardware idea obvious: the CV module belongs at the
-                        machine end, looking down the pitch toward the batsman. Mounting above gives a clean
-                        view over the chute; mounting below keeps the module compact and protected.
+                        Mount Cricket Vision above or below your bowling machine to create a repeatable view
+                        of the batter, bat, and ball — without changing how the player trains.
                     </p>
                     <div class="placement-notes">
                         <div>
