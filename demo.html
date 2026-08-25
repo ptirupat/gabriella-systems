@@ -92,20 +92,23 @@
                 </div>
 
                 <div id="bowling-demo-content" class="demo-content-panel">
-                    <div class="bowling-placeholder">
-                        <i class="fas fa-person-running"></i>
-                        <h3>Bowling Analysis Demo</h3>
-                        <p>
-                            Side-on bowling analysis is in active development. The bowling demo will
-                            feature run-up speed tracking, arm path visualisation, front-knee angle
-                            measurement, and ball speed estimation.
-                        </p>
-                        <p>
-                            <a href="contact.html" style="color: var(--amber); font-weight: 800; text-decoration: none;">
-                                Request early access <i class="fas fa-chevron-right"></i>
-                            </a>
-                        </p>
-                    </div>
+                    <iframe
+                        class="demo-embed-frame"
+                        src="https://gabriellasystems--cricket-demo-web.modal.run/?embed=1&mode=bowling"
+                        title="Cricket Vision interactive bowling demo"
+                        loading="lazy"
+                        allow="fullscreen">
+                    </iframe>
+                    <p class="demo-note">
+                        <i class="fas fa-circle-info"></i>
+                        Upload a side-on bowling clip (single bowler in frame). Analysis takes ~1–3 min
+                        on first run while GPU models warm up. Speeds are camera-only estimates.
+                    </p>
+                    <p class="demo-note">
+                        <i class="fas fa-lock"></i>
+                        Uploaded clips are stored and may appear in the demo gallery for others to view.
+                        Do not upload confidential or private footage.
+                    </p>
                 </div>
             </div>
         </section>
