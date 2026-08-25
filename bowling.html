@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bowling Intelligence - Gabriella Systems</title>
+    <meta name="description" content="Side-on computer vision for bowling analysis — run-up speed, arm speed, front-knee angle, and ball speed from every delivery.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Gabriella Systems</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="services.html" class="nav-link">Platform</a>
+                <a href="batting.html" class="nav-link">Batting</a>
+                <a href="bowling.html" class="nav-link active">Bowling</a>
+                <a href="demo.html" class="nav-link">Demo</a>
+                <a href="academies.html" class="nav-link">Academies</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Request Pilot</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="subpage-main">
+        <section class="page-hero">
+            <div class="container narrow">
+                <p class="eyebrow">Bowling Intelligence</p>
+                <h1>Understand the complete bowling action</h1>
+                <p>
+                    Side-on computer vision measures the run-up, delivery mechanics, release
+                    and ball movement from every delivery.
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-intro">
+                    <p class="eyebrow">Bowling phases</p>
+                    <h2>Every delivery broken into measurable stages</h2>
+                </div>
+                <div class="pipeline-grid">
+                    <article class="pipeline-card">
+                        <i class="fas fa-person-running"></i>
+                        <h3>Run-up</h3>
+                        <p>Peak speed, acceleration profile</p>
+                    </article>
+                    <article class="pipeline-card">
+                        <i class="fas fa-compress"></i>
+                        <h3>Gather</h3>
+                        <p>Body position, stride characteristics</p>
+                    </article>
+                    <article class="pipeline-card">
+                        <i class="fas fa-shoe-prints"></i>
+                        <h3>Front-foot Contact</h3>
+                        <p>Knee angle, trunk position, stride length</p>
+                    </article>
+                    <article class="pipeline-card">
+                        <i class="fas fa-hand"></i>
+                        <h3>Release</h3>
+                        <p>Arm speed, release frame, ball speed</p>
+                    </article>
+                    <article class="pipeline-card">
+                        <i class="fas fa-forward"></i>
+                        <h3>Follow-through</h3>
+                        <p>Body alignment, deceleration</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section muted-section">
+            <div class="container">
+                <div class="section-intro">
+                    <p class="eyebrow">What Gabriella measures</p>
+                    <h2>Objective biomechanics from every ball bowled</h2>
+                </div>
+                <div class="metrics-grid">
+                    <article class="metric-card">
+                        <span>Peak run-up speed</span>
+                        <strong>21.6 km/h</strong>
+                    </article>
+                    <article class="metric-card">
+                        <span>Speed at delivery stride</span>
+                        <strong>19.8 km/h</strong>
+                    </article>
+                    <article class="metric-card">
+                        <span>Front-knee angle</span>
+                        <strong>18°</strong>
+                    </article>
+                    <article class="metric-card">
+                        <span>Arm angular speed</span>
+                        <strong>1840°/s</strong>
+                    </article>
+                    <article class="metric-card">
+                        <span>Delivery stride</span>
+                        <strong>1.82 m</strong>
+                    </article>
+                    <article class="metric-card">
+                        <span>Release height</span>
+                        <strong>2.14 m</strong>
+                    </article>
+                    <article class="metric-card">
+                        <span>Ball speed</span>
+                        <strong>126 km/h</strong>
+                    </article>
+                    <article class="metric-card">
+                        <span>Trunk alignment</span>
+                        <strong>12° offset</strong>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="video-placeholder" style="max-width: 900px; margin: 0 auto;">
+                    <div class="video-placeholder-label">
+                        <strong>Bowling analysis demo</strong>
+                        <span>Annotated side-on capture — coming soon</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section technology-band">
+            <div class="container split-layout">
+                <div>
+                    <p class="eyebrow" style="color: #ffd86b;">Measured, not judged</p>
+                    <h2>Relative change, not ideal angles</h2>
+                    <p>
+                        Gabriella shows what changed when performance changed. We report
+                        measured values with session-over-session comparison — not prescriptive
+                        "ideal" benchmarks that lack scientific context.
+                    </p>
+                </div>
+                <div class="analysis-stack">
+                    <div class="analysis-row accent-green">
+                        <span>Front knee at contact</span>
+                        <strong>18°</strong>
+                    </div>
+                    <div class="analysis-row accent-amber">
+                        <span>Previous session</span>
+                        <strong>25°</strong>
+                    </div>
+                    <div class="analysis-row accent-coral">
+                        <span>Change</span>
+                        <strong>−7°</strong>
+                    </div>
+                    <div class="analysis-row accent-teal">
+                        <span>Ball speed change</span>
+                        <strong>+5 km/h</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container split-layout">
+                <div>
+                    <p class="eyebrow">Session intelligence</p>
+                    <h2>Track mechanics across weeks and months</h2>
+                    <p>
+                        Every delivery builds a biomechanical profile. Coaches see whether a
+                        bowler is getting faster, maintaining technique under fatigue, or
+                        drifting from their optimal action.
+                    </p>
+                </div>
+                <div class="compare-card">
+                    <h4>Ball Speed Trend</h4>
+                    <div class="compare-row">
+                        <span>Session 1</span>
+                        <strong>119 km/h</strong>
+                    </div>
+                    <div class="compare-row">
+                        <span>Session 3</span>
+                        <strong>122 km/h</strong>
+                    </div>
+                    <div class="compare-row">
+                        <span>Session 5</span>
+                        <strong>124 km/h</strong>
+                    </div>
+                    <div class="compare-row">
+                        <span>Session 8</span>
+                        <strong>127 km/h</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section final-cta">
+            <div class="container narrow">
+                <h2>See bowling analysis in action</h2>
+                <p>
+                    Explore the live demo or request a pilot to bring objective bowling
+                    intelligence to your training sessions.
+                </p>
+                <div class="hero-actions">
+                    <a href="demo.html" class="cta-button">Watch the Demo</a>
+                    <a href="contact.html" class="secondary-button">Request a Pilot</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <p>&copy; 2026 Gabriella Systems. All rights reserved.</p>
+            <a href="demo.html">Live Demo</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

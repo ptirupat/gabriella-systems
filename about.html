@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<!-- Jira: KAN-82 (about.html — company story and roadmap) -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Gabriella Systems Cricket Vision</title>
-    <meta name="description" content="About Gabriella Systems and its cricket computer vision platform.">
+    <title>About - Gabriella Systems</title>
+    <meta name="description" content="Gabriella Systems is building computer vision infrastructure for cricket performance.">
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -17,10 +16,13 @@
             </div>
             <div class="nav-menu" id="nav-menu">
                 <a href="index.html" class="nav-link">Home</a>
-                <a href="about.html" class="nav-link active">About</a>
                 <a href="services.html" class="nav-link">Platform</a>
+                <a href="batting.html" class="nav-link">Batting</a>
+                <a href="bowling.html" class="nav-link">Bowling</a>
                 <a href="demo.html" class="nav-link">Demo</a>
-                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="academies.html" class="nav-link">Academies</a>
+                <a href="about.html" class="nav-link active">About</a>
+                <a href="contact.html" class="nav-link">Request Pilot</a>
             </div>
             <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
                 <span></span>
@@ -34,10 +36,10 @@
         <section class="page-hero">
             <div class="container narrow">
                 <p class="eyebrow">About Gabriella Systems</p>
-                <h1>Cricket coaching with objective video intelligence</h1>
+                <h1>Computer vision infrastructure for cricket performance</h1>
                 <p>
-                    We build cricket-first computer vision tools for batting practice: a camera module
-                    near the bowling machine, a batsman-facing view, and feedback that is easy to act on.
+                    We build cricket-specific vision systems that measure batting and bowling
+                    performance with the consistency required for genuine progress tracking.
                 </p>
             </div>
         </section>
@@ -47,13 +49,14 @@
                 <article>
                     <h2>Our Focus</h2>
                     <p>
-                        Gabriella Systems focuses on cricket because the sport rewards tiny technical changes:
-                        a front shoulder opening too soon, a head falling across the line, an early trigger,
-                        or contact happening a few frames late.
+                        Gabriella Systems focuses on cricket because the sport rewards tiny technical
+                        changes: a front shoulder opening too soon, a front knee collapsing at contact,
+                        a head falling across the line, or release timing shifting by frames.
                     </p>
                     <p>
-                        Our platform turns bowling-machine practice clips into measurable patterns, giving coaches a
-                        consistent view of what changed between deliveries, drills, and sessions.
+                        Our platform turns practice sessions into measurable patterns — giving coaches
+                        a consistent view of what changed between deliveries, drills, and sessions,
+                        for both batters and bowlers.
                     </p>
                 </article>
                 <aside class="quote-panel">
@@ -73,12 +76,12 @@
                     <article class="feature-card">
                         <i class="fas fa-video"></i>
                         <h3>Accessible Capture</h3>
-                        <p>Useful analysis should work from a small camera module placed around the bowling machine, without changing the batsman's drill.</p>
+                        <p>Useful analysis should work from a portable vision system placed at the nets — without changing how players train.</p>
                     </article>
                     <article class="feature-card">
                         <i class="fas fa-chart-bar"></i>
                         <h3>Measurable Progress</h3>
-                        <p>Players need trends and repeatable benchmarks, not one-off impressions after a single good or bad ball.</p>
+                        <p>Players need trends and repeatable benchmarks, not one-off impressions after a single good or bad delivery.</p>
                     </article>
                     <article class="feature-card">
                         <i class="fas fa-users"></i>
@@ -92,28 +95,43 @@
         <section class="section">
             <div class="container split-layout">
                 <div>
-                    <p class="eyebrow">Batsman feedback roadmap</p>
-                    <h2>Built around the bowling machine workflow</h2>
+                    <p class="eyebrow">Product roadmap</p>
+                    <h2>From working software to dedicated hardware</h2>
                     <p>
-                        Cricket Vision starts with the current batsman-facing upload pipeline, then moves toward
-                        a dedicated module that can sit above or below a bowling machine.
+                        Gabriella is progressing from a working batting analysis platform toward a
+                        complete cricket performance system covering both batting and bowling.
                     </p>
                 </div>
                 <div class="timeline">
                     <div class="timeline-item">
-                        <span>Now</span>
-                        <h3>Batsman-Facing Uploads</h3>
-                        <p>Ball tracking, bat tracking, pose overlay, impact frame, and estimated speeds from single-camera clips.</p>
+                        <span>Today</span>
+                        <h3>Working Batting CV Software</h3>
+                        <p>Ball tracking, bat tracking, pose overlay, impact frame, and speed estimation from single-camera clips.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span>Prototype</span>
+                        <h3>Automated Batting Analysis</h3>
+                        <p>Repeatable capture with consistent positioning for automated session analysis.</p>
                     </div>
                     <div class="timeline-item">
                         <span>Next</span>
-                        <h3>Machine-Mounted Module</h3>
-                        <p>A compact CV unit mounted above or below the bowling machine for repeatable net-session capture.</p>
+                        <h3>Side-on Bowling Analysis</h3>
+                        <p>Run-up speed, bowling action mechanics, front-knee angle, arm speed, and ball speed from side-on capture.</p>
                     </div>
                     <div class="timeline-item">
-                        <span>Later</span>
-                        <h3>Immediate Batsman Feedback</h3>
-                        <p>Session trends, shot comparisons, correction priorities, and coach review workflows for each batsman.</p>
+                        <span>Hardware</span>
+                        <h3>Portable Gabriella Vision System</h3>
+                        <p>Purpose-built hardware device optimised for cricket capture — frame rate, FOV, calibration, and durability.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span>Platform</span>
+                        <h3>Player Histories and Session Intelligence</h3>
+                        <p>Longitudinal player profiles, session comparison, and progress tracking across weeks and seasons.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span>Future</span>
+                        <h3>Broader Cricket Performance</h3>
+                        <p>Expanding measurement capabilities across more aspects of cricket training and performance.</p>
                     </div>
                 </div>
             </div>
@@ -123,7 +141,7 @@
     <footer class="footer">
         <div class="container footer-grid">
             <p>&copy; 2026 Gabriella Systems. All rights reserved.</p>
-            <a href="demo.html">Cricket Vision Demo</a>
+            <a href="demo.html">Live Demo</a>
         </div>
     </footer>
 

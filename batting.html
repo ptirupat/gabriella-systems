@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batting Intelligence - Gabriella Systems</title>
+    <meta name="description" content="Objective measurement of ball, bat, body and outcome from every delivery a batter faces.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Gabriella Systems</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="services.html" class="nav-link">Platform</a>
+                <a href="batting.html" class="nav-link active">Batting</a>
+                <a href="bowling.html" class="nav-link">Bowling</a>
+                <a href="demo.html" class="nav-link">Demo</a>
+                <a href="academies.html" class="nav-link">Academies</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Request Pilot</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="subpage-main">
+        <section class="page-hero">
+            <div class="container narrow">
+                <p class="eyebrow">Batting Intelligence</p>
+                <h1>What happened on this ball?</h1>
+                <p>
+                    Objective measurement of ball, bat, body and outcome from every delivery
+                    a batter faces.
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-intro">
+                    <p class="eyebrow">Four dimensions of every delivery</p>
+                    <h2>Ball, bat, body, and outcome — measured automatically</h2>
+                </div>
+                <div class="product-grid four-col">
+                    <article class="product-card">
+                        <div class="product-icon green">
+                            <i class="fas fa-circle"></i>
+                        </div>
+                        <h2>Ball</h2>
+                        <ul class="check-list">
+                            <li><i class="fas fa-check"></i>Trajectory</li>
+                            <li><i class="fas fa-check"></i>Line and length</li>
+                            <li><i class="fas fa-check"></i>Speed</li>
+                            <li><i class="fas fa-check"></i>Bounce point</li>
+                        </ul>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-icon amber">
+                            <i class="fas fa-baseball-bat-ball"></i>
+                        </div>
+                        <h2>Bat</h2>
+                        <ul class="check-list">
+                            <li><i class="fas fa-check"></i>Bat path</li>
+                            <li><i class="fas fa-check"></i>Bat speed</li>
+                            <li><i class="fas fa-check"></i>Bat angle</li>
+                            <li><i class="fas fa-check"></i>Impact timing</li>
+                        </ul>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-icon coral">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h2>Body</h2>
+                        <ul class="check-list">
+                            <li><i class="fas fa-check"></i>Head position</li>
+                            <li><i class="fas fa-check"></i>Foot movement</li>
+                            <li><i class="fas fa-check"></i>Stride length</li>
+                            <li><i class="fas fa-check"></i>Joint positions</li>
+                        </ul>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-icon" style="background: var(--blue); color: white;">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h2>Outcome</h2>
+                        <ul class="check-list">
+                            <li><i class="fas fa-check"></i>Contact timing</li>
+                            <li><i class="fas fa-check"></i>Contact location</li>
+                            <li><i class="fas fa-check"></i>Shot trajectory</li>
+                            <li><i class="fas fa-check"></i>Consistency</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section muted-section">
+            <div class="container">
+                <div class="video-placeholder" style="max-width: 900px; margin: 0 auto;">
+                    <div class="video-placeholder-label">
+                        <strong>Batting analysis demo</strong>
+                        <span>Annotated batting clip with overlay — coming soon</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-intro">
+                    <p class="eyebrow">Coaching questions, not engineering metrics</p>
+                    <h2>Answers the questions coaches actually ask</h2>
+                </div>
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Why was I late on that delivery?</h3>
+                        <p>See exactly where timing broke down — trigger movement, bat drop, or weight transfer — frame by frame.</p>
+                    </article>
+                    <article class="feature-card">
+                        <i class="fas fa-crosshairs"></i>
+                        <h3>Is my head staying still through the shot?</h3>
+                        <p>Head displacement measured in centimetres across the entire batting phase, not a subjective impression.</p>
+                    </article>
+                    <article class="feature-card">
+                        <i class="fas fa-chart-bar"></i>
+                        <h3>How consistent is my stride across the session?</h3>
+                        <p>Compare stride length, foot position, and weight transfer across 20, 50, or 100 deliveries in a single session.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section technology-band">
+            <div class="container split-layout">
+                <div>
+                    <p class="eyebrow" style="color: #ffd86b;">Session intelligence</p>
+                    <h2>Compare deliveries. Track progress.</h2>
+                    <p>
+                        Every delivery builds a profile. Compare a good-contact drive against a late
+                        cut to see exactly what changed. Track batting metrics across weeks and months
+                        to measure genuine improvement.
+                    </p>
+                </div>
+                <div class="analysis-stack">
+                    <div class="analysis-row accent-green">
+                        <span>Head displacement</span>
+                        <strong>6.4 cm → 4.1 cm</strong>
+                    </div>
+                    <div class="analysis-row accent-amber">
+                        <span>Bat speed at impact</span>
+                        <strong>54 → 57 mph</strong>
+                    </div>
+                    <div class="analysis-row accent-coral">
+                        <span>Impact frame variance</span>
+                        <strong>±4 → ±2 frames</strong>
+                    </div>
+                    <div class="analysis-row accent-teal">
+                        <span>Front stride</span>
+                        <strong>51 → 58 cm</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section final-cta">
+            <div class="container narrow">
+                <h2>See batting analysis in action</h2>
+                <p>
+                    Try the live demo with sample batting clips or request a pilot
+                    to bring objective batting intelligence to your nets.
+                </p>
+                <div class="hero-actions">
+                    <a href="demo.html" class="cta-button">Try the Batting Demo</a>
+                    <a href="contact.html" class="secondary-button">Request a Pilot</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <p>&copy; 2026 Gabriella Systems. All rights reserved.</p>
+            <a href="demo.html">Live Demo</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

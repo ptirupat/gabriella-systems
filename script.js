@@ -66,7 +66,7 @@ function setActiveNavLink(navLinks) {
 
 function initializeRevealAnimations() {
     const elements = document.querySelectorAll(
-        ".feature-card, .step-card, .product-card, .metric-card, .timeline-item, .workflow-list div"
+        ".feature-card, .step-card, .product-card, .metric-card, .timeline-item, .workflow-list div, .intelligence-card, .pipeline-card, .compare-card"
     );
 
     if (!elements.length) {
@@ -95,6 +95,25 @@ function initializeRevealAnimations() {
 }
 
 function initializeDemo() {
+    var demoTabs = document.querySelectorAll(".demo-tab");
+    var battingContent = document.getElementById("batting-demo-content");
+    var bowlingContent = document.getElementById("bowling-demo-content");
+
+    if (demoTabs.length) {
+        demoTabs.forEach(function (tab) {
+            tab.addEventListener("click", function () {
+                demoTabs.forEach(function (t) { t.classList.remove("active"); });
+                tab.classList.add("active");
+
+                var mode = tab.dataset.mode;
+                if (battingContent && bowlingContent) {
+                    battingContent.classList.toggle("active", mode === "batting");
+                    bowlingContent.classList.toggle("active", mode === "bowling");
+                }
+            });
+        });
+    }
+
     const scenarioButtons = document.querySelectorAll(".scenario-button");
     const runButton = document.getElementById("run-analysis");
     const uploadInput = document.getElementById("video-upload");

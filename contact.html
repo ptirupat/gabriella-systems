@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<!-- Jira: KAN-84 (contact.html — academy and coach inquiry form) -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Gabriella Systems Cricket Vision</title>
-    <meta name="description" content="Contact Gabriella Systems about cricket computer vision analysis.">
+    <title>Request a Pilot - Gabriella Systems</title>
+    <meta name="description" content="Request a Gabriella Vision pilot for batting and bowling analysis at your academy, club, or training facility.">
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -17,10 +16,13 @@
             </div>
             <div class="nav-menu" id="nav-menu">
                 <a href="index.html" class="nav-link">Home</a>
-                <a href="about.html" class="nav-link">About</a>
                 <a href="services.html" class="nav-link">Platform</a>
+                <a href="batting.html" class="nav-link">Batting</a>
+                <a href="bowling.html" class="nav-link">Bowling</a>
                 <a href="demo.html" class="nav-link">Demo</a>
-                <a href="contact.html" class="nav-link active">Contact</a>
+                <a href="academies.html" class="nav-link">Academies</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link active">Request Pilot</a>
             </div>
             <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
                 <span></span>
@@ -33,11 +35,11 @@
     <main class="subpage-main">
         <section class="page-hero">
             <div class="container narrow">
-                <p class="eyebrow">Contact</p>
-                <h1>Bring cricket video analysis to your coaching workflow</h1>
+                <p class="eyebrow">Request a Pilot</p>
+                <h1>Bring performance intelligence to your nets</h1>
                 <p>
-                    Tell us about your batsmen, bowling-machine setup, academy, club, or performance program.
-                    We will help map Cricket Vision to the way you already train.
+                    Tell us about your players, coaching workflow, and what you want to measure.
+                    We'll map Gabriella Vision to how you already train.
                 </p>
             </div>
         </section>
@@ -47,7 +49,8 @@
                 <div class="contact-info">
                     <h2>Get in touch</h2>
                     <p>
-                        Reach out for product access, bowling-machine pilots, academy deployments, or cricket analysis partnerships.
+                        Reach out for product access, hardware pilots, academy deployments,
+                        or cricket performance research partnerships.
                     </p>
 
                     <div class="contact-item">
@@ -70,7 +73,7 @@
                         <i class="fas fa-users"></i>
                         <div>
                             <strong>Best fit</strong>
-                            <span>Batting coaches, academies, clubs, performance centers, and players using bowling machines</span>
+                            <span>Batting coaches, bowling coaches, academies, clubs, performance centres, and research partners</span>
                         </div>
                     </div>
                 </div>
@@ -94,21 +97,33 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="interest">Cricket Focus</label>
+                        <label for="role">I am a...</label>
+                        <select id="role" name="role">
+                            <option value="">Select your role</option>
+                            <option value="player">Player</option>
+                            <option value="coach">Coach</option>
+                            <option value="academy">Academy</option>
+                            <option value="club">Club</option>
+                            <option value="performance-center">Performance Centre</option>
+                            <option value="research-partner">Research Partner</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="interest">I'm interested in...</label>
                         <select id="interest" name="interest">
-                            <option value="">Select a focus area</option>
-                            <option value="batting">Batsman feedback</option>
-                            <option value="module">Bowling machine CV module</option>
-                            <option value="upload-demo">Upload demo support</option>
-                            <option value="academy">Academy or net workflow</option>
-                            <option value="partnership">Partnership</option>
-                            <option value="general">General inquiry</option>
+                            <option value="">Select an area</option>
+                            <option value="batting">Batting analysis</option>
+                            <option value="bowling">Bowling analysis</option>
+                            <option value="both">Both batting and bowling</option>
+                            <option value="hardware-pilot">Hardware pilot</option>
+                            <option value="research">Research/validation partnership</option>
                         </select>
                     </div>
 
                     <div class="form-group">
                         <label for="message">Message *</label>
-                        <textarea id="message" name="message" placeholder="Tell us about your batsman feedback or bowling-machine setup..." required></textarea>
+                        <textarea id="message" name="message" placeholder="Tell us about your players, what you want to measure, and how you currently train..." required></textarea>
                     </div>
 
                     <button type="submit" class="submit-btn">
@@ -123,7 +138,7 @@
     <footer class="footer">
         <div class="container footer-grid">
             <p>&copy; 2026 Gabriella Systems. All rights reserved.</p>
-            <a href="demo.html">Cricket Vision Demo</a>
+            <a href="demo.html">Live Demo</a>
         </div>
     </footer>
 

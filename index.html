@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<!-- Jira: KAN-81 (index.html — landing page, batting-outcome messaging, pilot CTA) -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gabriella Systems - Cricket Computer Vision Analysis</title>
-    <meta name="description" content="Bowling-machine-mounted computer vision for batsman feedback and batting technique analysis.">
+    <title>Gabriella Systems - Computer Vision for Cricket Performance</title>
+    <meta name="description" content="Computer vision for cricket performance — batting and bowling intelligence from one portable system.">
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -17,10 +16,13 @@
             </div>
             <div class="nav-menu" id="nav-menu">
                 <a href="index.html" class="nav-link active">Home</a>
-                <a href="about.html" class="nav-link">About</a>
                 <a href="services.html" class="nav-link">Platform</a>
+                <a href="batting.html" class="nav-link">Batting</a>
+                <a href="bowling.html" class="nav-link">Bowling</a>
                 <a href="demo.html" class="nav-link">Demo</a>
-                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="academies.html" class="nav-link">Academies</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Request Pilot</a>
             </div>
             <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
                 <span></span>
@@ -34,176 +36,48 @@
         <section class="hero cricket-hero">
             <div class="container hero-layout">
                 <div class="hero-content">
-                    <p class="eyebrow">Live today: video-analysis platform</p>
-                    <h1>AI batting analysis for every ball you face</h1>
+                    <p class="eyebrow">Computer vision for cricket performance</p>
+                    <h1>See what happens on every delivery</h1>
                     <p class="hero-copy">
-                        Mount one camera near your bowling machine and automatically measure bat path,
-                        ball trajectory, impact timing, and body position.
+                        Gabriella is a portable vision system that measures batting and bowling
+                        performance — turning player movement, bat motion and ball flight into
+                        objective cricket intelligence.
                     </p>
                     <p class="hero-copy">
-                        Cricket Vision is live today as a video-analysis platform. We're now working with
-                        academies to pilot our bowling-machine-mounted camera module.
+                        One device. Two perspectives. Whether you're analysing a batter's technique
+                        or a bowler's action, Gabriella Vision captures what matters.
                     </p>
                     <div class="hero-actions">
-                        <a href="demo.html" class="cta-button">Try the Live Demo</a>
+                        <a href="demo.html" class="cta-button">Watch Live Demo</a>
                         <a href="contact.html" class="secondary-button">Request a Pilot</a>
                     </div>
-                    <div class="hero-stats" aria-label="Cricket analysis highlights">
-                        <div>
-                            <strong>17</strong>
-                            <span>pose landmarks</span>
-                        </div>
-                        <div>
-                            <strong>2</strong>
-                            <span>tracked objects</span>
-                        </div>
-                        <div>
-                            <strong>24/7</strong>
-                            <span>video review</span>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="signal-strip">
-            <div class="container signal-grid">
-                <div>
-                    <i class="fas fa-bullseye"></i>
-                    <span>Bat swing path</span>
-                </div>
-                <div>
-                    <i class="fas fa-location-arrow"></i>
-                    <span>Ball trajectory</span>
-                </div>
-                <div>
-                    <i class="fas fa-stopwatch"></i>
-                    <span>Impact timing</span>
-                </div>
-                <div>
-                    <i class="fas fa-chart-line"></i>
-                    <span>Batsman feedback</span>
-                </div>
-            </div>
-        </section>
-
-        <section class="section features">
+        <section class="section">
             <div class="container">
                 <div class="section-intro">
-                    <p class="eyebrow">Built for batting practice</p>
-                    <h2>Frame-by-frame insight from the machine end</h2>
-                    <p>
-                        The module watches the batsman from near the bowling machine, detects the player,
-                        bat, ball, and body landmarks, then turns each delivery into coaching-ready metrics.
-                    </p>
+                    <p class="eyebrow">One vision platform. Two perspectives on the game.</p>
+                    <h2>Position Gabriella for the part of the game you want to understand</h2>
                 </div>
-                <div class="features-grid">
-                    <article class="feature-card">
-                        <i class="fas fa-user-check"></i>
-                        <h3>Batsman Mechanics</h3>
-                        <p>Track head position, front-foot plant, backlift, impact timing, and shot shape across drives, cuts, pulls, and defensive strokes.</p>
-                    </article>
-                    <article class="feature-card">
-                        <i class="fas fa-video"></i>
-                        <h3>Machine-Mounted Camera</h3>
-                        <p>Place the CV unit above or below a bowling machine for a consistent batsman-facing angle across every ball in the session.</p>
-                    </article>
-                    <article class="feature-card">
-                        <i class="fas fa-tachometer-alt"></i>
-                        <h3>Ball and Bat Speed</h3>
-                        <p>Estimate ball speed, bat movement, impact frame, and pose changes from a single camera using the existing CV pipeline.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="section technology-band">
-            <div class="container split-layout">
-                <div>
-                    <p class="eyebrow">Computer vision that speaks cricket</p>
-                    <h2>From raw clip to coachable evidence</h2>
-                    <p>
-                        Gabriella Systems identifies batting phases like stance, trigger movement, downswing,
-                        impact, and follow-through. Coaches get objective visual evidence from the same end
-                        as the bowling machine without needing a second camera angle.
-                    </p>
-                    <a href="about.html" class="text-link">How we approach cricket analysis <i class="fas fa-chevron-right"></i></a>
-                </div>
-                <div class="analysis-stack" aria-label="Cricket analysis metrics">
-                    <div class="analysis-row accent-green">
-                        <span>Front-foot stability</span>
-                        <strong>91%</strong>
+                <div class="dual-video">
+                    <div class="video-placeholder">
+                        <div class="video-placeholder-label">
+                            <strong>Batting Analysis</strong>
+                            <span>Ball + Bat + Body</span>
+                        </div>
                     </div>
-                    <div class="analysis-row accent-amber">
-                        <span>Bat face angle</span>
-                        <strong>12 deg open</strong>
-                    </div>
-                    <div class="analysis-row accent-coral">
-                        <span>Impact frame</span>
-                        <strong>15</strong>
-                    </div>
-                    <div class="analysis-row accent-teal">
-                        <span>Follow-through balance</span>
-                        <strong>86%</strong>
+                    <div class="video-placeholder">
+                        <div class="video-placeholder-label">
+                            <strong>Bowling Analysis</strong>
+                            <span>Run-up + Action + Release</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <section class="section process-section">
-            <div class="container">
-                <div class="section-intro">
-                    <p class="eyebrow">Simple workflow</p>
-                    <h2>A dedicated view of every ball the batsman faces</h2>
-                </div>
-                <div class="steps-grid">
-                    <article class="step-card">
-                        <span>1</span>
-                        <h3>Mount</h3>
-                        <p>Attach the CV module above or below the bowling machine so the camera faces the batsman and the ball path.</p>
-                    </article>
-                    <article class="step-card">
-                        <span>2</span>
-                        <h3>Analyze</h3>
-                        <p>Computer vision extracts batsman pose, bat path, ball tracking, impact timing, and estimated speeds automatically.</p>
-                    </article>
-                    <article class="step-card">
-                        <span>3</span>
-                        <h3>Feedback</h3>
-                        <p>Review objective metrics, annotated frames, and correction priorities with the batsman after each clip or session.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="section demo-preview">
-            <div class="container split-layout">
-                <div class="demo-copy">
-                    <p class="eyebrow">Interactive sample</p>
-                    <h2>See a cricket analysis dashboard</h2>
-                    <p>
-                        The demo page mirrors the current upload pipeline: a batsman-facing clip becomes
-                        ball and bat tracking, pose overlays, speed charts, and coaching priorities.
-                    </p>
-                    <a href="demo.html" class="cta-button">Analyze a Cricket Clip</a>
-                </div>
-                <div class="mini-dashboard" aria-label="Sample cricket dashboard">
-                    <div class="dashboard-header">
-                        <span>Full ball outside off</span>
-                        <strong>Technique score 88</strong>
-                    </div>
-                    <div class="bar-row">
-                        <span>Head stillness</span>
-                        <div><span class="bar-84"></span></div>
-                    </div>
-                    <div class="bar-row">
-                        <span>Stride length</span>
-                        <div><span class="bar-76"></span></div>
-                    </div>
-                    <div class="bar-row">
-                        <span>Impact timing</span>
-                        <div><span class="bar-91"></span></div>
-                    </div>
+                <div class="video-tagline">
+                    <h3>One vision platform. Two perspectives on the game.</h3>
+                    <a href="demo.html" class="cta-button">Explore the Live Demo</a>
                 </div>
             </div>
         </section>
@@ -211,30 +85,156 @@
         <section class="section muted-section">
             <div class="container">
                 <div class="section-intro">
-                    <p class="eyebrow">Track progress, not just one clip</p>
-                    <h2>Don't just analyze a shot. Measure improvement.</h2>
+                    <p class="eyebrow">One system. Multiple perspectives.</p>
+                    <h2>Batting and bowling intelligence from a single device</h2>
+                </div>
+                <div class="dual-cards">
+                    <article class="intelligence-card">
+                        <h3><i class="fas fa-baseball-bat-ball"></i> Batting Intelligence</h3>
+                        <ul>
+                            <li>Ball trajectory and speed</li>
+                            <li>Bat path and bat speed</li>
+                            <li>Impact timing and contact zone</li>
+                            <li>Head movement and stability</li>
+                            <li>Footwork and stride</li>
+                            <li>Body pose and balance</li>
+                            <li>Session consistency</li>
+                        </ul>
+                    </article>
+                    <article class="intelligence-card">
+                        <h3><i class="fas fa-person-running"></i> Bowling Intelligence</h3>
+                        <ul>
+                            <li>Run-up speed and acceleration</li>
+                            <li>Arm speed and trajectory</li>
+                            <li>Front-knee angle at contact</li>
+                            <li>Joint angles through the action</li>
+                            <li>Release characteristics</li>
+                            <li>Body pose and alignment</li>
+                            <li>Session consistency</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section technology-band">
+            <div class="container">
+                <div class="section-intro">
+                    <p class="eyebrow" style="color: #ffd86b;">How it works</p>
+                    <h2>From raw video to coaching-ready evidence</h2>
+                </div>
+                <div class="pipeline-grid">
+                    <article class="pipeline-card">
+                        <i class="fas fa-video"></i>
+                        <h3>Capture</h3>
+                        <p>Purpose-built cricket vision system</p>
+                    </article>
+                    <article class="pipeline-card">
+                        <i class="fas fa-eye"></i>
+                        <h3>Understand</h3>
+                        <p>Detect player, bat, ball, events</p>
+                    </article>
+                    <article class="pipeline-card">
+                        <i class="fas fa-ruler-combined"></i>
+                        <h3>Measure</h3>
+                        <p>Speed, angles, timing, trajectory</p>
+                    </article>
+                    <article class="pipeline-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Learn</h3>
+                        <p>Compare delivery, session, history</p>
+                    </article>
+                    <article class="pipeline-card">
+                        <i class="fas fa-arrow-trend-up"></i>
+                        <h3>Improve</h3>
+                        <p>Objective evidence for coaches</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-intro">
+                    <p class="eyebrow">Compare and track</p>
+                    <h2>One delivery is useful. A season is powerful.</h2>
                     <p>
-                        Every delivery is compared against the batsman's own history, so coaches see
+                        Every delivery is compared against the player's own history, so coaches see
                         trends across sessions instead of one-off impressions.
                     </p>
                 </div>
-                <div class="metrics-grid" aria-label="Session progress trends">
-                    <article class="metric-card">
-                        <span>Head stability</span>
-                        <strong>Session 1 → 20: up</strong>
-                    </article>
-                    <article class="metric-card">
-                        <span>Impact consistency</span>
-                        <strong>Session 1 → 20: up</strong>
-                    </article>
-                    <article class="metric-card">
-                        <span>Bat speed</span>
-                        <strong>Session 1 → 20: up</strong>
-                    </article>
-                    <article class="metric-card">
-                        <span>Timing variance</span>
-                        <strong>Session 1 → 20: down</strong>
-                    </article>
+                <div class="compare-grid">
+                    <div class="compare-card">
+                        <h4>Batting — Session Progress</h4>
+                        <div class="compare-row">
+                            <span>Head displacement</span>
+                            <strong>6.4 cm → 4.1 cm</strong>
+                        </div>
+                        <div class="compare-row">
+                            <span>Front stride</span>
+                            <strong>51 cm → 58 cm</strong>
+                        </div>
+                        <div class="compare-row">
+                            <span>Bat speed</span>
+                            <strong>54 → 57 mph</strong>
+                        </div>
+                        <div class="compare-row">
+                            <span>Impact consistency</span>
+                            <strong>±4 frames → ±2 frames</strong>
+                        </div>
+                    </div>
+                    <div class="compare-card">
+                        <h4>Bowling — Session Progress</h4>
+                        <div class="compare-row">
+                            <span>Ball speed</span>
+                            <strong>119 → 127 km/h</strong>
+                        </div>
+                        <div class="compare-row">
+                            <span>Front-knee angle</span>
+                            <strong>31° → 16°</strong>
+                        </div>
+                        <div class="compare-row">
+                            <span>Run-up speed</span>
+                            <strong>19.2 → 21.5 km/h</strong>
+                        </div>
+                        <div class="compare-row">
+                            <span>Stride length</span>
+                            <strong>1.68 → 1.82 m</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section muted-section">
+            <div class="container split-layout">
+                <div>
+                    <p class="eyebrow">Gabriella Vision</p>
+                    <h2>Built for cricket, not adapted to it</h2>
+                    <p>
+                        Purpose-built capture enables Gabriella to optimise camera positioning,
+                        frame rate, field of view, and calibration — delivering reliable measurement
+                        that a phone camera simply cannot match.
+                    </p>
+                    <a href="services.html" class="text-link">Learn about the platform <i class="fas fa-chevron-right"></i></a>
+                </div>
+                <div class="analysis-stack">
+                    <div class="analysis-row accent-green">
+                        <span>Consistent capture position</span>
+                        <strong><i class="fas fa-check"></i></strong>
+                    </div>
+                    <div class="analysis-row accent-amber">
+                        <span>Optimised frame rate</span>
+                        <strong><i class="fas fa-check"></i></strong>
+                    </div>
+                    <div class="analysis-row accent-coral">
+                        <span>Calibrated measurement</span>
+                        <strong><i class="fas fa-check"></i></strong>
+                    </div>
+                    <div class="analysis-row accent-teal">
+                        <span>Multi-camera ready</span>
+                        <strong><i class="fas fa-check"></i></strong>
+                    </div>
                 </div>
             </div>
         </section>
@@ -242,10 +242,10 @@
         <section class="section final-cta">
             <div class="container narrow">
                 <p class="eyebrow">Cricket academy pilots</p>
-                <h2>Bring objective batting analysis to your nets</h2>
+                <h2>Bring performance intelligence to your nets</h2>
                 <p>
-                    We're looking for cricket academies, coaches, and performance programs to pilot
-                    Cricket Vision with their existing bowling-machine sessions.
+                    We're working with cricket academies, coaches, and performance programs to pilot
+                    Gabriella Vision for batting and bowling analysis.
                 </p>
                 <div class="hero-actions">
                     <a href="contact.html" class="cta-button">Request a Pilot</a>
@@ -258,7 +258,7 @@
     <footer class="footer">
         <div class="container footer-grid">
             <p>&copy; 2026 Gabriella Systems. All rights reserved.</p>
-            <a href="demo.html">Cricket Vision Demo</a>
+            <a href="demo.html">Live Demo</a>
         </div>
     </footer>
 

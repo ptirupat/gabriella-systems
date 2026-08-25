@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<!-- Jira: KAN-83 (services.html — platform features and customer benefits) -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Platform - Gabriella Systems Cricket Vision</title>
-    <meta name="description" content="Cricket Vision platform for bowling-machine-mounted batsman analysis.">
+    <title>Platform - Gabriella Systems</title>
+    <meta name="description" content="Gabriella Vision — a portable computer vision system for cricket performance measurement.">
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -17,10 +16,13 @@
             </div>
             <div class="nav-menu" id="nav-menu">
                 <a href="index.html" class="nav-link">Home</a>
-                <a href="about.html" class="nav-link">About</a>
                 <a href="services.html" class="nav-link active">Platform</a>
+                <a href="batting.html" class="nav-link">Batting</a>
+                <a href="bowling.html" class="nav-link">Bowling</a>
                 <a href="demo.html" class="nav-link">Demo</a>
-                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="academies.html" class="nav-link">Academies</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Request Pilot</a>
             </div>
             <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
                 <span></span>
@@ -33,109 +35,89 @@
     <main class="subpage-main">
         <section class="page-hero">
             <div class="container narrow">
-                <p class="eyebrow">Cricket Vision Platform</p>
-                <h1>A CV module for bowling-machine batting sessions</h1>
+                <p class="eyebrow">Gabriella Vision System</p>
+                <h1>A portable, purpose-built computer-vision device for cricket practice</h1>
                 <p>
-                    A focused computer vision system for academies, clubs, and players who want
-                    objective batsman feedback from the machine end of the net.
+                    One device. Two placements. Captures batting and bowling performance with
+                    the consistency required for objective measurement.
                 </p>
             </div>
         </section>
 
         <section class="section">
             <div class="container">
-                <div class="product-grid">
-                    <article class="product-card">
-                        <div class="product-icon green">
-                            <i class="fas fa-bullseye"></i>
-                        </div>
-                        <h2>Vision Module</h2>
-                        <p>
-                            Mount a camera module above or below a bowling machine to capture a repeatable
-                            view of the batsman, ball path, bat, and wicket zone.
-                        </p>
-                        <ul class="check-list">
-                            <li><i class="fas fa-check"></i>Consistent batsman-facing camera angle</li>
-                            <li><i class="fas fa-check"></i>Works with machine-delivered practice balls</li>
-                            <li><i class="fas fa-check"></i>Designed for net sessions and repeatable drills</li>
-                        </ul>
+                <div class="section-intro">
+                    <p class="eyebrow">Platform pipeline</p>
+                    <h2>From raw capture to coaching evidence</h2>
+                </div>
+                <div class="pipeline-grid">
+                    <article class="pipeline-card">
+                        <i class="fas fa-video"></i>
+                        <h3>Capture</h3>
+                        <p>Purpose-built cricket vision system with optimised frame rate and FOV</p>
                     </article>
-
-                    <article class="product-card">
-                        <div class="product-icon amber">
-                            <i class="fas fa-location-arrow"></i>
-                        </div>
-                        <h2>Tracking Pipeline</h2>
-                        <p>
-                            Every clip is turned into coach-ready detail: where the ball and bat moved,
-                            how the batsman's body responded, and how fast each delivery and shot traveled.
-                        </p>
-                        <ul class="check-list">
-                            <li><i class="fas fa-check"></i>Ball and bat path, trail, and contact point</li>
-                            <li><i class="fas fa-check"></i>Full-body pose landmarks for batsman mechanics</li>
-                            <li><i class="fas fa-check"></i>Ball and bat speed estimates from a single camera</li>
-                        </ul>
-                        <p class="demo-note">
-                            How it works technically: ball &amp; bat segmentation, YOLO-pose landmarks,
-                            depth estimation, and multi-model aggregation.
-                        </p>
+                    <article class="pipeline-card">
+                        <i class="fas fa-eye"></i>
+                        <h3>Understand</h3>
+                        <p>Detect player, bat, ball, and cricket-specific events automatically</p>
                     </article>
-
-                    <article class="product-card">
-                        <div class="product-icon coral">
-                            <i class="fas fa-clipboard-check"></i>
-                        </div>
-                        <h2>Batsman Feedback</h2>
-                        <p>
-                            Turn the analyzed clip into practical feedback for the batsman: what moved,
-                            when impact happened, and which correction should come next.
-                        </p>
-                        <ul class="check-list">
-                            <li><i class="fas fa-check"></i>Impact frame and contact-zone review</li>
-                            <li><i class="fas fa-check"></i>Head, shoulder, wrist, and foot movement cues</li>
-                            <li><i class="fas fa-check"></i>Session trends across repeated deliveries</li>
-                        </ul>
+                    <article class="pipeline-card">
+                        <i class="fas fa-ruler-combined"></i>
+                        <h3>Measure</h3>
+                        <p>Motion, speed, angles, timing, and trajectory — calibrated and repeatable</p>
+                    </article>
+                    <article class="pipeline-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Learn</h3>
+                        <p>Compare delivery to session to player history over time</p>
+                    </article>
+                    <article class="pipeline-card">
+                        <i class="fas fa-arrow-trend-up"></i>
+                        <h3>Improve</h3>
+                        <p>Give coaches objective evidence for every conversation</p>
                     </article>
                 </div>
             </div>
         </section>
 
         <section class="section placement-section">
-            <div class="container split-layout">
-                <div>
-                    <p class="eyebrow">Physical setup</p>
-                    <h2>One camera. One consistent angle. Every delivery captured.</h2>
-                    <p>
-                        Mount Cricket Vision above or below your bowling machine to create a repeatable view
-                        of the batter, bat, and ball — without changing how the player trains.
-                    </p>
-                    <div class="placement-notes">
-                        <div>
-                            <i class="fas fa-arrow-up"></i>
-                            <span>Above-machine mount for a higher view of bat path and body shape</span>
-                        </div>
-                        <div>
-                            <i class="fas fa-arrow-down"></i>
-                            <span>Below-machine mount for a low-profile training-lane setup</span>
-                        </div>
-                    </div>
+            <div class="container">
+                <div class="section-intro">
+                    <p class="eyebrow" style="color: #ffd86b;">Two placements. One device.</p>
+                    <h2>Position Gabriella Vision for what you want to measure</h2>
                 </div>
-                <div class="placement-diagram" aria-label="Bowling machine camera module placement">
-                    <div class="machine-block">
-                        <span class="module module-top">CV</span>
-                        <div class="machine-body">
-                            <i class="fas fa-robot"></i>
-                            <span>Bowling Machine</span>
+                <div class="dual-cards">
+                    <div class="placement-mode">
+                        <div class="placement-notes">
+                            <div>
+                                <i class="fas fa-crosshairs"></i>
+                                <span><strong>Batting Mode</strong> — Device at the bowling end facing the batter</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-circle"></i>
+                                <span>Captures: Ball trajectory + Bat path + Batter pose</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>Measures: Ball speed, bat speed, impact timing, body mechanics</span>
+                            </div>
                         </div>
-                        <span class="module module-bottom">CV</span>
                     </div>
-                    <div class="pitch-lane">
-                        <span class="delivery-line"></span>
-                        <span class="ball-dot"></span>
-                    </div>
-                    <div class="batsman-target">
-                        <i class="fas fa-user"></i>
-                        <span>Batsman</span>
+                    <div class="placement-mode">
+                        <div class="placement-notes">
+                            <div>
+                                <i class="fas fa-person-running"></i>
+                                <span><strong>Bowling Mode</strong> — Device repositioned side-on facing the bowler</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-circle"></i>
+                                <span>Captures: Run-up + Bowling action + Release + Ball</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>Measures: Run-up speed, arm speed, knee angle, ball speed</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -144,31 +126,23 @@
         <section class="section muted-section">
             <div class="container split-layout">
                 <div>
-                    <p class="eyebrow">Coach workflow</p>
-                    <h2>A practical review layer for batting sessions</h2>
+                    <p class="eyebrow">Built for cricket, not adapted to it</p>
+                    <h2>Why a dedicated device exists</h2>
                     <p>
-                        Cricket Vision organizes clips by batsman, drill, delivery type, and impact result.
-                        Coaches can compare one player against their own prior sessions and repeatable machine settings.
+                        Reliable performance measurement requires reliable capture. Purpose-built
+                        hardware enables Gabriella to control what a phone camera cannot.
                     </p>
-                    <a href="demo.html" class="cta-button">View Demo</a>
                 </div>
-                <div class="workflow-list">
-                    <div>
-                        <i class="fas fa-upload"></i>
-                        <span>Capture from the machine end</span>
-                    </div>
-                    <div>
-                        <i class="fas fa-search"></i>
-                        <span>Detect batting phases</span>
-                    </div>
-                    <div>
-                        <i class="fas fa-chart-line"></i>
-                        <span>Compare repeated deliveries</span>
-                    </div>
-                    <div>
-                        <i class="fas fa-clipboard-check"></i>
-                        <span>Share batsman feedback</span>
-                    </div>
+                <div>
+                    <ul class="check-list">
+                        <li><i class="fas fa-check"></i>Optimised camera positioning for cricket</li>
+                        <li><i class="fas fa-check"></i>High frame rate for fast-moving objects</li>
+                        <li><i class="fas fa-check"></i>Calibrated field of view</li>
+                        <li><i class="fas fa-check"></i>Consistent session-to-session capture</li>
+                        <li><i class="fas fa-check"></i>Multi-camera capability</li>
+                        <li><i class="fas fa-check"></i>Future sensor integration</li>
+                        <li><i class="fas fa-check"></i>Automated operation — no camera operator needed</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -177,25 +151,39 @@
             <div class="container">
                 <div class="section-intro">
                     <p class="eyebrow">Platform outputs</p>
-                    <h2>What the analysis returns</h2>
+                    <h2>What the system delivers</h2>
                 </div>
                 <div class="metrics-grid">
                     <article class="metric-card">
-                        <span>Bat path</span>
-                        <strong>Arc, angle, timing</strong>
+                        <span>Batting</span>
+                        <strong>Ball, bat, body, outcome</strong>
                     </article>
                     <article class="metric-card">
-                        <span>Batsman pose</span>
-                        <strong>Pose, balance, alignment</strong>
+                        <span>Bowling</span>
+                        <strong>Run-up, action, release, ball</strong>
                     </article>
                     <article class="metric-card">
-                        <span>Ball tracking</span>
-                        <strong>Speed, trail, impact frame</strong>
+                        <span>Comparison</span>
+                        <strong>Delivery vs. delivery</strong>
                     </article>
                     <article class="metric-card">
-                        <span>Session trends</span>
-                        <strong>Progress across weeks</strong>
+                        <span>Progress</span>
+                        <strong>Session over session</strong>
                     </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section final-cta">
+            <div class="container narrow">
+                <h2>See the platform in action</h2>
+                <p>
+                    Explore the live demo or get in touch to discuss a pilot deployment
+                    at your academy or training facility.
+                </p>
+                <div class="hero-actions">
+                    <a href="demo.html" class="cta-button">Watch the Demo</a>
+                    <a href="contact.html" class="secondary-button">Request a Pilot</a>
                 </div>
             </div>
         </section>
@@ -204,7 +192,7 @@
     <footer class="footer">
         <div class="container footer-grid">
             <p>&copy; 2026 Gabriella Systems. All rights reserved.</p>
-            <a href="demo.html">Cricket Vision Demo</a>
+            <a href="demo.html">Live Demo</a>
         </div>
     </footer>
 
