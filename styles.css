@@ -1646,6 +1646,52 @@ a {
     color: var(--ink);
 }
 
+.compare-disclaimer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.88rem;
+    font-style: italic;
+    margin-top: 1.2rem;
+}
+
+/* Status Strip */
+.status-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.8rem;
+    padding-top: 1.4rem;
+    border-top: 1px solid var(--line);
+}
+
+.status-item {
+    font-size: 0.88rem;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.status-item i {
+    font-size: 0.65rem;
+}
+
+.status-item strong {
+    font-weight: 700;
+}
+
+.status-live i {
+    color: var(--green);
+}
+
+.status-dev i {
+    color: var(--amber);
+}
+
+.status-planned i {
+    color: var(--teal);
+}
+
 /* Responsive: New Components */
 @media (max-width: 1024px) {
     .nav-menu {
