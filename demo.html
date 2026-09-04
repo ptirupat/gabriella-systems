@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demo - Gabriella Systems Cricket Vision</title>
+    <title>Showcase - Gabriella Systems Cricket Vision</title>
     <meta name="description" content="Live cricket vision demo — batting and bowling analysis with ball tracking, pose estimation, and speed measurement.">
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -23,8 +23,6 @@
             margin-top: 0.8rem;
         }
         .demo-note i { color: var(--green); }
-        .demo-content-panel { display: none; }
-        .demo-content-panel.active { display: block; }
     </style>
 </head>
 <body>
@@ -38,7 +36,7 @@
                 <a href="services.html" class="nav-link">Platform</a>
                 <a href="batting.html" class="nav-link">Batting</a>
                 <a href="bowling.html" class="nav-link">Bowling</a>
-                <a href="demo.html" class="nav-link active">Demo</a>
+                <a href="demo.html" class="nav-link active">Showcase</a>
                 <a href="about.html" class="nav-link">About</a>
                 <a href="contact.html" class="nav-link">Request Pilot</a>
             </div>
@@ -53,64 +51,32 @@
     <main class="subpage-main">
         <section class="demo-hero">
             <div class="container narrow">
-                <p class="eyebrow">Cricket Vision Demo</p>
-                <h1>Live cricket analysis</h1>
+                <p class="eyebrow">Cricket Vision Showcase</p>
+                <h1>Cricket performance showcase</h1>
                 <p>
-                    See batting and bowling analysis in action. Pick a sample clip or upload
-                    your own — the system tracks the ball, bat, and player to produce
-                    objective performance data.
+                    See cricket analysis in action. Browse sample clips to see how the system
+                    tracks the ball, bat, and player to produce objective performance data.
                 </p>
             </div>
         </section>
 
         <section class="section demo-workspace">
             <div class="container">
-                <div class="demo-tabs">
-                    <button class="demo-tab active" data-mode="batting">Batting Analysis</button>
-                    <button class="demo-tab" data-mode="bowling">Bowling Analysis</button>
-                </div>
-
-                <div id="batting-demo-content" class="demo-content-panel active">
-                    <iframe
-                        class="demo-embed-frame"
-                        src="https://gabriellasystems--cricket-demo-web.modal.run/?embed=1"
-                        title="Cricket Vision interactive batting demo"
-                        loading="lazy"
-                        allow="fullscreen">
-                    </iframe>
-                    <p class="demo-note">
-                        <i class="fas fa-circle-info"></i>
-                        Sample clips play instantly. Uploads are processed live on GPU (first run warms up the
-                        models, ~1–3 min). Speeds are camera-only estimates.
-                    </p>
-                    <p class="demo-note">
-                        <i class="fas fa-shield-halved"></i>
-                        Your upload is private and used only to generate this analysis. Uploaded footage
-                        is automatically deleted after 7 days. By uploading, you confirm you have
-                        permission to use the footage.
-                    </p>
-                </div>
-
-                <div id="bowling-demo-content" class="demo-content-panel">
-                    <iframe
-                        class="demo-embed-frame"
-                        src="https://gabriellasystems--cricket-demo-web.modal.run/?embed=1&mode=bowling"
-                        title="Cricket Vision interactive bowling demo"
-                        loading="lazy"
-                        allow="fullscreen">
-                    </iframe>
-                    <p class="demo-note">
-                        <i class="fas fa-circle-info"></i>
-                        Upload a side-on bowling clip (single bowler in frame). Analysis takes ~1–3 min
-                        on first run while GPU models warm up. Speeds are camera-only estimates.
-                    </p>
-                    <p class="demo-note">
-                        <i class="fas fa-shield-halved"></i>
-                        Your upload is private and used only to generate this analysis. Uploaded footage
-                        is automatically deleted after 7 days. By uploading, you confirm you have
-                        permission to use the footage.
-                    </p>
-                </div>
+                <iframe
+                    class="demo-embed-frame"
+                    src="https://gabriellasystems--cricket-demo-web.modal.run/?embed=1"
+                    title="Cricket Vision interactive batting demo"
+                    loading="lazy"
+                    allow="fullscreen">
+                </iframe>
+                <p class="demo-note">
+                    <i class="fas fa-circle-info"></i>
+                    Sample clips play instantly. Speeds are camera-only estimates.
+                </p>
+                <p class="demo-note">
+                    <i class="fas fa-shield-halved"></i>
+                    Your data is private and used only to generate this analysis.
+                </p>
             </div>
         </section>
 
