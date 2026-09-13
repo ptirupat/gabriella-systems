@@ -97,6 +97,26 @@ a {
     letter-spacing: 0;
 }
 
+.nav-logo-link {
+    display: block;
+    height: 48px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #0a1628;
+    line-height: 0;
+    transition: opacity 0.2s ease;
+}
+
+.nav-logo-link:hover {
+    opacity: 0.88;
+}
+
+.nav-logo-img {
+    height: 48px;
+    width: auto;
+    display: block;
+}
+
 .nav-menu {
     display: flex;
     align-items: center;
