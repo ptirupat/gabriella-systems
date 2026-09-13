@@ -6,6 +6,16 @@
     <title>Gabriella Systems - Computer Vision for Cricket Performance</title>
     <meta name="description" content="Computer vision for cricket performance — batting and bowling intelligence from one portable system.">
     <link rel="canonical" href="https://gabriellasystems.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Gabriella Systems">
+    <meta property="og:title" content="Gabriella Systems - Computer Vision for Cricket Performance">
+    <meta property="og:description" content="Computer vision for cricket performance — batting and bowling intelligence from one portable system.">
+    <meta property="og:image" content="https://gabriellasystems.com/assets/cricket-vision-hero.png">
+    <meta property="og:url" content="https://gabriellasystems.com/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -20,6 +30,7 @@
                 <a href="services.html" class="nav-link">Platform</a>
                 <a href="batting.html" class="nav-link">Batting</a>
                 <a href="bowling.html" class="nav-link">Bowling</a>
+                <a href="academies.html" class="nav-link">For Academies</a>
                 <a href="demo.html" class="nav-link">Showcase</a>
                 <a href="about.html" class="nav-link">About</a>
                 <a href="contact.html" class="nav-link">Request Pilot</a>
@@ -34,18 +45,14 @@
 
     <main>
         <section class="hero cricket-hero">
-            <div class="container hero-layout">
-                <div class="hero-content">
+            <div class="container hero-split">
+                <div class="hero-left">
                     <p class="eyebrow">Computer vision for cricket performance</p>
-                    <h1>See what happens on every delivery</h1>
+                    <h1><span class="word">See</span> <span class="word">what</span> <span class="word">happens</span> <span class="word">on</span> <span class="word">every</span> <span class="word">delivery</span></h1>
                     <p class="hero-copy">
                         Gabriella is building a portable cricket-vision system that measures batting
                         and bowling performance — turning player movement, bat motion and ball flight
                         into objective cricket intelligence.
-                    </p>
-                    <p class="hero-copy">
-                        One portable capture system. Two deployment modes. Whether you're analysing
-                        a batter's technique or a bowler's action, Gabriella captures what matters.
                     </p>
                     <div class="hero-actions">
                         <a href="demo.html" class="cta-button">Explore the Showcase</a>
@@ -55,6 +62,58 @@
                         <div class="status-item status-live"><i class="fas fa-circle"></i> <strong>Live:</strong> Batting analysis software</div>
                         <div class="status-item status-dev"><i class="fas fa-wrench"></i> <strong>In development:</strong> Side-on bowling analysis</div>
                         <div class="status-item status-planned"><i class="fas fa-compass-drafting"></i> <strong>Planned:</strong> Portable capture hardware</div>
+                    </div>
+                </div>
+                <div class="hero-right">
+                    <div class="hero-dashboard">
+                        <div class="hero-metric-card">
+                            <span class="live-dot"></span>
+                            <span class="metric-value" data-count="126">126</span>
+                            <span class="metric-label">Ball Speed km/h</span>
+                            <div class="sparkline">
+                                <span style="height:40%"></span>
+                                <span style="height:55%"></span>
+                                <span style="height:50%"></span>
+                                <span style="height:75%"></span>
+                                <span style="height:100%"></span>
+                            </div>
+                        </div>
+                        <div class="hero-metric-card">
+                            <span class="live-dot"></span>
+                            <span class="metric-value" data-count="18">18</span>
+                            <span class="metric-label">Front Knee °</span>
+                            <div class="sparkline">
+                                <span style="height:100%"></span>
+                                <span style="height:80%"></span>
+                                <span style="height:70%"></span>
+                                <span style="height:60%"></span>
+                                <span style="height:45%"></span>
+                            </div>
+                        </div>
+                        <div class="hero-metric-card">
+                            <span class="live-dot"></span>
+                            <span class="metric-value" data-count="57">57</span>
+                            <span class="metric-label">Bat Speed km/h</span>
+                            <div class="sparkline">
+                                <span style="height:60%"></span>
+                                <span style="height:65%"></span>
+                                <span style="height:70%"></span>
+                                <span style="height:85%"></span>
+                                <span style="height:100%"></span>
+                            </div>
+                        </div>
+                        <div class="hero-metric-card">
+                            <span class="live-dot"></span>
+                            <span class="metric-value" data-count="21.6">21.6</span>
+                            <span class="metric-label">Run-up km/h</span>
+                            <div class="sparkline">
+                                <span style="height:50%"></span>
+                                <span style="height:60%"></span>
+                                <span style="height:75%"></span>
+                                <span style="height:90%"></span>
+                                <span style="height:100%"></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -260,12 +319,36 @@
     </main>
 
     <footer class="footer">
-        <div class="container footer-grid">
-            <p>&copy; 2026 Gabriella Systems. All rights reserved.</p>
-            <a href="demo.html">Live Showcase</a>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="nav-logo-text">Gabriella Systems</span>
+                    <p>Computer vision for cricket performance — batting and bowling intelligence from a single portable system.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <a href="services.html">Platform</a>
+                    <a href="batting.html">Batting</a>
+                    <a href="bowling.html">Bowling</a>
+                    <a href="academies.html">For Academies</a>
+                    <a href="demo.html">Showcase</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Request a Pilot</a>
+                    <a href="mailto:admin@gabriellasystems.com">admin@gabriellasystems.com</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Gabriella Systems. All rights reserved.</p>
+                <a href="demo.html">Live Showcase &rarr;</a>
+            </div>
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

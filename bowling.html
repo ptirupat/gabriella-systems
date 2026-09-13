@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bowling Intelligence - Gabriella Systems</title>
     <meta name="description" content="Side-on computer vision for bowling analysis — run-up speed, arm speed, front-knee angle, and ball speed from every delivery.">
+        <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Gabriella Systems">
+    <meta property="og:title" content="Bowling Intelligence">
+    <meta property="og:description" content="Side-on computer vision for bowling analysis — run-up speed, arm speed, front-knee angle, and ball speed from every delivery.">
+    <meta property="og:image" content="https://gabriellasystems.com/assets/cricket-vision-hero.png">
+    <meta property="og:url" content="https://gabriellasystems.com/bowling.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -19,6 +29,7 @@
                 <a href="services.html" class="nav-link">Platform</a>
                 <a href="batting.html" class="nav-link">Batting</a>
                 <a href="bowling.html" class="nav-link active">Bowling</a>
+                <a href="academies.html" class="nav-link">For Academies</a>
                 <a href="demo.html" class="nav-link">Showcase</a>
                 <a href="about.html" class="nav-link">About</a>
                 <a href="contact.html" class="nav-link">Request Pilot</a>
@@ -88,35 +99,35 @@
                 <div class="metrics-grid">
                     <article class="metric-card">
                         <span>Peak run-up speed</span>
-                        <strong>21.6 km/h</strong>
+                        <strong><span data-count="21.6">21.6</span> km/h</strong>
                     </article>
                     <article class="metric-card">
                         <span>Speed at delivery stride</span>
-                        <strong>19.8 km/h</strong>
+                        <strong><span data-count="19.8">19.8</span> km/h</strong>
                     </article>
                     <article class="metric-card">
                         <span>Front-knee angle</span>
-                        <strong>18°</strong>
+                        <strong><span data-count="18">18</span>°</strong>
                     </article>
                     <article class="metric-card">
                         <span>Arm angular speed</span>
-                        <strong>1840°/s</strong>
+                        <strong><span data-count="1840">1840</span>°/s</strong>
                     </article>
                     <article class="metric-card">
                         <span>Delivery stride</span>
-                        <strong>1.82 m</strong>
+                        <strong><span data-count="1.82">1.82</span> m</strong>
                     </article>
                     <article class="metric-card">
                         <span>Release height</span>
-                        <strong>2.14 m</strong>
+                        <strong><span data-count="2.14">2.14</span> m</strong>
                     </article>
                     <article class="metric-card">
                         <span>Ball speed</span>
-                        <strong>126 km/h</strong>
+                        <strong><span data-count="126">126</span> km/h</strong>
                     </article>
                     <article class="metric-card">
                         <span>Trunk alignment</span>
-                        <strong>12° offset</strong>
+                        <strong><span data-count="12">12</span>° offset</strong>
                     </article>
                 </div>
             </div>
@@ -212,13 +223,37 @@
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="container footer-grid">
-            <p>&copy; 2026 Gabriella Systems. All rights reserved.</p>
-            <a href="demo.html">Live Showcase</a>
+        <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="nav-logo-text">Gabriella Systems</span>
+                    <p>Computer vision for cricket performance — batting and bowling intelligence from a single portable system.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <a href="services.html">Platform</a>
+                    <a href="batting.html">Batting</a>
+                    <a href="bowling.html">Bowling</a>
+                    <a href="academies.html">For Academies</a>
+                    <a href="demo.html">Showcase</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Request a Pilot</a>
+                    <a href="mailto:admin@gabriellasystems.com">admin@gabriellasystems.com</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Gabriella Systems. All rights reserved.</p>
+                <a href="demo.html">Live Showcase &rarr;</a>
+            </div>
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

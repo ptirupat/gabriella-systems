@@ -1,149 +1,214 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const hamburger = document.getElementById("hamburger");
-    const navMenu = document.getElementById("nav-menu");
-    const navLinks = document.querySelectorAll(".nav-link");
-    const navbar = document.querySelector(".navbar");
+document.addEventListener('DOMContentLoaded', () => {
 
-    if (hamburger && navMenu) {
-        hamburger.addEventListener("click", function () {
-            const isOpen = hamburger.classList.toggle("active");
-            navMenu.classList.toggle("active");
-            hamburger.setAttribute("aria-expanded", String(isOpen));
+    // ── Navbar ──────────────────────────────────────────────────────────────
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+        navbar?.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    // ── Active nav link ──────────────────────────────────────────────────────
+    const path = window.location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.nav-link').forEach(link => {
+        const href = link.getAttribute('href') || '';
+        if (href === path || (path === '' && href === 'index.html')) {
+            link.classList.add('active');
+        }
+    });
+
+    // ── Mobile hamburger ─────────────────────────────────────────────────────
+    const hamburger = document.getElementById('hamburger');
+    const navMenu   = document.getElementById('nav-menu');
+    hamburger?.addEventListener('click', () => {
+        const open = hamburger.classList.toggle('active');
+        navMenu?.classList.toggle('active', open);
+        hamburger.setAttribute('aria-expanded', String(open));
+    });
+    navMenu?.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger?.classList.remove('active');
+            navMenu.classList.remove('active');
+            hamburger?.setAttribute('aria-expanded', 'false');
         });
+    });
+    document.addEventListener('click', e => {
+        if (!navbar?.contains(e.target)) {
+            hamburger?.classList.remove('active');
+            navMenu?.classList.remove('active');
+            hamburger?.setAttribute('aria-expanded', 'false');
+        }
+    });
 
-        navLinks.forEach(function (link) {
-            link.addEventListener("click", function () {
-                hamburger.classList.remove("active");
-                navMenu.classList.remove("active");
-                hamburger.setAttribute("aria-expanded", "false");
-            });
-        });
-
-        document.addEventListener("click", function (event) {
-            if (!hamburger.contains(event.target) && !navMenu.contains(event.target)) {
-                hamburger.classList.remove("active");
-                navMenu.classList.remove("active");
-                hamburger.setAttribute("aria-expanded", "false");
-            }
-        });
-    }
-
-    document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
-        anchor.addEventListener("click", function (event) {
-            const target = document.querySelector(anchor.getAttribute("href"));
-            if (target) {
-                event.preventDefault();
-                target.scrollIntoView({ behavior: "smooth", block: "start" });
-            }
+    // ── Smooth scroll ────────────────────────────────────────────────────────
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', e => {
+            const target = document.querySelector(anchor.getAttribute('href'));
+            if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
         });
     });
 
-    function updateNavbar() {
-        if (!navbar) {
-            return;
-        }
-        navbar.classList.toggle("scrolled", window.scrollY > 40);
+    // ── GSAP animations (only if GSAP is loaded) ─────────────────────────────
+    if (typeof gsap === 'undefined') return;
+
+    gsap.registerPlugin(ScrollTrigger);
+    document.body.classList.add('gsap-ready');
+
+    // Hero entrance (index.html only)
+    if (document.querySelector('.hero-split')) {
+        const heroTl = gsap.timeline({ delay: 0.15 });
+        heroTl
+            .from('.hero-left .eyebrow',   { opacity: 0, y: 22, duration: 0.5, ease: 'power2.out' })
+            .from('.hero-left .word',      { opacity: 0, y: 32, stagger: 0.07, duration: 0.5, ease: 'power2.out' }, '-=0.2')
+            .from('.hero-left .hero-copy', { opacity: 0, y: 20, duration: 0.5, ease: 'power2.out' }, '-=0.2')
+            .from('.hero-actions',         { opacity: 0, y: 18, duration: 0.4, ease: 'power2.out' }, '-=0.2')
+            .from('.status-strip',         { opacity: 0, duration: 0.4, ease: 'power1.out' }, '-=0.1')
+            .from('.hero-metric-card',     { opacity: 0, scale: 0.82, y: 20, stagger: 0.14, duration: 0.55, ease: 'back.out(1.3)' }, '-=0.35');
+
+        // Floating metric cards — organic looping motion
+        document.querySelectorAll('.hero-metric-card').forEach((card, i) => {
+            gsap.to(card, {
+                y: i % 2 === 0 ? -12 : 12,
+                x: i % 3 === 0 ? 4 : -4,
+                duration: 2.2 + i * 0.45,
+                repeat: -1,
+                yoyo: true,
+                ease: 'sine.inOut',
+                delay: i * 0.35,
+            });
+        });
+
+        // Pulsing live dots
+        gsap.to('.live-dot', {
+            scale: 1.7,
+            opacity: 0.45,
+            duration: 0.85,
+            repeat: -1,
+            yoyo: true,
+            ease: 'power1.inOut',
+            stagger: { each: 0.25, from: 'random' },
+        });
     }
 
-    window.addEventListener("scroll", updateNavbar);
-    updateNavbar();
+    // Scroll-triggered section heading slide-in
+    gsap.utils.toArray('section h2').forEach(h2 => {
+        gsap.from(h2, {
+            scrollTrigger: { trigger: h2, start: 'top 86%' },
+            opacity: 0,
+            x: -26,
+            duration: 0.65,
+            ease: 'power2.out',
+        });
+    });
 
-    setActiveNavLink(navLinks);
-    initializeRevealAnimations();
-    initializeDemo();
+    // Staggered card reveals — group cards by their parent row
+    const cardSelectors = [
+        '.feature-card',
+        '.pipeline-card',
+        '.intelligence-card',
+        '.metric-card',
+        '.product-card',
+        '.compare-card',
+        '.step-card',
+        '.timeline-item',
+        '.analysis-row',
+        '.workflow-list div',
+    ];
+
+    // Group siblings and stagger them
+    cardSelectors.forEach(sel => {
+        const parents = new Set();
+        document.querySelectorAll(sel).forEach(el => parents.add(el.parentElement));
+        parents.forEach(parent => {
+            const children = parent.querySelectorAll(sel);
+            if (!children.length) return;
+            gsap.from(children, {
+                scrollTrigger: { trigger: parent, start: 'top 88%' },
+                opacity: 0,
+                y: 26,
+                duration: 0.55,
+                stagger: 0.1,
+                ease: 'power2.out',
+            });
+        });
+    });
+
+    // Scroll-triggered number counters (elements with data-count attribute)
+    document.querySelectorAll('[data-count]').forEach(el => {
+        const target = parseFloat(el.dataset.count);
+        const decimals = (el.dataset.count.split('.')[1] || '').length;
+        const obj = { val: 0 };
+        ScrollTrigger.create({
+            trigger: el,
+            start: 'top 80%',
+            once: true,
+            onEnter: () => {
+                gsap.to(obj, {
+                    val: target,
+                    duration: 1.6,
+                    ease: 'power1.out',
+                    onUpdate() { el.textContent = obj.val.toFixed(decimals); },
+                });
+            },
+        });
+    });
+
+    // Parallax on hero background
+    ScrollTrigger.create({
+        trigger: '.cricket-hero',
+        start: 'top top',
+        end: 'bottom top',
+        scrub: 0.8,
+        onUpdate(self) {
+            const hero = document.querySelector('.cricket-hero');
+            if (hero) hero.style.backgroundPositionY = `${self.progress * 30}%`;
+        },
+    });
+
+    // Contact form submit (contact.html)
+    const form = document.getElementById('contact-form');
+    if (form) handleFormSubmit(form);
 });
 
-function setActiveNavLink(navLinks) {
-    const currentPage = window.location.pathname.split("/").pop() || "index.html";
+function handleFormSubmit(form) {
+    form.addEventListener('submit', async e => {
+        e.preventDefault();
+        const btn = form.querySelector('button[type="submit"]');
+        const orig = btn.textContent;
+        btn.disabled = true;
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending…';
 
-    navLinks.forEach(function (link) {
-        link.classList.remove("active");
-        if (link.getAttribute("href") === currentPage) {
-            link.classList.add("active");
+        const data = {
+            name:         form.querySelector('[name="name"]')?.value?.trim(),
+            email:        form.querySelector('[name="email"]')?.value?.trim(),
+            organization: form.querySelector('[name="organization"]')?.value?.trim() || '',
+            role:         form.querySelector('[name="role"]')?.value || '',
+            interest:     form.querySelector('[name="interest"]')?.value || '',
+            message:      form.querySelector('[name="message"]')?.value?.trim(),
+        };
+
+        if (!data.name || !data.email || !data.message) {
+            alert('Please fill in your name, email, and message.');
+            btn.disabled = false;
+            btn.textContent = orig;
+            return;
+        }
+
+        try {
+            const r = await fetch('https://gabriellasystems--cricket-demo-web.modal.run/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data),
+            });
+            if (r.ok) {
+                btn.innerHTML = '<i class="fas fa-check"></i> Message sent';
+                form.reset();
+                setTimeout(() => { btn.disabled = false; btn.textContent = orig; }, 4000);
+            } else {
+                throw new Error('Server error');
+            }
+        } catch {
+            alert('Sorry, something went wrong. Please email us directly at admin@gabriellasystems.com');
+            btn.disabled = false;
+            btn.textContent = orig;
         }
     });
-}
-
-function initializeRevealAnimations() {
-    const elements = document.querySelectorAll(
-        ".feature-card, .step-card, .product-card, .metric-card, .timeline-item, .workflow-list div, .intelligence-card, .pipeline-card, .compare-card"
-    );
-
-    if (!elements.length) {
-        return;
-    }
-
-    elements.forEach(function (element) {
-        element.classList.add("reveal");
-    });
-
-    const observer = new IntersectionObserver(
-        function (entries) {
-            entries.forEach(function (entry) {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("visible");
-                    observer.unobserve(entry.target);
-                }
-            });
-        },
-        { threshold: 0.16 }
-    );
-
-    elements.forEach(function (element) {
-        observer.observe(element);
-    });
-}
-
-function initializeDemo() {
-    // Demo page no longer has tabs or mock scenarios
-}
-
-var CONTACT_API = "https://gabriellasystems--cricket-demo-web.modal.run/api/contact";
-
-function handleFormSubmit(event) {
-    event.preventDefault();
-
-    var formData = new FormData(event.target);
-    var body = {};
-    formData.forEach(function (value, key) {
-        body[key] = value.trim();
-    });
-
-    if (!body.name || !body.email || !body.message) {
-        alert("Please fill in all required fields.");
-        return;
-    }
-
-    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(body.email)) {
-        alert("Please enter a valid email address.");
-        return;
-    }
-
-    var btn = event.target.querySelector(".submit-btn");
-    btn.disabled = true;
-    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-
-    fetch(CONTACT_API, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(body),
-    })
-        .then(function (res) {
-            if (!res.ok) {
-                return res.json().then(function (d) { throw new Error(d.detail || "Request failed"); });
-            }
-            return res.json();
-        })
-        .then(function () {
-            alert("Thank you for your message. We will get back to you soon.");
-            event.target.reset();
-        })
-        .catch(function (err) {
-            alert("Sorry, your message could not be sent. Please email admin@gabriellasystems.com directly.\n\n(" + err.message + ")");
-        })
-        .finally(function () {
-            btn.disabled = false;
-            btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
-        });
 }
