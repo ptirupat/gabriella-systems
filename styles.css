@@ -156,10 +156,9 @@ a {
 }
 
 .cricket-hero {
-    min-height: 88vh;
     display: flex;
     align-items: center;
-    padding: 130px 0 64px;
+    padding: 140px 0 80px;
     color: white;
     background: linear-gradient(135deg, #04121a 0%, #0b4b4c 45%, #0d3d3e 75%, #061217 100%);
     background-size: 300% 300%;
@@ -1392,8 +1391,7 @@ a {
     }
 
     .cricket-hero {
-        min-height: auto;
-        padding-bottom: 48px;
+        padding: 120px 0 56px;
     }
 
     .signal-grid,
@@ -1424,8 +1422,7 @@ a {
 
 @media (max-width: 768px) {
     .cricket-hero {
-        min-height: 78vh;
-        padding: 112px 0 42px;
+        padding: 110px 0 48px;
     }
 
     .section {
@@ -2019,12 +2016,4 @@ a {
     to   { opacity: 1; transform: translateX(0); }
 }
 
-/* GSAP handles per-element animations; these are CSS fallbacks */
-.gsap-ready .hero-left .eyebrow,
-.gsap-ready .hero-left h1,
-.gsap-ready .hero-left .hero-copy,
-.gsap-ready .hero-actions,
-.gsap-ready .status-strip,
-.gsap-ready .hero-metric-card {
-    opacity: 0; /* GSAP will animate these in */
-}
+/* GSAP uses gsap.from() which sets initial state via inline styles — no CSS needed here */
