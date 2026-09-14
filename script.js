@@ -66,9 +66,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // Floating metric cards — organic looping motion
         document.querySelectorAll('.hero-metric-card').forEach((card, i) => {
             gsap.to(card, {
-                y: i % 2 === 0 ? -12 : 12,
-                x: i % 3 === 0 ? 4 : -4,
-                duration: 2.2 + i * 0.45,
+                y: i % 2 === 0 ? -8 : 8,
+                x: i % 3 === 0 ? 3 : -3,
+                duration: 2.8 + i * 0.5,
                 repeat: -1,
                 yoyo: true,
                 ease: 'sine.inOut',
@@ -88,8 +88,52 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Scroll-triggered section heading slide-in
+    // Dual GIF / media reveal on homepage
+    if (document.querySelector('.dual-video')) {
+        gsap.from('.dual-video > div', {
+            scrollTrigger: { trigger: '.dual-video', start: 'top 82%' },
+            opacity: 0,
+            y: 28,
+            duration: 0.7,
+            stagger: 0.18,
+            ease: 'power2.out',
+        });
+        gsap.from('.video-tagline', {
+            scrollTrigger: { trigger: '.video-tagline', start: 'top 88%' },
+            opacity: 0,
+            y: 18,
+            duration: 0.55,
+            ease: 'power2.out',
+        });
+    }
+
+    // Section intros (eyebrow + lead-in)
+    gsap.utils.toArray('.section-intro').forEach(intro => {
+        gsap.from(intro.children, {
+            scrollTrigger: { trigger: intro, start: 'top 86%' },
+            opacity: 0,
+            y: 18,
+            duration: 0.55,
+            stagger: 0.08,
+            ease: 'power2.out',
+        });
+    });
+
+    // Final CTA soft rise
+    if (document.querySelector('.final-cta')) {
+        gsap.from('.final-cta .container > *', {
+            scrollTrigger: { trigger: '.final-cta', start: 'top 85%' },
+            opacity: 0,
+            y: 22,
+            duration: 0.6,
+            stagger: 0.1,
+            ease: 'power2.out',
+        });
+    }
+
+    // Scroll-triggered section heading slide-in (skip intros already animated above)
     gsap.utils.toArray('section h2').forEach(h2 => {
+        if (h2.closest('.section-intro')) return;
         gsap.from(h2, {
             scrollTrigger: { trigger: h2, start: 'top 86%' },
             opacity: 0,
