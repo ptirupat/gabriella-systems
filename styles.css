@@ -2037,3 +2037,14 @@ a {
 }
 
 /* GSAP uses gsap.from() which sets initial state via inline styles — no CSS needed here */
+
+
+/* Showcase depth GIFs — preserve wide RGB|depth framing */
+.dual-video img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  background: #0b1210;
+  object-fit: contain;
+}
