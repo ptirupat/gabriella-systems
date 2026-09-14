@@ -100,8 +100,10 @@ a {
 .nav-logo-link {
     display: flex;
     align-items: center;
+    gap: 0.55rem;
     height: 44px;
-    line-height: 0;
+    line-height: 1;
+    text-decoration: none;
     transition: opacity 0.2s ease;
 }
 
@@ -110,12 +112,21 @@ a {
 }
 
 .nav-logo-img {
-    height: 44px;
-    width: auto;
-    max-width: 120px;
+    height: 40px;
+    width: 40px;
     display: block;
     background: transparent;
     object-fit: contain;
+    flex-shrink: 0;
+}
+
+.nav-logo-wordmark {
+    font-family: "Space Grotesk", Inter, system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    white-space: nowrap;
 }
 
 .nav-menu {
