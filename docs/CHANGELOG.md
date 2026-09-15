@@ -10,11 +10,12 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 
 ### Bowling homepage HUD pair
 
-- Homepage two-peak bowling HUD is **Run-up speed** (`peak_runup_speed_kmh`, fallback `runup_speed_at_delivery_kmh`) + **Release height** (`release_height_m`).
+- Homepage two-peak bowling HUD is **Run-up speed** (`peak_runup_speed_kmh` only) + **Release height** (`release_height_m`). No homepage fallback to `runup_speed_at_delivery_kmh`.
 - **Ball speed** is omitted from that HUD until a gated, non-null sample — not shown as **Can't measure** / **—**.
+- Locked bowling peaks that are ungated/null show **Can't measure** / **—** for that peak.
 - Front knee at plant and arm angular speed move to bowling/Showcase detail callouts, not homepage hero peaks.
-- Batting pair unchanged: Impact timing + Bat speed.
-- HTML: `index.html` hero cards and bowling session-progress card; `bowling.html` leads with run-up + release height.
+- Batting pair: honest Impact label **Contact time in this clip** + Bat speed (until `head_stability_cm` ships). No early-vs-late / timing-the-ball wording.
+- HTML: `index.html` hero cards and bowling session-progress card; `bowling.html` leads with run-up + release height; `batting.html` contact-time labels.
 - Docs: [homepage-hud-metrics.md](./homepage-hud-metrics.md). GIF binaries are unchanged in this pass.
 
 ### On `main` (same day)
