@@ -1,32 +1,54 @@
-# Competitive positioning
+# Competitive positioning (copy gate)
 
-**Owner: Marketing.** This page is a stub. Replace the placeholders below; do not treat them as approved claims.
+Short Marketing note for website and product copy. Keep claims aligned with this — not a full GTM brief.
 
-Engineering/product constraints that Marketing copy must still obey:
+Updated: 2026-09-15
 
-- [Claims policy](./website-updates.md#claims-policy) — live = Showcase/API-real only; hardware / calibration / multi-cam = roadmap; view-aware analysis (not batting=front-on only / bowling=side-on only).
-- [Hero metrics + quality gate](./homepage-hud-metrics.md) — fail loud; HUD only renders gated fields; Can't measure / —, never invent numbers.
+## Who we compare against
 
----
+**Direct (phone / net CV for coaches & academies)**  
+Matcha, CricVision, Fulltrack AI, Ludimos, Advanced Impactor — RGB phone (or similar) → clipped deliveries → speed, pitch maps / beehives, some pose or biomechanics, coach galleries.
 
-## For Marketing to fill
+**Incumbent training systems**  
+PitchVision — hardware + analytics kits historically sold into academies/clubs.
 
-### Rivals
+**Adjacent**  
+BatSense / SmartCricket (bat sensor, not full ball+pose CV); NV Play (match / analyst workflows); Trume (early coaching OS).
 
-- _[Placeholder]_ Who we are compared to (academy video tools, generic sports CV, broadcast/hawk-eye class systems, local biomechanics labs). Name competitors only after Marketing confirms.
-- _[Placeholder]_ What each rival actually ships vs what we show in Showcase today.
-- _[Placeholder]_ Price / deployment motion (pilot vs hardware install vs phone-app freemium) — TBD by Marketing.
+**Aspirational reference**  
+Hawk-Eye — elite multi-camera tracking; not our academy-net price or form factor.
 
-### Trust / fail-loud wedge
+## Category pattern (what rivals do)
 
-- _[Placeholder]_ We would rather show **Can't measure** than a confident wrong number. Quality gate: detect → track → pose → metric; dashboard only renders gated fields.
-- _[Placeholder]_ How that differs from phone-CV apps that always fill a speed or angle.
-- _[Placeholder]_ Proof points Marketing can cite once they are Showcase-real (do not add metrics here first).
+- Market **always-on numbers**: speed, pitch maps, progress — with little public talk of quality gates.
+- Fulltrack is unusually explicit: bad stump calibration → bad tracking.
+- Dashboard UX: auto-clips, session galleries, coach tagging; “progress” is common homepage language even when capture isn’t comparable session-to-session.
 
-### What we claim vs phone-CV apps
+## Our wedge (what we own in copy)
 
-- _[Placeholder]_ We are cricket-specific analysis software (batting and bowling), view-aware — not “point a phone and get a complete biomechanics report.”
-- _[Placeholder]_ Overlays (pose / bat / ball where visible) plus gated metrics vs generic skeleton-on-video filters.
-- _[Placeholder]_ Hardware is **planned**, not the current differentiator vs a phone. Do not imply a shipping capture device in competitive one-pagers until Product says it is live.
+1. **Trust / fail-loud** — low-confidence detection, tracking, or pose → **Can’t measure** / null, never a guessed HUD number. Phone-CV apps rarely lead with this; it is a primary differentiator for pilots.
+2. **Depth + multi-model stack** (depth / ball-bat / pose) as a **quality** story vs RGB-only phone CV — not as “more metrics.”
+3. **View-aware analysis** — batting vs bowling and camera view drive which metrics and visualizations we show. Do **not** claim “batting = front-on only” or “bowling = side-on only.”
+4. **Calibrated portable capture** — product/roadmap moat for hardware; do **not** sell live upload-software as already shipping calibrated hardware capture.
 
-When this page is written, update [website-updates.md](./website-updates.md) with a one-line pointer to the approved wedge — do not duplicate unverified competitor names into the changelog.
+## Claim vs don’t claim
+
+| Claim | Live site / Showcase | Roadmap / later |
+| --- | --- | --- |
+| Pose / bat / ball overlays tied to real pipeline output | Yes, when gated | — |
+| Hero metrics from Showcase/API fields only | Yes | — |
+| Ungated → Can’t measure (never invent `0` or fake speeds) | Yes | — |
+| Session-to-session “progress” as automatic for any upload | No — needs comparable view/quality | Product thesis, careful wording |
+| Calibrated / consistent capture position as shipping software | No | With portable hardware |
+| Multi-camera ready | No | When shipped |
+| Pitch maps / beehives as must-have parity | No this sprint | Optional later; don’t chase rival feature lists |
+
+## Homepage / GIF rules (competitive)
+
+- Prefer **real Showcase takes** with trusted overlays over AI-generated “analysis” demos (rivals already look like phone-CV theater).
+- HUD: **few, readable, real** session metrics — or Can’t measure. Decorative or invented numbers kill the trust wedge.
+- Logo / brand: simple vision/hardware mark (e.g. G + reticle) over illustrated batter / neon poster art (CricVision-adjacent) or consumer-app doodles (Matcha-adjacent).
+
+## One-line positioning
+
+**Gabriella:** cricket net analysis that fails loud and only shows metrics it trusts — building toward calibrated capture academies can compare over time — not another phone-CV progress dashboard.
