@@ -2,7 +2,7 @@
 
 Dated record of marketing-site work in this repo (`ptirupat/gabriella-systems`). Newest first. Commit hashes are from `git log` on `main` unless noted as an open PR.
 
-For product narrative, see [website-updates.md](./website-updates.md). For the homepage HUD field contract, see [homepage-hud-metrics.md](./homepage-hud-metrics.md).
+Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-hud-metrics.md](./homepage-hud-metrics.md) (HUD contract), [competitive-positioning.md](./competitive-positioning.md) (Marketing stub).
 
 ---
 
@@ -11,6 +11,8 @@ For product narrative, see [website-updates.md](./website-updates.md). For the h
 ### Open (not on `main`)
 
 - **[PR #2](https://github.com/ptirupat/gabriella-systems/pull/2)** — *Align homepage HUD with locked hero metric fields* (`cursor/lock-hero-metric-fields-e7ca`). HTML label lock on `index.html`, `batting.html`, and `bowling.html`. Does **not** refresh GIF binaries. See [homepage-hud-metrics.md](./homepage-hud-metrics.md).
+- **GIF binary push still blocked on Mac.** Intended HUD overlays cannot land on `main` until binaries can be exported/pushed from that machine.
+- **After GIFs land on `main`:** Modal redeploy + demo rerun (ops on the ML/Modal side; not this repo).
 
 ### On `main`
 

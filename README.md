@@ -13,11 +13,14 @@ Live analysis is not implemented in this repo. The Showcase and admin UIs are Mo
 
 ## Documentation
 
+Product should review these for accuracy:
+
 | Doc | What it covers |
 | --- | --- |
 | [docs/CHANGELOG.md](docs/CHANGELOG.md) | Dated website/UI changelog (September 2026 and nearby work), with commit hashes from this repo. |
-| [docs/website-updates.md](docs/website-updates.md) | Product-aligned narrative: claims, pages, GIFs, logo/nav, related PRs. |
-| [docs/homepage-hud-metrics.md](docs/homepage-hud-metrics.md) | Contract for homepage GIF HUD / hero metric cards. Must stay in sync with the Modal quality gate. |
+| [docs/website-updates.md](docs/website-updates.md) | Claims policy, pages, GIFs, logo/nav, open blockers. |
+| [docs/homepage-hud-metrics.md](docs/homepage-hud-metrics.md) | Locked hero metrics + Modal quality gate (fail loud; HUD only renders gated fields). |
+| [docs/competitive-positioning.md](docs/competitive-positioning.md) | Marketing stub: rivals, fail-loud wedge, vs phone-CV apps. |
 
 ## Pages
 
@@ -50,7 +53,8 @@ Then open `http://127.0.0.1:8765/`.
 PORT=9000 ./start-local.sh
 ```
 
-## Related work
+## Related work and blockers
 
 - Open HUD label lock: [PR #2](https://github.com/ptirupat/gabriella-systems/pull/2)
+- GIF binary push still blocked on Mac; after GIFs land on `main`, Modal redeploy + demo rerun.
 - Modal quality gate / `impact_offset_ms` live in the ML/Modal repo (not this tree). See [docs/homepage-hud-metrics.md](docs/homepage-hud-metrics.md).
