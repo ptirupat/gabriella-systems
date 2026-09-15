@@ -16,7 +16,7 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 - Front knee at plant and arm angular speed move to bowling/Showcase detail callouts, not homepage hero peaks.
 - Batting pair: honest Impact label **Contact time in this clip** + Bat speed (until `head_stability_cm` ships). No early-vs-late / timing-the-ball wording.
 - HTML: `index.html` hero cards and bowling session-progress card; `bowling.html` leads with run-up + release height; `batting.html` contact-time labels.
-- Docs: [homepage-hud-metrics.md](./homepage-hud-metrics.md). GIF binaries are unchanged in this pass.
+- Docs: [homepage-hud-metrics.md](./homepage-hud-metrics.md), [competitive-positioning.md](./competitive-positioning.md) Impact copy gate. GIF binaries are unchanged in this pass. Do not swap batting to Head stability until Modal PR #9.
 
 ### On `main` (same day)
 
