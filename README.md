@@ -1,36 +1,47 @@
-# Gabriella Systems - Cricket Vision Website
+# Gabriella Systems — Cricket Vision website
 
-A static website for Gabriella Systems focused on cricket batting analysis, coach-facing insight, and academy-ready pilot positioning.
+Static marketing site for Gabriella Systems: computer vision for cricket batting and bowling analysis, aimed at academies, coaches, and performance programs.
+
+Live analysis is not implemented in this repo. The Showcase and admin UIs are Modal embeds (`gabriellasystems--cricket-demo-web.modal.run`).
 
 ## Current positioning
 
-The site is positioned to speak to cricket academies, coaches, and performance programs first, with a clearer commercial message:
+- **Live today:** software that analyzes batting and bowling clips (pose, bat, and ball overlays where visible).
+- **View-aware:** metrics and visualizations depend on batting vs bowling mode **and** camera view — not a fixed “batting is front-on / bowling is side-on” recipe.
+- **Planned, not shipping:** portable / purpose-built capture hardware.
+- **CTA:** Request a Pilot (primary), Explore the Showcase (secondary).
 
-- Live today: video-analysis platform
-- AI batting analysis for every ball you face
-- Request a pilot CTA for academy and coach engagement
-- Clear distinction between the current upload-based platform and the future machine-mounted module
-- Outcome-first copy focused on measurable batting improvement rather than just computer vision terminology
+## Documentation
+
+Product should review these for accuracy:
+
+| Doc | What it covers |
+| --- | --- |
+| [docs/CHANGELOG.md](docs/CHANGELOG.md) | Dated website/UI changelog (September 2026 and nearby work), with commit hashes from this repo. |
+| [docs/website-updates.md](docs/website-updates.md) | Claims policy, pages, GIFs, logo/nav, open blockers. |
+| [docs/homepage-hud-metrics.md](docs/homepage-hud-metrics.md) | Locked hero metrics + Modal quality gate (fail loud; HUD only renders gated fields). |
+| [docs/competitive-positioning.md](docs/competitive-positioning.md) | Marketing stub: rivals, fail-loud wedge, vs phone-CV apps. |
 
 ## Pages
 
-- `index.html`: Landing page with revised hero messaging, stronger sales CTA, progress-tracking section, and final pilot CTA.
-- `about.html`: Company focus, values, and the product roadmap clarifying current upload workflow versus future machine-mounted module.
-- `services.html`: Platform page with benefit-led positioning, batting-first feature descriptions, and technical detail kept secondary to outcomes.
-- `demo.html`: Interactive live demo with added privacy note for uploaded videos.
-- `contact.html`: Contact form tuned for academy, coach, club, and pilot inquiries.
+- `index.html` — Landing: view-aware hero, status chips, Showcase GIFs, pilot CTA.
+- `services.html` — Platform (software-first pipeline; hardware on the roadmap).
+- `batting.html` / `bowling.html` — Mode-specific analysis pages.
+- `academies.html` — Academy / pilot positioning.
+- `demo.html` — Live Showcase (Modal iframe).
+- `about.html` — Company focus and product roadmap.
+- `contact.html` — Pilot / inquiry form.
+- `admin.html` — Admin panel iframe.
 
 ## Stack
 
-- HTML5
-- CSS3
-- JavaScript
-- Font Awesome icons
-- Static generated image asset in `assets/cricket-vision-hero.png`
+- HTML5, CSS3, vanilla JavaScript
+- GSAP + ScrollTrigger (homepage motion)
+- Space Grotesk / Inter
+- Font Awesome
+- Assets in `assets/` (`logo.png`, `cricket_batting_15s.gif`, `cricket_bowling_15s.gif`, `cricket-vision-hero.png`)
 
-## Local Preview
-
-Run:
+## Local preview
 
 ```bash
 ./start-local.sh
@@ -38,19 +49,12 @@ Run:
 
 Then open `http://127.0.0.1:8765/`.
 
-To use a different port:
-
 ```bash
 PORT=9000 ./start-local.sh
 ```
 
-## Change log
+## Related work and blockers
 
-### 2026-08-17
-- Refined homepage messaging to emphasize measurable batting outcomes and academy pilot conversion.
-- Clarified product status: live upload-based Cricket Vision platform, with machine-mounted module positioned as the next-phase pilot opportunity.
-- Reworked the Platform page to remove internal/dev-facing copy and focus on customer benefits.
-- Added a clear progress-tracking section to reinforce improvement over time.
-- Added a closing CTA for coach and academy pilots.
-- Added a privacy note to the demo page regarding uploaded video handling.
-- Updated README to capture the current positioning changes for future tracking.
+- Open HUD label lock: [PR #2](https://github.com/ptirupat/gabriella-systems/pull/2)
+- GIF binary push still blocked on Mac; after GIFs land on `main`, Modal redeploy + demo rerun.
+- Modal quality gate / `impact_offset_ms` live in the ML/Modal repo (not this tree). See [docs/homepage-hud-metrics.md](docs/homepage-hud-metrics.md).
