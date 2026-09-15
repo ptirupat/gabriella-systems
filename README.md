@@ -55,6 +55,5 @@ PORT=9000 ./start-local.sh
 
 ## Related work and blockers
 
-- Open HUD label lock: [PR #2](https://github.com/ptirupat/gabriella-systems/pull/2)
-- GIF binary push still blocked on Mac; after GIFs land on `main`, Modal redeploy + demo rerun.
-- Modal quality gate / `impact_offset_ms` live in the ML/Modal repo (not this tree). See [docs/homepage-hud-metrics.md](docs/homepage-hud-metrics.md).
+- HUD contract: [docs/homepage-hud-metrics.md](docs/homepage-hud-metrics.md) — batting Contact time in this clip + Bat speed; bowling Run-up speed (`peak_runup_speed_kmh`) + Release height. GIF binaries are updated separately.
+- Modal quality gate / `impact_offset_ms` live in the ML/Modal repo (not this tree).

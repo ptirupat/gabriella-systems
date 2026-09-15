@@ -42,6 +42,30 @@ Hawk-Eye — elite multi-camera tracking; not our academy-net price or form fact
 | Calibrated / consistent capture position as shipping software | No | With portable hardware |
 | Multi-camera ready | No | When shipped |
 | Pitch maps / beehives as must-have parity | No this sprint | Optional later; don’t chase rival feature lists |
+| Impact as early vs late, “timing the ball,” or a universal good-ms score | No | Needs gated bounce / release / arrival (backlog) |
+
+## Impact (copy gate)
+
+`impact_offset_ms` is ms from **clip start to gated contact**. Same-view session compare marker only — not comparable across delivery types or recording starts without a bounce/release/arrival reference.
+
+**Allowed:** “Contact time in this clip” / “When contact happened in this take” / same-view compare.
+
+**Forbidden:** early vs late, timing the ball, played early/late, technique grade, universal “good ms.”
+
+True early/late needs a gated bounce/release/arrival reference (**backlog**). Do not imply that exists.
+
+Do **not** swap the batting homepage pair to Head stability until Modal PR #9 is merged, redeployed, and Showcase confirms `head_stability_cm`.
+
+### Homepage pairs
+
+- **Batting (temporary):** Impact + Bat speed, with the honest Impact label above. Swap to Head stability (`head_stability_cm`) + Bat speed when that field is gated (not yet).
+- **Bowling:** Run-up speed (`peak_runup_speed_kmh` only) + Release height (`release_height_m`). Omit ball speed from the two-peak HUD until gated and non-null — never show “—” as a ball-speed peak. Locked bowling peaks that are ungated/null show Can’t measure for that peak. No homepage fallback to `runup_speed_at_delivery_kmh`.
+
+## Homepage / GIF rules (competitive)
+
+- Prefer **real Showcase takes** with trusted overlays over AI-generated “analysis” demos (rivals already look like phone-CV theater).
+- HUD: **few, readable, real** session metrics — or Can’t measure. Decorative or invented numbers kill the trust wedge.
+- Impact on HUD/copy follows the copy gate above (contact time in this clip, not early/late).
 
 ## Homepage / GIF rules (competitive)
 
