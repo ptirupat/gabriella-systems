@@ -21,7 +21,7 @@ Product should review these for accuracy:
 | --- | --- |
 | [docs/CHANGELOG.md](docs/CHANGELOG.md) | Dated website/UI changelog (September 2026 and nearby work), with commit hashes from this repo. |
 | [docs/website-updates.md](docs/website-updates.md) | Claims policy, pages, GIFs, logo/nav, open blockers. |
-| [docs/homepage-hud-metrics.md](docs/homepage-hud-metrics.md) | Locked hero metrics + Modal quality gate (fail loud; HUD only renders gated fields). |
+| [docs/homepage-hud-metrics.md](docs/homepage-hud-metrics.md) | Site HUD implementation notes (pointer to Modal PRODUCT.md; fail loud). |
 | [docs/competitive-positioning.md](docs/competitive-positioning.md) | Marketing stub: rivals, fail-loud wedge, vs phone-CV apps. |
 
 ## Pages
@@ -57,5 +57,5 @@ PORT=9000 ./start-local.sh
 
 ## Related work and blockers
 
-- HUD contract: [docs/homepage-hud-metrics.md](docs/homepage-hud-metrics.md) — batting Head stability (`head_stability_cm`) + Bat speed; bowling Run-up speed (`peak_runup_speed_kmh`) + Release height. Contact time is detail-only. GIF binaries are updated separately.
+- HUD implementation: [docs/homepage-hud-metrics.md](docs/homepage-hud-metrics.md) — batting Bat speed (`peak_bat_speed_kmh`) + Contact time in this clip (`impact_offset_ms`); bowling Run-up speed (`peak_runup_speed_kmh`) + Release height. Contract lives in Modal PRODUCT.md. GIF binaries are updated separately.
 - Modal quality gate / `impact_offset_ms` live in the ML/Modal repo (not this tree).
