@@ -12,33 +12,31 @@ This file is the source of truth for *which fields* the homepage may show. Sampl
 
 Dashboard / HUD **only renders gated fields**. Never invent a number. Never coerce `null` → `0`.
 
-### Batting (locked)
+### Batting (temporary pair)
 
 Drop **ball speed** from the batting hero HUD. Incoming-ball speed may still appear in batting capability copy; it is not a batter-skill hero metric.
 
 | Order | API field | Label | Unit |
 | --- | --- | --- | --- |
-| 1 | `impact_offset_ms` | **Impact timing** | ms |
+| 1 | `impact_offset_ms` | **Impact** — contact time in this clip | ms |
 | 2 | `peak_bat_speed_kmh` | **Bat speed** | km/h |
 
-Until `impact_offset_ms` is deployed on a given sample, derive milliseconds from `impact_frame ÷ fps` (same label: **Impact timing**). Do not leave the batting HUD on ball speed while waiting for the field.
+`impact_offset_ms` is ms from clip start to gated contact. **Not** early vs late, timing the ball, a technique grade, or a universal good-ms score. Use it as a same-view session marker only. True early/late needs a gated bounce/release/arrival reference (backlog). Copy gate: [competitive-positioning.md](./competitive-positioning.md).
 
-### Bowling (temporary pair)
+Until `impact_offset_ms` is deployed on a given sample, derive milliseconds from `impact_frame ÷ fps` (same honest label: **Impact** / contact time in this clip — never “Impact timing” as early/late). Do not leave the batting HUD on ball speed while waiting for the field.
 
-Use this pair **until a quality-gated bowling sample has `ball_speed_kmh`**. Then swap the bowling hero to gated **Ball speed** (`ball_speed_kmh`). Until that sample exists, do not show a bowling ball-speed *number* on the HUD.
+**When `head_stability_cm` is gated:** swap the batting hero to Head stability + Bat speed and retire Impact from the two-peak HUD.
 
-Drop **run-up** from the bowling hero HUD. Run-up remains a valid deeper bowling metric.
+### Bowling (homepage pair)
+
+Two-peak HUD: **Run-up speed** + **Release height**. Omit **ball speed** from that HUD until a gated, non-null `ball_speed_kmh` exists — never show **Can't measure** / **—** as a homepage peak.
 
 | Order | API field | Label | Unit |
 | --- | --- | --- | --- |
-| 1 | `front_knee_angle_deg` | **Front knee at plant** | ° |
-| 2 | `peak_arm_angular_speed_deg_s` | **Arm angular speed** | °/s |
+| 1 | `peak_runup_speed_kmh` | **Run-up speed** | km/h |
+| 2 | `release_height_m` | **Release height** | m |
 
-**Fallback** if arm angular speed is missing or ungated: `release_height_m` (**Release height**, m).
-
-**When a gated bowling ball-speed sample exists:** promote `ball_speed_kmh` (**Ball speed**, km/h) onto the bowling hero and retire the temporary pair from the HUD (deeper lists may still show knee / arm / release).
-
-Keep the full label **Arm angular speed** (not “Arm angular”).
+Front knee at plant and arm angular speed remain bowling/Showcase **detail** metrics, not homepage hero peaks. Keep the full label **Arm angular speed** (not “Arm angular”) where those details appear.
 
 ### Ungated / null
 
@@ -52,8 +50,8 @@ Gated false means “this take does not support a trustworthy value,” not “t
 
 | Situation | Show |
 | --- | --- |
-| Bowling `ball_speed_kmh` not yet gated for the sample | **Can't measure** / **—** (do not show a fake km/h) |
-| Any locked field `null` or `quality.gated === false` | **Can't measure** / **—** |
+| Bowling `ball_speed_kmh` not yet gated / null | **Omit** from the two-peak homepage HUD (do not show Can't measure / — as a peak; do not invent km/h) |
+| Any locked field `null` or `quality.gated === false` | **Can't measure** / **—** on detail surfaces; do not keep an empty slot as a homepage peak |
 | Valid gated number | The number + unit from the tables above |
 
 ---
@@ -69,7 +67,7 @@ Pipeline order:
 3. **Pose**
 4. **Metric**
 
-**Fail loud.** If a stage cannot support a trustworthy metric, do not silently fill the HUD. The dashboard/HUD **only renders gated fields**. Ungated slots stay **Can't measure** / **—**.
+**Fail loud.** If a stage cannot support a trustworthy metric, do not silently fill the HUD. The dashboard/HUD **only renders gated fields**. On detail surfaces, ungated slots stay **Can't measure** / **—**. On the two-peak homepage HUD, omit a null field rather than showing **—** as a peak.
 
 This site embeds Showcase at `https://gabriellasystems--cricket-demo-web.modal.run`. Product notes (unverified here): Modal PR #1 merged to `master` as `8fcab5d` with the quality gate and `impact_offset_ms`. Confirm in the ML repo before citing that SHA in ML docs.
 
@@ -83,44 +81,36 @@ This site embeds Showcase at `https://gabriellasystems--cricket-demo-web.modal.r
 | Homepage hero cards | `index.html` (`.hero-metric-card`) | Floating dashboard next to the hero. |
 | Session progress cards | `index.html`, `batting.html`, `bowling.html` | Lead with the same locked pair. |
 
-Deeper capability lists (run-up, release height, ball tracking, stride, and so on) may still appear as pipeline outputs. They are **not** the two-metric hero HUD.
+Deeper capability lists (front knee, arm angular speed, ball tracking, stride, and so on) may still appear as pipeline outputs. They are **not** the two-metric hero HUD.
 
 ---
 
 ## Open blockers (as of this writing)
 
-These are product/ops blockers, not missing copy in this PR:
+1. **Impact HTML/GIF copy** still says **Impact timing** on `main` (`6afc4e7` GIFs + merged [PR #2](https://github.com/ptirupat/gabriella-systems/pull/2) labels). That oversells early/late. Honest label is contact time in this clip — see [competitive-positioning.md](./competitive-positioning.md).
+2. **Bowling homepage pair** on `main` GIFs/HTML is still front knee + arm angular speed. Contract above is run-up + release height; omit null ball speed from the two-peak HUD. HTML swap is a separate change (open [PR #4](https://github.com/ptirupat/gabriella-systems/pull/4)); GIF binaries are updated separately.
+3. After GIF/HTML land: Modal **redeploy** and **demo rerun**. This website repo does not update the live embed by itself.
 
-1. **GIF binary push still blocked on Mac.** Intended HUD overlays cannot land on `main` until binaries can be exported/pushed from that machine. `389ab41` on `main` still uses the previous HUD pair (batting: ball + bat; bowling: knee + run-up).
-2. **After GIFs land on `main`:** Modal **redeploy** and **demo rerun** so Showcase/demo clips match the new overlays. Do not assume the live Modal embed updates from this website repo alone.
-
-HTML label lock is a separate open PR: [PR #2](https://github.com/ptirupat/gabriella-systems/pull/2) (*Align homepage HUD with locked hero metric fields*). It does **not** refresh GIF binaries.
-
-When regenerating GIFs, burn the **locked** labels and fields from this file, not the `389ab41` pair.
+When regenerating GIFs, burn the **current** labels and fields from this file.
 
 ---
 
 ## Asset vs HTML status (do not assume they match)
 
-As of `main` at `5fa7f4b`:
+As of `main` at `6afc4e7`:
 
-- GIF HUD from `389ab41` still uses the **previous** pair.
-- Homepage HTML hero cards on `main` still label **Ball Speed** / **Front Knee** / **Bat Speed** / **Run-up**.
-
-Open **[PR #2](https://github.com/ptirupat/gabriella-systems/pull/2)** updates HTML labels only:
-
-- Batting: Impact timing (ms) + Bat speed
-- Bowling: Front knee at plant + Arm angular speed (release height fallback)
-- Ungated bowling ball speed: **Can't measure**, not `0`
+- GIF HUD: batting Impact timing + Bat speed; bowling Front knee + Arm angular speed.
+- Homepage HTML hero cards match that pair, including the **Impact timing** label (copy bug).
+- Bowling two-peak HUD on `main` is not yet run-up + release height.
 
 ---
 
 ## Checklist for a HUD change
 
-1. Fields and labels match the locked pairs (including `ball_speed_kmh` swap rule for bowling).
+1. Fields and labels match the homepage pairs (batting: Impact + bat, honest contact-time label; bowling: run-up + release height).
 2. Quality gate: detect → track → pose → metric; fail loud; HUD only renders gated fields.
-3. Ungated / null → Can't measure / —, never invent, never `0`.
-4. Batting HUD has no ball speed; bowling HUD has no run-up until the gated ball-speed swap.
+3. Ungated / null locked fields → Can't measure / — on detail surfaces; never invent, never `0`.
+4. Batting HUD has no ball speed. Impact is contact time in this clip — never early/late or a good-ms score. Bowling two-peak HUD omits ball speed until gated + non-null (never “—” as a peak).
 5. GIF overlay, hero cards, and progress cards stay consistent (or lag is called out).
-6. Full **Arm angular speed** wording on bowling.
+6. Front knee / arm angular speed are bowling detail metrics, not homepage hero peaks. Full **Arm angular speed** wording where shown.
 7. Sample numbers, if shown, are existing Showcase-like values — not newly invented gated stats.
