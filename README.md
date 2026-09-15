@@ -13,6 +13,8 @@ Live analysis is not implemented in this repo. The Showcase and admin UIs are Mo
 
 ## Documentation
 
+Canonical product / CV / device / backlog docs live in [Gabriella-Systems/modal `docs/`](https://github.com/Gabriella-Systems/modal/tree/main/docs). This repo only holds site copy and HUD docs; see [docs/README.md](docs/README.md). If they conflict, Modal product docs win — ping Product.
+
 Product should review these for accuracy:
 
 | Doc | What it covers |
