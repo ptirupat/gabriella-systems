@@ -2,20 +2,24 @@
 
 Dated record of marketing-site work in this repo (`ptirupat/gabriella-systems`). Newest first. Commit hashes are from `git log` on `main` unless noted as an open PR.
 
-Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-hud-metrics.md](./homepage-hud-metrics.md) (HUD contract), [competitive-positioning.md](./competitive-positioning.md) (Marketing stub).
+Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-hud-metrics.md](./homepage-hud-metrics.md) (HUD notes → Modal PRODUCT.md), [competitive-positioning.md](./competitive-positioning.md) (Marketing stub).
 
 ---
 
 ## 2026-09-15
 
-### Batting homepage HUD pair
+### Batting homepage HUD pair (contact time)
 
-- Homepage two-peak batting HUD is **Head stability** (`head_stability_cm`) + **Bat speed** (`peak_bat_speed_kmh`).
-- Ungated / null Head stability is illustrated as **Can't measure** / **—** — never `0` and never a fake centimetre.
-- **Contact time in this clip** (`impact_offset_ms`) moves off homepage hero peaks to batting/Showcase detail and capability lists only (never early/late).
-- **Front stride** is not a gated API field; it is removed from homepage and batting progress/hero rows (not replaced with fake cm).
-- Bowling pair unchanged: **Run-up speed** (`peak_runup_speed_kmh` only) + **Release height** (`release_height_m`). No Ball speed homepage peak.
+- Homepage two-peak batting HUD is **Bat speed** (`peak_bat_speed_kmh`) + **Contact time in this clip** (`impact_offset_ms`).
+- Null / ungated contact time is **Can't measure** / **—**. Never early vs late / timing-the-ball language.
+- **Head stability** (`head_stability_cm`) moves to batting detail/capability lists only — not a homepage hero.
+- Bowling pair unchanged: **Run-up speed** (`peak_runup_speed_kmh` only) + **Release height** (`release_height_m`).
+- Site HUD notes point at Modal [PRODUCT.md](https://github.com/Gabriella-Systems/modal/blob/main/docs/PRODUCT.md) as the contract; this repo does not fork a second lock.
 - HTML: `index.html` hero + batting session-progress card; `batting.html` session stack. GIF binaries unchanged.
+
+### Batting homepage HUD pair (superseded same day)
+
+- Earlier same-day HTML lock was **Head stability** (`head_stability_cm`) + **Bat speed** (`peak_bat_speed_kmh`), with contact time on detail lists only. Superseded by the contact-time pair above.
 
 ### Bowling homepage HUD pair
 

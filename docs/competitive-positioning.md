@@ -54,18 +54,20 @@ Hawk-Eye — elite multi-camera tracking; not our academy-net price or form fact
 
 True early/late needs a gated bounce/release/arrival reference (**backlog**). Do not imply that exists.
 
-Do **not** put Impact / contact time on the batting homepage two-peak HUD. That pair is Head stability (`head_stability_cm`) + Bat speed (`peak_bat_speed_kmh`). Contact time stays on batting/Showcase detail copy only.
+Homepage batting heroes follow [Modal PRODUCT.md](https://github.com/Gabriella-Systems/modal/blob/main/docs/PRODUCT.md): Bat speed (`peak_bat_speed_kmh`) + Contact time in this clip (`impact_offset_ms`). Head stability is detail/capability copy only. See [homepage-hud-metrics.md](./homepage-hud-metrics.md) for how this site implements that lock — do not fork a second contract here.
 
 ### Homepage pairs
 
-- **Batting:** Head stability (`head_stability_cm`) + Bat speed (`peak_bat_speed_kmh`). Ungated or null Head stability is **Can't measure** / **—** — never `0` and never a fake centimetre. Front stride is not a gated field; do not show it on homepage or batting hero/progress rows.
+Confirm in PRODUCT.md. This site currently implements:
+
+- **Batting:** Bat speed (`peak_bat_speed_kmh`) + Contact time in this clip (`impact_offset_ms`). Ungated or null contact time is **Can't measure** / **—**. Never early/late. Front stride is not a gated field; do not show it on homepage or batting hero/progress rows.
 - **Bowling:** Run-up speed (`peak_runup_speed_kmh` only) + Release height (`release_height_m`). Omit ball speed from the two-peak HUD until gated and non-null — never show “—” as a ball-speed peak. Locked bowling peaks that are ungated/null show Can’t measure for that peak. No homepage fallback to `runup_speed_at_delivery_kmh`.
 
 ## Homepage / GIF rules (competitive)
 
 - Prefer **real Showcase takes** with trusted overlays over AI-generated “analysis” demos (rivals already look like phone-CV theater).
 - HUD: **few, readable, real** session metrics — or Can’t measure. Decorative or invented numbers kill the trust wedge.
-- Impact on HUD/copy follows the copy gate above (contact time in this clip, not early/late). Contact time is a batting **detail** metric, not a homepage hero peak.
+- Impact on HUD/copy follows the copy gate above (contact time in this clip, not early/late). Contact time is a batting homepage hero; Head stability stays on detail lists.
 - Front stride is not a gated API field — do not show it on homepage or batting progress/hero rows.
 - Logo / brand: simple vision/hardware mark (e.g. G + reticle) over illustrated batter / neon poster art (CricVision-adjacent) or consumer-app doodles (Matcha-adjacent).
 
