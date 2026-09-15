@@ -14,24 +14,28 @@ Dashboard / HUD **only renders gated fields**. Never invent a number. Never coer
 
 The homepage two-peak HUD is four floating cards: batting pair + bowling pair.
 
-### Batting (locked)
+### Batting (temporary pair)
 
 Drop **ball speed** from the batting hero HUD. Incoming-ball speed may still appear in batting capability copy; it is not a batter-skill hero metric.
 
-Stay on this Impact (honest label) + Bat speed pair until `head_stability_cm` ships.
+Stay on this Impact (honest label) + Bat speed pair until `head_stability_cm` is gated. Do **not** swap HTML to Head stability until Modal PR #9 merge + redeploy + Showcase confirmation.
 
 | Order | API field | Label | Unit |
 | --- | --- | --- | --- |
 | 1 | `impact_offset_ms` | **Contact time in this clip** | ms |
 | 2 | `peak_bat_speed_kmh` | **Bat speed** | km/h |
 
-Honest Impact wording:
+Honest Impact wording (copy gate: [competitive-positioning.md](./competitive-positioning.md)):
 
 - **Use:** “Contact time in this clip”
 - **Use (explanatory):** “When contact happened in this take (same-view compare).”
 - **Do not use:** early vs late, timing the ball, played early/late, or any technique-grade language
 
+`impact_offset_ms` is ms from clip start to gated contact. Same-view session marker only — not a universal good-ms score.
+
 Until `impact_offset_ms` is deployed on a given sample, derive milliseconds from `impact_frame ÷ fps` (same honest label). Do not leave the batting HUD on ball speed while waiting for the field.
+
+**When `head_stability_cm` is gated:** swap the batting hero to Head stability + Bat speed and retire Impact from the two-peak HUD. That swap is **not** this PR.
 
 ### Bowling (locked)
 
