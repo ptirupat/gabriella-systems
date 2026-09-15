@@ -55,5 +55,5 @@ PORT=9000 ./start-local.sh
 
 ## Related work and blockers
 
-- HUD contract: [docs/homepage-hud-metrics.md](docs/homepage-hud-metrics.md) — batting Contact time in this clip + Bat speed; bowling Run-up speed (`peak_runup_speed_kmh`) + Release height. GIF binaries are updated separately.
+- HUD contract: [docs/homepage-hud-metrics.md](docs/homepage-hud-metrics.md) — batting Head stability (`head_stability_cm`) + Bat speed; bowling Run-up speed (`peak_runup_speed_kmh`) + Release height. Contact time is detail-only. GIF binaries are updated separately.
 - Modal quality gate / `impact_offset_ms` live in the ML/Modal repo (not this tree).
