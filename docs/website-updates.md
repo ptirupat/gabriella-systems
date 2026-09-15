@@ -77,7 +77,7 @@ Assets: `assets/cricket_batting_15s.gif`, `assets/cricket_bowling_15s.gif`.
 | `389ab41` (2026-09-14) | Readable Gabriella Vision HUD: larger type, two session peaks, labelled as session metrics from this take. |
 | `6afc4e7` (2026-09-15) | GIF HUD refresh for the then-locked pair (batting: impact + bat; bowling: knee + arm). |
 
-**2026-09-15 HTML lock:** bowling homepage hero + session-progress cards use **Run-up speed** (`peak_runup_speed_kmh` only) + **Release height**. Ball speed is omitted from that two-peak HUD until gated and non-null (not shown as Can't measure). Front knee and arm angular speed stay on bowling/Showcase detail callouts. Batting homepage pair is **Bat speed** (`peak_bat_speed_kmh`) + **Contact time in this clip** (`impact_offset_ms`); ungated contact time is **Can't measure** / **—** (never early/late). Head stability is batting detail/capability copy only. Front stride is not shown on homepage or batting progress/hero rows. Contract: Modal PRODUCT.md.
+**2026-09-15 HTML lock:** bowling homepage hero + session-progress cards use **Run-up speed** (`peak_runup_speed_kmh` only) + **Release height** as a label with **no public metre** until calibration supports a credible overarm value (do not publish 1.09 m; do not invent 2.1 m). Ball speed is omitted from that two-peak HUD until gated and non-null (not shown as Can't measure). Front-knee flexion at plant and arm angular speed stay on bowling/Showcase detail callouts (0° ≈ fully extended where the angle is shown). Batting homepage pair is **Bat speed (pipeline peak)** (`peak_bat_speed_kmh`) + **Contact time in this clip** (`impact_offset_ms`); ungated contact time is **Can't measure** / **—** (never early/late). Head stability is batting detail/capability copy only. Front stride is not shown on homepage or batting progress/hero rows. Contract: Modal PRODUCT.md.
 
 **Asset lag:** Homepage GIF HUD overlays may still show a previous bowling pair. Locked HTML pair is in [homepage-hud-metrics.md](./homepage-hud-metrics.md). GIF binary refresh is a separate PR (see Open blockers).
 
@@ -107,7 +107,9 @@ Evolution on 2026-09-13–14:
 
 - Shipping claims for capture hardware, calibrated FOV as a live software guarantee, or multi-camera as a current capability.
 - “Batting is front-on only” / “bowling is side-on only.”
-- Hero HUD: ball speed as a batting skill metric; **Ball speed** / **Can't measure** / **—** as a bowling homepage peak; `runup_speed_at_delivery_kmh` as a homepage run-up fallback; front knee or arm angular speed as homepage bowling hero peaks (those are detail metrics).
+- Hero HUD: ball speed as a batting skill metric; **Ball speed** / **Can't measure** / **—** as a bowling homepage peak; `runup_speed_at_delivery_kmh` as a homepage run-up fallback; front-knee flexion or arm angular speed as homepage bowling hero peaks (those are detail metrics).
 - Head stability as a homepage batting hero peak (detail/capability lists only). Contact time on the homepage must use **Contact time in this clip** — never early vs late, timing the ball, or played early/late.
+- Public **1.09 m** (or any invented substitute such as 2.1 m) as release height on homepage heroes, progress cards, or bowling.html until calibration supports a credible overarm measurement.
+- Conflicting bat-speed units (homepage km/h vs batting.html mph) or unlabelled mph cards. Use one Showcase-like **km/h** pipeline-peak sample.
 - Front stride on homepage or batting hero/progress rows (not a gated API field; do not replace with fake cm).
 - Coercing null or ungated metrics to `0`, inventing numbers, or showing a fake Head stability centimetre.

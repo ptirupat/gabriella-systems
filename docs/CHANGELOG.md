@@ -8,14 +8,21 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 
 ## 2026-09-15
 
+### Credibility: release height off public heroes until calibrated
+
+- Public **1.09 m** release height removed from homepage heroes, session-progress cards, and `bowling.html`. That figure is waist-height and not credible for overarm release. Do **not** invent a substitute (including 2.1 m). Placeholder: **Measured when calibration supports it**.
+- **Front-knee flexion at plant** (was “Front knee” / “Front knee at plant”); where the angle is shown, gloss **0° ≈ fully extended**.
+- Bat speed labelled **bat speed (pipeline peak)**; one Showcase-like range **36 → 39 km/h** (no conflicting mph cards).
+- Keep illustrative **Run-up 21.6 km/h**, arm angular **~1840°/s**, delivery stride **1.82 m**.
+- HTML: `index.html`, `bowling.html`, `batting.html`, `academies.html`. GIF binaries unchanged (may still burn an older overlay).
+
 ### Batting homepage HUD pair (contact time)
 
 - Homepage two-peak batting HUD is **Bat speed** (`peak_bat_speed_kmh`) + **Contact time in this clip** (`impact_offset_ms`).
 - Null / ungated contact time is **Can't measure** / **—**. Never early vs late / timing-the-ball language.
-- **Head stability** (`head_stability_cm`) moves to batting detail/capability lists only — not a homepage hero.
-- Bowling pair unchanged: **Run-up speed** (`peak_runup_speed_kmh` only) + **Release height** (`release_height_m`).
+- **Head stability** (`head_stability_cm`) moves to batting detail/capability lists only — not a homepage hero (no Head-stability Can't measure on the homepage HUD).
 - Site HUD notes point at Modal [PRODUCT.md](https://github.com/Gabriella-Systems/modal/blob/main/docs/PRODUCT.md) as the contract; this repo does not fork a second lock.
-- HTML: `index.html` hero + batting session-progress card; `batting.html` session stack. GIF binaries unchanged.
+- **[PR #8](https://github.com/ptirupat/gabriella-systems/pull/8)** merged (`11c70a7`) with the contact-time pair. This credibility pass keeps that lock and removes public 1.09 m.
 
 ### Batting homepage HUD pair (superseded same day)
 
