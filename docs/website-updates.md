@@ -77,7 +77,7 @@ Assets: `assets/cricket_batting_15s.gif`, `assets/cricket_bowling_15s.gif`.
 | `389ab41` (2026-09-14) | Readable Gabriella Vision HUD: larger type, two session peaks, labelled as session metrics from this take. |
 | `6afc4e7` (2026-09-15) | GIF HUD refresh for the then-locked pair (batting: impact + bat; bowling: knee + arm). |
 
-**2026-09-15 HTML lock:** bowling homepage hero + session-progress cards use **Run-up speed** (`peak_runup_speed_kmh` only) + **Release height**. Ball speed is omitted from that two-peak HUD until gated and non-null (not shown as Can't measure). Front knee and arm angular speed stay on bowling/Showcase detail callouts. Batting hero label is **Contact time in this clip** (honest Impact wording; no early-vs-late / timing-the-ball language).
+**2026-09-15 HTML lock:** bowling homepage hero + session-progress cards use **Run-up speed** (`peak_runup_speed_kmh` only) + **Release height**. Ball speed is omitted from that two-peak HUD until gated and non-null (not shown as Can't measure). Front knee and arm angular speed stay on bowling/Showcase detail callouts. Batting homepage pair is **Head stability** (`head_stability_cm`) + **Bat speed**; ungated Head stability is **Can't measure** / **—** (never a fake cm). Contact time in this clip is batting detail/capability copy only. Front stride is not shown on homepage or batting progress/hero rows.
 
 **Asset lag:** Homepage GIF HUD overlays may still show a previous bowling pair. Locked HTML pair is in [homepage-hud-metrics.md](./homepage-hud-metrics.md). GIF binary refresh is a separate PR (see Open blockers).
 
@@ -108,6 +108,6 @@ Evolution on 2026-09-13–14:
 - Shipping claims for capture hardware, calibrated FOV as a live software guarantee, or multi-camera as a current capability.
 - “Batting is front-on only” / “bowling is side-on only.”
 - Hero HUD: ball speed as a batting skill metric; **Ball speed** / **Can't measure** / **—** as a bowling homepage peak; `runup_speed_at_delivery_kmh` as a homepage run-up fallback; front knee or arm angular speed as homepage bowling hero peaks (those are detail metrics).
-- Impact copy that grades the shot (early vs late, timing the ball, played early/late). Use **Contact time in this clip** / when contact happened in this take (same-view compare).
-- Coercing null or ungated metrics to `0`, or inventing numbers.
-- Head-displacement centimetres or other sample numbers the Showcase API does not return.
+- Impact / contact time as a homepage batting hero peak. Use **Contact time in this clip** / when contact happened in this take (same-view compare) on **detail** lists only — never early vs late, timing the ball, or played early/late.
+- Front stride on homepage or batting hero/progress rows (not a gated API field; do not replace with fake cm).
+- Coercing null or ungated metrics to `0`, inventing numbers, or showing a fake Head stability centimetre.

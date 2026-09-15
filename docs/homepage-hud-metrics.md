@@ -14,28 +14,22 @@ Dashboard / HUD **only renders gated fields**. Never invent a number. Never coer
 
 The homepage two-peak HUD is four floating cards: batting pair + bowling pair.
 
-### Batting (temporary pair)
+### Batting (locked)
 
 Drop **ball speed** from the batting hero HUD. Incoming-ball speed may still appear in batting capability copy; it is not a batter-skill hero metric.
 
-Stay on this Impact (honest label) + Bat speed pair until `head_stability_cm` is gated. Do **not** swap HTML to Head stability until Modal PR #9 merge + redeploy + Showcase confirmation.
-
 | Order | API field | Label | Unit |
 | --- | --- | --- | --- |
-| 1 | `impact_offset_ms` | **Contact time in this clip** | ms |
+| 1 | `head_stability_cm` | **Head stability** | cm |
 | 2 | `peak_bat_speed_kmh` | **Bat speed** | km/h |
 
-Honest Impact wording (copy gate: [competitive-positioning.md](./competitive-positioning.md)):
+Label Head stability clearly. When illustrating an ungated or null sample, show **Can't measure** / **—**. Do **not** invent `0`, a fake centimetre, or a trend of centimetres.
 
-- **Use:** “Contact time in this clip”
-- **Use (explanatory):** “When contact happened in this take (same-view compare).”
-- **Do not use:** early vs late, timing the ball, played early/late, or any technique-grade language
+**Impact / contact time is not a homepage hero peak.** `impact_offset_ms` belongs on batting/Showcase **detail** and capability lists only, with the honest label **Contact time in this clip** (never early vs late / timing the ball). See [competitive-positioning.md](./competitive-positioning.md).
 
 `impact_offset_ms` is ms from clip start to gated contact. Same-view session marker only — not a universal good-ms score.
 
-Until `impact_offset_ms` is deployed on a given sample, derive milliseconds from `impact_frame ÷ fps` (same honest label). Do not leave the batting HUD on ball speed while waiting for the field.
-
-**When `head_stability_cm` is gated:** swap the batting hero to Head stability + Bat speed and retire Impact from the two-peak HUD. That swap is **not** this PR.
+**Front stride is not a gated API field.** Do not show Front stride on homepage or batting hero rows or session-progress cards. Do not replace a removed Front stride row with a fake centimetre.
 
 ### Bowling (locked)
 
@@ -56,22 +50,24 @@ Render each locked bowling peak only when `quality.gated` is true **and** the va
 
 Keep the full label **Arm angular speed** (not “Arm angular”) wherever that detail metric is shown.
 
-Illustrative homepage numbers, when needed, should reuse Showcase-like ranges already used on the site: peak run-up about **21.6 km/h** (the ~19–22 km/h Showcase band) and release height about **1.09 m**. Do not present delivery-stride speed (`19.8`) as if it were peak run-up. Mark session-progress samples as illustrative where the site already does.
+Illustrative homepage numbers, when needed, should reuse Showcase-like ranges already used on the site: peak run-up about **21.6 km/h** (the ~19–22 km/h Showcase band), release height about **1.09 m**, and bat speed about **36–39 km/h**. Do not present delivery-stride speed (`19.8`) as if it were peak run-up. Mark session-progress samples as illustrative where the site already does.
 
 ### Ungated / null
 
 If `quality.gated` is `false` **or** the field value is `null`:
 
-- For a **locked hero field** that the HUD is supposed to show (`peak_runup_speed_kmh`, `release_height_m`, batting contact time, bat speed): **Can't measure** or **—**
+- For a **locked hero field** that the HUD is supposed to show (`head_stability_cm`, `peak_bat_speed_kmh`, `peak_runup_speed_kmh`, `release_height_m`): **Can't measure** or **—**
 - For bowling **ball speed** on the homepage two-peak HUD: **omit the peak** (do not render Can't measure / — as a ball-speed hero card)
 - **Never** invent a number
 - **Never** coerce `null` → `0`
+- **Never** substitute a fake centimetre for Head stability
 - **Never** substitute `runup_speed_at_delivery_kmh` for a missing homepage peak
 
 Gated false means “this take does not support a trustworthy value,” not “the athlete scored zero.”
 
 | Situation | Show |
 | --- | --- |
+| Batting `head_stability_cm` null or `quality.gated === false` | **Can't measure** / **—** (never `0` cm, never a fake cm) |
 | Bowling `ball_speed_kmh` not yet gated / null on the homepage HUD | **Omit** the peak (not Can't measure / —) |
 | Homepage `peak_runup_speed_kmh` or `release_height_m` null or `quality.gated === false` | **Can't measure** / **—** for that peak |
 | Any other locked field `null` or `quality.gated === false` | **Can't measure** / **—** |
@@ -102,9 +98,9 @@ This site embeds Showcase at `https://gabriellasystems--cricket-demo-web.modal.r
 | --- | --- | --- |
 | GIF HUD overlay | `assets/cricket_batting_15s.gif`, `assets/cricket_bowling_15s.gif` | Burned-in Gabriella Vision panel. |
 | Homepage hero cards | `index.html` (`.hero-metric-card`) | Floating dashboard next to the hero: batting pair + bowling pair. |
-| Session progress cards | `index.html`, `batting.html`, `bowling.html` | Homepage bowling card leads with the locked pair. |
+| Session progress cards | `index.html`, `batting.html`, `bowling.html` | Homepage batting card leads with Head stability + Bat speed; bowling card leads with the locked bowling pair. |
 
-Deeper capability lists (front knee, arm angular speed, delivery-stride speed, ball tracking, stride, and so on) may still appear as pipeline outputs. They are **not** the two-metric hero HUD.
+Deeper capability lists (contact time in this clip, front knee, arm angular speed, delivery-stride speed, ball tracking, stride, and so on) may still appear as pipeline outputs. They are **not** the two-metric hero HUD.
 
 ---
 
@@ -115,7 +111,7 @@ These are product/ops blockers, not missing copy in this PR:
 1. **GIF binaries are updated separately.** This HTML/docs pass does not refresh `assets/cricket_batting_15s.gif` or `assets/cricket_bowling_15s.gif`. Homepage GIFs may still show an older pair until a dedicated asset PR.
 2. **After GIFs land on `main`:** Modal **redeploy** and **demo rerun** so Showcase/demo clips match the new overlays. Do not assume the live Modal embed updates from this website repo alone.
 
-When regenerating GIFs, burn the **locked** labels and fields from this file: batting **Contact time in this clip** + Bat speed; bowling Run-up speed (`peak_runup_speed_kmh`) + Release height. Do not burn Ball speed / Can't measure as a bowling homepage peak. Do not use early-vs-late Impact wording.
+When regenerating GIFs, burn the **locked** labels and fields from this file: batting **Head stability** (`head_stability_cm`) + **Bat speed**; bowling Run-up speed (`peak_runup_speed_kmh`) + Release height. If Head stability is ungated or null, burn **Can't measure** / **—**, never a fake cm. Do not burn Ball speed / Can't measure as a bowling homepage peak. Do not burn Front stride. Contact time is detail-only, not a homepage peak. Do not use early-vs-late Impact wording.
 
 ---
 
@@ -123,8 +119,10 @@ When regenerating GIFs, burn the **locked** labels and fields from this file: ba
 
 As of this HUD-pair pass:
 
-- Homepage **HTML** hero and bowling session-progress cards use **Run-up speed** (`peak_runup_speed_kmh`) + **Release height** (`release_height_m`).
-- Batting HTML uses **Contact time in this clip** + Bat speed.
+- Homepage **HTML** batting hero and batting session-progress cards use **Head stability** (`head_stability_cm`) + **Bat speed** (`peak_bat_speed_kmh`). Ungated Head stability is illustrated as **Can't measure** / **—**.
+- Homepage **HTML** bowling hero and bowling session-progress cards use **Run-up speed** (`peak_runup_speed_kmh`) + **Release height** (`release_height_m`).
+- Contact time in this clip remains on batting/Showcase **detail** and capability lists only — not homepage hero peaks.
+- Front stride is not shown on homepage or batting progress/hero rows.
 - GIF HUD overlays are **not** part of this change and may still show a previous pair until a separate asset update.
 - Front knee at plant and arm angular speed remain on `bowling.html` as detail metrics.
 
@@ -132,12 +130,13 @@ As of this HUD-pair pass:
 
 ## Checklist for a HUD change
 
-1. Fields and labels match the locked pairs (batting: `impact_offset_ms` as **Contact time in this clip** + bat speed; bowling: `peak_runup_speed_kmh` + `release_height_m`).
+1. Fields and labels match the locked pairs (batting: `head_stability_cm` as **Head stability** + `peak_bat_speed_kmh`; bowling: `peak_runup_speed_kmh` + `release_height_m`).
 2. Quality gate: detect → track → pose → metric; fail loud; HUD only renders gated fields.
-3. Ungated / null locked fields → Can't measure / —, never invent, never `0`.
+3. Ungated / null locked fields → Can't measure / —, never invent, never `0`, never a fake Head stability centimetre.
 4. Batting HUD has no ball speed. Bowling two-peak HUD omits `ball_speed_kmh` (do not show Can't measure / — as a ball-speed homepage peak).
 5. Homepage run-up is `peak_runup_speed_kmh` only — no `runup_speed_at_delivery_kmh` fallback.
-6. Impact copy uses the honest contact-time wording; no early vs late / timing-the-ball / technique-grade language.
-7. GIF overlay, hero cards, and progress cards stay consistent (or lag is called out). GIF binaries are a separate PR.
-8. Front knee / arm angular speed are bowling detail metrics, not homepage hero peaks. Full **Arm angular speed** wording where shown.
-9. Sample numbers, if shown, are existing Showcase-like values — not newly invented gated stats.
+6. Impact / contact time is detail-only: honest wording **Contact time in this clip**; no early vs late / timing-the-ball / technique-grade language; not a homepage hero peak.
+7. Front stride is not shown on homepage or batting hero/progress rows.
+8. GIF overlay, hero cards, and progress cards stay consistent (or lag is called out). GIF binaries are a separate PR.
+9. Front knee / arm angular speed are bowling detail metrics, not homepage hero peaks. Full **Arm angular speed** wording where shown.
+10. Sample numbers, if shown, are existing Showcase-like values — not newly invented gated stats.

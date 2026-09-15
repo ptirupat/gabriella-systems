@@ -8,15 +8,24 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 
 ## 2026-09-15
 
+### Batting homepage HUD pair
+
+- Homepage two-peak batting HUD is **Head stability** (`head_stability_cm`) + **Bat speed** (`peak_bat_speed_kmh`).
+- Ungated / null Head stability is illustrated as **Can't measure** / **—** — never `0` and never a fake centimetre.
+- **Contact time in this clip** (`impact_offset_ms`) moves off homepage hero peaks to batting/Showcase detail and capability lists only (never early/late).
+- **Front stride** is not a gated API field; it is removed from homepage and batting progress/hero rows (not replaced with fake cm).
+- Bowling pair unchanged: **Run-up speed** (`peak_runup_speed_kmh` only) + **Release height** (`release_height_m`). No Ball speed homepage peak.
+- HTML: `index.html` hero + batting session-progress card; `batting.html` session stack. GIF binaries unchanged.
+
 ### Bowling homepage HUD pair
 
 - Homepage two-peak bowling HUD is **Run-up speed** (`peak_runup_speed_kmh` only) + **Release height** (`release_height_m`). No homepage fallback to `runup_speed_at_delivery_kmh`.
 - **Ball speed** is omitted from that HUD until a gated, non-null sample — not shown as **Can't measure** / **—**.
 - Locked bowling peaks that are ungated/null show **Can't measure** / **—** for that peak.
 - Front knee at plant and arm angular speed move to bowling/Showcase detail callouts, not homepage hero peaks.
-- Batting pair: honest Impact label **Contact time in this clip** + Bat speed (until `head_stability_cm` ships). No early-vs-late / timing-the-ball wording.
+- Batting pair later locked to Head stability + Bat speed (same day; see above). Earlier HTML used honest Impact label **Contact time in this clip** + Bat speed.
 - HTML: `index.html` hero cards and bowling session-progress card; `bowling.html` leads with run-up + release height; `batting.html` contact-time labels.
-- Docs: [homepage-hud-metrics.md](./homepage-hud-metrics.md), [competitive-positioning.md](./competitive-positioning.md) Impact copy gate. GIF binaries are unchanged in this pass. Do not swap batting to Head stability until Modal PR #9.
+- Docs: [homepage-hud-metrics.md](./homepage-hud-metrics.md), [competitive-positioning.md](./competitive-positioning.md) Impact copy gate. GIF binaries are unchanged in this pass.
 
 ### On `main` (same day)
 
