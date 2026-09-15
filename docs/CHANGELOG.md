@@ -6,12 +6,33 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 
 ---
 
+## 2026-09-15
+
+### Bowling homepage HUD pair
+
+- Homepage two-peak bowling HUD is **Run-up speed** (`peak_runup_speed_kmh`, fallback `runup_speed_at_delivery_kmh`) + **Release height** (`release_height_m`).
+- **Ball speed** is omitted from that HUD until a gated, non-null sample — not shown as **Can't measure** / **—**.
+- Front knee at plant and arm angular speed move to bowling/Showcase detail callouts, not homepage hero peaks.
+- Batting pair unchanged: Impact timing + Bat speed.
+- HTML: `index.html` hero cards and bowling session-progress card; `bowling.html` leads with run-up + release height.
+- Docs: [homepage-hud-metrics.md](./homepage-hud-metrics.md). GIF binaries are unchanged in this pass.
+
+### On `main` (same day)
+
+| Commit | Summary |
+| --- | --- |
+| `6afc4e7` | Update homepage GIFs with the previous locked HUD pair (batting impact/bat; bowling knee/arm). This bowling pair supersedes that HTML lock; GIFs lag until a separate asset PR. |
+
+### Earlier HUD lock (merged)
+
+- **[PR #2](https://github.com/ptirupat/gabriella-systems/pull/2)** merged (`509a1fc`) — HTML labels for Impact timing + Bat speed / Front knee + Arm angular. Superseded for bowling by the run-up + release-height pair above.
+
 ## 2026-09-14
 
-### Open (not on `main`)
+### Open (historical, 2026-09-14)
 
-- **[PR #2](https://github.com/ptirupat/gabriella-systems/pull/2)** — *Align homepage HUD with locked hero metric fields* (`cursor/lock-hero-metric-fields-e7ca`). HTML label lock on `index.html`, `batting.html`, and `bowling.html`. Does **not** refresh GIF binaries. See [homepage-hud-metrics.md](./homepage-hud-metrics.md).
-- **GIF binary push still blocked on Mac.** Intended HUD overlays cannot land on `main` until binaries can be exported/pushed from that machine.
+- HTML HUD label lock from [PR #2](https://github.com/ptirupat/gabriella-systems/pull/2) merged; bowling homepage pair later swapped to run-up + release height (2026-09-15).
+- **GIF binary updates are separate PRs.** Intended HUD overlays cannot land with HTML-only passes.
 - **After GIFs land on `main`:** Modal redeploy + demo rerun (ops on the ML/Modal side; not this repo).
 
 ### On `main`

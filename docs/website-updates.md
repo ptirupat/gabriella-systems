@@ -75,8 +75,11 @@ Assets: `assets/cricket_batting_15s.gif`, `assets/cricket_bowling_15s.gif`.
 | `a8fe927` (2026-09-13) | Real Showcase gallery clips (net cover drive + bowling take) as homepage loops. |
 | `38dfb2e` (2026-09-14) | Pose / bat / ball overlays burned onto those clips so the homepage reads as product output. |
 | `389ab41` (2026-09-14) | Readable Gabriella Vision HUD: larger type, two session peaks, labelled as session metrics from this take. |
+| `6afc4e7` (2026-09-15) | GIF HUD refresh for the then-locked pair (batting: impact + bat; bowling: knee + arm). |
 
-**Asset lag / Mac blocker:** `389ab41` still used the previous HUD pair (batting: ball + bat; bowling: knee + run-up). Locked pair is in [homepage-hud-metrics.md](./homepage-hud-metrics.md). HTML labels: open [PR #2](https://github.com/ptirupat/gabriella-systems/pull/2). GIF binary refresh is still blocked on Mac (see Open blockers).
+**2026-09-15 HTML lock:** bowling homepage hero + session-progress cards use **Run-up speed** + **Release height**. Ball speed is omitted from that two-peak HUD until gated and non-null (not shown as Can't measure). Front knee and arm angular speed stay on bowling/Showcase detail callouts.
+
+**Asset lag:** Homepage GIF HUD overlays may still show a previous bowling pair. Locked HTML pair is in [homepage-hud-metrics.md](./homepage-hud-metrics.md). GIF binary refresh is a separate PR (see Open blockers).
 
 ## Logo and navbar
 
@@ -96,15 +99,14 @@ Evolution on 2026-09-13–14:
 
 ## Open blockers
 
-1. **GIF binary push still blocked on Mac.** Homepage overlays cannot be refreshed on `main` until binaries can be exported/pushed from that machine.
+1. **GIF binaries are updated separately.** Homepage overlays do not refresh in HTML/docs-only PRs. After the 2026-09-15 bowling HUD swap (run-up + release height), GIFs may still show the previous knee/arm pair until an asset PR.
 2. **After GIFs land on `main`:** Modal **redeploy** + **demo rerun** so the live Showcase matches the new overlays. This website repo does not redeploy Modal by itself.
-3. HTML HUD label lock remains in [PR #2](https://github.com/ptirupat/gabriella-systems/pull/2) until merged.
-4. Modal quality gate / `impact_offset_ms` live in the ML repo (not this tree). Product notes mention Modal PR #1 on `master` as `8fcab5d` — **not referenced here**; re-verify in Modal.
+3. Modal quality gate / `impact_offset_ms` live in the ML repo (not this tree). Product notes mention Modal PR #1 on `master` as `8fcab5d` — **not referenced here**; re-verify in Modal.
 
 ## What not to reintroduce
 
 - Shipping claims for capture hardware, calibrated FOV as a live software guarantee, or multi-camera as a current capability.
 - “Batting is front-on only” / “bowling is side-on only.”
-- Hero HUD: ball speed as a batting skill metric; run-up as the bowling hero pair (until the gated `ball_speed_kmh` bowling swap).
+- Hero HUD: ball speed as a batting skill metric; **Ball speed** / **Can't measure** / **—** as a bowling homepage peak; front knee or arm angular speed as homepage bowling hero peaks (those are detail metrics).
 - Coercing null or ungated metrics to `0`, or inventing numbers.
 - Head-displacement centimetres or other sample numbers the Showcase API does not return.
