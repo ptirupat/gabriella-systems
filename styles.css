@@ -1597,6 +1597,67 @@ a {
     gap: 1.4rem;
 }
 
+.demo-clip {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.clip-hud {
+    position: absolute;
+    top: 0.8rem;
+    left: 0.8rem;
+    background: rgba(10, 20, 18, 0.88);
+    border: 1px solid rgba(22, 122, 91, 0.5);
+    border-radius: 8px;
+    padding: 0.7rem 1rem;
+    min-width: 13rem;
+    pointer-events: none;
+}
+
+.clip-hud-bowling {
+    border-color: rgba(11, 75, 76, 0.6);
+}
+
+.clip-hud-title {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #3ecf8e;
+    letter-spacing: 0.02em;
+    margin: 0 0 0.5rem;
+}
+
+.clip-hud-bowling .clip-hud-title {
+    color: #5bc0be;
+}
+
+.clip-hud-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1.5rem;
+    padding: 0.15rem 0;
+}
+
+.clip-hud-row span {
+    font-size: 0.72rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.clip-hud-row strong {
+    font-size: 0.85rem;
+    color: #fff;
+    font-weight: 700;
+}
+
+.clip-hud-note {
+    font-size: 0.62rem;
+    color: rgba(255, 255, 255, 0.4);
+    margin: 0.4rem 0 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 0.35rem;
+}
+
 .video-placeholder {
     position: relative;
     aspect-ratio: 16 / 9;
@@ -1880,6 +1941,10 @@ a {
     .dual-video,
     .compare-grid {
         grid-template-columns: 1fr;
+    }
+
+    .clip-hud {
+        min-width: auto;
     }
 
     .pipeline-grid {
