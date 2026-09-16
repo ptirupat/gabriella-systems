@@ -8,6 +8,16 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 
 ## 2026-09-16
 
+### Marketing-site polish (items 2–7)
+
+- Showcase banner uses the same dark-green page-hero as other pages (navy override removed).
+- Showcase empty space: explicit “samples loading” / “more samples coming soon” copy; iframe height reduced so the page does not read as a broken white void.
+- About restores **Mission**, **Vision**, and **Leadership** headings, plus a short “What is Gabriella?” block.
+- Logo recolored to the sports-green / gold palette; banners use a shared `--banner-*` green family.
+- Copy stays cricket-first; baseball and softball appear as **roadmap** on About, homepage, and footer.
+- SEO/GEO: canonical + OG/Twitter completeness, Organization JSON-LD, `robots.txt`, `sitemap.xml`.
+- Homepage HUD lock unchanged: **Bat 16** / **Contact 817** / **Run-up 20.4**.
+
 ### Bowling homepage HUD: Run-up only (drop Release height)
 
 - Public bowling HUD no longer shows **Release height** — not as **Can't measure**, **can't be determined**, or **Measured when calibration supports it**, and not as a fake metre (**no 1.09 m**, **no 2.1 m**).

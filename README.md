@@ -31,7 +31,8 @@ Product should review these for accuracy:
 - `batting.html` / `bowling.html` — Mode-specific analysis pages.
 - `academies.html` — Academy / pilot positioning.
 - `demo.html` — Live Showcase (Modal iframe).
-- `about.html` — Company focus and product roadmap.
+- `about.html` — Mission, vision, leadership, and product roadmap.
+- `robots.txt` / `sitemap.xml` — crawl hints for search and generative engines.
 - `contact.html` — Pilot / inquiry form.
 - `admin.html` — Admin panel iframe.
 

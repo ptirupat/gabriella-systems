@@ -87,7 +87,7 @@ Assets: `assets/cricket_batting_15s.gif`, `assets/cricket_bowling_15s.gif`.
 
 ## Logo and navbar
 
-Current nav: transparent G lettermark (`assets/logo.png`) plus **Gabriella** wordmark (`.nav-logo-wordmark`) on every page.
+Current nav: sports-green / gold illustration mark (`assets/logo.png`) plus **Gabriella** wordmark (`.nav-logo-wordmark`) on every page. Page heroes, Showcase, and dark bands share the `--banner-deep` / `--banner-green` family so the logo and banners match.
 
 Evolution on 2026-09-13–14:
 
