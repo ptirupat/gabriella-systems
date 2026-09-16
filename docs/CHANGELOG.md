@@ -20,9 +20,9 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 
 - Homepage two-peak batting HUD is **Bat speed at impact** (`bat_speed_at_impact_kmh`, **~22 km/h**) + **Contact time in this clip** (`impact_offset_ms`, **400 ms**) from the gated net-cover-drive Showcase reseed (demo#9 / Product lock).
 - Label is **Bat speed at impact** only. Never bare “bat speed.” Never “pipeline peak.” Never publish peak ~90 or the old **36 → 39 km/h** pipeline-peak sample.
-- Bowling homepage pair is unchanged (KAN-272 still open): **Run-up speed** + **Release height** with no public metre. Do not invent bowling numbers.
+- In this earlier batting-only pass, bowling HTML was still **Run-up speed** + **Release height** (no public metre). That bowling lock is **superseded later the same day** by the Run-up-only entry above — do not treat this bullet as current.
 - HTML: `index.html` hero tiles + session-progress card; `batting.html` session intelligence. Docs: [homepage-hud-metrics.md](./homepage-hud-metrics.md).
-- GIF binaries unchanged. Batting GIF still burns Impact + Bat speed 39 km/h; bowling GIF may still burn 1.09 m release height until a separate asset PR.
+- GIF binaries were unchanged in the batting-only pass (batting GIF then still burned Impact + Bat speed 39 km/h; bowling GIF may still have burned 1.09 m). Both GIFs were refreshed later the same day (batting ~22 + 400 ms on `main`; bowling Run-up-only in the lock above).
 
 ## 2026-09-15
 
