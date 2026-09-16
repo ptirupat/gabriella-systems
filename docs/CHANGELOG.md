@@ -8,17 +8,26 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 
 ## 2026-09-16
 
+### Live samples + homepage conflict markers (hero set unchanged)
+
+- Removed leftover Git conflict markers from `index.html` Bowling — Session Progress (`<<<<<<< HEAD` / `=======` / `>>>>>>> da73aab`).
+- Resolved that card to match `bowling.html` detail/progress: **Run-up 20.4 km/h**, **Arm speed 619 °/s**, **Front knee angle 155°** (not Delivery stride 1.82 m).
+- Restored the locked homepage *hero set* on `.hero-metric-card` tiles: batting **Bat speed at impact 16 km/h** + **Contact time in this clip 817 ms**; bowling **Run-up speed 20.4 km/h** only. Ball 122 / Arm 619 are no longer homepage heroes (they stay on clip HUDs / session-progress).
+- Dropped the **Release height** “Measured when calibration supports it” placeholder from the `bowling.html` metrics grid — omit Release from the public HUD until calibrated.
+- Docs treat live HTML numbers as the public samples: Bat **16**, Contact **817 ms**, Run-up **20.4**, plus detail-only Ball **122**, Arm **619 °/s**, Head **41.4 cm**, Front knee **155°**. Do not republish ~22 / 400 ms / 21.6 / 22.4 / ~1840°/s as public samples. Hero *set* is unchanged.
+- No JS logic, GIF binary, or Modal/demo changes.
+
 ### Bowling homepage HUD: Run-up only (drop Release height)
 
 - Public bowling HUD no longer shows **Release height** — not as **Can't measure**, **can't be determined**, or **Measured when calibration supports it**, and not as a fake metre (**no 1.09 m**, **no 2.1 m**).
-- Homepage bowling hero is **Run-up speed** (`peak_runup_speed_kmh`) only. Prefer an empty second slot rather than an unmeasured Release height row. Batting pair is unchanged: **Bat speed at impact ~22 km/h** + **Contact time in this clip 400 ms**.
-- HTML: `index.html` hero tiles + bowling session-progress card; `bowling.html` metrics grid and session-progress card. Existing run-up sample **21.6 km/h** kept on HTML; bowling GIF overlay keeps **22.4 km/h**.
+- Homepage bowling hero is **Run-up speed** (`peak_runup_speed_kmh`) only. Prefer an empty second slot rather than an unmeasured Release height row. Batting pair is unchanged (later the same day the public samples became **Bat 16 km/h** + **Contact 817 ms** — see the live-sample entry above; this pass still used the then-current ~22 / 400 ms figures).
+- HTML: `index.html` hero tiles + bowling session-progress card; `bowling.html` metrics grid and session-progress card. Run-up sample later locked to live **20.4 km/h** (this pass still used 21.6 HTML / 22.4 GIF).
 - Regenerated `assets/cricket_bowling_15s.gif` so the burned Gabriella Vision panel is Run-up only. Batting GIF unchanged.
 - Docs: [homepage-hud-metrics.md](./homepage-hud-metrics.md).
 
 ### Batting homepage HUD pair (bat speed at impact)
 
-- Homepage two-peak batting HUD is **Bat speed at impact** (`bat_speed_at_impact_kmh`, **~22 km/h**) + **Contact time in this clip** (`impact_offset_ms`, **400 ms**) from the gated net-cover-drive Showcase reseed (demo#9 / Product lock).
+- Homepage two-peak batting HUD is **Bat speed at impact** (`bat_speed_at_impact_kmh`) + **Contact time in this clip** (`impact_offset_ms`) from the gated net-cover-drive Showcase reseed (demo#9 / Product lock). Public samples later the same day: **16 km/h** + **817 ms** (this pass still used ~22 / 400 ms).
 - Label is **Bat speed at impact** only. Never bare “bat speed.” Never “pipeline peak.” Never publish peak ~90 or the old **36 → 39 km/h** pipeline-peak sample.
 - In this earlier batting-only pass, bowling HTML was still **Run-up speed** + **Release height** (no public metre). That bowling lock is **superseded later the same day** by the Run-up-only entry above — do not treat this bullet as current.
 - HTML: `index.html` hero tiles + session-progress card; `batting.html` session intelligence. Docs: [homepage-hud-metrics.md](./homepage-hud-metrics.md).
