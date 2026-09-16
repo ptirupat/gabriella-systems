@@ -14,7 +14,7 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 - Showcase empty space: explicit “samples loading” / “more samples coming soon” copy; iframe height reduced so the page does not read as a broken white void.
 - About restores **Mission**, **Vision**, and **Leadership** headings, plus a short “What is Gabriella?” block.
 - Logo recolored to the sports-green / gold palette; banners use a shared `--banner-*` green family.
-- Copy stays cricket-first; baseball and softball appear as **roadmap** on About, homepage, and footer.
+- Copy lock: one expansion line — started with cricket; baseball and softball are next (same session-metric / fail-loud approach), labeled **roadmap**. Titles/H1s stay cricket-primary (nets, coaches, academies, session metrics). GEO blurbs state what we measure now, fail-loud, then upcoming sports.
 - SEO/GEO: canonical + OG/Twitter completeness, Organization JSON-LD, `robots.txt`, `sitemap.xml`.
 - Homepage HUD lock unchanged: **Bat 16** / **Contact 817** / **Run-up 20.4**.
 
