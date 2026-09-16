@@ -1653,6 +1653,14 @@ a {
     margin-bottom: 0.8rem;
 }
 
+.gif-hud-note {
+    max-width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.2rem;
+    font-style: normal;
+}
+
 /* Demo Tabs */
 .demo-tabs {
     display: flex;
