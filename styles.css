@@ -1984,7 +1984,7 @@ a {
 .hero-dashboard {
     position: relative;
     width: 400px;
-    height: 360px;
+    height: 460px;
 }
 
 /* Subtle grid background for dashboard area */
@@ -2013,9 +2013,10 @@ a {
     box-shadow: 0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.1);
 }
 
-.hero-metric-card:nth-child(1) { top: 0;    left: 0; }
-.hero-metric-card:nth-child(2) { top: 70px; right: 0; }
-.hero-metric-card:nth-child(3) { bottom: 20px; left: 48px; }
+.hero-metric-card:nth-child(1) { top: 0;     left: 0; }
+.hero-metric-card:nth-child(2) { top: 80px;  right: 0; }
+.hero-metric-card:nth-child(3) { top: 210px; left: 0; }
+.hero-metric-card:nth-child(4) { top: 300px; right: 0; }
 
 .hero-metric-card .live-dot {
     width: 8px;
