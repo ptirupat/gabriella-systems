@@ -87,7 +87,7 @@ Assets: `assets/cricket_batting_15s.gif`, `assets/cricket_bowling_15s.gif`.
 
 ## Logo and navbar
 
-Current nav: transparent G lettermark (`assets/logo.png`) plus **Gabriella** wordmark (`.nav-logo-wordmark`) on every page.
+Current nav: transparent G + reticle lettermark (`assets/logo.png`, teal/green) plus **Gabriella** wordmark (`.nav-logo-wordmark`) on every page. Vector twin: `assets/logo.svg`.
 
 Evolution on 2026-09-13–14:
 

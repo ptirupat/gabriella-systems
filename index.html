@@ -3,28 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gabriella Systems - Computer Vision for Cricket Performance</title>
-    <meta name="description" content="Computer vision for cricket performance — batting and bowling intelligence from one portable system.">
+    <title>Gabriella Systems | Cricket Computer Vision</title>
+    <meta name="description" content="Gabriella Systems is cricket-first computer vision for batting and bowling. Fail-loud metrics, pose/bat/ball overlays, and baseball/softball on the expansion roadmap.">
     <link rel="canonical" href="https://gabriellasystems.com/">
+    <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+    <link rel="icon" href="assets/logo.png" type="image/png">
+    <meta name="theme-color" content="#0b4b4c">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Gabriella Systems">
-    <meta property="og:title" content="Gabriella Systems - Computer Vision for Cricket Performance">
-    <meta property="og:description" content="Computer vision for cricket performance — batting and bowling intelligence from one portable system.">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Gabriella Systems | Cricket Computer Vision">
+    <meta property="og:description" content="Cricket-first computer vision for batting and bowling. Fail-loud metrics coaches can trust. Baseball and softball are on the expansion roadmap.">
     <meta property="og:image" content="https://gabriellasystems.com/assets/cricket-vision-hero.png">
+    <meta property="og:image:alt" content="Cricket batting analysis overlay from Gabriella Vision">
     <meta property="og:url" content="https://gabriellasystems.com/">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gabriella Systems | Cricket Computer Vision">
+    <meta name="twitter:description" content="Cricket-first computer vision for batting and bowling. Fail-loud metrics coaches can trust. Baseball and softball are on the expansion roadmap.">
+    <meta name="twitter:image" content="https://gabriellasystems.com/assets/cricket-vision-hero.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "Gabriella Systems",
+          "url": "https://gabriellasystems.com/",
+          "logo": "https://gabriellasystems.com/assets/logo.png",
+          "email": "admin@gabriellasystems.com",
+          "description": "Gabriella Systems builds cricket-first computer vision for batting and bowling analysis. Metrics are fail-loud. Baseball and softball are on the expansion roadmap."
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "Gabriella Vision",
+          "applicationCategory": "SportsApplication",
+          "operatingSystem": "Web",
+          "url": "https://gabriellasystems.com/",
+          "description": "Computer vision for cricket batting and bowling. Coaches review pose, bat, and ball overlays with fail-loud metrics from gated takes. Baseball and softball are planned expansion, not current products.",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Gabriella Systems"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "name": "Gabriella Systems",
+          "url": "https://gabriellasystems.com/",
+          "description": "What is Gabriella Systems? Cricket-first computer vision for batting and bowling performance, with honest Can't measure when a take is ungated."
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
                 <a href="index.html" class="nav-logo-link">
-                    <img src="assets/logo.png" alt="Gabriella Systems" class="nav-logo-img">
+                    <img src="assets/logo.png" alt="Gabriella Systems" class="nav-logo-img" width="40" height="40">
                     <span class="nav-logo-wordmark">Gabriella</span>
                 </a>
             </div>
@@ -65,6 +106,7 @@
                         <div class="status-item status-live"><i class="fas fa-circle"></i> <strong>Live:</strong> Batting &amp; bowling video analysis</div>
                         <div class="status-item status-live"><i class="fas fa-circle"></i> <strong>Live:</strong> Pose, bat &amp; ball overlays</div>
                         <div class="status-item status-planned"><i class="fas fa-compass-drafting"></i> <strong>Planned:</strong> Portable capture hardware</div>
+                        <div class="status-item status-planned"><i class="fas fa-baseball"></i> <strong>Roadmap:</strong> Baseball &amp; softball expansion</div>
                     </div>
                 </div>
                 <div class="hero-right">
@@ -270,17 +312,12 @@
                             <strong>20.4 km/h</strong>
                         </div>
                         <div class="compare-row">
-<<<<<<< HEAD
-                            <span>Delivery stride</span>
-                            <strong>1.82 m</strong>
-=======
                             <span>Arm speed</span>
                             <strong>619 °/s</strong>
                         </div>
                         <div class="compare-row">
                             <span>Front knee angle</span>
                             <strong>155°</strong>
->>>>>>> da73aab (Update all metrics to match showcase results and add HTML HUD overlays)
                         </div>
                         <div class="compare-row">
                             <span>Same-view session review</span>
@@ -301,6 +338,8 @@
                         The software is tuned for cricket actions — detecting player, bat, and ball,
                         then selecting batting or bowling metrics from the clip. Purpose-built capture
                         hardware is on the roadmap to make session-to-session comparison even more consistent.
+                        We started with cricket; baseball and softball are the expansion we want next,
+                        not products we claim to ship today.
                     </p>
                     <a href="services.html" class="text-link">Learn about the platform <i class="fas fa-chevron-right"></i></a>
                 </div>
@@ -345,8 +384,11 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <span class="nav-logo-text">Gabriella Systems</span>
-                    <p>Computer vision for cricket performance — batting and bowling intelligence from a single portable system.</p>
+                    <a href="index.html" class="footer-brand-mark">
+                        <img src="assets/logo.png" alt="" width="36" height="36">
+                        <span class="nav-logo-text">Gabriella Systems</span>
+                    </a>
+                    <p>Computer vision for cricket performance — batting and bowling intelligence from a single portable system. Baseball and softball are on the expansion roadmap.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Product</h4>

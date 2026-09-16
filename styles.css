@@ -10,10 +10,15 @@
     --line: #dce6e1;
     --teal: #0b4b4c;
     --green: #167a5b;
+    --green-deep: #0a2f2e;
+    --green-mid: #146352;
+    --green-soft: #3f9d7a;
     --amber: #f2a900;
     --coral: #e85d4f;
     --blue: #2f6fba;
     --shadow: 0 16px 36px rgba(17, 32, 29, 0.12);
+    --hero-gradient: linear-gradient(135deg, #0a2f2e 0%, #0b4b4c 42%, #146352 78%, #0d3533 100%);
+    --banner-overlay: linear-gradient(135deg, rgba(10, 47, 46, 0.94), rgba(20, 99, 82, 0.86));
 }
 
 * {
@@ -112,13 +117,13 @@ a {
 }
 
 .nav-logo-img {
-    height: 44px;
-    width: auto;
+    height: 40px;
+    width: 40px;
     display: block;
     background: transparent;
     object-fit: contain;
     flex-shrink: 0;
-    max-width: 80px;
+    max-width: 44px;
 }
 
 .nav-logo-wordmark {
@@ -126,7 +131,7 @@ a {
     font-weight: 700;
     font-size: 1.05rem;
     letter-spacing: -0.02em;
-    color: var(--ink);
+    color: var(--teal);
     white-space: nowrap;
 }
 
@@ -193,7 +198,7 @@ a {
     align-items: center;
     padding: 140px 0 80px;
     color: white;
-    background: linear-gradient(135deg, #04121a 0%, #0b4b4c 45%, #0d3d3e 75%, #061217 100%);
+    background: var(--hero-gradient);
     background-size: 300% 300%;
     animation: gradientShift 12s ease infinite;
     overflow: hidden;
@@ -335,8 +340,10 @@ a {
     padding: 72px 0;
     color: white;
     background:
-        linear-gradient(135deg, rgba(11, 75, 76, 0.96), rgba(22, 122, 91, 0.9)),
+        var(--banner-overlay),
         url("assets/cricket-vision-hero.png") center / cover no-repeat;
+    background-size: auto, cover;
+    background-position: center;
 }
 
 .page-hero h1,
@@ -532,7 +539,7 @@ a {
 }
 
 .accent-green {
-    border-left-color: #54d493;
+    border-left-color: var(--green-soft);
 }
 
 .accent-amber {
@@ -544,7 +551,7 @@ a {
 }
 
 .accent-teal {
-    border-left-color: #6fd8dd;
+    border-left-color: #5aa8a4;
 }
 
 .step-card span {
@@ -883,6 +890,56 @@ a {
     line-height: 1.35;
 }
 
+.mv-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.4rem;
+}
+
+.mv-card {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 1.7rem;
+    box-shadow: 0 10px 26px rgba(17, 32, 29, 0.08);
+}
+
+.mv-card h2 {
+    font-size: 1.35rem;
+    margin-bottom: 0.75rem;
+    color: var(--teal);
+}
+
+.mv-card p {
+    color: var(--muted);
+    font-size: 1rem;
+}
+
+.faq-list {
+    display: grid;
+    gap: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 1.3rem 1.5rem;
+}
+
+.faq-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.45rem;
+    color: var(--ink);
+}
+
+.faq-item p {
+    color: var(--muted);
+    font-size: 0.98rem;
+}
+
 .timeline {
     display: grid;
     gap: 1rem;
@@ -1001,15 +1058,108 @@ a {
 }
 
 /* Demo Page */
-.demo-hero {
-    background:
-        linear-gradient(135deg, rgba(20, 33, 31, 0.96), rgba(47, 111, 186, 0.78)),
-        url("assets/cricket-vision-hero.png") center / cover no-repeat;
-}
-
 .demo-workspace {
     background: var(--soft);
 }
+
+.demo-embed-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 28rem;
+}
+
+.demo-embed-frame {
+    width: 100%;
+    min-height: 720px;
+    height: calc(100vh - 80px);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--soft);
+    box-shadow: 0 10px 28px rgba(17, 32, 29, 0.08);
+    display: block;
+}
+
+.demo-embed-wrapper.is-loading {
+    min-height: 28rem;
+    max-height: 32rem;
+    overflow: hidden;
+}
+
+.demo-embed-wrapper.is-loading .demo-embed-frame {
+    min-height: 28rem;
+    height: 28rem;
+}
+
+.demo-loading {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.85rem;
+    background:
+        linear-gradient(180deg, rgba(244, 247, 245, 0.97), rgba(244, 247, 245, 0.92)),
+        var(--hero-gradient);
+    background-size: auto, 220% 220%;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    z-index: 2;
+    text-align: center;
+    padding: 2rem 1.4rem;
+}
+
+.demo-loading.hidden {
+    opacity: 0;
+}
+
+.demo-loading-spinner {
+    width: 44px;
+    height: 44px;
+    border: 3px solid var(--line);
+    border-top-color: var(--teal);
+    border-radius: 50%;
+    animation: spin 0.9s linear infinite;
+}
+
+.demo-loading-text {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: 0.01em;
+}
+
+.demo-loading-sub {
+    font-size: 0.9rem;
+    color: var(--muted);
+    max-width: 28rem;
+    line-height: 1.5;
+}
+
+.demo-empty-note {
+    margin-top: 1rem;
+    padding: 1rem 1.15rem;
+    border: 1px dashed var(--line);
+    border-radius: 8px;
+    background: var(--paper);
+    color: var(--muted);
+    font-size: 0.92rem;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.demo-note {
+    color: var(--muted);
+    font-size: 0.92rem;
+    margin-top: 0.8rem;
+}
+
+.demo-note i { color: var(--green); }
 
 .demo-grid {
     grid-template-columns: 360px minmax(0, 1fr);
@@ -1150,7 +1300,7 @@ a {
     background:
         linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
         linear-gradient(0deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-        linear-gradient(140deg, #0b4b4c 0%, #1f7a54 48%, #f0b429 160%);
+        linear-gradient(140deg, #0b4b4c 0%, #146352 52%, #14211f 100%);
     background-size: 42px 42px, 42px 42px, auto;
 }
 
@@ -1350,10 +1500,30 @@ a {
     margin-bottom: 0.6rem;
 }
 
+.footer-brand-mark {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.75rem;
+    text-decoration: none;
+}
+
+.footer-brand-mark img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    flex-shrink: 0;
+    filter: brightness(1.15);
+}
+
+.footer-brand-mark .nav-logo-text {
+    margin-bottom: 0;
+}
+
 .footer-brand p {
     font-size: 0.92rem;
     color: rgba(255,255,255,0.55);
-    max-width: 240px;
+    max-width: 280px;
     line-height: 1.55;
 }
 
@@ -1623,13 +1793,13 @@ a {
 .clip-hud-title {
     font-size: 0.75rem;
     font-weight: 800;
-    color: #3ecf8e;
+    color: #8fd4b0;
     letter-spacing: 0.02em;
     margin: 0 0 0.5rem;
 }
 
 .clip-hud-bowling .clip-hud-title {
-    color: #5bc0be;
+    color: #9ecfc6;
 }
 
 .clip-hud-row {
@@ -1662,7 +1832,7 @@ a {
 .video-placeholder {
     position: relative;
     aspect-ratio: 16 / 9;
-    background: linear-gradient(140deg, #0b4b4c 0%, #1f7a54 48%, #14211f 100%);
+    background: linear-gradient(140deg, #0b4b4c 0%, #146352 48%, #14211f 100%);
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -1760,7 +1930,7 @@ a {
     min-height: 600px;
     border: 1px solid var(--line);
     border-radius: 8px;
-    background: linear-gradient(140deg, #0b4b4c 0%, #14211f 60%, #1f7a54 100%);
+    background: linear-gradient(140deg, #0b4b4c 0%, #14211f 60%, #146352 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1892,6 +2062,10 @@ a {
     gap: 0.4rem;
 }
 
+.cricket-hero .status-item {
+    color: rgba(255, 255, 255, 0.84);
+}
+
 .status-item i {
     font-size: 0.65rem;
 }
@@ -1904,12 +2078,20 @@ a {
     color: var(--green);
 }
 
+.cricket-hero .status-live i {
+    color: #8fd4b0;
+}
+
 .status-dev i {
     color: var(--amber);
 }
 
 .status-planned i {
     color: var(--teal);
+}
+
+.cricket-hero .status-planned i {
+    color: #ffd86b;
 }
 
 /* Responsive: New Components */
@@ -1938,6 +2120,10 @@ a {
 }
 
 @media (max-width: 980px) {
+    .mv-grid {
+        grid-template-columns: 1fr;
+    }
+
     .dual-cards,
     .dual-video,
     .compare-grid {
@@ -2112,7 +2298,7 @@ a {
 
 .technology-band .pipeline-card i {
     background: rgba(255, 255, 255, 0.12);
-    color: #7df4ef;
+    color: #b7e0d0;
 }
 
 .technology-band .pipeline-card:hover {

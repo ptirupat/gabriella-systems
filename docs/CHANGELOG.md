@@ -8,6 +8,16 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 
 ## 2026-09-16
 
+### Marketing site feedback (items 2–7)
+
+- Showcase (`demo.html`) banner uses the same dark teal/green overlay as other page heroes (navy blue override removed).
+- Showcase embed has an explicit loading/empty state (“Sample clips loading…” / “More samples coming soon”) and no longer reserves a tall blank iframe while the engine starts.
+- About restores **Mission**, **Vision**, and **Leadership** headings, plus a short “What is Gabriella Systems?” FAQ for search/GEO.
+- Navbar uses the prior transparent G + reticle lettermark, recolored to brand teal/green. Hero/banner greens unified; neon HUD accents softened.
+- Cricket-first copy now states baseball and softball as **expansion roadmap**, not shipping products (about, homepage, footer).
+- SEO: unique titles/descriptions, canonical, Open Graph/Twitter, JSON-LD Organization/SoftwareApplication/FAQPage, `robots.txt`, `sitemap.xml`.
+- Homepage HUD lock unchanged: **Bat speed at impact 16 km/h**, **Contact 817 ms**, **Run-up 20.4 km/h**. Resolved a leftover merge conflict in the bowling session-progress card.
+
 ### Bowling homepage HUD: Run-up only (drop Release height)
 
 - Public bowling HUD no longer shows **Release height** — not as **Can't measure**, **can't be determined**, or **Measured when calibration supports it**, and not as a fake metre (**no 1.09 m**, **no 2.1 m**).

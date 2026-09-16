@@ -3,27 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Gabriella Systems</title>
-    <meta name="description" content="Gabriella Systems is building computer vision infrastructure for cricket performance.">
-        <meta property="og:type" content="website">
+    <title>About Gabriella Systems | Cricket-First Computer Vision</title>
+    <meta name="description" content="Gabriella Systems is cricket-first computer vision for batting and bowling. Fail-loud metrics coaches can trust, with baseball and softball on the expansion roadmap.">
+    <link rel="canonical" href="https://gabriellasystems.com/about.html">
+    <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+    <link rel="icon" href="assets/logo.png" type="image/png">
+    <meta name="theme-color" content="#0b4b4c">
+    <meta property="og:type" content="website">
     <meta property="og:site_name" content="Gabriella Systems">
-    <meta property="og:title" content="About Gabriella Systems">
-    <meta property="og:description" content="Gabriella Systems is building computer vision infrastructure for cricket performance.">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="About Gabriella Systems | Cricket-First Computer Vision">
+    <meta property="og:description" content="Gabriella Systems is cricket-first computer vision for batting and bowling. Fail-loud metrics coaches can trust, with baseball and softball on the expansion roadmap.">
     <meta property="og:image" content="https://gabriellasystems.com/assets/cricket-vision-hero.png">
+    <meta property="og:image:alt" content="Cricket batting analysis overlay from Gabriella Vision">
     <meta property="og:url" content="https://gabriellasystems.com/about.html">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About Gabriella Systems | Cricket-First Computer Vision">
+    <meta name="twitter:description" content="Gabriella Systems is cricket-first computer vision for batting and bowling. Fail-loud metrics coaches can trust, with baseball and softball on the expansion roadmap.">
+    <meta name="twitter:image" content="https://gabriellasystems.com/assets/cricket-vision-hero.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "Gabriella Systems",
+          "url": "https://gabriellasystems.com/",
+          "logo": "https://gabriellasystems.com/assets/logo.png",
+          "email": "admin@gabriellasystems.com",
+          "description": "Gabriella Systems builds cricket-first computer vision for batting and bowling analysis. Metrics are fail-loud. Baseball and softball are on the expansion roadmap."
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is Gabriella Systems?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Gabriella Systems builds cricket-first computer vision for batting and bowling analysis. Coaches review clips with pose, bat, and ball overlays and only the metrics the pipeline can actually measure. If a take is below the quality gate, the system fails loud with Can't measure instead of a guessed number."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What sports does Gabriella support today?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Cricket is live today: batting and bowling clip analysis. Gabriella started with cricket and wants to expand the same bat-and-ball vision stack to baseball and softball. Those sports are on the roadmap, not shipping products yet."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What does fail-loud mean for Gabriella metrics?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Fail-loud means ungated or missing detections are shown as Can't measure or omitted, never coerced to zero or invented. Public sample numbers on the site come from gated Showcase takes."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
                 <a href="index.html" class="nav-logo-link">
-                    <img src="assets/logo.png" alt="Gabriella Systems" class="nav-logo-img">
+                    <img src="assets/logo.png" alt="Gabriella Systems" class="nav-logo-img" width="40" height="40">
                     <span class="nav-logo-wordmark">Gabriella</span>
                 </a>
             </div>
@@ -51,9 +104,67 @@
                 <p class="eyebrow">About Gabriella Systems</p>
                 <h1>Computer vision infrastructure for cricket performance</h1>
                 <p>
-                    We build cricket-specific vision systems that measure batting and bowling
-                    performance with the consistency required for genuine progress tracking.
+                    Gabriella Systems is cricket-first computer vision for batting and bowling.
+                    We measure what the take supports — and say so when it does not.
                 </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container content-grid">
+                <article>
+                    <h2>What is Gabriella Systems?</h2>
+                    <p>
+                        Gabriella Systems builds computer vision for cricket nets. Coaches upload or
+                        review batting and bowling clips; the platform detects the player, bat, and
+                        ball where they are visible, then returns overlays and metrics suited to that
+                        action and camera view.
+                    </p>
+                    <p>
+                        Numbers are fail-loud. If detection, tracking, or pose is below the quality
+                        gate, the HUD shows Can't measure rather than a guessed value. We started with
+                        cricket. Baseball and softball are the expansion we want next — same
+                        bat-and-ball problems, not a claim that those sports ship today.
+                    </p>
+                </article>
+                <aside class="quote-panel">
+                    <i class="fas fa-quote-left"></i>
+                    <p>Better cricket feedback starts when video stops being just footage and becomes structured evidence.</p>
+                </aside>
+            </div>
+        </section>
+
+        <section class="section muted-section">
+            <div class="container">
+                <div class="section-intro">
+                    <p class="eyebrow">Mission, vision, leadership</p>
+                    <h2>What we are building, and why</h2>
+                </div>
+                <div class="mv-grid">
+                    <article class="mv-card">
+                        <h2>Mission</h2>
+                        <p>
+                            Give cricket coaches objective, comparable evidence from practice —
+                            pose, bat, and ball when the take supports it, and an honest Can't measure
+                            when it does not.
+                        </p>
+                    </article>
+                    <article class="mv-card">
+                        <h2>Vision</h2>
+                        <p>
+                            A portable vision system that makes session-to-session cricket improvement
+                            measurable, then carries that same trust into baseball and softball.
+                        </p>
+                    </article>
+                    <article class="mv-card">
+                        <h2>Leadership</h2>
+                        <p>
+                            Founded and led by Praveen Tirupattur. Gabriella is a founder-led product
+                            company: cricket performance vision first, then the same bat-and-ball
+                            stack toward baseball and softball.
+                        </p>
+                    </article>
+                </div>
             </div>
         </section>
 
@@ -74,7 +185,7 @@
                 </article>
                 <aside class="quote-panel">
                     <i class="fas fa-quote-left"></i>
-                    <p>Better cricket feedback starts when video stops being just footage and becomes structured evidence.</p>
+                    <p>We would rather leave a metric blank than publish a number the take cannot support.</p>
                 </aside>
             </div>
         </section>
@@ -113,7 +224,8 @@
                     <p>
                         Gabriella already analyzes batting and bowling clips in software. Next we are
                         hardening session workflows and building purpose-built capture hardware for
-                        more consistent nets measurement.
+                        more consistent nets measurement. After cricket is solid, baseball and softball
+                        are the sports we want to expand into.
                     </p>
                 </div>
                 <div class="timeline">
@@ -132,28 +244,63 @@
                         <h3>Portable capture system</h3>
                         <p>Purpose-built nets capture to improve consistency of placement, frame rate, and calibration over phone video.</p>
                     </div>
-
                     <div class="timeline-item">
                         <span>Platform</span>
                         <h3>Player Histories and Session Intelligence</h3>
                         <p>Longitudinal player profiles, session comparison, and progress tracking across weeks and seasons.</p>
                     </div>
                     <div class="timeline-item">
-                        <span>Future</span>
-                        <h3>Broader Cricket Performance</h3>
-                        <p>Expanding measurement capabilities across more aspects of cricket training and performance.</p>
+                        <span>Expansion</span>
+                        <h3>Baseball and softball</h3>
+                        <p>We started with cricket. The same bat-and-ball vision problems apply to baseball and softball — those sports are on the roadmap, not shipping today.</p>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section muted-section" id="faq">
+            <div class="container">
+                <div class="section-intro">
+                    <p class="eyebrow">FAQ</p>
+                    <h2>Gabriella Systems, in brief</h2>
+                </div>
+                <div class="faq-list">
+                    <article class="faq-item">
+                        <h3>What is Gabriella Systems?</h3>
+                        <p>
+                            A cricket-first computer vision company. We turn batting and bowling clips
+                            into overlays and metrics coaches can compare — and we fail loud when a
+                            take is not good enough to measure.
+                        </p>
+                    </article>
+                    <article class="faq-item">
+                        <h3>What sports does Gabriella support today?</h3>
+                        <p>
+                            Cricket is live: batting and bowling clip analysis in the Showcase.
+                            Baseball and softball are planned expansion, not current products.
+                        </p>
+                    </article>
+                    <article class="faq-item">
+                        <h3>What does fail-loud mean?</h3>
+                        <p>
+                            If detection, tracking, or pose misses the quality gate, we show
+                            Can't measure or omit the field. We do not invent a speed, angle, or time.
+                        </p>
+                    </article>
                 </div>
             </div>
         </section>
     </main>
 
-        <footer class="footer">
+    <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <span class="nav-logo-text">Gabriella Systems</span>
-                    <p>Computer vision for cricket performance — batting and bowling intelligence from a single portable system.</p>
+                    <a href="index.html" class="footer-brand-mark">
+                        <img src="assets/logo.png" alt="" width="36" height="36">
+                        <span class="nav-logo-text">Gabriella Systems</span>
+                    </a>
+                    <p>Computer vision for cricket performance — batting and bowling intelligence from a single portable system. Baseball and softball are on the expansion roadmap.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Product</h4>

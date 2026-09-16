@@ -3,92 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Showcase - Gabriella Systems Cricket Vision</title>
-    <meta name="description" content="Live cricket vision demo — batting and bowling analysis with ball tracking, pose estimation, and speed measurement.">
-        <meta property="og:type" content="website">
+    <title>Cricket Vision Showcase | Gabriella Systems</title>
+    <meta name="description" content="Live cricket vision showcase from Gabriella Systems — sample batting and bowling clips with ball tracking, pose estimation, and fail-loud metrics.">
+    <link rel="canonical" href="https://gabriellasystems.com/demo.html">
+    <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+    <link rel="icon" href="assets/logo.png" type="image/png">
+    <meta name="theme-color" content="#0b4b4c">
+    <meta property="og:type" content="website">
     <meta property="og:site_name" content="Gabriella Systems">
-    <meta property="og:title" content="Cricket Vision Showcase">
-    <meta property="og:description" content="Live cricket vision demo — batting and bowling analysis with ball tracking, pose estimation, and speed measurement.">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Cricket Vision Showcase | Gabriella Systems">
+    <meta property="og:description" content="Live cricket vision showcase — sample batting and bowling clips with ball tracking, pose estimation, and fail-loud metrics.">
     <meta property="og:image" content="https://gabriellasystems.com/assets/cricket-vision-hero.png">
+    <meta property="og:image:alt" content="Cricket batting analysis overlay from Gabriella Vision">
     <meta property="og:url" content="https://gabriellasystems.com/demo.html">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cricket Vision Showcase | Gabriella Systems">
+    <meta name="twitter:description" content="Live cricket vision showcase — sample batting and bowling clips with ball tracking, pose estimation, and fail-loud metrics.">
+    <meta name="twitter:image" content="https://gabriellasystems.com/assets/cricket-vision-hero.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        .demo-embed-wrapper {
-            position: relative;
-            width: 100%;
-            min-height: 600px;
-        }
-        .demo-embed-frame {
-            width: 100%;
-            min-height: 1500px;
-            height: calc(100vh - 60px);
-            border: 1px solid var(--line);
-            border-radius: 8px;
-            background: var(--soft);
-            box-shadow: 0 10px 28px rgba(17, 32, 29, 0.08);
-            display: block;
-        }
-        .demo-loading {
-            position: absolute;
-            inset: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 1.2rem;
-            background: var(--soft);
-            border: 1px solid var(--line);
-            border-radius: 8px;
-            pointer-events: none;
-            transition: opacity 0.4s ease;
-            z-index: 2;
-        }
-        .demo-loading.hidden {
-            opacity: 0;
-        }
-        .demo-loading-spinner {
-            width: 44px;
-            height: 44px;
-            border: 3px solid var(--line);
-            border-top-color: var(--teal);
-            border-radius: 50%;
-            animation: spin 0.9s linear infinite;
-        }
-        .demo-loading-text {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: var(--muted);
-            letter-spacing: 0.01em;
-        }
-        .demo-loading-sub {
-            font-size: 0.82rem;
-            color: var(--muted);
-            opacity: 0.7;
-            margin-top: -0.7rem;
-        }
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-        .demo-note {
-            color: var(--muted);
-            font-size: 0.92rem;
-            margin-top: 0.8rem;
-        }
-        .demo-note i { color: var(--green); }
-    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Cricket Vision Showcase",
+      "url": "https://gabriellasystems.com/demo.html",
+      "description": "Live cricket vision showcase with sample batting and bowling clips from Gabriella Systems.",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Gabriella Systems",
+        "url": "https://gabriellasystems.com/"
+      }
+    }
+    </script>
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
                 <a href="index.html" class="nav-logo-link">
-                    <img src="assets/logo.png" alt="Gabriella Systems" class="nav-logo-img">
+                    <img src="assets/logo.png" alt="Gabriella Systems" class="nav-logo-img" width="40" height="40">
                     <span class="nav-logo-wordmark">Gabriella</span>
                 </a>
             </div>
@@ -124,24 +82,27 @@
 
         <section class="section demo-workspace">
             <div class="container">
-                <div class="demo-embed-wrapper">
-                    <div class="demo-loading" id="demo-loading">
-                        <div class="demo-loading-spinner"></div>
-                        <p class="demo-loading-text">Loading showcase&hellip;</p>
-                        <p class="demo-loading-sub">Starting up the analysis engine</p>
+                <div class="demo-embed-wrapper is-loading" id="demo-embed">
+                    <div class="demo-loading" id="demo-loading" role="status" aria-live="polite">
+                        <div class="demo-loading-spinner" aria-hidden="true"></div>
+                        <p class="demo-loading-text" id="demo-loading-text">Sample clips loading&hellip;</p>
+                        <p class="demo-loading-sub" id="demo-loading-sub">Starting the analysis engine. First visit can take a minute. More samples coming soon.</p>
                     </div>
                     <iframe
                         class="demo-embed-frame"
                         id="demo-frame"
                         src="https://gabriellasystems--cricket-demo-web.modal.run/?embed=1"
                         title="Cricket Vision interactive batting demo"
-                        allow="fullscreen"
-                        onload="document.getElementById('demo-loading').classList.add('hidden'); setTimeout(()=>document.getElementById('demo-loading').remove(),500);">
+                        allow="fullscreen">
                     </iframe>
                 </div>
+                <p class="demo-empty-note" id="demo-empty-note">
+                    If this area looks empty, sample clips are still loading in the Showcase embed.
+                    More samples coming soon.
+                </p>
                 <p class="demo-note">
                     <i class="fas fa-circle-info"></i>
-                    Sample clips play instantly. Speeds are camera-only estimates.
+                    Sample clips play instantly once the engine is up. Speeds are camera-only estimates.
                 </p>
                 <p class="demo-note">
                     <i class="fas fa-shield-halved"></i>
@@ -152,12 +113,15 @@
 
     </main>
 
-        <footer class="footer">
+    <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <span class="nav-logo-text">Gabriella Systems</span>
-                    <p>Computer vision for cricket performance — batting and bowling intelligence from a single portable system.</p>
+                    <a href="index.html" class="footer-brand-mark">
+                        <img src="assets/logo.png" alt="" width="36" height="36">
+                        <span class="nav-logo-text">Gabriella Systems</span>
+                    </a>
+                    <p>Computer vision for cricket performance — batting and bowling intelligence from a single portable system. Baseball and softball are on the expansion roadmap.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Product</h4>
@@ -184,5 +148,31 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
+    <script>
+        (function () {
+            var wrap = document.getElementById('demo-embed');
+            var loading = document.getElementById('demo-loading');
+            var frame = document.getElementById('demo-frame');
+            var heading = document.getElementById('demo-loading-text');
+            var sub = document.getElementById('demo-loading-sub');
+            if (!wrap || !loading || !frame) return;
+
+            function hideLoading() {
+                loading.classList.add('hidden');
+                wrap.classList.remove('is-loading');
+                window.setTimeout(function () {
+                    if (loading && loading.parentNode) loading.remove();
+                }, 500);
+            }
+
+            frame.addEventListener('load', hideLoading);
+
+            window.setTimeout(function () {
+                if (!loading.isConnected || loading.classList.contains('hidden')) return;
+                heading.textContent = 'Sample clips loading\u2026';
+                sub.textContent = 'The Showcase engine is still starting. This can take a minute on first visit. More samples coming soon.';
+            }, 8000);
+        })();
+    </script>
 </body>
 </html>

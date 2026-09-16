@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Gabriella Systems">
+  <defs>
+    <linearGradient id="gsG" x1="18" y1="10" x2="110" y2="118" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1a8a68"/>
+      <stop offset="0.52" stop-color="#0e5f56"/>
+      <stop offset="1" stop-color="#0b4b4c"/>
+    </linearGradient>
+    <mask id="gsGap">
+      <rect width="128" height="128" fill="#fff"/>
+      <rect x="76" y="50" width="52" height="22" fill="#000"/>
+    </mask>
+  </defs>
+  <path fill="url(#gsG)" mask="url(#gsGap)" fill-rule="evenodd" d="M64 10a54 54 0 1 1 0 108 54 54 0 1 1 0-108zm0 24a30 30 0 1 0 0 60 30 30 0 1 0 0-60z"/>
+  <rect x="62" y="53" width="50" height="16" rx="2" fill="url(#gsG)"/>
+  <circle cx="58" cy="64" r="15" fill="none" stroke="url(#gsG)" stroke-width="3.25"/>
+  <path stroke="url(#gsG)" stroke-width="3" stroke-linecap="round" d="M58 43.5v7.5M58 77v7.5M37.5 64h7.5M71 64h7.5"/>
+</svg>
