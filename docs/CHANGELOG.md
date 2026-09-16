@@ -8,6 +8,16 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 
 ## 2026-09-16
 
+### Marketing-site polish (items 2–7)
+
+- Showcase banner uses the same dark-green page-hero as other pages (navy override removed).
+- Showcase empty space: explicit “samples loading” / “more samples coming soon” copy; iframe height reduced so the page does not read as a broken white void.
+- About restores **Mission**, **Vision**, and **Leadership** headings, plus a short “What is Gabriella?” block.
+- Logo recolored to the sports-green / gold palette; banners use a shared `--banner-*` green family.
+- Copy lock: one expansion line — started with cricket; baseball and softball are next (same session-metric / fail-loud approach), labeled **roadmap**. Titles/H1s stay cricket-primary (nets, coaches, academies, session metrics). GEO blurbs state what we measure now, fail-loud, then upcoming sports.
+- SEO/GEO: canonical + OG/Twitter completeness, Organization JSON-LD, `robots.txt`, `sitemap.xml`.
+- Homepage HUD lock from `main` (#13): **Bat 16** / **Contact 817** / **Run-up 20.4**.
+
 ### Live samples + homepage conflict markers (hero set unchanged)
 
 - Removed leftover Git conflict markers from `index.html` Bowling — Session Progress (`<<<<<<< HEAD` / `=======` / `>>>>>>> da73aab`).
