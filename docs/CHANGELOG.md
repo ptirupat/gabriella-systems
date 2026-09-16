@@ -8,6 +8,14 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 
 ## 2026-09-16
 
+### Bowling homepage HUD: Run-up only (drop Release height)
+
+- Public bowling HUD no longer shows **Release height** — not as **Can't measure**, **can't be determined**, or **Measured when calibration supports it**, and not as a fake metre (**no 1.09 m**, **no 2.1 m**).
+- Homepage bowling hero is **Run-up speed** (`peak_runup_speed_kmh`) only. Prefer an empty second slot rather than an unmeasured Release height row. Batting pair is unchanged: **Bat speed at impact ~22 km/h** + **Contact time in this clip 400 ms**.
+- HTML: `index.html` hero tiles + bowling session-progress card; `bowling.html` metrics grid and session-progress card. Existing run-up sample **21.6 km/h** kept on HTML; bowling GIF overlay keeps **22.4 km/h**.
+- Regenerated `assets/cricket_bowling_15s.gif` so the burned Gabriella Vision panel is Run-up only. Batting GIF unchanged.
+- Docs: [homepage-hud-metrics.md](./homepage-hud-metrics.md).
+
 ### Batting homepage HUD pair (bat speed at impact)
 
 - Homepage two-peak batting HUD is **Bat speed at impact** (`bat_speed_at_impact_kmh`, **~22 km/h**) + **Contact time in this clip** (`impact_offset_ms`, **400 ms**) from the gated net-cover-drive Showcase reseed (demo#9 / Product lock).
