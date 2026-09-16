@@ -112,12 +112,13 @@ a {
 }
 
 .nav-logo-img {
-    height: 40px;
-    width: 40px;
+    height: 44px;
+    width: auto;
     display: block;
     background: transparent;
     object-fit: contain;
     flex-shrink: 0;
+    max-width: 80px;
 }
 
 .nav-logo-wordmark {
