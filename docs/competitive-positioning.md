@@ -2,7 +2,7 @@
 
 Short Marketing note for website and product copy. Keep claims aligned with this — not a full GTM brief.
 
-Updated: 2026-09-15
+Updated: 2026-09-16
 
 ## Who we compare against
 
@@ -54,13 +54,13 @@ Hawk-Eye — elite multi-camera tracking; not our academy-net price or form fact
 
 True early/late needs a gated bounce/release/arrival reference (**backlog**). Do not imply that exists.
 
-Homepage batting heroes follow [Modal PRODUCT.md](https://github.com/Gabriella-Systems/modal/blob/main/docs/PRODUCT.md): Bat speed (`peak_bat_speed_kmh`) + Contact time in this clip (`impact_offset_ms`). Head stability is detail/capability copy only. See [homepage-hud-metrics.md](./homepage-hud-metrics.md) for how this site implements that lock — do not fork a second contract here.
+Homepage batting heroes follow [Modal PRODUCT.md](https://github.com/Gabriella-Systems/modal/blob/main/docs/PRODUCT.md): **Bat speed at impact** (`bat_speed_at_impact_kmh`) + Contact time in this clip (`impact_offset_ms`). Head stability is detail/capability copy only. See [homepage-hud-metrics.md](./homepage-hud-metrics.md) for how this site implements that lock — do not fork a second contract here.
 
 ### Homepage pairs
 
 Confirm in PRODUCT.md. This site currently implements:
 
-- **Batting:** Bat speed (pipeline peak, `peak_bat_speed_kmh`) + Contact time in this clip (`impact_offset_ms`). Ungated or null contact time is **Can't measure** / **—**. Never early/late. Front stride is not a gated field; do not show it on homepage or batting hero/progress rows.
+- **Batting:** Bat speed at impact (`bat_speed_at_impact_kmh`, **~22 km/h** from the gated net-cover-drive reseed) + Contact time in this clip (`impact_offset_ms`, **400 ms**). Label is **Bat speed at impact** — never bare “bat speed,” never “pipeline peak.” Never publish peak ~90 or the old 36–39 km/h pipeline-peak sample. Ungated or null locked fields are **Can't measure** / **—**. Never early/late. Front stride is not a gated field; do not show it on homepage or batting hero/progress rows.
 - **Bowling:** Run-up speed (`peak_runup_speed_kmh` only) + Release height (`release_height_m` as a label). Omit ball speed from the two-peak HUD until gated and non-null — never show “—” as a ball-speed peak. **Do not publish a public release-height metre** (including 1.09 m) until calibration supports a credible overarm value; do not invent 2.1 m. Locked bowling peaks that are ungated/null show Can’t measure for that peak. No homepage fallback to `runup_speed_at_delivery_kmh`.
 
 ## Homepage / GIF rules (competitive)
