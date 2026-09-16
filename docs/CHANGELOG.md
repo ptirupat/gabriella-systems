@@ -8,6 +8,12 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 
 ## 2026-09-16
 
+### Homepage status-strip contrast
+
+- Hero `.status-item` / `.status-live` / `.status-planned` used `--muted` (`#5b6a66`) and `--green` / `--teal` icons on the dark green hero — ~1.0–1.7:1, unreadable.
+- New on-dark tokens: `--text-on-dark`, `--text-on-dark-muted`, `--live-on-dark`, `--planned-on-dark`. Applied to the status strip, hero copy, and hero metric labels.
+- HUD lock unchanged: **Bat 16** / **Contact 817** / **Run-up 20.4**.
+
 ### Marketing-site polish (items 2–7)
 
 - Showcase banner uses the same dark-green page-hero as other pages (navy override removed).
