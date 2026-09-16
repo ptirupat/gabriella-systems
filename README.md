@@ -57,5 +57,5 @@ PORT=9000 ./start-local.sh
 
 ## Related work and blockers
 
-- HUD implementation: [docs/homepage-hud-metrics.md](docs/homepage-hud-metrics.md) — batting **Bat speed at impact** (`bat_speed_at_impact_kmh`, ~22 km/h) + Contact time in this clip (`impact_offset_ms`, 400 ms); bowling Run-up speed (`peak_runup_speed_kmh`) only (Release height omitted until calibrated and gated). Never pipeline-peak 36–39 or peak ~90. Contract lives in Modal PRODUCT.md.
+- HUD implementation: [docs/homepage-hud-metrics.md](docs/homepage-hud-metrics.md) — batting **Bat speed at impact** (`bat_speed_at_impact_kmh`, **16 km/h**) + Contact time in this clip (`impact_offset_ms`, **817 ms**); bowling Run-up speed (`peak_runup_speed_kmh`, **20.4 km/h**) only (Release height omitted until calibrated and gated). Detail-only samples: Ball **122 km/h**, Arm angular speed **619 °/s**, Head stability **41.4 cm**, Front knee **155°**. Never pipeline-peak 36–39 or peak ~90. Contract lives in Modal PRODUCT.md.
 - Modal quality gate / `impact_offset_ms` live in the ML/Modal repo (not this tree).
