@@ -1024,6 +1024,10 @@ a {
     background: var(--paper);
 }
 
+.demo-samples-status.is-ready {
+    border-left-color: var(--teal);
+}
+
 .demo-samples-status strong {
     display: block;
     font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
