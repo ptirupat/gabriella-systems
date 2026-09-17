@@ -8,6 +8,12 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 
 ## 2026-09-17
 
+### Coach-facing metric ⓘ tips
+
+- Small ⓘ beside every coach-facing metric label on homepage heroes, clip HUD rows, session progress, and batting/bowling pages.
+- Hover, keyboard focus, and tap toggle the same locked string (`aria-describedby` tooltip — not `title` only). Copy lock: [homepage-hud-metrics.md](./homepage-hud-metrics.md) Marketing tips.
+- Hero *set* unchanged: **Bat 16** / **Head 41.4** / **Run-up 20.4**. No Modal/pipeline changes.
+
 ### Showcase samples-ready status (#15 Copilot follow-up)
 
 - After the Showcase iframe `load`s, the status card heading updates from “Samples loading” to “Sample clips available” (`aria-live`). Supporting copy notes the gallery is ready; **More samples coming soon** stays.

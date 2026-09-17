@@ -87,10 +87,10 @@
                 </div>
                 <div class="hero-right">
                     <div class="hero-dashboard">
-                        <div class="hero-metric-card" title="How fast the bat was moving at contact in this take (km/h).">
+                        <div class="hero-metric-card">
                             <span class="live-dot"></span>
                             <span class="metric-value"><span data-count="16">16</span></span>
-                            <span class="metric-label">Bat speed at impact km/h</span>
+                            <span class="metric-label" data-metric-tip="bat-speed">Bat speed at impact km/h</span>
                             <div class="sparkline">
                                 <span style="height:60%"></span>
                                 <span style="height:65%"></span>
@@ -99,10 +99,10 @@
                                 <span style="height:100%"></span>
                             </div>
                         </div>
-                        <div class="hero-metric-card" title="How much the head moved from downswing to contact (cm). Lower usually means steadier — not a technique grade.">
+                        <div class="hero-metric-card">
                             <span class="live-dot"></span>
                             <span class="metric-value" data-count="41.4">41.4</span>
-                            <span class="metric-label">Head stability cm</span>
+                            <span class="metric-label" data-metric-tip="head-stability">Head stability cm</span>
                             <div class="sparkline">
                                 <span style="height:55%"></span>
                                 <span style="height:62%"></span>
@@ -114,7 +114,7 @@
                         <div class="hero-metric-card">
                             <span class="live-dot"></span>
                             <span class="metric-value" data-count="20.4">20.4</span>
-                            <span class="metric-label">Run-up speed km/h</span>
+                            <span class="metric-label" data-metric-tip="run-up">Run-up speed km/h</span>
                             <div class="sparkline">
                                 <span style="height:70%"></span>
                                 <span style="height:80%"></span>
@@ -146,10 +146,10 @@
                              style="width: 100%; border-radius: 8px; display: block;" />
                         <div class="clip-hud">
                             <p class="clip-hud-title">Gabriella Vision</p>
-                            <div class="clip-hud-row" title="How fast the bat was moving at contact in this take (km/h)."><span>Bat speed at impact</span><strong>16 km/h</strong></div>
-                            <div class="clip-hud-row" title="How much the head moved from downswing to contact (cm). Lower usually means steadier — not a technique grade."><span>Head stability</span><strong>41.4 cm</strong></div>
-                            <div class="clip-hud-row"><span>Ball speed</span><strong>122 km/h</strong></div>
-                            <div class="clip-hud-row" title="Same-view marker — when contact happened in this take, not early vs late."><span>Contact time</span><strong>817 ms</strong></div>
+                            <div class="clip-hud-row" data-metric-tip="bat-speed"><span>Bat speed at impact</span><strong>16 km/h</strong></div>
+                            <div class="clip-hud-row" data-metric-tip="head-stability"><span>Head stability</span><strong>41.4 cm</strong></div>
+                            <div class="clip-hud-row" data-metric-tip="ball-speed"><span>Ball speed</span><strong>122 km/h</strong></div>
+                            <div class="clip-hud-row" data-metric-tip="contact-time"><span>Contact time</span><strong>817 ms</strong></div>
                             <p class="clip-hud-note">Session metrics from this take</p>
                         </div>
                     </div>
@@ -159,9 +159,9 @@
                              style="width: 100%; border-radius: 8px; display: block;" />
                         <div class="clip-hud clip-hud-bowling">
                             <p class="clip-hud-title">Gabriella Vision</p>
-                            <div class="clip-hud-row"><span>Run-up speed</span><strong>20.4 km/h</strong></div>
-                            <div class="clip-hud-row"><span>Arm speed</span><strong>619 °/s</strong></div>
-                            <div class="clip-hud-row"><span>Front knee angle</span><strong>155°</strong></div>
+                            <div class="clip-hud-row" data-metric-tip="run-up"><span>Run-up speed</span><strong>20.4 km/h</strong></div>
+                            <div class="clip-hud-row" data-metric-tip="arm-speed"><span>Arm speed</span><strong>619 °/s</strong></div>
+                            <div class="clip-hud-row" data-metric-tip="front-knee"><span>Front knee angle</span><strong>155°</strong></div>
                             <p class="clip-hud-note">Session metrics from this take</p>
                         </div>
                     </div>
@@ -258,19 +258,19 @@
                 <div class="compare-grid">
                     <div class="compare-card">
                         <h4>Batting — Session Progress</h4>
-                        <div class="compare-row" title="How fast the bat was moving at contact in this take (km/h).">
+                        <div class="compare-row" data-metric-tip="bat-speed">
                             <span>Bat speed at impact</span>
                             <strong>16 km/h</strong>
                         </div>
-                        <div class="compare-row" title="How much the head moved from downswing to contact (cm). Lower usually means steadier — not a technique grade.">
+                        <div class="compare-row" data-metric-tip="head-stability">
                             <span>Head stability</span>
                             <strong>41.4 cm</strong>
                         </div>
-                        <div class="compare-row">
+                        <div class="compare-row" data-metric-tip="ball-speed">
                             <span>Ball speed</span>
                             <strong>122 km/h</strong>
                         </div>
-                        <div class="compare-row" title="Same-view marker — when contact happened in this take, not early vs late.">
+                        <div class="compare-row" data-metric-tip="contact-time">
                             <span>Contact time in this clip</span>
                             <strong>817 ms</strong>
                         </div>
@@ -281,15 +281,15 @@
                     </div>
                     <div class="compare-card">
                         <h4>Bowling — Session Progress</h4>
-                        <div class="compare-row">
+                        <div class="compare-row" data-metric-tip="run-up">
                             <span>Run-up speed</span>
                             <strong>20.4 km/h</strong>
                         </div>
-                        <div class="compare-row">
+                        <div class="compare-row" data-metric-tip="arm-speed">
                             <span>Arm speed</span>
                             <strong>619 °/s</strong>
                         </div>
-                        <div class="compare-row">
+                        <div class="compare-row" data-metric-tip="front-knee">
                             <span>Front knee angle</span>
                             <strong>155°</strong>
                         </div>

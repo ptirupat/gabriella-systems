@@ -143,10 +143,10 @@
                          style="width: 100%; border-radius: 8px; display: block;" />
                     <div class="clip-hud">
                         <p class="clip-hud-title">Gabriella Vision</p>
-                        <div class="clip-hud-row" title="How fast the bat was moving at contact in this take (km/h)."><span>Bat speed at impact</span><strong>16 km/h</strong></div>
-                        <div class="clip-hud-row" title="How much the head moved from downswing to contact (cm). Lower usually means steadier — not a technique grade."><span>Head stability</span><strong>41.4 cm</strong></div>
-                        <div class="clip-hud-row"><span>Ball speed</span><strong>122 km/h</strong></div>
-                        <div class="clip-hud-row" title="Same-view marker — when contact happened in this take, not early vs late."><span>Contact time</span><strong>817 ms</strong></div>
+                        <div class="clip-hud-row" data-metric-tip="bat-speed"><span>Bat speed at impact</span><strong>16 km/h</strong></div>
+                        <div class="clip-hud-row" data-metric-tip="head-stability"><span>Head stability</span><strong>41.4 cm</strong></div>
+                        <div class="clip-hud-row" data-metric-tip="ball-speed"><span>Ball speed</span><strong>122 km/h</strong></div>
+                        <div class="clip-hud-row" data-metric-tip="contact-time"><span>Contact time</span><strong>817 ms</strong></div>
                         <p class="clip-hud-note">Session metrics from this take</p>
                     </div>
                 </div>
@@ -173,7 +173,7 @@
                     <article class="feature-card">
                         <i class="fas fa-clock"></i>
                         <h3>When did contact happen in this take?</h3>
-                        <p>Contact time in this clip is a same-view marker — when contact happened in this take — not early vs late.</p>
+                        <p>Time from the start of this take to contact (ms). Use it to compare same-view sessions — not early vs late.</p>
                     </article>
                 </div>
             </div>
@@ -190,15 +190,19 @@
                     </p>
                 </div>
                 <div class="analysis-stack">
-                    <div class="analysis-row accent-green" title="How fast the bat was moving at contact in this take (km/h).">
+                    <div class="analysis-row accent-green" data-metric-tip="bat-speed">
                         <span>Bat speed at impact</span>
                         <strong>16 km/h</strong>
                     </div>
-                    <div class="analysis-row accent-amber" title="How much the head moved from downswing to contact (cm). Lower usually means steadier — not a technique grade.">
+                    <div class="analysis-row accent-amber" data-metric-tip="head-stability">
                         <span>Head stability</span>
                         <strong>41.4 cm</strong>
                     </div>
-                    <div class="analysis-row accent-coral" title="Same-view marker — when contact happened in this take, not early vs late.">
+                    <div class="analysis-row accent-coral" data-metric-tip="ball-speed">
+                        <span>Ball speed</span>
+                        <strong>122 km/h</strong>
+                    </div>
+                    <div class="analysis-row accent-teal" data-metric-tip="contact-time">
                         <span>Contact time in this clip</span>
                         <strong>817 ms</strong>
                     </div>

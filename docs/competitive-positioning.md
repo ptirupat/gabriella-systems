@@ -56,7 +56,7 @@ True early/late needs a gated bounce/release/arrival reference (**backlog**). Do
 
 Homepage batting heroes follow [Modal PRODUCT.md](https://github.com/Gabriella-Systems/modal/blob/main/docs/PRODUCT.md): **Bat speed at impact** (`bat_speed_at_impact_kmh`) + **Head stability** (`head_stability_cm`). Contact time in this clip is detail/capability copy only. See [homepage-hud-metrics.md](./homepage-hud-metrics.md) for how this site implements that lock — do not fork a second contract here.
 
-**Marketing tips:** Bat — how fast the bat was moving at contact in this take (km/h). Head — how much the head moved from downswing to contact (cm); lower usually means steadier — not a technique grade. Contact (detail) — same-view marker, not early/late.
+**Marketing tips:** Bat — how fast the bat was moving at contact in this take (km/h). Head — how much the head moved from downswing to contact (cm); lower usually means steadier — not a technique grade. Run-up — peak approach speed into the delivery in this take (km/h). Contact (detail) — time from the start of this take to contact (ms); same-view sessions only, not early vs late. Ball (detail) — measured ball speed in this take (km/h), only when the take is gated. Front knee / Arm — see the copy lock in [homepage-hud-metrics.md](./homepage-hud-metrics.md). Live UI uses ⓘ tips (hover + tap/focus), not `title` only.
 
 ### Homepage pairs
 

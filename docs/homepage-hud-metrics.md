@@ -31,11 +31,17 @@ Confirm the lock in PRODUCT.md before changing labels. Do not invent a parallel 
 
 ### Marketing tips (copy lock)
 
+Wire a small ⓘ next to every coach-facing metric label. Hover **and** tap/focus must reveal the tip — `title` alone is not enough on mobile (use a button / `aria-describedby` tooltip). Use the **same string** on homepage heroes, clip HUD rows, session progress, and batting/bowling pages.
+
 | Metric | Surface | Tip |
 | --- | --- | --- |
 | Bat speed at impact | Hero | How fast the bat was moving at contact in this take (km/h). |
 | Head stability | Hero | How much the head moved from downswing to contact (cm). Lower usually means steadier — not a technique grade. |
-| Contact time in this clip | Detail only | Same-view marker, not early/late. |
+| Run-up speed | Hero | Peak approach speed into the delivery in this take (km/h). |
+| Contact time in this clip | Detail only | Time from the start of this take to contact (ms). Use it to compare same-view sessions — not early vs late. |
+| Ball speed | Detail only | Measured ball speed in this take (km/h), only when the take is gated. |
+| Front knee angle | Detail only | Front-knee flexion at plant in this take (degrees). 0° ≈ fully extended. |
+| Arm angular speed | Detail only | Peak arm angular speed in this take (°/s). |
 
 ### Illustrative numbers (do not invent new ones)
 
@@ -108,3 +114,4 @@ As of the 2026-09-17 batting hero re-lock (Bat + Head):
 7. Front stride is not shown on homepage or batting hero/progress rows.
 8. GIF overlay, hero cards, and progress cards stay consistent (or lag is called out).
 9. Sample numbers, if shown, are the live HTML values — not newly invented gated stats. Public samples: Bat **16 km/h**, Head **41.4 cm**, Run-up **20.4 km/h**; detail-only Contact **817 ms**, Ball **122**, Arm **619 °/s**, Front knee **155°**. Do not republish ~22 / 400 ms / 21.6 / 22.4 / ~1840°/s.
+10. Every coach-facing metric label has the locked ⓘ tip from **Marketing tips (copy lock)** — same string on every surface; hover + tap/focus (not `title` only).
