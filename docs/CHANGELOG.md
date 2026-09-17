@@ -8,6 +8,12 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 
 ## 2026-09-17
 
+### Showcase samples-ready status (#15 Copilot follow-up)
+
+- After the Showcase iframe `load`s, the status card heading updates from “Samples loading” to “Sample clips available” (`aria-live`). Supporting copy notes the gallery is ready; **More samples coming soon** stays.
+- Overlay lookup is optional (`?.classList` / `?.remove`) so a later iframe load cannot throw if the overlay was already removed.
+- HUD lock unchanged: **Bat 16** / **Head 41.4** / **Run-up 20.4**.
+
 ### Batting homepage heroes: Bat speed at impact + Head stability
 
 - Product re-lock: batting homepage heroes are **Bat speed at impact** (`bat_speed_at_impact_kmh`, **16 km/h**) + **Head stability** (`head_stability_cm`, **41.4 cm**). Bowling hero unchanged: **Run-up speed** (`peak_runup_speed_kmh`, **20.4 km/h**).
