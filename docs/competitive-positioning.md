@@ -4,10 +4,15 @@ Short Marketing note for website and product copy. Keep claims aligned with this
 
 Updated: 2026-09-17
 
+Living competitor tracker (class, capture, pricing signals, gaps): [competitors.md](./competitors.md). This file remains the **copy gate** for live site claims. Modal [PRODUCT.md](https://github.com/Gabriella-Systems/modal/blob/main/docs/PRODUCT.md) is product source of truth — do not fork hero metrics here.
+
 ## Who we compare against
 
 **Direct (phone / net CV for coaches & academies)**  
 Matcha, CricVision, Fulltrack AI, Ludimos, Advanced Impactor — RGB phone (or similar) → clipped deliveries → speed, pitch maps / beehives, some pose or biomechanics, coach galleries.
+
+**Youth pathway / brand (not clip/AMS SaaS)**  
+Kabuni — PlayOS + Super Coaches + schools + league; access/cues GTM, not our metric peer. Detail: [competitors.md](./competitors.md#kabuni-kabunicom).
 
 **Incumbent training systems**  
 PitchVision — hardware + analytics kits historically sold into academies/clubs.
@@ -17,6 +22,14 @@ BatSense / SmartCricket (bat sensor, not full ball+pose CV); NV Play (match / an
 
 **Aspirational reference**  
 Hawk-Eye — elite multi-camera tracking; not our academy-net price or form factor.
+
+## Named rivals (class + Gabriella wedge)
+
+**Ludimos** — Phone-first AI cricket coaching + academy ops (consumer Skills/Showcase + Pavilion/360° AMS).  
+**Wedge:** Honest gated session metrics from nets video vs phone-CV always-on numbers and a weak fail-loud story. Session auto-crop is must-have parity once shipped (KAN-138/139) — do not claim it early.
+
+**Kabuni** — Youth cricket development + AI coaching brand (India-first: PlayOS + Super Coaches + schools + league pathway), not a clip/AMS SaaS peer.  
+**Wedge:** Coach-trusted gated session metrics vs access, cues, and celebrity pathway. Do not treat Kabuni as our metric competitor or copy junior-league GTM.
 
 ## Category pattern (what rivals do)
 
