@@ -8,11 +8,21 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 
 ## 2026-09-17
 
+### Per-metric trust / fail-loud (docs lock)
+
+- Website docs no longer say overall `quality.gated === false` blanks every metric. Fail loud is **per field**. Showcase already shipped this in demo #20 (`c03cdbb` — external ML/demo tree).
+- Missing `quality` or missing number → **Can't measure**. Ball-dependent fields need `quality.gated === true`. Pose-derived fields (especially bowling **Run-up** / `peak_runup_speed_kmh`) may **show** when non-null even if overall gated is false due to ball fail, when pose is trusted (`quality.stages` absent **OR** `pose.player.ok === true`). Pose stage present and not ok → **Can't measure**.
+- Canonical example: Bowling — Slow Motion, Run-up **~20.4** with ball `no_detection`.
+- Hero *set* unchanged: batting **Bat speed at impact** + **Head stability**; **Contact time in this clip** stays detail only; Δ ball speed is Showcase Results detail **Ball speed change through contact** (not a hero). Bowling **Run-up only**; **Release omitted** until calibrated — not a Can't measure placeholder.
+- Public samples lock to live tip: Bat **~10.6**, Head **~45.9**, Contact detail **800**, Δ **−11.1**; gallery id **`batting-defense`**. Δ **−11.1** is **not** Head Δ (the earlier “Head Δ −11.1 / pre 27.5 / post 16.4” line was a mis-attribution). This pass is docs-only — homepage HTML/GIF numbers were already on the live-tip lock and were not changed.
+- **KAN-272** is mode detection (bowling Showcase as batting), not a bowling fail-loud / run-up gap.
+- Docs: [homepage-hud-metrics.md](./homepage-hud-metrics.md), [website-updates.md](./website-updates.md), [competitive-positioning.md](./competitive-positioning.md), [competitors.md](./competitors.md), README / [docs/README.md](./README.md).
+
 ### Live sample re-lock to tip (Bat 10.6 / Head 45.9 / Contact 800)
 
 - Public HTML samples re-lock to live tip: **Bat speed at impact** **10.6 km/h** (was 16) + **Head stability** **45.9 cm** (was 41.4). Run-up stays **20.4 km/h**.
 - **Contact time in this clip** detail sample is **800 ms** (was 817 / earlier 400). Hero *set* unchanged: **Bat + Head + Run-up**. Contact stays clip HUD / session-progress only — never a homepage hero.
-- Tip strings unchanged. GIF binaries not regenerated. Head Δ **−11.1** (pre 27.5 / post 16.4) is not shown on marketing pages.
+- Tip strings unchanged. GIF binaries not regenerated. Live-tip Δ **−11.1** is Showcase Results **Ball speed change through contact** (gallery **`batting-defense`**) — not shown on marketing HUD; later the same day docs corrected the Head Δ mis-attribution (see per-metric trust entry above).
 - HTML: `index.html` hero tiles + batting clip HUD / session-progress; `batting.html` clip HUD and session stack. Docs: [homepage-hud-metrics.md](./homepage-hud-metrics.md), [competitive-positioning.md](./competitive-positioning.md), [website-updates.md](./website-updates.md), README.
 
 ### Coach-facing metric ⓘ tips
@@ -20,13 +30,13 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 - Small ⓘ beside every coach-facing metric label on homepage heroes, clip HUD rows, session progress, and batting/bowling pages.
 - Hover, keyboard focus, and tap toggle the same locked string (`aria-describedby` tooltip — not `title` only). Copy lock: [homepage-hud-metrics.md](./homepage-hud-metrics.md) Marketing tips.
 - Open tip panels stack above neighboring HUD / session-progress rows (`z-index` + `overflow: visible` on tip hosts). Click/tap stays sticky so GSAP float cannot dismiss the panel; outside click and Escape still close. Keyboard focus opens in keyboard mode and closes on blur (Enter/Space does not reclassify the tip as pointer-sticky). Abandoned pointerdowns (release outside the ⓘ, including touch/pen implicit capture) clear the primed flag so a later Tab still closes on blur.
-- Hero *set* unchanged: **Bat 16** / **Head 41.4** / **Run-up 20.4**. No Modal/pipeline changes.
+- Hero *set* unchanged at the time: **Bat 16** / **Head 41.4** / **Run-up 20.4** (superseded later the same day by live-tip **10.6** / **45.9** / **20.4**). No Modal/pipeline changes.
 
 ### Showcase samples-ready status (#15 Copilot follow-up)
 
 - After the Showcase iframe `load`s, the status card heading updates from “Samples loading” to “Sample clips available” (`aria-live`). Supporting copy notes the gallery is ready; **More samples coming soon** stays.
 - Overlay lookup is optional (`?.classList` / `?.remove`) so a later iframe load cannot throw if the overlay was already removed.
-- HUD lock unchanged: **Bat 16** / **Head 41.4** / **Run-up 20.4**.
+- HUD lock unchanged at the time: **Bat 16** / **Head 41.4** / **Run-up 20.4** (superseded later the same day by live-tip **10.6** / **45.9** / **20.4**).
 
 ### Competitor tracker (Marketing)
 

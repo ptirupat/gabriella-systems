@@ -21,7 +21,7 @@ Product should review these for accuracy:
 | --- | --- |
 | [docs/CHANGELOG.md](docs/CHANGELOG.md) | Dated website/UI changelog (September 2026 and nearby work), with commit hashes from this repo. |
 | [docs/website-updates.md](docs/website-updates.md) | Claims policy, pages, GIFs, logo/nav, open blockers. |
-| [docs/homepage-hud-metrics.md](docs/homepage-hud-metrics.md) | Site HUD implementation notes (pointer to Modal PRODUCT.md; fail loud). |
+| [docs/homepage-hud-metrics.md](docs/homepage-hud-metrics.md) | Site HUD implementation notes (pointer to Modal PRODUCT.md; per-metric trust / fail loud). |
 | [docs/competitive-positioning.md](docs/competitive-positioning.md) | Copy gate: rivals, fail-loud wedge, Impact / hero locks. |
 | [docs/competitors.md](docs/competitors.md) | Living Marketing competitor tracker (Ludimos, Kabuni, peer table). |
 
@@ -59,5 +59,5 @@ PORT=9000 ./start-local.sh
 
 ## Related work and blockers
 
-- HUD implementation: [docs/homepage-hud-metrics.md](docs/homepage-hud-metrics.md) — batting **Bat speed at impact** (`bat_speed_at_impact_kmh`, **10.6 km/h**) + **Head stability** (`head_stability_cm`, **45.9 cm**); bowling Run-up speed (`peak_runup_speed_kmh`, **20.4 km/h**) only (Release height omitted until calibrated and gated). Detail-only samples: Contact time in this clip **800 ms**, Ball **122 km/h**, Arm angular speed **619 °/s**, Front knee **155°**. Ungated Head → Can't measure (do not put Contact back on the hero row). Never pipeline-peak 36–39 or peak ~90. Contract lives in Modal PRODUCT.md.
-- Modal quality gate / `impact_offset_ms` live in the ML/Modal repo (not this tree).
+- HUD implementation: [docs/homepage-hud-metrics.md](docs/homepage-hud-metrics.md) — batting **Bat speed at impact** (`bat_speed_at_impact_kmh`, **10.6 km/h**) + **Head stability** (`head_stability_cm`, **45.9 cm**); bowling Run-up speed (`peak_runup_speed_kmh`, **20.4 km/h`) only (Release height omitted until calibrated — not a Can't measure placeholder). Detail-only samples: Contact time in this clip **800 ms**, this site’s incoming Ball **122 km/h**, Arm angular speed **619 °/s**, Front knee **155°**. Showcase Results Δ **−11.1** is **Ball speed change through contact** (gallery **`batting-defense`**), not a homepage hero. Fail loud is **per metric** (untrusted Head → Can't measure on that slot; do not put Contact back on the hero row; pose-derived Run-up may show when pose is trusted even if ball `no_detection` blanks overall gated). Never pipeline-peak 36–39 or peak ~90. Contract lives in Modal PRODUCT.md.
+- Modal quality gate / `impact_offset_ms` live in the ML/Modal repo (not this tree). Showcase per-metric trust shipped in demo #20 (`c03cdbb` — re-verify there).
