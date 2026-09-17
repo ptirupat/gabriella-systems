@@ -251,6 +251,7 @@ const METRIC_TIP_NAMES = {
 
 const heroFloatTweens = new WeakMap();
 const metricTipOpenMode = new WeakMap();
+const metricTipPointerPrimed = new WeakSet();
 
 function metricTipLabelHost(el) {
     if (el.classList.contains('metric-label')) return el;
@@ -342,26 +343,22 @@ function wireMetricTips() {
         host.appendChild(btn);
         host.appendChild(tip);
 
-        let pointerPrimed = false;
-
         btn.addEventListener('pointerdown', () => {
-            pointerPrimed = true;
-        });
-        btn.addEventListener('pointercancel', () => {
-            pointerPrimed = false;
+            metricTipPointerPrimed.add(btn);
         });
 
         btn.addEventListener('focus', () => {
-            if (pointerPrimed) return;
+            if (metricTipPointerPrimed.has(btn)) return;
             closeMetricTips(btn);
             setMetricTipOpen(btn, true, 'keyboard');
         });
 
         btn.addEventListener('click', e => {
             e.preventDefault();
-            const keyboardClick = e.detail === 0 && !pointerPrimed;
-            const fromPointer = pointerPrimed || e.detail > 0;
-            pointerPrimed = false;
+            const primed = metricTipPointerPrimed.has(btn);
+            metricTipPointerPrimed.delete(btn);
+            const keyboardClick = e.detail === 0 && !primed;
+            const fromPointer = primed || e.detail > 0;
             const expanded = btn.getAttribute('aria-expanded') === 'true';
 
             if (keyboardClick) {
@@ -385,6 +382,18 @@ function wireMetricTips() {
             }, 0);
         });
     });
+
+    document.addEventListener('pointerup', e => {
+        document.querySelectorAll('.metric-info').forEach(btn => {
+            if (!btn.contains(e.target)) metricTipPointerPrimed.delete(btn);
+        });
+    }, true);
+
+    document.addEventListener('pointercancel', () => {
+        document.querySelectorAll('.metric-info').forEach(btn => {
+            metricTipPointerPrimed.delete(btn);
+        });
+    }, true);
 
     document.addEventListener('click', e => {
         if (!e.target.closest('.metric-info, .metric-tooltip, .metric-label-with-tip')) {
