@@ -31,7 +31,7 @@ Confirm the lock in PRODUCT.md before changing labels. Do not invent a parallel 
 
 ### Marketing tips (copy lock)
 
-Wire a small ⓘ next to every coach-facing metric label. Hover **and** tap/focus must reveal the tip — `title` alone is not enough on mobile (use a button / `aria-describedby` tooltip). Click/tap stays open until a second toggle, outside click, or Escape, so GSAP motion cannot dismiss it. Use the **same string** on homepage heroes, clip HUD rows, session progress, and batting/bowling pages.
+Wire a small ⓘ next to every coach-facing metric label. Hover **and** tap/focus must reveal the tip — `title` alone is not enough on mobile (use a button / `aria-describedby` tooltip). Click/tap stays open until a second toggle, outside click, or Escape, so GSAP motion cannot dismiss it. Keyboard focus opens the same tip and closes when focus moves away. Use the **same string** on homepage heroes, clip HUD rows, session progress, and batting/bowling pages.
 
 | Metric | Surface | Tip |
 | --- | --- | --- |
