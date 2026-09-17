@@ -343,7 +343,6 @@ function wireMetricTips() {
         host.appendChild(tip);
 
         let pointerPrimed = false;
-        let openedAt = 0;
 
         btn.addEventListener('pointerdown', () => {
             pointerPrimed = true;
@@ -356,19 +355,23 @@ function wireMetricTips() {
             if (pointerPrimed) return;
             closeMetricTips(btn);
             setMetricTipOpen(btn, true, 'keyboard');
-            openedAt = Date.now();
         });
 
         btn.addEventListener('click', e => {
             e.preventDefault();
-            const fromPointer = pointerPrimed;
+            const keyboardClick = e.detail === 0 && !pointerPrimed;
+            const fromPointer = pointerPrimed || e.detail > 0;
             pointerPrimed = false;
             const expanded = btn.getAttribute('aria-expanded') === 'true';
-            // Focus can precede click on the first pointer tap. Keep that open sticky.
-            if (!fromPointer && expanded && Date.now() - openedAt < 400) {
-                setMetricTipOpen(btn, true, 'pointer');
+
+            if (keyboardClick) {
+                if (!expanded) {
+                    closeMetricTips(btn);
+                    setMetricTipOpen(btn, true, 'keyboard');
+                }
                 return;
             }
+
             const open = !expanded;
             closeMetricTips(open ? btn : null);
             setMetricTipOpen(btn, open, fromPointer ? 'pointer' : 'keyboard');
