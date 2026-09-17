@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Floating metric cards — organic looping motion
         document.querySelectorAll('.hero-metric-card').forEach((card, i) => {
-            gsap.to(card, {
+            const floatTween = gsap.to(card, {
                 y: i % 2 === 0 ? -8 : 8,
                 x: i % 3 === 0 ? 3 : -3,
                 duration: 2.8 + i * 0.5,
@@ -77,6 +77,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 ease: 'sine.inOut',
                 delay: i * 0.35,
             });
+            card.addEventListener('mouseenter', () => floatTween.pause());
+            card.addEventListener('mouseleave', () => floatTween.resume());
+            card.addEventListener('focusin', () => floatTween.pause());
+            card.addEventListener('focusout', () => floatTween.resume());
         });
 
         // Pulsing live dots
@@ -262,8 +266,6 @@ function closeMetricTips(exceptBtn) {
 }
 
 function wireMetricTips() {
-    const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
-
     document.querySelectorAll('[data-metric-tip]').forEach((el, i) => {
         const key = el.dataset.metricTip;
         const text = METRIC_TIPS[key];
@@ -290,28 +292,26 @@ function wireMetricTips() {
         host.appendChild(btn);
         host.appendChild(tip);
 
-        btn.addEventListener('click', e => {
-            e.preventDefault();
-            e.stopPropagation();
-            const open = btn.getAttribute('aria-expanded') !== 'true';
-            closeMetricTips(open ? btn : null);
-            setMetricTipOpen(btn, open);
-        });
+        let openedByFocus = false;
 
         btn.addEventListener('focus', () => {
             closeMetricTips(btn);
             setMetricTipOpen(btn, true);
+            openedByFocus = true;
         });
 
-        if (finePointer.matches) {
-            host.addEventListener('mouseenter', () => {
-                closeMetricTips(btn);
+        btn.addEventListener('click', e => {
+            e.preventDefault();
+            e.stopPropagation();
+            if (openedByFocus) {
+                openedByFocus = false;
                 setMetricTipOpen(btn, true);
-            });
-            host.addEventListener('mouseleave', () => {
-                if (document.activeElement !== btn) setMetricTipOpen(btn, false);
-            });
-        }
+                return;
+            }
+            const open = btn.getAttribute('aria-expanded') !== 'true';
+            closeMetricTips(open ? btn : null);
+            setMetricTipOpen(btn, open);
+        });
     });
 
     document.addEventListener('click', e => {

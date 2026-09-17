@@ -2328,17 +2328,17 @@ a {
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    width: 1.15rem;
-    height: 1.15rem;
+    width: 1.4rem;
+    height: 1.4rem;
     margin: 0;
     padding: 0;
     border: 0;
     border-radius: 50%;
     background: transparent;
     color: inherit;
-    opacity: 0.78;
+    opacity: 0.82;
     cursor: help;
-    font-size: 0.72rem;
+    font-size: 0.8rem;
     line-height: 1;
     vertical-align: middle;
 }
@@ -2352,6 +2352,28 @@ a {
 .metric-info:focus-visible {
     outline: 2px solid var(--amber);
     outline-offset: 2px;
+}
+
+.clip-hud-row,
+.compare-row,
+.analysis-row,
+.metric-card {
+    position: relative;
+}
+
+.clip-hud-row:hover,
+.clip-hud-row:focus-within,
+.clip-hud-row:has(.metric-info[aria-expanded="true"]),
+.compare-row:hover,
+.compare-row:focus-within,
+.compare-row:has(.metric-info[aria-expanded="true"]),
+.analysis-row:hover,
+.analysis-row:focus-within,
+.analysis-row:has(.metric-info[aria-expanded="true"]),
+.metric-card:hover,
+.metric-card:focus-within,
+.metric-card:has(.metric-info[aria-expanded="true"]) {
+    z-index: 5;
 }
 
 .hero-metric-card .metric-info,
