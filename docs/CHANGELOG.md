@@ -12,6 +12,7 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 
 - Small ⓘ beside every coach-facing metric label on homepage heroes, clip HUD rows, session progress, and batting/bowling pages.
 - Hover, keyboard focus, and tap toggle the same locked string (`aria-describedby` tooltip — not `title` only). Copy lock: [homepage-hud-metrics.md](./homepage-hud-metrics.md) Marketing tips.
+- Open tip panels stack above neighboring HUD / session-progress rows (`z-index` + `overflow: visible` on tip hosts). Click/tap stays sticky so GSAP float cannot dismiss the panel; outside click and Escape still close.
 - Hero *set* unchanged: **Bat 16** / **Head 41.4** / **Run-up 20.4**. No Modal/pipeline changes.
 
 ### Showcase samples-ready status (#15 Copilot follow-up)

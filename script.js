@@ -66,7 +66,8 @@ document.addEventListener('DOMContentLoaded', () => {
             .from('.status-strip',         { opacity: 0, duration: 0.4, ease: 'power1.out' }, '-=0.1')
             .from('.hero-metric-card',     { opacity: 0, scale: 0.82, y: 20, stagger: 0.14, duration: 0.55, ease: 'back.out(1.3)' }, '-=0.35');
 
-        // Floating metric cards — organic looping motion
+        // Floating metric cards — organic looping motion.
+        // Pause while a tip is sticky-open so GSAP cannot steal hover/hit-testing.
         document.querySelectorAll('.hero-metric-card').forEach((card, i) => {
             const floatTween = gsap.to(card, {
                 y: i % 2 === 0 ? -8 : 8,
@@ -77,10 +78,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 ease: 'sine.inOut',
                 delay: i * 0.35,
             });
-            card.addEventListener('mouseenter', () => floatTween.pause());
-            card.addEventListener('mouseleave', () => floatTween.resume());
-            card.addEventListener('focusin', () => floatTween.pause());
-            card.addEventListener('focusout', () => floatTween.resume());
+            heroFloatTweens.set(card, floatTween);
+            const pause = () => floatTween.pause();
+            const resumeIfIdle = () => {
+                if (!card.classList.contains('has-open-tip') && !card.matches(':hover, :focus-within')) {
+                    floatTween.resume();
+                }
+            };
+            card.addEventListener('mouseenter', pause);
+            card.addEventListener('mouseleave', resumeIfIdle);
+            card.addEventListener('focusin', pause);
+            card.addEventListener('focusout', resumeIfIdle);
         });
 
         // Pulsing live dots
@@ -104,6 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
             duration: 0.7,
             stagger: 0.18,
             ease: 'power2.out',
+            clearProps: 'transform,opacity',
         });
         gsap.from('.video-tagline', {
             scrollTrigger: { trigger: '.video-tagline', start: 'top 88%' },
@@ -178,6 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 duration: 0.55,
                 stagger: 0.1,
                 ease: 'power2.out',
+                clearProps: 'transform,opacity',
             });
         });
     });
@@ -239,23 +249,63 @@ const METRIC_TIP_NAMES = {
     'arm-speed': 'Arm angular speed',
 };
 
+const heroFloatTweens = new WeakMap();
+const metricTipOpenMode = new WeakMap();
+
 function metricTipLabelHost(el) {
     if (el.classList.contains('metric-label')) return el;
     return el.querySelector('span');
 }
 
-function setMetricTipOpen(btn, open) {
+function metricTipStackHosts(btn) {
+    return [...new Set([
+        btn.closest('.clip-hud-row, .compare-row, .analysis-row, .metric-card, .hero-metric-card'),
+        btn.closest('.clip-hud, .compare-card, .hero-dashboard, .analysis-stack, .metrics-grid'),
+    ].filter(Boolean))];
+}
+
+function syncHeroFloat(card) {
+    const tween = heroFloatTweens.get(card);
+    if (!tween) return;
+    if (card.classList.contains('has-open-tip')) {
+        tween.pause();
+        // Transform + border-radius clips overflowing tip panels; drop the float offset while open.
+        gsapSetClear(card);
+        return;
+    }
+    if (card.matches(':hover, :focus-within')) {
+        tween.pause();
+        return;
+    }
+    tween.resume();
+}
+
+function gsapSetClear(card) {
+    if (typeof gsap === 'undefined') {
+        card.style.removeProperty('transform');
+        return;
+    }
+    gsap.set(card, { clearProps: 'x,y,transform' });
+}
+
+function setMetricTipOpen(btn, open, mode) {
     const tip = document.getElementById(btn.getAttribute('aria-describedby'));
     if (!tip) return;
     btn.setAttribute('aria-expanded', String(open));
-    const host = btn.closest('.hero-metric-card, .clip-hud, .compare-card, .metric-card, .analysis-row');
+    const hosts = metricTipStackHosts(btn);
     if (open) {
-        host?.classList.add('has-open-tip');
-        return;
+        hosts.forEach(host => host.classList.add('has-open-tip'));
+        metricTipOpenMode.set(btn, mode || metricTipOpenMode.get(btn) || 'pointer');
+    } else {
+        metricTipOpenMode.delete(btn);
+        hosts.forEach(host => {
+            if (!host.querySelector('.metric-info[aria-expanded="true"]')) {
+                host.classList.remove('has-open-tip');
+            }
+        });
     }
-    if (host && !host.querySelector('.metric-info[aria-expanded="true"]')) {
-        host.classList.remove('has-open-tip');
-    }
+    const card = btn.closest('.hero-metric-card');
+    if (card) syncHeroFloat(card);
 }
 
 function closeMetricTips(exceptBtn) {
@@ -292,25 +342,44 @@ function wireMetricTips() {
         host.appendChild(btn);
         host.appendChild(tip);
 
-        let openedByFocus = false;
+        let pointerPrimed = false;
+        let openedAt = 0;
+
+        btn.addEventListener('pointerdown', () => {
+            pointerPrimed = true;
+        });
+        btn.addEventListener('pointercancel', () => {
+            pointerPrimed = false;
+        });
 
         btn.addEventListener('focus', () => {
+            if (pointerPrimed) return;
             closeMetricTips(btn);
-            setMetricTipOpen(btn, true);
-            openedByFocus = true;
+            setMetricTipOpen(btn, true, 'keyboard');
+            openedAt = Date.now();
         });
 
         btn.addEventListener('click', e => {
             e.preventDefault();
-            e.stopPropagation();
-            if (openedByFocus) {
-                openedByFocus = false;
-                setMetricTipOpen(btn, true);
+            const fromPointer = pointerPrimed;
+            pointerPrimed = false;
+            const expanded = btn.getAttribute('aria-expanded') === 'true';
+            // Focus can precede click on the first pointer tap. Keep that open sticky.
+            if (!fromPointer && expanded && Date.now() - openedAt < 400) {
+                setMetricTipOpen(btn, true, 'pointer');
                 return;
             }
-            const open = btn.getAttribute('aria-expanded') !== 'true';
+            const open = !expanded;
             closeMetricTips(open ? btn : null);
-            setMetricTipOpen(btn, open);
+            setMetricTipOpen(btn, open, fromPointer ? 'pointer' : 'keyboard');
+        });
+
+        btn.addEventListener('blur', () => {
+            window.setTimeout(() => {
+                if (metricTipOpenMode.get(btn) === 'pointer') return;
+                if (document.activeElement === btn || tip.contains(document.activeElement)) return;
+                setMetricTipOpen(btn, false);
+            }, 0);
         });
     });
 

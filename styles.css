@@ -1743,7 +1743,8 @@ a {
 }
 
 .clip-hud.has-open-tip {
-    z-index: 4;
+    z-index: 30;
+    overflow: visible;
 }
 
 .clip-hud-bowling {
@@ -2150,10 +2151,15 @@ a {
 .hero-metric-card:nth-child(3) { top: 210px; left: 0; }
 .hero-metric-card:nth-child(4) { top: 300px; right: 0; }
 
+.hero-dashboard,
+.hero-metric-card {
+    overflow: visible;
+}
+
 .hero-metric-card:hover,
 .hero-metric-card:focus-within,
 .hero-metric-card.has-open-tip {
-    z-index: 6;
+    z-index: 20;
 }
 
 .hero-metric-card .live-dot {
@@ -2354,6 +2360,21 @@ a {
     outline-offset: 2px;
 }
 
+.clip-hud,
+.clip-hud-row,
+.compare-card,
+.compare-row,
+.compare-grid,
+.analysis-stack,
+.analysis-row,
+.metric-card,
+.metrics-grid,
+.demo-clip,
+.dual-video,
+.metric-label-with-tip {
+    overflow: visible;
+}
+
 .clip-hud-row,
 .compare-row,
 .analysis-row,
@@ -2363,17 +2384,29 @@ a {
 
 .clip-hud-row:hover,
 .clip-hud-row:focus-within,
+.clip-hud-row.has-open-tip,
 .clip-hud-row:has(.metric-info[aria-expanded="true"]),
 .compare-row:hover,
 .compare-row:focus-within,
+.compare-row.has-open-tip,
 .compare-row:has(.metric-info[aria-expanded="true"]),
 .analysis-row:hover,
 .analysis-row:focus-within,
+.analysis-row.has-open-tip,
 .analysis-row:has(.metric-info[aria-expanded="true"]),
 .metric-card:hover,
 .metric-card:focus-within,
+.metric-card.has-open-tip,
 .metric-card:has(.metric-info[aria-expanded="true"]) {
-    z-index: 5;
+    z-index: 40;
+}
+
+.compare-card.has-open-tip,
+.analysis-stack.has-open-tip,
+.metrics-grid.has-open-tip,
+.hero-dashboard.has-open-tip {
+    position: relative;
+    z-index: 24;
 }
 
 .hero-metric-card .metric-info,
@@ -2386,7 +2419,7 @@ a {
     position: absolute;
     left: 0;
     top: calc(100% + 6px);
-    z-index: 30;
+    z-index: 50;
     width: max-content;
     max-width: min(18rem, 70vw);
     padding: 0.55rem 0.7rem;
