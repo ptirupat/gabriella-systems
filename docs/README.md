@@ -17,6 +17,7 @@ This marketing-site repo only holds **site copy / HUD docs** for this website:
 | [CHANGELOG.md](./CHANGELOG.md) | Dated website/UI changelog |
 | [website-updates.md](./website-updates.md) | Claims policy, pages, GIFs, logo/nav |
 | [homepage-hud-metrics.md](./homepage-hud-metrics.md) | Site HUD implementation notes (pointer to Modal PRODUCT.md) |
-| [competitive-positioning.md](./competitive-positioning.md) | Marketing stub: rivals, fail-loud wedge |
+| [competitive-positioning.md](./competitive-positioning.md) | Copy gate: rivals, fail-loud wedge, Impact / hero locks |
+| [competitors.md](./competitors.md) | Living Marketing competitor tracker (Ludimos, Kabuni, peers) |
 
 If they conflict, **Modal product docs win**. Ping Product.

@@ -2,7 +2,7 @@
 
 Dated record of marketing-site work in this repo (`ptirupat/gabriella-systems`). Newest first. Commit hashes are from `git log` on `main` unless noted as an open PR.
 
-Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-hud-metrics.md](./homepage-hud-metrics.md) (HUD notes → Modal PRODUCT.md), [competitive-positioning.md](./competitive-positioning.md) (Marketing stub).
+Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-hud-metrics.md](./homepage-hud-metrics.md) (HUD notes → Modal PRODUCT.md), [competitive-positioning.md](./competitive-positioning.md) (copy gate), [competitors.md](./competitors.md) (Marketing competitor tracker).
 
 ---
 
@@ -27,6 +27,12 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 - After the Showcase iframe `load`s, the status card heading updates from “Samples loading” to “Sample clips available” (`aria-live`). Supporting copy notes the gallery is ready; **More samples coming soon** stays.
 - Overlay lookup is optional (`?.classList` / `?.remove`) so a later iframe load cannot throw if the overlay was already removed.
 - HUD lock unchanged: **Bat 16** / **Head 41.4** / **Run-up 20.4**.
+
+### Competitor tracker (Marketing)
+
+- Add [competitors.md](./competitors.md): living Marketing tracker for **Ludimos**, **Kabuni**, and a short peer table (Matcha, CricVision, Fulltrack AI, PitchVision, BatSense/SmartCricket, NV Play, Hawk-Eye). Pricing/accuracy marked uncertain where public sources disagree or are thin.
+- [competitive-positioning.md](./competitive-positioning.md) links to the tracker and names Ludimos + Kabuni with one-line class + Gabriella wedge. Impact / homepage hero gates **unchanged** (batting **Bat speed at impact** + **Head stability**; Contact time detail-only; bowling Run-up only).
+- Not a product contract — Modal PRODUCT.md remains source of truth. Docs only; no HTML/JS.
 
 ### Batting homepage heroes: Bat speed at impact + Head stability
 
