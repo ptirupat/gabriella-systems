@@ -253,6 +253,11 @@ const heroFloatTweens = new WeakMap();
 const metricTipOpenMode = new WeakMap();
 const metricTipPointerPrimed = new WeakSet();
 
+function metricTipHitButton(e, btn) {
+    const hit = document.elementFromPoint(e.clientX, e.clientY);
+    return Boolean(hit && btn.contains(hit));
+}
+
 function metricTipLabelHost(el) {
     if (el.classList.contains('metric-label')) return el;
     return el.querySelector('span');
@@ -385,7 +390,7 @@ function wireMetricTips() {
 
     document.addEventListener('pointerup', e => {
         document.querySelectorAll('.metric-info').forEach(btn => {
-            if (!btn.contains(e.target)) metricTipPointerPrimed.delete(btn);
+            if (!metricTipHitButton(e, btn)) metricTipPointerPrimed.delete(btn);
         });
     }, true);
 
