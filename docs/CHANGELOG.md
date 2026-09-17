@@ -8,6 +8,13 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 
 ## 2026-09-17
 
+### Live sample re-lock to tip (Bat 10.6 / Head 45.9 / Contact 800)
+
+- Public HTML samples re-lock to live tip: **Bat speed at impact** **10.6 km/h** (was 16) + **Head stability** **45.9 cm** (was 41.4). Run-up stays **20.4 km/h**.
+- **Contact time in this clip** detail sample is **800 ms** (was 817 / earlier 400). Hero *set* unchanged: **Bat + Head + Run-up**. Contact stays clip HUD / session-progress only — never a homepage hero.
+- Tip strings unchanged. GIF binaries not regenerated. Head Δ **−11.1** (pre 27.5 / post 16.4) is not shown on marketing pages.
+- HTML: `index.html` hero tiles + batting clip HUD / session-progress; `batting.html` clip HUD and session stack. Docs: [homepage-hud-metrics.md](./homepage-hud-metrics.md), [competitive-positioning.md](./competitive-positioning.md), [website-updates.md](./website-updates.md), README.
+
 ### Coach-facing metric ⓘ tips
 
 - Small ⓘ beside every coach-facing metric label on homepage heroes, clip HUD rows, session progress, and batting/bowling pages.

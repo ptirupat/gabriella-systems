@@ -45,20 +45,20 @@ Wire a small ⓘ next to every coach-facing metric label. Hover **and** tap/focu
 
 ### Illustrative numbers (do not invent new ones)
 
-Reuse the live-site HTML samples (2026-09-17). Do **not** republish the retired ~22 / 400 ms / 21.6 / 22.4 / ~1840°/s figures as public samples:
+Reuse the live-site HTML samples (2026-09-17 live-tip re-lock). Do **not** republish the retired 16 / 41.4 / 817 / ~22 / 400 ms / 21.6 / 22.4 / ~1840°/s figures as public samples:
 
 | Metric | Public sample | Surface |
 | --- | --- | --- |
-| Bat speed at impact | **16 km/h** | Homepage hero + clip HUD + session progress. Field `bat_speed_at_impact_kmh`. Never peak ~90. Never old pipeline peak 36–39. |
-| Head stability | **41.4 cm** | Homepage hero + clip HUD + session progress. Field `head_stability_cm`. Ungated/null → Can't measure; never swap Contact onto the hero row. |
-| Contact time in this clip | **817 ms** | Detail only (clip HUD / session-progress). Field `impact_offset_ms`. Prefer this label in docs (clip HUD shortens to “Contact time”). Not a homepage hero. |
+| Bat speed at impact | **10.6 km/h** | Homepage hero + clip HUD + session progress. Field `bat_speed_at_impact_kmh`. Never peak ~90. Never old pipeline peak 36–39. |
+| Head stability | **45.9 cm** | Homepage hero + clip HUD + session progress. Field `head_stability_cm`. Ungated/null → Can't measure; never swap Contact onto the hero row. |
+| Contact time in this clip | **800 ms** | Detail only (clip HUD / session-progress). Field `impact_offset_ms`. Prefer this label in docs (clip HUD shortens to “Contact time”). Not a homepage hero. |
 | Run-up speed | **20.4 km/h** | Homepage hero + clip HUD + session progress. Field `peak_runup_speed_kmh`. |
 | Ball speed | **122 km/h** | Detail only (clip HUD / batting session progress). Not a homepage hero. |
 | Arm angular speed | **619 °/s** | Detail only (clip HUD / bowling session progress). Live short label **Arm speed**. |
 | Front knee angle | **155°** | Detail only (clip HUD / bowling session progress). |
 | Release height | **no public number** | Off homepage/bowling HUD until calibrated. Do not show a Can't-measure slot. |
 
-Do not present delivery-stride speed (`19.8`) or **Delivery stride 1.82 m** as public samples. Mark session-progress samples as illustrative where the site already does.
+Do not present delivery-stride speed (`19.8`) or **Delivery stride 1.82 m** as public samples. Head Δ **−11.1** (pre **27.5** / post **16.4**) is a live-tip optional detail — **not shown** on this marketing site. Mark session-progress samples as illustrative where the site already does.
 
 ---
 
@@ -67,9 +67,9 @@ Do not present delivery-stride speed (`19.8`) or **Delivery stride 1.82 m** as p
 | Surface | Files | Notes |
 | --- | --- | --- |
 | GIF HUD overlay | `assets/cricket_batting_15s.gif`, `assets/cricket_bowling_15s.gif` | Burned-in Gabriella Vision panel. GIF binaries were **not** regenerated in this Head-hero pass — HTML HUD/hero/progress numbers are the public samples. |
-| Homepage hero cards | `index.html` (`.hero-metric-card`) | Locked set only: **Bat speed at impact 16** + **Head stability 41.4** + **Run-up speed 20.4**. No Contact, Ball, Arm, Front knee, or Release height cards. |
-| Clip HUD panels | `index.html`, `batting.html`, `bowling.html` | Richer rows allowed. Homepage batting clip: Bat 16 / Head 41.4 / Ball 122 / Contact 817. Homepage bowling clip: Run-up 20.4 / Arm 619 / Front knee 155. Batting page clip matches the batting homepage clip. |
-| Session progress cards | `index.html`, `batting.html`, `bowling.html` | Detail/progress, not heroes. Batting: Bat 16 / Head 41.4 / Ball 122 / Contact 817. Bowling: Run-up 20.4 / Arm 619 / Front knee 155. No Release height row. |
+| Homepage hero cards | `index.html` (`.hero-metric-card`) | Locked set only: **Bat speed at impact 10.6** + **Head stability 45.9** + **Run-up speed 20.4**. No Contact, Ball, Arm, Front knee, or Release height cards. |
+| Clip HUD panels | `index.html`, `batting.html`, `bowling.html` | Richer rows allowed. Homepage batting clip: Bat 10.6 / Head 45.9 / Ball 122 / Contact 800. Homepage bowling clip: Run-up 20.4 / Arm 619 / Front knee 155. Batting page clip matches the batting homepage clip. |
+| Session progress cards | `index.html`, `batting.html`, `bowling.html` | Detail/progress, not heroes. Batting: Bat 10.6 / Head 45.9 / Ball 122 / Contact 800. Bowling: Run-up 20.4 / Arm 619 / Front knee 155. No Release height row. |
 
 Deeper capability lists (contact time, front-knee flexion at plant, arm angular speed, ball tracking, and so on) may still appear as pipeline outputs. They are **not** the homepage hero HUD.
 
@@ -91,11 +91,11 @@ This site embeds Showcase at `https://gabriellasystems--cricket-demo-web.modal.r
 
 ## Asset vs HTML status (do not assume they match)
 
-As of the 2026-09-17 batting hero re-lock (Bat + Head):
+As of the 2026-09-17 live-tip sample re-lock (hero *set* still Bat + Head + Run-up):
 
-- Homepage **HTML** heroes are the locked set only: **Bat speed at impact** (`bat_speed_at_impact_kmh`, **16 km/h**) + **Head stability** (`head_stability_cm`, **41.4 cm**) + **Run-up speed** (`peak_runup_speed_kmh`, **20.4 km/h**). Contact 817 / Ball 122 / Arm 619 / Front knee 155 are **not** homepage heroes.
+- Homepage **HTML** heroes are the locked set only: **Bat speed at impact** (`bat_speed_at_impact_kmh`, **10.6 km/h**) + **Head stability** (`head_stability_cm`, **45.9 cm**) + **Run-up speed** (`peak_runup_speed_kmh`, **20.4 km/h**). Contact 800 / Ball 122 / Arm 619 / Front knee 155 are **not** homepage heroes.
 - Homepage **HTML** bowling session-progress (and `bowling.html` progress) uses **Run-up 20.4** + **Arm 619 °/s** + **Front knee 155°**. Release height is not on those surfaces (no “Measured when calibration supports it” slot).
-- Homepage batting session-progress uses **Bat 16** + **Head 41.4** + **Ball 122** + **Contact 817** (Contact is detail/progress, not a hero).
+- Homepage batting session-progress uses **Bat 10.6** + **Head 45.9** + **Ball 122** + **Contact 800** (Contact is detail/progress, not a hero).
 - Clip HUD panels keep the richer live rows listed under Surfaces.
 - Contact time is a **detail** metric — not a homepage hero peak. If Head is ungated, the Head hero shows **Can't measure**; Contact stays off the hero row.
 - Front stride is not shown on homepage or batting progress/hero rows.
@@ -113,5 +113,5 @@ As of the 2026-09-17 batting hero re-lock (Bat + Head):
 6. Public release height is **absent** from homepage/bowling HUD (no 1.09 m, no 2.1 m, no Can't measure / Measured when calibration supports it) until calibration supports a gated overarm value.
 7. Front stride is not shown on homepage or batting hero/progress rows.
 8. GIF overlay, hero cards, and progress cards stay consistent (or lag is called out).
-9. Sample numbers, if shown, are the live HTML values — not newly invented gated stats. Public samples: Bat **16 km/h**, Head **41.4 cm**, Run-up **20.4 km/h**; detail-only Contact **817 ms**, Ball **122**, Arm **619 °/s**, Front knee **155°**. Do not republish ~22 / 400 ms / 21.6 / 22.4 / ~1840°/s.
+9. Sample numbers, if shown, are the live HTML values — not newly invented gated stats. Public samples: Bat **10.6 km/h**, Head **45.9 cm**, Run-up **20.4 km/h**; detail-only Contact **800 ms**, Ball **122**, Arm **619 °/s**, Front knee **155°**. Do not republish 16 / 41.4 / 817 / ~22 / 400 ms / 21.6 / 22.4 / ~1840°/s. Do not add Head Δ −11.1 unless Product puts it on a marketing surface.
 10. Every coach-facing metric label has the locked ⓘ tip from **Marketing tips (copy lock)** — same string on every surface; hover + tap/focus (not `title` only).
