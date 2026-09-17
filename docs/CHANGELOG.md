@@ -6,13 +6,24 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 
 ---
 
+## 2026-09-17
+
+### Batting homepage heroes: Bat speed at impact + Head stability
+
+- Product re-lock: batting homepage heroes are **Bat speed at impact** (`bat_speed_at_impact_kmh`, **16 km/h**) + **Head stability** (`head_stability_cm`, **41.4 cm**). Bowling hero unchanged: **Run-up speed** (`peak_runup_speed_kmh`, **20.4 km/h**).
+- **Contact time in this clip** (`impact_offset_ms`, **817 ms**) moves off the homepage hero row. It stays on clip HUDs / session-progress as a same-view marker only — never early vs late.
+- Fail loud: if Head is ungated or null, show **Can't measure** / **—** in that hero slot. Do **not** put Contact back on the hero row. Never invent `0` or a fake centimetre.
+- No Ball / Arm as homepage heroes. GIF binaries not regenerated (HTML HUD overlays carry the Head row).
+- Marketing tips: Bat = how fast the bat was moving at contact in this take (km/h). Head = how much the head moved from downswing to contact (cm); lower usually means steadier — not a technique grade. Contact (detail) = same-view marker, not early/late.
+- HTML: `index.html` hero tiles + batting clip HUD / session-progress; `batting.html` clip HUD, coaching tips, and session stack. Docs: [homepage-hud-metrics.md](./homepage-hud-metrics.md), [competitive-positioning.md](./competitive-positioning.md), [website-updates.md](./website-updates.md), README.
+
 ## 2026-09-16
 
 ### Homepage status-strip contrast
 
 - Hero `.status-item` / `.status-live` / `.status-planned` used `--muted` (`#5b6a66`) and `--green` / `--teal` icons on the dark green hero — ~1.0–1.7:1, unreadable.
 - New on-dark tokens: `--text-on-dark`, `--text-on-dark-muted`, `--live-on-dark`, `--planned-on-dark`. Applied to the status strip, hero copy, and hero metric labels.
-- HUD lock unchanged: **Bat 16** / **Contact 817** / **Run-up 20.4**.
+- HUD lock at the time of this pass: **Bat 16** / **Contact 817** / **Run-up 20.4** (superseded 2026-09-17 by Bat + Head).
 
 ### Marketing-site polish (items 2–7)
 
@@ -22,7 +33,7 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 - Logo recolored to the sports-green / gold palette; banners use a shared `--banner-*` green family.
 - Copy lock: one expansion line — started with cricket; baseball and softball are next (same session-metric / fail-loud approach), labeled **roadmap**. Titles/H1s stay cricket-primary (nets, coaches, academies, session metrics). GEO blurbs state what we measure now, fail-loud, then upcoming sports.
 - SEO/GEO: canonical + OG/Twitter completeness, Organization JSON-LD, `robots.txt`, `sitemap.xml`.
-- Homepage HUD lock from `main` (#13): **Bat 16** / **Contact 817** / **Run-up 20.4**.
+- Homepage HUD lock from `main` (#13): **Bat 16** / **Contact 817** / **Run-up 20.4** (superseded 2026-09-17 by Bat + Head).
 
 ### Live samples + homepage conflict markers (hero set unchanged)
 

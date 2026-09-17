@@ -2,7 +2,7 @@
 
 Short Marketing note for website and product copy. Keep claims aligned with this — not a full GTM brief.
 
-Updated: 2026-09-16
+Updated: 2026-09-17
 
 ## Who we compare against
 
@@ -54,20 +54,22 @@ Hawk-Eye — elite multi-camera tracking; not our academy-net price or form fact
 
 True early/late needs a gated bounce/release/arrival reference (**backlog**). Do not imply that exists.
 
-Homepage batting heroes follow [Modal PRODUCT.md](https://github.com/Gabriella-Systems/modal/blob/main/docs/PRODUCT.md): **Bat speed at impact** (`bat_speed_at_impact_kmh`) + Contact time in this clip (`impact_offset_ms`). Head stability is detail/capability copy only. See [homepage-hud-metrics.md](./homepage-hud-metrics.md) for how this site implements that lock — do not fork a second contract here.
+Homepage batting heroes follow [Modal PRODUCT.md](https://github.com/Gabriella-Systems/modal/blob/main/docs/PRODUCT.md): **Bat speed at impact** (`bat_speed_at_impact_kmh`) + **Head stability** (`head_stability_cm`). Contact time in this clip is detail/capability copy only. See [homepage-hud-metrics.md](./homepage-hud-metrics.md) for how this site implements that lock — do not fork a second contract here.
+
+**Marketing tips:** Bat — how fast the bat was moving at contact in this take (km/h). Head — how much the head moved from downswing to contact (cm); lower usually means steadier — not a technique grade. Contact (detail) — same-view marker, not early/late.
 
 ### Homepage pairs
 
 Confirm in PRODUCT.md. This site currently implements:
 
-- **Batting:** Bat speed at impact (`bat_speed_at_impact_kmh`, **16 km/h**) + Contact time in this clip (`impact_offset_ms`, **817 ms**). Label is **Bat speed at impact** — never bare “bat speed,” never “pipeline peak.” Never publish peak ~90 or the old 36–39 km/h pipeline-peak sample. Ungated or null locked fields are **Can't measure** / **—**. Never early/late. Front stride is not a gated field; do not show it on homepage or batting hero/progress rows. Ball **122 km/h** and Head stability **41.4 cm** are detail/progress only — not homepage heroes.
+- **Batting:** Bat speed at impact (`bat_speed_at_impact_kmh`, **16 km/h**) + Head stability (`head_stability_cm`, **41.4 cm**). Label is **Bat speed at impact** — never bare “bat speed,” never “pipeline peak.” Never publish peak ~90 or the old 36–39 km/h pipeline-peak sample. Ungated or null locked fields are **Can't measure** / **—**. If Head is ungated, show Can't measure on that hero slot — do **not** put Contact back on the hero row. Never early/late. Front stride is not a gated field; do not show it on homepage or batting hero/progress rows. Ball **122 km/h** and Contact time **817 ms** are detail/progress only — not homepage heroes.
 - **Bowling:** Run-up speed (`peak_runup_speed_kmh` only, **20.4 km/h**) on the public homepage bowling *hero*. Arm angular speed **619 °/s** and Front knee **155°** are detail/progress only — not homepage heroes. Omit ball speed from that hero until gated and non-null — never show “—” as a ball-speed peak. **Release height is omitted** until calibration supports a gated overarm value — do not publish 1.09 m or invent 2.1 m, and do not show Can’t measure / Measured when calibration supports it as a second bowling HUD slot. No homepage fallback to `runup_speed_at_delivery_kmh`.
 
 ## Homepage / GIF rules (competitive)
 
 - Prefer **real Showcase takes** with trusted overlays over AI-generated “analysis” demos (rivals already look like phone-CV theater).
 - HUD: **few, readable, real** session metrics — or Can’t measure. Decorative or invented numbers kill the trust wedge.
-- Impact on HUD/copy follows the copy gate above (contact time in this clip, not early/late). Contact time is a batting homepage hero; Head stability stays on detail lists. Release height stays **off** the public bowling HUD until calibrated and gated.
+- Impact on HUD/copy follows the copy gate above (contact time in this clip, not early/late). Head stability is a batting homepage hero; Contact time stays on detail lists. Release height stays **off** the public bowling HUD until calibrated and gated.
 - Front stride is not a gated API field — do not show it on homepage or batting progress/hero rows.
 - Logo / brand: simple vision/hardware mark (e.g. G + reticle) over illustrated batter / neon poster art (CricVision-adjacent) or consumer-app doodles (Matcha-adjacent).
 
