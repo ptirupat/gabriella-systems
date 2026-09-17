@@ -46,6 +46,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // ── Metric ⓘ tips (copy lock: docs/homepage-hud-metrics.md) ─────────────
+    wireMetricTips();
+
     // ── GSAP animations (only if GSAP is loaded) ─────────────────────────────
     if (typeof gsap === 'undefined') return;
 
@@ -65,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Floating metric cards — organic looping motion
         document.querySelectorAll('.hero-metric-card').forEach((card, i) => {
-            gsap.to(card, {
+            const floatTween = gsap.to(card, {
                 y: i % 2 === 0 ? -8 : 8,
                 x: i % 3 === 0 ? 3 : -3,
                 duration: 2.8 + i * 0.5,
@@ -74,6 +77,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 ease: 'sine.inOut',
                 delay: i * 0.35,
             });
+            card.addEventListener('mouseenter', () => floatTween.pause());
+            card.addEventListener('mouseleave', () => floatTween.resume());
+            card.addEventListener('focusin', () => floatTween.pause());
+            card.addEventListener('focusout', () => floatTween.resume());
         });
 
         // Pulsing live dots
@@ -211,6 +218,115 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('contact-form');
     if (form) handleFormSubmit(form);
 });
+
+const METRIC_TIPS = {
+    'bat-speed': 'How fast the bat was moving at contact in this take (km/h).',
+    'head-stability': 'How much the head moved from downswing to contact (cm). Lower usually means steadier — not a technique grade.',
+    'run-up': 'Peak approach speed into the delivery in this take (km/h).',
+    'contact-time': 'Time from the start of this take to contact (ms). Use it to compare same-view sessions — not early vs late.',
+    'ball-speed': 'Measured ball speed in this take (km/h), only when the take is gated.',
+    'front-knee': 'Front-knee flexion at plant in this take (degrees). 0° ≈ fully extended.',
+    'arm-speed': 'Peak arm angular speed in this take (°/s).',
+};
+
+const METRIC_TIP_NAMES = {
+    'bat-speed': 'Bat speed at impact',
+    'head-stability': 'Head stability',
+    'run-up': 'Run-up speed',
+    'contact-time': 'Contact time in this clip',
+    'ball-speed': 'Ball speed',
+    'front-knee': 'Front knee angle',
+    'arm-speed': 'Arm angular speed',
+};
+
+function metricTipLabelHost(el) {
+    if (el.classList.contains('metric-label')) return el;
+    return el.querySelector('span');
+}
+
+function setMetricTipOpen(btn, open) {
+    const tip = document.getElementById(btn.getAttribute('aria-describedby'));
+    if (!tip) return;
+    btn.setAttribute('aria-expanded', String(open));
+    const host = btn.closest('.hero-metric-card, .clip-hud, .compare-card, .metric-card, .analysis-row');
+    if (open) {
+        host?.classList.add('has-open-tip');
+        return;
+    }
+    if (host && !host.querySelector('.metric-info[aria-expanded="true"]')) {
+        host.classList.remove('has-open-tip');
+    }
+}
+
+function closeMetricTips(exceptBtn) {
+    document.querySelectorAll('.metric-info[aria-expanded="true"]').forEach(btn => {
+        if (btn === exceptBtn) return;
+        setMetricTipOpen(btn, false);
+    });
+}
+
+function wireMetricTips() {
+    document.querySelectorAll('[data-metric-tip]').forEach((el, i) => {
+        const key = el.dataset.metricTip;
+        const text = METRIC_TIPS[key];
+        const name = METRIC_TIP_NAMES[key];
+        const host = metricTipLabelHost(el);
+        if (!text || !name || !host || host.querySelector('.metric-info')) return;
+
+        const tipId = `metric-tip-${key}-${i}`;
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'metric-info';
+        btn.setAttribute('aria-label', `About ${name}`);
+        btn.setAttribute('aria-describedby', tipId);
+        btn.setAttribute('aria-expanded', 'false');
+        btn.innerHTML = '<i class="fas fa-circle-info" aria-hidden="true"></i>';
+
+        const tip = document.createElement('span');
+        tip.id = tipId;
+        tip.className = 'metric-tooltip';
+        tip.setAttribute('role', 'tooltip');
+        tip.textContent = text;
+
+        host.classList.add('metric-label-with-tip');
+        host.appendChild(btn);
+        host.appendChild(tip);
+
+        let openedByFocus = false;
+
+        btn.addEventListener('focus', () => {
+            closeMetricTips(btn);
+            setMetricTipOpen(btn, true);
+            openedByFocus = true;
+        });
+
+        btn.addEventListener('click', e => {
+            e.preventDefault();
+            e.stopPropagation();
+            if (openedByFocus) {
+                openedByFocus = false;
+                setMetricTipOpen(btn, true);
+                return;
+            }
+            const open = btn.getAttribute('aria-expanded') !== 'true';
+            closeMetricTips(open ? btn : null);
+            setMetricTipOpen(btn, open);
+        });
+    });
+
+    document.addEventListener('click', e => {
+        if (!e.target.closest('.metric-info, .metric-tooltip, .metric-label-with-tip')) {
+            closeMetricTips();
+        }
+    });
+
+    document.addEventListener('keydown', e => {
+        if (e.key !== 'Escape') return;
+        const openBtn = document.querySelector('.metric-info[aria-expanded="true"]');
+        closeMetricTips();
+        openBtn?.blur();
+    });
+}
 
 function handleFormSubmit(form) {
     form.addEventListener('submit', async e => {
