@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports — Gabriella Systems</title>
+    <meta name="description" content="Gabriella Systems builds movement intelligence for bat-and-ball sports. Cricket analysis is live. Baseball and softball are in development.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Gabriella Systems">
+    <meta property="og:title" content="Sports — Gabriella Systems">
+    <meta property="og:description" content="Cricket analysis is live. Baseball and softball coming soon.">
+    <meta property="og:image" content="https://gabriellasystems.com/assets/cricket-vision-hero.png">
+    <meta property="og:url" content="https://gabriellasystems.com/sports.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* ── Sports page ─────────────────────────────────────────── */
+        .sports-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        @media (max-width: 900px)  { .sports-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 580px)  { .sports-grid { grid-template-columns: 1fr; } }
+
+        .sport-card {
+            border-radius: 22px;
+            overflow: hidden;
+            border: 1px solid var(--line);
+            box-shadow: 0 4px 20px rgba(3,30,73,0.07);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s cubic-bezier(0.34,1.2,0.64,1),
+                        box-shadow 0.3s ease;
+            background: var(--paper);
+        }
+        .sport-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 0 0 2px var(--green), 0 24px 52px rgba(3,30,73,0.15);
+        }
+        .sport-card.live { border-top: 4px solid var(--green); }
+        .sport-card.wip  { border-top: 4px solid var(--line);  opacity: 0.88; }
+        .sport-card.wip:hover { border-top-color: var(--amber); opacity: 1; }
+
+        /* Sport header band */
+        .sport-header {
+            padding: 36px 32px 28px;
+            position: relative;
+            overflow: hidden;
+        }
+        .sport-card.cricket .sport-header {
+            background: linear-gradient(140deg, #031E49 0%, #064B91 60%, #0a3d7a 100%);
+        }
+        .sport-card.baseball .sport-header {
+            background: linear-gradient(140deg, #1a1a2e 0%, #2d2d4e 60%, #1a1a2e 100%);
+        }
+        .sport-card.softball .sport-header {
+            background: linear-gradient(140deg, #1f1225 0%, #3b1f4e 60%, #1f1225 100%);
+        }
+        .sport-header-icon {
+            font-size: 3.2rem;
+            margin-bottom: 1rem;
+            display: block;
+            filter: drop-shadow(0 4px 16px rgba(0,0,0,0.3));
+        }
+        .sport-card.cricket .sport-header-icon { color: #fff; }
+        .sport-card.baseball .sport-header-icon { color: rgba(255,255,255,0.5); }
+        .sport-card.softball .sport-header-icon { color: rgba(255,255,255,0.5); }
+
+        .sport-header h2 {
+            font-size: 1.7rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            color: white;
+            margin-bottom: 0.4rem;
+        }
+        .sport-header p {
+            font-size: 0.88rem;
+            color: rgba(255,255,255,0.65);
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        /* Status badge */
+        .sport-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.3rem 0.8rem;
+            border-radius: 999px;
+            font-size: 0.68rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-top: 1rem;
+        }
+        .sport-badge.badge-live {
+            background: rgba(247,39,114,0.2);
+            color: #ff6ba8;
+            border: 1px solid rgba(247,39,114,0.3);
+        }
+        .sport-badge.badge-wip {
+            background: rgba(255,255,255,0.08);
+            color: rgba(255,255,255,0.5);
+            border: 1px solid rgba(255,255,255,0.12);
+        }
+        .sport-badge i { font-size: 0.6rem; }
+
+        /* Card body */
+        .sport-body {
+            padding: 28px 32px 32px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Feature list */
+        .sport-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 1.5rem;
+            flex: 1;
+        }
+        .sport-features li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.7rem;
+            padding: 0.55rem 0;
+            border-bottom: 1px solid var(--line);
+            font-size: 0.9rem;
+            color: var(--muted);
+            line-height: 1.45;
+        }
+        .sport-features li:last-child { border-bottom: none; }
+        .sport-features li i {
+            margin-top: 2px;
+            flex-shrink: 0;
+            font-size: 0.75rem;
+        }
+        .sport-card.live   .sport-features li i { color: var(--green); }
+        .sport-card.wip    .sport-features li i { color: var(--line);  }
+
+        /* CTA inside card */
+        .sport-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.3rem;
+            border-radius: 10px;
+            font-size: 0.88rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: background 0.2s ease, transform 0.2s ease;
+            align-self: flex-start;
+        }
+        .sport-cta.cta-active {
+            background: linear-gradient(135deg, var(--green), #d9185e);
+            color: white;
+            box-shadow: 0 4px 16px rgba(247,39,114,0.3);
+        }
+        .sport-cta.cta-active:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(247,39,114,0.45);
+        }
+        .sport-cta.cta-notify {
+            background: var(--soft);
+            color: var(--muted);
+            border: 1px solid var(--line);
+        }
+        .sport-cta.cta-notify:hover {
+            background: var(--line);
+            color: var(--ink);
+        }
+
+        /* WIP overlay hint */
+        .wip-note {
+            font-size: 0.78rem;
+            color: var(--muted);
+            font-style: italic;
+            margin-top: 0.8rem;
+            padding: 10px 14px;
+            background: var(--soft);
+            border-radius: 8px;
+            border-left: 3px solid var(--amber);
+        }
+
+        /* Bottom intro line */
+        .sports-intro {
+            max-width: 640px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .sports-intro p {
+            font-size: 1.1rem;
+            color: var(--muted);
+            line-height: 1.7;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="nav-logo-link">
+                    <img src="assets/logo.png" alt="Gabriella Systems" class="nav-logo-img">
+                    <span class="nav-logo-wordmark">Gabriella</span>
+                </a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="services.html" class="nav-link">Platform</a>
+                <a href="sports.html" class="nav-link active">Sports</a>
+                <a href="batting.html" class="nav-link">Batting</a>
+                <a href="bowling.html" class="nav-link">Bowling</a>
+                <a href="academies.html" class="nav-link">For Academies</a>
+                <a href="demo.html" class="nav-link">Showcase</a>
+                <a href="research.html" class="nav-link">Research</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Request Pilot</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="subpage-main">
+
+        <!-- HERO -->
+        <section class="page-hero">
+            <div class="container narrow">
+                <p class="eyebrow">Sports</p>
+                <h1>Built for <span class="grad-word">bat-and-ball sports</span></h1>
+                <p>
+                    Gabriella's movement intelligence platform is designed for sports where bat,
+                    ball, and body all matter. We start with cricket and are building toward
+                    baseball and softball.
+                </p>
+            </div>
+        </section>
+
+        <!-- SPORT CARDS -->
+        <section class="section">
+            <div class="container">
+
+                <div class="sports-intro section-intro" style="margin-bottom:0;">
+                    <p class="eyebrow">Where we play</p>
+                    <h2>Three sports. One measurement platform.</h2>
+                    <p>
+                        Each sport shares a common structure — a bowler or pitcher, a batter, and
+                        a ball. Gabriella's computer vision stack is built around that shared
+                        structure, adapting metrics and phase detection to each discipline.
+                    </p>
+                </div>
+
+                <div class="sports-grid stagger-in">
+
+                    <!-- CRICKET -->
+                    <div class="sport-card live cricket">
+                        <div class="sport-header">
+                            <span class="sport-header-icon">🏏</span>
+                            <h2>Cricket</h2>
+                            <p>Batting and bowling analysis from a single camera at the nets.</p>
+                            <span class="sport-badge badge-live">
+                                <i class="fas fa-circle"></i> Working prototype
+                            </span>
+                        </div>
+                        <div class="sport-body">
+                            <ul class="sport-features">
+                                <li><i class="fas fa-check-circle"></i>Batting: bat speed at impact, head stability, contact timing</li>
+                                <li><i class="fas fa-check-circle"></i>Bowling: run-up speed, arm speed, front knee angle</li>
+                                <li><i class="fas fa-check-circle"></i>Ball and bat tracking with SAM3 segmentation</li>
+                                <li><i class="fas fa-check-circle"></i>COCO-17 pose estimation per frame</li>
+                                <li><i class="fas fa-check-circle"></i>View-aware metrics — front-on and side-on</li>
+                                <li><i class="fas fa-check-circle"></i>Quality gate: fail-loud, never invented numbers</li>
+                            </ul>
+                            <a href="demo.html" class="sport-cta cta-active">
+                                <i class="fas fa-play"></i> Explore the showcase
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- BASEBALL -->
+                    <div class="sport-card wip baseball">
+                        <div class="sport-header">
+                            <span class="sport-header-icon">⚾</span>
+                            <h2>Baseball</h2>
+                            <p>Pitching and hitting analysis — planned extension of the cricket pipeline.</p>
+                            <span class="sport-badge badge-wip">
+                                <i class="fas fa-hammer"></i> Work in progress
+                            </span>
+                        </div>
+                        <div class="sport-body">
+                            <ul class="sport-features">
+                                <li><i class="fas fa-circle"></i>Pitching phase analysis — wind-up, delivery, follow-through</li>
+                                <li><i class="fas fa-circle"></i>Bat swing speed and contact point</li>
+                                <li><i class="fas fa-circle"></i>Hip-shoulder separation and sequencing</li>
+                                <li><i class="fas fa-circle"></i>Pitch speed and trajectory estimation</li>
+                                <li><i class="fas fa-circle"></i>View-aware calibration for diamond cameras</li>
+                            </ul>
+                            <div class="wip-note">
+                                Baseball support is in active research and development.
+                                No product is available yet.
+                            </div>
+                            <a href="contact.html" class="sport-cta cta-notify" style="margin-top:1rem;">
+                                <i class="fas fa-bell"></i> Register interest
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- SOFTBALL -->
+                    <div class="sport-card wip softball">
+                        <div class="sport-header">
+                            <span class="sport-header-icon">🥎</span>
+                            <h2>Softball</h2>
+                            <p>Pitching and hitting mechanics — sharing the baseball research track.</p>
+                            <span class="sport-badge badge-wip">
+                                <i class="fas fa-hammer"></i> Work in progress
+                            </span>
+                        </div>
+                        <div class="sport-body">
+                            <ul class="sport-features">
+                                <li><i class="fas fa-circle"></i>Windmill pitching phase detection</li>
+                                <li><i class="fas fa-circle"></i>Hitting mechanics and bat path</li>
+                                <li><i class="fas fa-circle"></i>Lower-body drive and weight transfer</li>
+                                <li><i class="fas fa-circle"></i>Arm speed and release point</li>
+                                <li><i class="fas fa-circle"></i>Sport-specific metric calibration</li>
+                            </ul>
+                            <div class="wip-note">
+                                Softball support is planned alongside baseball.
+                                No product is available yet.
+                            </div>
+                            <a href="contact.html" class="sport-cta cta-notify" style="margin-top:1rem;">
+                                <i class="fas fa-bell"></i> Register interest
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SHARED PLATFORM NOTE -->
+        <section class="section muted-section">
+            <div class="container narrow" style="text-align:center;">
+                <p class="eyebrow">One platform</p>
+                <h2>The same pipeline. Sport-specific metrics.</h2>
+                <p style="color:var(--muted); line-height:1.75; font-size:1.05rem; max-width:600px; margin:0 auto 2rem;">
+                    All three sports share a common technical foundation — object detection,
+                    pose estimation, depth estimation, Kalman tracking, and a quality gate
+                    that only surfaces metrics when they are reliably measured.
+                    Sport-specific phase detection and metric definitions are layered on top.
+                </p>
+                <a href="services.html" class="cta-button">
+                    <i class="fas fa-layer-group"></i>&nbsp; See the platform
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="nav-logo-text">Gabriella Systems</span>
+                    <p>Computer vision for bat-and-ball sports — batting and bowling intelligence from a single portable system.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Sports</h4>
+                    <a href="sports.html">All Sports</a>
+                    <a href="batting.html">Batting</a>
+                    <a href="bowling.html">Bowling</a>
+                    <a href="demo.html">Showcase</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="about.html">About</a>
+                    <a href="research.html">Research</a>
+                    <a href="contact.html">Request a Pilot</a>
+                    <a href="mailto:info@gabriellasystems.com">info@gabriellasystems.com</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Gabriella Systems. All rights reserved.</p>
+                <a href="demo.html">Live Showcase &rarr;</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
