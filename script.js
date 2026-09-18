@@ -452,9 +452,75 @@ function handleFormSubmit(form) {
                 throw new Error('Server error');
             }
         } catch {
-            alert('Sorry, something went wrong. Please email us directly at admin@gabriellasystems.com');
+            alert('Sorry, something went wrong. Please email us directly at info@gabriellasystems.com');
             btn.disabled = false;
             btn.textContent = orig;
         }
     });
 }
+
+// ── Scroll-reveal: individual cards + stagger-in parent grids ───────────────
+(function initScrollReveal() {
+    // Individual cards animate on entering viewport
+    const singleTargets = document.querySelectorAll(
+        '.section-intro, .mv-card, .origin-stat, ' +
+        '.cricket-domain, .leadership-card, .research-bridge, ' +
+        '.compare-card, .quote-panel, .timeline-item-clean'
+    );
+    // Parent containers whose direct children stagger in sequence
+    const staggerContainers = document.querySelectorAll('.stagger-in');
+
+    const revealEl = (el, delay = 0) => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(22px)';
+        el.style.transition = `opacity 0.55s ${delay}s cubic-bezier(0.22,1,0.36,1), transform 0.55s ${delay}s cubic-bezier(0.34,1.2,0.64,1)`;
+    };
+    const showEl = el => {
+        el.style.opacity = '1';
+        el.style.transform = 'translateY(0)';
+    };
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            const el = entry.target;
+            if (window.gsap) {
+                gsap.to(el, { opacity: 1, y: 0, duration: 0.55,
+                    delay: parseFloat(el.dataset.delay || '0'),
+                    ease: 'power2.out', clearProps: 'transform,opacity' });
+            } else { showEl(el); }
+            observer.unobserve(el);
+        });
+    }, { threshold: 0.08, rootMargin: '0px 0px -32px 0px' });
+
+    // Single targets
+    singleTargets.forEach(el => {
+        revealEl(el);
+        observer.observe(el);
+    });
+
+    // Stagger containers — animate each child in sequence
+    staggerContainers.forEach(container => {
+        const children = Array.from(container.children).filter(c =>
+            !c.matches('script,style,noscript'));
+        children.forEach((child, i) => {
+            const delay = Math.min(i * 0.08, 0.4);
+            child.dataset.delay = String(delay);
+            revealEl(child, delay);
+        });
+        const containerObs = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                children.forEach(child => {
+                    if (window.gsap) {
+                        gsap.to(child, { opacity: 1, y: 0, duration: 0.5,
+                            delay: parseFloat(child.dataset.delay || '0'),
+                            ease: 'power2.out', clearProps: 'transform,opacity' });
+                    } else { showEl(child); }
+                });
+                containerObs.unobserve(entry.target);
+            });
+        }, { threshold: 0.05 });
+        containerObs.observe(container);
+    });
+}());
