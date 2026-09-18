@@ -2275,12 +2275,24 @@ a {
 .product-card::before {
     content: '';
     position: absolute;
-    inset: -1px;
-    border-radius: 15px;
+    inset: -2px;
+    border-radius: 16px;
     background: linear-gradient(135deg, var(--green), var(--teal));
     opacity: 0;
     transition: opacity 0.28s ease;
     z-index: 0;
+}
+/* White inner fill so gradient only shows as a border ring */
+.feature-card::after,
+.step-card::after,
+.product-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 14px;
+    background: var(--paper);
+    z-index: 0;
+    pointer-events: none;
 }
 .feature-card > *,
 .step-card > *,
@@ -2372,9 +2384,24 @@ h2.gradient-title {
     background-clip: text;
 }
 .metric-card strong.metric-placeholder {
-    background: none;
-    -webkit-text-fill-color: var(--muted);
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: var(--muted) !important;
+    background-clip: unset !important;
     color: var(--muted);
+    font-size: 0.82rem;
+    font-weight: 500;
+    display: block;
+    white-space: normal;
+    word-break: break-word;
+    line-height: 1.45;
+}
+/* Ensure metric cards always have enough room for placeholder text */
+.metric-card {
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 /* ── 10. Pipeline cards — number accent ─────────────────────── */

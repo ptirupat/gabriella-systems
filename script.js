@@ -250,7 +250,7 @@ function handleFormSubmit(form) {
                 throw new Error('Server error');
             }
         } catch {
-            alert('Sorry, something went wrong. Please email us directly at admin@gabriellasystems.com');
+            alert('Sorry, something went wrong. Please email us directly at info@gabriellasystems.com');
             btn.disabled = false;
             btn.textContent = orig;
         }
