@@ -3,17 +3,17 @@
 
 /* Reset and Base Styles */
 :root {
-    --ink: #14211f;
-    --muted: #5b6a66;
-    --soft: #f4f7f5;
+    --ink: #031E49;
+    --muted: #4a5e8a;
+    --soft: #FFF3F6;
     --paper: #ffffff;
-    --line: #dce6e1;
-    --teal: #0b4b4c;
-    --green: #167a5b;
-    --amber: #f2a900;
-    --coral: #e85d4f;
-    --blue: #2f6fba;
-    --shadow: 0 16px 36px rgba(17, 32, 29, 0.12);
+    --line: #e2e8f5;
+    --teal: #064B91;
+    --green: #F72772;
+    --amber: #FF9A78;
+    --coral: #FF5267;
+    --blue: #064B91;
+    --shadow: 0 16px 36px rgba(3, 30, 73, 0.12);
 }
 
 * {
@@ -67,7 +67,7 @@ a {
 /* Navigation Bar */
 .navbar {
     background: rgba(255, 255, 255, 0.96);
-    box-shadow: 0 2px 18px rgba(20, 33, 31, 0.08);
+    box-shadow: 0 2px 18px rgba(3, 30, 73, 0.08);
     position: fixed;
     top: 0;
     width: 100%;
@@ -148,7 +148,7 @@ a {
 .nav-link:hover,
 .nav-link.active {
     color: var(--green);
-    background: rgba(22, 122, 91, 0.1);
+    background: rgba(6, 75, 145, 0.08);
 }
 
 .hamburger {
@@ -193,7 +193,7 @@ a {
     align-items: center;
     padding: 140px 0 80px;
     color: white;
-    background: linear-gradient(135deg, #04121a 0%, #0b4b4c 45%, #0d3d3e 75%, #061217 100%);
+    background: linear-gradient(135deg, #01091a 0%, #064B91 45%, #042a5e 75%, #010d1f 100%);
     background-size: 300% 300%;
     animation: gradientShift 12s ease infinite;
     overflow: hidden;
@@ -280,7 +280,7 @@ a {
     background: var(--coral);
     color: white;
     padding: 0.85rem 1.45rem;
-    box-shadow: 0 10px 24px rgba(232, 93, 79, 0.26);
+    box-shadow: 0 10px 24px rgba(255, 82, 103, 0.26);
 }
 
 .secondary-button,
@@ -295,7 +295,7 @@ a {
 .submit-btn:hover,
 .run-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 28px rgba(232,93,79,0.45), 0 0 0 4px rgba(232,93,79,0.14);
+    box-shadow: 0 12px 28px rgba(255,82,103,0.45), 0 0 0 4px rgba(255,82,103,0.14);
     background: #d94f43;
 }
 
@@ -335,7 +335,7 @@ a {
     padding: 72px 0;
     color: white;
     background:
-        linear-gradient(135deg, rgba(11, 75, 76, 0.96), rgba(22, 122, 91, 0.9)),
+        linear-gradient(135deg, rgba(3, 30, 73, 0.96), rgba(6, 75, 145, 0.9)),
         url("assets/cricket-vision-hero.png") center / cover no-repeat;
 }
 
@@ -346,7 +346,7 @@ a {
 
 .page-hero .eyebrow,
 .demo-hero .eyebrow {
-    color: #ffd86b;
+    color: #FF9A78;
 }
 
 .redirect-page {
@@ -435,7 +435,7 @@ a {
     border: 1px solid var(--line);
     border-radius: 8px;
     padding: 1.7rem;
-    box-shadow: 0 10px 26px rgba(17, 32, 29, 0.08);
+    box-shadow: 0 10px 26px rgba(3, 30, 73, 0.08);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -443,7 +443,7 @@ a {
 .step-card:hover,
 .product-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 20px 40px rgba(17,32,29,0.14);
+    box-shadow: 0 20px 40px rgba(3,30,73,0.14);
     border-color: var(--green);
 }
 
@@ -454,7 +454,7 @@ a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: rgba(22, 122, 91, 0.12);
+    background: rgba(6, 75, 145, 0.1);
     color: var(--green);
     font-size: 1.5rem;
     margin-bottom: 1.1rem;
@@ -487,7 +487,7 @@ a {
 }
 
 .technology-band .text-link {
-    color: #ffd86b;
+    color: #FF9A78;
 }
 
 .split-layout,
@@ -532,7 +532,7 @@ a {
 }
 
 .accent-green {
-    border-left-color: #54d493;
+    border-left-color: #F72772;
 }
 
 .accent-amber {
@@ -544,7 +544,7 @@ a {
 }
 
 .accent-teal {
-    border-left-color: #6fd8dd;
+    border-left-color: #5b8fd9;
 }
 
 .step-card span {
@@ -942,7 +942,7 @@ a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: rgba(22, 122, 91, 0.12);
+    background: rgba(6, 75, 145, 0.1);
     color: var(--green);
 }
 
@@ -992,7 +992,7 @@ a {
 .form-group select:focus {
     outline: none;
     border-color: var(--green);
-    box-shadow: 0 0 0 4px rgba(22, 122, 91, 0.1);
+    box-shadow: 0 0 0 4px rgba(6, 75, 145, 0.08);
 }
 
 .form-group textarea {
@@ -1003,7 +1003,7 @@ a {
 /* Demo Page */
 .demo-hero {
     background:
-        linear-gradient(135deg, rgba(20, 33, 31, 0.96), rgba(47, 111, 186, 0.78)),
+        linear-gradient(135deg, rgba(3, 30, 73, 0.96), rgba(6, 75, 145, 0.78)),
         url("assets/cricket-vision-hero.png") center / cover no-repeat;
 }
 
@@ -1027,7 +1027,7 @@ a {
     background: white;
     border: 1px solid var(--line);
     border-radius: 8px;
-    box-shadow: 0 10px 28px rgba(17, 32, 29, 0.08);
+    box-shadow: 0 10px 28px rgba(3, 30, 73, 0.08);
     padding: 1.4rem;
 }
 
@@ -1062,8 +1062,8 @@ a {
 
 .file-button {
     color: var(--teal);
-    background: rgba(22, 122, 91, 0.1);
-    border-color: rgba(22, 122, 91, 0.26);
+    background: rgba(6, 75, 145, 0.08);
+    border-color: rgba(6, 75, 145, 0.22);
 }
 
 #video-upload {
@@ -1103,8 +1103,8 @@ a {
 
 .scenario-button.active {
     border-color: var(--green);
-    background: rgba(22, 122, 91, 0.09);
-    box-shadow: 0 0 0 4px rgba(22, 122, 91, 0.08);
+    background: rgba(6, 75, 145, 0.08);
+    box-shadow: 0 0 0 4px rgba(6, 75, 145, 0.08);
 }
 
 .run-button {
@@ -1150,7 +1150,7 @@ a {
     background:
         linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
         linear-gradient(0deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-        linear-gradient(140deg, #0b4b4c 0%, #1f7a54 48%, #f0b429 160%);
+        linear-gradient(140deg, #064B91 0%, #0e5dab 48%, #F72772 160%);
     background-size: 42px 42px, 42px 42px, auto;
 }
 
@@ -1377,7 +1377,7 @@ a {
 }
 
 .footer-col a:hover {
-    color: #ffd86b;
+    color: #FF9A78;
 }
 
 .footer-bottom {
@@ -1389,7 +1389,7 @@ a {
 }
 
 .footer-bottom a {
-    color: #ffd86b;
+    color: #FF9A78;
     text-decoration: none;
     font-weight: 600;
 }
@@ -1553,13 +1553,13 @@ a {
     border: 1px solid var(--line);
     border-radius: 8px;
     padding: 2rem;
-    box-shadow: 0 10px 26px rgba(17, 32, 29, 0.08);
+    box-shadow: 0 10px 26px rgba(3, 30, 73, 0.08);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .intelligence-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 20px 40px rgba(17,32,29,0.14);
+    box-shadow: 0 20px 40px rgba(3,30,73,0.14);
     border-color: var(--green);
 }
 
@@ -1609,7 +1609,7 @@ a {
     top: 0.8rem;
     left: 0.8rem;
     background: rgba(10, 20, 18, 0.88);
-    border: 1px solid rgba(22, 122, 91, 0.5);
+    border: 1px solid rgba(6, 75, 145, 0.5);
     border-radius: 8px;
     padding: 0.7rem 1rem;
     min-width: 13rem;
@@ -1617,7 +1617,7 @@ a {
 }
 
 .clip-hud-bowling {
-    border-color: rgba(11, 75, 76, 0.6);
+    border-color: rgba(6, 75, 145, 0.6);
 }
 
 .clip-hud-title {
@@ -1662,7 +1662,7 @@ a {
 .video-placeholder {
     position: relative;
     aspect-ratio: 16 / 9;
-    background: linear-gradient(140deg, #0b4b4c 0%, #1f7a54 48%, #14211f 100%);
+    background: linear-gradient(140deg, #064B91 0%, #0e5dab 48%, #031E49 100%);
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -1760,7 +1760,7 @@ a {
     min-height: 600px;
     border: 1px solid var(--line);
     border-radius: 8px;
-    background: linear-gradient(140deg, #0b4b4c 0%, #14211f 60%, #1f7a54 100%);
+    background: linear-gradient(140deg, #064B91 0%, #031E49 60%, #0e5dab 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1798,7 +1798,7 @@ a {
     border-radius: 8px;
     padding: 1.5rem;
     text-align: center;
-    box-shadow: 0 10px 26px rgba(17, 32, 29, 0.08);
+    box-shadow: 0 10px 26px rgba(3, 30, 73, 0.08);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -1814,7 +1814,7 @@ a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: rgba(22, 122, 91, 0.12);
+    background: rgba(6, 75, 145, 0.1);
     color: var(--green);
     font-size: 1.3rem;
     margin-bottom: 1rem;
@@ -1924,7 +1924,7 @@ a {
         width: 100%;
         text-align: center;
         transition: 0.25s ease;
-        box-shadow: 0 10px 27px rgba(17, 32, 29, 0.08);
+        box-shadow: 0 10px 27px rgba(3, 30, 73, 0.08);
         padding: 1.2rem 20px 1.6rem;
     }
 
@@ -2023,7 +2023,7 @@ a {
     height: 8px;
     border-radius: 50%;
     background: var(--green);
-    box-shadow: 0 0 8px rgba(22, 122, 91, 0.8);
+    box-shadow: 0 0 8px rgba(247, 39, 114, 0.8);
     display: inline-block;
     margin-bottom: 10px;
 }
@@ -2066,7 +2066,7 @@ a {
 
 .sparkline span {
     width: 5px;
-    background: rgba(22, 122, 91, 0.5);
+    background: rgba(6, 75, 145, 0.5);
     border-radius: 2px;
     transition: background 0.3s ease;
 }
