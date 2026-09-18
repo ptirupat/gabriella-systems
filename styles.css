@@ -2162,3 +2162,391 @@ a {
   background: #0b1210;
   object-fit: contain;
 }
+
+
+/* ============================================================
+   VISUAL ENHANCEMENTS — Creative & Eye-catching Upgrade
+   ============================================================ */
+
+/* ── 1. Eyebrow — accent bar before label ──────────────────── */
+.eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 3px;
+    background: var(--green);
+    border-radius: 99px;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+    margin-bottom: 1px;
+}
+
+/* ── 2. Hero gradient mesh — floating orbs ─────────────────── */
+.cricket-hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 60% 50% at 80% 20%, rgba(247,39,114,0.18) 0%, transparent 65%),
+        radial-gradient(ellipse 40% 40% at 10% 80%, rgba(6,75,145,0.35) 0%, transparent 60%),
+        radial-gradient(ellipse 30% 30% at 60% 90%, rgba(255,154,120,0.12) 0%, transparent 55%);
+    pointer-events: none;
+    animation: orbitShift 14s ease-in-out infinite alternate;
+}
+
+@keyframes orbitShift {
+    from { opacity: 0.7; transform: scale(1); }
+    to   { opacity: 1;   transform: scale(1.04); }
+}
+
+/* ── 3. Navigation — active indicator + CTA pill ──────────── */
+.nav-link.active {
+    position: relative;
+}
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 16px;
+    height: 2.5px;
+    background: var(--green);
+    border-radius: 99px;
+}
+
+/* "Request Pilot" stands out as a pill CTA in the nav */
+.nav-menu a[href="contact.html"].nav-link {
+    background: var(--green);
+    color: #fff !important;
+    border-radius: 999px;
+    padding: 0.45rem 1rem;
+    font-weight: 700;
+    transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+    box-shadow: 0 4px 14px rgba(247,39,114,0.28);
+}
+.nav-menu a[href="contact.html"].nav-link:hover {
+    background: #c9165a;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(247,39,114,0.4);
+}
+
+/* ── 4. Hero metric cards — glassmorphism ──────────────────── */
+.hero-metric-card {
+    backdrop-filter: blur(20px) saturate(1.5);
+    -webkit-backdrop-filter: blur(20px) saturate(1.5);
+    background: rgba(255,255,255,0.09);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.28), inset 0 1px 0 rgba(255,255,255,0.15);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.hero-metric-card:hover {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 16px 48px rgba(0,0,0,0.38), inset 0 1px 0 rgba(255,255,255,0.18);
+}
+.hero-metric-card .metric-value {
+    font-size: 2.6rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    background: linear-gradient(135deg, #fff 30%, rgba(255,154,120,0.9) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.hero-metric-card .metric-label {
+    color: rgba(255,255,255,0.72);
+    font-size: 0.74rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+/* ── 5. Feature / pillar cards — gradient border reveal ───── */
+.feature-card,
+.step-card,
+.product-card {
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: transform 0.28s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.28s ease;
+}
+.feature-card::before,
+.step-card::before,
+.product-card::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, var(--green), var(--teal));
+    opacity: 0;
+    transition: opacity 0.28s ease;
+    z-index: 0;
+}
+.feature-card > *,
+.step-card > *,
+.product-card > * { position: relative; z-index: 1; }
+
+.feature-card:hover::before,
+.step-card:hover::before,
+.product-card:hover::before {
+    opacity: 1;
+}
+.feature-card:hover,
+.step-card:hover,
+.product-card:hover {
+    transform: translateY(-7px) scale(1.01);
+    box-shadow: 0 24px 48px rgba(3,30,73,0.16);
+    border-color: transparent;
+}
+
+/* ── 6. Feature card icon — gradient pill ──────────────────── */
+.feature-card i {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(247,39,114,0.12), rgba(6,75,145,0.15));
+    color: var(--green);
+    font-size: 1.4rem;
+    box-shadow: 0 4px 12px rgba(247,39,114,0.15);
+}
+
+/* ── 7. CTA button — shimmer effect ────────────────────────── */
+.cta-button {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--green) 0%, #e01f62 100%);
+    border-radius: 999px;
+    box-shadow: 0 8px 24px rgba(247,39,114,0.32);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.cta-button::after {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 60%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.22), transparent);
+    transform: skewX(-20deg);
+    animation: shimmer 3.5s ease-in-out infinite;
+}
+@keyframes shimmer {
+    0%   { left: -100%; }
+    40%  { left: 130%; }
+    100% { left: 130%; }
+}
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 36px rgba(247,39,114,0.48);
+}
+.cta-button:active { transform: translateY(0); }
+
+/* ── 8. Section titles — gradient accent ───────────────────── */
+.section-intro h2,
+.page-hero h1 + h2,
+h2.gradient-title {
+    position: relative;
+}
+.section-intro h2::after {
+    content: '';
+    display: block;
+    width: 36px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--green), var(--amber));
+    border-radius: 99px;
+    margin-top: 0.7rem;
+}
+
+/* ── 9. Metric / stat cards — bold value highlight ─────────── */
+.metric-card {
+    border-radius: 12px;
+    border-left: 3px solid var(--green);
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+.metric-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px rgba(3,30,73,0.12);
+}
+.metric-card strong {
+    background: linear-gradient(135deg, var(--ink) 0%, var(--teal) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.metric-card strong.metric-placeholder {
+    background: none;
+    -webkit-text-fill-color: var(--muted);
+    color: var(--muted);
+}
+
+/* ── 10. Pipeline cards — number accent ─────────────────────── */
+.pipeline-card {
+    border-radius: 14px;
+    border-top: 3px solid var(--teal);
+    transition: transform 0.25s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.pipeline-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 20px 44px rgba(3,30,73,0.14);
+    border-top-color: var(--green);
+}
+.pipeline-card i {
+    font-size: 1.8rem;
+    color: var(--teal);
+    margin-bottom: 0.9rem;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+.pipeline-card:hover i {
+    color: var(--green);
+    transform: scale(1.15);
+}
+
+/* ── 11. Analysis stack rows — hover highlight ──────────────── */
+.analysis-row {
+    border-radius: 10px;
+    transition: transform 0.18s ease, background 0.18s ease;
+}
+.analysis-row:hover {
+    background: rgba(6,75,145,0.04);
+    transform: translateX(4px);
+}
+
+/* ── 12. Compare cards — polished ──────────────────────────── */
+.compare-card {
+    border-radius: 14px;
+    border-top: 3px solid var(--teal);
+    box-shadow: 0 8px 28px rgba(3,30,73,0.1);
+}
+
+/* ── 13. Technology band text link — animated underline ─────── */
+.technology-band .text-link {
+    position: relative;
+    text-decoration: none;
+    color: var(--amber);
+    font-weight: 700;
+}
+.technology-band .text-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; left: 0;
+    width: 0; height: 2px;
+    background: var(--amber);
+    border-radius: 99px;
+    transition: width 0.25s ease;
+}
+.technology-band .text-link:hover::after { width: 100%; }
+
+/* ── 14. Page hero — angled bottom edge ─────────────────────── */
+.page-hero, .demo-hero {
+    clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
+    padding-bottom: 96px;
+}
+.cricket-hero {
+    clip-path: polygon(0 0, 100% 0, 100% 94%, 0 100%);
+    padding-bottom: 110px;
+}
+
+/* ── 15. Subtle dot grid on muted sections ──────────────────── */
+.muted-section {
+    position: relative;
+}
+.muted-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(6,75,145,0.1) 1px, transparent 1px);
+    background-size: 28px 28px;
+    pointer-events: none;
+    z-index: 0;
+}
+.muted-section > * { position: relative; z-index: 1; }
+
+/* ── 16. Card — universal polish ────────────────────────────── */
+.card {
+    border-radius: 14px;
+    transition: box-shadow 0.22s ease, transform 0.22s ease, border-color 0.22s ease;
+}
+.card:hover {
+    box-shadow: 0 12px 36px rgba(3,30,73,0.1);
+}
+
+/* ── 17. Footer — subtle top gradient border ─────────────────── */
+.footer {
+    border-top: 1px solid rgba(255,255,255,0.08);
+    background: linear-gradient(180deg, #021440 0%, var(--ink) 100%);
+    position: relative;
+}
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--green), var(--teal), var(--amber));
+}
+
+/* ── 18. Sparkline bars — gradient fill ─────────────────────── */
+.sparkline span {
+    background: linear-gradient(180deg, rgba(255,154,120,0.9) 0%, rgba(247,39,114,0.6) 100%);
+    border-radius: 2px 2px 0 0;
+}
+
+/* ── 19. Status strip — icon pulse ──────────────────────────── */
+.status-item.status-live i {
+    animation: pulseLive 2s ease-in-out infinite;
+}
+@keyframes pulseLive {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50%       { opacity: 0.65; transform: scale(0.85); }
+}
+
+/* ── 20. Quote panel — decorative left rule ─────────────────── */
+.quote-panel {
+    border-left: 4px solid var(--green);
+    background: linear-gradient(135deg, rgba(247,39,114,0.04), rgba(6,75,145,0.04));
+    border-radius: 0 12px 12px 0;
+    padding: 24px 28px;
+}
+.quote-panel i {
+    color: var(--green);
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+}
+.quote-panel p { font-size: 1.05rem; font-style: italic; line-height: 1.65; }
+
+/* ── 21. Final CTA section — gradient bg ────────────────────── */
+.final-cta {
+    background: linear-gradient(135deg, var(--soft) 0%, #ffe8f0 100%);
+    padding: 72px 0;
+}
+.final-cta h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); }
+
+/* ── 22. Timeline items — hover lift ────────────────────────── */
+.timeline-item {
+    transition: transform 0.18s ease;
+    padding: 1rem 0 1rem 1.4rem;
+    border-left: 2px solid var(--line);
+    margin-left: 0.2rem;
+    position: relative;
+}
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -5px; top: 1.1rem;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--teal);
+    border: 2px solid var(--paper);
+    box-shadow: 0 0 0 2px var(--teal);
+}
+.timeline-item:hover { transform: translateX(4px); }
+
+/* ── 23. Hero section-intro heading — tighter, bolder ────────── */
+.cricket-hero h1 {
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    letter-spacing: -0.025em;
+}
+
+/* ── 24. Scroll-reveal — base state (GSAP drives this) ──────── */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(28px);
+}
+

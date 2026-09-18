@@ -256,3 +256,49 @@ function handleFormSubmit(form) {
         }
     });
 }
+
+// ── Scroll-reveal with GSAP + IntersectionObserver fallback ─────────────────
+(function initScrollReveal() {
+    const targets = document.querySelectorAll(
+        '.feature-card, .step-card, .product-card, .pipeline-card, ' +
+        '.metric-card, .pillar-card, .card, .timeline-item, ' +
+        '.section-intro, .mv-card, .value-card, .origin-stat, ' +
+        '.cricket-domain, .leadership-card, .research-bridge'
+    );
+
+    if (!targets.length) return;
+
+    // Use IntersectionObserver to trigger GSAP animations
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const el = entry.target;
+                const delay = parseFloat(el.dataset.delay || '0');
+                if (window.gsap) {
+                    gsap.to(el, {
+                        opacity: 1,
+                        y: 0,
+                        duration: 0.55,
+                        delay,
+                        ease: 'power2.out',
+                        clearProps: 'transform,opacity'
+                    });
+                } else {
+                    el.style.opacity = '1';
+                    el.style.transform = 'none';
+                }
+                observer.unobserve(el);
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    targets.forEach((el, i) => {
+        // Stagger siblings in the same parent grid
+        const siblings = Array.from(el.parentElement?.children || []);
+        const siblingIdx = siblings.indexOf(el);
+        el.dataset.delay = String(Math.min(siblingIdx * 0.07, 0.35));
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(22px)';
+        observer.observe(el);
+    });
+}());
