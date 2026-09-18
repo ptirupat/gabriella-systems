@@ -307,6 +307,21 @@
             padding: 36px;
             max-width: 600px;
         }
+        .leadership-card {
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+        }
+        .leadership-photo {
+            width: 108px;
+            height: 134px;
+            border-radius: 10px;
+            object-fit: cover;
+            object-position: center top;
+            flex-shrink: 0;
+            border: 1px solid var(--line);
+        }
+        .leadership-body { flex: 1; }
         .leadership-card h3 { font-size: 1.15rem; color: var(--ink); margin-bottom: 0.15rem; }
         .leadership-affil { font-size: 0.88rem; color: var(--teal); margin-bottom: 1rem; font-weight: 600; }
         .leadership-bio { font-size: 0.9rem; color: var(--muted); line-height: 1.7; }
@@ -317,6 +332,10 @@
             font-style: italic;
             border-top: 1px solid var(--line);
             padding-top: 0.8rem;
+        }
+        @media (max-width: 520px) {
+            .leadership-card { flex-direction: column; }
+            .leadership-photo { width: 88px; height: 110px; }
         }
 
         /* CTA band */
@@ -431,7 +450,7 @@
 
                     <!-- Pillar 3: Trustworthy Sports AI -->
                     <div class="pillar-card">
-                        <div class="pillar-icon amber"><i class="fas fa-shield-halved"></i></div>
+                        <div class="pillar-icon amber"><i class="fas fa-shield"></i></div>
                         <h3>Trustworthy Sports AI</h3>
                         <p class="pillar-tagline">Sports AI should communicate when its measurements are reliable — and when they are not.</p>
                         <ul class="pillar-topics">
@@ -574,6 +593,12 @@
                 <p class="eyebrow">Scientific Leadership</p>
                 <h2 style="margin-bottom:2rem;">Scientific Advisory</h2>
                 <div class="leadership-card">
+                    <img
+                        src="assets/mubarak-shah.jpg"
+                        alt="Prof. Mubarak Shah"
+                        class="leadership-photo"
+                    />
+                    <div class="leadership-body">
                     <h3>Prof. Mubarak Shah</h3>
                     <p class="leadership-affil">
                         University of Central Florida &nbsp;·&nbsp;
@@ -595,6 +620,7 @@
                         This biography draws only on publicly available academic information.
                         UCF as an institution does not sponsor, endorse, or own Gabriella Systems.
                     </p>
+                    </div><!-- /.leadership-body -->
                 </div>
             </div>
         </section>
