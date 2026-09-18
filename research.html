@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- REVIEW ONLY — NOT FOR PUBLIC RELEASE -->
+    <meta name="robots" content="noindex,nofollow">
+    <title>Research — Gabriella Systems</title>
+    <meta name="description" content="Gabriella studies how AI systems can understand human movement while remaining trustworthy to the people they measure.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* ── Research-page-specific styles ── */
+        .research-hero {
+            background: linear-gradient(135deg, #0b1f2e 0%, #0b4b4c 55%, #061217 100%);
+            padding: 96px 0 80px;
+            color: white;
+        }
+        .research-hero .eyebrow { color: #ffd86b; }
+        .research-hero h1 {
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            line-height: 1.08;
+            max-width: 800px;
+            margin-bottom: 1.2rem;
+        }
+        .research-hero p {
+            font-size: 1.18rem;
+            color: rgba(255,255,255,0.82);
+            max-width: 660px;
+        }
+
+        /* Pillar grid */
+        .pillar-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+        .pillar-card {
+            background: var(--paper);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 28px 24px;
+            transition: box-shadow 0.2s ease, transform 0.2s ease;
+        }
+        .pillar-card:hover {
+            box-shadow: 0 8px 24px rgba(17,32,29,0.1);
+            transform: translateY(-2px);
+        }
+        .pillar-number {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--teal);
+            margin-bottom: 0.6rem;
+        }
+        .pillar-card h3 {
+            font-size: 1.15rem;
+            margin-bottom: 0.6rem;
+            color: var(--ink);
+        }
+        .pillar-question {
+            font-size: 0.9rem;
+            color: var(--muted);
+            font-style: italic;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+        .pillar-topics {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+        .pillar-topics li {
+            padding: 0.2rem 0;
+            padding-left: 1.1rem;
+            position: relative;
+        }
+        .pillar-topics li::before {
+            content: "–";
+            position: absolute;
+            left: 0;
+            color: var(--teal);
+        }
+        .pillar-card.developmental {
+            border-left: 3px solid var(--teal);
+            background: linear-gradient(135deg, #f4faf8 0%, var(--paper) 100%);
+        }
+        .pillar-card.developmental .pillar-number { color: var(--green); }
+        .pillar-tag {
+            display: inline-block;
+            font-size: 0.68rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 2px 8px;
+            border-radius: 999px;
+            margin-top: 0.8rem;
+        }
+        .tag-thesis { background: rgba(11,75,76,0.1); color: var(--teal); }
+        .tag-question { background: rgba(242,169,0,0.12); color: #9a6f00; }
+        .tag-hypothesis { background: rgba(47,111,186,0.12); color: #1e5a9e; }
+        .tag-direction { background: rgba(232,93,79,0.12); color: #b83426; }
+        .tag-product { background: rgba(22,122,91,0.12); color: var(--green); }
+
+        /* Research concept sections */
+        .concept-section {
+            background: var(--soft);
+            border-left: 4px solid var(--teal);
+            border-radius: 0 12px 12px 0;
+            padding: 36px 40px;
+            margin: 2.5rem 0;
+        }
+        .concept-section h2 {
+            font-size: 1.6rem;
+            margin-bottom: 0.5rem;
+            color: var(--teal);
+        }
+        .concept-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--muted);
+            margin-bottom: 1rem;
+        }
+        .concept-section p {
+            color: var(--ink);
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        .research-questions {
+            list-style: none;
+            padding: 0;
+            margin: 1.2rem 0 0;
+        }
+        .research-questions li {
+            padding: 0.55rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--ink);
+            font-size: 0.95rem;
+            line-height: 1.55;
+            border-bottom: 1px solid var(--line);
+        }
+        .research-questions li:last-child { border-bottom: none; }
+        .research-questions li::before {
+            content: "?";
+            position: absolute;
+            left: 0;
+            color: var(--teal);
+            font-weight: 700;
+        }
+
+        /* Principles grid */
+        .principles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.2rem;
+            margin-top: 2rem;
+        }
+        .principle-card {
+            background: var(--paper);
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            padding: 22px 20px;
+        }
+        .principle-card h4 {
+            font-size: 0.95rem;
+            color: var(--teal);
+            margin-bottom: 0.5rem;
+        }
+        .principle-card p {
+            font-size: 0.88rem;
+            color: var(--muted);
+            line-height: 1.55;
+            margin: 0;
+        }
+
+        /* Scientific leadership */
+        .leadership-card {
+            max-width: 640px;
+            background: var(--paper);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 36px 40px;
+        }
+        .leadership-card h3 {
+            font-size: 1.25rem;
+            color: var(--ink);
+            margin-bottom: 0.2rem;
+        }
+        .leadership-affil {
+            font-size: 0.9rem;
+            color: var(--muted);
+            margin-bottom: 1.2rem;
+        }
+        .leadership-bio {
+            font-size: 0.92rem;
+            color: var(--ink);
+            line-height: 1.7;
+        }
+        .leadership-note {
+            font-size: 0.8rem;
+            color: var(--muted);
+            margin-top: 1rem;
+            font-style: italic;
+        }
+
+        /* Publications placeholder */
+        .pubs-placeholder {
+            background: var(--soft);
+            border: 2px dashed var(--line);
+            border-radius: 12px;
+            padding: 48px;
+            text-align: center;
+            color: var(--muted);
+        }
+        .pubs-placeholder p { margin: 0; font-size: 0.92rem; }
+
+        /* Research nav (local in-page) */
+        .research-toc {
+            background: var(--paper);
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            padding: 20px 24px;
+            margin-bottom: 2.5rem;
+        }
+        .research-toc p {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--muted);
+            margin-bottom: 0.6rem;
+        }
+        .research-toc-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .research-toc-links a {
+            font-size: 0.82rem;
+            color: var(--teal);
+            text-decoration: none;
+            padding: 3px 10px;
+            border-radius: 999px;
+            border: 1px solid var(--line);
+            transition: background 0.15s ease, color 0.15s ease;
+        }
+        .research-toc-links a:hover {
+            background: var(--teal);
+            color: white;
+        }
+
+        /* Review banner */
+        .review-banner {
+            background: #fff3cd;
+            border-bottom: 2px solid #f2a900;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 0.82rem;
+            color: #7a5400;
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+        }
+
+        /* External reference note */
+        .ref-note {
+            background: rgba(47,111,186,0.06);
+            border-left: 3px solid #2f6fba;
+            border-radius: 0 8px 8px 0;
+            padding: 16px 20px;
+            margin: 1.5rem 0;
+            font-size: 0.88rem;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+        .ref-note strong { color: var(--ink); }
+
+        /* Divider with label */
+        .section-divider {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 3rem 0 1.5rem;
+        }
+        .section-divider::before,
+        .section-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--line);
+        }
+        .section-divider span {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--muted);
+            white-space: nowrap;
+        }
+
+        /* Example box */
+        .example-box {
+            background: var(--soft);
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin: 1rem 0;
+            font-size: 0.88rem;
+        }
+        .example-box .avoid { color: var(--coral); text-decoration: line-through; }
+        .example-box .prefer { color: var(--green); }
+        .example-box small { color: var(--muted); display: block; margin-bottom: 0.4rem; font-weight: 600; text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.08em; }
+
+        @media (max-width: 640px) {
+            .concept-section { padding: 24px 20px; }
+            .leadership-card { padding: 24px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ⚠️ REVIEW BANNER — Remove before any public deployment -->
+    <div class="review-banner">
+        ⚠️ REVIEW DRAFT — Not for public release. noindex/nofollow applied. Do not share publicly or merge to production without explicit approval.
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="nav-logo-link">
+                    <img src="assets/logo.png" alt="Gabriella Systems" class="nav-logo-img">
+                    <span class="nav-logo-wordmark">Gabriella</span>
+                </a>
+            </div>
+            <!-- Research page is NOT added to production navigation -->
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="services.html" class="nav-link">Platform</a>
+                <a href="batting.html" class="nav-link">Batting</a>
+                <a href="bowling.html" class="nav-link">Bowling</a>
+                <a href="academies.html" class="nav-link">For Academies</a>
+                <a href="demo.html" class="nav-link">Showcase</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Request Pilot</a>
+                <!-- research.html intentionally absent from production nav -->
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="subpage-main">
+
+        <!-- HERO -->
+        <section class="research-hero">
+            <div class="container narrow">
+                <p class="eyebrow">Gabriella Research</p>
+                <h1>Understanding human movement — and the responsibility that follows</h1>
+                <p>
+                    Gabriella studies how AI systems can understand human movement
+                    while remaining trustworthy to the people they measure.
+                </p>
+            </div>
+        </section>
+
+        <!-- RESEARCH VISION -->
+        <section class="section" id="vision">
+            <div class="container narrow">
+                <p class="eyebrow">Research Vision</p>
+                <h2>A longer question behind the product</h2>
+                <p style="font-size:1.08rem; line-height:1.75; color:var(--ink); margin-bottom:1.2rem;">
+                    Gabriella began with a practical question: what can computer vision
+                    reliably reveal about athletic movement from ordinary video?
+                </p>
+                <p style="font-size:1.08rem; line-height:1.75; color:var(--ink); margin-bottom:1.2rem;">
+                    That question leads somewhere deeper.
+                </p>
+                <p style="font-size:1.08rem; line-height:1.75; color:var(--ink);">
+                    As AI systems become capable of observing, measuring and personalizing
+                    feedback about people across many sessions over time — what happens when
+                    the person being modeled is still developing? When the repeated feedback loop
+                    of an AI system becomes part of how a young person understands their ability,
+                    progress and identity?
+                </p>
+                <p style="font-size:1.08rem; line-height:1.75; color:var(--muted); margin-top:1rem;">
+                    Sports gives us a concrete research environment: movement is visible and
+                    repeatable, feedback can be structured, and progress is observable. Gabriella's
+                    research agenda uses this environment to study questions that may have broader
+                    implications for AI systems interacting with developing users across learning,
+                    rehabilitation and skill acquisition — though lessons in those domains would
+                    require separate future research.
+                </p>
+            </div>
+        </section>
+
+        <!-- FOUR PILLARS -->
+        <section class="section muted-section" id="pillars">
+            <div class="container">
+                <div class="section-intro">
+                    <p class="eyebrow">Four Research Pillars</p>
+                    <h2>How Gabriella organizes its research agenda</h2>
+                </div>
+
+                <div class="pillar-grid">
+
+                    <!-- Pillar 1 -->
+                    <div class="pillar-card" id="pillar-visual">
+                        <p class="pillar-number">Pillar 1</p>
+                        <h3>Visual Intelligence</h3>
+                        <p class="pillar-question">
+                            How can AI reliably understand complex human movement from ordinary video?
+                        </p>
+                        <ul class="pillar-topics">
+                            <li>Human pose and motion understanding</li>
+                            <li>Temporal action understanding</li>
+                            <li>Player, bat and ball tracking</li>
+                            <li>Delivery event detection</li>
+                            <li>Camera-view-aware perception</li>
+                            <li>Multimodal sports video understanding</li>
+                        </ul>
+                        <span class="pillar-tag tag-question">Research Area</span>
+                    </div>
+
+                    <!-- Pillar 2 -->
+                    <div class="pillar-card" id="pillar-measurement">
+                        <p class="pillar-number">Pillar 2</p>
+                        <h3>Measurement Intelligence</h3>
+                        <p class="pillar-question">
+                            How can visual observations become meaningful, reproducible measurements?
+                        </p>
+                        <ul class="pillar-topics">
+                            <li>Biomechanical measurement from video</li>
+                            <li>Uncertainty-aware metrics</li>
+                            <li>View-dependent measurement</li>
+                            <li>Temporal metrics</li>
+                            <li>Movement comparison frameworks</li>
+                            <li>Interpretable performance evidence</li>
+                            <li>Validity and repeatability of measurements</li>
+                        </ul>
+                        <p style="font-size:0.8rem; color:var(--muted); margin-top:0.8rem; font-style:italic;">
+                            Not every metric is measurable from every camera view.
+                            A core principle of this pillar is that systems should be
+                            explicit about what they cannot determine.
+                        </p>
+                        <span class="pillar-tag tag-question">Research Area</span>
+                    </div>
+
+                    <!-- Pillar 3 -->
+                    <div class="pillar-card" id="pillar-longitudinal">
+                        <p class="pillar-number">Pillar 3</p>
+                        <h3>Longitudinal Intelligence</h3>
+                        <p class="pillar-question">
+                            How should AI reason about how an individual changes over time?
+                        </p>
+                        <ul class="pillar-topics">
+                            <li>Session-to-session progression</li>
+                            <li>Within-athlete baselines</li>
+                            <li>Temporal personalization</li>
+                            <li>Detecting meaningful change vs. natural variation</li>
+                            <li>Avoiding misleading between-athlete comparisons</li>
+                            <li>Longitudinal representations of movement</li>
+                        </ul>
+                        <p style="font-size:0.8rem; color:var(--muted); margin-top:0.8rem; font-style:italic;">
+                            This pillar leads naturally into a fourth question —
+                            what happens when the person being modeled is still developing?
+                        </p>
+                        <span class="pillar-tag tag-question">Research Area</span>
+                    </div>
+
+                    <!-- Pillar 4 -->
+                    <div class="pillar-card developmental" id="pillar-developmental">
+                        <p class="pillar-number">Pillar 4 — Gabriella's emerging research thesis</p>
+                        <h3>Developmental Safety</h3>
+                        <p class="pillar-question">
+                            What changes when an AI system measures, evaluates and gives
+                            repeated feedback to a person who is still developing?
+                        </p>
+                        <p style="font-size:0.86rem; color:var(--ink); line-height:1.6; margin-bottom:0.8rem;">
+                            A conventional AI safety framework asks whether a system produces
+                            harmful outputs. Developmental safety asks an additional question:
+                            what happens when AI becomes part of the feedback loop through which
+                            a young person understands their ability, progress and identity?
+                        </p>
+                        <ul class="pillar-topics">
+                            <li>Identity and self-perception in AI feedback loops</li>
+                            <li>Agency and autonomy in youth-facing AI</li>
+                            <li>Responsibility of AI developers to developing users</li>
+                            <li>Human authority and oversight in AI-assisted development</li>
+                        </ul>
+                        <span class="pillar-tag tag-thesis">Gabriella Research Thesis</span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- THE ALGORITHMIC MIRROR -->
+        <section class="section" id="algorithmic-mirror">
+            <div class="container narrow">
+                <p class="eyebrow">Exploratory Research Concept</p>
+                <div class="concept-section">
+                    <p class="concept-label">Provisionally titled</p>
+                    <h2>The Algorithmic Mirror</h2>
+                    <p>
+                        AI systems increasingly do more than answer questions. They observe people,
+                        characterize their behavior, personalize responses and provide repeated
+                        judgments over time.
+                    </p>
+                    <p>
+                        For adolescents, that creates a distinct research problem. A system's
+                        interpretation can become part of the feedback through which a developing
+                        person understands performance, competence and progress.
+                    </p>
+                    <p>
+                        <strong>We refer to this feedback relationship as the Algorithmic Mirror.</strong>
+                    </p>
+                    <p style="color:var(--muted); font-size:0.9rem;">
+                        This is an exploratory research concept, not a validated psychological or
+                        clinical framework. We present it as a lens for identifying research questions.
+                    </p>
+
+                    <div class="section-divider"><span>Research Questions — not conclusions</span></div>
+
+                    <ul class="research-questions">
+                        <li>How does repeated AI feedback affect a young person's sense of competence?</li>
+                        <li>When does personalization become labeling?</li>
+                        <li>Can historical AI assessments constrain how a changing young person is subsequently interpreted?</li>
+                        <li>Should developmental AI systems intentionally reduce confidence in old characterizations?</li>
+                        <li>How should uncertainty be communicated differently to adolescents than to adults?</li>
+                        <li>When should an AI system defer to a coach, educator, parent or other responsible adult?</li>
+                        <li>What kinds of comparison motivate improvement, and what kinds may create unhealthy pressure?</li>
+                        <li>How should youth-facing AI distinguish measurement from judgment?</li>
+                    </ul>
+
+                    <p style="font-size:0.82rem; color:var(--muted); margin-top:1rem;">
+                        These are open research questions requiring interdisciplinary study. No
+                        psychological or clinical claims are made here.
+                    </p>
+                    <span class="pillar-tag tag-question">Research Question</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- DEVELOPMENTAL FORGETTING -->
+        <section class="section muted-section" id="developmental-forgetting">
+            <div class="container narrow">
+                <p class="eyebrow">Research Direction</p>
+                <h2>Developmental Forgetting</h2>
+                <p style="font-size:1.05rem; line-height:1.75; color:var(--ink); margin-bottom:1.2rem; font-style:italic;">
+                    "Personalization systems are generally designed to remember. For adolescents,
+                    responsible personalization may also require knowing when to forget."
+                </p>
+                <p style="line-height:1.7; color:var(--ink);">
+                    A teenager can change rapidly — in ability, in body, in how they understand
+                    themselves. An AI system should not necessarily treat historical characterizations
+                    as permanent attributes of a developing person.
+                </p>
+                <p style="line-height:1.7; color:var(--ink);">
+                    We are interested in investigating technical approaches that could account for
+                    this, including:
+                </p>
+
+                <ul class="pillar-topics" style="margin: 1rem 0 1.5rem 1rem; font-size:0.92rem;">
+                    <li>Recency-weighted personalization</li>
+                    <li>Confidence decay for historical assessments</li>
+                    <li>Temporary versus persistent user representations</li>
+                    <li>Explicit expiration of developmental labels</li>
+                    <li>Uncertainty around longitudinal inference</li>
+                    <li>Mechanisms allowing young users to reset or contest AI-generated characterizations</li>
+                </ul>
+
+                <div class="example-box">
+                    <small>Framing — how AI systems describe observations</small>
+                    <p style="margin:0.3rem 0;">
+                        <span class="avoid">"This athlete has poor timing."</span>
+                    </p>
+                    <p style="margin:0.3rem 0;">
+                        Research should instead investigate representations closer to:
+                    </p>
+                    <p style="margin:0;">
+                        <span class="prefer">"In recent observed sessions under this capture condition, timing differed from the athlete's recent baseline."</span>
+                    </p>
+                    <p style="margin-top:0.6rem; color:var(--muted); font-size:0.8rem;">
+                        The system should describe evidence rather than define the person.
+                        This distinction matters more when the person is still developing.
+                    </p>
+                </div>
+
+                <p style="font-size:0.85rem; color:var(--muted); margin-top:1rem;">
+                    This is a research direction — not a currently implemented Gabriella feature.
+                </p>
+                <span class="pillar-tag tag-hypothesis">Research Hypothesis</span>
+            </div>
+        </section>
+
+        <!-- EMBODIED AI -->
+        <section class="section" id="embodied-ai">
+            <div class="container narrow">
+                <p class="eyebrow">Research Theme</p>
+                <h2>Embodied AI and the Developing Self</h2>
+
+                <p style="line-height:1.7; color:var(--ink); margin-bottom:1.2rem;">
+                    Most youth-AI research to date has focused on conversational interaction —
+                    chatbots, tutoring systems, recommendation engines. Embodied AI introduces
+                    a different and less-studied class of interaction.
+                </p>
+
+                <div class="concept-section" style="margin:1.5rem 0;">
+                    <p style="margin:0; font-size:0.95rem; line-height:1.7; color:var(--ink);">
+                        AI observes the body or behavior
+                        → converts observations into measurements
+                        → interprets performance
+                        → provides feedback
+                        → observes the person again
+                        → builds a longitudinal model.
+                    </p>
+                </div>
+
+                <p style="line-height:1.7; color:var(--ink); margin-bottom:1rem;">
+                    This repeated observation-and-feedback loop raises research questions about:
+                </p>
+
+                <div class="principles-grid" style="margin-bottom:1.5rem;">
+                    <div style="background:var(--soft); border-radius:8px; padding:14px 16px; font-size:0.88rem; color:var(--muted);">Agency</div>
+                    <div style="background:var(--soft); border-radius:8px; padding:14px 16px; font-size:0.88rem; color:var(--muted);">Self-perception</div>
+                    <div style="background:var(--soft); border-radius:8px; padding:14px 16px; font-size:0.88rem; color:var(--muted);">Identity</div>
+                    <div style="background:var(--soft); border-radius:8px; padding:14px 16px; font-size:0.88rem; color:var(--muted);">Trust</div>
+                    <div style="background:var(--soft); border-radius:8px; padding:14px 16px; font-size:0.88rem; color:var(--muted);">Autonomy</div>
+                    <div style="background:var(--soft); border-radius:8px; padding:14px 16px; font-size:0.88rem; color:var(--muted);">Feedback dependence</div>
+                    <div style="background:var(--soft); border-radius:8px; padding:14px 16px; font-size:0.88rem; color:var(--muted);">Comparison</div>
+                    <div style="background:var(--soft); border-radius:8px; padding:14px 16px; font-size:0.88rem; color:var(--muted);">Human authority</div>
+                </div>
+
+                <p style="line-height:1.7; color:var(--ink);">
+                    Sports is a useful research environment because repeated movement, feedback and
+                    improvement are observable, structured and often explicitly coached. Cricket is
+                    Gabriella's initial product domain. Baseball and softball are planned extensions.
+                </p>
+                <p style="line-height:1.7; color:var(--muted); font-size:0.9rem;">
+                    Sports is not the only domain in which these questions arise. Lessons from
+                    sports AI research could potentially inform systems that evaluate developing users
+                    in learning, rehabilitation or skill acquisition — but applying them to those
+                    domains would require separate, domain-specific research.
+                </p>
+                <span class="pillar-tag tag-direction">Future Research Direction</span>
+            </div>
+        </section>
+
+        <!-- YOUTH AI SAFETY PRINCIPLES -->
+        <section class="section muted-section" id="youth-ai-safety">
+            <div class="container">
+                <div class="section-intro">
+                    <p class="eyebrow">Research Principles</p>
+                    <h2>Designing AI for Developing Users</h2>
+                    <p style="max-width:640px; color:var(--muted);">
+                        These principles reflect the research questions that guide Gabriella's work.
+                        They are design aspirations and research orientations, not claims about
+                        currently implemented capabilities.
+                    </p>
+                </div>
+
+                <div class="principles-grid">
+                    <div class="principle-card">
+                        <h4>Measurement, not identity</h4>
+                        <p>AI should characterize observations — not define the young person. A system
+                        should describe what it observed, under what conditions, and with what
+                        confidence. It should not permanently categorize a developing person.</p>
+                        <span class="pillar-tag tag-hypothesis" style="font-size:0.65rem;">Research Principle</span>
+                    </div>
+                    <div class="principle-card">
+                        <h4>Progress over ranking</h4>
+                        <p>Where possible, compare an individual against their own longitudinal
+                        baseline rather than defaulting to peer ranking. Whether this produces better
+                        development outcomes is itself a research question we are interested in studying.</p>
+                        <span class="pillar-tag tag-question" style="font-size:0.65rem;">Research Question</span>
+                    </div>
+                    <div class="principle-card">
+                        <h4>Uncertainty should be visible</h4>
+                        <p>AI-generated movement measurements and interpretations should communicate
+                        their limitations. Not every metric is measurable from every camera view.
+                        Not every measurement is equally reliable across all conditions.</p>
+                        <span class="pillar-tag tag-product" style="font-size:0.65rem;">Current Product Principle</span>
+                    </div>
+                    <div class="principle-card">
+                        <h4>Human authority matters</h4>
+                        <p>AI should support coaches, educators, parents and young people rather than
+                        silently replacing consequential human judgment. Research should examine when
+                        and how AI systems should explicitly defer to responsible adults.</p>
+                        <span class="pillar-tag tag-question" style="font-size:0.65rem;">Research Question</span>
+                    </div>
+                    <div class="principle-card">
+                        <h4>Youth data deserves stronger boundaries</h4>
+                        <p>Research should investigate consent, assent, retention, deletion, secondary
+                        use and access to video and derived movement and biometric representations of
+                        minors. These boundaries differ from those appropriate for adult data.</p>
+                        <span class="pillar-tag tag-direction" style="font-size:0.65rem;">Future Research Direction</span>
+                    </div>
+                    <div class="principle-card">
+                        <h4>Development changes the model</h4>
+                        <p>A model of a young user should account for the fact that the person being
+                        modeled is changing — rapidly, and in multiple dimensions. Historical
+                        characterizations of a teenager may become misleading within months.</p>
+                        <span class="pillar-tag tag-hypothesis" style="font-size:0.65rem;">Research Hypothesis</span>
+                    </div>
+                    <div class="principle-card">
+                        <h4>The right to evolve</h4>
+                        <p>Historical AI characterizations should not become permanent labels for
+                        developing people. We are interested in research into technical mechanisms
+                        that give young users some agency over AI-generated representations of them.</p>
+                        <span class="pillar-tag tag-direction" style="font-size:0.65rem;">Future Research Direction</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXTERNAL RESEARCH CONTEXT -->
+        <section class="section" id="research-context">
+            <div class="container narrow">
+                <p class="eyebrow">Research Context</p>
+                <h2>A growing research need</h2>
+                <p style="line-height:1.7; color:var(--ink); margin-bottom:1.2rem;">
+                    The questions Gabriella's research agenda addresses are increasingly recognized
+                    as important across the AI research community.
+                </p>
+
+                <div class="ref-note">
+                    <strong>OpenAI Teen Development Research Program (September 2026)</strong>
+                    <p style="margin:0.5rem 0 0; font-size:0.88rem;">
+                        OpenAI announced a $5M independent research program studying how generative
+                        AI affects young people ages 13–17, highlighting research questions involving
+                        identity, agency, self-esteem, emotional development, social connection,
+                        age-appropriate AI design, safeguards, individual and contextual variation,
+                        privacy and safeguarding.
+                    </p>
+                    <p style="margin:0.5rem 0 0; font-size:0.82rem; color:var(--muted);">
+                        Source: <a href="https://openai.com/index/teen-development-research-grants/" target="_blank" rel="noopener noreferrer" style="color:var(--teal);">openai.com/index/teen-development-research-grants/</a>
+                    </p>
+                    <p style="margin:0.8rem 0 0; font-size:0.8rem; color:var(--muted); font-style:italic;">
+                        <strong>Note:</strong> This program is cited as evidence that these are important
+                        emerging research questions, not as evidence of any relationship between
+                        Gabriella Systems and OpenAI. Gabriella has not received OpenAI funding, is not
+                        an OpenAI partner, and OpenAI has not endorsed Gabriella or its research framework.
+                    </p>
+                </div>
+
+                <p style="line-height:1.7; color:var(--muted); font-size:0.92rem;">
+                    Gabriella's research agenda is independently motivated. We study a specific
+                    instance of the broader question: what happens when AI systems that are
+                    embodied — observing and measuring bodies rather than processing text —
+                    interact repeatedly with developing users?
+                </p>
+            </div>
+        </section>
+
+        <!-- PUBLICATIONS PLACEHOLDER -->
+        <section class="section muted-section" id="publications">
+            <div class="container">
+                <p class="eyebrow">Research Outputs</p>
+                <h2>Publications &amp; Research</h2>
+                <div class="pubs-placeholder">
+                    <i class="fas fa-flask" style="font-size:2rem; margin-bottom:1rem; color:var(--line);"></i>
+                    <p><strong>Placeholder — no publications to display yet.</strong></p>
+                    <p style="margin-top:0.5rem;">Research outputs will be listed here as they become available.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCIENTIFIC LEADERSHIP -->
+        <section class="section" id="scientific-leadership">
+            <div class="container">
+                <p class="eyebrow">Scientific Leadership</p>
+                <h2 style="margin-bottom:2rem;">Scientific Advisory</h2>
+
+                <!-- ⚠️ REVIEW NOTE: Role designation and biography wording require explicit approval before publication. -->
+                <div class="leadership-card">
+                    <h3>Prof. Mubarak Shah</h3>
+                    <p class="leadership-affil">University of Central Florida</p>
+                    <p class="leadership-bio">
+                        Mubarak Shah is a Distinguished Professor of Computer Science and
+                        founding director of the Center for Research in Computer Vision (CRCV)
+                        at the University of Central Florida. His research spans computer vision,
+                        video analysis, human activity recognition, visual surveillance and
+                        machine learning, with decades of contributions to the field.
+                    </p>
+                    <p class="leadership-bio" style="margin-top:0.8rem;">
+                        He is a Fellow of IEEE, a Fellow of AAAI, a Fellow of IAPR, and a
+                        Fellow of the ACM. His published work has been widely cited across
+                        computer vision and AI research communities, with particular contributions
+                        to pose estimation, tracking, action recognition and video understanding.
+                    </p>
+                    <p class="leadership-note">
+                        ⚠️ Review note: The specific advisory role title and the exact framing of
+                        Prof. Shah's involvement require explicit confirmation before this section
+                        is made public. This biography draws only on publicly available information.
+                        UCF institutional endorsement of Gabriella Systems is not implied.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- REVIEW FOOTER NOTE -->
+    <footer class="footer">
+        <div class="container">
+            <div style="background:#fff3cd; border:1px solid #f2a900; border-radius:8px; padding:20px 24px; margin-bottom:2rem; font-size:0.82rem; color:#7a5400;">
+                <strong>⚠️ Review version — not for public release.</strong>
+                This page has <code>noindex, nofollow</code> applied, is not linked from production navigation,
+                is not in sitemap.xml, and must not be deployed to the public site without explicit approval.
+                Branch: <code>preview/research-page</code>
+            </div>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="nav-logo-text">Gabriella Systems</span>
+                    <p>Computer vision for cricket performance — batting and bowling intelligence from a single portable system.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <a href="services.html">Platform</a>
+                    <a href="batting.html">Batting</a>
+                    <a href="bowling.html">Bowling</a>
+                    <a href="academies.html">For Academies</a>
+                    <a href="demo.html">Showcase</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Request a Pilot</a>
+                    <a href="mailto:admin@gabriellasystems.com">admin@gabriellasystems.com</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Gabriella Systems. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
