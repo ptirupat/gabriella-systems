@@ -2579,3 +2579,618 @@ h2.gradient-title {
     transform: translateY(28px);
 }
 
+
+
+/* ╔══════════════════════════════════════════════════════════════╗
+   ║  CREATIVE VISUAL SYSTEM v2 — Maximum aesthetic impact       ║
+   ╚══════════════════════════════════════════════════════════════╝ */
+
+/* ────────────────────────────────────────────────────────────────
+   T1 · TYPOGRAPHY SCALE — Larger, bolder, tighter kerning
+   ──────────────────────────────────────────────────────────────── */
+h1, h2, h3 {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    letter-spacing: -0.025em;
+}
+.section-intro h2,
+.split-layout h2,
+.content-grid h2,
+.contact-info h2,
+.contact-form h2 {
+    font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+}
+.cricket-hero h1 {
+    font-size: clamp(3.2rem, 8vw, 5.8rem);
+    letter-spacing: -0.04em;
+    line-height: 0.97;
+}
+.page-hero h1, .demo-hero h1, .research-hero h1 {
+    font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+    letter-spacing: -0.035em;
+    line-height: 1.04;
+}
+
+/* Gradient on one key word in headings */
+.grad-word {
+    background: linear-gradient(135deg, var(--green) 0%, var(--amber) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ────────────────────────────────────────────────────────────────
+   T2 · HERO — Dynamic mesh, angled edge, depth layers
+   ──────────────────────────────────────────────────────────────── */
+.cricket-hero {
+    background:
+        radial-gradient(ellipse 55% 60% at 85% 10%, rgba(247,39,114,0.22) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 50% at 5% 90%, rgba(255,154,120,0.14) 0%, transparent 55%),
+        radial-gradient(ellipse 70% 80% at 50% 50%, rgba(6,75,145,0.5) 0%, transparent 70%),
+        linear-gradient(145deg, #01091a 0%, #031E49 40%, #064B91 75%, #021030 100%);
+    background-size: 100% 100%;
+}
+/* Animated floating orb */
+.cricket-hero::before {
+    content: '';
+    position: absolute;
+    width: 520px; height: 520px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(247,39,114,0.18) 0%, transparent 65%);
+    top: -120px; right: -80px;
+    animation: floatOrb 8s ease-in-out infinite alternate;
+    pointer-events: none;
+}
+@keyframes floatOrb {
+    from { transform: translate(0,0) scale(1); }
+    to   { transform: translate(-30px, 40px) scale(1.08); }
+}
+/* Secondary orb */
+.cricket-hero::after {
+    content: '';
+    position: absolute;
+    width: 340px; height: 340px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,154,120,0.12) 0%, transparent 65%);
+    bottom: 40px; left: 5%;
+    animation: floatOrb 11s ease-in-out infinite alternate-reverse;
+    pointer-events: none;
+}
+
+/* ────────────────────────────────────────────────────────────────
+   T3 · HERO METRIC CARDS — Stronger glassmorphism & glow
+   ──────────────────────────────────────────────────────────────── */
+.hero-metric-card {
+    backdrop-filter: blur(24px) saturate(180%) brightness(1.05);
+    -webkit-backdrop-filter: blur(24px) saturate(180%) brightness(1.05);
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 20px;
+    box-shadow:
+        0 8px 32px rgba(0,0,0,0.32),
+        inset 0 1px 0 rgba(255,255,255,0.18),
+        inset 0 -1px 0 rgba(0,0,0,0.1);
+}
+.hero-metric-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    background: linear-gradient(145deg, rgba(255,255,255,0.06) 0%, transparent 60%);
+    pointer-events: none;
+}
+.hero-metric-card .metric-value {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 1;
+    background: linear-gradient(135deg, #fff 0%, rgba(255,180,140,0.95) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 2px 8px rgba(255,100,60,0.3));
+}
+
+/* ────────────────────────────────────────────────────────────────
+   T4 · SECTION INTROS — Numbered accent + wider headings
+   ──────────────────────────────────────────────────────────────── */
+.section-intro {
+    max-width: 860px;
+}
+/* Eyebrow track */
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    background: rgba(247,39,114,0.08);
+    border: 1px solid rgba(247,39,114,0.18);
+    border-radius: 999px;
+    padding: 0.28rem 0.85rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.13em;
+    color: var(--green) !important;
+    font-weight: 800;
+}
+.eyebrow::before {
+    background: var(--green);
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    /* override the previous bar */
+    height: 5px;
+    border-radius: 50%;
+}
+
+/* ────────────────────────────────────────────────────────────────
+   T5 · CARDS — Refined depth system
+   ──────────────────────────────────────────────────────────────── */
+.feature-card, .step-card, .product-card {
+    border-radius: 18px;
+    border: 1px solid var(--line);
+    box-shadow: 0 1px 3px rgba(3,30,73,0.04), 0 8px 24px rgba(3,30,73,0.06);
+    padding: 1.8rem;
+    transition: box-shadow 0.3s cubic-bezier(0.34,1.2,0.64,1),
+                transform  0.3s cubic-bezier(0.34,1.2,0.64,1),
+                border-color 0.2s ease;
+}
+.feature-card:hover, .step-card:hover, .product-card:hover {
+    box-shadow: 0 0 0 2px var(--green), 0 20px 48px rgba(3,30,73,0.14);
+    transform: translateY(-6px);
+    border-color: transparent;
+}
+/* Override the ::before gradient fill — just use outline glow */
+.feature-card::before,
+.step-card::before,
+.product-card::before {
+    display: none;
+}
+.feature-card::after,
+.step-card::after,
+.product-card::after {
+    display: none;
+}
+
+/* Feature icon — bold gradient circle */
+.feature-card i {
+    width: 56px; height: 56px;
+    border-radius: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+    background: linear-gradient(135deg, rgba(247,39,114,0.12) 0%, rgba(6,75,145,0.14) 100%);
+    color: var(--green);
+    border: 1px solid rgba(247,39,114,0.15);
+    box-shadow: 0 4px 12px rgba(247,39,114,0.12);
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+.feature-card:hover i {
+    background: linear-gradient(135deg, var(--green) 0%, #e01f62 100%);
+    color: white;
+    transform: scale(1.1) rotate(-3deg);
+    border-color: transparent;
+    box-shadow: 0 6px 20px rgba(247,39,114,0.4);
+}
+
+/* ────────────────────────────────────────────────────────────────
+   T6 · PIPELINE CARDS — Icon-first, bold treatment
+   ──────────────────────────────────────────────────────────────── */
+.pipeline-card {
+    border-radius: 16px;
+    border: 1px solid var(--line);
+    border-top: none;
+    padding: 1.6rem;
+    box-shadow: 0 2px 12px rgba(3,30,73,0.06);
+    position: relative;
+    overflow: hidden;
+}
+.pipeline-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--green), var(--teal));
+    transition: height 0.25s ease;
+}
+.pipeline-card:hover::before { height: 5px; }
+.pipeline-card i {
+    font-size: 2rem;
+    color: var(--teal);
+    margin-bottom: 1rem;
+    display: block;
+    transition: transform 0.25s cubic-bezier(0.34,1.6,0.64,1), color 0.2s ease;
+}
+.pipeline-card:hover {
+    border-color: rgba(247,39,114,0.2);
+    box-shadow: 0 12px 36px rgba(3,30,73,0.12);
+    transform: translateY(-5px);
+}
+.pipeline-card:hover i {
+    color: var(--green);
+    transform: scale(1.2) translateY(-2px);
+}
+
+/* ────────────────────────────────────────────────────────────────
+   T7 · TECHNOLOGY BAND — Full-bleed dramatic dark section
+   ──────────────────────────────────────────────────────────────── */
+.technology-band {
+    background:
+        radial-gradient(ellipse 60% 80% at 95% 50%, rgba(247,39,114,0.12) 0%, transparent 60%),
+        linear-gradient(135deg, var(--ink) 0%, #042057 60%, var(--teal) 100%);
+    position: relative;
+    overflow: hidden;
+}
+.technology-band::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(0deg,  rgba(255,255,255,0.02) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+}
+
+/* ────────────────────────────────────────────────────────────────
+   T8 · ANALYSIS STACK ROWS — Better visual structure
+   ──────────────────────────────────────────────────────────────── */
+.analysis-row {
+    border-radius: 12px;
+    padding: 14px 18px;
+    border: 1px solid var(--line);
+    background: var(--paper);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 0.95rem;
+    box-shadow: 0 2px 8px rgba(3,30,73,0.04);
+}
+.analysis-row.accent-green  { border-left: 3px solid var(--green); }
+.analysis-row.accent-amber  { border-left: 3px solid var(--amber); }
+.analysis-row.accent-coral  { border-left: 3px solid var(--coral); }
+.analysis-row.accent-teal   { border-left: 3px solid var(--teal);  }
+.analysis-row span { color: var(--muted); font-size: 0.88rem; }
+.analysis-row strong { color: var(--ink); font-weight: 700; font-size: 1rem; }
+.analysis-row:hover {
+    background: var(--soft);
+    transform: translateX(5px);
+    box-shadow: 0 4px 16px rgba(3,30,73,0.08);
+}
+
+/* ────────────────────────────────────────────────────────────────
+   T9 · COMPARE CARD — Premium dark version
+   ──────────────────────────────────────────────────────────────── */
+.compare-card {
+    background: linear-gradient(145deg, var(--ink) 0%, #042057 100%);
+    border: none;
+    border-radius: 18px;
+    padding: 28px;
+    box-shadow: 0 16px 48px rgba(3,30,73,0.28);
+    color: white;
+}
+.compare-card h4 {
+    color: var(--amber);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.13em;
+    font-weight: 800;
+    margin-bottom: 1.2rem;
+}
+.compare-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    font-size: 0.9rem;
+}
+.compare-row:last-child { border-bottom: none; }
+.compare-row span { color: rgba(255,255,255,0.65); }
+.compare-row strong { color: white; font-weight: 700; }
+.compare-disclaimer {
+    color: rgba(255,255,255,0.4);
+    font-size: 0.75rem;
+    font-style: italic;
+    margin-top: 0.6rem;
+}
+
+/* ────────────────────────────────────────────────────────────────
+   T10 · METRIC CARDS — Big number treatment
+   ──────────────────────────────────────────────────────────────── */
+.metric-card {
+    border-radius: 16px;
+    border: 1px solid var(--line);
+    border-left: none;
+    background: var(--paper);
+    padding: 1.4rem 1.6rem;
+    position: relative;
+    overflow: hidden;
+    min-height: 88px;
+}
+.metric-card::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 4px;
+    background: linear-gradient(180deg, var(--green) 0%, var(--teal) 100%);
+    border-radius: 0 2px 2px 0;
+}
+.metric-card span {
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    display: block;
+    margin-bottom: 0.4rem;
+}
+.metric-card strong {
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    background: linear-gradient(135deg, var(--ink) 0%, var(--teal) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.1;
+}
+.metric-card:hover {
+    box-shadow: 0 8px 28px rgba(3,30,73,0.1);
+    transform: translateY(-3px);
+    border-color: rgba(247,39,114,0.15);
+}
+.metric-card:hover::before {
+    background: linear-gradient(180deg, var(--green) 0%, var(--amber) 100%);
+    width: 5px;
+}
+
+/* ────────────────────────────────────────────────────────────────
+   T11 · QUOTE PANEL — Editorial style
+   ──────────────────────────────────────────────────────────────── */
+.quote-panel {
+    background: linear-gradient(135deg, rgba(247,39,114,0.05) 0%, rgba(6,75,145,0.05) 100%);
+    border: none;
+    border-left: 4px solid var(--green);
+    border-radius: 0 20px 20px 0;
+    padding: 32px 36px;
+    position: relative;
+    overflow: hidden;
+}
+.quote-panel::after {
+    content: '\201C';
+    position: absolute;
+    top: -20px; right: 20px;
+    font-size: 9rem;
+    color: rgba(247,39,114,0.07);
+    font-family: Georgia, serif;
+    line-height: 1;
+    pointer-events: none;
+}
+.quote-panel i { display: none; }
+.quote-panel p {
+    font-size: 1.12rem;
+    font-style: italic;
+    line-height: 1.65;
+    color: var(--ink);
+    font-weight: 500;
+}
+
+/* ────────────────────────────────────────────────────────────────
+   T12 · PAGE HERO SECTIONS — Deeper gradient
+   ──────────────────────────────────────────────────────────────── */
+.page-hero, .demo-hero {
+    background:
+        radial-gradient(ellipse 50% 80% at 80% 30%, rgba(247,39,114,0.15) 0%, transparent 60%),
+        linear-gradient(145deg, rgba(3,30,73,0.98), rgba(6,75,145,0.92)),
+        url("assets/cricket-vision-hero.png") center / cover no-repeat;
+    padding-bottom: 96px;
+}
+.page-hero .eyebrow, .demo-hero .eyebrow {
+    background: rgba(255,255,255,0.1) !important;
+    border-color: rgba(255,255,255,0.2) !important;
+    color: var(--amber) !important;
+}
+
+/* ────────────────────────────────────────────────────────────────
+   T13 · CTA BUTTON — Gradient + stronger glow
+   ──────────────────────────────────────────────────────────────── */
+.cta-button {
+    background: linear-gradient(135deg, var(--green) 0%, #d9185e 100%);
+    border-radius: 12px;
+    padding: 0.9rem 1.6rem;
+    font-size: 0.92rem;
+    letter-spacing: 0.02em;
+    box-shadow: 0 4px 20px rgba(247,39,114,0.35), 0 1px 3px rgba(0,0,0,0.15);
+    border: 1px solid rgba(255,255,255,0.15);
+}
+.cta-button:hover {
+    background: linear-gradient(135deg, #e01f62 0%, #c4134f 100%);
+    box-shadow: 0 8px 32px rgba(247,39,114,0.5), 0 2px 6px rgba(0,0,0,0.2);
+    transform: translateY(-2px);
+}
+
+/* Secondary button — dark outline version for light bgs */
+.final-cta .secondary-button,
+.page-hero .secondary-button,
+.cricket-hero .secondary-button,
+.demo-hero .secondary-button {
+    background: rgba(255,255,255,0.1);
+    border-color: rgba(255,255,255,0.3);
+    color: white;
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+}
+.final-cta .secondary-button:hover,
+.page-hero .secondary-button:hover,
+.cricket-hero .secondary-button:hover,
+.demo-hero .secondary-button:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* ────────────────────────────────────────────────────────────────
+   T14 · FOOTER — Elevated dark treatment
+   ──────────────────────────────────────────────────────────────── */
+.footer {
+    background:
+        radial-gradient(ellipse 60% 60% at 90% 100%, rgba(247,39,114,0.07) 0%, transparent 55%),
+        linear-gradient(180deg, #021235 0%, #010d23 100%);
+}
+.footer-col h4 {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+.footer-col a {
+    color: rgba(255,255,255,0.6);
+    font-size: 0.88rem;
+    transition: color 0.18s ease, transform 0.18s ease;
+    display: inline-block;
+}
+.footer-col a:hover {
+    color: white;
+    transform: translateX(4px);
+}
+
+/* ────────────────────────────────────────────────────────────────
+   T15 · CARD BASE — Universal upgrade
+   ──────────────────────────────────────────────────────────────── */
+.card {
+    border-radius: 18px;
+    border: 1px solid var(--line);
+    box-shadow: 0 2px 8px rgba(3,30,73,0.04), 0 8px 24px rgba(3,30,73,0.05);
+    background: var(--paper);
+    transition: box-shadow 0.28s ease, transform 0.28s cubic-bezier(0.34,1.2,0.64,1), border-color 0.2s ease;
+}
+.card:hover {
+    box-shadow: 0 0 0 2px rgba(247,39,114,0.2), 0 16px 40px rgba(3,30,73,0.12);
+    border-color: transparent;
+}
+
+/* ────────────────────────────────────────────────────────────────
+   T16 · STATUS STRIP — Polished pill badges
+   ──────────────────────────────────────────────────────────────── */
+.status-strip { gap: 0.75rem; flex-wrap: wrap; }
+.status-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.78rem;
+    padding: 0.35rem 0.85rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.14);
+    backdrop-filter: blur(8px);
+    background: rgba(255,255,255,0.06);
+}
+.status-item.status-live   { border-color: rgba(247,39,114,0.35); }
+.status-item.status-planned { border-color: rgba(255,154,120,0.3); }
+
+/* ────────────────────────────────────────────────────────────────
+   T17 · NAVBAR — Frosted glass upgrade
+   ──────────────────────────────────────────────────────────────── */
+.navbar.scrolled {
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    background: rgba(255,255,255,0.92) !important;
+    box-shadow: 0 1px 0 rgba(3,30,73,0.08), 0 4px 24px rgba(3,30,73,0.06);
+}
+
+/* ────────────────────────────────────────────────────────────────
+   T18 · MUTED SECTIONS — Cleaner subtle bg (override dot grid)
+   ──────────────────────────────────────────────────────────────── */
+.muted-section {
+    background: linear-gradient(180deg, #fdf8fb 0%, var(--soft) 100%);
+}
+.muted-section::before {
+    background-image: radial-gradient(circle, rgba(6,75,145,0.025) 1px, transparent 1px) !important;
+    background-size: 32px 32px;
+}
+
+/* ────────────────────────────────────────────────────────────────
+   T19 · RESEARCH PAGE — Pillar cards
+   ──────────────────────────────────────────────────────────────── */
+.pillar-card {
+    border-radius: 18px;
+    border: 1px solid var(--line);
+    box-shadow: 0 4px 16px rgba(3,30,73,0.06);
+    transition: box-shadow 0.28s ease, transform 0.28s cubic-bezier(0.34,1.2,0.64,1);
+}
+.pillar-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 0 2px var(--green), 0 20px 48px rgba(3,30,73,0.14);
+    border-color: transparent;
+}
+.pillar-icon {
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+}
+
+/* ────────────────────────────────────────────────────────────────
+   T20 · ABOUT PAGE — Value cards upgrade
+   ──────────────────────────────────────────────────────────────── */
+.value-card {
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(3,30,73,0.04);
+    transition: box-shadow 0.25s ease, transform 0.25s cubic-bezier(0.34,1.2,0.64,1), border-top-width 0.2s ease;
+}
+.value-card:hover {
+    box-shadow: 0 12px 32px rgba(3,30,73,0.1);
+    transform: translateY(-4px);
+    border-top-width: 4px;
+}
+
+/* ────────────────────────────────────────────────────────────────
+   T21 · CONTACT — Info items
+   ──────────────────────────────────────────────────────────────── */
+.contact-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+}
+.contact-item:last-of-type { border-bottom: none; }
+.contact-item i {
+    width: 40px; height: 40px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(247,39,114,0.1), rgba(6,75,145,0.1));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--green);
+    font-size: 1rem;
+    flex-shrink: 0;
+    border: 1px solid rgba(247,39,114,0.12);
+}
+
+/* ────────────────────────────────────────────────────────────────
+   T22 · SCROLL STAGGER (GSAP-ready class)
+   ──────────────────────────────────────────────────────────────── */
+.stagger-in > * {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* ────────────────────────────────────────────────────────────────
+   T23 · SELECTION COLOR
+   ──────────────────────────────────────────────────────────────── */
+::selection {
+    background: rgba(247,39,114,0.2);
+    color: var(--ink);
+}
+
+/* ────────────────────────────────────────────────────────────────
+   T24 · SCROLLBAR (WebKit)
+   ──────────────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--soft); }
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--green), var(--teal));
+    border-radius: 99px;
+}
+
