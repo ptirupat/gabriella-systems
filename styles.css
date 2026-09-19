@@ -2474,3 +2474,109 @@ a {
         transform: none;
     }
 }
+
+/* ── Info tooltips ──────────────────────────────────────────────────────── */
+.info-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: rgba(6,75,145,0.12);
+    border: 1px solid rgba(6,75,145,0.25);
+    color: var(--teal);
+    font-size: 0.62rem;
+    font-weight: 800;
+    font-style: normal;
+    line-height: 1;
+    cursor: pointer;
+    vertical-align: middle;
+    margin-left: 0.3rem;
+    flex-shrink: 0;
+    position: relative;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+.info-btn:hover, .info-btn:focus {
+    background: var(--teal);
+    color: white;
+    border-color: var(--teal);
+    outline: none;
+}
+/* Tooltip bubble */
+.info-btn::after {
+    content: attr(data-tip);
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--ink);
+    color: rgba(255,255,255,0.92);
+    font-size: 0.75rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.5;
+    padding: 8px 12px;
+    border-radius: 8px;
+    white-space: normal;
+    width: 220px;
+    text-align: left;
+    box-shadow: 0 8px 24px rgba(3,30,73,0.22);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.18s ease;
+    z-index: 999;
+}
+/* Arrow */
+.info-btn::before {
+    content: '';
+    position: absolute;
+    bottom: calc(100% + 2px);
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: var(--ink);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.18s ease;
+    z-index: 999;
+}
+.info-btn:hover::after,
+.info-btn:hover::before,
+.info-btn:focus::after,
+.info-btn:focus::before { opacity: 1; }
+
+/* On dark backgrounds (hero, tech band) */
+.info-btn.light {
+    background: rgba(255,255,255,0.15);
+    border-color: rgba(255,255,255,0.3);
+    color: rgba(255,255,255,0.8);
+}
+.info-btn.light:hover, .info-btn.light:focus {
+    background: rgba(255,255,255,0.9);
+    color: var(--ink);
+    border-color: white;
+}
+.info-btn.light::after { background: #fff; color: var(--ink); box-shadow: 0 8px 24px rgba(0,0,0,0.3); }
+.info-btn.light::before { border-top-color: #fff; }
+
+/* Sport badge on hero metric cards */
+.hero-sport-badge {
+    font-size: 0.58rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 2px 7px;
+    border-radius: 999px;
+    margin-bottom: 0.4rem;
+    display: inline-block;
+}
+.hero-sport-badge.batting { background: rgba(247,39,114,0.22); color: #ffaacb; }
+.hero-sport-badge.bowling { background: rgba(255,154,120,0.22); color: #ffcbb5; }
+
+/* Metric label row — flex so info button sits inline */
+.metric-label-row {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+}
