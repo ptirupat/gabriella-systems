@@ -3,39 +3,234 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Gabriella Systems — Cricket Vision for Coaches and Academies</title>
-    <meta name="description" content="About Gabriella Systems: cricket vision for nets, coaches, and academies. Session metrics from batting and bowling clips; ungated takes fail loud. Baseball and softball are upcoming sports on the roadmap.">
-    <link rel="canonical" href="https://gabriellasystems.com/about.html">
+    <title>About — Gabriella Systems</title>
+    <meta name="description" content="Gabriella Systems builds computer vision infrastructure for bat-and-ball sports — making movement intelligence accessible, measurable, and trustworthy.">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Gabriella Systems">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:title" content="About Gabriella Systems — Cricket Vision for Coaches and Academies">
-    <meta property="og:description" content="About Gabriella Systems: cricket vision for nets, coaches, and academies. Session metrics from batting and bowling clips; ungated takes fail loud. Baseball and softball are upcoming sports on the roadmap.">
+    <meta property="og:title" content="About Gabriella Systems">
+    <meta property="og:description" content="Gabriella Systems builds computer vision for cricket — turning ordinary practice video into honest, structured performance evidence for coaches and athletes.">
     <meta property="og:image" content="https://gabriellasystems.com/assets/cricket-vision-hero.png">
-    <meta property="og:image:alt" content="Gabriella Systems cricket vision">
     <meta property="og:url" content="https://gabriellasystems.com/about.html">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="About Gabriella Systems — Cricket Vision for Coaches and Academies">
-    <meta name="twitter:description" content="Cricket session metrics for nets, coaches, and academies. Baseball and softball are upcoming sports on the roadmap.">
-    <meta name="twitter:image" content="https://gabriellasystems.com/assets/cricket-vision-hero.png">
-    <meta name="theme-color" content="#0b4b4c">
-    <link rel="icon" href="assets/logo.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Gabriella Systems",
-      "url": "https://gabriellasystems.com/",
-      "logo": "https://gabriellasystems.com/assets/logo.png",
-      "email": "admin@gabriellasystems.com",
-      "description": "Gabriella Systems builds cricket vision for nets, coaches, and academies: batting and bowling session metrics with fail-loud quality gates. Baseball and softball are upcoming sports on the roadmap."
-    }
-    </script>
+    <style>
+        /* ── About-page specific ─────────────────────────────────────────── */
+        .mission-vision-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+        }
+        @media (max-width: 680px) { .mission-vision-grid { grid-template-columns: 1fr; } }
+
+        .mv-card {
+            border-radius: 14px;
+            padding: 36px 32px;
+        }
+        .mv-card.mission {
+            background: var(--ink);
+            color: white;
+        }
+        .mv-card.vision {
+            background: var(--teal);
+            color: white;
+        }
+        .mv-label {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            color: var(--amber);
+            margin-bottom: 0.8rem;
+        }
+        .mv-card h2 {
+            font-size: clamp(1.3rem, 3vw, 1.7rem);
+            line-height: 1.25;
+            color: white;
+            margin-bottom: 1rem;
+        }
+        .mv-card p {
+            font-size: 0.96rem;
+            line-height: 1.7;
+            color: rgba(255,255,255,0.82);
+            margin: 0;
+        }
+
+        /* Why section */
+        .why-pull {
+            font-size: clamp(1.25rem, 3vw, 1.65rem);
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            line-height: 1.4;
+            color: var(--ink);
+            border-left: 4px solid var(--green);
+            padding-left: 1.4rem;
+            margin: 2rem 0;
+        }
+
+        /* Values grid */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 1.2rem;
+            margin-top: 2rem;
+        }
+        .value-card {
+            background: var(--paper);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 22px 20px;
+            border-top: 3px solid transparent;
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+        .value-card:hover {
+            box-shadow: 0 6px 20px rgba(3,30,73,0.08);
+            transform: translateY(-2px);
+        }
+        .value-card:nth-child(1) { border-top-color: var(--teal); }
+        .value-card:nth-child(2) { border-top-color: var(--green); }
+        .value-card:nth-child(3) { border-top-color: var(--amber); }
+        .value-card:nth-child(4) { border-top-color: var(--coral); }
+        .value-card:nth-child(5) { border-top-color: var(--teal); }
+        .value-card:nth-child(6) { border-top-color: var(--green); }
+
+        .value-card i {
+            font-size: 1.3rem;
+            margin-bottom: 0.75rem;
+            display: block;
+            color: var(--teal);
+        }
+        .value-card:nth-child(2) i { color: var(--green); }
+        .value-card:nth-child(3) i { color: var(--amber); }
+        .value-card:nth-child(4) i { color: var(--coral); }
+        .value-card:nth-child(5) i { color: var(--teal); }
+        .value-card:nth-child(6) i { color: var(--green); }
+
+        .value-card h3 { font-size: 0.95rem; color: var(--ink); margin-bottom: 0.4rem; }
+        .value-card p { font-size: 0.85rem; color: var(--muted); line-height: 1.55; margin: 0; }
+
+        /* Origin story */
+        .origin-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        @media (max-width: 768px) { .origin-grid { grid-template-columns: 1fr; gap: 1.5rem; } }
+        .origin-stat-block {
+            display: flex;
+            flex-direction: column;
+            gap: 1.4rem;
+        }
+        .origin-stat {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        .origin-stat i {
+            font-size: 1.4rem;
+            color: var(--teal);
+            flex-shrink: 0;
+            margin-top: 0.2rem;
+        }
+        .origin-stat h4 { font-size: 0.9rem; color: var(--ink); margin-bottom: 0.2rem; }
+        .origin-stat p { font-size: 0.84rem; color: var(--muted); margin: 0; line-height: 1.5; }
+
+        /* Research bridge */
+        .research-bridge {
+            background: linear-gradient(135deg, var(--ink) 0%, var(--teal) 100%);
+            border-radius: 16px;
+            padding: 44px 48px;
+            color: white;
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+        }
+        @media (max-width: 680px) { .research-bridge { flex-direction: column; gap: 1.5rem; padding: 28px; } }
+        .research-bridge .eyebrow { color: var(--amber); }
+        .research-bridge h2 { font-size: 1.5rem; color: white; margin-bottom: 0.7rem; }
+        .research-bridge p { font-size: 0.95rem; color: rgba(255,255,255,0.82); line-height: 1.65; margin: 0 0 1.2rem; }
+        .research-bridge-cta {
+            flex-shrink: 0;
+            text-align: center;
+        }
+        .research-bridge-cta a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.85rem 1.6rem;
+            background: var(--green);
+            color: white;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-decoration: none;
+            white-space: nowrap;
+            transition: background 0.2s, box-shadow 0.2s;
+            box-shadow: 0 8px 22px rgba(247,39,114,0.28);
+        }
+        .research-bridge-cta a:hover { background: #c9165a; }
+
+        /* Timeline (improved) */
+        .timeline-clean {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+        .timeline-item-clean {
+            display: flex;
+            gap: 1.5rem;
+            padding-bottom: 2rem;
+            position: relative;
+        }
+        .timeline-item-clean:last-child { padding-bottom: 0; }
+        .timeline-dot-col {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-shrink: 0;
+            width: 36px;
+        }
+        .timeline-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--teal);
+            margin-top: 5px;
+            flex-shrink: 0;
+            border: 2px solid white;
+            box-shadow: 0 0 0 2px var(--teal);
+            z-index: 1;
+        }
+        .timeline-item-clean:first-child .timeline-dot { background: var(--green); box-shadow: 0 0 0 2px var(--green); }
+        .timeline-line {
+            flex: 1;
+            width: 2px;
+            background: var(--line);
+            margin-top: 4px;
+        }
+        .timeline-item-clean:last-child .timeline-line { display: none; }
+        .timeline-content-clean {
+            flex: 1;
+            padding-bottom: 0.2rem;
+        }
+        .timeline-phase {
+            font-size: 0.72rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--muted);
+            margin-bottom: 0.2rem;
+        }
+        .timeline-item-clean:first-child .timeline-phase { color: var(--green); }
+        .timeline-content-clean h3 { font-size: 0.98rem; color: var(--ink); margin-bottom: 0.3rem; }
+        .timeline-content-clean p { font-size: 0.85rem; color: var(--muted); margin: 0; line-height: 1.55; }
+    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -71,77 +266,108 @@
         <section class="page-hero">
             <div class="container narrow">
                 <p class="eyebrow">About Gabriella Systems</p>
-                <h1>Cricket session metrics for coaches and academies</h1>
+                <h1>Every athlete deserves structured evidence, not just impressions</h1>
                 <p>
-                    Gabriella measures batting and bowling from practice clips so coaches at the
-                    nets can review what actually changed — not just watch footage again.
+                    Gabriella Systems builds computer vision infrastructure for bat-and-ball sports —
+                    making movement intelligence accessible, measurable, and trustworthy.
                 </p>
             </div>
         </section>
 
-        <section class="section" id="what-is-gabriella" aria-labelledby="what-is-heading">
-            <div class="container content-grid">
-                <article class="what-is-gabriella">
-                    <p class="eyebrow">What is Gabriella?</p>
-                    <h2 id="what-is-heading">What Gabriella measures now</h2>
-                    <p>
-                        Gabriella Systems is cricket vision for nets. Coaches and academies upload
-                        batting or bowling clips and get pose, bat, and ball overlays plus session
-                        metrics that fit the camera view. Ungated takes fail loud — Can't measure —
-                        rather than a guessed number.
-                    </p>
-                    <p>
-                        We started with cricket; baseball and softball are next (same session-metric /
-                        fail-loud approach). <strong>Roadmap</strong> — we do not support baseball or
-                        softball today.
-                    </p>
-                </article>
-                <aside class="quote-panel">
-                    <i class="fas fa-quote-left"></i>
-                    <p>Better cricket feedback starts when video stops being just footage and becomes structured evidence.</p>
-                </aside>
+        <!-- MISSION + VISION ─────────────────────────────────────────────── -->
+        <section class="section" id="mission">
+            <div class="container narrow">
+                <p class="eyebrow">Who we are</p>
+                <p style="font-size:1.1rem; line-height:1.75; color:var(--muted); max-width:680px;">
+                    Gabriella Systems builds computer vision infrastructure for cricket — and, in time, for baseball and softball. We combine computer vision and trustworthy AI so that coaches and athletes have objective performance evidence from ordinary practice video.
+                </p>
+
+                <div class="mission-vision-grid">
+                    <div class="mv-card mission">
+                        <p class="mv-label">Mission</p>
+                        <h2>Make movement intelligence accessible and trustworthy for every cricket team, academy, and athlete</h2>
+                        <p>
+                            We build AI systems that turn ordinary practice video into structured,
+                            honest performance evidence — so coaches can measure what actually changed,
+                            and athletes can understand how.
+                        </p>
+                    </div>
+                    <div class="mv-card vision">
+                        <p class="mv-label">Vision</p>
+                        <h2>A future where every athlete is measured accurately, fairly, and with full transparency</h2>
+                        <p>
+                            AI in sport earns trust by being explicit
+                            about what it can measure, what it cannot, and why — across every
+                            camera view, every skill level, and every stage of athletic development.
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="section muted-section" id="mission-vision-lead" aria-labelledby="guide-heading">
+        <!-- WHY WE EXIST ─────────────────────────────────────────────────── -->
+        <section class="section muted-section" id="why">
             <div class="container">
-                <div class="section-intro">
-                    <p class="eyebrow">Mission, vision, and lead</p>
-                    <h2 id="guide-heading">What we are building, and who leads it</h2>
-                </div>
-                <div class="lead-grid">
-                    <article class="feature-card lead-card">
-                        <i class="fas fa-bullseye"></i>
-                        <h2>Mission</h2>
-                        <p>
-                            Give cricket coaches and academies session metrics they can trust —
-                            view-aware batting and bowling evidence from nets clips, not just footage.
+                <div class="origin-grid">
+                    <div>
+                        <p class="eyebrow">Why we exist</p>
+                        <h2>The problem we set out to solve</h2>
+
+                        <div class="why-pull">
+                            Most cricket coaching still relies on video as a memory aid,
+                            not as structured data.
+                        </div>
+
+                        <p style="line-height:1.75; color:var(--muted); margin-bottom:1rem;">
+                            Technical changes in batting and bowling are often small — a
+                            shoulder opening a fraction earlier, a knee angle shifting by a few
+                            degrees, a release timing changing by a handful of frames. These
+                            details are difficult to see consistently in real time and difficult
+                            to recall reliably from session to session.
                         </p>
-                    </article>
-                    <article class="feature-card lead-card">
-                        <i class="fas fa-eye"></i>
-                        <h2>Vision</h2>
-                        <p>
-                            Stay cricket-first for coaches and academies. We started with cricket;
-                            baseball and softball are next (same session-metric / fail-loud
-                            approach). <strong>Roadmap</strong> — not a sport we support today.
+                        <p style="line-height:1.75; color:var(--muted);">
+                            Gabriella was built on a simple premise: coaches deserve structured
+                            evidence. Athletes deserve honest numbers. And AI should say "can't
+                            measure" when it genuinely cannot — not invent a number to fill the
+                            gap.
                         </p>
-                    </article>
-                    <article class="feature-card lead-card">
-                        <i class="fas fa-user-tie"></i>
-                        <h2>Leadership</h2>
-                        <p>
-                            Gabriella is a small, founder-led team. We build cricket-first computer
-                            vision and work directly with academies on pilots. For press or
-                            partnership, write
-                            <a href="mailto:admin@gabriellasystems.com">admin@gabriellasystems.com</a>.
-                        </p>
-                    </article>
+                    </div>
+                    <div class="origin-stat-block">
+                        <div class="origin-stat">
+                            <i class="fas fa-video"></i>
+                            <div>
+                                <h4>Accessible capture</h4>
+                                <p>Analysis should work from ordinary video at the nets — no specialist hardware required to start.</p>
+                            </div>
+                        </div>
+                        <div class="origin-stat">
+                            <i class="fas fa-shield"></i>
+                            <div>
+                                <h4>Honest metrics</h4>
+                                <p>Every metric either passes a reliability gate or is marked as unmeasurable. We never substitute an invented number.</p>
+                            </div>
+                        </div>
+                        <div class="origin-stat">
+                            <i class="fas fa-chart-line"></i>
+                            <div>
+                                <h4>Progress, not snapshots</h4>
+                                <p>Single-session impressions are not useful. Reproducible trends across sessions are.</p>
+                            </div>
+                        </div>
+                        <div class="origin-stat">
+                            <i class="fas fa-users"></i>
+                            <div>
+                                <h4>Coaches stay in control</h4>
+                                <p>Our system surfaces evidence and supports coaching judgment — it does not replace it.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="section">
+        <!-- VALUES ───────────────────────────────────────────────────────── -->
+        <section class="section" id="values">
             <div class="container">
                 <div class="section-intro">
                     <p class="eyebrow">What we stand for</p>
@@ -182,15 +408,43 @@
             </div>
         </section>
 
-        <section class="section muted-section">
+        <!-- PRODUCT → RESEARCH BRIDGE ────────────────────────────────────── -->
+        <section class="section muted-section" id="research-bridge">
+            <div class="container">
+                <div class="research-bridge">
+                    <div>
+                        <p class="eyebrow">Research</p>
+                        <h2>Product and research, together</h2>
+                        <p>
+                            Gabriella's product is built on active research — in visual AI, movement
+                            representation, uncertainty-aware measurement, and responsible AI for sport.
+                            Every improvement to how we detect, track, and measure feeds back into
+                            the system athletes and coaches use.
+                        </p>
+                        <p style="margin-bottom:0;">
+                            We also study harder questions — responsible AI for sport, trustworthy measurement, and what good AI design looks like when the athlete is still developing.
+                        </p>
+                    </div>
+                    <div class="research-bridge-cta">
+                        <a href="research.html">
+                            <i class="fas fa-flask"></i> View Research
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ROADMAP ──────────────────────────────────────────────────────── -->
+        <section class="section" id="roadmap">
             <div class="container split-layout">
                 <div>
-                    <p class="eyebrow">Product roadmap</p>
-                    <h2>From cricket clip analysis to dedicated nets capture</h2>
-                    <p>
-                        Gabriella already analyzes cricket batting and bowling clips in software.
-                        Next we are hardening session workflows for academies and building
-                        purpose-built capture hardware for more consistent nets measurement.
+                    <p class="eyebrow">Where we are going</p>
+                    <h2>Building toward a full movement intelligence platform</h2>
+                    <p style="line-height:1.7; color:var(--muted);">
+                        Today Gabriella analyzes cricket batting and bowling from a single camera.
+                        Each phase of our roadmap extends both the depth of analysis and the
+                        consistency of capture — until every training session becomes a structured
+                        record that grows over time.
                     </p>
                 </div>
                 <div class="timeline-clean">
@@ -227,15 +481,27 @@
                             <p>Purpose-built nets capture to improve placement consistency, frame rate, and calibration beyond phone video.</p>
                         </div>
                     </div>
-                    <div class="timeline-item">
-                        <span>Platform</span>
-                        <h3>Player Histories and Session Intelligence</h3>
-                        <p>Longitudinal player profiles, session comparison, and progress tracking across weeks and seasons.</p>
+                    <div class="timeline-item-clean">
+                        <div class="timeline-dot-col">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-line"></div>
+                        </div>
+                        <div class="timeline-content-clean">
+                            <p class="timeline-phase">Platform</p>
+                            <h3>Player histories and longitudinal intelligence</h3>
+                            <p>Persistent player profiles, session-to-session progress tracking, and trend analysis across weeks and seasons.</p>
+                        </div>
                     </div>
-                    <div class="timeline-item">
-                        <span>Roadmap</span>
-                        <h3>Baseball and softball</h3>
-                        <p>We started with cricket; baseball and softball are next (same session-metric / fail-loud approach). Roadmap — we do not support those sports today.</p>
+                    <div class="timeline-item-clean">
+                        <div class="timeline-dot-col">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-line"></div>
+                        </div>
+                        <div class="timeline-content-clean">
+                            <p class="timeline-phase">Future</p>
+                            <h3>Baseball, softball, and broader bat-and-ball sports</h3>
+                            <p>The movement intelligence platform is designed to extend to baseball and softball. Research is already underway to support this transition.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -263,7 +529,7 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <span class="nav-logo-text">Gabriella Systems</span>
-                    <p>We started with cricket; baseball and softball are next (same session-metric / fail-loud approach). Roadmap — not a sport we support today.</p>
+                    <p>Computer vision for cricket performance — batting and bowling intelligence from a single portable system.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Product</h4>

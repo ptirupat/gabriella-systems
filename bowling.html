@@ -7,30 +7,11 @@
     <meta name="description" content="Computer vision for bowling analysis — run-up speed and action metrics from cricket clips, with results suited to the camera view.">
         <meta property="og:type" content="website">
     <meta property="og:site_name" content="Gabriella Systems">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:title" content="Bowling Intelligence">
+    <meta property="og:title" content="Bowling Intelligence — Gabriella Systems">
     <meta property="og:description" content="Computer vision for bowling analysis — run-up speed and action metrics from cricket clips, with results suited to the camera view.">
     <meta property="og:image" content="https://gabriellasystems.com/assets/cricket-vision-hero.png">
-    <meta property="og:image:alt" content="Gabriella Systems cricket vision">
     <meta property="og:url" content="https://gabriellasystems.com/bowling.html">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Bowling Intelligence">
-    <meta name="twitter:description" content="View-aware cricket bowling analysis — run-up speed and action metrics from practice clips.">
-    <meta name="twitter:image" content="https://gabriellasystems.com/assets/cricket-vision-hero.png">
-    <meta name="theme-color" content="#0b4b4c">
-    <link rel="icon" href="assets/logo.png" type="image/png">
-    <link rel="canonical" href="https://gabriellasystems.com/bowling.html">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Gabriella Systems",
-      "url": "https://gabriellasystems.com/",
-      "logo": "https://gabriellasystems.com/assets/logo.png",
-      "email": "admin@gabriellasystems.com",
-      "description": "Gabriella Systems builds cricket vision for nets, coaches, and academies: batting and bowling session metrics with fail-loud quality gates. Baseball and softball are upcoming sports on the roadmap."
-    }
-    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -122,19 +103,23 @@
                     <h2>Objective bowling metrics from the analysis pipeline</h2>
                 </div>
                 <div class="metrics-grid">
-                    <article class="metric-card" data-metric-tip="run-up">
+                    <article class="metric-card">
                         <span>Run-up speed</span>
                         <strong><span data-count="20.4">20.4</span> km/h</strong>
                     </article>
-                    <article class="metric-card" data-metric-tip="arm-speed">
+                    <article class="metric-card">
                         <span>Arm speed</span>
                         <strong><span data-count="619">619</span> °/s</strong>
                     </article>
-                    <article class="metric-card" data-metric-tip="front-knee">
+                    <article class="metric-card">
                         <span>Front knee angle</span>
                         <strong><span data-count="155">155</span>°</strong>
                     </article>
-                    <article class="metric-card" data-metric-tip="ball-speed">
+                    <article class="metric-card">
+                        <span>Release height</span>
+                        <strong class="metric-placeholder">Measured when calibration supports it</strong>
+                    </article>
+                    <article class="metric-card">
                         <span>Ball speed</span>
                         <strong class="metric-placeholder">Measured when ball is detected</strong>
                     </article>
@@ -151,9 +136,9 @@
                          style="width: 100%; border-radius: 8px; display: block;" />
                     <div class="clip-hud clip-hud-bowling">
                         <p class="clip-hud-title">Gabriella Vision</p>
-                        <div class="clip-hud-row" data-metric-tip="run-up"><span>Run-up speed</span><strong>20.4 km/h</strong></div>
-                        <div class="clip-hud-row" data-metric-tip="arm-speed"><span>Arm speed</span><strong>619 °/s</strong></div>
-                        <div class="clip-hud-row" data-metric-tip="front-knee"><span>Front knee angle</span><strong>155°</strong></div>
+                        <div class="clip-hud-row"><span>Run-up speed</span><strong>20.4 km/h</strong></div>
+                        <div class="clip-hud-row"><span>Arm speed</span><strong>619 °/s</strong></div>
+                        <div class="clip-hud-row"><span>Front knee angle</span><strong>155°</strong></div>
                         <p class="clip-hud-note">Session metrics from this take</p>
                     </div>
                 </div>
@@ -170,15 +155,15 @@
                     </p>
                 </div>
                 <div class="analysis-stack">
-                    <div class="analysis-row accent-green" data-metric-tip="front-knee">
+                    <div class="analysis-row accent-green">
                         <span>Front knee angle</span>
                         <strong>155°</strong>
                     </div>
-                    <div class="analysis-row accent-amber" data-metric-tip="run-up">
+                    <div class="analysis-row accent-amber">
                         <span>Run-up speed</span>
                         <strong>20.4 km/h</strong>
                     </div>
-                    <div class="analysis-row accent-teal" data-metric-tip="arm-speed">
+                    <div class="analysis-row accent-teal">
                         <span>Arm speed</span>
                         <strong>619 °/s</strong>
                     </div>
@@ -199,15 +184,15 @@
                 </div>
                 <div class="compare-card">
                     <h4>Bowling — Session Progress</h4>
-                    <div class="compare-row" data-metric-tip="run-up">
+                    <div class="compare-row">
                         <span>Run-up speed</span>
                         <strong>20.4 km/h</strong>
                     </div>
-                    <div class="compare-row" data-metric-tip="arm-speed">
+                    <div class="compare-row">
                         <span>Arm speed</span>
                         <strong>619 °/s</strong>
                     </div>
-                    <div class="compare-row" data-metric-tip="front-knee">
+                    <div class="compare-row">
                         <span>Front knee angle</span>
                         <strong>155°</strong>
                     </div>
@@ -238,7 +223,7 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <span class="nav-logo-text">Gabriella Systems</span>
-                    <p>We started with cricket; baseball and softball are next (same session-metric / fail-loud approach). Roadmap — not a sport we support today.</p>
+                    <p>Computer vision for cricket performance — batting and bowling intelligence from a single portable system.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Product</h4>
