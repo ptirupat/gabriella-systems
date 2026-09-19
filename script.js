@@ -46,6 +46,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // ── Metric ⓘ tips (copy lock: docs/homepage-hud-metrics.md) ─────────────
+    wireMetricTips();
+
     // ── GSAP animations (only if GSAP is loaded) ─────────────────────────────
     if (typeof gsap === 'undefined') return;
 
@@ -63,9 +66,10 @@ document.addEventListener('DOMContentLoaded', () => {
             .from('.status-strip',         { opacity: 0, duration: 0.4, ease: 'power1.out' }, '-=0.1')
             .from('.hero-metric-card',     { opacity: 0, scale: 0.82, y: 20, stagger: 0.14, duration: 0.55, ease: 'back.out(1.3)' }, '-=0.35');
 
-        // Floating metric cards — organic looping motion
+        // Floating metric cards — organic looping motion.
+        // Pause while a tip is sticky-open so GSAP cannot steal hover/hit-testing.
         document.querySelectorAll('.hero-metric-card').forEach((card, i) => {
-            gsap.to(card, {
+            const floatTween = gsap.to(card, {
                 y: i % 2 === 0 ? -8 : 8,
                 x: i % 3 === 0 ? 3 : -3,
                 duration: 2.8 + i * 0.5,
@@ -74,6 +78,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 ease: 'sine.inOut',
                 delay: i * 0.35,
             });
+            heroFloatTweens.set(card, floatTween);
+            const pause = () => floatTween.pause();
+            const resumeIfIdle = () => {
+                if (!card.classList.contains('has-open-tip') && !card.matches(':hover, :focus-within')) {
+                    floatTween.resume();
+                }
+            };
+            card.addEventListener('mouseenter', pause);
+            card.addEventListener('mouseleave', resumeIfIdle);
+            card.addEventListener('focusin', pause);
+            card.addEventListener('focusout', resumeIfIdle);
         });
 
         // Pulsing live dots
@@ -97,6 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
             duration: 0.7,
             stagger: 0.18,
             ease: 'power2.out',
+            clearProps: 'transform,opacity',
         });
         gsap.from('.video-tagline', {
             scrollTrigger: { trigger: '.video-tagline', start: 'top 88%' },
@@ -171,6 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 duration: 0.55,
                 stagger: 0.1,
                 ease: 'power2.out',
+                clearProps: 'transform,opacity',
             });
         });
     });
@@ -212,6 +229,191 @@ document.addEventListener('DOMContentLoaded', () => {
     if (form) handleFormSubmit(form);
 });
 
+const METRIC_TIPS = {
+    'bat-speed': 'How fast the bat was moving at contact in this take (km/h).',
+    'head-stability': 'How much the head moved from downswing to contact (cm). Lower usually means steadier — not a technique grade.',
+    'run-up': 'Peak approach speed into the delivery in this take (km/h).',
+    'contact-time': 'Time from the start of this take to contact (ms). Use it to compare same-view sessions — not early vs late.',
+    'ball-speed': 'Measured ball speed in this take (km/h), only when the take is gated.',
+    'front-knee': 'Front-knee flexion at plant in this take (degrees). 0° ≈ fully extended.',
+    'arm-speed': 'Peak arm angular speed in this take (°/s).',
+};
+
+const METRIC_TIP_NAMES = {
+    'bat-speed': 'Bat speed at impact',
+    'head-stability': 'Head stability',
+    'run-up': 'Run-up speed',
+    'contact-time': 'Contact time in this clip',
+    'ball-speed': 'Ball speed',
+    'front-knee': 'Front knee angle',
+    'arm-speed': 'Arm angular speed',
+};
+
+const heroFloatTweens = new WeakMap();
+const metricTipOpenMode = new WeakMap();
+const metricTipPointerPrimed = new WeakSet();
+
+function metricTipHitButton(e, btn) {
+    const hit = document.elementFromPoint(e.clientX, e.clientY);
+    return Boolean(hit && btn.contains(hit));
+}
+
+function metricTipLabelHost(el) {
+    if (el.classList.contains('metric-label')) return el;
+    return el.querySelector('span');
+}
+
+function metricTipStackHosts(btn) {
+    return [...new Set([
+        btn.closest('.clip-hud-row, .compare-row, .analysis-row, .metric-card, .hero-metric-card'),
+        btn.closest('.clip-hud, .compare-card, .hero-dashboard, .analysis-stack, .metrics-grid'),
+    ].filter(Boolean))];
+}
+
+function syncHeroFloat(card) {
+    const tween = heroFloatTweens.get(card);
+    if (!tween) return;
+    if (card.classList.contains('has-open-tip')) {
+        tween.pause();
+        // Transform + border-radius clips overflowing tip panels; drop the float offset while open.
+        gsapSetClear(card);
+        return;
+    }
+    if (card.matches(':hover, :focus-within')) {
+        tween.pause();
+        return;
+    }
+    tween.resume();
+}
+
+function gsapSetClear(card) {
+    if (typeof gsap === 'undefined') {
+        card.style.removeProperty('transform');
+        return;
+    }
+    gsap.set(card, { clearProps: 'x,y,transform' });
+}
+
+function setMetricTipOpen(btn, open, mode) {
+    const tip = document.getElementById(btn.getAttribute('aria-describedby'));
+    if (!tip) return;
+    btn.setAttribute('aria-expanded', String(open));
+    const hosts = metricTipStackHosts(btn);
+    if (open) {
+        hosts.forEach(host => host.classList.add('has-open-tip'));
+        metricTipOpenMode.set(btn, mode || metricTipOpenMode.get(btn) || 'pointer');
+    } else {
+        metricTipOpenMode.delete(btn);
+        hosts.forEach(host => {
+            if (!host.querySelector('.metric-info[aria-expanded="true"]')) {
+                host.classList.remove('has-open-tip');
+            }
+        });
+    }
+    const card = btn.closest('.hero-metric-card');
+    if (card) syncHeroFloat(card);
+}
+
+function closeMetricTips(exceptBtn) {
+    document.querySelectorAll('.metric-info[aria-expanded="true"]').forEach(btn => {
+        if (btn === exceptBtn) return;
+        setMetricTipOpen(btn, false);
+    });
+}
+
+function wireMetricTips() {
+    document.querySelectorAll('[data-metric-tip]').forEach((el, i) => {
+        const key = el.dataset.metricTip;
+        const text = METRIC_TIPS[key];
+        const name = METRIC_TIP_NAMES[key];
+        const host = metricTipLabelHost(el);
+        if (!text || !name || !host || host.querySelector('.metric-info')) return;
+
+        const tipId = `metric-tip-${key}-${i}`;
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'metric-info';
+        btn.setAttribute('aria-label', `About ${name}`);
+        btn.setAttribute('aria-describedby', tipId);
+        btn.setAttribute('aria-expanded', 'false');
+        btn.innerHTML = '<i class="fas fa-circle-info" aria-hidden="true"></i>';
+
+        const tip = document.createElement('span');
+        tip.id = tipId;
+        tip.className = 'metric-tooltip';
+        tip.setAttribute('role', 'tooltip');
+        tip.textContent = text;
+
+        host.classList.add('metric-label-with-tip');
+        host.appendChild(btn);
+        host.appendChild(tip);
+
+        btn.addEventListener('pointerdown', () => {
+            metricTipPointerPrimed.add(btn);
+        });
+
+        btn.addEventListener('focus', () => {
+            if (metricTipPointerPrimed.has(btn)) return;
+            closeMetricTips(btn);
+            setMetricTipOpen(btn, true, 'keyboard');
+        });
+
+        btn.addEventListener('click', e => {
+            e.preventDefault();
+            const primed = metricTipPointerPrimed.has(btn);
+            metricTipPointerPrimed.delete(btn);
+            const keyboardClick = e.detail === 0 && !primed;
+            const fromPointer = primed || e.detail > 0;
+            const expanded = btn.getAttribute('aria-expanded') === 'true';
+
+            if (keyboardClick) {
+                if (!expanded) {
+                    closeMetricTips(btn);
+                    setMetricTipOpen(btn, true, 'keyboard');
+                }
+                return;
+            }
+
+            const open = !expanded;
+            closeMetricTips(open ? btn : null);
+            setMetricTipOpen(btn, open, fromPointer ? 'pointer' : 'keyboard');
+        });
+
+        btn.addEventListener('blur', () => {
+            window.setTimeout(() => {
+                if (metricTipOpenMode.get(btn) === 'pointer') return;
+                if (document.activeElement === btn || tip.contains(document.activeElement)) return;
+                setMetricTipOpen(btn, false);
+            }, 0);
+        });
+    });
+
+    document.addEventListener('pointerup', e => {
+        document.querySelectorAll('.metric-info').forEach(btn => {
+            if (!metricTipHitButton(e, btn)) metricTipPointerPrimed.delete(btn);
+        });
+    }, true);
+
+    document.addEventListener('pointercancel', () => {
+        document.querySelectorAll('.metric-info').forEach(btn => {
+            metricTipPointerPrimed.delete(btn);
+        });
+    }, true);
+
+    document.addEventListener('click', e => {
+        if (!e.target.closest('.metric-info, .metric-tooltip, .metric-label-with-tip')) {
+            closeMetricTips();
+        }
+    });
+
+    document.addEventListener('keydown', e => {
+        if (e.key !== 'Escape') return;
+        const openBtn = document.querySelector('.metric-info[aria-expanded="true"]');
+        closeMetricTips();
+        openBtn?.blur();
+    });
+}
+
 function handleFormSubmit(form) {
     form.addEventListener('submit', async e => {
         e.preventDefault();
@@ -250,74 +452,9 @@ function handleFormSubmit(form) {
                 throw new Error('Server error');
             }
         } catch {
-            alert('Sorry, something went wrong. Please email us directly at info@gabriellasystems.com');
+            alert('Sorry, something went wrong. Please email us directly at admin@gabriellasystems.com');
             btn.disabled = false;
             btn.textContent = orig;
         }
     });
 }
-
-// ── Scroll-reveal: individual cards + stagger-in parent grids ───────────────
-(function initScrollReveal() {
-    // Individual cards animate on entering viewport
-    const singleTargets = document.querySelectorAll(
-        '.section-intro, .mv-card, .origin-stat, ' +
-        '.cricket-domain, .leadership-card, .research-bridge, ' +
-        '.compare-card, .quote-panel, .timeline-item-clean'
-    );
-    // Parent containers whose direct children stagger in sequence
-    const staggerContainers = document.querySelectorAll('.stagger-in');
-
-    const revealEl = (el, delay = 0) => {
-        // CSS already sets opacity:0/translateY — only set the transition timing here
-        el.style.transition = `opacity 0.55s ${delay}s cubic-bezier(0.22,1,0.36,1), transform 0.55s ${delay}s cubic-bezier(0.34,1.2,0.64,1)`;
-    };
-    const showEl = el => {
-        el.style.opacity = '1';
-        el.style.transform = 'translateY(0)';
-    };
-
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting) return;
-            const el = entry.target;
-            if (window.gsap) {
-                gsap.to(el, { opacity: 1, y: 0, duration: 0.55,
-                    delay: parseFloat(el.dataset.delay || '0'),
-                    ease: 'power2.out', clearProps: 'transform,opacity' });
-            } else { showEl(el); }
-            observer.unobserve(el);
-        });
-    }, { threshold: 0.08, rootMargin: '0px 0px -32px 0px' });
-
-    // Single targets
-    singleTargets.forEach(el => {
-        revealEl(el);
-        observer.observe(el);
-    });
-
-    // Stagger containers — animate each child in sequence
-    staggerContainers.forEach(container => {
-        const children = Array.from(container.children).filter(c =>
-            !c.matches('script,style,noscript'));
-        children.forEach((child, i) => {
-            const delay = Math.min(i * 0.08, 0.4);
-            child.dataset.delay = String(delay);
-            revealEl(child, delay);
-        });
-        const containerObs = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (!entry.isIntersecting) return;
-                children.forEach(child => {
-                    if (window.gsap) {
-                        gsap.to(child, { opacity: 1, y: 0, duration: 0.5,
-                            delay: parseFloat(child.dataset.delay || '0'),
-                            ease: 'power2.out', clearProps: 'transform,opacity' });
-                    } else { showEl(child); }
-                });
-                containerObs.unobserve(entry.target);
-            });
-        }, { threshold: 0.05 });
-        requestAnimationFrame(() => containerObs.observe(container));
-    });
-}());
