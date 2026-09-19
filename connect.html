@@ -766,8 +766,6 @@
                     <h4>Company</h4>
                     <a href="about.html">About</a>
                     <a href="research.html">Research</a>
-                    <a href="connect.html">Connect</a>
-                    <a href="connect.html">Connect</a>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -783,6 +781,27 @@
     <script>
     (function () {
         const BACKEND = 'https://gabriellasystems--cricket-demo-web.modal.run/api/contact';
+
+        // Pre-fill purpose from ?purpose= query string and scroll to form
+        (function prefillFromUrl() {
+            const params  = new URLSearchParams(window.location.search);
+            const purpose = params.get('purpose');
+            if (!purpose) return;
+            const sel = document.getElementById('cf-purpose');
+            if (!sel) return;
+            for (const opt of sel.options) {
+                if (opt.value === purpose) {
+                    opt.selected = true;
+                    sel.dispatchEvent(new Event('change'));
+                    break;
+                }
+            }
+            // Scroll to form after a brief paint delay
+            requestAnimationFrame(() => {
+                const formSect = document.getElementById('interest-form');
+                formSect?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        }());
 
         const cards       = document.querySelectorAll('.pathway-card');
         const formSect    = document.getElementById('interest-form');
