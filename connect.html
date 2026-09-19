@@ -584,45 +584,164 @@
             </div>
         </div>
 
-        <!-- SINGLE CTA — replaces duplicate form ────────────────────────── -->
-        <section class="section muted-section" id="interest-form" style="padding:52px 0;">
-            <div class="container narrow" style="text-align:center;">
-                <p class="eyebrow">Ready to connect?</p>
-                <h2 style="font-size:clamp(1.7rem,4vw,2.4rem); margin-bottom:0.8rem;">
-                    One form. All four pathways.
-                </h2>
-                <p style="color:var(--muted); font-size:1rem; max-width:540px; margin:0 auto 2rem; line-height:1.7;">
-                    Select your pathway below, or go directly to the form — the Purpose
-                    dropdown covers all four pathways in one place.
-                </p>
-                <div style="display:flex; align-items:center; justify-content:center; gap:1rem; flex-wrap:wrap;">
-                    <a href="contact.html?purpose=Pilot+Interest" class="cta-button">
-                        <i class="fas fa-video"></i>&nbsp; Request a Pilot
-                    </a>
-                    <a href="contact.html" class="secondary-button"
-                       style="background:rgba(3,30,73,0.08); color:var(--ink); border:1px solid var(--line);">
-                        <i class="fas fa-arrow-right"></i>&nbsp; Go to the form
-                    </a>
-                </div>
-                <p style="font-size:0.78rem; color:var(--muted); margin-top:1.2rem;">
-                    Submission does not create any employment, advisory or commercial relationship.
-                </p>
-            </div>
-        </section>
+        <!-- CONTACT FORM + INFO ──────────────────────────────────────────── -->
+        <section class="section muted-section" id="interest-form" aria-labelledby="connect-form-h2">
+            <div class="container">
+                <div class="contact-grid">
 
-        <!-- GLOBAL INTEREST NOTE ─────────────────────────────────────────── -->
-        <section class="section" style="padding: 40px 0;">
-            <div class="container narrow" style="text-align:center;">
-                <p class="eyebrow">Global interest</p>
-                <h2 style="font-size:clamp(1.6rem,3.5vw,2.2rem); margin-bottom:0.8rem;">
-                    Gabriella welcomes interest from around the world
-                </h2>
-                <p style="color:var(--muted); font-size:0.96rem; max-width:620px; margin:0 auto; line-height:1.7;">
-                    We are interested in diverse coaching environments, varied athlete populations,
-                    different recording conditions and the specific requirements of cricket,
-                    baseball and softball ecosystems across Africa, Asia-Pacific, Europe,
-                    Latin America, the Middle East and North America.
-                </p>
+                    <!-- Left: contact info ──────────────────────────────── -->
+                    <div class="contact-info">
+                        <h2 id="connect-form-h2">Get in touch</h2>
+                        <p>
+                            Select a pathway above or use the form directly.
+                            We read every message and respond to relevant enquiries
+                            within a few working days.
+                        </p>
+
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email</strong>
+                                <a href="mailto:info@gabriellasystems.com">info@gabriellasystems.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-location-dot"></i>
+                            <div>
+                                <strong>Headquarters</strong>
+                                <span>Florida, United States</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Response window</strong>
+                                <span>Monday to Friday, 9:00 AM – 6:00 PM ET</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            <div>
+                                <strong>LinkedIn</strong>
+                                <a href="https://www.linkedin.com/company/gabriella-systems"
+                                   target="_blank" rel="noopener noreferrer">
+                                    Follow Gabriella Systems
+                                </a>
+                            </div>
+                        </div>
+
+                        <p style="font-size:0.76rem; color:var(--muted); line-height:1.55; margin-top:1.5rem;
+                                   border-top:1px solid var(--line); padding-top:1rem;">
+                            Submission does not create an employment, contractor, advisory,
+                            research, partnership or compensation relationship. Any future
+                            engagement requires separate written agreements.
+                        </p>
+                    </div>
+
+                    <!-- Right: form ─────────────────────────────────────── -->
+                    <div>
+                        <!-- Success state -->
+                        <div id="connect-success" role="status" aria-live="polite"
+                             style="display:none; background:rgba(6,75,145,0.07); border:1px solid rgba(6,75,145,0.2);
+                                    border-radius:12px; padding:28px 24px; text-align:center;">
+                            <i class="fas fa-circle-check" style="font-size:2rem; color:var(--teal); margin-bottom:0.8rem; display:block;" aria-hidden="true"></i>
+                            <h3 style="font-size:1.05rem; color:var(--ink); margin-bottom:0.4rem;">Message received</h3>
+                            <p style="font-size:0.88rem; color:var(--muted); max-width:360px; margin:0 auto 1rem; line-height:1.6;">
+                                Thank you — we will be in touch if your enquiry is a good fit.
+                            </p>
+                            <a href="https://www.linkedin.com/company/gabriella-systems" target="_blank"
+                               rel="noopener noreferrer"
+                               style="display:inline-flex; align-items:center; gap:0.45rem; padding:0.6rem 1.1rem;
+                                      background:#0A66C2; color:white; border-radius:8px; font-weight:700;
+                                      font-size:0.84rem; text-decoration:none;">
+                                <i class="fab fa-linkedin"></i> Follow us on LinkedIn
+                            </a>
+                        </div>
+
+                        <form id="connect-form" class="contact-form" novalidate
+                              style="background:var(--paper); border-radius:16px; border:1px solid var(--line);
+                                     padding:32px; box-shadow:0 4px 20px rgba(3,30,73,0.06);">
+                            <h3 style="font-size:1.1rem; margin-bottom:1.2rem; color:var(--ink);">Send a message</h3>
+
+                            <!-- Purpose -->
+                            <div class="form-group">
+                                <label for="cf-purpose">Purpose <span style="color:var(--coral);">*</span></label>
+                                <select id="cf-purpose" name="purpose" required>
+                                    <option value="" disabled selected>Select a purpose</option>
+                                    <option value="Pilot Interest">Pilot — evaluate Gabriella at my academy or club</option>
+                                    <option value="Research Conversations">Research — institutional research conversation</option>
+                                    <option value="Advisory Interest">Advisory — subject-matter expert introducing background</option>
+                                    <option value="Future Paid Opportunities">Future opportunities — professional registering for notice</option>
+                                    <option value="General">General enquiry</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cf-name">Full name <span style="color:var(--coral);">*</span></label>
+                                <input type="text" id="cf-name" name="name" autocomplete="name" required
+                                       placeholder="Your full name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cf-email">Email address <span style="color:var(--coral);">*</span></label>
+                                <input type="email" id="cf-email" name="email" autocomplete="email" required
+                                       placeholder="you@organisation.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cf-org">Organisation or affiliation</label>
+                                <input type="text" id="cf-org" name="organization" autocomplete="organization"
+                                       placeholder="Academy, university, club or employer">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cf-sport">Sport</label>
+                                <select id="cf-sport" name="sport">
+                                    <option value="">Select sport (optional)</option>
+                                    <option value="Cricket">Cricket</option>
+                                    <option value="Baseball">Baseball</option>
+                                    <option value="Softball">Softball</option>
+                                    <option value="Multiple">Multiple sports</option>
+                                    <option value="Other">Other / Not sport-specific</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cf-message">Message <span style="color:var(--coral);">*</span></label>
+                                <textarea id="cf-message" name="message" required rows="4"
+                                          placeholder="Tell us about your context and what you would like to explore."></textarea>
+                            </div>
+
+                            <!-- Consent (shown for non-general / non-pilot) -->
+                            <div id="consent-block" style="display:none; margin-bottom:1rem;">
+                                <label style="display:flex; align-items:flex-start; gap:0.6rem; font-size:0.8rem;
+                                              color:var(--muted); line-height:1.55; cursor:pointer;">
+                                    <input type="checkbox" id="cf-consent" name="consent"
+                                           style="width:17px; height:17px; flex-shrink:0; margin-top:2px;
+                                                  accent-color:var(--teal); cursor:pointer;">
+                                    I understand that this submission does not create an employment,
+                                    contractor, advisory, research, partnership or compensation relationship,
+                                    and that no obligation arises from this expression of interest.
+                                    <span style="color:var(--coral);">*</span>
+                                </label>
+                            </div>
+
+                            <p id="connect-form-error" role="alert"
+                               style="display:none; color:var(--coral); font-size:0.82rem; margin-bottom:0.8rem;
+                                      padding:10px 14px; background:rgba(255,82,103,0.07); border-radius:8px;"></p>
+
+                            <button type="submit" class="submit-btn" id="connect-submit"
+                                    style="width:100%; justify-content:center;">
+                                <i class="fas fa-paper-plane"></i>
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
             </div>
         </section>
 
@@ -664,34 +783,102 @@
     <script src="script.js"></script>
     <script>
     (function () {
-        const cards    = document.querySelectorAll('.pathway-card');
-        const formSect = document.getElementById('interest-form');
+        const BACKEND = 'https://gabriellasystems--cricket-demo-web.modal.run/api/contact';
 
-        // Pathway-to-contact.html URL mapping
+        const cards       = document.querySelectorAll('.pathway-card');
+        const formSect    = document.getElementById('interest-form');
+        const purposeSel  = document.getElementById('cf-purpose');
+        const consentBlock = document.getElementById('consent-block');
+        const consentBox  = document.getElementById('cf-consent');
+        const form        = document.getElementById('connect-form');
+        const submitBtn   = document.getElementById('connect-submit');
+        const errEl       = document.getElementById('connect-form-error');
+        const successEl   = document.getElementById('connect-success');
+
+        // ── Pathway card → pre-select purpose in inline form ───────────────
         const purposeMap = {
-            'Pilot Interest':            'Pilot+Interest',
-            'Research Conversations':    'Research+Conversations',
-            'Advisory Interest':         'Advisory+Interest',
-            'Future Paid Opportunities': 'Future+Paid+Opportunities',
+            'Pilot Interest':            'Pilot Interest',
+            'Research Conversations':    'Research Conversations',
+            'Advisory Interest':         'Advisory Interest',
+            'Future Paid Opportunities': 'Future Paid Opportunities',
         };
 
-        // ── Pathway selection ───────────────────────────────────────────────
-        function selectPathway(value) {
-        // Card click → navigate to contact.html with pre-selected purpose
+        function selectPurpose(value) {
+            cards.forEach(c => c.classList.toggle('active', c.dataset.pathway === value));
+            for (const opt of purposeSel.options) {
+                if (opt.value === value) { opt.selected = true; break; }
+            }
+            purposeSel.dispatchEvent(new Event('change'));
+        }
+
         cards.forEach(card => {
-            const pathway = card.dataset.pathway;
             card.addEventListener('click', () => {
-                const encoded = purposeMap[pathway] || '';
-                window.location.href = `contact.html${encoded ? '?purpose=' + encoded : ''}`;
+                selectPurpose(purposeMap[card.dataset.pathway] || '');
+                formSect.scrollIntoView({ behavior: 'smooth', block: 'start' });
             });
-            card.classList.add('cursor-pointer');
             card.querySelector('.pathway-btn').addEventListener('keydown', e => {
                 if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); card.click(); }
             });
         });
 
-        // CTA section scroll
-        formSect?.querySelector('a[href^="contact.html"]')?.addEventListener('click', () => {});
+        // ── Show/hide consent for non-pilot/general purposes ───────────────
+        purposeSel.addEventListener('change', () => {
+            const v = purposeSel.value;
+            const needs = v && v !== 'General' && v !== 'Pilot Interest';
+            consentBlock.style.display = needs ? 'block' : 'none';
+            consentBox.required = needs;
+        });
+
+        // ── Form submission ─────────────────────────────────────────────────
+        form.addEventListener('submit', async e => {
+            e.preventDefault();
+            errEl.style.display = 'none';
+
+            const purpose = purposeSel.value;
+            const name    = document.getElementById('cf-name').value.trim();
+            const email   = document.getElementById('cf-email').value.trim();
+            const org     = document.getElementById('cf-org').value.trim();
+            const sport   = document.getElementById('cf-sport').value;
+            const message = document.getElementById('cf-message').value.trim();
+            const consent = consentBox.checked;
+
+            if (!purpose) { showError('Please select a purpose.'); return; }
+            if (!name || !email || !message) { showError('Please complete all required fields.'); return; }
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showError('Please enter a valid email address.'); return; }
+            if (consentBox.required && !consent) { showError('Please tick the acknowledgement checkbox.'); return; }
+
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending…';
+
+            try {
+                const res = await fetch(BACKEND, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        name, email,
+                        organization: org,
+                        role:     purpose,
+                        interest: sport || '',
+                        message,
+                    }),
+                });
+                if (res.ok) {
+                    form.style.display = 'none';
+                    successEl.style.display = 'block';
+                    successEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                } else { throw new Error(); }
+            } catch {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+                showError('Something went wrong — please email info@gabriellasystems.com directly.');
+            }
+        });
+
+        function showError(msg) {
+            errEl.textContent = msg;
+            errEl.style.display = 'block';
+            errEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
     }());
     </script>
 </body>

@@ -47,12 +47,11 @@
     <main class="subpage-main">
         <section class="page-hero">
             <div class="container narrow">
-                <p class="eyebrow">Get in touch</p>
+                <p class="eyebrow">Request a Pilot</p>
                 <h1>Bring performance intelligence to your nets</h1>
                 <p>
-                    Whether you are an academy interested in a pilot, a researcher exploring
-                    a collaboration, or an experienced professional following our work —
-                    use this form to start the conversation.
+                    Tell us about your players, coaching workflow, and what you want to measure.
+                    We'll map Gabriella Vision to how you already train.
                 </p>
             </div>
         </section>
@@ -123,25 +122,11 @@
                     </div>
 
                     <form id="contact-form" class="contact-form" novalidate>
-                        <h2 style="margin-bottom:1.2rem;">Send a message</h2>
-
-                        <!-- Purpose selector -->
-                        <div class="form-group" style="margin-bottom:1.2rem;">
-                            <label for="cf-purpose" style="font-size:0.8rem; font-weight:700; color:var(--ink); margin-bottom:0.4rem; display:block;">
-                                Purpose <span style="color:var(--coral);">*</span>
-                            </label>
-                            <select id="cf-purpose" name="purpose" required
-                                    style="width:100%; border:1.5px solid var(--line); border-radius:10px;
-                                           padding:0.7rem 0.9rem; font-family:inherit; font-size:0.9rem;
-                                           color:var(--ink); background:var(--paper); outline:none;">
-                                <option value="" disabled selected>Select a purpose</option>
-                                <option value="Pilot Interest">Pilot — I want to evaluate Gabriella at my academy or club</option>
-                                <option value="Research Conversations">Research — Institutional research conversation</option>
-                                <option value="Advisory Interest">Advisory — Subject-matter expert introducing background</option>
-                                <option value="Future Paid Opportunities">Future opportunities — Professional registering for notice</option>
-                                <option value="General">General enquiry</option>
-                            </select>
-                        </div>
+                        <h2 style="margin-bottom:0.5rem;">Request a pilot</h2>
+                        <p style="font-size:0.84rem; color:var(--muted); margin-bottom:1.2rem;">
+                            For research, advisory or other enquiries, visit the
+                            <a href="connect.html" style="color:var(--teal); font-weight:600;">Connect page</a>.
+                        </p>
 
                         <div class="form-group">
                             <label for="name">Full name <span style="color:var(--coral);">*</span></label>
@@ -251,50 +236,23 @@
     (function () {
         const BACKEND = 'https://gabriellasystems--cricket-demo-web.modal.run/api/contact';
 
-        // Pre-fill Purpose from query string (e.g. ?purpose=Pilot+Interest)
-        const params  = new URLSearchParams(window.location.search);
-        const presel  = params.get('purpose');
-        if (presel) {
-            const sel = document.getElementById('cf-purpose');
-            for (const opt of sel.options) {
-                if (opt.value === presel) { opt.selected = true; sel.dispatchEvent(new Event('change')); break; }
-            }
-        }
-        const form        = document.getElementById('contact-form');
-        const submitBtn   = document.getElementById('contact-submit');
-        const errEl       = document.getElementById('form-error');
-        const successEl   = document.getElementById('contact-success');
-        const purposeSel  = document.getElementById('cf-purpose');
-        const consentBlock = document.getElementById('consent-block');
-        const consentBox  = document.getElementById('cf-consent');
-
-        // Show consent checkbox for non-general, non-pilot purposes
-        purposeSel.addEventListener('change', () => {
-            const val = purposeSel.value;
-            const needsConsent = val && val !== 'General' && val !== 'Pilot Interest';
-            consentBlock.style.display = needsConsent ? 'block' : 'none';
-            if (!needsConsent) consentBox.required = false;
-            else consentBox.required = true;
-        });
+        const form      = document.getElementById('contact-form');
+        const submitBtn = document.getElementById('contact-submit');
+        const errEl     = document.getElementById('form-error');
+        const successEl = document.getElementById('contact-success');
 
         form.addEventListener('submit', async e => {
             e.preventDefault();
             errEl.style.display = 'none';
 
-            const purpose = purposeSel.value;
             const name    = form.querySelector('[name="name"]').value.trim();
             const email   = form.querySelector('[name="email"]').value.trim();
             const org     = form.querySelector('[name="organization"]').value.trim();
             const sport   = form.querySelector('[name="sport"]').value;
             const message = form.querySelector('[name="message"]').value.trim();
-            const consent = consentBox.checked;
 
-            if (!purpose) { showError('Please select a purpose.'); return; }
             if (!name || !email || !message) { showError('Please complete all required fields.'); return; }
             if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showError('Please enter a valid email address.'); return; }
-            if (consentBox.required && !consent) {
-                showError('Please tick the acknowledgement checkbox before submitting.'); return;
-            }
 
             submitBtn.disabled = true;
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending…';
@@ -303,7 +261,7 @@
                 name,
                 email,
                 organization: org,
-                role:     purpose,
+                role:     'Pilot Interest',
                 interest: sport || '',
                 message,
             };
