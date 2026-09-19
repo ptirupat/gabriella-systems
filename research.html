@@ -400,14 +400,13 @@
         </section>
 
         <!-- FOUR PILLARS ─────────────────────────────────────────────────── -->
-        <section class="section" id="pillars">
+        <section class="section" id="pillars" style="padding: 52px 0 48px;">
             <div class="container">
-                <div class="section-intro">
+                <div class="section-intro" style="margin-bottom:1.8rem;">
                     <p class="eyebrow">Research pillars</p>
                     <h2>Four questions driving our research</h2>
                     <p style="max-width:580px; color:var(--muted);">
-                        Each pillar represents an open set of research questions — not a finished
-                        product. We publish in each area as work matures.
+                        Each pillar is an open set of research questions — not a finished product.
                     </p>
                 </div>
 
@@ -499,128 +498,89 @@
             </div>
         </section>
 
-        <!-- RESEARCH PIPELINE ────────────────────────────────────────────── -->
-        <section class="section muted-section" id="pipeline">
+        <!-- PIPELINE + DOMAIN + LEADERSHIP (one compact section) ─────────── -->
+        <section class="section muted-section" id="pipeline" style="padding: 52px 0;">
             <div class="container">
-                <div class="section-intro">
-                    <p class="eyebrow">Research pipeline</p>
-                    <h2>From video to responsible feedback</h2>
-                    <p style="max-width:580px; color:var(--muted);">
-                        Every stage of the pipeline is a distinct research problem. Quality and
-                        confidence are tracked through each step — not just at the output.
+
+                <!-- Pipeline -->
+                <div style="text-align:center; margin-bottom:0.5rem;">
+                    <p class="eyebrow" style="display:inline-flex;">Research pipeline</p>
+                    <h2 style="margin:0.4rem 0 0.3rem; font-size:clamp(1.5rem,3.5vw,2rem);">From video to responsible feedback</h2>
+                    <p style="font-size:0.9rem; color:var(--muted); max-width:520px; margin:0 auto 1.2rem;">
+                        Every stage is a distinct research problem. Quality and confidence are tracked through each step.
                     </p>
                 </div>
 
-                <div class="pipeline-row">
-                    <div class="pipeline-step">
-                        <i class="fas fa-video"></i>
-                        <strong>Video</strong>
-                        <span>Raw capture</span>
-                    </div>
+                <div class="pipeline-row" style="margin: 0 0 0.4rem;">
+                    <div class="pipeline-step"><i class="fas fa-video"></i><strong>Video</strong><span>Raw capture</span></div>
                     <div class="pipeline-arrow"><i class="fas fa-arrow-right"></i></div>
-                    <div class="pipeline-step">
-                        <i class="fas fa-eye"></i>
-                        <strong>Perception</strong>
-                        <span>Pose, bat, ball</span>
-                    </div>
+                    <div class="pipeline-step"><i class="fas fa-eye"></i><strong>Perception</strong><span>Pose, bat, ball</span></div>
                     <div class="pipeline-arrow"><i class="fas fa-arrow-right"></i></div>
-                    <div class="pipeline-step">
-                        <i class="fas fa-diagram-project"></i>
-                        <strong>Movement</strong>
-                        <span>Representation</span>
-                    </div>
+                    <div class="pipeline-step"><i class="fas fa-diagram-project"></i><strong>Movement</strong><span>Representation</span></div>
                     <div class="pipeline-arrow"><i class="fas fa-arrow-right"></i></div>
-                    <div class="pipeline-step">
-                        <i class="fas fa-ruler"></i>
-                        <strong>Measurement</strong>
-                        <span>Metrics + timing</span>
-                    </div>
+                    <div class="pipeline-step"><i class="fas fa-ruler"></i><strong>Measurement</strong><span>Metrics + timing</span></div>
                     <div class="pipeline-arrow"><i class="fas fa-arrow-right"></i></div>
-                    <div class="pipeline-step">
-                        <i class="fas fa-circle-check"></i>
-                        <strong>Confidence</strong>
-                        <span>Reliability gates</span>
-                    </div>
+                    <div class="pipeline-step"><i class="fas fa-circle-check"></i><strong>Confidence</strong><span>Reliability gates</span></div>
                     <div class="pipeline-arrow"><i class="fas fa-arrow-right"></i></div>
                     <div class="pipeline-step" style="border-color: var(--green); background: rgba(247,39,114,0.04);">
                         <i class="fas fa-comment-dots" style="color: var(--green);"></i>
-                        <strong>Feedback</strong>
-                        <span>Responsible output</span>
+                        <strong>Feedback</strong><span>Responsible output</span>
                     </div>
                 </div>
-
-                <p style="text-align:center; font-size:0.84rem; color:var(--muted); margin-top:0.5rem;">
-                    Our quality gate ensures measurements are surfaced only when detection, tracking,
-                    and pose stages meet reliability thresholds. "Can't measure" is a valid and
-                    honest result.
+                <p style="text-align:center; font-size:0.8rem; color:var(--muted); margin-bottom:2.5rem;">
+                    "Can't measure" is a valid, honest result — never a guessed number.
                 </p>
-            </div>
-        </section>
 
-        <!-- STARTING WITH CRICKET ────────────────────────────────────────── -->
-        <section class="section" id="cricket">
-            <div class="container">
-                <div class="cricket-domain">
-                    <div class="cricket-domain-icon">
-                        <i class="fas fa-cricket-bat-ball"></i>
-                    </div>
-                    <div>
-                        <p class="eyebrow" style="color:var(--teal);">Research domain</p>
-                        <h3>Starting with cricket. Designed to extend further.</h3>
-                        <p style="line-height:1.7; color:var(--muted); margin-bottom:1rem;">
-                            Cricket provides a rich research environment: it involves body movement,
-                            bat motion, ball motion, event timing, repeated actions across a session,
-                            and multiple useful camera viewpoints. Batting and bowling each offer
-                            distinct, well-defined movement patterns that can be studied systematically.
-                        </p>
-                        <p style="line-height:1.7; color:var(--ink); font-weight:600;">
-                            Our current work begins with cricket batting and bowling. The underlying
-                            research is intended to inform future work in baseball and softball.
-                        </p>
-                        <p style="font-size:0.84rem; color:var(--muted); margin-top:0.8rem;">
-                            Baseball and softball products are not currently available. They represent
-                            a planned research and product extension.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
+                <!-- Cricket domain + Leadership side by side -->
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; align-items:start;">
 
-        <!-- SCIENTIFIC LEADERSHIP ────────────────────────────────────────── -->
-        <section class="section muted-section" id="leadership">
-            <div class="container">
-                <p class="eyebrow">Scientific advisory</p>
-                <h2 style="margin-bottom:2rem;">Meet our advisor</h2>
-                <div class="leadership-card">
-                    <img
-                        src="assets/mubarak-shah.jpg"
-                        alt="Prof. Mubarak Shah"
-                        class="leadership-photo"
-                    />
-                    <div class="leadership-body">
-                    <h3>Prof. Mubarak Shah</h3>
-                    <p class="leadership-affil">
-                        University of Central Florida &nbsp;·&nbsp;
-                        Center for Research in Computer Vision
-                    </p>
-                    <p class="leadership-bio">
-                        Mubarak Shah is a Distinguished Professor of Computer Science at the
-                        University of Central Florida and founding director of the Center for
-                        Research in Computer Vision (CRCV). His research spans computer vision,
-                        video analysis, human activity recognition, visual surveillance, and
-                        machine learning.
-                    </p>
-                    <p class="leadership-bio" style="margin-top:0.7rem;">
-                        He is a Fellow of IEEE, AAAI, IAPR, and ACM. His work is widely cited
-                        in pose estimation, tracking, action recognition, and video understanding —
-                        research areas directly relevant to Gabriella's technical foundation.
-                    </p>
-                    <p class="leadership-note">
-                        This biography draws only on publicly available academic information.
-                        UCF as an institution does not sponsor, endorse, or own Gabriella Systems.
-                    </p>
-                    </div><!-- /.leadership-body -->
+                    <!-- Cricket domain -->
+                    <div class="cricket-domain" style="padding:28px; margin:0;" id="cricket">
+                        <div class="cricket-domain-icon" style="font-size:1.8rem; margin-top:0.1rem;">
+                            <i class="fas fa-cricket-bat-ball"></i>
+                        </div>
+                        <div>
+                            <p class="eyebrow" style="color:var(--teal);">Research domain</p>
+                            <h3 style="font-size:1rem; margin-bottom:0.5rem;">Starting with cricket.</h3>
+                            <p style="font-size:0.88rem; line-height:1.6; color:var(--muted); margin-bottom:0.7rem;">
+                                Cricket provides a rich environment — body movement, bat motion, ball motion,
+                                timing, repeated actions, and multiple camera viewpoints.
+                            </p>
+                            <p style="font-size:0.88rem; line-height:1.6; color:var(--ink); font-weight:600;">
+                                Current work: cricket batting and bowling. Intended to extend to baseball and softball.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Leadership -->
+                    <div class="leadership-card" style="padding:28px;" id="leadership">
+                        <img src="assets/mubarak-shah.jpg" alt="Prof. Mubarak Shah" class="leadership-photo" style="width:80px; height:100px;" />
+                        <div class="leadership-body">
+                            <p class="eyebrow" style="font-size:0.65rem;">Scientific advisory</p>
+                            <h3 style="margin-top:0.2rem;">Prof. Mubarak Shah</h3>
+                            <p class="leadership-affil">UCF · Center for Research in Computer Vision</p>
+                            <p class="leadership-bio" style="font-size:0.84rem;">
+                                Distinguished Professor of Computer Science at UCF, founding director of CRCV.
+                                Fellow of IEEE, AAAI, IAPR, and ACM. Research in computer vision, activity
+                                recognition, pose estimation, and video understanding.
+                            </p>
+                            <p class="leadership-note" style="margin-top:0.5rem; font-size:0.75rem;">
+                                Biography draws only on publicly available information. UCF does not sponsor or endorse Gabriella Systems.
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
+
+                <!-- Responsive: stack on mobile -->
+                <style>
+                    @media (max-width: 720px) {
+                        #pipeline > .container > div[style*="grid-template-columns"] {
+                            grid-template-columns: 1fr !important;
+                        }
+                    }
+                </style>
+
             </div>
         </section>
 
