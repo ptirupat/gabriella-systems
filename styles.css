@@ -3194,3 +3194,19 @@ h1, h2, h3 {
     border-radius: 99px;
 }
 
+
+/* ── Stagger-in: pre-hide via CSS to prevent flash-then-disappear ── */
+/* JS sets opacity:0 after paint, causing a visible→invisible flicker.
+   CSS sets it before paint so the card is never briefly visible first. */
+.stagger-in > * {
+    opacity: 0;
+    transform: translateY(20px);
+    will-change: opacity, transform;
+}
+/* Fallback: show everything if JS hasn't run after 2s */
+@keyframes staggerFallback {
+    to { opacity: 1; transform: none; }
+}
+.stagger-in > * {
+    animation: staggerFallback 0s 2s forwards;
+}

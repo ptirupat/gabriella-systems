@@ -269,8 +269,7 @@ function handleFormSubmit(form) {
     const staggerContainers = document.querySelectorAll('.stagger-in');
 
     const revealEl = (el, delay = 0) => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(22px)';
+        // CSS already sets opacity:0/translateY — only set the transition timing here
         el.style.transition = `opacity 0.55s ${delay}s cubic-bezier(0.22,1,0.36,1), transform 0.55s ${delay}s cubic-bezier(0.34,1.2,0.64,1)`;
     };
     const showEl = el => {
@@ -319,6 +318,6 @@ function handleFormSubmit(form) {
                 containerObs.unobserve(entry.target);
             });
         }, { threshold: 0.05 });
-        containerObs.observe(container);
+        requestAnimationFrame(() => containerObs.observe(container));
     });
 }());
