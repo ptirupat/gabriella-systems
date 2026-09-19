@@ -2891,10 +2891,16 @@ h1, h2, h3 {
 .compare-row span { color: rgba(255,255,255,0.65); }
 .compare-row strong { color: white; font-weight: 700; }
 .compare-disclaimer {
-    color: rgba(255,255,255,0.4);
-    font-size: 0.75rem;
+    color: var(--muted);
+    font-size: 0.82rem;
     font-style: italic;
-    margin-top: 0.6rem;
+    margin-top: 0.8rem;
+    line-height: 1.55;
+}
+/* Inside a dark compare card, use translucent white */
+.compare-card .compare-disclaimer {
+    color: rgba(255,255,255,0.45);
+    font-size: 0.75rem;
 }
 
 /* ────────────────────────────────────────────────────────────────
@@ -2919,16 +2925,14 @@ h1, h2, h3 {
     border-radius: 0 2px 2px 0;
 }
 .metric-card span {
-    font-size: 0.78rem;
+    font-size: 0.86rem;
     font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
     color: var(--muted);
     display: block;
     margin-bottom: 0.4rem;
 }
 .metric-card strong {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: 800;
     letter-spacing: -0.03em;
     background: linear-gradient(135deg, var(--ink) 0%, var(--teal) 100%);
