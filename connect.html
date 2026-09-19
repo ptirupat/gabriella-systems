@@ -584,164 +584,29 @@
             </div>
         </div>
 
-        <!-- INTEREST FORM ────────────────────────────────────────────────── -->
-        <section class="section muted-section" id="interest-form" aria-labelledby="form-h2">
-            <div class="container" style="max-width:820px; margin:0 auto;">
-
-                <h2 id="form-h2" style="margin-bottom:0.3rem;">Register your interest</h2>
-                <p style="color:var(--muted); margin-bottom:1.8rem; font-size:0.94rem;">
-                    Complete the fields below. Select the pathway that best matches your interest.
-                    Your submission will be sent to info@gabriellasystems.com.
+        <!-- SINGLE CTA — replaces duplicate form ────────────────────────── -->
+        <section class="section muted-section" id="interest-form" style="padding:52px 0;">
+            <div class="container narrow" style="text-align:center;">
+                <p class="eyebrow">Ready to connect?</p>
+                <h2 style="font-size:clamp(1.7rem,4vw,2.4rem); margin-bottom:0.8rem;">
+                    One form. All four pathways.
+                </h2>
+                <p style="color:var(--muted); font-size:1rem; max-width:540px; margin:0 auto 2rem; line-height:1.7;">
+                    Select your pathway below, or go directly to the form — the Purpose
+                    dropdown covers all four pathways in one place.
                 </p>
-
-                <!-- Success state (hidden until submit succeeds) -->
-                <div id="connect-success" role="status" aria-live="polite"
-                     style="display:none; background:rgba(6,75,145,0.07); border:1px solid rgba(6,75,145,0.2);
-                            border-radius:12px; padding:28px 24px; text-align:center; margin-bottom:1.4rem;">
-                    <i class="fas fa-circle-check" style="font-size:2rem; color:var(--teal); margin-bottom:0.8rem; display:block;" aria-hidden="true"></i>
-                    <h3 style="font-size:1.05rem; color:var(--ink); margin-bottom:0.4rem;">Interest registered</h3>
-                    <p style="font-size:0.88rem; color:var(--muted); max-width:440px; margin:0 auto 1rem; line-height:1.6;">
-                        Thank you — your expression of interest has been received. We will review it
-                        and may be in touch if a relevant opportunity arises. Remember: submission does
-                        not create any obligation for either party.
-                    </p>
-                    <a href="https://www.linkedin.com/company/gabriella-systems" target="_blank"
-                       rel="noopener noreferrer"
-                       style="display:inline-flex; align-items:center; gap:0.45rem; padding:0.6rem 1.1rem;
-                              background:#0A66C2; color:white; border-radius:8px; font-weight:700;
-                              font-size:0.84rem; text-decoration:none;">
-                        <i class="fab fa-linkedin"></i> Follow us on LinkedIn for updates
+                <div style="display:flex; align-items:center; justify-content:center; gap:1rem; flex-wrap:wrap;">
+                    <a href="contact.html?purpose=Pilot+Interest" class="cta-button">
+                        <i class="fas fa-video"></i>&nbsp; Request a Pilot
+                    </a>
+                    <a href="contact.html" class="secondary-button"
+                       style="background:rgba(3,30,73,0.08); color:var(--ink); border:1px solid var(--line);">
+                        <i class="fas fa-arrow-right"></i>&nbsp; Go to the form
                     </a>
                 </div>
-
-                <div class="interest-form-wrap" id="connect-form-wrap">
-
-                    <!-- Pathway selector -->
-                    <fieldset style="border:none; padding:0; margin-bottom:1.4rem;">
-                        <legend style="font-size:0.8rem; font-weight:700; color:var(--ink); margin-bottom:0.7rem; display:block;">
-                            Pathway <span style="color:var(--coral);">*</span>
-                        </legend>
-                        <div class="pathway-selector" id="pathway-pills" role="radiogroup" aria-label="Select a pathway">
-                            <label id="pill-pilot"><input type="radio" name="pathway" value="Pilot Interest"><span>Pilot Interest</span></label>
-                            <label id="pill-research"><input type="radio" name="pathway" value="Research Conversations"><span>Research Conversations</span></label>
-                            <label id="pill-advisory"><input type="radio" name="pathway" value="Advisory Interest"><span>Advisory Interest</span></label>
-                            <label id="pill-future"><input type="radio" name="pathway" value="Future Paid Opportunities"><span>Future Paid Opportunities</span></label>
-                        </div>
-                        <p id="pathway-error" style="display:none; color:var(--coral); font-size:0.8rem; margin-top:0.4rem;">Please select a pathway.</p>
-                    </fieldset>
-
-                    <form id="connect-form" novalidate aria-label="Expression of interest form">
-                        <div class="form-grid">
-
-                            <div class="form-group">
-                                <label for="cf-name">Full name <span style="color:var(--coral);">*</span></label>
-                                <input type="text" id="cf-name" name="name" autocomplete="name" required
-                                    placeholder="Your full name" aria-required="true">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="cf-email">Email address <span style="color:var(--coral);">*</span></label>
-                                <input type="email" id="cf-email" name="email" autocomplete="email" required
-                                    placeholder="you@organisation.com" aria-required="true">
-                            </div>
-
-                            <div class="form-group full">
-                                <label for="cf-org">Organisation, university or professional affiliation <span style="color:var(--coral);">*</span></label>
-                                <input type="text" id="cf-org" name="organisation" autocomplete="organization" required
-                                    placeholder="Academy, university, club or employer name" aria-required="true">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="cf-sport">Sport <span style="color:var(--coral);">*</span></label>
-                                <select id="cf-sport" name="sport" required aria-required="true">
-                                    <option value="" disabled selected>Select sport</option>
-                                    <option value="Cricket">Cricket</option>
-                                    <option value="Baseball">Baseball</option>
-                                    <option value="Softball">Softball</option>
-                                    <option value="Multiple">Multiple sports</option>
-                                    <option value="Other">Other / Not sport-specific</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="cf-region">World region <span style="color:var(--coral);">*</span></label>
-                                <select id="cf-region" name="region" required aria-required="true">
-                                    <option value="" disabled selected>Select region</option>
-                                    <option value="Africa">Africa</option>
-                                    <option value="Asia-Pacific">Asia-Pacific</option>
-                                    <option value="Europe">Europe</option>
-                                    <option value="Latin America">Latin America</option>
-                                    <option value="Middle East">Middle East</option>
-                                    <option value="North America">North America</option>
-                                    <option value="Other">Other</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="cf-country">Country <span class="opt">(optional)</span></label>
-                                <input type="text" id="cf-country" name="country" autocomplete="country-name"
-                                    placeholder="e.g. India, Australia, USA">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="cf-url">Professional or organisational URL <span class="opt">(optional)</span></label>
-                                <input type="url" id="cf-url" name="url"
-                                    placeholder="https://yourorganisation.com">
-                            </div>
-
-                            <div class="form-group full">
-                                <label for="cf-statement">Short statement of interest <span style="color:var(--coral);">*</span></label>
-                                <textarea id="cf-statement" name="statement" required aria-required="true"
-                                    placeholder="Briefly describe your background and what you are interested in exploring with Gabriella Systems (2–4 sentences)."
-                                    rows="4"></textarea>
-                            </div>
-
-                            <div class="form-group full">
-                                <div class="consent-block">
-                                    <input type="checkbox" id="cf-consent" name="consent" required aria-required="true">
-                                    <label for="cf-consent">
-                                        I understand that submitting this form does not create an employment, contractor,
-                                        advisory, research, partnership or compensation relationship. I have read the notice
-                                        below and acknowledge that no obligation arises from this expression of interest.
-                                        <span style="color:var(--coral);">*</span>
-                                    </label>
-                                </div>
-                            </div>
-
-                        </div><!-- /.form-grid -->
-
-                        <!-- Inline error message -->
-                        <p id="connect-form-error" role="alert"
-                           style="display:none; color:var(--coral); font-size:0.84rem; margin:1rem 0 0;
-                                  padding:10px 14px; background:rgba(255,82,103,0.07); border-radius:8px;">
-                        </p>
-
-                        <div class="form-submit-area">
-                            <button id="connect-submit" class="cta-button" type="submit">
-                                <i class="fas fa-paper-plane" aria-hidden="true"></i>
-                                Submit interest
-                            </button>
-                            <p class="privacy-note">
-                                <i class="fas fa-shield" aria-hidden="true"></i>
-                                Your information is sent directly to our team and is not shared with
-                                third parties. Reply-to is set to your email address.
-                            </p>
-                        </div>
-
-                    </form><!-- /#connect-form -->
-
-                    <!-- Legal notice -->
-                    <aside class="legal-notice" role="note" aria-label="Legal notice">
-                        <strong>Important:</strong> Gabriella Systems is currently collecting
-                        expressions of interest only. Submission does not create an employment,
-                        contractor, advisory, research, partnership or compensation relationship.
-                        Any future engagement would require separate review, written agreements
-                        and applicable legal authorisation. Gabriella Systems is not currently
-                        offering employment, internships, volunteer work, contract assignments,
-                        compensation, equity or immigration sponsorship.
-                    </aside>
-
-                </div><!-- /.interest-form-wrap -->
+                <p style="font-size:0.78rem; color:var(--muted); margin-top:1.2rem;">
+                    Submission does not create any employment, advisory or commercial relationship.
+                </p>
             </div>
         </section>
 
@@ -799,140 +664,34 @@
     <script src="script.js"></script>
     <script>
     (function () {
-        const BACKEND = 'https://gabriellasystems--cricket-demo-web.modal.run/api/contact';
-
         const cards    = document.querySelectorAll('.pathway-card');
-        const pills    = document.querySelectorAll('.pathway-selector label');
-        const radios   = document.querySelectorAll('.pathway-selector input[type="radio"]');
         const formSect = document.getElementById('interest-form');
-        const form     = document.getElementById('connect-form');
-        const submitBtn = document.getElementById('connect-submit');
-        const errEl    = document.getElementById('connect-form-error');
-        const successEl = document.getElementById('connect-success');
-        const formWrap  = document.getElementById('connect-form-wrap');
-        const pathwayErr = document.getElementById('pathway-error');
+
+        // Pathway-to-contact.html URL mapping
+        const purposeMap = {
+            'Pilot Interest':            'Pilot+Interest',
+            'Research Conversations':    'Research+Conversations',
+            'Advisory Interest':         'Advisory+Interest',
+            'Future Paid Opportunities': 'Future+Paid+Opportunities',
+        };
 
         // ── Pathway selection ───────────────────────────────────────────────
         function selectPathway(value) {
-            cards.forEach(c => c.classList.toggle('active', c.dataset.pathway === value));
-            pills.forEach(pill => {
-                const radio = pill.querySelector('input');
-                const match = radio.value === value;
-                radio.checked = match;
-                pill.classList.toggle('selected', match);
-            });
-            pathwayErr.style.display = 'none';
-        }
-
-        function selectedPathway() {
-            const r = document.querySelector('.pathway-selector input[type="radio"]:checked');
-            return r ? r.value : '';
-        }
-
-        // Card click → scroll to form + select pathway
+        // Card click → navigate to contact.html with pre-selected purpose
         cards.forEach(card => {
+            const pathway = card.dataset.pathway;
             card.addEventListener('click', () => {
-                selectPathway(card.dataset.pathway);
-                formSect.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                const encoded = purposeMap[pathway] || '';
+                window.location.href = `contact.html${encoded ? '?purpose=' + encoded : ''}`;
             });
+            card.classList.add('cursor-pointer');
             card.querySelector('.pathway-btn').addEventListener('keydown', e => {
                 if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); card.click(); }
             });
         });
 
-        radios.forEach(radio => radio.addEventListener('change', () => selectPathway(radio.value)));
-        pills.forEach(pill => {
-            pill.addEventListener('click', () => selectPathway(pill.querySelector('input').value));
-        });
-
-        // ── Form submission ─────────────────────────────────────────────────
-        form.addEventListener('submit', async e => {
-            e.preventDefault();
-            errEl.style.display = 'none';
-
-            // Validate pathway
-            const pathway = selectedPathway();
-            if (!pathway) {
-                pathwayErr.style.display = 'block';
-                pathwayErr.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                return;
-            }
-
-            // Collect values
-            const name       = form.querySelector('[name="name"]').value.trim();
-            const email      = form.querySelector('[name="email"]').value.trim();
-            const org        = form.querySelector('[name="organisation"]').value.trim();
-            const sport      = form.querySelector('[name="sport"]').value;
-            const region     = form.querySelector('[name="region"]').value;
-            const country    = form.querySelector('[name="country"]').value.trim();
-            const url        = form.querySelector('[name="url"]').value.trim();
-            const statement  = form.querySelector('[name="statement"]').value.trim();
-            const consent    = form.querySelector('[name="consent"]').checked;
-
-            // Client-side validation
-            if (!name || !email || !org || !sport || !region || !statement) {
-                showError('Please complete all required fields (marked with *).');
-                return;
-            }
-            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-                showError('Please enter a valid email address.');
-                return;
-            }
-            if (!consent) {
-                showError('Please tick the acknowledgement checkbox before submitting.');
-                return;
-            }
-
-            // Build message body
-            const lines = [
-                `Pathway: ${pathway}`,
-                `Sport: ${sport}`,
-                `Region: ${region}`,
-                country ? `Country: ${country}` : null,
-                url ? `URL: ${url}` : null,
-                '',
-                'Statement of interest:',
-                statement,
-            ].filter(l => l !== null);
-
-            const payload = {
-                name,
-                email,
-                organization: org,
-                role:    pathway,
-                interest: `${sport} · ${region}`,
-                message: lines.join('\n'),
-            };
-
-            // Show loading
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending…';
-
-            try {
-                const res = await fetch(BACKEND, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload),
-                });
-                if (res.ok) {
-                    formWrap.style.display = 'none';
-                    successEl.style.display = 'block';
-                    successEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                } else {
-                    throw new Error(`Server error ${res.status}`);
-                }
-            } catch {
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Submit interest';
-                showError('Something went wrong — please try again or email info@gabriellasystems.com directly.');
-            }
-        });
-
-        function showError(msg) {
-            errEl.textContent = msg;
-            errEl.style.display = 'block';
-            errEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        }
+        // CTA section scroll
+        formSect?.querySelector('a[href^="contact.html"]')?.addEventListener('click', () => {});
     }());
     </script>
 </body>

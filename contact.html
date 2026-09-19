@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Request a Pilot — Gabriella Systems</title>
-    <meta name="description" content="Request a Gabriella Vision pilot for batting and bowling analysis at your academy, club, or training facility.">
-        <meta property="og:type" content="website">
+    <title>Get in Touch — Gabriella Systems</title>
+    <meta name="description" content="Register interest in a pilot, research conversation, advisory discussion or future opportunity with Gabriella Systems.">
+    <meta property="og:type" content="website">
     <meta property="og:site_name" content="Gabriella Systems">
-    <meta property="og:title" content="Request a Pilot — Gabriella Systems">
-    <meta property="og:description" content="Request a Gabriella Vision pilot for batting and bowling analysis at your academy, club, or training facility.">
+    <meta property="og:title" content="Get in Touch — Gabriella Systems">
+    <meta property="og:description" content="Register interest in a pilot, research conversation, advisory discussion or future opportunity with Gabriella Systems.">
     <meta property="og:image" content="https://gabriellasystems.com/assets/cricket-vision-hero.png">
     <meta property="og:url" content="https://gabriellasystems.com/contact.html">
     <meta name="twitter:card" content="summary_large_image">
@@ -39,9 +39,7 @@
                 <a href="contact.html" class="nav-link active">Request Pilot</a>
             </div>
             <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </button>
         </div>
     </nav>
@@ -49,23 +47,23 @@
     <main class="subpage-main">
         <section class="page-hero">
             <div class="container narrow">
-                <p class="eyebrow">Request a Pilot</p>
+                <p class="eyebrow">Get in touch</p>
                 <h1>Bring performance intelligence to your nets</h1>
                 <p>
-                    Tell us about your players, coaching workflow, and what you want to measure.
-                    We'll map Gabriella Vision to how you already train.
+                    Whether you are an academy interested in a pilot, a researcher exploring
+                    a collaboration, or an experienced professional following our work —
+                    use this form to start the conversation.
                 </p>
             </div>
         </section>
 
         <section class="section">
             <div class="container contact-grid">
+
+                <!-- Left: contact info -->
                 <div class="contact-info">
-                    <h2>Get in touch</h2>
-                    <p>
-                        Reach out for product access, hardware pilots, academy deployments,
-                        or cricket performance research partnerships.
-                    </p>
+                    <h2>Contact</h2>
+                    <p>We read every message. Response times depend on volume, but we aim to reply within a few working days for relevant enquiries.</p>
 
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
@@ -87,77 +85,133 @@
                         <i class="fas fa-clock"></i>
                         <div>
                             <strong>Response window</strong>
-                            <span>Monday to Friday, 9:00 AM to 6:00 PM ET</span>
+                            <span>Monday to Friday, 9:00 AM – 6:00 PM ET</span>
                         </div>
                     </div>
 
                     <div class="contact-item">
-                        <i class="fas fa-users"></i>
+                        <i class="fab fa-linkedin"></i>
                         <div>
-                            <strong>Best fit</strong>
-                            <span>Batting coaches, bowling coaches, academies, clubs, performance centres, and research partners</span>
+                            <strong>LinkedIn</strong>
+                            <a href="https://www.linkedin.com/company/gabriella-systems"
+                               target="_blank" rel="noopener noreferrer">
+                                Follow Gabriella Systems
+                            </a>
                         </div>
                     </div>
+
+                    <!-- Legal note (compact) -->
+                    <p style="font-size:0.76rem; color:var(--muted); line-height:1.55; margin-top:1.5rem;
+                               border-top:1px solid var(--line); padding-top:1rem;">
+                        Submitting this form does not create an employment, contractor, advisory,
+                        research, partnership or compensation relationship. Any future engagement
+                        requires separate written agreements.
+                    </p>
                 </div>
 
-                <form class="contact-form" onsubmit="handleFormSubmit(event)">
-                    <h2>Send a message</h2>
-
-                    <div class="form-group">
-                        <label for="name">Full Name *</label>
-                        <input type="text" id="name" name="name" autocomplete="name" required>
+                <!-- Right: unified form -->
+                <div>
+                    <!-- Success state -->
+                    <div id="contact-success" role="status" aria-live="polite"
+                         style="display:none; background:rgba(6,75,145,0.07); border:1px solid rgba(6,75,145,0.2);
+                                border-radius:12px; padding:28px 24px; text-align:center;">
+                        <i class="fas fa-circle-check" style="font-size:2rem; color:var(--teal); margin-bottom:0.8rem; display:block;" aria-hidden="true"></i>
+                        <h3 style="font-size:1.05rem; color:var(--ink); margin-bottom:0.4rem;">Message received</h3>
+                        <p style="font-size:0.88rem; color:var(--muted); max-width:380px; margin:0 auto; line-height:1.6;">
+                            Thank you — we will be in touch if your enquiry is a good fit.
+                        </p>
                     </div>
 
-                    <div class="form-group">
-                        <label for="email">Email Address *</label>
-                        <input type="email" id="email" name="email" autocomplete="email" required>
-                    </div>
+                    <form id="contact-form" class="contact-form" novalidate>
+                        <h2 style="margin-bottom:1.2rem;">Send a message</h2>
 
-                    <div class="form-group">
-                        <label for="organization">Organization</label>
-                        <input type="text" id="organization" name="organization" autocomplete="organization">
-                    </div>
+                        <!-- Purpose selector -->
+                        <div class="form-group" style="margin-bottom:1.2rem;">
+                            <label for="cf-purpose" style="font-size:0.8rem; font-weight:700; color:var(--ink); margin-bottom:0.4rem; display:block;">
+                                Purpose <span style="color:var(--coral);">*</span>
+                            </label>
+                            <select id="cf-purpose" name="purpose" required
+                                    style="width:100%; border:1.5px solid var(--line); border-radius:10px;
+                                           padding:0.7rem 0.9rem; font-family:inherit; font-size:0.9rem;
+                                           color:var(--ink); background:var(--paper); outline:none;">
+                                <option value="" disabled selected>Select a purpose</option>
+                                <option value="Pilot Interest">Pilot — I want to evaluate Gabriella at my academy or club</option>
+                                <option value="Research Conversations">Research — Institutional research conversation</option>
+                                <option value="Advisory Interest">Advisory — Subject-matter expert introducing background</option>
+                                <option value="Future Paid Opportunities">Future opportunities — Professional registering for notice</option>
+                                <option value="General">General enquiry</option>
+                            </select>
+                        </div>
 
-                    <div class="form-group">
-                        <label for="role">I'm a...</label>
-                        <select id="role" name="role">
-                            <option value="">Select your role</option>
-                            <option value="player">Player</option>
-                            <option value="coach">Coach</option>
-                            <option value="academy">Academy</option>
-                            <option value="club">Club</option>
-                            <option value="performance-center">Performance Centre</option>
-                            <option value="research-partner">Research Partner</option>
-                        </select>
-                    </div>
+                        <div class="form-group">
+                            <label for="name">Full name <span style="color:var(--coral);">*</span></label>
+                            <input type="text" id="name" name="name" autocomplete="name" required
+                                   placeholder="Your full name">
+                        </div>
 
-                    <div class="form-group">
-                        <label for="interest">I'm interested in...</label>
-                        <select id="interest" name="interest">
-                            <option value="">Select an area</option>
-                            <option value="batting">Batting analysis</option>
-                            <option value="bowling">Bowling analysis</option>
-                            <option value="both">Both batting and bowling</option>
-                            <option value="hardware-pilot">Hardware pilot</option>
-                            <option value="research">Research/validation partnership</option>
-                        </select>
-                    </div>
+                        <div class="form-group">
+                            <label for="email">Email address <span style="color:var(--coral);">*</span></label>
+                            <input type="email" id="email" name="email" autocomplete="email" required
+                                   placeholder="you@organisation.com">
+                        </div>
 
-                    <div class="form-group">
-                        <label for="message">Message *</label>
-                        <textarea id="message" name="message" placeholder="Tell us about your players, what you want to measure, and how you currently train..." required></textarea>
-                    </div>
+                        <div class="form-group">
+                            <label for="organization">Organisation or affiliation</label>
+                            <input type="text" id="organization" name="organization" autocomplete="organization"
+                                   placeholder="Academy, university, club or employer">
+                        </div>
 
-                    <button type="submit" class="submit-btn">
-                        <i class="fas fa-paper-plane"></i>
-                        Send Message
-                    </button>
-                </form>
+                        <div class="form-group" id="sport-group">
+                            <label for="cf-sport">Sport</label>
+                            <select id="cf-sport" name="sport"
+                                    style="width:100%; border:1.5px solid var(--line); border-radius:10px;
+                                           padding:0.7rem 0.9rem; font-family:inherit; font-size:0.9rem;
+                                           color:var(--ink); background:var(--paper); outline:none;">
+                                <option value="">Select sport (optional)</option>
+                                <option value="Cricket">Cricket</option>
+                                <option value="Baseball">Baseball</option>
+                                <option value="Softball">Softball</option>
+                                <option value="Multiple">Multiple sports</option>
+                                <option value="Other">Other / Not sport-specific</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message <span style="color:var(--coral);">*</span></label>
+                            <textarea id="message" name="message" required rows="5"
+                                placeholder="Tell us about your context and what you would like to explore with Gabriella Systems."></textarea>
+                        </div>
+
+                        <!-- Consent (shown for non-general purposes) -->
+                        <div id="consent-block" style="display:none; margin-bottom:1rem;">
+                            <label style="display:flex; align-items:flex-start; gap:0.6rem; font-size:0.8rem;
+                                          color:var(--muted); line-height:1.55; cursor:pointer;">
+                                <input type="checkbox" id="cf-consent" name="consent"
+                                       style="width:18px; height:18px; flex-shrink:0; margin-top:2px;
+                                              accent-color:var(--teal); cursor:pointer;">
+                                I understand that submitting this form does not create an employment,
+                                contractor, advisory, research, partnership or compensation relationship,
+                                and that no obligation arises from this expression of interest.
+                                <span style="color:var(--coral);">*</span>
+                            </label>
+                        </div>
+
+                        <p id="form-error" role="alert"
+                           style="display:none; color:var(--coral); font-size:0.82rem; margin-bottom:0.8rem;
+                                  padding:10px 14px; background:rgba(255,82,103,0.07); border-radius:8px;"></p>
+
+                        <button type="submit" class="submit-btn" id="contact-submit">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
             </div>
         </section>
     </main>
 
-        <footer class="footer">
+    <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
@@ -175,9 +229,12 @@
                 <div class="footer-col">
                     <h4>Company</h4>
                     <a href="about.html">About</a>
+                    <a href="research.html">Research</a>
+                    <a href="connect.html">Connect</a>
                     <a href="contact.html">Request a Pilot</a>
                     <a href="mailto:info@gabriellasystems.com">info@gabriellasystems.com</a>
-                    <a href="https://www.linkedin.com/company/gabriella-systems" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin" style="margin-right:0.35rem;"></i>LinkedIn</a>
+                    <a href="https://www.linkedin.com/company/gabriella-systems" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin" style="margin-right:0.35rem;"></i>LinkedIn</a>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -190,5 +247,91 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
+    <script>
+    (function () {
+        const BACKEND = 'https://gabriellasystems--cricket-demo-web.modal.run/api/contact';
+
+        // Pre-fill Purpose from query string (e.g. ?purpose=Pilot+Interest)
+        const params  = new URLSearchParams(window.location.search);
+        const presel  = params.get('purpose');
+        if (presel) {
+            const sel = document.getElementById('cf-purpose');
+            for (const opt of sel.options) {
+                if (opt.value === presel) { opt.selected = true; sel.dispatchEvent(new Event('change')); break; }
+            }
+        }
+        const form        = document.getElementById('contact-form');
+        const submitBtn   = document.getElementById('contact-submit');
+        const errEl       = document.getElementById('form-error');
+        const successEl   = document.getElementById('contact-success');
+        const purposeSel  = document.getElementById('cf-purpose');
+        const consentBlock = document.getElementById('consent-block');
+        const consentBox  = document.getElementById('cf-consent');
+
+        // Show consent checkbox for non-general, non-pilot purposes
+        purposeSel.addEventListener('change', () => {
+            const val = purposeSel.value;
+            const needsConsent = val && val !== 'General' && val !== 'Pilot Interest';
+            consentBlock.style.display = needsConsent ? 'block' : 'none';
+            if (!needsConsent) consentBox.required = false;
+            else consentBox.required = true;
+        });
+
+        form.addEventListener('submit', async e => {
+            e.preventDefault();
+            errEl.style.display = 'none';
+
+            const purpose = purposeSel.value;
+            const name    = form.querySelector('[name="name"]').value.trim();
+            const email   = form.querySelector('[name="email"]').value.trim();
+            const org     = form.querySelector('[name="organization"]').value.trim();
+            const sport   = form.querySelector('[name="sport"]').value;
+            const message = form.querySelector('[name="message"]').value.trim();
+            const consent = consentBox.checked;
+
+            if (!purpose) { showError('Please select a purpose.'); return; }
+            if (!name || !email || !message) { showError('Please complete all required fields.'); return; }
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showError('Please enter a valid email address.'); return; }
+            if (consentBox.required && !consent) {
+                showError('Please tick the acknowledgement checkbox before submitting.'); return;
+            }
+
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending…';
+
+            const payload = {
+                name,
+                email,
+                organization: org,
+                role:     purpose,
+                interest: sport || '',
+                message,
+            };
+
+            try {
+                const res = await fetch(BACKEND, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload),
+                });
+                if (res.ok) {
+                    form.style.display = 'none';
+                    successEl.style.display = 'block';
+                } else {
+                    throw new Error('Server error');
+                }
+            } catch {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+                showError('Something went wrong — please email info@gabriellasystems.com directly.');
+            }
+        });
+
+        function showError(msg) {
+            errEl.textContent = msg;
+            errEl.style.display = 'block';
+        }
+    }());
+    </script>
 </body>
 </html>
