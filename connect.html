@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect With Gabriella — Gabriella Systems</title>
+    <meta name="description" content="Register interest in future pilot partnerships, research conversations, advisory discussions and paid opportunities with Gabriella Systems — AI-assisted sports development for cricket, baseball and softball worldwide.">
+    <meta name="keywords" content="sports technology partnership, cricket analytics research, baseball video intelligence, softball AI, responsible sports AI, athlete movement analysis, sports computer vision collaboration, global sports technology">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Gabriella Systems">
+    <meta property="og:title" content="Connect With Gabriella — Gabriella Systems">
+    <meta property="og:description" content="Register nonbinding interest in future pilot partnerships, research conversations and opportunities with Gabriella Systems.">
+    <meta property="og:image" content="https://gabriellasystems.com/assets/cricket-vision-hero.png">
+    <meta property="og:url" content="https://gabriellasystems.com/connect.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://gabriellasystems.com/connect.html">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebPage",
+                "name": "Connect With Gabriella",
+                "url": "https://gabriellasystems.com/connect.html",
+                "description": "Register nonbinding expressions of interest in future pilot partnerships, research conversations, advisory discussions and paid opportunities with Gabriella Systems.",
+                "isPartOf": { "@type": "WebSite", "url": "https://gabriellasystems.com" }
+            },
+            {
+                "@type": "ContactPage",
+                "name": "Connect With Gabriella — Interest Registration",
+                "url": "https://gabriellasystems.com/connect.html",
+                "provider": {
+                    "@type": "Organization",
+                    "name": "Gabriella Systems",
+                    "url": "https://gabriellasystems.com",
+                    "description": "AI-assisted sports video intelligence for cricket, baseball and softball."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+        /* ── Connect page ─────────────────────────────────────────────────── */
+
+        /* Hero */
+        .connect-hero {
+            background:
+                radial-gradient(ellipse 55% 60% at 85% 15%, rgba(247,39,114,0.2) 0%, transparent 60%),
+                radial-gradient(ellipse 40% 50% at 5% 85%, rgba(255,154,120,0.12) 0%, transparent 55%),
+                linear-gradient(145deg, #01091a 0%, #031E49 40%, #064B91 80%, #021030 100%);
+            padding: 96px 0 80px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        .connect-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px),
+                linear-gradient(0deg,  rgba(255,255,255,0.025) 1px, transparent 1px);
+            background-size: 44px 44px;
+            pointer-events: none;
+        }
+        .connect-hero .eyebrow { color: var(--amber); }
+        .connect-hero h1 {
+            font-size: clamp(2.4rem, 5.5vw, 4rem);
+            letter-spacing: -0.03em;
+            line-height: 1.06;
+            max-width: 820px;
+            margin-bottom: 1.2rem;
+        }
+        .connect-hero p {
+            font-size: 1.08rem;
+            color: rgba(255,255,255,0.82);
+            max-width: 620px;
+            line-height: 1.65;
+            margin-bottom: 1.8rem;
+        }
+        .connect-hero-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .linkedin-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.82rem 1.4rem;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            border: 1px solid rgba(255,255,255,0.28);
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: background 0.2s ease;
+        }
+        .linkedin-btn:hover { background: rgba(255,255,255,0.2); }
+
+        /* Global reach band */
+        .global-band {
+            background: var(--soft);
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+            padding: 20px 0;
+        }
+        .global-band-inner {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .global-band-text {
+            font-size: 0.88rem;
+            color: var(--muted);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .global-band-text i { color: var(--teal); }
+        .sport-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.78rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 999px;
+            border: 1px solid var(--line);
+            color: var(--muted);
+            background: var(--paper);
+        }
+
+        /* Pathway cards grid */
+        .pathway-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .pathway-card {
+            background: var(--paper);
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            padding: 28px 26px;
+            display: flex;
+            flex-direction: column;
+            transition: box-shadow 0.25s ease, transform 0.25s ease, border-color 0.2s ease;
+            cursor: pointer;
+        }
+        .pathway-card:hover {
+            box-shadow: 0 0 0 2px var(--green), 0 16px 40px rgba(3,30,73,0.12);
+            transform: translateY(-4px);
+            border-color: transparent;
+        }
+        .pathway-card.active {
+            box-shadow: 0 0 0 2px var(--green), 0 16px 40px rgba(3,30,73,0.12);
+            border-color: transparent;
+        }
+        .pathway-icon {
+            width: 48px; height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        .pathway-icon.p1 { background: linear-gradient(135deg, var(--teal), #0a3d7a); }
+        .pathway-icon.p2 { background: linear-gradient(135deg, var(--green), #c9165a); }
+        .pathway-icon.p3 { background: linear-gradient(135deg, var(--amber), #e07050); }
+        .pathway-icon.p4 { background: linear-gradient(135deg, #4a5e8a, var(--teal)); }
+
+        .pathway-number {
+            font-size: 0.68rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--muted);
+            margin-bottom: 0.4rem;
+        }
+        .pathway-card h3 {
+            font-size: 1.05rem;
+            color: var(--ink);
+            margin-bottom: 0.35rem;
+        }
+        .pathway-audience {
+            font-size: 0.76rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--teal);
+            margin-bottom: 0.7rem;
+        }
+        .pathway-card p {
+            font-size: 0.87rem;
+            color: var(--muted);
+            line-height: 1.6;
+            flex: 1;
+            margin-bottom: 1.2rem;
+        }
+        .pathway-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.65rem 1.1rem;
+            border-radius: 10px;
+            font-size: 0.84rem;
+            font-weight: 700;
+            border: 1.5px solid var(--line);
+            color: var(--teal);
+            background: transparent;
+            cursor: pointer;
+            transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+            text-align: left;
+            align-self: flex-start;
+        }
+        .pathway-btn:hover, .pathway-card.active .pathway-btn {
+            background: var(--teal);
+            border-color: var(--teal);
+            color: white;
+        }
+
+        /* Interest form */
+        .interest-form-wrap {
+            background: var(--paper);
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 36px 40px;
+            margin-top: 2.5rem;
+            box-shadow: 0 4px 24px rgba(3,30,73,0.07);
+        }
+        @media (max-width: 600px) { .interest-form-wrap { padding: 24px 20px; } }
+
+        .preview-banner {
+            background: rgba(255,154,120,0.1);
+            border: 1px solid rgba(255,154,120,0.3);
+            border-radius: 10px;
+            padding: 12px 16px;
+            font-size: 0.82rem;
+            color: var(--muted);
+            margin-bottom: 1.8rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.6rem;
+            line-height: 1.55;
+        }
+        .preview-banner i { color: var(--amber); flex-shrink: 0; margin-top: 2px; }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem 1.4rem;
+        }
+        @media (max-width: 640px) { .form-grid { grid-template-columns: 1fr; } }
+        .form-group { display: flex; flex-direction: column; gap: 0.35rem; }
+        .form-group.full { grid-column: 1 / -1; }
+        .form-group label {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--ink);
+        }
+        .form-group label .opt {
+            font-weight: 400;
+            color: var(--muted);
+            margin-left: 0.25rem;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            border: 1.5px solid var(--line);
+            border-radius: 10px;
+            padding: 0.7rem 0.9rem;
+            font-family: inherit;
+            font-size: 0.9rem;
+            color: var(--ink);
+            background: var(--paper);
+            transition: border-color 0.18s ease;
+            outline: none;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus { border-color: var(--teal); box-shadow: 0 0 0 3px rgba(6,75,145,0.1); }
+        .form-group textarea { resize: vertical; min-height: 90px; }
+
+        /* Pathway selector pills in form */
+        .pathway-selector {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .pathway-selector label {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 6px 12px;
+            border: 1.5px solid var(--line);
+            border-radius: 999px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: border-color 0.18s ease, background 0.18s ease;
+            color: var(--muted);
+        }
+        .pathway-selector input[type="radio"] { display: none; }
+        .pathway-selector input[type="radio"]:checked + span {
+            /* handled via JS below */
+        }
+        .pathway-selector label.selected {
+            border-color: var(--teal);
+            background: rgba(6,75,145,0.07);
+            color: var(--teal);
+        }
+
+        /* Consent */
+        .consent-block {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.7rem;
+            margin-top: 0.5rem;
+        }
+        .consent-block input[type="checkbox"] {
+            width: 18px; height: 18px;
+            flex-shrink: 0;
+            margin-top: 2px;
+            accent-color: var(--teal);
+            cursor: pointer;
+        }
+        .consent-block label {
+            font-size: 0.8rem;
+            color: var(--muted);
+            line-height: 1.55;
+            cursor: pointer;
+        }
+
+        /* Submit notice */
+        .form-submit-area {
+            margin-top: 1.4rem;
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+        }
+        .submit-disabled {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.85rem 1.6rem;
+            border-radius: 12px;
+            background: var(--line);
+            color: var(--muted);
+            font-weight: 700;
+            font-size: 0.9rem;
+            cursor: not-allowed;
+            border: none;
+        }
+        .privacy-note {
+            font-size: 0.76rem;
+            color: var(--muted);
+            line-height: 1.5;
+        }
+
+        /* Legal notice */
+        .legal-notice {
+            background: var(--soft);
+            border-left: 3px solid var(--line);
+            border-radius: 0 10px 10px 0;
+            padding: 16px 20px;
+            margin-top: 1.8rem;
+            font-size: 0.8rem;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        /* Reduce motion */
+        @media (prefers-reduced-motion: reduce) {
+            .pathway-card, .pathway-btn { transition: none; }
+        }
+
+        /* Focus states */
+        a:focus-visible,
+        button:focus-visible,
+        input:focus-visible,
+        select:focus-visible,
+        textarea:focus-visible {
+            outline: 2px solid var(--teal);
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="nav-logo-link">
+                    <img src="assets/logo.png" alt="Gabriella Systems" class="nav-logo-img">
+                    <span class="nav-logo-wordmark">Gabriella</span>
+                </a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="services.html" class="nav-link">Platform</a>
+                <a href="batting.html" class="nav-link">Batting</a>
+                <a href="bowling.html" class="nav-link">Bowling</a>
+                <a href="academies.html" class="nav-link">For Academies</a>
+                <a href="demo.html" class="nav-link">Showcase</a>
+                <a href="research.html" class="nav-link">Research</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="connect.html" class="nav-link active">Connect</a>
+                <a href="contact.html" class="nav-link">Request Pilot</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="subpage-main">
+
+        <!-- HERO ─────────────────────────────────────────────────────────── -->
+        <section class="connect-hero" aria-labelledby="connect-h1">
+            <div class="container narrow">
+                <p class="eyebrow">Connect With Gabriella</p>
+                <h1 id="connect-h1">Let's Explore What Sports Intelligence Can Become</h1>
+                <p>
+                    Gabriella Systems welcomes conversations with coaches, academies, researchers
+                    and experienced professionals interested in the future of AI-assisted sports
+                    development. We are currently gathering expressions of interest for potential
+                    future collaborations and opportunities.
+                </p>
+                <div class="connect-hero-actions">
+                    <a href="#pathways" class="cta-button">
+                        <i class="fas fa-compass"></i>&nbsp; Explore the pathways
+                    </a>
+                    <a href="https://www.linkedin.com/company/gabriella-systems" target="_blank" rel="noopener noreferrer" class="linkedin-btn">
+                        <i class="fab fa-linkedin"></i> Follow on LinkedIn
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- GLOBAL REACH BAND ───────────────────────────────────────────── -->
+        <div class="global-band" role="complementary" aria-label="Sports coverage">
+            <div class="container">
+                <div class="global-band-inner">
+                    <p class="global-band-text">
+                        <i class="fas fa-globe"></i>
+                        Welcoming interest from coaching environments worldwide
+                    </p>
+                    <span class="sport-pill">🏏 Cricket</span>
+                    <span class="sport-pill">⚾ Baseball</span>
+                    <span class="sport-pill">🥎 Softball</span>
+                    <p class="global-band-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Diverse athlete populations &amp; recording conditions
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOUR PATHWAYS ────────────────────────────────────────────────── -->
+        <section class="section" id="pathways" aria-labelledby="pathways-h2">
+            <div class="container">
+                <div class="section-intro" style="margin-bottom:1.6rem;">
+                    <p class="eyebrow">Four pathways</p>
+                    <h2 id="pathways-h2">How you can register interest</h2>
+                    <p style="max-width:580px; color:var(--muted);">
+                        Submitting interest through any pathway does not create an employment,
+                        contractor, advisory, partnership or compensation relationship.
+                    </p>
+                </div>
+
+                <div class="pathway-grid" id="pathway-grid">
+
+                    <!-- Pathway 1 -->
+                    <article class="pathway-card" data-pathway="Pilot Interest" aria-label="Pathway 1: Pilot Interest">
+                        <div class="pathway-icon p1" aria-hidden="true"><i class="fas fa-video"></i></div>
+                        <p class="pathway-number">Pathway 1</p>
+                        <h3>Pilot Interest</h3>
+                        <p class="pathway-audience">Coaches · Academies · Clubs · Athlete development programs</p>
+                        <p>
+                            Interested in helping evaluate how video intelligence could support
+                            real coaching environments? Organizations may register interest in
+                            future pilot discussions involving cricket, baseball or softball.
+                        </p>
+                        <button class="pathway-btn" type="button" aria-controls="interest-form">
+                            Register Pilot Interest <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </article>
+
+                    <!-- Pathway 2 -->
+                    <article class="pathway-card" data-pathway="Research Conversations" aria-label="Pathway 2: Research Conversations">
+                        <div class="pathway-icon p2" aria-hidden="true"><i class="fas fa-flask"></i></div>
+                        <p class="pathway-number">Pathway 2</p>
+                        <h3>Research Conversations</h3>
+                        <p class="pathway-audience">Universities · Laboratories · Established researchers</p>
+                        <p>
+                            We welcome preliminary conversations about institutionally approved
+                            research related to athlete movement, sports video understanding,
+                            responsible AI and performance evaluation. Any collaboration would
+                            require separate institutional, legal, data-rights and authorship
+                            agreements.
+                        </p>
+                        <button class="pathway-btn" type="button" aria-controls="interest-form">
+                            Propose a Research Conversation <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </article>
+
+                    <!-- Pathway 3 -->
+                    <article class="pathway-card" data-pathway="Advisory Interest" aria-label="Pathway 3: Advisory Interest">
+                        <div class="pathway-icon p3" aria-hidden="true"><i class="fas fa-user-tie"></i></div>
+                        <p class="pathway-number">Pathway 3</p>
+                        <h3>Advisory Interest</h3>
+                        <p class="pathway-audience">Coaching · Biomechanics · Responsible AI · Sports technology · Commercialization</p>
+                        <p>
+                            Subject-matter experts may introduce their background for consideration
+                            if a formally scoped advisory need arises. Submitting interest does not
+                            establish an advisory appointment or obligation for either party.
+                        </p>
+                        <button class="pathway-btn" type="button" aria-controls="interest-form">
+                            Register Advisory Interest <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </article>
+
+                    <!-- Pathway 4 -->
+                    <article class="pathway-card" data-pathway="Future Paid Opportunities" aria-label="Pathway 4: Future Paid Opportunities">
+                        <div class="pathway-icon p4" aria-hidden="true"><i class="fas fa-briefcase"></i></div>
+                        <p class="pathway-number">Pathway 4</p>
+                        <h3>Future Paid Opportunities</h3>
+                        <p class="pathway-audience">Engineers · Computer-vision researchers · Designers · Commercial professionals</p>
+                        <p>
+                            Gabriella Systems is not currently hiring. Professionals may register
+                            to receive notice if relevant paid opportunities become available in
+                            the future. Participation does not constitute an application or
+                            employment relationship.
+                        </p>
+                        <button class="pathway-btn" type="button" aria-controls="interest-form">
+                            Join Future Opportunity Updates <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- INTEREST FORM ────────────────────────────────────────────────── -->
+        <section class="section muted-section" id="interest-form" aria-labelledby="form-h2">
+            <div class="container" style="max-width:820px; margin:0 auto;">
+
+                <h2 id="form-h2" style="margin-bottom:0.3rem;">Register your interest</h2>
+                <p style="color:var(--muted); margin-bottom:1.8rem; font-size:0.94rem;">
+                    Complete the fields below. All information is treated with care.
+                    Select the pathway that best matches your interest.
+                </p>
+
+                <!-- Preview banner -->
+                <div class="preview-banner" role="status" aria-live="polite">
+                    <i class="fas fa-circle-info" aria-hidden="true"></i>
+                    <span>
+                        <strong>Preview mode — submissions are not currently being collected.</strong>
+                        No information entered here is transmitted, stored, processed or shared.
+                        This form is a visual prototype only.
+                    </span>
+                </div>
+
+                <div class="interest-form-wrap">
+
+                    <!-- Pathway selector -->
+                    <fieldset style="border:none; padding:0; margin-bottom:1.4rem;">
+                        <legend style="font-size:0.8rem; font-weight:700; color:var(--ink); margin-bottom:0.7rem; display:block;">
+                            Pathway <span style="color:var(--coral);">*</span>
+                        </legend>
+                        <div class="pathway-selector" id="pathway-pills" role="radiogroup" aria-label="Select a pathway">
+                            <label id="pill-pilot"><input type="radio" name="pathway" value="Pilot Interest"><span>Pilot Interest</span></label>
+                            <label id="pill-research"><input type="radio" name="pathway" value="Research Conversations"><span>Research Conversations</span></label>
+                            <label id="pill-advisory"><input type="radio" name="pathway" value="Advisory Interest"><span>Advisory Interest</span></label>
+                            <label id="pill-future"><input type="radio" name="pathway" value="Future Paid Opportunities"><span>Future Paid Opportunities</span></label>
+                        </div>
+                    </fieldset>
+
+                    <form id="connect-form" novalidate aria-label="Expression of interest form" onsubmit="return false;">
+                        <div class="form-grid">
+
+                            <div class="form-group">
+                                <label for="cf-name">Full name <span style="color:var(--coral);">*</span></label>
+                                <input type="text" id="cf-name" name="name" autocomplete="name" required
+                                    placeholder="Your full name" aria-required="true">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cf-email">Email address <span style="color:var(--coral);">*</span></label>
+                                <input type="email" id="cf-email" name="email" autocomplete="email" required
+                                    placeholder="you@organisation.com" aria-required="true">
+                            </div>
+
+                            <div class="form-group full">
+                                <label for="cf-org">Organisation, university or professional affiliation <span style="color:var(--coral);">*</span></label>
+                                <input type="text" id="cf-org" name="organisation" autocomplete="organization" required
+                                    placeholder="Academy, university, club or employer name" aria-required="true">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cf-sport">Sport <span style="color:var(--coral);">*</span></label>
+                                <select id="cf-sport" name="sport" required aria-required="true">
+                                    <option value="" disabled selected>Select sport</option>
+                                    <option value="Cricket">Cricket</option>
+                                    <option value="Baseball">Baseball</option>
+                                    <option value="Softball">Softball</option>
+                                    <option value="Multiple">Multiple sports</option>
+                                    <option value="Other">Other / Not sport-specific</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cf-region">World region <span style="color:var(--coral);">*</span></label>
+                                <select id="cf-region" name="region" required aria-required="true">
+                                    <option value="" disabled selected>Select region</option>
+                                    <option value="Africa">Africa</option>
+                                    <option value="Asia-Pacific">Asia-Pacific</option>
+                                    <option value="Europe">Europe</option>
+                                    <option value="Latin America">Latin America</option>
+                                    <option value="Middle East">Middle East</option>
+                                    <option value="North America">North America</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cf-country">Country <span class="opt">(optional)</span></label>
+                                <input type="text" id="cf-country" name="country" autocomplete="country-name"
+                                    placeholder="e.g. India, Australia, USA">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cf-url">Professional or organisational URL <span class="opt">(optional)</span></label>
+                                <input type="url" id="cf-url" name="url"
+                                    placeholder="https://yourorganisation.com">
+                            </div>
+
+                            <div class="form-group full">
+                                <label for="cf-statement">Short statement of interest <span style="color:var(--coral);">*</span></label>
+                                <textarea id="cf-statement" name="statement" required aria-required="true"
+                                    placeholder="Briefly describe your background and what you are interested in exploring with Gabriella Systems (2–4 sentences)."
+                                    rows="4"></textarea>
+                            </div>
+
+                            <div class="form-group full">
+                                <div class="consent-block">
+                                    <input type="checkbox" id="cf-consent" name="consent" required aria-required="true">
+                                    <label for="cf-consent">
+                                        I understand that submitting this form does not create an employment, contractor,
+                                        advisory, research, partnership or compensation relationship. I have read the notice
+                                        below and acknowledge that no obligation arises from this expression of interest.
+                                        <span style="color:var(--coral);">*</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                        </div><!-- /.form-grid -->
+
+                        <div class="form-submit-area">
+                            <button class="submit-disabled" type="button" disabled aria-disabled="true">
+                                <i class="fas fa-lock" aria-hidden="true"></i>
+                                Submit interest — preview only
+                            </button>
+                            <p class="privacy-note" aria-live="polite">
+                                <i class="fas fa-shield" aria-hidden="true"></i>
+                                No data is transmitted in preview mode. This form is not connected
+                                to any email service, database or analytics platform.
+                            </p>
+                        </div>
+
+                    </form><!-- /#connect-form -->
+
+                    <!-- Legal notice -->
+                    <aside class="legal-notice" role="note" aria-label="Legal notice">
+                        <strong>Important:</strong> Gabriella Systems is currently collecting
+                        expressions of interest only. Submission does not create an employment,
+                        contractor, advisory, research, partnership or compensation relationship.
+                        Any future engagement would require separate review, written agreements
+                        and applicable legal authorisation. Gabriella Systems is not currently
+                        offering employment, internships, volunteer work, contract assignments,
+                        compensation, equity or immigration sponsorship.
+                    </aside>
+
+                </div><!-- /.interest-form-wrap -->
+            </div>
+        </section>
+
+        <!-- GLOBAL INTEREST NOTE ─────────────────────────────────────────── -->
+        <section class="section" style="padding: 40px 0;">
+            <div class="container narrow" style="text-align:center;">
+                <p class="eyebrow">Global interest</p>
+                <h2 style="font-size:clamp(1.6rem,3.5vw,2.2rem); margin-bottom:0.8rem;">
+                    Gabriella welcomes interest from around the world
+                </h2>
+                <p style="color:var(--muted); font-size:0.96rem; max-width:620px; margin:0 auto; line-height:1.7;">
+                    We are interested in diverse coaching environments, varied athlete populations,
+                    different recording conditions and the specific requirements of cricket,
+                    baseball and softball ecosystems across Africa, Asia-Pacific, Europe,
+                    Latin America, the Middle East and North America.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="nav-logo-text">Gabriella Systems</span>
+                    <p>Computer vision for cricket performance — batting and bowling intelligence from a single portable system.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <a href="services.html">Platform</a>
+                    <a href="batting.html">Batting</a>
+                    <a href="bowling.html">Bowling</a>
+                    <a href="academies.html">For Academies</a>
+                    <a href="demo.html">Showcase</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="about.html">About</a>
+                    <a href="research.html">Research</a>
+                    <a href="connect.html">Connect</a>
+                    <a href="contact.html">Request a Pilot</a>
+                    <a href="mailto:info@gabriellasystems.com">info@gabriellasystems.com</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Gabriella Systems. All rights reserved.</p>
+                <a href="demo.html">Live Showcase &rarr;</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+    // Pathway card → form interaction
+    // Clicking a pathway card or its button highlights that pathway in the form
+    (function () {
+        const cards   = document.querySelectorAll('.pathway-card');
+        const pills   = document.querySelectorAll('.pathway-selector label');
+        const radios  = document.querySelectorAll('.pathway-selector input[type="radio"]');
+        const form    = document.getElementById('interest-form');
+
+        function selectPathway(value) {
+            // Update card active state
+            cards.forEach(c => c.classList.toggle('active', c.dataset.pathway === value));
+            // Update pills
+            pills.forEach(pill => {
+                const radio = pill.querySelector('input');
+                const matches = radio.value === value;
+                radio.checked = matches;
+                pill.classList.toggle('selected', matches);
+            });
+        }
+
+        // Card click → scroll to form + select pathway
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                selectPathway(card.dataset.pathway);
+                form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+            // Button keyboard activation
+            const btn = card.querySelector('.pathway-btn');
+            btn.addEventListener('keydown', e => {
+                if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); card.click(); }
+            });
+        });
+
+        // Pill click
+        radios.forEach(radio => {
+            radio.addEventListener('change', () => selectPathway(radio.value));
+        });
+        pills.forEach(pill => {
+            pill.addEventListener('click', () => {
+                const radio = pill.querySelector('input');
+                selectPathway(radio.value);
+            });
+        });
+
+        // Form submit — always disabled in preview
+        document.getElementById('connect-form').addEventListener('submit', e => {
+            e.preventDefault();
+            return false;
+        });
+    }());
+    </script>
+</body>
+</html>
