@@ -565,9 +565,8 @@
                         Follow Gabriella Systems on LinkedIn
                     </h3>
                     <p style="font-size:0.9rem; color:rgba(255,255,255,0.72); max-width:480px; line-height:1.6; margin:0;">
-                        We share updates on our research progress, product milestones and how
-                        computer vision is advancing sports intelligence. The best way to stay
-                        informed while interest registration is in preview mode.
+                        We share updates on research progress, product milestones and how
+                        computer vision is advancing sports intelligence.
                     </p>
                 </div>
                 <a href="https://www.linkedin.com/company/gabriella-systems"
@@ -591,21 +590,31 @@
 
                 <h2 id="form-h2" style="margin-bottom:0.3rem;">Register your interest</h2>
                 <p style="color:var(--muted); margin-bottom:1.8rem; font-size:0.94rem;">
-                    Complete the fields below. All information is treated with care.
-                    Select the pathway that best matches your interest.
+                    Complete the fields below. Select the pathway that best matches your interest.
+                    Your submission will be sent to info@gabriellasystems.com.
                 </p>
 
-                <!-- Preview banner -->
-                <div class="preview-banner" role="status" aria-live="polite">
-                    <i class="fas fa-circle-info" aria-hidden="true"></i>
-                    <span>
-                        <strong>Preview mode — submissions are not currently being collected.</strong>
-                        No information entered here is transmitted, stored, processed or shared.
-                        This form is a visual prototype only.
-                    </span>
+                <!-- Success state (hidden until submit succeeds) -->
+                <div id="connect-success" role="status" aria-live="polite"
+                     style="display:none; background:rgba(6,75,145,0.07); border:1px solid rgba(6,75,145,0.2);
+                            border-radius:12px; padding:28px 24px; text-align:center; margin-bottom:1.4rem;">
+                    <i class="fas fa-circle-check" style="font-size:2rem; color:var(--teal); margin-bottom:0.8rem; display:block;" aria-hidden="true"></i>
+                    <h3 style="font-size:1.05rem; color:var(--ink); margin-bottom:0.4rem;">Interest registered</h3>
+                    <p style="font-size:0.88rem; color:var(--muted); max-width:440px; margin:0 auto 1rem; line-height:1.6;">
+                        Thank you — your expression of interest has been received. We will review it
+                        and may be in touch if a relevant opportunity arises. Remember: submission does
+                        not create any obligation for either party.
+                    </p>
+                    <a href="https://www.linkedin.com/company/gabriella-systems" target="_blank"
+                       rel="noopener noreferrer"
+                       style="display:inline-flex; align-items:center; gap:0.45rem; padding:0.6rem 1.1rem;
+                              background:#0A66C2; color:white; border-radius:8px; font-weight:700;
+                              font-size:0.84rem; text-decoration:none;">
+                        <i class="fab fa-linkedin"></i> Follow us on LinkedIn for updates
+                    </a>
                 </div>
 
-                <div class="interest-form-wrap">
+                <div class="interest-form-wrap" id="connect-form-wrap">
 
                     <!-- Pathway selector -->
                     <fieldset style="border:none; padding:0; margin-bottom:1.4rem;">
@@ -618,9 +627,10 @@
                             <label id="pill-advisory"><input type="radio" name="pathway" value="Advisory Interest"><span>Advisory Interest</span></label>
                             <label id="pill-future"><input type="radio" name="pathway" value="Future Paid Opportunities"><span>Future Paid Opportunities</span></label>
                         </div>
+                        <p id="pathway-error" style="display:none; color:var(--coral); font-size:0.8rem; margin-top:0.4rem;">Please select a pathway.</p>
                     </fieldset>
 
-                    <form id="connect-form" novalidate aria-label="Expression of interest form" onsubmit="return false;">
+                    <form id="connect-form" novalidate aria-label="Expression of interest form">
                         <div class="form-grid">
 
                             <div class="form-group">
@@ -700,38 +710,22 @@
 
                         </div><!-- /.form-grid -->
 
-                        <div class="form-submit-area">
-                            <button class="submit-disabled" type="button" disabled aria-disabled="true">
-                                <i class="fas fa-lock" aria-hidden="true"></i>
-                                Submit interest — preview only
-                            </button>
-                            <p class="privacy-note" aria-live="polite">
-                                <i class="fas fa-shield" aria-hidden="true"></i>
-                                No data is transmitted in preview mode. This form is not connected
-                                to any email service, database or analytics platform.
-                            </p>
-                        </div>
+                        <!-- Inline error message -->
+                        <p id="connect-form-error" role="alert"
+                           style="display:none; color:var(--coral); font-size:0.84rem; margin:1rem 0 0;
+                                  padding:10px 14px; background:rgba(255,82,103,0.07); border-radius:8px;">
+                        </p>
 
-                        <!-- LinkedIn alternative while form is in preview -->
-                        <div style="margin-top:1.4rem; padding:16px 20px; background:rgba(10,102,194,0.06);
-                                    border:1px solid rgba(10,102,194,0.18); border-radius:12px;
-                                    display:flex; align-items:center; justify-content:space-between;
-                                    flex-wrap:wrap; gap:1rem;">
-                            <p style="font-size:0.85rem; color:var(--muted); margin:0; line-height:1.55;">
-                                <strong style="color:var(--ink);">While the form is in preview,</strong>
-                                follow us on LinkedIn to stay updated on research progress,
-                                product milestones and future collaboration opportunities.
+                        <div class="form-submit-area">
+                            <button id="connect-submit" class="cta-button" type="submit">
+                                <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                                Submit interest
+                            </button>
+                            <p class="privacy-note">
+                                <i class="fas fa-shield" aria-hidden="true"></i>
+                                Your information is sent directly to our team and is not shared with
+                                third parties. Reply-to is set to your email address.
                             </p>
-                            <a href="https://www.linkedin.com/company/gabriella-systems"
-                               target="_blank" rel="noopener noreferrer"
-                               style="display:inline-flex; align-items:center; gap:0.45rem; padding:0.6rem 1.1rem;
-                                      background:#0A66C2; color:white; border-radius:8px; font-weight:700;
-                                      font-size:0.84rem; text-decoration:none; white-space:nowrap;
-                                      flex-shrink:0; transition:background 0.2s ease;"
-                               onmouseover="this.style.background='#004182';"
-                               onmouseout="this.style.background='#0A66C2';">
-                                <i class="fab fa-linkedin"></i> Follow on LinkedIn
-                            </a>
                         </div>
 
                     </form><!-- /#connect-form -->
@@ -805,55 +799,141 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
     <script>
-    // Pathway card → form interaction
-    // Clicking a pathway card or its button highlights that pathway in the form
     (function () {
-        const cards   = document.querySelectorAll('.pathway-card');
-        const pills   = document.querySelectorAll('.pathway-selector label');
-        const radios  = document.querySelectorAll('.pathway-selector input[type="radio"]');
-        const form    = document.getElementById('interest-form');
+        const BACKEND = 'https://gabriellasystems--cricket-demo-web.modal.run/api/contact';
 
+        const cards    = document.querySelectorAll('.pathway-card');
+        const pills    = document.querySelectorAll('.pathway-selector label');
+        const radios   = document.querySelectorAll('.pathway-selector input[type="radio"]');
+        const formSect = document.getElementById('interest-form');
+        const form     = document.getElementById('connect-form');
+        const submitBtn = document.getElementById('connect-submit');
+        const errEl    = document.getElementById('connect-form-error');
+        const successEl = document.getElementById('connect-success');
+        const formWrap  = document.getElementById('connect-form-wrap');
+        const pathwayErr = document.getElementById('pathway-error');
+
+        // ── Pathway selection ───────────────────────────────────────────────
         function selectPathway(value) {
-            // Update card active state
             cards.forEach(c => c.classList.toggle('active', c.dataset.pathway === value));
-            // Update pills
             pills.forEach(pill => {
                 const radio = pill.querySelector('input');
-                const matches = radio.value === value;
-                radio.checked = matches;
-                pill.classList.toggle('selected', matches);
+                const match = radio.value === value;
+                radio.checked = match;
+                pill.classList.toggle('selected', match);
             });
+            pathwayErr.style.display = 'none';
+        }
+
+        function selectedPathway() {
+            const r = document.querySelector('.pathway-selector input[type="radio"]:checked');
+            return r ? r.value : '';
         }
 
         // Card click → scroll to form + select pathway
         cards.forEach(card => {
             card.addEventListener('click', () => {
                 selectPathway(card.dataset.pathway);
-                form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                formSect.scrollIntoView({ behavior: 'smooth', block: 'start' });
             });
-            // Button keyboard activation
-            const btn = card.querySelector('.pathway-btn');
-            btn.addEventListener('keydown', e => {
+            card.querySelector('.pathway-btn').addEventListener('keydown', e => {
                 if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); card.click(); }
             });
         });
 
-        // Pill click
-        radios.forEach(radio => {
-            radio.addEventListener('change', () => selectPathway(radio.value));
-        });
+        radios.forEach(radio => radio.addEventListener('change', () => selectPathway(radio.value)));
         pills.forEach(pill => {
-            pill.addEventListener('click', () => {
-                const radio = pill.querySelector('input');
-                selectPathway(radio.value);
-            });
+            pill.addEventListener('click', () => selectPathway(pill.querySelector('input').value));
         });
 
-        // Form submit — always disabled in preview
-        document.getElementById('connect-form').addEventListener('submit', e => {
+        // ── Form submission ─────────────────────────────────────────────────
+        form.addEventListener('submit', async e => {
             e.preventDefault();
-            return false;
+            errEl.style.display = 'none';
+
+            // Validate pathway
+            const pathway = selectedPathway();
+            if (!pathway) {
+                pathwayErr.style.display = 'block';
+                pathwayErr.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                return;
+            }
+
+            // Collect values
+            const name       = form.querySelector('[name="name"]').value.trim();
+            const email      = form.querySelector('[name="email"]').value.trim();
+            const org        = form.querySelector('[name="organisation"]').value.trim();
+            const sport      = form.querySelector('[name="sport"]').value;
+            const region     = form.querySelector('[name="region"]').value;
+            const country    = form.querySelector('[name="country"]').value.trim();
+            const url        = form.querySelector('[name="url"]').value.trim();
+            const statement  = form.querySelector('[name="statement"]').value.trim();
+            const consent    = form.querySelector('[name="consent"]').checked;
+
+            // Client-side validation
+            if (!name || !email || !org || !sport || !region || !statement) {
+                showError('Please complete all required fields (marked with *).');
+                return;
+            }
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                showError('Please enter a valid email address.');
+                return;
+            }
+            if (!consent) {
+                showError('Please tick the acknowledgement checkbox before submitting.');
+                return;
+            }
+
+            // Build message body
+            const lines = [
+                `Pathway: ${pathway}`,
+                `Sport: ${sport}`,
+                `Region: ${region}`,
+                country ? `Country: ${country}` : null,
+                url ? `URL: ${url}` : null,
+                '',
+                'Statement of interest:',
+                statement,
+            ].filter(l => l !== null);
+
+            const payload = {
+                name,
+                email,
+                organization: org,
+                role:    pathway,
+                interest: `${sport} · ${region}`,
+                message: lines.join('\n'),
+            };
+
+            // Show loading
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending…';
+
+            try {
+                const res = await fetch(BACKEND, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload),
+                });
+                if (res.ok) {
+                    formWrap.style.display = 'none';
+                    successEl.style.display = 'block';
+                    successEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                } else {
+                    throw new Error(`Server error ${res.status}`);
+                }
+            } catch {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Submit interest';
+                showError('Something went wrong — please try again or email info@gabriellasystems.com directly.');
+            }
         });
+
+        function showError(msg) {
+            errEl.textContent = msg;
+            errEl.style.display = 'block';
+            errEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
     }());
     </script>
 </body>
