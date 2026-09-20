@@ -25,13 +25,14 @@
         }
         .demo-embed-frame {
             width: 100%;
-            min-height: 1500px;
-            height: calc(100vh - 60px);
+            min-height: 480px;
+            height: 580px;
             border: 1px solid var(--line);
             border-radius: 8px;
             background: var(--soft);
             box-shadow: 0 10px 28px rgba(17, 32, 29, 0.08);
             display: block;
+            transition: height 0.3s ease;
         }
         .demo-loading {
             position: absolute;
@@ -90,6 +91,7 @@
                 <a href="index.html" class="nav-logo-link">
                     <img src="assets/logo.png" alt="Gabriella Systems" class="nav-logo-img">
                     <span class="nav-logo-wordmark">Gabriella</span>
+                    <i class="fas fa-house" aria-label="Home" style="font-size:0.7rem; color:var(--muted); margin-left:0.3rem; opacity:0.6; vertical-align:middle;"></i>
                 </a>
             </div>
             <div class="nav-menu" id="nav-menu">
@@ -100,7 +102,7 @@
                 <a href="demo.html" class="nav-link active">Showcase</a>
                 <a href="research.html" class="nav-link">Research</a>
                 <a href="about.html" class="nav-link">About</a>
-                <a href="contact.html" class="nav-link">Request Pilot</a>
+                <a href="connect.html" class="nav-link">Connect</a>
             </div>
             <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
                 <span></span>
@@ -136,7 +138,16 @@
                         src="https://gabriellasystems--cricket-demo-web.modal.run/?embed=1"
                         title="Cricket Vision interactive batting demo"
                         allow="fullscreen"
-                        onload="document.getElementById('demo-loading').classList.add('hidden'); setTimeout(()=>document.getElementById('demo-loading').remove(),500);">
+                        onload="
+                            document.getElementById('demo-loading').classList.add('hidden');
+                            setTimeout(()=>document.getElementById('demo-loading').remove(),500);
+                            // Auto-fit height to actual content after load
+                            const frame = document.getElementById('demo-frame');
+                            try {
+                                const h = frame.contentDocument?.documentElement?.scrollHeight;
+                                if (h && h > 200) frame.style.height = h + 'px';
+                            } catch(e) {}
+                        ">
                     </iframe>
                 </div>
                 <p class="demo-note">
@@ -161,27 +172,23 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <span class="nav-logo-text">Gabriella Systems</span>
-                    <p>Computer vision for cricket performance — batting and bowling intelligence from a single portable system.</p>
+                    <p>Computer vision for cricket performance — batting and bowling intelligence from ordinary video.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Product</h4>
                     <a href="services.html">Platform</a>
                     <a href="batting.html">Batting</a>
                     <a href="bowling.html">Bowling</a>
-                    <a href="academies.html">For Academies</a>
-                    <a href="demo.html">Showcase</a>
                 </div>
                 <div class="footer-col">
                     <h4>Company</h4>
                     <a href="about.html">About</a>
                     <a href="research.html">Research</a>
-                    <a href="contact.html">Request a Pilot</a>
-                    <a href="mailto:info@gabriellasystems.com">info@gabriellasystems.com</a>
+                    <a href="connect.html">Connect</a>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 Gabriella Systems. All rights reserved.</p>
-                <a href="demo.html">Live Showcase &rarr;</a>
             </div>
         </div>
     </footer>
@@ -189,5 +196,38 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
+    <script>
+    // Resize iframe to match embedded app content height
+    (function () {
+        const frame = document.getElementById('demo-frame');
+        if (!frame) return;
+
+        function fitFrame() {
+            try {
+                const h = frame.contentDocument?.documentElement?.scrollHeight
+                       || frame.contentWindow?.document?.body?.scrollHeight;
+                if (h && h > 300) {
+                    frame.style.height = h + 'px';
+                }
+            } catch (e) { /* cross-origin — ignore */ }
+        }
+
+        // Listen for height messages from the embedded app
+        window.addEventListener('message', function (e) {
+            if (typeof e.data === 'object' && e.data.type === 'resize' && e.data.height) {
+                frame.style.height = Math.max(300, e.data.height) + 'px';
+            }
+            // Also handle plain number messages
+            if (typeof e.data === 'number' && e.data > 300) {
+                frame.style.height = e.data + 'px';
+            }
+        });
+
+        // Retry height check a few times after load for SPAs that render late
+        frame.addEventListener('load', () => {
+            [300, 800, 2000].forEach(ms => setTimeout(fitFrame, ms));
+        });
+    }());
+    </script>
 </body>
 </html>

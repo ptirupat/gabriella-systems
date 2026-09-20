@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect With Gabriella — Gabriella Systems</title>
+    <meta name="description" content="Register interest in future pilot partnerships, research conversations, advisory discussions and paid opportunities with Gabriella Systems — AI-assisted sports development for cricket, baseball and softball worldwide.">
+    <meta name="keywords" content="sports technology partnership, cricket analytics research, baseball video intelligence, softball AI, responsible sports AI, athlete movement analysis, sports computer vision collaboration, global sports technology">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Gabriella Systems">
+    <meta property="og:title" content="Connect With Gabriella — Gabriella Systems">
+    <meta property="og:description" content="Register nonbinding interest in future pilot partnerships, research conversations and opportunities with Gabriella Systems.">
+    <meta property="og:image" content="https://gabriellasystems.com/assets/cricket-vision-hero.png">
+    <meta property="og:url" content="https://gabriellasystems.com/connect.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://gabriellasystems.com/connect.html">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebPage",
+                "name": "Connect With Gabriella",
+                "url": "https://gabriellasystems.com/connect.html",
+                "description": "Register nonbinding expressions of interest in future pilot partnerships, research conversations, advisory discussions and paid opportunities with Gabriella Systems.",
+                "isPartOf": { "@type": "WebSite", "url": "https://gabriellasystems.com" }
+            },
+            {
+                "@type": "ContactPage",
+                "name": "Connect With Gabriella — Interest Registration",
+                "url": "https://gabriellasystems.com/connect.html",
+                "provider": {
+                    "@type": "Organization",
+                    "name": "Gabriella Systems",
+                    "url": "https://gabriellasystems.com",
+                    "description": "AI-assisted sports video intelligence for cricket, baseball and softball."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+        /* ── Connect page ─────────────────────────────────────────────────── */
+
+        /* Hero */
+        .connect-hero {
+            background:
+                radial-gradient(ellipse 55% 60% at 85% 15%, rgba(247,39,114,0.2) 0%, transparent 60%),
+                radial-gradient(ellipse 40% 50% at 5% 85%, rgba(255,154,120,0.12) 0%, transparent 55%),
+                linear-gradient(145deg, #01091a 0%, #031E49 40%, #064B91 80%, #021030 100%);
+            padding: 96px 0 80px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        .connect-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px),
+                linear-gradient(0deg,  rgba(255,255,255,0.025) 1px, transparent 1px);
+            background-size: 44px 44px;
+            pointer-events: none;
+        }
+        .connect-hero .eyebrow { color: var(--amber); }
+        .connect-hero h1 {
+            font-size: clamp(2.4rem, 5.5vw, 4rem);
+            letter-spacing: -0.03em;
+            line-height: 1.06;
+            max-width: 820px;
+            margin-bottom: 1.2rem;
+        }
+        .connect-hero p {
+            font-size: 1.08rem;
+            color: rgba(255,255,255,0.82);
+            max-width: 620px;
+            line-height: 1.65;
+            margin-bottom: 1.8rem;
+        }
+        .connect-hero-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .linkedin-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.82rem 1.4rem;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            border: 1px solid rgba(255,255,255,0.28);
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: background 0.2s ease;
+        }
+        .linkedin-btn:hover { background: rgba(255,255,255,0.2); }
+
+        /* Global reach band */
+        .global-band {
+            background: var(--soft);
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+            padding: 20px 0;
+        }
+        .global-band-inner {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .global-band-text {
+            font-size: 0.88rem;
+            color: var(--muted);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .global-band-text i { color: var(--teal); }
+        .sport-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.78rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 999px;
+            border: 1px solid var(--line);
+            color: var(--muted);
+            background: var(--paper);
+        }
+
+        /* Pathway cards grid */
+        .pathway-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .pathway-card {
+            background: var(--paper);
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            padding: 28px 26px;
+            display: flex;
+            flex-direction: column;
+            transition: box-shadow 0.25s ease, transform 0.25s ease, border-color 0.2s ease;
+            cursor: pointer;
+        }
+        .pathway-card:hover {
+            box-shadow: 0 0 0 2px var(--green), 0 16px 40px rgba(3,30,73,0.12);
+            transform: translateY(-4px);
+            border-color: transparent;
+        }
+        .pathway-card.active {
+            box-shadow: 0 0 0 2px var(--green), 0 16px 40px rgba(3,30,73,0.12);
+            border-color: transparent;
+        }
+        .pathway-icon {
+            width: 48px; height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        .pathway-icon.p1 { background: linear-gradient(135deg, var(--teal), #0a3d7a); }
+        .pathway-icon.p2 { background: linear-gradient(135deg, var(--green), #c9165a); }
+        .pathway-icon.p3 { background: linear-gradient(135deg, var(--amber), #e07050); }
+        .pathway-icon.p4 { background: linear-gradient(135deg, #4a5e8a, var(--teal)); }
+
+        .pathway-number {
+            font-size: 0.68rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--muted);
+            margin-bottom: 0.4rem;
+        }
+        .pathway-card h3 {
+            font-size: 1.05rem;
+            color: var(--ink);
+            margin-bottom: 0.35rem;
+        }
+        .pathway-audience {
+            font-size: 0.76rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--teal);
+            margin-bottom: 0.7rem;
+        }
+        .pathway-card p {
+            font-size: 0.87rem;
+            color: var(--muted);
+            line-height: 1.6;
+            flex: 1;
+            margin-bottom: 1.2rem;
+        }
+        .pathway-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.65rem 1.1rem;
+            border-radius: 10px;
+            font-size: 0.84rem;
+            font-weight: 700;
+            border: 1.5px solid var(--line);
+            color: var(--teal);
+            background: transparent;
+            cursor: pointer;
+            transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+            text-align: left;
+            align-self: flex-start;
+        }
+        .pathway-btn:hover, .pathway-card.active .pathway-btn {
+            background: var(--teal);
+            border-color: var(--teal);
+            color: white;
+        }
+
+        /* Interest form */
+        .interest-form-wrap {
+            background: var(--paper);
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 36px 40px;
+            margin-top: 2.5rem;
+            box-shadow: 0 4px 24px rgba(3,30,73,0.07);
+        }
+        @media (max-width: 600px) { .interest-form-wrap { padding: 24px 20px; } }
+
+        .preview-banner {
+            background: rgba(255,154,120,0.1);
+            border: 1px solid rgba(255,154,120,0.3);
+            border-radius: 10px;
+            padding: 12px 16px;
+            font-size: 0.82rem;
+            color: var(--muted);
+            margin-bottom: 1.8rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.6rem;
+            line-height: 1.55;
+        }
+        .preview-banner i { color: var(--amber); flex-shrink: 0; margin-top: 2px; }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem 1.4rem;
+        }
+        @media (max-width: 640px) { .form-grid { grid-template-columns: 1fr; } }
+        .form-group { display: flex; flex-direction: column; gap: 0.35rem; }
+        .form-group.full { grid-column: 1 / -1; }
+        .form-group label {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--ink);
+        }
+        .form-group label .opt {
+            font-weight: 400;
+            color: var(--muted);
+            margin-left: 0.25rem;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            border: 1.5px solid var(--line);
+            border-radius: 10px;
+            padding: 0.7rem 0.9rem;
+            font-family: inherit;
+            font-size: 0.9rem;
+            color: var(--ink);
+            background: var(--paper);
+            transition: border-color 0.18s ease;
+            outline: none;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus { border-color: var(--teal); box-shadow: 0 0 0 3px rgba(6,75,145,0.1); }
+        .form-group textarea { resize: vertical; min-height: 90px; }
+
+        /* Pathway selector pills in form */
+        .pathway-selector {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .pathway-selector label {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 6px 12px;
+            border: 1.5px solid var(--line);
+            border-radius: 999px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: border-color 0.18s ease, background 0.18s ease;
+            color: var(--muted);
+        }
+        .pathway-selector input[type="radio"] { display: none; }
+        .pathway-selector input[type="radio"]:checked + span {
+            /* handled via JS below */
+        }
+        .pathway-selector label.selected {
+            border-color: var(--teal);
+            background: rgba(6,75,145,0.07);
+            color: var(--teal);
+        }
+
+        /* Consent */
+        .consent-block {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.7rem;
+            margin-top: 0.5rem;
+        }
+        .consent-block input[type="checkbox"] {
+            width: 18px; height: 18px;
+            flex-shrink: 0;
+            margin-top: 2px;
+            accent-color: var(--teal);
+            cursor: pointer;
+        }
+        .consent-block label {
+            font-size: 0.8rem;
+            color: var(--muted);
+            line-height: 1.55;
+            cursor: pointer;
+        }
+
+        /* Submit notice */
+        .form-submit-area {
+            margin-top: 1.4rem;
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+        }
+        .submit-disabled {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.85rem 1.6rem;
+            border-radius: 12px;
+            background: var(--line);
+            color: var(--muted);
+            font-weight: 700;
+            font-size: 0.9rem;
+            cursor: not-allowed;
+            border: none;
+        }
+        .privacy-note {
+            font-size: 0.76rem;
+            color: var(--muted);
+            line-height: 1.5;
+        }
+
+        /* Legal notice */
+        .legal-notice {
+            background: var(--soft);
+            border-left: 3px solid var(--line);
+            border-radius: 0 10px 10px 0;
+            padding: 16px 20px;
+            margin-top: 1.8rem;
+            font-size: 0.8rem;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        /* Reduce motion */
+        @media (prefers-reduced-motion: reduce) {
+            .pathway-card, .pathway-btn { transition: none; }
+        }
+
+        /* Focus states */
+        a:focus-visible,
+        button:focus-visible,
+        input:focus-visible,
+        select:focus-visible,
+        textarea:focus-visible {
+            outline: 2px solid var(--teal);
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="nav-logo-link">
+                    <img src="assets/logo.png" alt="Gabriella Systems" class="nav-logo-img">
+                    <span class="nav-logo-wordmark">Gabriella</span>
+                    <i class="fas fa-house" aria-label="Home" style="font-size:0.7rem; color:var(--muted); margin-left:0.3rem; opacity:0.6; vertical-align:middle;"></i>
+                </a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="services.html" class="nav-link">Platform</a>
+                <a href="batting.html" class="nav-link">Batting</a>
+                <a href="bowling.html" class="nav-link">Bowling</a>
+                <a href="academies.html" class="nav-link">For Academies</a>
+                <a href="demo.html" class="nav-link">Showcase</a>
+                <a href="research.html" class="nav-link">Research</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="connect.html" class="nav-link active">Connect</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="subpage-main">
+
+        <!-- HERO ─────────────────────────────────────────────────────────── -->
+        <section class="connect-hero" aria-labelledby="connect-h1">
+            <div class="container narrow">
+                <p class="eyebrow">Connect With Gabriella</p>
+                <h1 id="connect-h1">Let's Explore What Sports Intelligence Can Become</h1>
+                <p>
+                    Gabriella Systems welcomes conversations with coaches, academies, researchers
+                    and experienced professionals interested in the future of AI-assisted sports
+                    development. We are currently gathering expressions of interest for potential
+                    future collaborations and opportunities.
+                </p>
+                <div class="connect-hero-actions">
+                    <a href="#pathways" class="cta-button">
+                        <i class="fas fa-compass"></i>&nbsp; Explore the pathways
+                    </a>
+                    <a href="https://www.linkedin.com/company/gabriella-systems" target="_blank" rel="noopener noreferrer" class="linkedin-btn">
+                        <i class="fab fa-linkedin"></i> Follow on LinkedIn
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- GLOBAL REACH BAND ───────────────────────────────────────────── -->
+        <div class="global-band" role="complementary" aria-label="Sports coverage">
+            <div class="container">
+                <div class="global-band-inner">
+                    <p class="global-band-text">
+                        <i class="fas fa-globe"></i>
+                        Welcoming interest from coaching environments worldwide
+                    </p>
+                    <span class="sport-pill">🏏 Cricket</span>
+                    <span class="sport-pill">⚾ Baseball</span>
+                    <span class="sport-pill">🥎 Softball</span>
+                    <p class="global-band-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Diverse athlete populations &amp; recording conditions
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOUR PATHWAYS ────────────────────────────────────────────────── -->
+        <section class="section" id="pathways" aria-labelledby="pathways-h2">
+            <div class="container">
+                <div class="section-intro" style="margin-bottom:1.6rem; text-align:left; margin-left:0; margin-right:0;">
+                    <p class="eyebrow">Four pathways</p>
+                    <h2 id="pathways-h2">How you can register interest</h2>
+                    <p style="max-width:580px; color:var(--muted);">
+                        Submitting interest through any pathway does not create an employment,
+                        contractor, advisory, partnership or compensation relationship.
+                    </p>
+                </div>
+
+                <div class="pathway-grid" id="pathway-grid">
+
+                    <!-- Pathway 1 -->
+                    <article class="pathway-card" data-pathway="Pilot Interest" aria-label="Pathway 1: Pilot Interest">
+                        <div class="pathway-icon p1" aria-hidden="true"><i class="fas fa-video"></i></div>
+                        <p class="pathway-number">Pathway 1</p>
+                        <h3>Pilot Interest</h3>
+                        <p class="pathway-audience">Coaches · Academies · Clubs · Athlete development programs</p>
+                        <p>
+                            Interested in helping evaluate how video intelligence could support
+                            real coaching environments? Organizations may register interest in
+                            future pilot discussions involving cricket, baseball or softball.
+                        </p>
+                        <button class="pathway-btn" type="button" aria-controls="interest-form">
+                            Register Pilot Interest <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </article>
+
+                    <!-- Pathway 2 -->
+                    <article class="pathway-card" data-pathway="Research Conversations" aria-label="Pathway 2: Research Conversations">
+                        <div class="pathway-icon p2" aria-hidden="true"><i class="fas fa-flask"></i></div>
+                        <p class="pathway-number">Pathway 2</p>
+                        <h3>Research Conversations</h3>
+                        <p class="pathway-audience">Universities · Laboratories · Established researchers</p>
+                        <p>
+                            We welcome preliminary conversations about institutionally approved
+                            research related to athlete movement, sports video understanding,
+                            responsible AI and performance evaluation. Any collaboration would
+                            require separate institutional, legal, data-rights and authorship
+                            agreements.
+                        </p>
+                        <button class="pathway-btn" type="button" aria-controls="interest-form">
+                            Propose a Research Conversation <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </article>
+
+                    <!-- Pathway 3 -->
+                    <article class="pathway-card" data-pathway="Advisory Interest" aria-label="Pathway 3: Advisory Interest">
+                        <div class="pathway-icon p3" aria-hidden="true"><i class="fas fa-user-tie"></i></div>
+                        <p class="pathway-number">Pathway 3</p>
+                        <h3>Advisory Interest</h3>
+                        <p class="pathway-audience">Coaching · Biomechanics · Responsible AI · Sports technology · Commercialization</p>
+                        <p>
+                            Subject-matter experts may introduce their background for consideration
+                            if a formally scoped advisory need arises. Submitting interest does not
+                            establish an advisory appointment or obligation for either party.
+                        </p>
+                        <button class="pathway-btn" type="button" aria-controls="interest-form">
+                            Register Advisory Interest <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </article>
+
+                    <!-- Pathway 4 -->
+                    <article class="pathway-card" data-pathway="Future Paid Opportunities" aria-label="Pathway 4: Future Paid Opportunities">
+                        <div class="pathway-icon p4" aria-hidden="true"><i class="fas fa-briefcase"></i></div>
+                        <p class="pathway-number">Pathway 4</p>
+                        <h3>Future Paid Opportunities</h3>
+                        <p class="pathway-audience">Engineers · Computer-vision researchers · Designers · Commercial professionals</p>
+                        <p>
+                            Gabriella Systems is not currently hiring. Professionals may register
+                            to receive notice if relevant paid opportunities become available in
+                            the future. Participation does not constitute an application or
+                            employment relationship.
+                        </p>
+                        <button class="pathway-btn" type="button" aria-controls="interest-form">
+                            Join Future Opportunity Updates <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- CONTACT FORM + INFO ──────────────────────────────────────────── -->
+        <section class="section muted-section" id="interest-form" aria-labelledby="connect-form-h2">
+            <div class="container">
+                <div class="contact-grid">
+
+                    <!-- Left: contact info ──────────────────────────────── -->
+                    <div class="contact-info">
+                        <h2 id="connect-form-h2">Get in touch</h2>
+                        <p>
+                            Select a pathway above or use the form directly.
+                            We read every message and respond to relevant enquiries
+                            within a few working days.
+                        </p>
+
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email</strong>
+                                <a href="mailto:info@gabriellasystems.com">info@gabriellasystems.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-location-dot"></i>
+                            <div>
+                                <strong>Headquarters</strong>
+                                <span>Florida, United States</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Response window</strong>
+                                <span>Monday to Friday, 9:00 AM – 6:00 PM ET</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            <div>
+                                <strong>LinkedIn</strong>
+                                <a href="https://www.linkedin.com/company/gabriella-systems"
+                                   target="_blank" rel="noopener noreferrer">
+                                    Follow Gabriella Systems
+                                </a>
+                            </div>
+                        </div>
+
+                        <p style="font-size:0.76rem; color:var(--muted); line-height:1.55; margin-top:1.5rem;
+                                   border-top:1px solid var(--line); padding-top:1rem;">
+                            Submission does not create an employment, contractor, advisory,
+                            research, partnership or compensation relationship. Any future
+                            engagement requires separate written agreements.
+                        </p>
+                    </div>
+
+                    <!-- Right: form ─────────────────────────────────────── -->
+                    <div>
+                        <!-- Success state -->
+                        <div id="connect-success" role="status" aria-live="polite"
+                             style="display:none; background:rgba(6,75,145,0.07); border:1px solid rgba(6,75,145,0.2);
+                                    border-radius:12px; padding:28px 24px; text-align:center;">
+                            <i class="fas fa-circle-check" style="font-size:2rem; color:var(--teal); margin-bottom:0.8rem; display:block;" aria-hidden="true"></i>
+                            <h3 style="font-size:1.05rem; color:var(--ink); margin-bottom:0.4rem;">Message received</h3>
+                            <p style="font-size:0.88rem; color:var(--muted); max-width:360px; margin:0 auto 1rem; line-height:1.6;">
+                                Thank you — we will be in touch if your enquiry is a good fit.
+                            </p>
+                            <a href="https://www.linkedin.com/company/gabriella-systems" target="_blank"
+                               rel="noopener noreferrer"
+                               style="display:inline-flex; align-items:center; gap:0.45rem; padding:0.6rem 1.1rem;
+                                      background:#0A66C2; color:white; border-radius:8px; font-weight:700;
+                                      font-size:0.84rem; text-decoration:none;">
+                                <i class="fab fa-linkedin"></i> Follow us on LinkedIn
+                            </a>
+                        </div>
+
+                        <form id="connect-form" class="contact-form" novalidate
+                              style="background:var(--paper); border-radius:16px; border:1px solid var(--line);
+                                     padding:32px; box-shadow:0 4px 20px rgba(3,30,73,0.06);">
+                            <h3 style="font-size:1.1rem; margin-bottom:1.2rem; color:var(--ink);">Send a message</h3>
+
+                            <!-- Purpose -->
+                            <div class="form-group">
+                                <label for="cf-purpose">Purpose <span style="color:var(--coral);">*</span></label>
+                                <select id="cf-purpose" name="purpose" required>
+                                    <option value="" disabled selected>Select a purpose</option>
+                                    <option value="Pilot Interest">Pilot — evaluate Gabriella at my academy or club</option>
+                                    <option value="Research Conversations">Research — institutional research conversation</option>
+                                    <option value="Advisory Interest">Advisory — subject-matter expert introducing background</option>
+                                    <option value="Future Paid Opportunities">Future opportunities — professional registering for notice</option>
+                                    <option value="General">General enquiry</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cf-name">Full name <span style="color:var(--coral);">*</span></label>
+                                <input type="text" id="cf-name" name="name" autocomplete="name" required
+                                       placeholder="Your full name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cf-email">Email address <span style="color:var(--coral);">*</span></label>
+                                <input type="email" id="cf-email" name="email" autocomplete="email" required
+                                       placeholder="you@organisation.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cf-org">Organisation or affiliation</label>
+                                <input type="text" id="cf-org" name="organization" autocomplete="organization"
+                                       placeholder="Academy, university, club or employer">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cf-sport">Sport</label>
+                                <select id="cf-sport" name="sport">
+                                    <option value="">Select sport (optional)</option>
+                                    <option value="Cricket">Cricket</option>
+                                    <option value="Baseball">Baseball</option>
+                                    <option value="Softball">Softball</option>
+                                    <option value="Multiple">Multiple sports</option>
+                                    <option value="Other">Other / Not sport-specific</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cf-message">Message <span style="color:var(--coral);">*</span></label>
+                                <textarea id="cf-message" name="message" required rows="4"
+                                          placeholder="Tell us about your context and what you would like to explore."></textarea>
+                            </div>
+
+                            <!-- Consent (shown for non-general / non-pilot) -->
+                            <div id="consent-block" style="display:none; margin-bottom:1rem;">
+                                <label style="display:flex; align-items:flex-start; gap:0.6rem; font-size:0.8rem;
+                                              color:var(--muted); line-height:1.55; cursor:pointer;">
+                                    <input type="checkbox" id="cf-consent" name="consent"
+                                           style="width:17px; height:17px; flex-shrink:0; margin-top:2px;
+                                                  accent-color:var(--teal); cursor:pointer;">
+                                    I understand that this submission does not create an employment,
+                                    contractor, advisory, research, partnership or compensation relationship,
+                                    and that no obligation arises from this expression of interest.
+                                    <span style="color:var(--coral);">*</span>
+                                </label>
+                            </div>
+
+                            <p id="connect-form-error" role="alert"
+                               style="display:none; color:var(--coral); font-size:0.82rem; margin-bottom:0.8rem;
+                                      padding:10px 14px; background:rgba(255,82,103,0.07); border-radius:8px;"></p>
+
+                            <button type="submit" class="submit-btn" id="connect-submit"
+                                    style="width:100%; justify-content:center;">
+                                <i class="fas fa-paper-plane"></i>
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+<!-- LINKEDIN BAND ────────────────────────────────────────────────── -->
+        <div style="background: linear-gradient(135deg, #031E49 0%, #064B91 100%); padding: 40px 0;">
+            <div class="container" style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:2rem;">
+                <div>
+                    <p style="font-size:0.72rem; font-weight:800; text-transform:uppercase; letter-spacing:0.13em; color:rgba(255,255,255,0.55); margin-bottom:0.5rem;">Stay connected</p>
+                    <h3 style="font-size:1.35rem; font-weight:700; color:white; letter-spacing:-0.02em; margin-bottom:0.4rem;">
+                        Follow Gabriella Systems on LinkedIn
+                    </h3>
+                    <p style="font-size:0.9rem; color:rgba(255,255,255,0.72); max-width:480px; line-height:1.6; margin:0;">
+                        We share updates on research progress, product milestones and how
+                        computer vision is advancing sports intelligence.
+                    </p>
+                </div>
+                <a href="https://www.linkedin.com/company/gabriella-systems"
+                   target="_blank" rel="noopener noreferrer"
+                   style="display:inline-flex; align-items:center; gap:0.6rem; padding:0.9rem 1.6rem;
+                          background:#0A66C2; color:white; border-radius:12px; font-weight:700;
+                          font-size:0.95rem; text-decoration:none; white-space:nowrap;
+                          box-shadow:0 4px 16px rgba(10,102,194,0.35);
+                          transition:background 0.2s ease, transform 0.2s ease;"
+                   onmouseover="this.style.background='#004182'; this.style.transform='translateY(-2px)';"
+                   onmouseout="this.style.background='#0A66C2'; this.style.transform='translateY(0)';">
+                    <i class="fab fa-linkedin" style="font-size:1.15rem;"></i>
+                    Follow on LinkedIn
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="nav-logo-text">Gabriella Systems</span>
+                    <p>Computer vision for cricket performance — batting and bowling intelligence from ordinary video.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <a href="services.html">Platform</a>
+                    <a href="batting.html">Batting</a>
+                    <a href="bowling.html">Bowling</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="about.html">About</a>
+                    <a href="research.html">Research</a>
+                    <a href="connect.html">Connect</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Gabriella Systems. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+    (function () {
+        const BACKEND = 'https://gabriellasystems--cricket-demo-web.modal.run/api/contact';
+
+        // Pre-fill purpose from ?purpose= query string and scroll to form
+        (function prefillFromUrl() {
+            const params  = new URLSearchParams(window.location.search);
+            const purpose = params.get('purpose');
+            if (!purpose) return;
+            const sel = document.getElementById('cf-purpose');
+            if (!sel) return;
+            for (const opt of sel.options) {
+                if (opt.value === purpose) {
+                    opt.selected = true;
+                    sel.dispatchEvent(new Event('change'));
+                    break;
+                }
+            }
+            // Scroll to form after a brief paint delay
+            requestAnimationFrame(() => {
+                const formSect = document.getElementById('interest-form');
+                formSect?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        }());
+
+        const cards       = document.querySelectorAll('.pathway-card');
+        const formSect    = document.getElementById('interest-form');
+        const purposeSel  = document.getElementById('cf-purpose');
+        const consentBlock = document.getElementById('consent-block');
+        const consentBox  = document.getElementById('cf-consent');
+        const form        = document.getElementById('connect-form');
+        const submitBtn   = document.getElementById('connect-submit');
+        const errEl       = document.getElementById('connect-form-error');
+        const successEl   = document.getElementById('connect-success');
+
+        // ── Pathway card → pre-select purpose in inline form ───────────────
+        const purposeMap = {
+            'Pilot Interest':            'Pilot Interest',
+            'Research Conversations':    'Research Conversations',
+            'Advisory Interest':         'Advisory Interest',
+            'Future Paid Opportunities': 'Future Paid Opportunities',
+        };
+
+        function selectPurpose(value) {
+            cards.forEach(c => c.classList.toggle('active', c.dataset.pathway === value));
+            for (const opt of purposeSel.options) {
+                if (opt.value === value) { opt.selected = true; break; }
+            }
+            purposeSel.dispatchEvent(new Event('change'));
+        }
+
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                selectPurpose(purposeMap[card.dataset.pathway] || '');
+                formSect.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+            card.querySelector('.pathway-btn').addEventListener('keydown', e => {
+                if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); card.click(); }
+            });
+        });
+
+        // ── Show/hide consent for non-pilot/general purposes ───────────────
+        purposeSel.addEventListener('change', () => {
+            const v = purposeSel.value;
+            const needs = v && v !== 'General' && v !== 'Pilot Interest';
+            consentBlock.style.display = needs ? 'block' : 'none';
+            consentBox.required = needs;
+        });
+
+        // ── Form submission ─────────────────────────────────────────────────
+        form.addEventListener('submit', async e => {
+            e.preventDefault();
+            errEl.style.display = 'none';
+
+            const purpose = purposeSel.value;
+            const name    = document.getElementById('cf-name').value.trim();
+            const email   = document.getElementById('cf-email').value.trim();
+            const org     = document.getElementById('cf-org').value.trim();
+            const sport   = document.getElementById('cf-sport').value;
+            const message = document.getElementById('cf-message').value.trim();
+            const consent = consentBox.checked;
+
+            if (!purpose) { showError('Please select a purpose.'); return; }
+            if (!name || !email || !message) { showError('Please complete all required fields.'); return; }
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showError('Please enter a valid email address.'); return; }
+            if (consentBox.required && !consent) { showError('Please tick the acknowledgement checkbox.'); return; }
+
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending…';
+
+            try {
+                const res = await fetch(BACKEND, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        name, email,
+                        organization: org,
+                        role:     purpose,
+                        interest: sport || '',
+                        message,
+                    }),
+                });
+                if (res.ok) {
+                    form.style.display = 'none';
+                    successEl.style.display = 'block';
+                    successEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                } else { throw new Error(); }
+            } catch {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+                showError('Something went wrong — please email info@gabriellasystems.com directly.');
+            }
+        });
+
+        function showError(msg) {
+            errEl.textContent = msg;
+            errEl.style.display = 'block';
+            errEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+    }());
+    </script>
+</body>
+</html>
