@@ -8,6 +8,13 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 
 ## 2026-09-21
 
+### Public bowling label is Arm angular speed
+
+- User-facing bowling copy that still said **Arm speed** now says **Arm angular speed**. Units stay **°/s** (sample **619**). The tip key stays `arm-speed`; the field stays `peak_arm_angular_speed_deg_s`.
+- Surfaces: homepage bowling clip HUD and session progress, `bowling.html` clip HUD and session stack, academy and cricket sports lists. The ⓘ string was already “Peak arm angular speed in this take (°/s).”
+- Bowling homepage hero stays **Run-up speed 20.4 km/h** only. Arm angular speed stays detail. Release height stays off hero rows.
+- GIF binaries were not regenerated.
+
 ### Bowling page matches batting; pilot form docs say Connect
 
 - `bowling.html` follows the batting section rhythm: hero, phase cards in the four-dimension product grid, Live / Conditional / Research table (fail-loud line), GIF HUD plus validation disclaimer, three coaching questions, session intelligence, and Showcase + **Request a Pilot** (`connect.html`).
