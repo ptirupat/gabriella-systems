@@ -73,8 +73,8 @@
                         <div class="hero-metric-card">
                             <span class="hero-sport-badge batting">Batting</span>
                             <span class="live-dot"></span>
-                            <span class="metric-value"><span data-count="16">16</span></span>
-                            <span class="metric-label">Bat speed at impact <i class="info-btn light" tabindex="0" data-tip="How fast the bat was moving at the moment of contact. Observed bat speed (km/h) at the impact frame.">i</i></span>
+                            <span class="metric-value"><span data-count="10.6">10.6</span></span>
+                            <span class="metric-label" data-metric-tip="bat-speed">Bat speed at impact km/h</span>
                             <div class="sparkline">
                                 <span style="height:60%"></span>
                                 <span style="height:65%"></span>
@@ -84,23 +84,10 @@
                             </div>
                         </div>
                         <div class="hero-metric-card">
-                            <span class="hero-sport-badge bowling">Bowling</span>
-                            <span class="live-dot"></span>
-                            <span class="metric-value" data-count="20.4">20.4</span>
-                            <span class="metric-label">Run-up speed km/h <i class="info-btn light" tabindex="0" data-tip="The bowler's peak approach speed during the run-up phase, measured from pose tracking. km/h.">i</i></span>
-                            <div class="sparkline">
-                                <span style="height:70%"></span>
-                                <span style="height:80%"></span>
-                                <span style="height:85%"></span>
-                                <span style="height:95%"></span>
-                                <span style="height:100%"></span>
-                            </div>
-                        </div>
-                        <div class="hero-metric-card">
                             <span class="hero-sport-badge batting">Batting</span>
                             <span class="live-dot"></span>
-                            <span class="metric-value" data-count="122">122</span>
-                            <span class="metric-label">Ball speed km/h <i class="info-btn light" tabindex="0" data-tip="Incoming delivery speed, estimated from the ball's tracked trajectory. Shown when detection is quality-gated. km/h.">i</i></span>
+                            <span class="metric-value" data-count="45.9">45.9</span>
+                            <span class="metric-label" data-metric-tip="head-stability">Head stability cm</span>
                             <div class="sparkline">
                                 <span style="height:55%"></span>
                                 <span style="height:62%"></span>
@@ -112,12 +99,12 @@
                         <div class="hero-metric-card">
                             <span class="hero-sport-badge bowling">Bowling</span>
                             <span class="live-dot"></span>
-                            <span class="metric-value" data-count="619">619</span>
-                            <span class="metric-label">Arm speed °/s <i class="info-btn light" tabindex="0" data-tip="Angular speed of the bowling arm through the delivery action. Degrees per second (°/s).">i</i></span>
+                            <span class="metric-value" data-count="20.4">20.4</span>
+                            <span class="metric-label" data-metric-tip="run-up">Run-up speed km/h</span>
                             <div class="sparkline">
+                                <span style="height:70%"></span>
+                                <span style="height:80%"></span>
                                 <span style="height:85%"></span>
-                                <span style="height:90%"></span>
-                                <span style="height:88%"></span>
                                 <span style="height:95%"></span>
                                 <span style="height:100%"></span>
                             </div>
@@ -140,9 +127,10 @@
                              style="width: 100%; border-radius: 8px; display: block;" />
                         <div class="clip-hud">
                             <p class="clip-hud-title">Gabriella Vision</p>
-                            <div class="clip-hud-row"><span>Bat speed at impact</span><strong>16 km/h</strong></div>
-                            <div class="clip-hud-row"><span>Ball speed</span><strong>122 km/h</strong></div>
-                            <div class="clip-hud-row"><span>Contact time</span><strong>817 ms</strong></div>
+                            <div class="clip-hud-row" data-metric-tip="bat-speed"><span>Bat speed at impact</span><strong>10.6 km/h</strong></div>
+                            <div class="clip-hud-row" data-metric-tip="head-stability"><span>Head stability</span><strong>45.9 cm</strong></div>
+                            <div class="clip-hud-row" data-metric-tip="ball-speed"><span>Ball speed</span><strong>122 km/h</strong></div>
+                            <div class="clip-hud-row" data-metric-tip="contact-time"><span>Contact time</span><strong>800 ms</strong></div>
                             <p class="clip-hud-note">Session metrics from this take</p>
                         </div>
                     </div>
@@ -152,9 +140,9 @@
                              style="width: 100%; border-radius: 8px; display: block;" />
                         <div class="clip-hud clip-hud-bowling">
                             <p class="clip-hud-title">Gabriella Vision</p>
-                            <div class="clip-hud-row"><span>Run-up speed</span><strong>20.4 km/h</strong></div>
-                            <div class="clip-hud-row"><span>Arm speed</span><strong>619 °/s</strong></div>
-                            <div class="clip-hud-row"><span>Front knee angle</span><strong>155°</strong></div>
+                            <div class="clip-hud-row" data-metric-tip="run-up"><span>Run-up speed</span><strong>20.4 km/h</strong></div>
+                            <div class="clip-hud-row" data-metric-tip="arm-speed"><span>Arm speed</span><strong>619 °/s</strong></div>
+                            <div class="clip-hud-row" data-metric-tip="front-knee"><span>Front knee angle</span><strong>155°</strong></div>
                             <p class="clip-hud-note">Session metrics from this take</p>
                         </div>
                     </div>
@@ -252,17 +240,21 @@
                 <div class="compare-grid">
                     <div class="compare-card">
                         <h4>Batting — Session Progress</h4>
-                        <div class="compare-row">
+                        <div class="compare-row" data-metric-tip="bat-speed">
                             <span>Bat speed at impact</span>
-                            <strong>16 km/h</strong>
+                            <strong>10.6 km/h</strong>
                         </div>
-                        <div class="compare-row">
+                        <div class="compare-row" data-metric-tip="head-stability">
+                            <span>Head stability</span>
+                            <strong>45.9 cm</strong>
+                        </div>
+                        <div class="compare-row" data-metric-tip="ball-speed">
                             <span>Ball speed</span>
                             <strong>122 km/h</strong>
                         </div>
-                        <div class="compare-row">
-                            <span>Head stability</span>
-                            <strong>41.4 cm</strong>
+                        <div class="compare-row" data-metric-tip="contact-time">
+                            <span>Contact time in this clip</span>
+                            <strong>800 ms</strong>
                         </div>
                         <div class="compare-row">
                             <span>Same-view session review</span>
@@ -271,15 +263,15 @@
                     </div>
                     <div class="compare-card">
                         <h4>Bowling — Session Progress</h4>
-                        <div class="compare-row">
+                        <div class="compare-row" data-metric-tip="run-up">
                             <span>Run-up speed</span>
                             <strong>20.4 km/h</strong>
                         </div>
-                        <div class="compare-row">
+                        <div class="compare-row" data-metric-tip="arm-speed">
                             <span>Arm speed</span>
                             <strong>619 °/s</strong>
                         </div>
-                        <div class="compare-row">
+                        <div class="compare-row" data-metric-tip="front-knee">
                             <span>Front knee angle</span>
                             <strong>155°</strong>
                         </div>

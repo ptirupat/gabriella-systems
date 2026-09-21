@@ -103,24 +103,20 @@
                     <h2>Objective bowling metrics from the analysis pipeline</h2>
                 </div>
                 <div class="metrics-grid">
-                    <article class="metric-card">
-                        <span>Run-up speed <i class="info-btn" tabindex="0" data-tip="The bowler's peak approach speed during the run-up, measured from pose tracking. km/h.">i</i></span>
+                    <article class="metric-card" data-metric-tip="run-up">
+                        <span>Run-up speed</span>
                         <strong><span data-count="20.4">20.4</span> km/h</strong>
                     </article>
-                    <article class="metric-card">
-                        <span>Arm speed <i class="info-btn" tabindex="0" data-tip="Angular speed of the bowling arm through the delivery action. Degrees per second (°/s).">i</i></span>
+                    <article class="metric-card" data-metric-tip="arm-speed">
+                        <span>Arm speed</span>
                         <strong><span data-count="619">619</span> °/s</strong>
                     </article>
-                    <article class="metric-card">
-                        <span>Front knee angle <i class="info-btn" tabindex="0" data-tip="Knee angle of the front leg at front-foot plant. 0° ≈ fully extended; larger values indicate more flexion.">i</i></span>
+                    <article class="metric-card" data-metric-tip="front-knee">
+                        <span>Front knee angle</span>
                         <strong><span data-count="155">155</span>°</strong>
                     </article>
-                    <article class="metric-card">
-                        <span>Release height <i class="info-btn" tabindex="0" data-tip="Estimated height at which the ball is released. Measured when depth calibration supports it. Metres.">i</i></span>
-                        <strong class="metric-placeholder">Measured when calibration supports it</strong>
-                    </article>
-                    <article class="metric-card">
-                        <span>Ball speed <i class="info-btn" tabindex="0" data-tip="Incoming delivery speed from tracked trajectory. Only shown when quality-gated. km/h.">i</i></span>
+                    <article class="metric-card" data-metric-tip="ball-speed">
+                        <span>Ball speed</span>
                         <strong class="metric-placeholder">Measured when ball is detected</strong>
                     </article>
                 </div>
@@ -136,9 +132,9 @@
                          style="width: 100%; border-radius: 8px; display: block;" />
                     <div class="clip-hud clip-hud-bowling">
                         <p class="clip-hud-title">Gabriella Vision</p>
-                        <div class="clip-hud-row"><span>Run-up speed <i class="info-btn" tabindex="0" data-tip="The bowler's peak approach speed during the run-up, measured from pose tracking. km/h.">i</i></span><strong>20.4 km/h</strong></div>
-                        <div class="clip-hud-row"><span>Arm speed <i class="info-btn" tabindex="0" data-tip="Angular speed of the bowling arm through the delivery action. Degrees per second (°/s).">i</i></span><strong>619 °/s</strong></div>
-                        <div class="clip-hud-row"><span>Front knee angle <i class="info-btn" tabindex="0" data-tip="Knee angle of the front leg at front-foot plant. 0° ≈ fully extended; larger values indicate more flexion.">i</i></span><strong>155°</strong></div>
+                        <div class="clip-hud-row" data-metric-tip="run-up"><span>Run-up speed</span><strong>20.4 km/h</strong></div>
+                        <div class="clip-hud-row" data-metric-tip="arm-speed"><span>Arm speed</span><strong>619 °/s</strong></div>
+                        <div class="clip-hud-row" data-metric-tip="front-knee"><span>Front knee angle</span><strong>155°</strong></div>
                         <p class="clip-hud-note">Session metrics from this take</p>
                     </div>
                 </div>
@@ -155,15 +151,19 @@
                     </p>
                 </div>
                 <div class="analysis-stack">
-                    <div class="analysis-row accent-amber">
-                        <span>Run-up speed <i class="info-btn" tabindex="0" data-tip="The bowler's peak approach speed during the run-up, measured from pose tracking. km/h.">i</i></span>
+                    <div class="analysis-row accent-amber" data-metric-tip="run-up">
+                        <span>Run-up speed</span>
                         <strong>20.4 km/h</strong>
                     </div>
-                    <div class="analysis-row accent-teal">
-                        <span>Arm speed <i class="info-btn" tabindex="0" data-tip="Angular speed of the bowling arm through the delivery action. Degrees per second (°/s).">i</i></span>
+                    <div class="analysis-row accent-teal" data-metric-tip="arm-speed">
+                        <span>Arm speed</span>
                         <strong>619 °/s</strong>
                     </div>
-                    <div class="analysis-row accent-green">
+                    <div class="analysis-row accent-green" data-metric-tip="front-knee">
+                        <span>Front knee angle</span>
+                        <strong>155°</strong>
+                    </div>
+                    <div class="analysis-row">
                         <span>Same-view session review</span>
                         <strong>Coach-guided</strong>
                     </div>
