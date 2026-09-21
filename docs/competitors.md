@@ -4,7 +4,7 @@ Living notes for Gabriella Systems competitive positioning. Update when we learn
 
 Copy gate for live site wording: [competitive-positioning.md](./competitive-positioning.md). Do not fork homepage hero metrics here.
 
-Last updated: 2026-10-05
+Last updated: 2026-10-06
 
 ## Gabriella wedge (reminder)
 
@@ -145,6 +145,48 @@ Last updated: 2026-10-05
 
 ---
 
+## Level Up Sportslytics (levelupsportslytics.com)
+
+**Class:** Hardware+CV cricket analytics (Singapore; LevelUp Cricket app). Closest hardware+CV peer in the 2026-09-21 batch. Partner-venue / walk-in capture; expanding SG → India.
+
+**Capture:** Installed multi-cam at partner venues (~3–4 cameras @ ~100 fps). Not a phone-upload product. Marketing uses “broadcast-level analytics” slogans — do not copy. Multi-camera is **roadmap** for Gabriella; do not imply we already ship venue multi-cam.
+
+**Capabilities (claimed/site):** Ball tracking, pitch maps, wagon wheels, slow-mo, biomechanics (shoulder/hip), injury-risk cues, longitudinal stats. Public accuracy study is not in this tracker — do not invent figures or treat slogans as verified precision.
+
+**Pricing signals:** None recorded here. Do not invent list prices or venue-session fees.
+
+**Strengths:** Installed multi-cam capture at the venue; walk-in / partner-venue model; visual coaching artifacts (pitch maps, wagon wheels, slow-mo); India expansion story.
+
+**Gaps vs Gabriella:** Tied to partner-venue hardware; not a camera the coach can place / upload-first; broadcast-level slogan without a public accuracy study in this tracker; no public Ready / Can't measure trust rule.
+
+**Do not copy:** “Broadcast-level” claims; always-on venue numbers as if they were gated session truth; competing as if we already ship calibrated multi-cam (we do not).
+
+**Gabriella wedge vs Level Up:** They own installed multi-cam nets; we own a camera the coach can place, with view-aware session metrics and a portable / academy workflow. Compete on placement — not on broadcast slogans. Ready / Can't measure stays the trust rule, not the headline.
+
+---
+
+## WellPlayed (wellplayedcricket.com) — watchlist / low threat
+
+**Class:** Claims AI-driven grassroots cricket mobile app — skill video upload, coach checklists, club/parent tracking.
+
+**Status:** Site appears largely unfinished (Appilo theme demos, placeholder testimonials). Treat as early/immature until real CV ships. Not a live metric competitor.
+
+**Vs Gabriella:** Coaching workflow / video-share, not gated session metrics.
+
+**Do not copy:** Theme-demo social proof; unfinished landing-page claims as if shipped CV.
+
+---
+
+## Ball2Data (ball2data.com) — adjacent (not nets CV)
+
+**Class:** Match analytics + analyst education + live broadcast overlays (cricket, football, rugby, netball). UK-based. Human tagging / ball-by-ball; 12-week analyst programmes; club partners.
+
+**Vs Gabriella:** Different job — match/broadcast intelligence, not academy nets vision. Possible channel/partner, not a direct product rival.
+
+**Do not copy:** Broadcast overlay / ball-by-ball scoring as if it were nets CV.
+
+---
+
 ## Other peers (short)
 
 | Name | Class | Notes |
@@ -155,11 +197,28 @@ Last updated: 2026-10-05
 | PitchVision | Incumbent training systems | Hardware+analytics |
 | BatSense / SmartCricket | Bat sensor | Adjacent modality |
 | NV Play | Match/analyst software | Adjacent workflow |
+| Level Up Sportslytics | Hardware+CV venue | Multi-cam partner venues; SG → India; named section above |
+| Ball2Data | Match/analyst + broadcast overlays | Adjacent — not nets CV; named section above |
 | 3rd-Eye.TV | Match-day DRS / association platform | Adjacent — not nets CV; no academy SaaS price; named section above |
 | CrickRoo | Phone CV nets | AU; Pro ~$20/mo site / $19.99 IAP; Group custom; named section above |
+| WellPlayed | Watchlist / video-share coaching app | Unfinished site; low threat until real CV ships |
 | Hawk-Eye | Elite multi-cam | Aspirational |
 
 Pricing, accuracy, and feature depth for this table are **unverified** unless noted in the named sections above. Do not invent list prices or accuracy figures.
+
+---
+
+## Customer / pilot leads (not competitors)
+
+These are GTM targets, not rivals. Do not list them in peer tables or copy-gate rival lists.
+
+### Adani Sportsline Academies (adanisportsline.com/Academies)
+
+Multi-sport academies (Shantigram / Riverfront) with cricket infrastructure: national-standard ground, **4 turf + 2 cement nets** (Shantigram), age programs ~8–18, paid cricket academy fees, kits, physical assessments, tournament pathway.
+
+**Why they fit Gabriella:** Scale academy + real nets + coach-led model.
+
+**Pitch angle:** Session metrics from a camera the coach can place across net takes — Ready / Can't measure, portable or fixed later. Do not sell live upload-software as already shipping calibrated multi-cam hardware.
 
 ---
 
@@ -172,5 +231,8 @@ Pricing, accuracy, and feature depth for this table are **unverified** unless no
 5. CricVision is an academy-sales peer (white-label ops + phone/camera coaching). Medium GTM threat there. Low threat on placement and view-aware metrics unless they leave a behind-the-stumps lock. Don’t race white-label ops; own where the camera sits and what that view can show. Ready / Can’t measure stays the trust rule.
 6. 3rd-Eye.TV is adjacent match-day DRS / association tech. Low direct threat. Watchlist only if Sports DeepMind moves into nets phone analysis.
 7. CrickRoo is an early AU phone ball-tracking app (players/parents plus academy custom). Adjacent. Don’t race freemium ball speed; own placement and view-aware bat/body metrics where the view allows. Ready / Can’t measure stays the trust rule.
+8. Level Up owns **installed multi-cam nets**; compete on placement and a portable / academy workflow — not on “broadcast-level” slogans. Multi-camera stays roadmap for us. Ready / Can't measure stays the trust rule, not the headline.
+9. Ball2Data is **adjacent** (match/broadcast); WellPlayed is **watchlist** until real CV ships.
+10. Keep Adani Sportsline Academies (and similar academies) in the **lead list**, not the rival list.
 
 Homepage Impact / Bat / Head / Contact locks live in [competitive-positioning.md](./competitive-positioning.md) and Modal PRODUCT.md — do not reopen them here.

@@ -32,6 +32,12 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 
 ## 2026-09-21
 
+### Competitor tracker update (Level Up, watchlist, adjacent, academy lead)
+
+- Extend [competitors.md](./competitors.md): **Level Up Sportslytics** as a hardware+CV venue peer (multi-cam, ball track, pitch maps, wagon wheels, biomechanics; SG → India; partner-venue model); **WellPlayed** as watchlist / low threat; **Ball2Data** as adjacent match/broadcast analytics (not nets CV); **Adani Sportsline Academies** as a customer/pilot lead (not a competitor).
+- [competitive-positioning.md](./competitive-positioning.md) names Level Up as a hardware+CV peer (installed multi-cam vs a camera the coach can place). Ready / Can't measure stays the trust rule, not the headline. Impact / homepage hero gates **unchanged**.
+- Existing Ludimos, Kabuni, CricVision, 3rd-Eye, CrickRoo, and other-peer rows kept. No invented pricing or accuracy. Docs only; no HTML/JS.
+
 ### Public bowling label is Arm angular speed
 
 - User-facing bowling copy that still said **Arm speed** now says **Arm angular speed**. Units stay **°/s** (sample **619**). The tip key stays `arm-speed`; the field stays `peak_arm_angular_speed_deg_s`.
