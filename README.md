@@ -34,7 +34,7 @@ Product should review these for accuracy:
 - `demo.html` — Live Showcase (Modal iframe).
 - `about.html` — Mission, vision, leadership, and product roadmap.
 - `robots.txt` / `sitemap.xml` — crawl hints for search and generative engines.
-- `contact.html` — Pilot / inquiry form.
+- `connect.html` — Connect: pilot / inquiry form.
 - `admin.html` — Admin panel iframe.
 
 ## Stack

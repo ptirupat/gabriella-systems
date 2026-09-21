@@ -224,7 +224,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     });
 
-    // Contact form submit (contact.html)
+    // Legacy contact-form id (pilot form now lives on connect.html as #connect-form)
     const form = document.getElementById('contact-form');
     if (form) handleFormSubmit(form);
 });
