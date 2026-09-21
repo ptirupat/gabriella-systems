@@ -2,7 +2,7 @@
 
 Short Marketing note for website and product copy. Keep claims aligned with this — not a full GTM brief.
 
-Updated: 2026-09-17
+Updated: 2026-09-21
 
 Living competitor tracker (class, capture, pricing signals, gaps): [competitors.md](./competitors.md). This file remains the **copy gate** for live site claims. Modal [PRODUCT.md](https://github.com/Gabriella-Systems/modal/blob/main/docs/PRODUCT.md) is product source of truth — do not fork hero metrics here.
 
@@ -17,8 +17,11 @@ Kabuni — PlayOS + Super Coaches + schools + league; access/cues GTM, not our m
 **Incumbent training systems**  
 PitchVision — hardware + analytics kits historically sold into academies/clubs.
 
+**Hardware + CV (venue install)**  
+Level Up Sportslytics — multi-cam partner-venue cricket analytics (LevelUp Cricket app); ball track, pitch maps, wagon wheels, biomechanics; expanding SG → India. Detail: [competitors.md](./competitors.md#level-up-sportslytics-levelupsportslyticscom).
+
 **Adjacent**  
-BatSense / SmartCricket (bat sensor, not full ball+pose CV); NV Play (match / analyst workflows); Trume (early coaching OS).
+BatSense / SmartCricket (bat sensor, not full ball+pose CV); NV Play (match / analyst workflows); Ball2Data (match analytics / analyst education / broadcast overlays — not nets CV); Trume (early coaching OS). WellPlayed is **watchlist** (unfinished video-share coaching app), not a live metric peer. Customer leads (e.g. Adani Sportsline Academies) live in [competitors.md](./competitors.md#customer--pilot-leads-not-competitors) — not rivals.
 
 **Aspirational reference**  
 Hawk-Eye — elite multi-camera tracking; not our academy-net price or form factor.
@@ -30,6 +33,9 @@ Hawk-Eye — elite multi-camera tracking; not our academy-net price or form fact
 
 **Kabuni** — Youth cricket development + AI coaching brand (India-first: PlayOS + Super Coaches + schools + league pathway), not a clip/AMS SaaS peer.  
 **Wedge:** Coach-trusted gated session metrics vs access, cues, and celebrity pathway. Do not treat Kabuni as our metric competitor or copy junior-league GTM.
+
+**Level Up Sportslytics** — Hardware+CV cricket analytics (Singapore; partner-venue multi-cam install, walk-in capture, expanding SG → India).  
+**Wedge:** They own installed multi-cam nets; we own upload / portable / fail-loud session metrics. Do not compete on “broadcast-level” slogans — compete on trust + portable / academy workflow. Multi-camera stays **roadmap** for Gabriella.
 
 ## Category pattern (what rivals do)
 
