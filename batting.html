@@ -62,7 +62,7 @@
             <div class="container">
                 <div class="section-intro">
                     <p class="eyebrow">Four dimensions of every delivery</p>
-                    <h2>Ball, bat, body, and outcome — measured automatically</h2>
+                    <h2>Ball, bat, body, and outcome — where the clip and view allow</h2>
                 </div>
                 <div class="product-grid four-col">
                     <article class="product-card">
@@ -71,10 +71,10 @@
                         </div>
                         <h3>Ball</h3>
                         <ul class="check-list">
-                            <li><i class="fas fa-check"></i>Trajectory</li>
-                            <li><i class="fas fa-check"></i>Line and length</li>
-                            <li><i class="fas fa-check"></i>Speed</li>
-                            <li><i class="fas fa-check"></i>Bounce point</li>
+                            <li><i class="fas fa-check"></i>Speed <span style="font-size:0.78rem;color:var(--muted);font-weight:400;">(quality-gated)</span></li>
+                            <li><i class="fas fa-check"></i>Trajectory <span style="font-size:0.78rem;color:var(--muted);font-weight:400;">(where visible)</span></li>
+                            <li><i class="fas fa-check"></i>Line and length <span style="font-size:0.78rem;color:var(--muted);font-weight:400;">(view-dependent)</span></li>
+                            <li><i class="fas fa-check"></i>Bounce point <span style="font-size:0.78rem;color:var(--muted);font-weight:400;">(view-dependent)</span></li>
                         </ul>
                     </article>
                     <article class="product-card">
@@ -83,9 +83,9 @@
                         </div>
                         <h3>Bat</h3>
                         <ul class="check-list">
-                            <li><i class="fas fa-check"></i>Bat path</li>
+                            <li><i class="fas fa-check"></i>Bat path <span style="font-size:0.78rem;color:var(--muted);font-weight:400;">(where visible)</span></li>
                             <li><i class="fas fa-check"></i>Bat speed at impact</li>
-                            <li><i class="fas fa-check"></i>Bat angle</li>
+                            <li><i class="fas fa-check"></i>Bat angle <span style="font-size:0.78rem;color:var(--muted);font-weight:400;">(where visible)</span></li>
                             <li><i class="fas fa-check"></i>Contact time in this clip</li>
                         </ul>
                     </article>
@@ -96,8 +96,8 @@
                         <h3>Body</h3>
                         <ul class="check-list">
                             <li><i class="fas fa-check"></i>Head stability</li>
-                            <li><i class="fas fa-check"></i>Foot movement</li>
-                            <li><i class="fas fa-check"></i>Stride length</li>
+                            <li><i class="fas fa-check"></i>Foot movement <span style="font-size:0.78rem;color:var(--muted);font-weight:400;">(pose-dependent)</span></li>
+                            <li><i class="fas fa-check"></i>Stride length <span style="font-size:0.78rem;color:var(--muted);font-weight:400;">(pose-dependent)</span></li>
                             <li><i class="fas fa-check"></i>Joint positions</li>
                         </ul>
                     </article>
@@ -107,13 +107,45 @@
                         </div>
                         <h3>Outcome</h3>
                         <ul class="check-list">
-                            <li><i class="fas fa-check"></i>Contact location</li>
-                            <li><i class="fas fa-check"></i>Shot trajectory</li>
-                            <li><i class="fas fa-check"></i>Bat-ball contact quality</li>
-                            <li><i class="fas fa-check"></i>Session consistency</li>
+                            <li><i class="fas fa-check"></i>Contact location <span style="font-size:0.78rem;color:var(--muted);font-weight:400;">(view-dependent)</span></li>
+                            <li><i class="fas fa-check"></i>Shot trajectory <span style="font-size:0.78rem;color:var(--muted);font-weight:400;">(where visible post-contact)</span></li>
+                            <li><i class="fas fa-check"></i>Bat-ball contact quality <span style="font-size:0.78rem;color:var(--muted);font-weight:400;">(quality-gated)</span></li>
+                            <li><i class="fas fa-check"></i>Session review <span style="font-size:0.78rem;color:var(--muted);font-weight:400;">(same-view clips only)</span></li>
                         </ul>
                     </article>
                 </div>
+            </div>
+        </section>
+
+        <section class="section muted-section" style="padding: 36px 0;">
+            <div class="container">
+                <div class="section-intro" style="margin-bottom:1rem;">
+                    <p class="eyebrow">What's live, conditional, and research-stage</p>
+                    <h2>Capability status for batting analysis</h2>
+                    <p style="color:var(--muted); font-size:0.9rem; max-width:640px;">Availability depends on camera view, calibration, visibility, and clip quality. The system reports "can't measure" when a metric cannot be reliably determined — it never substitutes a guess.</p>
+                </div>
+                <table class="cap-status-table">
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>Status</th>
+                            <th>Condition</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Bat speed at impact</td><td><span class="badge-live">Live</span></td><td>When bat is tracked through contact frame</td></tr>
+                        <tr><td>Ball speed</td><td><span class="badge-live">Live</span></td><td>Quality-gated — only shown when ball tracking is reliable</td></tr>
+                        <tr><td>Contact time (per clip)</td><td><span class="badge-live">Live</span></td><td>When bat-ball contact is detected</td></tr>
+                        <tr><td>Head stability</td><td><span class="badge-live">Live</span></td><td>When pose estimation covers the head and shoulders</td></tr>
+                        <tr><td>Ball trajectory</td><td><span class="badge-conditional">Conditional</span></td><td>Requires sufficient ball visibility and appropriate camera angle</td></tr>
+                        <tr><td>Bounce point</td><td><span class="badge-conditional">Conditional</span></td><td>Requires a view that captures the pitch area</td></tr>
+                        <tr><td>Stride length, foot movement</td><td><span class="badge-conditional">Conditional</span></td><td>Requires full lower-body pose visibility</td></tr>
+                        <tr><td>Contact location</td><td><span class="badge-conditional">Conditional</span></td><td>Depends on camera view and bat orientation at contact</td></tr>
+                        <tr><td>Session-to-session comparison</td><td><span class="badge-conditional">Conditional</span></td><td>Requires clips from a comparable camera view and quality</td></tr>
+                        <tr><td>Weight transfer</td><td><span class="badge-research">Research</span></td><td>Active research — not surfaced as a production metric</td></tr>
+                        <tr><td>Shot trajectory post-contact</td><td><span class="badge-research">Research</span></td><td>Depends on ball visibility after impact; research-stage</td></tr>
+                    </tbody>
+                </table>
             </div>
         </section>
 
@@ -131,6 +163,7 @@
                         <div class="clip-hud-row"><span>Head stability <i class="info-btn" tabindex="0" data-tip="How far the head moved from the start of the downswing to contact. Lower = more stable. cm.">i</i></span><strong>41.4 cm</strong></div>
                         <p class="clip-hud-note">Session metrics from this take</p>
                     </div>
+                    <p class="demo-disclaimer"><i class="fas fa-circle-info" style="color:var(--amber);margin-right:0.3rem;"></i>Demonstration output from selected sample clips. Not independently validated. Measurement availability and accuracy depend on camera view, calibration, visibility, frame rate, and clip quality.</p>
                 </div>
             </div>
         </section>
@@ -155,7 +188,7 @@
                     <article class="feature-card">
                         <i class="fas fa-chart-bar"></i>
                         <h3>How consistent is my stride across the session?</h3>
-                        <p>Compare stride length, foot position, and weight transfer across 20, 50, or 100 deliveries in a single session.</p>
+                        <p>Compare stride length and foot position across deliveries in the same session — where clips share a similar camera view and quality.</p>
                     </article>
                 </div>
             </div>
@@ -226,7 +259,7 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 Gabriella Systems. All rights reserved.</p>
-            </div>
+                </div>
         </div>
     </footer>
 
