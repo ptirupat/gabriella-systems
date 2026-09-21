@@ -157,10 +157,10 @@
                          style="width: 100%; border-radius: 8px; display: block;" />
                     <div class="clip-hud">
                         <p class="clip-hud-title">Gabriella Vision</p>
-                        <div class="clip-hud-row"><span>Bat speed at impact <i class="info-btn" tabindex="0" data-tip="How fast the bat was moving at contact. Observed bat speed (km/h) at the impact frame.">i</i></span><strong>16 km/h</strong></div>
-                        <div class="clip-hud-row"><span>Ball speed <i class="info-btn" tabindex="0" data-tip="Incoming delivery speed from tracked trajectory. Only shown when quality-gated. km/h.">i</i></span><strong>122 km/h</strong></div>
-                        <div class="clip-hud-row"><span>Contact time <i class="info-btn" tabindex="0" data-tip="When bat met ball in this take — milliseconds from clip start. A same-view timing marker, not an early/late judgment.">i</i></span><strong>817 ms</strong></div>
-                        <div class="clip-hud-row"><span>Head stability <i class="info-btn" tabindex="0" data-tip="How far the head moved from the start of the downswing to contact. Lower = more stable. cm.">i</i></span><strong>41.4 cm</strong></div>
+                        <div class="clip-hud-row" data-metric-tip="bat-speed"><span>Bat speed at impact</span><strong>10.6 km/h</strong></div>
+                        <div class="clip-hud-row" data-metric-tip="head-stability"><span>Head stability</span><strong>45.9 cm</strong></div>
+                        <div class="clip-hud-row" data-metric-tip="ball-speed"><span>Ball speed</span><strong>122 km/h</strong></div>
+                        <div class="clip-hud-row" data-metric-tip="contact-time"><span>Contact time</span><strong>800 ms</strong></div>
                         <p class="clip-hud-note">Session metrics from this take</p>
                     </div>
                     <p class="demo-disclaimer"><i class="fas fa-circle-info" style="color:var(--amber);margin-right:0.3rem;"></i>Demonstration output from selected sample clips. Not independently validated. Measurement availability and accuracy depend on camera view, calibration, visibility, frame rate, and clip quality.</p>
@@ -205,15 +205,23 @@
                     </p>
                 </div>
                 <div class="analysis-stack">
-                    <div class="analysis-row accent-green">
-                        <span>Bat speed at impact <i class="info-btn" tabindex="0" data-tip="How fast the bat was moving at contact. Observed bat speed (km/h) at the impact frame.">i</i></span>
-                        <strong>16 km/h</strong>
+                    <div class="analysis-row accent-green" data-metric-tip="bat-speed">
+                        <span>Bat speed at impact</span>
+                        <strong>10.6 km/h</strong>
                     </div>
-                    <div class="analysis-row accent-amber">
-                        <span>Ball speed <i class="info-btn" tabindex="0" data-tip="Incoming delivery speed from tracked trajectory. Only shown when quality-gated. km/h.">i</i></span>
+                    <div class="analysis-row accent-amber" data-metric-tip="head-stability">
+                        <span>Head stability</span>
+                        <strong>45.9 cm</strong>
+                    </div>
+                    <div class="analysis-row accent-coral" data-metric-tip="ball-speed">
+                        <span>Ball speed</span>
                         <strong>122 km/h</strong>
                     </div>
-                    <div class="analysis-row accent-coral">
+                    <div class="analysis-row accent-teal" data-metric-tip="contact-time">
+                        <span>Contact time in this clip</span>
+                        <strong>800 ms</strong>
+                    </div>
+                    <div class="analysis-row">
                         <span>Same-view session review</span>
                         <strong>Coach-led</strong>
                     </div>

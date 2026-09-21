@@ -6,6 +6,17 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 
 ---
 
+## 2026-09-21
+
+### Restore dashboard HUD lock after rebrand overwrite
+
+- Commit `55448f4` copied older `preview/rebrand-navy-magenta` HTML over the locked heroes and samples. This restore puts the Showcase lock back on live marketing HTML. Navy/magenta rebrand polish (Logo 8, Connect form, legal drafts, credibility copy, sport badges) stays. The rebrand overwrite is not a new product lock.
+- Homepage `.hero-metric-card` tiles are only **Bat speed at impact 10.6 km/h**, **Head stability 45.9 cm**, and **Run-up speed 20.4 km/h**. Ball **122** and Arm **619** are off the hero row again (they stay clip HUD / session-progress detail).
+- Public samples: Bat **10.6**, Head **45.9**, Contact detail **800**, Run-up **20.4**. Do not publish **16 / 41.4 / 817**. Δ **−11.1** stays Showcase Results detail (**Ball speed change through contact**, gallery **`batting-defense`**) — not a homepage hero.
+- Batting clip HUD and session progress: Bat **10.6** + Head **45.9** + Ball **122** + Contact **800**. Bowling public hero is Run-up only; clip/progress keep Arm **619** + Front knee **155** as detail. The Release height “Measured when calibration supports it” slot is omitted from `bowling.html`.
+- Marketing tips are wired again with `data-metric-tip` / `.metric-info` (hover + tap sticky + keyboard). Copy is the Marketing tips table in [homepage-hud-metrics.md](./homepage-hud-metrics.md). Heroes are not left on CSS-only `i.info-btn`.
+- GIF binaries were **not** regenerated. Burned overlays may still lag these HTML samples; HTML is the public numbers.
+
 ## 2026-09-17
 
 ### Per-metric trust / fail-loud (docs lock)
