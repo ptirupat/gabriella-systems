@@ -10,7 +10,7 @@ Canonical **product** documentation lives in [Gabriella-Systems/modal](https://g
 | [DEVICE_BUILD.md](https://github.com/Gabriella-Systems/modal/blob/main/docs/DEVICE_BUILD.md) | Device / hardware build |
 | [BACKLOG.md](https://github.com/Gabriella-Systems/modal/blob/main/docs/BACKLOG.md) | Product backlog |
 
-This marketing-site repo only holds **site copy / HUD docs** for this website:
+This marketing-site repo holds **site copy / HUD docs** for this website, plus versioned marketing assets that are not live HTML:
 
 | Doc | What it covers |
 | --- | --- |
@@ -19,5 +19,6 @@ This marketing-site repo only holds **site copy / HUD docs** for this website:
 | [homepage-hud-metrics.md](./homepage-hud-metrics.md) | Site HUD implementation notes (pointer to Modal PRODUCT.md; per-metric trust / fail-loud) |
 | [competitive-positioning.md](./competitive-positioning.md) | Copy gate: rivals, fail-loud wedge, Impact / hero locks |
 | [competitors.md](./competitors.md) | Living Marketing competitor tracker (Ludimos, Kabuni, peers) |
+| [marketing/linkedin/README.md](./marketing/linkedin/README.md) | LinkedIn company-page post packs (anonymized media + captions) |
 
 If they conflict, **Modal product docs win**. Ping Product.

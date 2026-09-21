@@ -24,6 +24,7 @@ Product should review these for accuracy:
 | [docs/homepage-hud-metrics.md](docs/homepage-hud-metrics.md) | Site HUD implementation notes (pointer to Modal PRODUCT.md; per-metric trust / fail loud). |
 | [docs/competitive-positioning.md](docs/competitive-positioning.md) | Copy gate: rivals, fail-loud wedge, Impact / hero locks. |
 | [docs/competitors.md](docs/competitors.md) | Living Marketing competitor tracker (Ludimos, Kabuni, peer table). |
+| [docs/marketing/linkedin/README.md](docs/marketing/linkedin/README.md) | LinkedIn company-page post packs (anonymized media + captions). |
 
 ## Pages
 
