@@ -6,6 +6,14 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 
 ---
 
+## 2026-09-21
+
+### Competitor tracker update (Level Up, watchlist, adjacent, academy lead)
+
+- Extend [competitors.md](./competitors.md): **Level Up Sportslytics** as a hardware+CV venue peer (multi-cam, ball track, pitch maps, wagon wheels, biomechanics; SG → India; partner-venue model); **WellPlayed** as watchlist / low threat; **Ball2Data** as adjacent match/broadcast analytics (not nets CV); **Adani Sportsline Academies** as a customer/pilot lead (not a competitor).
+- [competitive-positioning.md](./competitive-positioning.md) names Level Up as a hardware+CV peer with the upload / portable / fail-loud wedge. Impact / homepage hero gates **unchanged**.
+- Existing Ludimos, Kabuni, and other-peer table kept. No invented pricing or accuracy. Docs only; no HTML/JS.
+
 ## 2026-09-17
 
 ### Per-metric trust / fail-loud (docs lock)
