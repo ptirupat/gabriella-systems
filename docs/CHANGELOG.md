@@ -8,6 +8,13 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 
 ## 2026-09-21
 
+### Bowling page matches batting; pilot form docs say Connect
+
+- `bowling.html` follows the batting section rhythm: hero, phase cards in the four-dimension product grid, Live / Conditional / Research table (fail-loud line), GIF HUD plus validation disclaimer, three coaching questions, session intelligence, and Showcase + **Request a Pilot** (`connect.html`).
+- Bowling gates: Run-up **Live** when pose is trusted; arm angular speed and front-knee flexion **Live** when pose is ok; ball speed **Conditional** (quality-gated); release height **Research** and omitted — no public metre, no can't-measure slot, no “Measured when calibration supports it”.
+- Session card keeps Run-up **20.4 km/h**, Arm **619 °/s**, Front knee **155°**, same-view review **Coach-led**, plus the illustrative caption. Tips stay `data-metric-tip`. Homepage heroes unchanged.
+- Docs, README, and `sitemap.xml` that still named `contact.html` as the pilot form now point at `connect.html` (Connect nav).
+
 ### Restore dashboard HUD lock after rebrand overwrite
 
 - Commit `55448f4` copied older `preview/rebrand-navy-magenta` HTML over the locked heroes and samples. This restore puts the Showcase lock back on live marketing HTML. Navy/magenta rebrand polish (Logo 8, Connect form, legal drafts, credibility copy, sport badges) stays. The rebrand overwrite is not a new product lock.

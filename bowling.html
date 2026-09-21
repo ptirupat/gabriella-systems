@@ -64,67 +64,87 @@
             <div class="container">
                 <div class="section-intro">
                     <p class="eyebrow">Bowling phases</p>
-                    <h2>Every delivery broken into measurable stages</h2>
+                    <h2>Every delivery broken into measurable stages — where the clip and view allow</h2>
                 </div>
-                <div class="pipeline-grid">
-                    <article class="pipeline-card">
-                        <i class="fas fa-person-running"></i>
+                <div class="product-grid four-col">
+                    <article class="product-card">
+                        <div class="product-icon green">
+                            <i class="fas fa-person-running"></i>
+                        </div>
                         <h3>Run-up</h3>
-                        <p>Peak speed, acceleration profile</p>
+                        <ul class="check-list">
+                            <li><i class="fas fa-check"></i>Peak approach speed <span style="font-size:0.78rem;color:var(--muted);font-weight:400;">(when pose is trusted)</span></li>
+                            <li><i class="fas fa-check"></i>Acceleration profile <span style="font-size:0.78rem;color:var(--muted);font-weight:400;">(where the approach is visible)</span></li>
+                            <li><i class="fas fa-check"></i>Same-view consistency <span style="font-size:0.78rem;color:var(--muted);font-weight:400;">(comparable takes only)</span></li>
+                        </ul>
                     </article>
-                    <article class="pipeline-card">
-                        <i class="fas fa-compress"></i>
+                    <article class="product-card">
+                        <div class="product-icon amber">
+                            <i class="fas fa-compress"></i>
+                        </div>
                         <h3>Gather</h3>
-                        <p>Body position, stride characteristics</p>
+                        <ul class="check-list">
+                            <li><i class="fas fa-check"></i>Body position into the stride</li>
+                            <li><i class="fas fa-check"></i>Stride characteristics <span style="font-size:0.78rem;color:var(--muted);font-weight:400;">(pose-dependent)</span></li>
+                            <li><i class="fas fa-check"></i>Alignment into plant <span style="font-size:0.78rem;color:var(--muted);font-weight:400;">(where visible)</span></li>
+                        </ul>
                     </article>
-                    <article class="pipeline-card">
-                        <i class="fas fa-shoe-prints"></i>
-                        <h3>Front-foot Contact</h3>
-                        <p>Knee angle, trunk position, stride length</p>
+                    <article class="product-card">
+                        <div class="product-icon coral">
+                            <i class="fas fa-shoe-prints"></i>
+                        </div>
+                        <h3>Front-foot plant</h3>
+                        <ul class="check-list">
+                            <li><i class="fas fa-check"></i>Front-knee flexion at plant <span style="font-size:0.78rem;color:var(--muted);font-weight:400;">(0° ≈ fully extended)</span></li>
+                            <li><i class="fas fa-check"></i>Trunk position <span style="font-size:0.78rem;color:var(--muted);font-weight:400;">(where visible)</span></li>
+                            <li><i class="fas fa-check"></i>Stride length <span style="font-size:0.78rem;color:var(--muted);font-weight:400;">(pose-dependent)</span></li>
+                        </ul>
                     </article>
-                    <article class="pipeline-card">
-                        <i class="fas fa-hand"></i>
-                        <h3>Release</h3>
-                        <p>Arm angular speed, release frame</p>
-                    </article>
-                    <article class="pipeline-card">
-                        <i class="fas fa-forward"></i>
-                        <h3>Follow-through</h3>
-                        <p>Body alignment, deceleration</p>
+                    <article class="product-card">
+                        <div class="product-icon" style="background: var(--blue); color: white;">
+                            <i class="fas fa-hand"></i>
+                        </div>
+                        <h3>Arm, ball &amp; follow-through</h3>
+                        <ul class="check-list">
+                            <li><i class="fas fa-check"></i>Arm angular speed <span style="font-size:0.78rem;color:var(--muted);font-weight:400;">(when pose is ok)</span></li>
+                            <li><i class="fas fa-check"></i>Ball speed <span style="font-size:0.78rem;color:var(--muted);font-weight:400;">(quality-gated)</span></li>
+                            <li><i class="fas fa-check"></i>Follow-through alignment <span style="font-size:0.78rem;color:var(--muted);font-weight:400;">(where the bowler stays in frame)</span></li>
+                        </ul>
                     </article>
                 </div>
+            </div>
+        </section>
+
+        <section class="section muted-section" style="padding: 36px 0;">
+            <div class="container">
+                <div class="section-intro" style="margin-bottom:1rem;">
+                    <p class="eyebrow">What's live, conditional, and research-stage</p>
+                    <h2>Capability status for bowling analysis</h2>
+                    <p style="color:var(--muted); font-size:0.9rem; max-width:640px;">Availability depends on camera view, calibration, visibility, and clip quality. The system reports "can't measure" when a metric cannot be reliably determined — it never substitutes a guess. Release height stays off this page until calibrated: no public metre, and no can't-measure slot.</p>
+                </div>
+                <table class="cap-status-table">
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>Status</th>
+                            <th>Condition</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Run-up speed</td><td><span class="badge-live">Live</span></td><td>When pose is trusted — may show even if the ball is not detected</td></tr>
+                        <tr><td>Arm angular speed</td><td><span class="badge-live">Live</span></td><td>When bowling-arm pose is ok</td></tr>
+                        <tr><td>Front-knee flexion at plant</td><td><span class="badge-live">Live</span></td><td>When front-leg pose is ok. 0° ≈ fully extended — a measured angle, not a technique grade</td></tr>
+                        <tr><td>Ball speed</td><td><span class="badge-conditional">Conditional</span></td><td>Quality-gated — only when ball tracking is trusted</td></tr>
+                        <tr><td>Stride and gather position</td><td><span class="badge-conditional">Conditional</span></td><td>Requires lower-body visibility and a view that shows the approach</td></tr>
+                        <tr><td>Follow-through alignment</td><td><span class="badge-conditional">Conditional</span></td><td>Where the bowler stays in frame after the delivery</td></tr>
+                        <tr><td>Session-to-session comparison</td><td><span class="badge-conditional">Conditional</span></td><td>Requires clips from a comparable camera view and quality</td></tr>
+                        <tr><td>Release height</td><td><span class="badge-research">Research</span></td><td>Omitted until calibrated — not a public metre and not shown as a can't-measure slot</td></tr>
+                    </tbody>
+                </table>
             </div>
         </section>
 
         <section class="section muted-section">
-            <div class="container">
-                <div class="section-intro">
-                    <p class="eyebrow">What Gabriella measures</p>
-                    <h2>Objective bowling metrics from the analysis pipeline</h2>
-                </div>
-                <div class="metrics-grid">
-                    <article class="metric-card" data-metric-tip="run-up">
-                        <span>Run-up speed</span>
-                        <strong><span data-count="20.4">20.4</span> km/h</strong>
-                    </article>
-                    <article class="metric-card" data-metric-tip="arm-speed">
-                        <span>Arm speed</span>
-                        <strong><span data-count="619">619</span> °/s</strong>
-                    </article>
-                    <article class="metric-card" data-metric-tip="front-knee">
-                        <span>Front knee angle</span>
-                        <strong><span data-count="155">155</span>°</strong>
-                    </article>
-                    <article class="metric-card" data-metric-tip="ball-speed">
-                        <span>Ball speed</span>
-                        <strong class="metric-placeholder">Measured when ball is detected</strong>
-                    </article>
-                </div>
-                <p class="compare-disclaimer">Illustrative sample data — session trends need comparable views and clip quality. Front-knee flexion at plant: 0° ≈ fully extended. Ball speed is listed when a quality-gated sample exists.</p>
-            </div>
-        </section>
-
-        <section class="section">
             <div class="container">
                 <div style="max-width: 900px; margin: 0 auto;" class="demo-clip">
                     <img src="assets/cricket_bowling_15s.gif"
@@ -137,6 +157,33 @@
                         <div class="clip-hud-row" data-metric-tip="front-knee"><span>Front knee angle</span><strong>155°</strong></div>
                         <p class="clip-hud-note">Session metrics from this take</p>
                     </div>
+                    <p class="demo-disclaimer"><i class="fas fa-circle-info" style="color:var(--amber);margin-right:0.3rem;"></i>Demonstration output from selected sample clips. Not independently validated. Measurement availability and accuracy depend on camera view, calibration, visibility, frame rate, and clip quality.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-intro">
+                    <p class="eyebrow">Coaching questions, not engineering metrics</p>
+                    <h2>Answers the questions coaches actually ask</h2>
+                </div>
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <i class="fas fa-person-running"></i>
+                        <h3>How consistent is run-up speed across this session?</h3>
+                        <p>Peak approach speed from pose, compared across takes that share a similar view. A measured value — not a technique grade.</p>
+                    </article>
+                    <article class="feature-card">
+                        <i class="fas fa-shoe-prints"></i>
+                        <h3>What was front-knee flexion at plant?</h3>
+                        <p>Knee angle of the front leg at front-foot plant in this take. 0° ≈ fully extended. An observed angle, not an ideal shape.</p>
+                    </article>
+                    <article class="feature-card">
+                        <i class="fas fa-gauge-high"></i>
+                        <h3>How fast was the bowling arm through the action?</h3>
+                        <p>Peak arm angular speed in this take, when pose supports it. Observed speed — not a technique grade.</p>
+                    </article>
                 </div>
             </div>
         </section>
@@ -144,30 +191,33 @@
         <section class="section technology-band">
             <div class="container split-layout">
                 <div>
-                    <p class="eyebrow" style="color: #ffd86b;">Measured, not judged</p>
-                    <h2>Relative change, not ideal angles</h2>
+                    <p class="eyebrow" style="color: #ffd86b;">Session intelligence</p>
+                    <h2>Compare deliveries. Track progress.</h2>
                     <p>
-                        Gabriella shows what changed when performance changed — measured values compared session-over-session, not prescriptive "ideal" benchmarks. Front-knee flexion: 0° ≈ fully extended.
+                        Review bowling metrics across clips when takes share a similar view and quality.
+                        Longitudinal trends are the goal — strongest with consistent capture.
+                        Measured change, not an ideal angle. Front-knee flexion: 0° ≈ fully extended.
                     </p>
                 </div>
                 <div class="analysis-stack">
-                    <div class="analysis-row accent-amber" data-metric-tip="run-up">
+                    <div class="analysis-row accent-green" data-metric-tip="run-up">
                         <span>Run-up speed</span>
                         <strong>20.4 km/h</strong>
                     </div>
-                    <div class="analysis-row accent-teal" data-metric-tip="arm-speed">
+                    <div class="analysis-row accent-amber" data-metric-tip="arm-speed">
                         <span>Arm speed</span>
                         <strong>619 °/s</strong>
                     </div>
-                    <div class="analysis-row accent-green" data-metric-tip="front-knee">
+                    <div class="analysis-row accent-coral" data-metric-tip="front-knee">
                         <span>Front knee angle</span>
                         <strong>155°</strong>
                     </div>
                     <div class="analysis-row">
                         <span>Same-view session review</span>
-                        <strong>Coach-guided</strong>
+                        <strong>Coach-led</strong>
                     </div>
                 </div>
+                <p class="compare-disclaimer" style="margin-top:0.8rem;">Illustrative sample data — trends need comparable views and clip quality.</p>
             </div>
         </section>
 
@@ -175,11 +225,11 @@
             <div class="container narrow">
                 <h2>See bowling analysis in action</h2>
                 <p>
-                    Explore the live demo or request a pilot to bring objective bowling
-                    intelligence to your training sessions.
+                    Try the live demo with sample bowling clips or request a pilot
+                    to bring objective bowling intelligence to your nets.
                 </p>
                 <div class="hero-actions">
-                    <a href="demo.html" class="cta-button">Watch the Showcase</a>
+                    <a href="demo.html" class="cta-button">Try the Bowling Showcase</a>
                     <a href="connect.html?purpose=Pilot+Interest#interest-form" class="secondary-button">Request a Pilot</a>
                 </div>
             </div>

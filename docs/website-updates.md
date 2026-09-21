@@ -55,7 +55,7 @@ Quality-gate behaviour the **website must respect** (implemented on Modal / Show
 
 ## What the site is for
 
-Gabriella Vision is computer vision for cricket nets: coaches upload (or review) batting and bowling clips and get metrics plus overlays. The site speaks to academies, coaches, and performance programs. Primary CTA: **Request a Pilot** (`contact.html`). Secondary: **Explore the Showcase**.
+Gabriella Vision is computer vision for cricket nets: coaches upload (or review) batting and bowling clips and get metrics plus overlays. The site speaks to academies, coaches, and performance programs. Primary CTA: **Request a Pilot** (`connect.html`, Connect nav). Secondary: **Explore the Showcase**.
 
 ## Pages touched by the September copy pass
 
@@ -64,10 +64,10 @@ Gabriella Vision is computer vision for cricket nets: coaches upload (or review)
 | `index.html` | View-aware hero, pilot CTA, live/planned status chips, dual Showcase GIFs, batting/bowling intelligence lists, session-progress cards. |
 | `services.html` | Platform pipeline; software-first capture; view-aware batting vs bowling readouts; hardware on the roadmap. |
 | `batting.html` | Batting metrics and overlays suited to the camera view; pose-overlay coaching questions; illustrative compare samples. |
-| `bowling.html` | Bowling phases and pipeline metrics; view-suited visualizations; no side-on-only meta description. |
+| `bowling.html` | Same section rhythm as batting: phase cards, Live/Conditional/Research status, GIF HUD, coaching questions, session intelligence. View-suited; no side-on-only meta description. Release height omitted. |
 | `about.html` | Roadmap: live clip analysis → session workflows → portable capture hardware. |
 
-Related pages: `demo.html` (Showcase iframe), `contact.html` (pilot form), `academies.html`, `admin.html`.
+Related pages: `demo.html` (Showcase iframe), `connect.html` (Connect — pilot form), `academies.html`, `admin.html`.
 
 ## Homepage GIFs and HUD
 
