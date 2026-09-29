@@ -4,7 +4,8 @@
 **To:** Sidhhant Agarwal (Co-founder & CEO), SportVot  
 **Cc (optional):** Yash Bhagwatkar (COO); contact@sportvot.com  
 **From:** Praveen Tirupattur, Gabriella Systems  
-**Updated:** 2026-09-28 (PT)
+**Updated:** 2026-09-28 (PT)  
+**Follow-up:** Intro call done 2026-09-29. Formal plan for review: [sportvot-collaboration-plan.md](./sportvot-collaboration-plan.md). This file remains the original outreach draft.
 
 ---
 
@@ -103,4 +104,4 @@ Open to a 20-min call?
 | Draft email | Ready for Praveen review |
 | Short LinkedIn / WhatsApp | Ready |
 | Call talking points | Ready |
-| Sent | Not yet — waiting on approval |
+| Sent | Intro call done 2026-09-29; next step is the formal plan |
