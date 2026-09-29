@@ -6,6 +6,15 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 
 ---
 
+## 2026-09-28
+
+### Competitor tracker refresh (CricVision, 3rd-Eye.TV)
+
+- **CricVision refresh Sep 28 2026.** [competitors.md](./competitors.md) now has a named CricVision section from a public check of cricvision.ai (pricing + FAQ) and the BOSC Tech Labs case study: academy OS + AI video coaching, phone/smartphone capture, Basic **$199/mo** (3 coaches / 30 players), Pro **$399/mo** (5 coaches / 75 players). Medium academy-sales threat; low threat on the fail-loud nets wedge unless they lead with calibrated gated metrics. Gabriella line: don’t race white-label ops; own honest numbers from ordinary nets video.
+- **3rd-Eye.TV** (3rd-eye.tv) added as adjacent match-day DRS / association tech. Certified-DRS framing, Sports DeepMind called out as vendor-claimed, course list prices only (Video Analyst ₹9,999 / was ₹14,999; Performance & Data Analyst ₹35,000). No academy SaaS price invented. Blog scale figures labeled as vendor claims.
+- [competitive-positioning.md](./competitive-positioning.md) names both with class + wedge. Impact / homepage hero gates **unchanged**.
+- Ludimos, Kabuni, and the other-peer rows kept. Docs only; no HTML/JS.
+
 ## 2026-09-21
 
 ### Public bowling label is Arm angular speed

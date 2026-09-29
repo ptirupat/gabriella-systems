@@ -7,9 +7,11 @@ Narrative of what the marketing site claims, what changed in September 2026, and
 | [CHANGELOG.md](./CHANGELOG.md) | Dates and commit hashes from this repo |
 | [homepage-hud-metrics.md](./homepage-hud-metrics.md) | Site HUD implementation notes (pointer to Modal PRODUCT.md) |
 | [competitive-positioning.md](./competitive-positioning.md) | Copy gate (rivals / phone-CV wedge; Impact / hero locks) |
-| [competitors.md](./competitors.md) | Living Marketing competitor tracker (Ludimos, Kabuni, peer table) |
+| [competitors.md](./competitors.md) | Living Marketing competitor tracker (Ludimos, Kabuni, CricVision, 3rd-Eye, peer table) |
 
 This is a static HTML site. Live analysis runs on Modal and is embedded from `demo.html` (Showcase) and `admin.html`.
+
+**2026-09-28:** **CricVision refresh Sep 28 2026** plus **3rd-Eye.TV** in [competitors.md](./competitors.md). CricVision: academy OS + AI coaching, public Basic $199/mo and Pro $399/mo. 3rd-Eye: adjacent match-day DRS / association platform; no academy SaaS price invented. Copy gate stays in [competitive-positioning.md](./competitive-positioning.md). Does not change live HTML claims or homepage hero locks.
 
 **2026-09-17:** Added [competitors.md](./competitors.md) as a living Marketing competitor tracker (Ludimos, Kabuni, peer table). Copy gate stays in [competitive-positioning.md](./competitive-positioning.md). Does not change live HTML claims or homepage hero locks.
 
