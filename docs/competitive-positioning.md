@@ -1,6 +1,6 @@
 # Competitive positioning (copy gate)
 
-Short Marketing note for website and product copy. Keep claims aligned with this — not a full GTM brief.
+Short Marketing note for website and product copy. Keep claims aligned with this — not a full GTM brief. Sales GTM and outreach drafts live under [docs/sales/](./sales/) (repo-only).
 
 Updated: 2026-09-28
 
