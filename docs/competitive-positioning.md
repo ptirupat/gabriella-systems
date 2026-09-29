@@ -1,6 +1,6 @@
 # Competitive positioning (copy gate)
 
-Short Marketing note for website and product copy. Keep claims aligned with this — not a full GTM brief. Sales GTM and outreach drafts live under [docs/sales/](./sales/) (repo-only). The formal SportVot collaboration plan also lives under [docs/sales/sportvot-collaboration-plan.md](./sales/sportvot-collaboration-plan.md).
+Short Marketing note for website and product copy. Keep claims aligned with this — not a full GTM brief. Sales GTM and outreach drafts live under [docs/sales/](./sales/) (repo-only). The formal SportVot collaboration plan also lives under [docs/sales/sportvot-collaboration-plan.md](./sales/sportvot-collaboration-plan.md). Sales GTM includes the [competitor feature recommendations](./sales/competitor-feature-recommendations.md) report (repo-only; not a live-site claims doc).
 
 Updated: 2026-09-28
 
