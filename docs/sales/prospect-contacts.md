@@ -66,7 +66,7 @@ Emails below are only those found on public pages. Re-verify before send where f
 | Sehwag Cricket Academy | Not contacted | | | |
 | Dronacharya Cricket Academy | Not contacted | | | |
 | Push Sports | Not contacted | | | |
-| SportVot | Draft outreach ready | Sales Lead | 2026-09-28 | Send collaboration note |
+| SportVot | Intro call done (positive, no data commitment yet) | Sales Lead | 2026-09-29 | Send formal collaboration plan |
 
 ---
 
