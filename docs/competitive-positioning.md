@@ -2,14 +2,14 @@
 
 Short Marketing note for website and product copy. Keep claims aligned with this — not a full GTM brief.
 
-Updated: 2026-09-17
+Updated: 2026-09-28
 
 Living competitor tracker (class, capture, pricing signals, gaps): [competitors.md](./competitors.md). This file remains the **copy gate** for live site claims. Modal [PRODUCT.md](https://github.com/Gabriella-Systems/modal/blob/main/docs/PRODUCT.md) is product source of truth — do not fork hero metrics here.
 
 ## Who we compare against
 
 **Direct (phone / net CV for coaches & academies)**  
-Matcha, CricVision, Fulltrack AI, Ludimos, Advanced Impactor — RGB phone (or similar) → clipped deliveries → speed, pitch maps / beehives, some pose or biomechanics, coach galleries.
+Matcha, CricVision, Fulltrack AI, Ludimos, Advanced Impactor — RGB phone (or similar) → clipped deliveries → speed, pitch maps / beehives, some pose or biomechanics, coach galleries. CricVision is the academy-OS end of this set (white-label app, parent/coach chat, attendance/payments, plus CV on practice clips). Detail: [competitors.md](./competitors.md#cricvision-cricvisionai).
 
 **Youth pathway / brand (not clip/AMS SaaS)**  
 Kabuni — PlayOS + Super Coaches + schools + league; access/cues GTM, not our metric peer. Detail: [competitors.md](./competitors.md#kabuni-kabunicom).
@@ -18,7 +18,7 @@ Kabuni — PlayOS + Super Coaches + schools + league; access/cues GTM, not our m
 PitchVision — hardware + analytics kits historically sold into academies/clubs.
 
 **Adjacent**  
-BatSense / SmartCricket (bat sensor, not full ball+pose CV); NV Play (match / analyst workflows); Trume (early coaching OS).
+BatSense / SmartCricket (bat sensor, not full ball+pose CV); NV Play (match / analyst workflows); Trume (early coaching OS). **3rd-Eye.TV** (3rd-eye.tv) — match-day DRS and association platforms (certified DRS, high-frame cameras, ball track, edge audio, third-umpire replay; Sports DeepMind claimed for tournaments and performance analytics). Closer to the Hawk-Eye / PitchVision match-analytics world than to Ludimos or CricVision academy apps. Low direct threat to nets upload / fail-loud session metrics. Watchlist if SDM expands into nets phone analysis. Detail: [competitors.md](./competitors.md#3rd-eyetv-3rd-eyetv).
 
 **Aspirational reference**  
 Hawk-Eye — elite multi-camera tracking; not our academy-net price or form factor.
@@ -30,6 +30,12 @@ Hawk-Eye — elite multi-camera tracking; not our academy-net price or form fact
 
 **Kabuni** — Youth cricket development + AI coaching brand (India-first: PlayOS + Super Coaches + schools + league pathway), not a clip/AMS SaaS peer.  
 **Wedge:** Coach-trusted gated session metrics vs access, cues, and celebrity pathway. Do not treat Kabuni as our metric competitor or copy junior-league GTM.
+
+**CricVision** — Academy OS + AI video coaching (white-label app/website, parent/coach chat, attendance/payments, PDFs/reels, plus CV on practice clips). Phone/smartphone-oriented. Public academy pricing checked 2026-09-28: Basic $199/mo (3 coaches / 30 players), Pro $399/mo (5 coaches / 75 players). Built by BOSC Tech Labs (public case study).  
+**Wedge:** Closer to Ludimos than to fail-loud / view-aware nets session metrics. Medium GTM threat on academy sales; low threat on the trust-metrics wedge unless they lead with calibrated fail-loud nets metrics. Don’t race white-label ops. Own honest numbers from ordinary nets video.
+
+**3rd-Eye.TV** — Match-day officiating and association sports-tech (India; V6 Sports / HPMC sports division; certified DRS framing). Sports DeepMind is a claimed suite (player/tournament management, live scoring, video analysis, match streaming, umpire assessment, performance analytics) — not a public academy SaaS price.  
+**Wedge:** Adjacent / low direct threat. Buyer is boards, tournaments, and umpires, not coaches uploading nets video. Thin overlap is ball-track and performance-analytics language. Watchlist if SDM coaching products expand into nets phone analysis.
 
 ## Category pattern (what rivals do)
 
