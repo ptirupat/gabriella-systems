@@ -2544,6 +2544,77 @@ a {
     }
 }
 
+/* Phone clip HUD — keep the overlay readable but leave most of the GIF visible.
+   Desktop / tablet rules above are unchanged. Same classes on index, batting, bowling. */
+@media (max-width: 430px) {
+    .clip-hud {
+        top: 0.35rem;
+        left: 0.35rem;
+        width: max-content;
+        min-width: 0;
+        max-width: 74%;
+        padding: 0.28rem 0.4rem 0.24rem;
+        border-radius: 6px;
+    }
+
+    .clip-hud-title {
+        font-size: 0.65rem;
+        line-height: 1.2;
+        margin: 0 0 0.14rem;
+    }
+
+    .clip-hud-row {
+        gap: 0.4rem;
+        padding: 0;
+        line-height: 1.2;
+    }
+
+    .clip-hud-row .metric-label-with-tip {
+        flex: 0 0 auto;
+        min-width: max-content;
+        flex-wrap: nowrap;
+        gap: 0.15rem;
+        white-space: nowrap;
+        line-height: 1.2;
+    }
+
+    .clip-hud-row span {
+        font-size: 0.65rem;
+        line-height: 1.2;
+    }
+
+    .clip-hud-row strong {
+        flex-shrink: 0;
+        font-size: 0.72rem;
+        line-height: 1.2;
+        white-space: nowrap;
+    }
+
+    .clip-hud-note {
+        font-size: 0.58rem;
+        line-height: 1.2;
+        margin: 0.18rem 0 0;
+        padding-top: 0.16rem;
+    }
+
+    .clip-hud .metric-info {
+        position: relative;
+        width: 1.05rem;
+        height: 1.05rem;
+        font-size: 0.65rem;
+    }
+
+    .clip-hud .metric-info::before {
+        content: "";
+        position: absolute;
+        inset: -0.35rem;
+    }
+
+    .clip-hud .metric-label-with-tip .metric-tooltip {
+        max-width: min(14rem, calc(100vw - 1.5rem));
+    }
+}
+
 /* ── Info tooltips ──────────────────────────────────────────────────────── */
 .info-btn {
     display: inline-flex;
