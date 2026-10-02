@@ -71,10 +71,10 @@
                         </div>
                         <h3>Ball</h3>
                         <ul class="check-list">
-                            <li><i class="fas fa-check"></i>Speed <span style="font-size:0.78rem;color:var(--muted);font-weight:400;">(Ready when ball tracking is trusted; otherwise Can't measure)</span></li>
-                            <li><i class="fas fa-check"></i>Trajectory <span style="font-size:0.78rem;color:var(--muted);font-weight:400;">(where visible)</span></li>
-                            <li><i class="fas fa-check"></i>Line and length <span style="font-size:0.78rem;color:var(--muted);font-weight:400;">(view-dependent)</span></li>
-                            <li><i class="fas fa-check"></i>Bounce point <span style="font-size:0.78rem;color:var(--muted);font-weight:400;">(view-dependent)</span></li>
+                            <li><i class="fas fa-check"></i><span>Speed<sup class="fn-mark"><a href="#batting-metric-notes">*</a></sup></span></li>
+                            <li><i class="fas fa-check"></i><span>Trajectory<sup class="fn-mark"><a href="#batting-metric-notes">&dagger;</a></sup></span></li>
+                            <li><i class="fas fa-check"></i><span>Line and length<sup class="fn-mark"><a href="#batting-metric-notes">&dagger;</a></sup></span></li>
+                            <li><i class="fas fa-check"></i><span>Bounce point<sup class="fn-mark"><a href="#batting-metric-notes">&dagger;</a></sup></span></li>
                         </ul>
                     </article>
                     <article class="product-card">
@@ -83,9 +83,9 @@
                         </div>
                         <h3>Bat</h3>
                         <ul class="check-list">
-                            <li><i class="fas fa-check"></i>Bat path <span style="font-size:0.78rem;color:var(--muted);font-weight:400;">(where visible)</span></li>
+                            <li><i class="fas fa-check"></i><span>Bat path<sup class="fn-mark"><a href="#batting-metric-notes">&dagger;</a></sup></span></li>
                             <li><i class="fas fa-check"></i>Bat speed at impact</li>
-                            <li><i class="fas fa-check"></i>Bat angle <span style="font-size:0.78rem;color:var(--muted);font-weight:400;">(where visible)</span></li>
+                            <li><i class="fas fa-check"></i><span>Bat angle<sup class="fn-mark"><a href="#batting-metric-notes">&dagger;</a></sup></span></li>
                             <li><i class="fas fa-check"></i>Contact time in this clip</li>
                         </ul>
                     </article>
@@ -96,8 +96,8 @@
                         <h3>Body</h3>
                         <ul class="check-list">
                             <li><i class="fas fa-check"></i>Head stability</li>
-                            <li><i class="fas fa-check"></i>Foot movement <span style="font-size:0.78rem;color:var(--muted);font-weight:400;">(pose-dependent)</span></li>
-                            <li><i class="fas fa-check"></i>Stride length <span style="font-size:0.78rem;color:var(--muted);font-weight:400;">(pose-dependent)</span></li>
+                            <li><i class="fas fa-check"></i><span>Foot movement<sup class="fn-mark"><a href="#batting-metric-notes">&Dagger;</a></sup></span></li>
+                            <li><i class="fas fa-check"></i><span>Stride length<sup class="fn-mark"><a href="#batting-metric-notes">&Dagger;</a></sup></span></li>
                             <li><i class="fas fa-check"></i>Joint positions</li>
                         </ul>
                     </article>
@@ -107,12 +107,19 @@
                         </div>
                         <h3>Outcome</h3>
                         <ul class="check-list">
-                            <li><i class="fas fa-check"></i>Contact location <span style="font-size:0.78rem;color:var(--muted);font-weight:400;">(view-dependent)</span></li>
-                            <li><i class="fas fa-check"></i>Shot trajectory <span style="font-size:0.78rem;color:var(--muted);font-weight:400;">(where visible post-contact)</span></li>
-                            <li><i class="fas fa-check"></i>Bat-ball contact <span style="font-size:0.78rem;color:var(--muted);font-weight:400;">(Ready when tracking is trusted; otherwise Can't measure — not a technique grade)</span></li>
-                            <li><i class="fas fa-check"></i>Session review <span style="font-size:0.78rem;color:var(--muted);font-weight:400;">(same-view clips only)</span></li>
+                            <li><i class="fas fa-check"></i><span>Contact location<sup class="fn-mark"><a href="#batting-metric-notes">&dagger;</a></sup></span></li>
+                            <li><i class="fas fa-check"></i><span>Shot trajectory<sup class="fn-mark"><a href="#batting-metric-notes">&dagger;</a></sup></span></li>
+                            <li><i class="fas fa-check"></i><span>Bat-ball contact<sup class="fn-mark"><a href="#batting-metric-notes">*</a></sup></span></li>
+                            <li><i class="fas fa-check"></i><span>Session review<sup class="fn-mark"><a href="#batting-metric-notes">&sect;</a></sup></span></li>
                         </ul>
                     </article>
+                </div>
+                <div class="metric-footnotes" id="batting-metric-notes">
+                    <p><sup>*</sup><span>Ready when tracking is trusted; otherwise Can't measure</span></p>
+                    <p><sup>&dagger;</sup><span>Where visible / view-dependent</span></p>
+                    <p><sup>&Dagger;</sup><span>Pose-dependent</span></p>
+                    <p><sup>&sect;</sup><span>Same-view clips only</span></p>
+                    <p class="metric-footnotes-follow"><span>Bat-ball contact is not a technique grade.</span></p>
                 </div>
             </div>
         </section>
