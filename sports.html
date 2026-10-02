@@ -255,7 +255,7 @@
                     <p>
                         Each sport shares a common structure — a bowler or pitcher, a batter, and
                         a ball. Gabriella's computer vision stack is built around that shared
-                        structure, adapting metrics and phase detection to each discipline.
+                        structure, adapting metrics and key moments to each discipline.
                     </p>
                 </div>
 
@@ -275,10 +275,10 @@
                             <ul class="sport-features">
                                 <li><i class="fas fa-check-circle"></i>Batting: bat speed at impact, head stability, contact timing</li>
                                 <li><i class="fas fa-check-circle"></i>Bowling: run-up speed, arm angular speed, front knee angle</li>
-                                <li><i class="fas fa-check-circle"></i>Ball and bat tracking with SAM3 segmentation</li>
-                                <li><i class="fas fa-check-circle"></i>COCO-17 pose estimation per frame</li>
+                                <li><i class="fas fa-check-circle"></i>Ball and bat tracking where visible</li>
+                                <li><i class="fas fa-check-circle"></i>Body pose overlays on each frame</li>
                                 <li><i class="fas fa-check-circle"></i>View-aware metrics — front-on and side-on</li>
-                                <li><i class="fas fa-check-circle"></i>Quality gate: fail-loud, never invented numbers</li>
+                                <li><i class="fas fa-check-circle"></i>Ready or Can't measure — never invented numbers</li>
                             </ul>
                             <a href="demo.html" class="sport-cta cta-active">
                                 <i class="fas fa-play"></i> Explore the showcase
@@ -291,7 +291,7 @@
                         <div class="sport-header">
                             <span class="sport-header-icon">⚾</span>
                             <h2>Baseball</h2>
-                            <p>Pitching and hitting analysis — planned extension of the cricket pipeline.</p>
+                            <p>Pitching and hitting analysis — planned extension of the cricket work.</p>
                             <span class="sport-badge badge-wip">
                                 <i class="fas fa-hammer"></i> Work in progress
                             </span>
@@ -326,7 +326,7 @@
                         </div>
                         <div class="sport-body">
                             <ul class="sport-features">
-                                <li><i class="fas fa-circle"></i>Windmill pitching phase detection</li>
+                                <li><i class="fas fa-circle"></i>Windmill pitching phases</li>
                                 <li><i class="fas fa-circle"></i>Hitting mechanics and bat path</li>
                                 <li><i class="fas fa-circle"></i>Lower-body drive and weight transfer</li>
                                 <li><i class="fas fa-circle"></i>Arm speed and release point</li>
@@ -350,12 +350,11 @@
         <section class="section muted-section">
             <div class="container narrow" style="text-align:center;">
                 <p class="eyebrow">One platform</p>
-                <h2>The same pipeline. Sport-specific metrics.</h2>
+                <h2>The same measurement approach. Sport-specific metrics.</h2>
                 <p style="color:var(--muted); line-height:1.75; font-size:1.05rem; max-width:600px; margin:0 auto 2rem;">
-                    All three sports share a common technical foundation — object detection,
-                    pose estimation, depth estimation, Kalman tracking, and a quality gate
-                    that only surfaces metrics when they are reliably measured.
-                    Sport-specific phase detection and metric definitions are layered on top.
+                    All three sports share the same approach: find the player, bat, and ball where they are visible,
+                    with body pose overlays on each frame. A metric is Ready or Can't measure — never an invented number.
+                    Sport-specific phases and metric definitions sit on top of that.
                 </p>
                 <a href="services.html" class="cta-button">
                     <i class="fas fa-layer-group"></i>&nbsp; See the platform

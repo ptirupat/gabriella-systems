@@ -54,9 +54,11 @@
                     <p class="eyebrow">Computer vision for cricket nets</p>
                     <h1><span class="word">Analysis</span> <span class="word">that</span> <span class="word">fits</span> <span class="word">the</span> <span class="word">view</span></h1>
                     <p class="hero-copy">
-                        Upload a batting or bowling clip and Gabriella detects the player, bat, and ball,
-                        then returns the metrics and visualizations that fit that action and camera view —
-                        so coaches get evidence they can compare across sessions.
+                        Upload a batting or bowling clip. Gabriella looks for deliveries, and you confirm them.
+                        Metrics show as Ready when tracking is trusted — Bat speed at impact and Head stability
+                        for batting, Run-up speed for bowling — or Can't measure with a plain reason
+                        (ball not seen, track broke, or impact missing). Body-worn and umpire cameras often
+                        Can't measure. A coaching side or front view is what gives real numbers. We never invent a height.
                     </p>
                     <div class="hero-actions">
                         <a href="connect.html?purpose=Pilot+Interest#interest-form" class="cta-button">Request a Pilot</a>
@@ -181,7 +183,7 @@
                             <li>Release frame</li>
                             <li>Front-knee flexion at plant</li>
                             <li>Arm angular speed</li>
-                            <li>Ball speed when the take is gated</li>
+                            <li>Ball speed when tracking is trusted (Ready); otherwise Can't measure</li>
                             <li>Action-phase breakdown</li>
                             <li>Body pose overlays</li>
                         </ul>
@@ -196,28 +198,28 @@
                     <p class="eyebrow" style="color: #ffd86b;">How it works</p>
                     <h2>From raw video to coaching-ready evidence</h2>
                 </div>
-                <div class="pipeline-grid">
-                    <article class="pipeline-card">
+                <div class="flow-grid">
+                    <article class="flow-card">
                         <i class="fas fa-video"></i>
                         <h3>Capture</h3>
                         <p>Purpose-built cricket vision system</p>
                     </article>
-                    <article class="pipeline-card">
+                    <article class="flow-card">
                         <i class="fas fa-eye"></i>
                         <h3>Understand</h3>
-                        <p>Detect player, bat, ball, events</p>
+                        <p>Find the player, bat, ball, and key moments</p>
                     </article>
-                    <article class="pipeline-card">
+                    <article class="flow-card">
                         <i class="fas fa-ruler-combined"></i>
                         <h3>Measure</h3>
                         <p>Speed, angles, timing, trajectory</p>
                     </article>
-                    <article class="pipeline-card">
+                    <article class="flow-card">
                         <i class="fas fa-chart-line"></i>
                         <h3>Learn</h3>
                         <p>Compare delivery, session, history</p>
                     </article>
-                    <article class="pipeline-card">
+                    <article class="flow-card">
                         <i class="fas fa-arrow-trend-up"></i>
                         <h3>Improve</h3>
                         <p>Objective evidence for coaches</p>
@@ -291,7 +293,7 @@
                     <p class="eyebrow" style="color: #ffd86b;">Gabriella Vision</p>
                     <h2>Built for cricket analysis, not generic sports CV</h2>
                     <p>
-                        The software is tuned for cricket actions — detecting player, bat, and ball,
+                        The software is tuned for cricket actions — finding the player, bat, and ball,
                         then selecting batting or bowling metrics from the clip. Purpose-built capture
                         hardware is on the roadmap to make session-to-session comparison even more consistent.
                     </p>
@@ -307,7 +309,7 @@
                         <strong><i class="fas fa-check"></i></strong>
                     </div>
                     <div class="analysis-row accent-coral">
-                        <span>Clip metrics from the Showcase pipeline</span>
+                        <span>Sample clip metrics in the Showcase</span>
                         <strong><i class="fas fa-check"></i></strong>
                     </div>
                     <div class="analysis-row accent-teal">

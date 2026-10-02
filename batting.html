@@ -71,7 +71,7 @@
                         </div>
                         <h3>Ball</h3>
                         <ul class="check-list">
-                            <li><i class="fas fa-check"></i>Speed <span style="font-size:0.78rem;color:var(--muted);font-weight:400;">(quality-gated)</span></li>
+                            <li><i class="fas fa-check"></i>Speed <span style="font-size:0.78rem;color:var(--muted);font-weight:400;">(Ready when ball tracking is trusted; otherwise Can't measure)</span></li>
                             <li><i class="fas fa-check"></i>Trajectory <span style="font-size:0.78rem;color:var(--muted);font-weight:400;">(where visible)</span></li>
                             <li><i class="fas fa-check"></i>Line and length <span style="font-size:0.78rem;color:var(--muted);font-weight:400;">(view-dependent)</span></li>
                             <li><i class="fas fa-check"></i>Bounce point <span style="font-size:0.78rem;color:var(--muted);font-weight:400;">(view-dependent)</span></li>
@@ -109,7 +109,7 @@
                         <ul class="check-list">
                             <li><i class="fas fa-check"></i>Contact location <span style="font-size:0.78rem;color:var(--muted);font-weight:400;">(view-dependent)</span></li>
                             <li><i class="fas fa-check"></i>Shot trajectory <span style="font-size:0.78rem;color:var(--muted);font-weight:400;">(where visible post-contact)</span></li>
-                            <li><i class="fas fa-check"></i>Bat-ball contact quality <span style="font-size:0.78rem;color:var(--muted);font-weight:400;">(quality-gated)</span></li>
+                            <li><i class="fas fa-check"></i>Bat-ball contact <span style="font-size:0.78rem;color:var(--muted);font-weight:400;">(Ready when tracking is trusted; otherwise Can't measure — not a technique grade)</span></li>
                             <li><i class="fas fa-check"></i>Session review <span style="font-size:0.78rem;color:var(--muted);font-weight:400;">(same-view clips only)</span></li>
                         </ul>
                     </article>
@@ -134,8 +134,8 @@
                     </thead>
                     <tbody>
                         <tr><td>Bat speed at impact</td><td><span class="badge-live">Live</span></td><td>When bat is tracked through contact frame</td></tr>
-                        <tr><td>Ball speed</td><td><span class="badge-live">Live</span></td><td>Quality-gated — only shown when ball tracking is reliable</td></tr>
-                        <tr><td>Contact time (per clip)</td><td><span class="badge-live">Live</span></td><td>When bat-ball contact is detected</td></tr>
+                        <tr><td>Ball speed</td><td><span class="badge-live">Live</span></td><td>Ready when ball tracking is trusted; otherwise Can't measure (ball not seen, track broke, or impact missing)</td></tr>
+                        <tr><td>Contact time (per clip)</td><td><span class="badge-live">Live</span></td><td>When impact is found</td></tr>
                         <tr><td>Head stability</td><td><span class="badge-live">Live</span></td><td>When pose estimation covers the head and shoulders</td></tr>
                         <tr><td>Ball trajectory</td><td><span class="badge-conditional">Conditional</span></td><td>Requires sufficient ball visibility and appropriate camera angle</td></tr>
                         <tr><td>Bounce point</td><td><span class="badge-conditional">Conditional</span></td><td>Requires a view that captures the pitch area</td></tr>
