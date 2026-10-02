@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Staggered card reveals — group cards by their parent row
     const cardSelectors = [
         '.feature-card',
-        '.pipeline-card',
+        '.flow-card',
         '.intelligence-card',
         '.metric-card',
         '.product-card',
@@ -234,7 +234,7 @@ const METRIC_TIPS = {
     'head-stability': 'How much the head moved from downswing to contact (cm). Lower usually means steadier — not a technique grade.',
     'run-up': 'Peak approach speed into the delivery in this take (km/h).',
     'contact-time': 'Time from the start of this take to contact (ms). Use it to compare same-view sessions — not early vs late.',
-    'ball-speed': 'Measured ball speed in this take (km/h), only when the take is gated.',
+    'ball-speed': 'Measured ball speed in this take (km/h). Ready when tracking is trusted; otherwise Can\'t measure.',
     'front-knee': 'Front-knee flexion at plant in this take (degrees). 0° ≈ fully extended.',
     'arm-speed': 'Peak arm angular speed in this take (°/s).',
 };

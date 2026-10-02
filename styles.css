@@ -1986,13 +1986,13 @@ a {
 }
 
 /* Pipeline Grid */
-.pipeline-grid {
+.flow-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 1rem;
 }
 
-.pipeline-card {
+.flow-card {
     background: var(--paper);
     border: 1px solid var(--line);
     border-radius: 8px;
@@ -2002,12 +2002,12 @@ a {
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.pipeline-card:hover {
+.flow-card:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow);
 }
 
-.pipeline-card i {
+.flow-card i {
     width: 50px;
     height: 50px;
     border-radius: 8px;
@@ -2020,13 +2020,13 @@ a {
     margin-bottom: 1rem;
 }
 
-.pipeline-card h3 {
+.flow-card h3 {
     font-size: 1rem;
     margin-bottom: 0.5rem;
     color: var(--ink);
 }
 
-.pipeline-card p {
+.flow-card p {
     color: var(--muted);
     font-size: 0.9rem;
 }
@@ -2150,13 +2150,13 @@ a {
         min-width: auto;
     }
 
-    .pipeline-grid {
+    .flow-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media (max-width: 560px) {
-    .pipeline-grid {
+    .flow-grid {
         grid-template-columns: 1fr;
     }
 }
@@ -2308,7 +2308,7 @@ a {
    GLASSMORPHISM — cards on dark teal backgrounds
    ========================================================= */
 
-.technology-band .pipeline-card {
+.technology-band .flow-card {
     background: rgba(255, 255, 255, 0.07);
     backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.13);
@@ -2317,21 +2317,21 @@ a {
     box-shadow: none;
 }
 
-.technology-band .pipeline-card h3,
-.technology-band .pipeline-card p {
+.technology-band .flow-card h3,
+.technology-band .flow-card p {
     color: white;
 }
 
-.technology-band .pipeline-card p {
+.technology-band .flow-card p {
     color: rgba(255, 255, 255, 0.7);
 }
 
-.technology-band .pipeline-card i {
+.technology-band .flow-card i {
     background: rgba(255, 255, 255, 0.12);
     color: #7df4ef;
 }
 
-.technology-band .pipeline-card:hover {
+.technology-band .flow-card:hover {
     background: rgba(255, 255, 255, 0.12);
     border-color: rgba(255, 255, 255, 0.25);
     transform: translateY(-5px);

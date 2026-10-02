@@ -107,7 +107,7 @@
                         <h3>Arm, ball &amp; follow-through</h3>
                         <ul class="check-list">
                             <li><i class="fas fa-check"></i>Arm angular speed <span style="font-size:0.78rem;color:var(--muted);font-weight:400;">(when pose is ok)</span></li>
-                            <li><i class="fas fa-check"></i>Ball speed <span style="font-size:0.78rem;color:var(--muted);font-weight:400;">(quality-gated)</span></li>
+                            <li><i class="fas fa-check"></i>Ball speed <span style="font-size:0.78rem;color:var(--muted);font-weight:400;">(Ready when ball tracking is trusted; otherwise Can't measure)</span></li>
                             <li><i class="fas fa-check"></i>Follow-through alignment <span style="font-size:0.78rem;color:var(--muted);font-weight:400;">(where the bowler stays in frame)</span></li>
                         </ul>
                     </article>
@@ -131,10 +131,10 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td>Run-up speed</td><td><span class="badge-live">Live</span></td><td>When pose is trusted — may show even if the ball is not detected</td></tr>
+                        <tr><td>Run-up speed</td><td><span class="badge-live">Live</span></td><td>When pose is trusted — may show even if the ball is not seen</td></tr>
                         <tr><td>Arm angular speed</td><td><span class="badge-live">Live</span></td><td>When bowling-arm pose is ok</td></tr>
                         <tr><td>Front-knee flexion at plant</td><td><span class="badge-live">Live</span></td><td>When front-leg pose is ok. 0° ≈ fully extended — a measured angle, not a technique grade</td></tr>
-                        <tr><td>Ball speed</td><td><span class="badge-conditional">Conditional</span></td><td>Quality-gated — only when ball tracking is trusted</td></tr>
+                        <tr><td>Ball speed</td><td><span class="badge-conditional">Conditional</span></td><td>Ready when ball tracking is trusted; otherwise Can't measure (ball not seen, track broke, or impact missing)</td></tr>
                         <tr><td>Stride and gather position</td><td><span class="badge-conditional">Conditional</span></td><td>Requires lower-body visibility and a view that shows the approach</td></tr>
                         <tr><td>Follow-through alignment</td><td><span class="badge-conditional">Conditional</span></td><td>Where the bowler stays in frame after the delivery</td></tr>
                         <tr><td>Session-to-session comparison</td><td><span class="badge-conditional">Conditional</span></td><td>Requires clips from a comparable camera view and quality</td></tr>
