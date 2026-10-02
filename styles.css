@@ -638,6 +638,22 @@ a {
     align-items: stretch;
 }
 
+/* Metric phase cards (bowling + batting): denser than the shared feature grid. */
+.product-grid.four-col {
+    gap: 0.7rem;
+}
+
+.product-card {
+    padding: 1.05rem 1.1rem;
+}
+
+.product-card h3 {
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.25;
+    color: var(--ink);
+}
+
 .product-icon {
     width: 58px;
     height: 58px;
@@ -648,6 +664,13 @@ a {
     color: white;
     font-size: 1.45rem;
     margin-bottom: 1.2rem;
+}
+
+.product-card .product-icon {
+    width: 46px;
+    height: 46px;
+    font-size: 1.15rem;
+    margin-bottom: 0.7rem;
 }
 
 .product-icon.green {
@@ -680,6 +703,25 @@ a {
     margin-top: 0.25rem;
 }
 
+.product-card .check-list {
+    gap: 0.4rem;
+    margin-top: 0.65rem;
+}
+
+.product-card .check-list li {
+    font-size: 0.92rem;
+    line-height: 1.35;
+}
+
+.metric-inline-tip {
+    margin-left: 0.35rem;
+    font-size: 0.75em;
+    font-weight: 500;
+    color: var(--muted);
+    opacity: 0.8;
+    white-space: nowrap;
+}
+
 sup.fn-mark {
     font-size: 0.72em;
     font-weight: 700;
@@ -705,36 +747,25 @@ sup.fn-mark a:focus-visible {
 }
 
 .metric-footnotes {
-    margin-top: 1.45rem;
-    padding-top: 0.95rem;
+    margin-top: 0.85rem;
+    padding-top: 0.55rem;
     border-top: 1px solid var(--line);
-    display: grid;
-    gap: 0.32rem;
-    max-width: 40rem;
     color: var(--muted);
-    font-size: 0.86rem;
+    font-size: 0.8rem;
     line-height: 1.45;
     scroll-margin-top: 5.5rem;
 }
 
 .metric-footnotes p {
     margin: 0;
-    display: grid;
-    grid-template-columns: 1.15rem 1fr;
-    column-gap: 0.4rem;
-    align-items: baseline;
 }
 
 .metric-footnotes sup {
-    font-size: 0.75em;
+    font-size: 0.72em;
     font-weight: 700;
     color: var(--teal);
     line-height: 0;
-}
-
-.metric-footnotes-follow span {
-    grid-column: 1 / -1;
-    padding-left: 1.55rem;
+    margin-right: 0.12em;
 }
 
 .workflow-list {
@@ -1702,6 +1733,11 @@ sup.fn-mark a:focus-visible {
     .product-grid,
     .four-col,
     .lead-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Beats the later .four-col { repeat(4) } rule so metric cards stack. */
+    .product-grid.four-col {
         grid-template-columns: 1fr;
     }
 
