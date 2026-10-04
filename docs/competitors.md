@@ -4,7 +4,7 @@ Living notes for Gabriella Systems competitive positioning. Update when we learn
 
 Copy gate for live site wording: [competitive-positioning.md](./competitive-positioning.md). Do not fork homepage hero metrics here.
 
-Last updated: 2026-09-28
+Last updated: 2026-10-03
 
 ## Gabriella wedge (reminder)
 
@@ -113,6 +113,36 @@ Last updated: 2026-09-28
 
 ---
 
+## CrickRoo (crickroo.com)
+
+**Checked:** 2026-10-03 — [crickroo.com](https://crickroo.com) 301s to [www.crickroo.com](https://www.crickroo.com); privacy and terms (last updated 17 July 2026); AU App Store listing [CrickRoo](https://apps.apple.com/au/app/crickroo/id6793531807).
+
+**Class:** Phone-only cricket training analysis for players, coaches, academies, and parents. Early AU consumer app plus an academy/org licence (terms: academies must not use a consumer subscription in place of an organisational licence). Adjacent, not a direct fail-loud session-metrics peer.
+
+**Company (public):** AthMech Pty Ltd (ABN/ACN 690 049 864). Incorporated 15 Aug 2025, NSW. Registered office: Unit 713, 14 Baywater Drive, Wentworth Point NSW 2127. Support: support@athmech.com. [LinkedIn](https://www.linkedin.com/company/crickroo/); [Instagram](https://www.instagram.com/crickroo/). Site meta: “Cricket Training Intelligence for players, coaches, academies and clubs.” Trademark application 2637525 accepted early; registration pending (terms).
+
+**App (AU listing, as fetched):** Seller ATHMECH PTY LTD. iPhone only, iOS 15.1+. AU App Store only. A Play badge is on the site, but store buttons point at the Apple URL; no confirmed Android listing. Version notes: 1.0 on 27 July; 1.0.2 (21 Aug) team mode; 1.0.3 (17 Sept); 1.0.4 coach mode for academies. 3 ratings, 5.0 on the AU listing as fetched.
+
+**Capture:** Tripod, align stumps, calibrate, then record. Store copy: phone behind the bowler. Site: “No sensors, no wearables,” “No Extra Equipment Needed,” “Professional cricket analysis, using nothing more than your smartphone.”
+
+**Capabilities (claimed):** Auto ball-by-ball clips; ball tracking / where the ball lands; bowling speed; pitch maps; ball trajectory; release point; session highlights; trends; Player and Coach modes. Academy web app in the same bundle: batches/rosters, coach and admin roles, kits (“1 kit = 1 player seat”), Stripe. Privacy says outputs include detected events, highlights, trajectories, pitch maps, speeds, and that automated analysis “may not always be complete or accurate.” No pose, bat, or biomechanics strings found in the public bundle. No Ready / Can’t measure language.
+
+**Pricing (public):** Passion **Free** — unlimited recording, clipping, cloud storage, player tagging, edit outcomes. Pro **“$20/month”** on the site with no currency code — Passion plus ball tracking, ball speed, notes, dashboard, performance graph, AI analytics. Group **Custom / Contact us** — Pro plus coach mode, academy management, player and coach management, academy dashboard, team and organisational analytics. AU App Store IAPs: CrickRoo Pro **$19.99**; CrickRoo Pro Annual **$149.99**. The admin UI has a “Price per kit (AUD)” placeholder **20.00** — not a published price; do not treat it as a list price.
+
+**Homepage counters (marketing animation, not audited):** “10K+ Deliveries Analysed”, “90% Data Accurate”, “100+ Cricketers Registered”, “<10 min Analysis Ready”. Do not present these as audited.
+
+**Strengths:** Phone-only ball review aimed at players, coaches, academies, and parents, with a free Passion tier and a public Pro price on the site and the AU App Store. Coach mode and an academy web app (batches/rosters, coach and admin roles, kits, Stripe) sit in the same bundle. Group is contact-us.
+
+**Gaps vs Gabriella:** Early Australian consumer app. Academy pricing is unpublished (Group is custom; the kit field is a placeholder, not a list price). No public pose, bat, or biomechanics. No Ready / Can’t measure language. Privacy already says automated analysis may not always be complete or accurate. iPhone and AU App Store only; no confirmed Android listing.
+
+**Threat:** Adjacent. Same phone-at-the-nets ball review for players/coaches/academies, but early Australian consumer app, unpublished academy pricing, no public body/bat metrics, no fail-loud measurement standard.
+
+**Do not copy:** the 90% / 10K+ / 100+ / <10 min counters; implying a phone behind the stumps matches professional speed, beehive, pitch map, or release-point equipment; “tracks every ball, shot and movement” as a completeness claim; the CrickRoo name/logo.
+
+**Gabriella wedge vs CrickRoo:** Honest gated session metrics (Ready / Can’t measure) from nets video, including bat and body where the view allows — not a consumer freemium ball-tracking app.
+
+---
+
 ## Other peers (short)
 
 | Name | Class | Notes |
@@ -124,6 +154,7 @@ Last updated: 2026-09-28
 | BatSense / SmartCricket | Bat sensor | Adjacent modality |
 | NV Play | Match/analyst software | Adjacent workflow |
 | 3rd-Eye.TV | Match-day DRS / association platform | Adjacent — not nets CV; no academy SaaS price; named section above |
+| CrickRoo | Phone CV nets | AU; Pro ~$20/mo site / $19.99 IAP; Group custom; named section above |
 | Hawk-Eye | Elite multi-cam | Aspirational |
 
 Pricing, accuracy, and feature depth for this table are **unverified** unless noted in the named sections above. Do not invent list prices or accuracy figures.
@@ -138,5 +169,6 @@ Pricing, accuracy, and feature depth for this table are **unverified** unless no
 4. Cricket-primary SEO; baseball/softball as roadmap only.
 5. CricVision is an academy-sales peer (white-label ops + phone/camera coaching). Medium GTM threat there. Low threat on the trust-metrics wedge unless they lead with calibrated fail-loud nets metrics. Don’t race white-label ops; own honest numbers from ordinary nets video.
 6. 3rd-Eye.TV is adjacent match-day DRS / association tech. Low direct threat. Watchlist only if Sports DeepMind moves into nets phone analysis.
+7. CrickRoo is an early AU phone ball-tracking app (players/parents plus academy custom). Adjacent. Don’t race freemium ball speed; own fail-loud bat/body session metrics.
 
 Homepage Impact / Bat / Head / Contact locks live in [competitive-positioning.md](./competitive-positioning.md) and Modal PRODUCT.md — do not reopen them here.
