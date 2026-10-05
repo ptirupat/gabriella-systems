@@ -6,6 +6,14 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 
 ---
 
+## 2026-10-05
+
+### Placement-first positioning (copy gate + About)
+
+- [competitive-positioning.md](./competitive-positioning.md) **Our wedge** now leads with a movable camera (side-on for Bat and Head; front-on batting for planned pitch map, wagon wheel, and ball-path charts). Ready / Can't measure stays a later trust rule. Rival wedge lines and the one-line positioning match. Homepage hero locks unchanged.
+- [about.html](../about.html) values and Why we exist no longer headline “Can't measure is a valid and honest result.” Placement and view-aware evidence lead; invent-nothing stays the shorter trust line.
+- [competitors.md](./competitors.md) reminder, implication #1, and Gabriella-wedge lines that led with fail-loud now match. Last updated 2026-10-05.
+
 ## 2026-09-28
 
 ### Competitor tracker refresh (CricVision, 3rd-Eye.TV)
