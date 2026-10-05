@@ -6,6 +6,15 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 
 ---
 
+## 2026-10-05
+
+### Greenlit homepage lead (view-aware; public scrub)
+
+- Squash merge of website **[PR #41](https://github.com/ptirupat/gabriella-systems/pull/41)** as `8dd5eba`. Only `index.html` changed (homepage → https://gabriellasystems.com/). No other public pages needed edits.
+- Greenlit home lead. Headline stays *Analysis that fits the view.* Phone apps lock to one setup behind the stumps. The camera can sit where the coach needs it, including side-on, so Bat and Head come from a view that can see them. A coaching side or front view can give real Bat and Head numbers. Ready / Can't measure stays, with a plain reason. We never invent a number the camera cannot see.
+- Explicit scrub: the public site must **not** name body-worn, umpire, or empire capture. That capture is internal-only. Public copy may say a coaching side or front view gives real Bat and Head without naming the internal capture. The homepage dropped the sentence that named body-worn and umpire cameras. Other public pages already did not name those terms.
+- Dashboard / hero metric lock unchanged: **Bat + Head** for batting, **Run-up** for bowling. Arm angular speed and Release stay off heroes. No competitor names. [competitive-positioning.md](./competitive-positioning.md) unchanged.
+
 ## 2026-09-28
 
 ### Competitor tracker refresh (CricVision, 3rd-Eye.TV)
