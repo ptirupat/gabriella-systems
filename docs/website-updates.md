@@ -1,15 +1,19 @@
 # Website updates (Gabriella Systems)
 
-Narrative of what the marketing site claims, what changed in September 2026, and why.
+Narrative of what the marketing site claims, what changed in September–October 2026, and why.
 
 | Doc | Role |
 | --- | --- |
 | [CHANGELOG.md](./CHANGELOG.md) | Dates and commit hashes from this repo |
 | [homepage-hud-metrics.md](./homepage-hud-metrics.md) | Site HUD implementation notes (pointer to Modal PRODUCT.md) |
-| [competitive-positioning.md](./competitive-positioning.md) | Copy gate (rivals / phone-CV wedge; Impact / hero locks) |
+| [competitive-positioning.md](./competitive-positioning.md) | Copy gate (rivals / placement-first wedge; Impact / hero locks) |
 | [competitors.md](./competitors.md) | Living Marketing competitor tracker (Ludimos, Kabuni, CricVision, 3rd-Eye, peer table) |
 
 This is a static HTML site. Live analysis runs on Modal and is embedded from `demo.html` (Showcase) and `admin.html`.
+
+**2026-10-05:** Placement-first copy gate and About ([PR #43](https://github.com/ptirupat/gabriella-systems/pull/43)). [competitive-positioning.md](./competitive-positioning.md) **Our wedge** now leads with a camera the coach can place: side-on so Bat and Head come from a view that can see them; front-on batting for planned pitch map, wagon wheel, and ball-path charts. Ready / Can't measure stays a later trust rule. [about.html](../about.html) values and Why we exist lead with placement and what the view can show. [competitors.md](./competitors.md) reminder and wedge lines match. Homepage HTML and hero locks are unchanged (Bat 10.6, Head 45.9, Run-up 20.4; Contact detail-only; Release off). Public pages still do not name body-worn, umpire, or empire capture, or competitor names.
+
+**2026-10-05:** Greenlit homepage lead shipped in the squash merge of website [PR #41](https://github.com/ptirupat/gabriella-systems/pull/41) as `8dd5eba`. Only `index.html` changed (https://gabriellasystems.com/). Headline stays *Analysis that fits the view.* The hero contrasts phone apps locked to one setup behind the stumps with a camera that can sit where the coach needs it, including side-on, so Bat and Head come from a view that can see them. A coaching side or front view can give real Bat and Head numbers. Ready / Can't measure stays. Public copy must not name body-worn, umpire, or empire capture — that capture is internal-only. The homepage dropped the sentence that named body-worn and umpire cameras; other public pages already omitted those terms. Hero metric lock unchanged: Bat + Head for batting, Run-up for bowling; Arm angular speed and Release stay off heroes. No competitor names, and [competitive-positioning.md](./competitive-positioning.md) is unchanged.
 
 **2026-09-28:** **CricVision refresh Sep 28 2026** plus **3rd-Eye.TV** in [competitors.md](./competitors.md). CricVision: academy OS + AI coaching, public Basic $199/mo and Pro $399/mo. 3rd-Eye: adjacent match-day DRS / association platform; no academy SaaS price invented. Copy gate stays in [competitive-positioning.md](./competitive-positioning.md). Does not change live HTML claims or homepage hero locks.
 
@@ -30,7 +34,11 @@ This is a static HTML site. Live analysis runs on Modal and is embedded from `de
 
 Do **not** claim batting is front-on-only or bowling is side-on-only. Analysis and visualizations depend on **mode** (batting vs bowling) **and** camera view.
 
-`8cd48a2` removed language such as “Batting from the bowling end. Bowling side-on,” “Side-on Bowling Analysis,” and “Device repositioned side-on facing the bowler.” Current hero: *Analysis that fits the view.*
+`8cd48a2` removed language such as “Batting from the bowling end. Bowling side-on,” “Side-on Bowling Analysis,” and “Device repositioned side-on facing the bowler.” Headline: *Analysis that fits the view.*
+
+**2026-10-05** (`8dd5eba`, [PR #41](https://github.com/ptirupat/gabriella-systems/pull/41)): the homepage lead is greenlit. Phone apps lock to one setup behind the stumps. The camera can sit where the coach needs it, including side-on, so Bat and Head come from a view that can see them. Ready / Can't measure stays. Public copy may say a coaching side or front view gives real Bat and Head. Do **not** name body-worn, umpire, or empire capture on the public site — that capture is internal-only. The homepage dropped the sentence that named body-worn and umpire cameras. Other public pages already omitted those terms, so they were not edited. Hero metric lock is unchanged (Bat + Head for batting, Run-up for bowling; Arm angular speed and Release stay off heroes).
+
+**2026-10-05** ([PR #43](https://github.com/ptirupat/gabriella-systems/pull/43)): the copy gate and About lead with where the coach places the camera. Side-on is the view for Bat and Head. Front-on batting charts (pitch map, wagon wheel, ball path) stay planned adds. Ready / Can't measure is the trust rule, not the headline. Homepage HTML and hero locks are unchanged.
 
 ### Software-first today; hardware planned
 
@@ -134,6 +142,7 @@ Evolution on 2026-09-13–14:
 
 - Shipping claims for capture hardware, calibrated FOV as a live software guarantee, or multi-camera as a current capability.
 - “Batting is front-on only” / “bowling is side-on only.”
+- Naming body-worn, umpire, or empire capture on any public page. That capture is internal-only. Public copy may say a coaching side or front view gives real Bat and Head without naming it (`8dd5eba`, 2026-10-05).
 - Hero HUD: ball speed as a batting skill metric; **Ball speed** / **Can't measure** / **—** as a bowling homepage peak; `runup_speed_at_delivery_kmh` as a homepage run-up fallback; front-knee flexion or arm angular speed as homepage bowling hero peaks (those are detail metrics).
 - Contact time as a homepage batting hero peak (detail/clip HUD / session-progress only). Contact time on those surfaces must use **Contact time in this clip** — never early vs late, timing the ball, or played early/late. If Head is untrusted, show **Can't measure** — do not restore Contact on the hero row.
 - Treating overall `quality.gated === false` as a reason to blank pose-derived metrics (especially bowling Run-up) when pose is trusted. Fail loud is per metric.
