@@ -2,7 +2,7 @@
 
 Short Marketing note for website and product copy. Keep claims aligned with this — not a full GTM brief. Sales GTM and outreach drafts live under [docs/sales/](./sales/) (repo-only). The formal SportVot collaboration plan also lives under [docs/sales/sportvot-collaboration-plan.md](./sales/sportvot-collaboration-plan.md). Sales GTM includes the [competitor feature recommendations](./sales/competitor-feature-recommendations.md) report (repo-only; not a live-site claims doc).
 
-Updated: 2026-10-05
+Updated: 2026-10-06
 
 Living competitor tracker (class, capture, pricing signals, gaps): [competitors.md](./competitors.md). This file remains the **copy gate** for live site claims. Modal [PRODUCT.md](https://github.com/Gabriella-Systems/modal/blob/main/docs/PRODUCT.md) is product source of truth — do not fork hero metrics here.
 
@@ -17,8 +17,11 @@ Kabuni — PlayOS + Super Coaches + schools + league; access/cues GTM, not our m
 **Incumbent training systems**  
 PitchVision — hardware + analytics kits historically sold into academies/clubs.
 
+**Hardware + CV (venue install)**  
+Level Up Sportslytics — multi-cam partner-venue cricket analytics (LevelUp Cricket app); ball track, pitch maps, wagon wheels, biomechanics; expanding SG → India. Detail: [competitors.md](./competitors.md#level-up-sportslytics-levelupsportslyticscom).
+
 **Adjacent**  
-BatSense / SmartCricket (bat sensor, not full ball+pose CV); NV Play (match / analyst workflows); Trume (early coaching OS). **3rd-Eye.TV** (3rd-eye.tv) — match-day DRS and association platforms (certified DRS, high-frame cameras, ball track, edge audio, third-umpire replay; Sports DeepMind claimed for tournaments and performance analytics). Closer to the Hawk-Eye / PitchVision match-analytics world than to Ludimos or CricVision academy apps. Low direct threat to nets upload and view-aware session metrics from a camera the coach can place. Watchlist if SDM expands into nets phone analysis. Detail: [competitors.md](./competitors.md#3rd-eyetv-3rd-eyetv).
+BatSense / SmartCricket (bat sensor, not full ball+pose CV); NV Play (match / analyst workflows); Ball2Data (match analytics / analyst education / broadcast overlays — not nets CV); Trume (early coaching OS). **3rd-Eye.TV** (3rd-eye.tv) — match-day DRS and association platforms (certified DRS, high-frame cameras, ball track, edge audio, third-umpire replay; Sports DeepMind claimed for tournaments and performance analytics). Closer to the Hawk-Eye / PitchVision match-analytics world than to Ludimos or CricVision academy apps. Low direct threat to nets upload and view-aware session metrics from a camera the coach can place. Watchlist if SDM expands into nets phone analysis. Detail: [competitors.md](./competitors.md#3rd-eyetv-3rd-eyetv). WellPlayed is **watchlist** (unfinished video-share coaching app), not a live metric peer. Customer leads (e.g. Adani Sportsline Academies) live in [competitors.md](./competitors.md#customer--pilot-leads-not-competitors) — not rivals.
 
 **Aspirational reference**  
 Hawk-Eye — elite multi-camera tracking; not our academy-net price or form factor.
@@ -36,6 +39,9 @@ Hawk-Eye — elite multi-camera tracking; not our academy-net price or form fact
 
 **3rd-Eye.TV** — Match-day officiating and association sports-tech (India; V6 Sports / HPMC sports division; certified DRS framing). Sports DeepMind is a claimed suite (player/tournament management, live scoring, video analysis, match streaming, umpire assessment, performance analytics) — not a public academy SaaS price.  
 **Wedge:** Adjacent / low direct threat. Buyer is boards and tournaments, not coaches placing a camera at the nets. Thin overlap is ball-track and performance-analytics language. We sell view-aware nets metrics from a camera the coach can place — not phone apps locked behind the stumps. Watchlist if SDM coaching products expand into nets phone analysis.
+
+**Level Up Sportslytics** — Hardware+CV cricket analytics (Singapore; partner-venue multi-cam install, walk-in capture, expanding SG → India).  
+**Wedge:** They own installed multi-cam nets; we own a camera the coach can place, with view-aware session metrics and a portable / academy workflow. Do not compete on “broadcast-level” slogans. Ready / Can't measure stays the trust rule, not the headline. Multi-camera stays **roadmap** for Gabriella.
 
 ## Category pattern (what rivals do)
 

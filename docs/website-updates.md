@@ -7,7 +7,7 @@ Narrative of what the marketing site claims, what changed in September–October
 | [CHANGELOG.md](./CHANGELOG.md) | Dates and commit hashes from this repo |
 | [homepage-hud-metrics.md](./homepage-hud-metrics.md) | Site HUD implementation notes (pointer to Modal PRODUCT.md) |
 | [competitive-positioning.md](./competitive-positioning.md) | Copy gate (rivals / placement-first wedge; Impact / hero locks) |
-| [competitors.md](./competitors.md) | Living Marketing competitor tracker (Ludimos, Kabuni, CricVision, 3rd-Eye, peer table) |
+| [competitors.md](./competitors.md) | Living Marketing competitor tracker (Ludimos, Kabuni, CricVision, 3rd-Eye, Level Up, peers, watchlist, leads) |
 
 This is a static HTML site. Live analysis runs on Modal and is embedded from `demo.html` (Showcase) and `admin.html`.
 
@@ -16,6 +16,8 @@ This is a static HTML site. Live analysis runs on Modal and is embedded from `de
 **2026-10-05:** Greenlit homepage lead shipped in the squash merge of website [PR #41](https://github.com/ptirupat/gabriella-systems/pull/41) as `8dd5eba`. Only `index.html` changed (https://gabriellasystems.com/). Headline stays *Analysis that fits the view.* The hero contrasts phone apps locked to one setup behind the stumps with a camera that can sit where the coach needs it, including side-on, so Bat and Head come from a view that can see them. A coaching side or front view can give real Bat and Head numbers. Ready / Can't measure stays. Public copy must not name body-worn, umpire, or empire capture — that capture is internal-only. The homepage dropped the sentence that named body-worn and umpire cameras; other public pages already omitted those terms. Hero metric lock unchanged: Bat + Head for batting, Run-up for bowling; Arm angular speed and Release stay off heroes. No competitor names, and [competitive-positioning.md](./competitive-positioning.md) is unchanged.
 
 **2026-09-28:** **CricVision refresh Sep 28 2026** plus **3rd-Eye.TV** in [competitors.md](./competitors.md). CricVision: academy OS + AI coaching, public Basic $199/mo and Pro $399/mo. 3rd-Eye: adjacent match-day DRS / association platform; no academy SaaS price invented. Copy gate stays in [competitive-positioning.md](./competitive-positioning.md). Does not change live HTML claims or homepage hero locks.
+
+**2026-09-21:** Extended [competitors.md](./competitors.md) with **Level Up Sportslytics** (hardware+CV venue peer), **WellPlayed** (watchlist), **Ball2Data** (adjacent match/broadcast), and **Adani Sportsline Academies** (customer/pilot lead, not a rival). Copy gate stays placement-first in [competitive-positioning.md](./competitive-positioning.md); Level Up named there as a hardware+CV peer. Ready / Can't measure stays the trust rule, not the headline. Does not change live HTML claims or homepage hero locks.
 
 **2026-09-17:** Added [competitors.md](./competitors.md) as a living Marketing competitor tracker (Ludimos, Kabuni, peer table). Copy gate stays in [competitive-positioning.md](./competitive-positioning.md). Does not change live HTML claims or homepage hero locks.
 
