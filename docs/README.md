@@ -17,7 +17,7 @@ This marketing-site repo holds **site copy / HUD docs** for this website, plus v
 | [CHANGELOG.md](./CHANGELOG.md) | Dated website/UI changelog |
 | [website-updates.md](./website-updates.md) | Claims policy, pages, GIFs, logo/nav |
 | [homepage-hud-metrics.md](./homepage-hud-metrics.md) | Site HUD implementation notes (pointer to Modal PRODUCT.md; per-metric trust / fail-loud) |
-| [competitive-positioning.md](./competitive-positioning.md) | Copy gate: rivals, fail-loud wedge, Impact / hero locks |
+| [competitive-positioning.md](./competitive-positioning.md) | Copy gate: rivals, placement-first wedge, Impact / hero locks |
 | [competitors.md](./competitors.md) | Living Marketing competitor tracker (Ludimos, Kabuni, CricVision, 3rd-Eye, peers) |
 | [marketing/linkedin/README.md](./marketing/linkedin/README.md) | LinkedIn company-page post packs (anonymized media + captions) |
 

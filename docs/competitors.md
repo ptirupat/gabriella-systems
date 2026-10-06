@@ -4,15 +4,17 @@ Living notes for Gabriella Systems competitive positioning. Update when we learn
 
 Copy gate for live site wording: [competitive-positioning.md](./competitive-positioning.md). Do not fork homepage hero metrics here.
 
-Last updated: 2026-10-03
+Last updated: 2026-10-05
 
 ## Gabriella wedge (reminder)
 
-- Cricket-first session metrics coaches can trust from nets video
-- Fail-loud / gated numbers (Can't measure beats fake zeros)
-- View-aware batting & bowling; heroes locked separately in PRODUCT
+- Movable camera: it can sit where the coach needs it, including side-on so we can see Bat and Head. Phone apps lock behind the stumps. The edge is that placement choice (side-on vs front-on), not a known lens, height, or distance.
+- Front-on batting is the view for pitch map, wagon wheel, and ball path / ball-track compare. Those charts are planned adds — not live until bounce, leave, and overlay paths exist.
+- Side-on batting is for Bat, Head, both-foot movement, bat lift, and distance to pitch of the ball. Each is Ready or Can't measure. None of the new side-on fields are live until a labeled side-on session exists.
+- Ready / Can't measure is the trust rule (never invent a number) — not the headline
+- View-aware batting & bowling; heroes locked separately in PRODUCT. Do not claim Bat or Head from bowling-end or front-on-only views, “we analyzed the session,” or native 4K analysis.
 - Portable capture hardware planned
-- Roadmap: baseball & softball (same session-metric / fail-loud approach) — not live claims
+- Roadmap: baseball & softball (same placement and view-aware session metrics; Ready / Can't measure stays the trust rule) — not live claims
 - Must-have (P1): temporal crop of deliveries from long videos (Ludimos parity) — KAN-138/139; do not claim session auto-clip until shipped
 
 ---
@@ -29,11 +31,11 @@ Last updated: 2026-10-03
 
 **Strengths:** Distribution, freemium virality, AMS breadth, coach workflow maturity, elite logo marketing.
 
-**Gaps vs Gabriella:** Phone CV + marketing “to the cm” without a public accuracy study; calibration friction; biomechanics = 2D overlay not lab-grade; weak fail-loud story; personal vs org continuity fog.
+**Gaps vs Gabriella:** Phone CV + marketing “to the cm” without a public accuracy study; calibration friction; biomechanics = 2D overlay not lab-grade; camera locked behind the stumps, with a weak story on what each view can show; personal vs org continuity fog.
 
 **Do not copy:** Absolute cm/broadcast claims without method; “no gear” when geometry matters; checklist maximalism; skeleton = deep biomechanics; fake testimonials.
 
-**Gabriella wedge vs Ludimos:** Honest gated session metrics from nets video — not always-on phone-CV numbers. Session auto-crop is parity once shipped; do not claim it early.
+**Gabriella wedge vs Ludimos:** A camera the coach can place, with view-aware charts and metrics for that view — not a phone app locked behind the stumps. Ready / Can't measure stays the trust rule. Session auto-crop is parity once shipped; do not claim it early.
 
 ---
 
@@ -51,7 +53,7 @@ Last updated: 2026-10-03
 
 **Do not copy:** Super Coach content as substitute for measurable session truth; junior-league GTM as our wedge.
 
-**Gabriella wedge vs Kabuni:** Coach-trusted gated session metrics vs access/cues/celebrity pathway. Treat Kabuni as pathway/brand, not as our metric competitor.
+**Gabriella wedge vs Kabuni:** Placement and view-aware charts/metrics versus access, cues, and a celebrity pathway. Treat Kabuni as pathway/brand, not as our metric competitor.
 
 ---
 
@@ -59,7 +61,7 @@ Last updated: 2026-10-03
 
 **Checked:** 2026-09-28 — public pricing and FAQ on [cricvision.ai](https://cricvision.ai); builder story in the [BOSC Tech Labs case study](https://bosctechlabs.com/case-study/data-led-cricket-coaching-system-with-ai-video-intelligence/).
 
-**Class:** Academy OS + AI video coaching. Peer / academy competitor. Closer to Ludimos (academy platform + AI coaching) than to Gabriella’s fail-loud / view-aware nets session-metrics wedge.
+**Class:** Academy OS + AI video coaching. Peer / academy competitor. Closer to Ludimos (academy platform + AI coaching) than to Gabriella’s placement and view-aware nets wedge.
 
 **Capture:** Phone/smartphone-oriented. The public product is an academy app. The BOSC case study says coaches record on a smartphone or standard camera they already use, and claims no extra hardware, calibration, or setup. That “no calibration” line is a vendor claim — not a measured accuracy study.
 
@@ -71,13 +73,13 @@ Last updated: 2026-10-03
 
 **Strengths:** Packaged academy ops (brand, parents, payments, attendance) plus visible AI coaching on practice clips. Clear public seat pricing for academy sales conversations.
 
-**Gaps vs Gabriella:** Technique scores and coaching advice from phone/camera clips, without a public fail-loud / gated-metrics story. The product leads with white-label ops and AI feedback, not view-aware session metrics that stay blank when a take cannot be measured.
+**Gaps vs Gabriella:** Technique scores and coaching advice from phone/camera clips, without a public story of coach-chosen placement and view-aware metrics. The product leads with white-label ops and AI feedback, not a camera the coach can place with view-aware session metrics.
 
-**Threat:** Medium GTM threat on academy sales. Low threat on the trust-metrics wedge unless they lead with calibrated fail-loud nets metrics.
+**Threat:** Medium GTM threat on academy sales. Low threat on placement and view-aware metrics unless they leave a behind-the-stumps lock.
 
 **Do not copy:** White-label ops as our wedge; technique scores as gated session truth; “no calibration” as permission to publish untrusted numbers.
 
-**Gabriella wedge vs CricVision:** Don’t race white-label ops. Own honest numbers from ordinary nets video.
+**Gabriella wedge vs CricVision:** Don’t race white-label ops. Own camera placement and view-aware charts/metrics versus phone capture locked behind the stumps. Ready / Can't measure stays the trust rule.
 
 ---
 
@@ -103,13 +105,13 @@ Last updated: 2026-10-03
 
 **Strengths:** Match-day DRS package (cameras, ball track, edge audio, third-umpire replay) aimed at boards, leagues, and umpires; association-platform language via SDM; analyst courses as a side motion.
 
-**Gaps vs Gabriella:** Different buyer and job. Overlap is thin (ball track and “performance analytics” language). No public story of fail-loud, view-aware metrics from ordinary nets video.
+**Gaps vs Gabriella:** Different buyer and job. Overlap is thin (ball track and “performance analytics” language). No public story of view-aware metrics from a camera the coach places at the nets.
 
-**Threat:** Low direct threat to the nets upload / fail-loud session-metrics wedge. Watchlist if SDM coaching products expand into nets phone analysis.
+**Threat:** Low direct threat to nets upload and view-aware metrics from a camera the coach can place. Watchlist if SDM coaching products expand into nets phone analysis.
 
 **Do not copy:** Match-day DRS, broadcast review graphics, or association scale claims as if they were gated nets session metrics. Do not treat course fees as software pricing.
 
-**Gabriella wedge vs 3rd-Eye:** They sell match officiating and association platforms. We sell honest numbers from ordinary nets video.
+**Gabriella wedge vs 3rd-Eye:** They sell match officiating and association platforms. We sell view-aware nets metrics from a camera the coach can place — not phone apps locked behind the stumps.
 
 ---
 
@@ -117,7 +119,7 @@ Last updated: 2026-10-03
 
 **Checked:** 2026-10-03 — [crickroo.com](https://crickroo.com) 301s to [www.crickroo.com](https://www.crickroo.com); privacy and terms (last updated 17 July 2026); AU App Store listing [CrickRoo](https://apps.apple.com/au/app/crickroo/id6793531807).
 
-**Class:** Phone-only cricket training analysis for players, coaches, academies, and parents. Early AU consumer app plus an academy/org licence (terms: academies must not use a consumer subscription in place of an organisational licence). Adjacent, not a direct fail-loud session-metrics peer.
+**Class:** Phone-only cricket training analysis for players, coaches, academies, and parents. Early AU consumer app plus an academy/org licence (terms: academies must not use a consumer subscription in place of an organisational licence). Adjacent, not a direct placement / view-aware session-metrics peer.
 
 **Company (public):** AthMech Pty Ltd (ABN/ACN 690 049 864). Incorporated 15 Aug 2025, NSW. Registered office: Unit 713, 14 Baywater Drive, Wentworth Point NSW 2127. Support: support@athmech.com. [LinkedIn](https://www.linkedin.com/company/crickroo/); [Instagram](https://www.instagram.com/crickroo/). Site meta: “Cricket Training Intelligence for players, coaches, academies and clubs.” Trademark application 2637525 accepted early; registration pending (terms).
 
@@ -135,11 +137,11 @@ Last updated: 2026-10-03
 
 **Gaps vs Gabriella:** Early Australian consumer app. Academy pricing is unpublished (Group is custom; the kit field is a placeholder, not a list price). No public pose, bat, or biomechanics. No Ready / Can’t measure language. Privacy already says automated analysis may not always be complete or accurate. iPhone and AU App Store only; no confirmed Android listing.
 
-**Threat:** Adjacent. Same phone-at-the-nets ball review for players/coaches/academies, but early Australian consumer app, unpublished academy pricing, no public body/bat metrics, no fail-loud measurement standard.
+**Threat:** Adjacent. Same phone-at-the-nets ball review for players/coaches/academies, but early Australian consumer app, unpublished academy pricing, no public body/bat metrics, and no Ready / Can't measure trust rule.
 
 **Do not copy:** the 90% / 10K+ / 100+ / <10 min counters; implying a phone behind the stumps matches professional speed, beehive, pitch map, or release-point equipment; “tracks every ball, shot and movement” as a completeness claim; the CrickRoo name/logo.
 
-**Gabriella wedge vs CrickRoo:** Honest gated session metrics (Ready / Can’t measure) from nets video, including bat and body where the view allows — not a consumer freemium ball-tracking app.
+**Gabriella wedge vs CrickRoo:** A camera the coach can place, with view-aware bat and body metrics where that view allows — not a consumer freemium ball-tracking app locked behind the stumps. Ready / Can't measure stays the trust rule.
 
 ---
 
@@ -163,12 +165,12 @@ Pricing, accuracy, and feature depth for this table are **unverified** unless no
 
 ## Competitive implication for Gabriella claims
 
-1. Own **honest gated metrics** — never invent heroes to fill gaps.
+1. Own **camera placement** and view-aware charts/metrics (side-on for Bat and Head; front-on batting for planned pitch map, wagon wheel, and ball-path compare). Ready / Can't measure is the trust rule — never invent a number the view cannot support.
 2. Ludimos parity on **session auto delivery-crop** is must-have once shipped; don’t claim early.
 3. Differentiate Kabuni as **pathway/brand**, not as our metric competitor.
 4. Cricket-primary SEO; baseball/softball as roadmap only.
-5. CricVision is an academy-sales peer (white-label ops + phone/camera coaching). Medium GTM threat there. Low threat on the trust-metrics wedge unless they lead with calibrated fail-loud nets metrics. Don’t race white-label ops; own honest numbers from ordinary nets video.
+5. CricVision is an academy-sales peer (white-label ops + phone/camera coaching). Medium GTM threat there. Low threat on placement and view-aware metrics unless they leave a behind-the-stumps lock. Don’t race white-label ops; own where the camera sits and what that view can show. Ready / Can’t measure stays the trust rule.
 6. 3rd-Eye.TV is adjacent match-day DRS / association tech. Low direct threat. Watchlist only if Sports DeepMind moves into nets phone analysis.
-7. CrickRoo is an early AU phone ball-tracking app (players/parents plus academy custom). Adjacent. Don’t race freemium ball speed; own fail-loud bat/body session metrics.
+7. CrickRoo is an early AU phone ball-tracking app (players/parents plus academy custom). Adjacent. Don’t race freemium ball speed; own placement and view-aware bat/body metrics where the view allows. Ready / Can’t measure stays the trust rule.
 
 Homepage Impact / Bat / Head / Contact locks live in [competitive-positioning.md](./competitive-positioning.md) and Modal PRODUCT.md — do not reopen them here.
