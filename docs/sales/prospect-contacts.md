@@ -7,6 +7,8 @@
 
 Emails below are only those found on public pages. Re-verify before send where flagged.
 
+**Bay Area pilot list (repo-only):** [bay-area-pilot-prospects.md](./bay-area-pilot-prospects.md). CCA stays #6 in the United States table below. Do not name those orgs on the public site.
+
 ---
 
 ## Priority pilots (video analysis or coaching AI already in use)
