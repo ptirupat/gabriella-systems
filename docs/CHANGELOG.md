@@ -6,6 +6,14 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 
 ---
 
+## 2026-10-10
+
+### Competitor tracker: StumpEye
+
+- [competitors.md](./competitors.md) adds a named **StumpEye** (stumpeye.com) section plus an other-peers row. Adjacent hardware + video review: patented wireless stump-embedded camera, app slow-mo / zoom / frame-by-frame / annotations, Coach Connect, Umpire's Mate, pre-match calibration, Decision Assist. No automated Bat or Head metrics found. Pricing and customers: not found. Sources: app-features, stumpeye-for-players, Information Pack PDF, App Store id6743402314. Last updated 2026-10-10.
+- Wedge line: they own the stump-eye angle with dedicated hardware; we analyze from a phone or coach-placed camera, side-on or front view. Ready / Can't measure stays the trust rule, not the headline. Competitive implication #10 added; Adani lead-list note renumbered to #11.
+- Docs only; no HTML/JS. Public pages do not name competitors.
+
 ## 2026-10-05
 
 ### Placement-first positioning (copy gate + About)

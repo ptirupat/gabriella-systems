@@ -4,7 +4,7 @@ Living notes for Gabriella Systems competitive positioning. Update when we learn
 
 Copy gate for live site wording: [competitive-positioning.md](./competitive-positioning.md). Do not fork homepage hero metrics here.
 
-Last updated: 2026-10-06
+Last updated: 2026-10-10
 
 ## Gabriella wedge (reminder)
 
@@ -165,6 +165,32 @@ Last updated: 2026-10-06
 
 ---
 
+## StumpEye (stumpeye.com) — adjacent hardware + video review
+
+**Checked:** 2026-10-10 — [App features](https://stumpeye.com/app-features/), [StumpEye for players](https://stumpeye.com/stumpeye-for-players/), [Information Pack (PDF)](https://stumpeye.com/wp-content/uploads/2025/03/StumpEye-Information-Pack-For-Website.pdf), App Store id6743402314.
+
+**Class:** Hardware-led video review. Patented wireless stump-embedded camera plus a companion app. Targets players, coaches, teams/clubs, umpires, parents, and broadcasters. Adjacent: they own the stump-eye angle with dedicated hardware; they are not a view-aware session-metrics peer.
+
+**Capture:** Camera built into the stump (vendor: patented, wireless). CloseRange: the app connects within 10 m of the camera. Pre-match calibration is listed as a feature. Dedicated hardware is required; this is not a phone-upload product.
+
+**Capabilities (claimed/site):** Live preview, one-tap record, camera settings (resolution, loop time). Playback: slow-mo, zoom, frame-by-frame, pause/rewind/fast-forward, annotations, download/delete. **Coach Connect** connects players/parents to coaches for feedback. **Umpire's Mate** logs match events with audio/video evidence from the camera. **Decision Assist** gives on-field umpires rewind, replay, zoom, slow-mo, and frame-by-frame. The app has a subscriptions section in profile settings. No automated Bat or Head metrics found; positioning reads as hardware plus video review with “just enough” analytics.
+
+**Pricing:** Not found (app lists subscriptions; no public price recorded here). Do not invent hardware or subscription prices.
+
+**Customers / traction:** Not found. Do not invent logos or counts.
+
+**Strengths:** Owns the stump-eye angle with dedicated, patented hardware. Clean video-review toolset (slow-mo, zoom, frame-by-frame, annotations). Coach Connect for coach feedback and Umpire's Mate / Decision Assist for officials. Broad audience (players, coaches, clubs, umpires, parents, broadcasters).
+
+**Gaps vs Gabriella:** Needs their hardware at the stumps. No automated Bat or Head metrics found, and no Ready / Can't measure style trust rule found. Review and annotation of video, not view-aware session metrics from a camera the coach places.
+
+**Threat:** Low direct threat on placement and view-aware Bat and Head metrics. Watchlist if they add automated analytics on stump-cam footage, or if we pitch the same coach and club buyers for video review.
+
+**Do not copy:** Stump-camera or umpire-decision framing as our product. Do not describe our own capture as body-worn or umpire footage. Do not claim we match a stump-embedded angle: our capture is a phone or coach-placed camera, side-on or front view.
+
+**Gabriella wedge vs StumpEye:** They own the stump-eye angle with dedicated hardware. We analyze from a phone or coach-placed camera, side-on or front view, with Bat and Head where that view can see them. Compete on placement and view-aware metrics, not on a stump-cam angle. Ready / Can't measure stays the trust rule, not the headline.
+
+---
+
 ## WellPlayed (wellplayedcricket.com) — watchlist / low threat
 
 **Class:** Claims AI-driven grassroots cricket mobile app — skill video upload, coach checklists, club/parent tracking.
@@ -199,6 +225,7 @@ Last updated: 2026-10-06
 | NV Play | Match/analyst software | Adjacent workflow |
 | Level Up Sportslytics | Hardware+CV venue | Multi-cam partner venues; SG → India; named section above |
 | Ball2Data | Match/analyst + broadcast overlays | Adjacent — not nets CV; named section above |
+| StumpEye | Hardware (stump-embedded cam) + video review | Adjacent; pricing/customers not found; no automated Bat/Head metrics found; named section above |
 | 3rd-Eye.TV | Match-day DRS / association platform | Adjacent — not nets CV; no academy SaaS price; named section above |
 | CrickRoo | Phone CV nets | AU; Pro ~$20/mo site / $19.99 IAP; Group custom; named section above |
 | WellPlayed | Watchlist / video-share coaching app | Unfinished site; low threat until real CV ships |
@@ -233,6 +260,7 @@ Multi-sport academies (Shantigram / Riverfront) with cricket infrastructure: nat
 7. CrickRoo is an early AU phone ball-tracking app (players/parents plus academy custom). Adjacent. Don’t race freemium ball speed; own placement and view-aware bat/body metrics where the view allows. Ready / Can’t measure stays the trust rule.
 8. Level Up owns **installed multi-cam nets**; compete on placement and a portable / academy workflow — not on “broadcast-level” slogans. Multi-camera stays roadmap for us. Ready / Can't measure stays the trust rule, not the headline.
 9. Ball2Data is **adjacent** (match/broadcast); WellPlayed is **watchlist** until real CV ships.
-10. Keep Adani Sportsline Academies (and similar academies) in the **lead list**, not the rival list.
+10. StumpEye is **adjacent** hardware plus video review (stump-embedded camera, slow-mo, Coach Connect, Umpire's Mate). Low direct threat; they own the stump-eye angle, we own placement and view-aware metrics. Pricing and customers not found. Ready / Can't measure stays the trust rule, not the headline.
+11. Keep Adani Sportsline Academies (and similar academies) in the **lead list**, not the rival list.
 
 Homepage Impact / Bat / Head / Contact locks live in [competitive-positioning.md](./competitive-positioning.md) and Modal PRODUCT.md — do not reopen them here.

@@ -7,9 +7,11 @@ Narrative of what the marketing site claims, what changed in September–October
 | [CHANGELOG.md](./CHANGELOG.md) | Dates and commit hashes from this repo |
 | [homepage-hud-metrics.md](./homepage-hud-metrics.md) | Site HUD implementation notes (pointer to Modal PRODUCT.md) |
 | [competitive-positioning.md](./competitive-positioning.md) | Copy gate (rivals / placement-first wedge; Impact / hero locks) |
-| [competitors.md](./competitors.md) | Living Marketing competitor tracker (Ludimos, Kabuni, CricVision, 3rd-Eye, Level Up, peers, watchlist, leads) |
+| [competitors.md](./competitors.md) | Living Marketing competitor tracker (Ludimos, Kabuni, CricVision, 3rd-Eye, Level Up, StumpEye, peers, watchlist, leads) |
 
 This is a static HTML site. Live analysis runs on Modal and is embedded from `demo.html` (Showcase) and `admin.html`.
+
+**2026-10-10:** Added **StumpEye** (stumpeye.com) to [competitors.md](./competitors.md) as an adjacent hardware + video-review peer (patented wireless stump-embedded camera; slow-mo, frame-by-frame, Coach Connect, Umpire's Mate, Decision Assist). No automated Bat or Head metrics found; pricing and customers not found. Wedge: they own the stump-eye angle with dedicated hardware; we own placement and view-aware metrics from a phone or coach-placed camera, with Ready / Can't measure as the trust rule, not the headline. Docs only. Does not change live HTML claims or homepage hero locks; public pages still do not name competitors.
 
 **2026-10-05:** Placement-first copy gate and About ([PR #43](https://github.com/ptirupat/gabriella-systems/pull/43)). [competitive-positioning.md](./competitive-positioning.md) **Our wedge** now leads with a camera the coach can place: side-on so Bat and Head come from a view that can see them; front-on batting for planned pitch map, wagon wheel, and ball-path charts. Ready / Can't measure stays a later trust rule. [about.html](../about.html) values and Why we exist lead with placement and what the view can show. [competitors.md](./competitors.md) reminder and wedge lines match. Homepage HTML and hero locks are unchanged (Bat 10.6, Head 45.9, Run-up 20.4; Contact detail-only; Release off). Public pages still do not name body-worn, umpire, or empire capture, or competitor names.
 
