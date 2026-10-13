@@ -71,15 +71,17 @@ Together: **capture and distribute with SportVot, understand technique with Gabr
 
 ### 5. Broadcast + analytics layer
 
-SportVot's live stream stays the main view. Gabriella adds an analytics layer on top of it, for academy and grassroots matches.
+SportVot gets a reason for academy and league customers to stream practice and junior matches, not just big games, and an add-on they could sell on top of their stream.
 
-During the match and after it, a per-ball strip shows a delivery's numbers only when they are **Ready**, and says **Can't measure** (with the reason) otherwise. After the innings, a per-player card. Clips are tagged by player, for highlights, social shorts and the academy's own records.
+SportVot's live stream stays the main view. Gabriella is building an analytics layer on top of it, for academy and grassroots matches.
 
-Placement matters, and we say so honestly. Ball speed and length come from the broadcast view that sees the pitch. Bat speed at impact and head stability need a side-on camera, so a match adds one extra side-on camera (a phone on a tripod is enough). We place that camera; it isn't fixed at the stumps.
+The layer is being built to add, during the match and after it, a per-ball strip; after the innings, a per-player card; and clips tagged by player, for highlights, social shorts and the academy's own records. On the strip, a delivery's numbers will be shown only when they are **Ready**, and it will say **Can't measure** (with the reason) otherwise.
 
-SportVot gets differentiated content and a reason for academies to stream with them. Academies get numbers on their players. Data stays the academy's, and commercial use is only with consent.
+The broadcast view, which sees the pitch, is where ball speed and length will come from as we build it. No date. Bat speed at impact and head stability need one added side-on camera (a phone on a tripod is enough). We place that camera; it isn't fixed at the stumps. Those follow once our side-on validation clears.
 
-This follows once our side-on validation clears. No date, and no accuracy figures.
+We promise no **Ready** numbers, and no rates, for any metric.
+
+Academies will see numbers on their players as this layer is built. Data stays the academy's, and commercial use is only with consent.
 
 ---
 
