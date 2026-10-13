@@ -34,6 +34,8 @@ SportVot already does the hard part: reliable cricket video at grassroots and as
 2. **Free academy pilots:** in return, Gabriella runs free pilots for academies you nominate, plus our own US and India outreach, crediting SportVot as the capture and streaming partner. Academies use their own camera, nothing to buy. Coaches upload in their own private portal, confirm deliveries and see results marked Ready or Can't measure. Each academy's data stays its own.
 3. **Joint story (optional):** a case study only if a pilot shows clear coach value and both sides agree.
 
+Once side-on validation clears, SportVot's live stream stays the main view and Gabriella adds an analytics layer for academy and grassroots matches: a per-ball strip (numbers only when Ready, otherwise Can't measure with the reason), a per-player card after the innings, and clips tagged by player for highlights, social shorts and the academy's own records. Ball speed and length come from the broadcast view that sees the pitch; bat speed at impact and head stability need one extra side-on camera we place (a phone on a tripod is enough; it isn't fixed at the stumps). No date and no accuracy figures. SportVot gets differentiated content and a reason for academies to stream; academies get numbers on their players; data stays the academy's, and commercial use is only with consent.
+
 No exclusivity or integration needed to start. Pilots begin once our current side-on validation clears.
 
 Would you or Yash have 20 minutes for a quick call?

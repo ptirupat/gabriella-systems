@@ -69,7 +69,21 @@ Together: **capture and distribute with SportVot, understand technique with Gabr
 
 ---
 
-### 5. Proposed collaboration model
+### 5. Broadcast + analytics layer
+
+SportVot's live stream stays the main view. Gabriella adds an analytics layer on top of it, for academy and grassroots matches.
+
+During the match and after it, a per-ball strip shows a delivery's numbers only when they are **Ready**, and says **Can't measure** (with the reason) otherwise. After the innings, a per-player card. Clips are tagged by player, for highlights, social shorts and the academy's own records.
+
+Placement matters, and we say so honestly. Ball speed and length come from the broadcast view that sees the pitch. Bat speed at impact and head stability need a side-on camera, so a match adds one extra side-on camera (a phone on a tripod is enough). We place that camera; it isn't fixed at the stumps.
+
+SportVot gets differentiated content and a reason for academies to stream with them. Academies get numbers on their players. Data stays the academy's, and commercial use is only with consent.
+
+This follows once our side-on validation clears. No date, and no accuracy figures.
+
+---
+
+### 6. Proposed collaboration model
 
 #### Phase A — Align (this document)
 
@@ -79,7 +93,7 @@ Together: **capture and distribute with SportVot, understand technique with Gabr
 
 #### Phase B — Data sample (no exclusivity)
 
-SportVot shares a **curated, rights-cleared** set of cricket clips for Gabriella to analyse under the use terms in Section 7.
+SportVot shares a **curated, rights-cleared** set of cricket clips for Gabriella to analyse under the use terms in Section 8.
 
 | Item | Suggested scope |
 |------|-----------------|
@@ -114,9 +128,9 @@ Only then do we discuss commercial terms, integration or exclusivity. None are n
 
 ---
 
-### 6. What we are asking SportVot to consider
+### 7. What we are asking SportVot to consider
 
-1. **Share a curated, rights-cleared cricket video sample** under the terms in Section 7.  
+1. **Share a curated, rights-cleared cricket video sample** under the terms in Section 8.  
 2. **Optionally nominate 2–3 academies or associations** for free Gabriella pilots.  
 3. **Name a technical or ops contact** for clip handoff and questions.  
 4. **Join a 30-minute follow-up** to agree sample size, rights language and the pilot list.
@@ -125,7 +139,7 @@ This is designed so SportVot can start small, keep control of its rights, and se
 
 ---
 
-### 7. Data use, rights, and boundaries
+### 8. Data use, rights, and boundaries
 
 **Intended use (with SportVot's agreement)**
 
@@ -153,7 +167,7 @@ We are happy to use SportVot's standard partner or data-sharing language instead
 
 ---
 
-### 8. Success criteria
+### 9. Success criteria
 
 Phases B–C are a success if most of these are true:
 
@@ -163,7 +177,7 @@ Phases B–C are a success if most of these are true:
 
 ---
 
-### 9. Suggested next steps
+### 10. Suggested next steps
 
 | Step | Owner | Timing |
 |------|--------|--------|
@@ -177,7 +191,7 @@ Phases B–C are a success if most of these are true:
 
 ---
 
-### 10. Closing
+### 11. Closing
 
 SportVot brings cricket video and access to its network; Gabriella brings technique analysis and free academy pilots in return for a controlled data sample. If this works for you, we can agree a small sample and pilot list on a short call and confirm the rights terms by email.
 
@@ -202,7 +216,7 @@ Thanks again for the conversation. I've put our idea into a short plan so it's e
 
 The exchange is simple: a curated, rights-cleared cricket video sample from SportVot, in return for free Gabriella pilots for academies you nominate, with SportVot credited as the capture and streaming partner. Academies use their own camera and their own private portal, and their data stays theirs. No exclusivity or integration needed to start.
 
-Happy to spend 30 minutes on Sections 5–7 (model, ask and data rights) and adjust anything that makes sharing easier for you.
+Happy to spend 30 minutes on Sections 6–8 (model, ask and data rights) and adjust anything that makes sharing easier for you.
 
 Best regards,  
 Praveen  
