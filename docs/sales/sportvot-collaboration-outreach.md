@@ -1,45 +1,42 @@
 # SportVot × Gabriella Systems — Collaboration Outreach
 
-**Purpose:** Partnership ask — mutually beneficial collaboration + data share in exchange for free academy pilots  
+**Purpose:** Partnership ask: data share in exchange for free academy pilots  
 **To:** Sidhhant Agarwal (Co-founder & CEO), SportVot  
 **Cc (optional):** Yash Bhagwatkar (COO); contact@sportvot.com  
 **From:** Praveen Tirupattur, Gabriella Systems  
-**Updated:** 2026-09-28 (PT)  
-**Follow-up:** Intro call done 2026-09-29. Formal plan for review: [sportvot-collaboration-plan.md](./sportvot-collaboration-plan.md). This file remains the original outreach draft.
+**Updated:** 2026-10-13 (PT)  
+**Follow-up:** Intro call done 2026-09-29. Formal plan for review: [sportvot-collaboration-plan.md](./sportvot-collaboration-plan.md). This file is the original outreach, updated to the current offer.
 
 ---
 
-## Email draft (ready to send)
+## Email draft
 
-**Subject:** SportVot × Gabriella — cricket technique intel on your streams, free academy pilots for shared video data
+**Subject:** SportVot × Gabriella — technique numbers on cricket video, free academy pilots for shared video
 
 Hi Sidhhant,
 
-I’m Praveen Tirupattur, founder of Gabriella Systems. We build computer vision for cricket performance: from a batting or bowling clip we detect player, bat, and ball, then return coach-usable metrics such as bat speed at impact, head stability, contact timing, and bowling run-up — with overlays coaches can compare across sessions.
+I'm Praveen Tirupattur, founder of Gabriella Systems. We build computer vision for cricket coaching. The camera is movable, and where it stands decides what we measure: from side-on we give bat speed at impact and head stability, and for bowling, run-up. Pitch maps and ball-track overlays, from a camera that can see the pitch, are coming. Every number is shown only when the video supports it; otherwise the result says Can't measure, with the reason.
 
-SportVot already sits on the hard part we care about: reliable cricket video at grassroots and association scale (capture, production, distribution). Gabriella adds the layer many of those same academies and coaches still do by hand: objective technique feedback from that video.
+SportVot already does the hard part: reliable cricket video at grassroots and association scale. Gabriella adds what many of those academies still do by eye: technique feedback from that video.
 
 **Why this helps SportVot**
-- Stronger product story for leagues, clubs, and academies: stream *and* performance insight, not only a broadcast.
-- Stickier B2B accounts — coaches stay in the ecosystem for weekly nets, not just match day.
-- Differentiator vs pure streaming / production stacks that stop at highlights and graphics.
-- A clean path into academy and coach buyers you already serve or film.
+- A stronger story for leagues, clubs and academies: streaming *and* technique insight.
+- Stickier accounts: coaches come back for weekly nets, not just match day.
+- A clear step beyond highlights and graphics.
 
 **Why this helps Gabriella**
-- Access to real tournament and training cricket video across formats and camera setups.
-- Faster validation of metrics on the footage your customers already capture.
-- Warm intros into academies and associations in your network.
+- Real training and match video across venues and camera setups.
+- Faster testing on the footage your customers already capture.
+- Warm intros to academies and associations in your network.
 
-**What we’re proposing**
-1. **Data collaboration:** SportVot shares a curated set of cricket clips (and, where possible, basic context: sport, batting vs bowling, camera type / view). We can start with anonymized or rights-cleared training / tournament footage you already control.
-2. **Free academy pilots:** In exchange, Gabriella runs free pilots with academies in the US and India (and any SportVot-introduced academies you nominate). SportVot can be named as the capture / streaming partner in those pilots.
-3. **Joint narrative:** Optional co-announcement or case study once a pilot shows clear coach value — “captured with SportVot, analyzed with Gabriella.”
+**What we're proposing**
+1. **Data:** SportVot shares a curated, rights-cleared set of cricket clips (with basic context where possible: batting or bowling, camera position). Used only as we agree in writing.
+2. **Free academy pilots:** in return, Gabriella runs free pilots for academies you nominate, plus our own US and India outreach, crediting SportVot as the capture and streaming partner. Academies use their own camera, nothing to buy. Coaches upload in their own private portal, confirm deliveries and see results marked Ready or Can't measure. Each academy's data stays its own.
+3. **Joint story (optional):** a case study only if a pilot shows clear coach value and both sides agree.
 
-We’re not asking for exclusivity or a heavy integration on day one. A small shared dataset + 2–3 academy pilots is enough to prove mutual value, then we can talk product embedding (Cloud Studio / OTT hooks) if it lands.
+No exclusivity or integration needed to start. Pilots begin once our current side-on validation clears.
 
-If useful, I’m happy to walk through a short demo on sample clips and outline a lightweight data + pilot agreement (usage rights, retention, what we can publish).
-
-Would you or Yash have 20 minutes this week or next for a quick call?
+Would you or Yash have 20 minutes for a quick call?
 
 Best regards,  
 Praveen Tirupattur  
@@ -50,50 +47,50 @@ https://gabriellasystems.com/
 
 ## Shorter LinkedIn / WhatsApp version
 
-Hi Sidhhant — Praveen from Gabriella Systems. We turn cricket batting/bowling video into coach metrics (bat speed at impact, head stability, run-up, overlays).
+Hi Sidhhant, Praveen from Gabriella Systems. We turn cricket video into coach numbers (bat speed at impact and head stability from side-on, bowling run-up), and say Can't measure when the video doesn't support a number.
 
-SportVot already owns capture and streaming for leagues and academies; we add the technique layer coaches still do manually. Proposal: you share a curated cricket video set for us to validate on; we run free academy pilots (US + India, plus any partners you introduce) and credit SportVot as the capture partner. Light start — prove value, then talk deeper product fit.
-
-Open to a 20-min call?
+Proposal: SportVot shares a curated, rights-cleared clip set; we run free pilots for academies you nominate, credited to SportVot as capture partner. Academies use their own camera and private portal, and their data stays theirs. Small start, no exclusivity. Open to a 20-min call?
 
 ---
 
 ## Talking points (call)
 
 **Mutual benefit (say this first)**
-- SportVot: richer B2B offer and retention for academy / association customers.
-- Gabriella: real-world cricket video + warm academy intros.
-- Shared: case studies and a joint go-to-market into coaches who already trust SportVot streams.
+- SportVot: richer offer and retention for academy and association customers.
+- Gabriella: real cricket video and warm academy intros.
+- Shared: case studies (only if both agree) into coaches who already trust SportVot.
 
 **What we need from them**
-- Rights-cleared cricket clips (batting and bowling; varied views if possible).
-- Basic metadata when available (action type, venue type, camera).
-- Optional: intros to 2–3 academies already on SportVot.
+- Rights-cleared batting and bowling clips, varied camera positions if possible.
+- Basic metadata where available (batting or bowling, venue, camera position).
+- Optional: intros to 2–3 academies.
 
 **What we give**
-- Free pilot analysis for nominated academies (US + India priority).
-- Written pilot summary coaches can use; SportVot named where appropriate.
-- Feedback on what camera setups work best for technique metrics (helps their production quality story).
+- Free self-serve pilots: academy's own camera, own private portal, nothing to buy.
+- SportVot named as capture and streaming partner where its video is used.
+- Feedback on which camera positions work best for technique numbers.
 
-**Boundaries (don’t overpromise)**
-- Gabriella metrics are clip / view aware; we won’t claim live broadcast DRS or ball-tracking parity with elite broadcast systems.
-- Start with offline or near-offline clip analysis, not a full live Cloud Studio integration.
-- Data use: training/eval + pilot demos under agreed rights; no resale of their raw footage.
+**Boundaries (don't overpromise)**
+- No accuracy figures or success rates. We're validating side-on bat and head numbers now; pilots start once that clears. No dates.
+- Placement-first: side-on for bat and head; pitch maps and ball-track coming from a view that sees the pitch, no date. No release height, no broadcast ball-tracking or DRS claims.
+- Clip analysis after upload, not a live Cloud Studio integration.
+- Data: SportVot video used only as agreed in writing; commercial use only with consent; academy data stays the academy's; no resale of raw footage.
+- Don't name other companies or academies.
 
 **Ask to close**
-- Agree in principle to a small data share + free pilots.
-- Nominate a technical / ops owner for clip handoff.
-- Book a follow-up to finalize a one-page collaboration note.
+- Agree in principle to a small data share and free pilots.
+- Name a technical or ops owner for clip handoff.
+- Book a follow-up to agree the plan.
 
 ---
 
-## Suggested one-pager outline (if they ask for a PDF later)
+## Suggested one-pager outline
 
-1. Problem: academies stream or film a lot; coaches still lack objective, comparable technique metrics.  
-2. Fit: SportVot = capture & distribution; Gabriella = cricket CV performance layer.  
-3. Exchange: curated video data ↔ free academy pilots + joint credit.  
-4. Success metrics: coach adoption in pilots, usable metrics on shared footage, pipeline of intro’d academies.  
-5. Next step: 20-min call → data sample → 2–3 pilots.
+1. Problem: academies film a lot; coaches still lack comparable technique numbers.  
+2. Fit: SportVot = capture and distribution; Gabriella = technique analysis, placement-first.  
+3. Exchange: curated video ↔ free self-serve academy pilots and joint credit.  
+4. Success: usable numbers (or honest Can't measure) on shared footage, coach feedback, a clear next step.  
+5. Next step: call → data sample → 2–3 pilots once validation clears.
 
 ---
 
@@ -101,7 +98,5 @@ Open to a 20-min call?
 
 | Item | Status |
 |------|--------|
-| Draft email | Ready for Praveen review |
-| Short LinkedIn / WhatsApp | Ready |
-| Call talking points | Ready |
+| Email, short version, talking points | Updated 2026-10-13 to the current pilot offer; for Praveen review |
 | Sent | Intro call done 2026-09-29; next step is the formal plan |
