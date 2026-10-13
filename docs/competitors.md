@@ -4,7 +4,7 @@ Living notes for Gabriella Systems competitive positioning. Update when we learn
 
 Copy gate for live site wording: [competitive-positioning.md](./competitive-positioning.md). Do not fork homepage hero metrics here.
 
-Last updated: 2026-10-06
+Last updated: 2026-10-13
 
 ## Gabriella wedge (reminder)
 
@@ -165,6 +165,84 @@ Last updated: 2026-10-06
 
 ---
 
+## StumpEye (stumpeye.com) — adjacent hardware + video review
+
+**Checked:** 2026-10-10 — [App features](https://stumpeye.com/app-features/), [StumpEye for players](https://stumpeye.com/stumpeye-for-players/), [Information Pack (PDF)](https://stumpeye.com/wp-content/uploads/2025/03/StumpEye-Information-Pack-For-Website.pdf), App Store id6743402314.
+
+**Class:** Hardware-led video review. Patented wireless stump-embedded camera plus a companion app. Targets players, coaches, teams/clubs, umpires, parents, and broadcasters. Adjacent: they own the stump-eye angle with dedicated hardware; they are not a view-aware session-metrics peer.
+
+**Capture:** Camera built into the stump (vendor: patented, wireless). CloseRange: the app connects within 10 m of the camera. Pre-match calibration is listed as a feature. Dedicated hardware is required; this is not a phone-upload product.
+
+**Capabilities (claimed/site):** Live preview, one-tap record, camera settings (resolution, loop time). Playback: slow-mo, zoom, frame-by-frame, pause/rewind/fast-forward, annotations, download/delete. **Coach Connect** connects players/parents to coaches for feedback. **Umpire's Mate** logs match events with audio/video evidence from the camera. **Decision Assist** gives on-field umpires rewind, replay, zoom, slow-mo, and frame-by-frame. The app has a subscriptions section in profile settings. No automated Bat or Head metrics found; positioning reads as hardware plus video review with “just enough” analytics.
+
+**Pricing:** Not found (app lists subscriptions; no public price recorded here). Do not invent hardware or subscription prices.
+
+**Customers / traction:** Not found. Do not invent logos or counts.
+
+**Strengths:** Owns the stump-eye angle with dedicated, patented hardware. Clean video-review toolset (slow-mo, zoom, frame-by-frame, annotations). Coach Connect for coach feedback and Umpire's Mate / Decision Assist for officials. Broad audience (players, coaches, clubs, umpires, parents, broadcasters).
+
+**Gaps vs Gabriella:** Needs their hardware at the stumps. No automated Bat or Head metrics found, and no Ready / Can't measure style trust rule found. Review and annotation of video, not view-aware session metrics from a camera the coach places.
+
+**Threat:** Low direct threat on placement and view-aware Bat and Head metrics. Watchlist if they add automated analytics on stump-cam footage, or if we pitch the same coach and club buyers for video review.
+
+**Do not copy:** Stump-camera or umpire-decision framing as our product. Do not describe our own capture as body-worn or umpire footage. Do not claim we match a stump-embedded angle: our capture is a phone or coach-placed camera, side-on or front view.
+
+**Gabriella wedge vs StumpEye:** They own the stump-eye angle with dedicated hardware. We analyze from a phone or coach-placed camera, side-on or front view, with Bat and Head where that view can see them. Compete on placement and view-aware metrics, not on a stump-cam angle. Ready / Can't measure stays the trust rule, not the headline.
+
+---
+
+## CriQ (criciq.ai) — the one to watch
+
+**Checked:** 2026-10-13 — [criciq.ai](https://criciq.ai); India App Store [CRiQ: Your AI Cricket Buddy](https://apps.apple.com/in/app/criciq-your-ai-cricket-buddy/id6759147049) (id6759147049).
+
+**Class:** India smartphone app in early access. Phone CV for players, coaches, and academies. **The one to watch.** Closer to a phone practice product than to match-day broadcast.
+
+**Capture:** Site: any smartphone and the app; upload match or practice clips; “No Hardware Required”; “anywhere in India.” App Store listing: point the phone at the run-up, run a calibration step, then record and analyze in the same place. Those are vendor claims.
+
+**Capabilities (claimed/site):** Hero: Ball Speed, Pitch Map, 3D Trajectory. Computer vision on movements, technique, and performance metrics; personalised technique analysis; “biomechanics data”; progress over time; academy batch analysis and parent-friendly reports. App Store: biomechanics overlay on the player’s own clip, ball speed ball by ball, pitch map, 3D trajectory from release to landing, session compare. Site: built in collaboration with Parthiv Patel and a product and tech team described as IIT/IIM alums. Footer: CriQ, powered by sportzengage.ai. App Store seller: SportzEngage Technology Private Limited. iPhone, iOS 15+. 1 rating, 5.0, as fetched. Listing version 1.0.66.
+
+**Pricing:** Not found on criciq.ai. The page says “Special launch pricing” and does not show a figure. India App Store listing: free download. Listing copy says the ball-by-ball data, biomechanics overlay, and full trajectory are free. CRiQ Plus: early-bird Rs 9/month for the first 60 days, then Rs 99/month. In-app purchases shown: CRiQ Plus ₹99 and CRiQ XP Top-Up ₹29.
+
+**Customers:** Not found.
+
+**Strengths:** Early access is live, with Parthiv Patel and an IIT/IIM team named on the site. Public claims cover ball speed, pitch map, 3D trajectory, and technique from a smartphone. The App Store build is updating.
+
+**Gaps vs Gabriella:** Public capture story is a smartphone and the app. A coach-chosen side-on vs front-on placement story was not found. Ready / Can't measure language was not found. Marketing-site price and customers: not found. Still early access.
+
+**Threat:** The one to watch among phone CV products in this tracker. Same job as phone practice analysis for players, coaches, and academies, with a named player and an IIT/IIM team on the site.
+
+**Do not copy:** “professional-grade,” “pro-level,” or “measurable progress” without a method; “No hidden gates” as a trust rule; special-launch pricing when the marketing site shows no figure; the CriQ / CRiQ name.
+
+**Gabriella wedge vs CriQ:** A camera the coach can place, with view-aware charts and metrics for that view. Compete on placement. Ready / Can't measure stays the trust rule, not the headline.
+
+---
+
+## CrickAI (crickai.com) — adjacent match broadcast
+
+**Checked:** 2026-10-13 — [crickai.com](https://crickai.com). Distinct from parked [cricai.com](https://cricai.com) (no k).
+
+**Class:** Match broadcast + match analytics. Adjacent: match-day, not nets technique.
+
+**Capture:** One phone. Site: “EDGE AI · ON-DEVICE”; “Capture, AI, broadcast & shorts — all on-device.” “Point your phone, confirm the teams, go live.” “Live in two minutes.”
+
+**Capabilities (claimed/site):** Crisp 60fps coverage streamed live to YouTube. Scorebug syncs from a scoring app. Per-player batting and bowling breakdowns, scorecard-style, when the innings ends — “no manual tagging.” iPad app with video and audio overlay cues so a coach can guide players in real time. Searchable video library of every player and match (talent archive). Auto highlights with commentary, ready in minutes. Social shorts formatted for Reels and TikTok. Early beta is onboarded by hand. Pilots described with academies, local leagues, and tournament sponsors.
+
+**Pricing:** Not found. The page says “Lock in early-bird pricing”; no price is shown.
+
+**Customers:** Not found. The scorecard graphic on the page is not treated as a customer list.
+
+**Strengths:** One-phone match-day package on the site: live YouTube stream, synced scorebug, innings breakdowns, a searchable library, highlights, and shorts, described as on-device.
+
+**Gaps vs Gabriella:** The public job is match broadcast and innings analytics. A nets placement or view-aware session-metric story was not found on the page checked.
+
+**Threat:** Low direct threat to nets upload and view-aware metrics. Adjacent match-day product. Watchlist if a nets-technique story appears.
+
+**Do not copy:** “Broadcast Like a Pro. Analyze Like an Elite Academy”; a scorebug or scorecard breakdown as gated nets metrics; early-bird wording as a list price.
+
+**Gabriella wedge vs CrickAI:** They sell match-day phone broadcast and innings analytics. We sell view-aware nets metrics from a camera the coach can place. Ready / Can't measure stays the trust rule, not the headline.
+
+---
+
 ## WellPlayed (wellplayedcricket.com) — watchlist / low threat
 
 **Class:** Claims AI-driven grassroots cricket mobile app — skill video upload, coach checklists, club/parent tracking.
@@ -189,6 +267,10 @@ Last updated: 2026-10-06
 
 ## Other peers (short)
 
+**cricai.com (checked 2026-10-13):** Parked domain lander, not a product. The page says the name is for sale and “Buy cricai.com today for US$ 4,995” (Efty Pay; listed by iGaming Domains). Watchlist / name collision only — row below, not a section.
+
+**CricAI (cricaianalysis.com) — note.** Checked 2026-10-13. Amit Gupta’s LinkedIn post (29 Apr 2025) describes a free beta: upload a short YouTube clip (batting, fast bowling, wicketkeeping, or spin) and receive an analysis report by email. The site says the reports use generative AI and describes batting, bowling, and wicketkeeping feedback (strengths, weaknesses, and how to improve). That public copy is qualitative feedback. Measured session numbers were not found on the pages checked. The live site shows **$25/month** on the bowling card and **$50/month** on the wicketkeeping card; the batting card showed no price. Contact on the site: Bothell, WA; a100977@gmail.com. Customers: not found. The page names sample reports for Shaurya Gupta and Raghav Chaudhri; testimonials on the page are not treated as a customer list.
+
 | Name | Class | Notes |
 |------|--------|--------|
 | Matcha | Phone CV nets | Delivery metrics; freemium |
@@ -199,12 +281,18 @@ Last updated: 2026-10-06
 | NV Play | Match/analyst software | Adjacent workflow |
 | Level Up Sportslytics | Hardware+CV venue | Multi-cam partner venues; SG → India; named section above |
 | Ball2Data | Match/analyst + broadcast overlays | Adjacent — not nets CV; named section above |
+| StumpEye | Hardware (stump-embedded cam) + video review | Adjacent; pricing/customers not found; no automated Bat/Head metrics found; named section above |
 | 3rd-Eye.TV | Match-day DRS / association platform | Adjacent — not nets CV; no academy SaaS price; named section above |
 | CrickRoo | Phone CV nets | AU; Pro ~$20/mo site / $19.99 IAP; Group custom; named section above |
 | WellPlayed | Watchlist / video-share coaching app | Unfinished site; low threat until real CV ships |
+| CriQ (criciq.ai) | India phone CV, early access | The one to watch. Ball speed, pitch map, 3D trajectory, technique. Parthiv Patel; IIT/IIM. Marketing-site price and customers not found. Named section above |
+| CrickAI (crickai.com) | Match broadcast + match analytics | Adjacent, match-day (not nets technique). Distinct from parked cricai.com. Pricing and customers not found. Named section above |
+| cricai.com | Parked domain | For sale at US$4,995 (checked 2026-10-13). No product. Note above; not a section |
+| CricAI (cricaianalysis.com) | Generative-AI coaching reports | Amit Gupta. YouTube clip → emailed report; free beta as of 29 Apr 2025. Qualitative feedback. Customers not found. Note above |
+| CRICAI Android (com.webviewcloud.cricai) | Watchlist phone app | AppBrain, checked 2026-10-13: claims ball tracking, bowling speed, shot and footwork recognition, pitch maps from a phone video. 180 installs reported, 0 reviews. Free |
 | Hawk-Eye | Elite multi-cam | Aspirational |
 
-Pricing, accuracy, and feature depth for this table are **unverified** unless noted in the named sections above. Do not invent list prices or accuracy figures.
+Pricing, accuracy, and feature depth for this table are **unverified** unless noted in the named sections or the checked notes above. Do not invent list prices or accuracy figures.
 
 ---
 
@@ -233,6 +321,9 @@ Multi-sport academies (Shantigram / Riverfront) with cricket infrastructure: nat
 7. CrickRoo is an early AU phone ball-tracking app (players/parents plus academy custom). Adjacent. Don’t race freemium ball speed; own placement and view-aware bat/body metrics where the view allows. Ready / Can’t measure stays the trust rule.
 8. Level Up owns **installed multi-cam nets**; compete on placement and a portable / academy workflow — not on “broadcast-level” slogans. Multi-camera stays roadmap for us. Ready / Can't measure stays the trust rule, not the headline.
 9. Ball2Data is **adjacent** (match/broadcast); WellPlayed is **watchlist** until real CV ships.
-10. Keep Adani Sportsline Academies (and similar academies) in the **lead list**, not the rival list.
+10. StumpEye is **adjacent** hardware plus video review (stump-embedded camera, slow-mo, Coach Connect, Umpire's Mate). Low direct threat; they own the stump-eye angle, we own placement and view-aware metrics. Pricing and customers not found. Ready / Can't measure stays the trust rule, not the headline.
+11. CriQ (criciq.ai) is **the one to watch**: an India smartphone app in early access, claiming ball speed, pitch map, 3D trajectory, and technique tracking, built with Parthiv Patel and an IIT/IIM team. Compete on placement and view-aware metrics. Marketing-site price and customers not found. Ready / Can't measure stays the trust rule, not the headline.
+12. CrickAI (crickai.com, with a k) is **adjacent** match broadcast + match analytics (one phone, on-device, match-day — not nets technique). Distinct from parked cricai.com. Early-bird pricing is mentioned; price and customers not found. The CricAI name collisions stay notes: parked cricai.com (for sale, no product), cricaianalysis.com generative-AI emailed reports, and the Android watchlist listing.
+13. Keep Adani Sportsline Academies (and similar academies) in the **lead list**, not the rival list.
 
 Homepage Impact / Bat / Head / Contact locks live in [competitive-positioning.md](./competitive-positioning.md) and Modal PRODUCT.md — do not reopen them here.

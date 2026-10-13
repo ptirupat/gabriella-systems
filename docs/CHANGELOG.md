@@ -6,6 +6,24 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 
 ---
 
+## 2026-10-13
+
+### Competitor tracker: CriQ, CricAI, CrickAI
+
+- [competitors.md](./competitors.md) last updated **2026-10-13** (was 2026-10-10). Docs only; no HTML/JS. Public pages do not name competitors.
+- **CriQ** (criciq.ai): named section, marked the one to watch. India smartphone app in early access; site claims ball speed, pitch map, 3D trajectory, and technique tracking, with Parthiv Patel and an IIT/IIM team. Marketing-site price and customers: not found. India App Store lists Plus prices. Competitive implication #11 added. Ready / Can't measure stays the trust rule, not the headline. Wedge stays placement-first.
+- **CrickAI** (crickai.com, with a k; distinct from parked cricai.com): short named section plus an other-peers row. Class: match broadcast + match analytics, adjacent (match-day, not nets technique). Site claims only: one phone, on-device edge AI; 60fps YouTube stream set up in about two minutes; scorebug from a scoring app; per-player batting and bowling breakdowns after the innings with no manual tagging; iPad overlay cues; searchable library; auto highlights and Reels/TikTok shorts; early beta onboarded by hand; pilots with academies, leagues, and tournament sponsors. Early-bird pricing mentioned; pricing and customers not found.
+- **CricAI name collisions** (notes, not full peer sections): parked **cricai.com** for sale at US$4,995, no product (other-peers row only); **cricaianalysis.com** (Amit Gupta) — YouTube clip to an emailed generative-AI report, free beta as of 29 Apr 2025, qualitative feedback, customers not found (row + short note); **CRICAI Android** (AppBrain `com.webviewcloud.cricai`) watchlist row — phone claims for ball tracking, bowling speed, shot recognition, and pitch maps; 180 installs reported, 0 reviews.
+- Implication list renumbered: CriQ #11, CrickAI and the CricAI notes #12, Adani lead-list note #13. The 2026-10-10 StumpEye entry below is unchanged.
+
+## 2026-10-10
+
+### Competitor tracker: StumpEye
+
+- [competitors.md](./competitors.md) adds a named **StumpEye** (stumpeye.com) section plus an other-peers row. Adjacent hardware + video review: patented wireless stump-embedded camera, app slow-mo / zoom / frame-by-frame / annotations, Coach Connect, Umpire's Mate, pre-match calibration, Decision Assist. No automated Bat or Head metrics found. Pricing and customers: not found. Sources: app-features, stumpeye-for-players, Information Pack PDF, App Store id6743402314. Last updated 2026-10-10.
+- Wedge line: they own the stump-eye angle with dedicated hardware; we analyze from a phone or coach-placed camera, side-on or front view. Ready / Can't measure stays the trust rule, not the headline. Competitive implication #10 added; Adani lead-list note renumbered to #11.
+- Docs only; no HTML/JS. Public pages do not name competitors.
+
 ## 2026-10-05
 
 ### Placement-first positioning (copy gate + About)
