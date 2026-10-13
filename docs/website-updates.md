@@ -7,9 +7,11 @@ Narrative of what the marketing site claims, what changed in September–October
 | [CHANGELOG.md](./CHANGELOG.md) | Dates and commit hashes from this repo |
 | [homepage-hud-metrics.md](./homepage-hud-metrics.md) | Site HUD implementation notes (pointer to Modal PRODUCT.md) |
 | [competitive-positioning.md](./competitive-positioning.md) | Copy gate (rivals / placement-first wedge; Impact / hero locks) |
-| [competitors.md](./competitors.md) | Living Marketing competitor tracker (Ludimos, Kabuni, CricVision, 3rd-Eye, Level Up, StumpEye, peers, watchlist, leads) |
+| [competitors.md](./competitors.md) | Living Marketing competitor tracker (Ludimos, Kabuni, CricVision, 3rd-Eye, Level Up, StumpEye, CriQ, CrickAI, peers, watchlist, leads) |
 
 This is a static HTML site. Live analysis runs on Modal and is embedded from `demo.html` (Showcase) and `admin.html`.
+
+**2026-10-13:** [competitors.md](./competitors.md) last updated 2026-10-13. **CriQ** (criciq.ai) is a named section and the one to watch: India smartphone early access; ball speed, pitch map, 3D trajectory, and technique tracking; Parthiv Patel and an IIT/IIM team. Marketing-site price and customers not found. **CrickAI** (crickai.com) is a short named section: match broadcast + match analytics, adjacent (match-day, not nets technique); early-bird pricing mentioned; price and customers not found. CricAI name collisions are notes only: parked cricai.com (US$4,995, no product), cricaianalysis.com generative-AI emailed reports, and the CRICAI Android watchlist listing. Wedge stays placement-first. Ready / Can't measure stays the trust rule, not the headline. Docs only. Does not change live HTML claims or homepage hero locks; public pages still do not name competitors.
 
 **2026-10-10:** Added **StumpEye** (stumpeye.com) to [competitors.md](./competitors.md) as an adjacent hardware + video-review peer (patented wireless stump-embedded camera; slow-mo, frame-by-frame, Coach Connect, Umpire's Mate, Decision Assist). No automated Bat or Head metrics found; pricing and customers not found. Wedge: they own the stump-eye angle with dedicated hardware; we own placement and view-aware metrics from a phone or coach-placed camera, with Ready / Can't measure as the trust rule, not the headline. Docs only. Does not change live HTML claims or homepage hero locks; public pages still do not name competitors.
 
