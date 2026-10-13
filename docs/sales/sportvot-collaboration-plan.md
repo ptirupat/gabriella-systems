@@ -77,6 +77,14 @@ SportVot's live stream stays the main view. Gabriella is building an analytics l
 
 The layer is being built to add, during the match and after it, a per-ball strip; after the innings, a per-player card; and clips tagged by player, for highlights, social shorts and the academy's own records. On the strip, a delivery's numbers will be shown only when they are **Ready**, and it will say **Can't measure** (with the reason) otherwise.
 
+![Per-ball strip on the live stream](assets/sportvot_overlay.png)
+
+*Concept mockup, example data only*
+
+![Per-player card after the innings](assets/sportvot_player_card.png)
+
+*Concept mockup, example data only*
+
 The broadcast view, which sees the pitch, is where ball speed and length will come from as we build it. No date. Bat speed at impact and head stability need one added side-on camera (a phone on a tripod is enough). We place that camera; it isn't fixed at the stumps. Those follow once our side-on validation clears.
 
 We promise no **Ready** numbers, and no rates, for any metric.
