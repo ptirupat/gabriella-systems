@@ -2,8 +2,8 @@ Most practice video ends as a replay.
 
 This one returned numbers coaches can actually compare:
 
-• Bat speed at impact — measured per delivery
-• Head stability — measured per delivery
+• Bat speed at impact
+• Head stability
 
 Same clip. View-aware metrics. No guessed zeros.
 
