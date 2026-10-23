@@ -41,7 +41,7 @@ For traction with cricket academies and coaches in **US + India**, the highest R
 | Session auto-crop = must-have **once shipped**; do not claim early | Marketing must wait for KAN-138/139 |
 | Don’t race white-label ops | CricVision/Ludimos AMS is adjacent GTM, not Gabriella’s wedge |
 
-Sample Showcase numbers: the public Bat and Head samples were withdrawn on 2026-10-22 pending verified numbers (stale run; bat tip from the wrong mask piece). This report quotes no Bat or Head sample value. Run-up **20.4 km/h** is still the bowling sample on the marketing site. These figures are illustrative of locked fields, **not** competitive claims of superiority. Do not invent new Gabriella metrics for this report.
+Sample Showcase numbers: the public Bat and Head samples were withdrawn on 2026-10-22 pending verified numbers (stale run; bat tip from the wrong mask piece). On 2026-10-23 the public Run-up, Ball, Contact, Arm angular speed, and Front knee samples were withdrawn the same way. This report quotes no sample value for those metrics. The field names are illustrative of locked fields, **not** competitive claims of superiority. Do not invent new Gabriella metrics for this report.
 
 ---
 

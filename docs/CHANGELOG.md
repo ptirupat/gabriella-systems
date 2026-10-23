@@ -6,14 +6,24 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 
 ---
 
+## 2026-10-23
+
+### Run-up, Ball, Contact, Arm, and Front knee samples withdrawn
+
+- None of the remaining public samples were verified. Run-up, Ball speed, Contact time, Arm angular speed, and Front knee angle now follow the Bat and Head treatment: the metric name only, with no value, no unit line, and no dash.
+- Homepage cards use the name as the headline (`Run-up speed` joins `Bat speed at impact` and `Head stability`). Clip HUDs, homepage session rows, and the batting and bowling sample rows show the name with the value removed. Non-numeric labels such as **Coach-led** stay.
+- Surfaces: `index.html`, `batting.html`, `bowling.html`. No new numeric claim and no coverage claim.
+- GIF binaries in `assets/` were not edited. `docs/marketing/linkedin/2026-09-21/04-mon-0928-bowling-proof.mp4` still has a run-up figure burned in and was not re-encoded. The matching caption lists the name only.
+- Sections below that quote the withdrawn samples describe the lock before this withdrawal. The figures themselves are removed from this log.
+
 ## 2026-10-22
 
 ### Bat and Head sample numbers withdrawn
 
 - Public samples **Bat speed at impact 10.6 km/h** and **Head stability 45.9 cm** are withdrawn pending verified numbers. They came from a stale run that took the bat tip from the wrong mask piece. Do not republish them, including labelled "Sample".
-- `index.html` and `batting.html` keep the Bat and Head cards, HUD rows, and session rows. Homepage cards use the metric name as the headline and drop the unit line. HUD and session rows show the name only, with no value. Run-up **20.4**, Ball **122**, Contact **800**, Arm **619**, and Front knee **155** are unchanged. No new numeric claim.
+- `index.html` and `batting.html` keep the Bat and Head cards, HUD rows, and session rows. Homepage cards use the metric name as the headline and drop the unit line. HUD and session rows show the name only, with no value. No new numeric claim.
 - `assets/cricket-vision-hero.png` had no readable Bat or Head figure (OCR). One detected face region was blurred. GIF binaries in `assets/` were not edited.
-- Sections below that quote 10.6 / 45.9 describe the lock before this withdrawal.
+- Sections below that quote 10.6 / 45.9 describe the lock before this withdrawal. The 2026-10-23 entry above also withdraws the Run-up, Ball, Contact, Arm, and Front knee samples.
 
 ## 2026-10-05
 
@@ -49,24 +59,24 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 
 ### Public bowling label is Arm angular speed
 
-- User-facing bowling copy that still said **Arm speed** now says **Arm angular speed**. Units stay **°/s** (sample **619**). The tip key stays `arm-speed`; the field stays `peak_arm_angular_speed_deg_s`.
+- User-facing bowling copy that still said **Arm speed** now says **Arm angular speed**. Units stay **°/s** (sample later withdrawn). The tip key stays `arm-speed`; the field stays `peak_arm_angular_speed_deg_s`.
 - Surfaces: homepage bowling clip HUD and session progress, `bowling.html` clip HUD and session stack, academy and cricket sports lists. The ⓘ string was already “Peak arm angular speed in this take (°/s).”
-- Bowling homepage hero stays **Run-up speed 20.4 km/h** only. Arm angular speed stays detail. Release height stays off hero rows.
+- Bowling homepage hero stays **Run-up speed (run-up sample later withdrawn)** only. Arm angular speed stays detail. Release height stays off hero rows.
 - GIF binaries were not regenerated.
 
 ### Bowling page matches batting; pilot form docs say Connect
 
 - `bowling.html` follows the batting section rhythm: hero, phase cards in the four-dimension product grid, Live / Conditional / Research table (fail-loud line), GIF HUD plus validation disclaimer, three coaching questions, session intelligence, and Showcase + **Request a Pilot** (`connect.html`).
 - Bowling gates: Run-up **Live** when pose is trusted; arm angular speed and front-knee flexion **Live** when pose is ok; ball speed **Conditional** (quality-gated); release height **Research** and omitted — no public metre, no can't-measure slot, no “Measured when calibration supports it”.
-- Session card keeps Run-up **20.4 km/h**, Arm **619 °/s**, Front knee **155°**, same-view review **Coach-led**, plus the illustrative caption. Tips stay `data-metric-tip`. Homepage heroes unchanged.
+- Session card keeps Run-up (run-up sample later withdrawn), Arm (arm sample later withdrawn), Front knee (front-knee sample later withdrawn), same-view review **Coach-led**, plus the illustrative caption. Tips stay `data-metric-tip`. Homepage heroes unchanged.
 - Docs, README, and `sitemap.xml` that still named `contact.html` as the pilot form now point at `connect.html` (Connect nav).
 
 ### Restore dashboard HUD lock after rebrand overwrite
 
 - Commit `55448f4` copied older `preview/rebrand-navy-magenta` HTML over the locked heroes and samples. This restore puts the Showcase lock back on live marketing HTML. Navy/magenta rebrand polish (Logo 8, Connect form, legal drafts, credibility copy, sport badges) stays. The rebrand overwrite is not a new product lock.
-- Homepage `.hero-metric-card` tiles are only **Bat speed at impact 10.6 km/h**, **Head stability 45.9 cm**, and **Run-up speed 20.4 km/h**. Ball **122** and Arm **619** are off the hero row again (they stay clip HUD / session-progress detail).
-- Public samples: Bat **10.6**, Head **45.9**, Contact detail **800**, Run-up **20.4**. Do not publish **16 / 41.4 / 817**. Δ **−11.1** stays Showcase Results detail (**Ball speed change through contact**, gallery **`batting-defense`**) — not a homepage hero.
-- Batting clip HUD and session progress: Bat **10.6** + Head **45.9** + Ball **122** + Contact **800**. Bowling public hero is Run-up only; clip/progress keep Arm **619** + Front knee **155** as detail. The Release height “Measured when calibration supports it” slot is omitted from `bowling.html`.
+- Homepage `.hero-metric-card` tiles are only **Bat speed at impact 10.6 km/h**, **Head stability 45.9 cm**, and **Run-up speed (run-up sample later withdrawn)**. Ball (sample later withdrawn) and Arm (sample later withdrawn) are off the hero row again (they stay clip HUD / session-progress detail).
+- Public samples: Bat **10.6**, Head **45.9**, Contact detail (sample later withdrawn), Run-up (run-up sample later withdrawn). Do not publish **16 / 41.4 / 817**. Δ **−11.1** stays Showcase Results detail (**Ball speed change through contact**, gallery **`batting-defense`**) — not a homepage hero.
+- Batting clip HUD and session progress: Bat **10.6** + Head **45.9** + Ball (sample later withdrawn) + Contact (sample later withdrawn). Bowling public hero is Run-up only; clip/progress keep Arm (sample later withdrawn) + Front knee (sample later withdrawn) as detail. The Release height “Measured when calibration supports it” slot is omitted from `bowling.html`.
 - Marketing tips are wired again with `data-metric-tip` / `.metric-info` (hover + tap sticky + keyboard). Copy is the Marketing tips table in [homepage-hud-metrics.md](./homepage-hud-metrics.md). Heroes are not left on CSS-only `i.info-btn`.
 - GIF binaries were **not** regenerated. Burned overlays may still lag these HTML samples; HTML is the public numbers.
 
@@ -76,16 +86,16 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 
 - Website docs no longer say overall `quality.gated === false` blanks every metric. Fail loud is **per field**. Showcase already shipped this in demo #20 (`c03cdbb` — external ML/demo tree).
 - Missing `quality` or missing number → **Can't measure**. Ball-dependent fields need `quality.gated === true`. Pose-derived fields (especially bowling **Run-up** / `peak_runup_speed_kmh`) may **show** when non-null even if overall gated is false due to ball fail, when pose is trusted (`quality.stages` absent **OR** `pose.player.ok === true`). Pose stage present and not ok → **Can't measure**.
-- Canonical example: Bowling — Slow Motion, Run-up **~20.4** with ball `no_detection`.
+- Canonical example: Bowling — Slow Motion, Run-up (run-up sample later withdrawn) with ball `no_detection`.
 - Hero *set* unchanged: batting **Bat speed at impact** + **Head stability**; **Contact time in this clip** stays detail only; Δ ball speed is Showcase Results detail **Ball speed change through contact** (not a hero). Bowling **Run-up only**; **Release omitted** until calibrated — not a Can't measure placeholder.
-- Public samples lock to live tip: Bat **~10.6**, Head **~45.9**, Contact detail **800**, Δ **−11.1**; gallery id **`batting-defense`**. Δ **−11.1** is **not** Head Δ (the earlier “Head Δ −11.1 / pre 27.5 / post 16.4” line was a mis-attribution). This pass is docs-only — homepage HTML/GIF numbers were already on the live-tip lock and were not changed.
+- Public samples lock to live tip: Bat **~10.6**, Head **~45.9**, Contact detail (sample later withdrawn), Δ **−11.1**; gallery id **`batting-defense`**. Δ **−11.1** is **not** Head Δ (the earlier “Head Δ −11.1 / pre 27.5 / post 16.4” line was a mis-attribution). This pass is docs-only — homepage HTML/GIF numbers were already on the live-tip lock and were not changed.
 - **KAN-272** is mode detection (bowling Showcase as batting), not a bowling fail-loud / run-up gap.
 - Docs: [homepage-hud-metrics.md](./homepage-hud-metrics.md), [website-updates.md](./website-updates.md), [competitive-positioning.md](./competitive-positioning.md), [competitors.md](./competitors.md), README / [docs/README.md](./README.md).
 
-### Live sample re-lock to tip (Bat 10.6 / Head 45.9 / Contact 800)
+### Live sample re-lock to tip (Bat 10.6 / Head 45.9 / Contact (sample later withdrawn))
 
-- Public HTML samples re-lock to live tip: **Bat speed at impact** **10.6 km/h** (was 16) + **Head stability** **45.9 cm** (was 41.4). Run-up stays **20.4 km/h**.
-- **Contact time in this clip** detail sample is **800 ms** (was 817 / earlier 400). Hero *set* unchanged: **Bat + Head + Run-up**. Contact stays clip HUD / session-progress only — never a homepage hero.
+- Public HTML samples re-lock to live tip: **Bat speed at impact** **10.6 km/h** (was 16) + **Head stability** **45.9 cm** (was 41.4). Run-up stays (run-up sample later withdrawn).
+- **Contact time in this clip** detail sample is (contact sample later withdrawn) (was 817 / earlier 400). Hero *set* unchanged: **Bat + Head + Run-up**. Contact stays clip HUD / session-progress only — never a homepage hero.
 - Tip strings unchanged. GIF binaries not regenerated. Live-tip Δ **−11.1** is Showcase Results **Ball speed change through contact** (gallery **`batting-defense`**) — not shown on marketing HUD; later the same day docs corrected the Head Δ mis-attribution (see per-metric trust entry above).
 - HTML: `index.html` hero tiles + batting clip HUD / session-progress; `batting.html` clip HUD and session stack. Docs: [homepage-hud-metrics.md](./homepage-hud-metrics.md), [competitive-positioning.md](./competitive-positioning.md), [website-updates.md](./website-updates.md), README.
 
@@ -94,13 +104,13 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 - Small ⓘ beside every coach-facing metric label on homepage heroes, clip HUD rows, session progress, and batting/bowling pages.
 - Hover, keyboard focus, and tap toggle the same locked string (`aria-describedby` tooltip — not `title` only). Copy lock: [homepage-hud-metrics.md](./homepage-hud-metrics.md) Marketing tips.
 - Open tip panels stack above neighboring HUD / session-progress rows (`z-index` + `overflow: visible` on tip hosts). Click/tap stays sticky so GSAP float cannot dismiss the panel; outside click and Escape still close. Keyboard focus opens in keyboard mode and closes on blur (Enter/Space does not reclassify the tip as pointer-sticky). Abandoned pointerdowns (release outside the ⓘ, including touch/pen implicit capture) clear the primed flag so a later Tab still closes on blur.
-- Hero *set* unchanged at the time: **Bat 16** / **Head 41.4** / **Run-up 20.4** (superseded later the same day by live-tip **10.6** / **45.9** / **20.4**). No Modal/pipeline changes.
+- Hero *set* unchanged at the time: **Bat 16** / **Head 41.4** / **Run-up (run-up sample later withdrawn)** (superseded later the same day by live-tip **10.6** / **45.9** / (run-up sample later withdrawn)). No Modal/pipeline changes.
 
 ### Showcase samples-ready status (#15 Copilot follow-up)
 
 - After the Showcase iframe `load`s, the status card heading updates from “Samples loading” to “Sample clips available” (`aria-live`). Supporting copy notes the gallery is ready; **More samples coming soon** stays.
 - Overlay lookup is optional (`?.classList` / `?.remove`) so a later iframe load cannot throw if the overlay was already removed.
-- HUD lock unchanged at the time: **Bat 16** / **Head 41.4** / **Run-up 20.4** (superseded later the same day by live-tip **10.6** / **45.9** / **20.4**).
+- HUD lock unchanged at the time: **Bat 16** / **Head 41.4** / **Run-up (run-up sample later withdrawn)** (superseded later the same day by live-tip **10.6** / **45.9** / (run-up sample later withdrawn)).
 
 ### Competitor tracker (Marketing)
 
@@ -110,7 +120,7 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 
 ### Batting homepage heroes: Bat speed at impact + Head stability
 
-- Product re-lock: batting homepage heroes are **Bat speed at impact** (`bat_speed_at_impact_kmh`, **16 km/h**) + **Head stability** (`head_stability_cm`, **41.4 cm**). Bowling hero unchanged: **Run-up speed** (`peak_runup_speed_kmh`, **20.4 km/h**).
+- Product re-lock: batting homepage heroes are **Bat speed at impact** (`bat_speed_at_impact_kmh`, **16 km/h**) + **Head stability** (`head_stability_cm`, **41.4 cm**). Bowling hero unchanged: **Run-up speed** (`peak_runup_speed_kmh`, (run-up sample later withdrawn)).
 - **Contact time in this clip** (`impact_offset_ms`, **817 ms**) moves off the homepage hero row. It stays on clip HUDs / session-progress as a same-view marker only — never early vs late.
 - Fail loud: if Head is ungated or null, show **Can't measure** / **—** in that hero slot. Do **not** put Contact back on the hero row. Never invent `0` or a fake centimetre.
 - No Ball / Arm as homepage heroes. GIF binaries not regenerated (HTML HUD overlays carry the Head row).
@@ -123,7 +133,7 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 
 - Hero `.status-item` / `.status-live` / `.status-planned` used `--muted` (`#5b6a66`) and `--green` / `--teal` icons on the dark green hero — ~1.0–1.7:1, unreadable.
 - New on-dark tokens: `--text-on-dark`, `--text-on-dark-muted`, `--live-on-dark`, `--planned-on-dark`. Applied to the status strip, hero copy, and hero metric labels.
-- HUD lock at the time of this pass: **Bat 16** / **Contact 817** / **Run-up 20.4** (superseded 2026-09-17 by Bat + Head).
+- HUD lock at the time of this pass: **Bat 16** / **Contact 817** / **Run-up (run-up sample later withdrawn)** (superseded 2026-09-17 by Bat + Head).
 
 ### Marketing-site polish (items 2–7)
 
@@ -133,22 +143,22 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 - Logo recolored to the sports-green / gold palette; banners use a shared `--banner-*` green family.
 - Copy lock: one expansion line — started with cricket; baseball and softball are next (same session-metric / fail-loud approach), labeled **roadmap**. Titles/H1s stay cricket-primary (nets, coaches, academies, session metrics). GEO blurbs state what we measure now, fail-loud, then upcoming sports.
 - SEO/GEO: canonical + OG/Twitter completeness, Organization JSON-LD, `robots.txt`, `sitemap.xml`.
-- Homepage HUD lock from `main` (#13): **Bat 16** / **Contact 817** / **Run-up 20.4** (superseded 2026-09-17 by Bat + Head).
+- Homepage HUD lock from `main` (#13): **Bat 16** / **Contact 817** / **Run-up (run-up sample later withdrawn)** (superseded 2026-09-17 by Bat + Head).
 
 ### Live samples + homepage conflict markers (hero set unchanged)
 
 - Removed leftover Git conflict markers from `index.html` Bowling — Session Progress (`<<<<<<< HEAD` / `=======` / `>>>>>>> da73aab`).
-- Resolved that card to match `bowling.html` detail/progress: **Run-up 20.4 km/h**, **Arm speed 619 °/s**, **Front knee angle 155°** (not Delivery stride 1.82 m).
-- Restored the locked homepage *hero set* on `.hero-metric-card` tiles: batting **Bat speed at impact 16 km/h** + **Contact time in this clip 817 ms**; bowling **Run-up speed 20.4 km/h** only. Ball 122 / Arm 619 are no longer homepage heroes (they stay on clip HUDs / session-progress).
+- Resolved that card to match `bowling.html` detail/progress: **Run-up (run-up sample later withdrawn)**, **Arm speed (arm sample later withdrawn)**, **Front knee angle (front-knee sample later withdrawn)** (not Delivery stride 1.82 m).
+- Restored the locked homepage *hero set* on `.hero-metric-card` tiles: batting **Bat speed at impact 16 km/h** + **Contact time in this clip 817 ms**; bowling **Run-up speed (run-up sample later withdrawn)** only. Ball (sample later withdrawn) / Arm (sample later withdrawn) are no longer homepage heroes (they stay on clip HUDs / session-progress).
 - Dropped the **Release height** “Measured when calibration supports it” placeholder from the `bowling.html` metrics grid — omit Release from the public HUD until calibrated.
-- Docs treat live HTML numbers as the public samples: Bat **16**, Contact **817 ms**, Run-up **20.4**, plus detail-only Ball **122**, Arm **619 °/s**, Head **41.4 cm**, Front knee **155°**. Do not republish ~22 / 400 ms / 21.6 / 22.4 / ~1840°/s as public samples. Hero *set* is unchanged.
+- Docs treat live HTML numbers as the public samples: Bat **16**, Contact **817 ms**, Run-up (run-up sample later withdrawn), plus detail-only Ball (sample later withdrawn), Arm (arm sample later withdrawn), Head **41.4 cm**, Front knee (front-knee sample later withdrawn). Do not republish ~22 / 400 ms / 21.6 / 22.4 / ~1840°/s as public samples. Hero *set* is unchanged.
 - No JS logic, GIF binary, or Modal/demo changes.
 
 ### Bowling homepage HUD: Run-up only (drop Release height)
 
 - Public bowling HUD no longer shows **Release height** — not as **Can't measure**, **can't be determined**, or **Measured when calibration supports it**, and not as a fake metre (**no 1.09 m**, **no 2.1 m**).
 - Homepage bowling hero is **Run-up speed** (`peak_runup_speed_kmh`) only. Prefer an empty second slot rather than an unmeasured Release height row. Batting pair is unchanged (later the same day the public samples became **Bat 16 km/h** + **Contact 817 ms** — see the live-sample entry above; this pass still used the then-current ~22 / 400 ms figures).
-- HTML: `index.html` hero tiles + bowling session-progress card; `bowling.html` metrics grid and session-progress card. Run-up sample later locked to live **20.4 km/h** (this pass still used 21.6 HTML / 22.4 GIF).
+- HTML: `index.html` hero tiles + bowling session-progress card; `bowling.html` metrics grid and session-progress card. Run-up sample later locked to live (run-up sample later withdrawn) (this pass still used 21.6 HTML / 22.4 GIF).
 - Regenerated `assets/cricket_bowling_15s.gif` so the burned Gabriella Vision panel is Run-up only. Batting GIF unchanged.
 - Docs: [homepage-hud-metrics.md](./homepage-hud-metrics.md).
 
