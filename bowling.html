@@ -113,7 +113,7 @@
                     </article>
                 </div>
                 <div class="metric-footnotes" id="bowling-metric-notes">
-                    <p><sup>*</sup> Ready or Can't measure &middot; <sup>&dagger;</sup> view-dependent &middot; <sup>&Dagger;</sup> pose-dependent &middot; <sup>&sect;</sup> same-view only</p>
+                    <p><sup>*</sup> When a delivery can't be measured, we say why &middot; <sup>&dagger;</sup> view-dependent &middot; <sup>&Dagger;</sup> pose-dependent &middot; <sup>&sect;</sup> same-view only</p>
                 </div>
             </div>
         </section>
@@ -123,7 +123,7 @@
                 <div class="section-intro" style="margin-bottom:1rem;">
                     <p class="eyebrow">What's live, conditional, and research-stage</p>
                     <h2>Capability status for bowling analysis</h2>
-                    <p style="color:var(--muted); font-size:0.9rem; max-width:640px;">Availability depends on camera view, calibration, visibility, and clip quality. The system reports "can't measure" when a metric cannot be reliably determined — it never substitutes a guess. Release height stays off this page until calibrated: no public metre, and no can't-measure slot.</p>
+                    <p style="color:var(--muted); font-size:0.9rem; max-width:640px;">Run-up speed and the other bowling results for each delivery, from a phone on the side-on or front-on view. Availability still depends on camera view, calibration, visibility, and clip quality. Release height stays off this page until it is calibrated.</p>
                 </div>
                 <table class="cap-status-table">
                     <thead>
@@ -137,11 +137,11 @@
                         <tr><td>Run-up speed</td><td><span class="badge-live">Live</span></td><td>When pose is trusted — may show even if the ball is not seen</td></tr>
                         <tr><td>Arm angular speed</td><td><span class="badge-live">Live</span></td><td>When bowling-arm pose is ok</td></tr>
                         <tr><td>Front-knee flexion at plant</td><td><span class="badge-live">Live</span></td><td>When front-leg pose is ok. 0° ≈ fully extended — a measured angle, not a technique grade</td></tr>
-                        <tr><td>Ball speed</td><td><span class="badge-conditional">Conditional</span></td><td>Ready when ball tracking is trusted; otherwise Can't measure (ball not seen, track broke, or impact missing)</td></tr>
+                        <tr><td>Ball speed</td><td><span class="badge-conditional">Conditional</span></td><td>Ball speed for this delivery when the ball is tracked through the take</td></tr>
                         <tr><td>Stride and gather position</td><td><span class="badge-conditional">Conditional</span></td><td>Requires lower-body visibility and a view that shows the approach</td></tr>
                         <tr><td>Follow-through alignment</td><td><span class="badge-conditional">Conditional</span></td><td>Where the bowler stays in frame after the delivery</td></tr>
                         <tr><td>Session-to-session comparison</td><td><span class="badge-conditional">Conditional</span></td><td>Requires clips from a comparable camera view and quality</td></tr>
-                        <tr><td>Release height</td><td><span class="badge-research">Research</span></td><td>Omitted until calibrated — not a public metre and not shown as a can't-measure slot</td></tr>
+                        <tr><td>Release height</td><td><span class="badge-research">Research</span></td><td>Omitted until calibrated</td></tr>
                     </tbody>
                 </table>
             </div>

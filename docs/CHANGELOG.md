@@ -6,6 +6,15 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 
 ---
 
+## 2026-10-23
+
+### KAN-331 — lead with results; retire Ready / Can't measure as the headline
+
+- Public pages (`index.html`, `batting.html`, `bowling.html`, `about.html`, `services.html`, `sports.html`, `research.html`, `academies.html`, and the ball-speed `data-metric-tip` in `script.js`) no longer sell Ready / Can't measure. The lead is bat speed and head stability for every delivery, from a phone on the side-on or front-on view, plus at most a brief line that when a delivery can't be measured we say why.
+- Homepage headline is **Bat speed and head stability.** Sample numbers stay Bat **10.6 km/h** and Head **45.9 cm**. `cricket-vision-hero.png` was not changed. No new accuracy claims.
+- Pitch maps public line: “coming, from a camera that can see the pitch” — no date. Public pages still do not name body-worn, umpire, or empire capture, or competitors.
+- [competitive-positioning.md](./competitive-positioning.md), [homepage-hud-metrics.md](./homepage-hud-metrics.md), and [website-updates.md](./website-updates.md) record that KAN-331 retired Ready / Can't measure as the headline. [sales/competitor-feature-recommendations.md](./sales/competitor-feature-recommendations.md) wedge sentence matches. Competitor tracker rows in [competitors.md](./competitors.md) were left unchanged. [sales/bay-area-pilot-prospects.md](./sales/bay-area-pilot-prospects.md) was left unchanged (open PR #47).
+
 ## 2026-10-05
 
 ### Placement-first positioning (copy gate + About)

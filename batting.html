@@ -115,7 +115,7 @@
                     </article>
                 </div>
                 <div class="metric-footnotes" id="batting-metric-notes">
-                    <p><sup>*</sup> Ready or Can't measure &middot; <sup>&dagger;</sup> view-dependent &middot; <sup>&Dagger;</sup> pose-dependent &middot; <sup>&sect;</sup> same-view only &middot; Bat-ball contact is not a technique grade</p>
+                    <p><sup>*</sup> When a delivery can't be measured, we say why &middot; <sup>&dagger;</sup> view-dependent &middot; <sup>&Dagger;</sup> pose-dependent &middot; <sup>&sect;</sup> same-view only &middot; Bat-ball contact is not a technique grade</p>
                 </div>
             </div>
         </section>
@@ -125,7 +125,7 @@
                 <div class="section-intro" style="margin-bottom:1rem;">
                     <p class="eyebrow">What's live, conditional, and research-stage</p>
                     <h2>Capability status for batting analysis</h2>
-                    <p style="color:var(--muted); font-size:0.9rem; max-width:640px;">Availability depends on camera view, calibration, visibility, and clip quality. The system reports "can't measure" when a metric cannot be reliably determined — it never substitutes a guess.</p>
+                    <p style="color:var(--muted); font-size:0.9rem; max-width:640px;">Bat speed and head stability for every delivery, from a phone on the side-on or front-on view. Availability still depends on camera view, calibration, visibility, and clip quality.</p>
                 </div>
                 <table class="cap-status-table">
                     <thead>
@@ -137,7 +137,7 @@
                     </thead>
                     <tbody>
                         <tr><td>Bat speed at impact</td><td><span class="badge-live">Live</span></td><td>When bat is tracked through contact frame</td></tr>
-                        <tr><td>Ball speed</td><td><span class="badge-live">Live</span></td><td>Ready when ball tracking is trusted; otherwise Can't measure (ball not seen, track broke, or impact missing)</td></tr>
+                        <tr><td>Ball speed</td><td><span class="badge-live">Live</span></td><td>Ball speed for this delivery when the ball is tracked through the take</td></tr>
                         <tr><td>Contact time (per clip)</td><td><span class="badge-live">Live</span></td><td>When impact is found</td></tr>
                         <tr><td>Head stability</td><td><span class="badge-live">Live</span></td><td>When pose estimation covers the head and shoulders</td></tr>
                         <tr><td>Ball trajectory</td><td><span class="badge-conditional">Conditional</span></td><td>Requires sufficient ball visibility and appropriate camera angle</td></tr>
