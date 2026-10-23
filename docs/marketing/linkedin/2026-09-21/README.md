@@ -13,10 +13,10 @@ Brand: dark navy background, magenta / orange / cyan accents, Outfit + Inter san
 
 | File | Duration target | Content |
 |------|-----------------|---------|
-| `01-mon-0921-batting-proof.mp4` | ~10s | Bat 10.6 km/h + Head 45.9 cm hero cards; pose-skeleton batter |
+| `01-mon-0921-batting-proof.mp4` | ~10s | Bat and Head cards with no sample numbers (withdrawn 2026-10-22); pose-skeleton batter |
 | `02-wed-0923-metric-question.mp4` | ~7s | “What first metric…?” Bat / Head / Run-up options |
 | `03-fri-0925-fail-loud.mp4` | ~7s | Fake `0.0` crossed out vs “Can't measure” |
-| `04-mon-0928-bowling-proof.mp4` | ~10s | Run-up 20.4 km/h hero; pose-skeleton bowler |
+| `04-mon-0928-bowling-proof.mp4` | ~10s | Run-up name only in the caption; the MP4 still has a burned-in run-up figure (not re-encoded). Pose-skeleton bowler |
 | `05-wed-0930-academy-question.mp4` | ~7s | Finding deliveries vs trusting numbers |
 | `06-fri-1002-view-aware.mp4` | ~7s | Front-on vs side-on; metrics that fit the view |
 

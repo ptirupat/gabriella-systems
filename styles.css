@@ -2348,11 +2348,12 @@ sup.fn-mark a:focus-visible {
 }
 
 .hero-metric-card .metric-value.metric-unmeasured {
-    font-size: 1.05rem;
+    font-size: 1.2rem;
     font-weight: 600;
-    letter-spacing: 0.01em;
-    line-height: 1.25;
-    color: rgba(255, 255, 255, 0.82);
+    letter-spacing: 0;
+    line-height: 1.2;
+    color: white;
+    max-width: 11.5rem;
 }
 
 .hero-metric-card .metric-label {
