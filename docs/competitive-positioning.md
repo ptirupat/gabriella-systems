@@ -2,7 +2,9 @@
 
 Short Marketing note for website and product copy. Keep claims aligned with this — not a full GTM brief. Sales GTM and outreach drafts live under [docs/sales/](./sales/) (repo-only). The formal SportVot collaboration plan also lives under [docs/sales/sportvot-collaboration-plan.md](./sales/sportvot-collaboration-plan.md). Sales GTM includes the [competitor feature recommendations](./sales/competitor-feature-recommendations.md) report (repo-only; not a live-site claims doc).
 
-Updated: 2026-10-06
+Updated: 2026-10-23
+
+**KAN-331:** Public copy leads with results. Ready / Can't measure is retired as the headline, hero, feature bullet, HUD label, tooltip, and meta description. The public line is exactly **Bat speed and head stability per delivery, from a camera placed side-on.** Use that exact sentence once in visible copy on a page; meta and social descriptions may repeat it. Other copy on the same page should say what coaches get without repeating the sentence. The camera can sit where the coach needs it. Do **not** say “for every delivery,” “each delivery can return,” “from a phone,” or “phone view” — the outreach measured-rate gate is 90%, so a completeness claim is not honest, and we are not a phone app. Do **not** claim Bat or Head from front-on; front-on has not passed validation. Front-on batting is planned charts only. Can't measure is a rare exception, not a theme: the only public lines are the small footnotes on `batting.html` and `bowling.html`. Do not put that sentence in heroes, intros, About, or other body copy, and do not headline “we don't invent a number.” About opens with what coaches get, including review in the coach portal. The ball-speed tooltip is “Measured ball speed in this take (km/h).” Do not invent accuracy claims. Sample heroes stay Bat **10.6 km/h** and Head **45.9 cm**. Pitch maps on the public site: “coming, from a camera that can see the pitch” — no date. Do not name body-worn, umpire, or empire capture, or competitors, on public pages.
 
 Living competitor tracker (class, capture, pricing signals, gaps): [competitors.md](./competitors.md). This file remains the **copy gate** for live site claims. Modal [PRODUCT.md](https://github.com/Gabriella-Systems/modal/blob/main/docs/PRODUCT.md) is product source of truth — do not fork hero metrics here.
 
@@ -29,19 +31,19 @@ Hawk-Eye — elite multi-camera tracking; not our academy-net price or form fact
 ## Named rivals (class + Gabriella wedge)
 
 **Ludimos** — Phone-first AI cricket coaching + academy ops (consumer Skills/Showcase + Pavilion/360° AMS).  
-**Wedge:** A camera the coach can place, with view-aware charts and metrics for that view, versus phone apps locked behind the stumps and always-on phone-CV numbers. Front-on batting charts (pitch map, wagon wheel, ball path) are planned adds, not live claims. Ready / Can't measure is the trust rule — never invent a number — not the headline. Session auto-crop is must-have parity once shipped (KAN-138/139) — do not claim it early.
+**Wedge:** Results — bat speed and head stability per delivery, from a camera placed side-on, where the coach needs it — versus phone apps locked behind the stumps and always-on phone-CV numbers. Do not claim Bat or Head from front-on. Pitch maps: coming, from a camera that can see the pitch (no date). KAN-331 retired Ready / Can't measure as the headline. When a delivery can't be measured, say why only in the batting and bowling footnotes; never invent a number. Session auto-crop is must-have parity once shipped (KAN-138/139) — do not claim it early.
 
 **Kabuni** — Youth cricket development + AI coaching brand (India-first: PlayOS + Super Coaches + schools + league pathway), not a clip/AMS SaaS peer.  
-**Wedge:** Placement and view-aware charts/metrics versus access, cues, and a celebrity pathway — not a phone app locked behind the stumps. Do not treat Kabuni as our metric competitor or copy junior-league GTM. Ready / Can't measure stays a trust rule, not the pitch.
+**Wedge:** Results (bat speed and head stability per delivery, from a camera placed side-on) versus access, cues, and a celebrity pathway — not a phone app locked behind the stumps. Do not treat Kabuni as our metric competitor or copy junior-league GTM. KAN-331 retired Ready / Can't measure as the pitch.
 
 **CricVision** — Academy OS + AI video coaching (white-label app/website, parent/coach chat, attendance/payments, PDFs/reels, plus CV on practice clips). Phone/smartphone-oriented. Public academy pricing checked 2026-09-28: Basic $199/mo (3 coaches / 30 players), Pro $399/mo (5 coaches / 75 players). Built by BOSC Tech Labs (public case study).  
-**Wedge:** Closer to Ludimos (academy OS, phone capture) than to a movable camera with view-aware charts and metrics. Medium GTM threat on academy sales; low threat on placement unless they leave the behind-the-stumps lock and match view-aware readouts. Don’t race white-label ops. Own where the camera sits and what that view can show. Ready / Can't measure stays the trust rule.
+**Wedge:** Closer to Ludimos (academy OS, phone capture) than to results from a camera placed side-on. Medium GTM threat on academy sales; low threat on placement unless they leave the behind-the-stumps lock and match side-on Bat and Head. Don’t race white-label ops. Own bat speed and head stability per delivery. KAN-331 retired Ready / Can't measure as the headline.
 
 **3rd-Eye.TV** — Match-day officiating and association sports-tech (India; V6 Sports / HPMC sports division; certified DRS framing). Sports DeepMind is a claimed suite (player/tournament management, live scoring, video analysis, match streaming, umpire assessment, performance analytics) — not a public academy SaaS price.  
 **Wedge:** Adjacent / low direct threat. Buyer is boards and tournaments, not coaches placing a camera at the nets. Thin overlap is ball-track and performance-analytics language. We sell view-aware nets metrics from a camera the coach can place — not phone apps locked behind the stumps. Watchlist if SDM coaching products expand into nets phone analysis.
 
 **Level Up Sportslytics** — Hardware+CV cricket analytics (Singapore; partner-venue multi-cam install, walk-in capture, expanding SG → India).  
-**Wedge:** They own installed multi-cam nets; we own a camera the coach can place, with view-aware session metrics and a portable / academy workflow. Do not compete on “broadcast-level” slogans. Ready / Can't measure stays the trust rule, not the headline. Multi-camera stays **roadmap** for Gabriella.
+**Wedge:** They own installed multi-cam nets; we own bat speed and head stability per delivery, from a camera placed side-on. Do not compete on “broadcast-level” slogans. KAN-331 retired Ready / Can't measure as the headline. Multi-camera stays **roadmap** for Gabriella.
 
 ## Category pattern (what rivals do)
 
@@ -51,14 +53,14 @@ Hawk-Eye — elite multi-camera tracking; not our academy-net price or form fact
 
 ## Our wedge (what we own in copy)
 
-1. **Movable camera / placement** — The camera can sit where the coach needs it, including **side-on**, so we can see Bat and Head. Phone apps lock to one setup behind the stumps. The edge is that placement choice (side-on vs front-on), not a known lens, height, or distance versus a tripod.
-   - **Front-on batting** is the view for pitch map, wagon wheel, and ball path / ball-track compare. Those charts are **planned adds**, not live claims — they wait until bounce, leave, and overlay paths exist.
-   - **Side-on batting** is for Bat, Head, both-foot movement, bat lift, and distance to pitch of the ball. Each is Ready or Can't measure. None of the new side-on fields are live until a labeled side-on session exists.
-   - Do **not** claim Bat or Head from bowling-end or front-on-only views that cannot see them. Do **not** claim “we analyzed the session” or native 4K analysis.
+1. **Results** — Public copy leads with **bat speed and head stability per delivery, from a camera placed side-on**. The camera can sit where the coach needs it. KAN-331 retired Ready / Can't measure as the headline. When a delivery can't be measured, say why only in the batting and bowling footnotes — not as the pitch. Do not invent numbers or accuracy claims. Do not say “for every delivery” (outreach measured-rate gate is 90%).
+   - **Pitch maps:** public line is “coming, from a camera that can see the pitch” — no date. Wagon wheel and ball path stay off live claims until bounce, leave, and overlay paths exist.
+   - **Side-on** is the live view for Bat and Head. **Front-on batting** is planned charts only — front-on has not passed validation, so do not claim Bat or Head from front-on. Both-foot movement, bat lift, and distance to pitch of the ball are not live until a labeled session exists. Do not headline those gaps as Ready / Can't measure.
+   - Do **not** claim Bat or Head from bowling-end or front-on. Do **not** claim “we analyzed the session” or native 4K analysis. Do **not** position Gabriella as a phone app (“from a phone,” “phone view”).
 2. **Depth + multi-model stack** (depth / ball-bat / pose) as a **quality** story vs RGB-only phone CV — not as “more metrics.”
-3. **View-aware analysis** — batting vs bowling and camera view drive which metrics and visualizations we show. Do **not** claim “batting = front-on only” or “bowling = side-on only.” Front-on vs side-on above is which batting readouts fit the placement, not a fixed recipe.
+3. **View-aware analysis** — batting vs bowling and camera view drive which metrics and visualizations we show. Do **not** claim “batting = front-on only.” Live Bat and Head are side-on until front-on passes validation. Front-on vs side-on above is which batting readouts fit the placement, not a fixed recipe.
 4. **Calibrated portable capture** — product/roadmap moat for hardware; do **not** sell live upload-software as already shipping calibrated hardware capture.
-5. **Trust rule (Ready / Can't measure, per metric)** — not the headline. Missing quality or missing number → **Can't measure** / null, never a guessed number. Ball-dependent fields need `quality.gated === true`. Pose-derived fields (especially bowling Run-up) may still show when pose is trusted even if overall gated is false because the ball failed. We never invent numbers.
+5. **Explained exception, not the pitch (KAN-331).** Ready / Can't measure is retired as the public headline. Missing quality or missing number is still not a guessed number. On the public site, say why only in the batting and bowling footnotes. Ball-dependent fields need `quality.gated === true`. Pose-derived fields (especially bowling Run-up) may still show when pose is trusted even if overall gated is false because the ball failed. We never invent numbers.
 
 ## Claim vs don’t claim
 
@@ -66,7 +68,7 @@ Hawk-Eye — elite multi-camera tracking; not our academy-net price or form fact
 | --- | --- | --- |
 | Pose / bat / ball overlays tied to real pipeline output | Yes, when that object is trusted | — |
 | Hero metrics from Showcase/API fields only | Yes | — |
-| Untrusted / missing number → Can’t measure (never invent `0` or fake speeds) | Yes — **per metric**, not overall gated=false blanks everything | — |
+| Untrusted / missing number is explained, never invented (`0` or fake speeds). Public copy does not headline Ready / Can't measure (KAN-331) | Yes — **per metric**, not overall gated=false blanks everything | — |
 | Session-to-session “progress” as automatic for any upload | No — needs comparable view/quality | Product thesis, careful wording |
 | Calibrated / consistent capture position as shipping software | No | With portable hardware |
 | Multi-camera ready | No | When shipped |
@@ -85,23 +87,23 @@ True early/late needs a gated bounce/release/arrival reference (**backlog**). Do
 
 Homepage batting heroes follow [Modal PRODUCT.md](https://github.com/Gabriella-Systems/modal/blob/main/docs/PRODUCT.md): **Bat speed at impact** (`bat_speed_at_impact_kmh`) + **Head stability** (`head_stability_cm`). Contact time in this clip is detail/capability copy only. See [homepage-hud-metrics.md](./homepage-hud-metrics.md) for how this site implements that lock — do not fork a second contract here.
 
-**Marketing tips:** Bat — how fast the bat was moving at contact in this take (km/h). Head — how much the head moved from downswing to contact (cm); lower usually means steadier — not a technique grade. Run-up — peak approach speed into the delivery in this take (km/h). Contact (detail) — time from the start of this take to contact (ms); same-view sessions only, not early vs late. Ball (detail) — measured ball speed in this take (km/h), only when the take is gated. Δ ball speed is Showcase Results **Ball speed change through contact** (live-tip **−11.1**, gallery **`batting-defense`**) — not a homepage hero, not Head Δ. Front knee / Arm — see the copy lock in [homepage-hud-metrics.md](./homepage-hud-metrics.md). Live UI uses ⓘ tips (hover + tap/focus), not `title` only.
+**Marketing tips:** Bat — how fast the bat was moving at contact in this take (km/h). Head — how much the head moved from downswing to contact (cm); lower usually means steadier — not a technique grade. Run-up — peak approach speed into the delivery in this take (km/h). Contact (detail) — time from the start of this take to contact (ms); same-view sessions only, not early vs late. Ball (detail) — Measured ball speed in this take (km/h). Do not use Ready / Can't measure in the tip (KAN-331). Δ ball speed is Showcase Results **Ball speed change through contact** (live-tip **−11.1**, gallery **`batting-defense`**) — not a homepage hero, not Head Δ. Front knee / Arm — see the copy lock in [homepage-hud-metrics.md](./homepage-hud-metrics.md). Live UI uses ⓘ tips (hover + tap/focus), not `title` only.
 
 ### Homepage pairs
 
 Confirm in PRODUCT.md. This site currently implements:
 
-- **Batting:** Bat speed at impact (`bat_speed_at_impact_kmh`, **10.6 km/h**) + Head stability (`head_stability_cm`, **45.9 cm**). Label is **Bat speed at impact** — never bare “bat speed,” never “pipeline peak.” Never publish peak ~90 or the old 36–39 km/h pipeline-peak sample. Untrusted or null locked fields are **Can't measure** / **—** (per metric). If Head is untrusted, show Can't measure on that hero slot — do **not** put Contact back on the hero row. Never early/late. Front stride is not a gated field; do not show it on homepage or batting hero/progress rows. This site’s incoming Ball **122 km/h** and Contact time **800 ms** are detail/progress only — not homepage heroes. Showcase Results Δ **−11.1** is **Ball speed change through contact** (gallery **`batting-defense`**) — not a homepage hero.
-- **Bowling:** Run-up speed (`peak_runup_speed_kmh` only, **20.4 km/h**) on the public homepage bowling *hero*. Pose-derived: may show when pose is trusted even if overall gated is false from ball `no_detection`. Arm angular speed **619 °/s** and Front knee **155°** are detail/progress only — not homepage heroes. Omit ball speed from that hero until gated and non-null — never show “—” as a ball-speed peak. **Release height is omitted** until calibration supports a gated overarm value — do not publish 1.09 m or invent 2.1 m, and do not show Can’t measure / Measured when calibration supports it as a second bowling HUD slot. No homepage fallback to `runup_speed_at_delivery_kmh`.
+- **Batting:** Bat speed at impact (`bat_speed_at_impact_kmh`, **10.6 km/h**) + Head stability (`head_stability_cm`, **45.9 cm**). Label is **Bat speed at impact** — never bare “bat speed,” never “pipeline peak.” Never publish peak ~90 or the old 36–39 km/h pipeline-peak sample. These sample numbers stay. KAN-331 retired Ready / Can't measure as the public headline: an untrusted or null locked field is an explained exception, not a hero label. Do **not** put Contact back on the hero row. Never early/late. Front stride is not a gated field; do not show it on homepage or batting hero/progress rows. This site’s incoming Ball **122 km/h** and Contact time **800 ms** are detail/progress only — not homepage heroes. Showcase Results Δ **−11.1** is **Ball speed change through contact** (gallery **`batting-defense`**) — not a homepage hero.
+- **Bowling:** Run-up speed (`peak_runup_speed_kmh` only, **20.4 km/h**) on the public homepage bowling *hero*. Pose-derived: may show when pose is trusted even if overall gated is false from ball `no_detection`. Arm angular speed **619 °/s** and Front knee **155°** are detail/progress only — not homepage heroes. Omit ball speed from that hero until gated and non-null — never show a blank as a ball-speed peak. **Release height is omitted** until calibration supports a gated overarm value — do not publish 1.09 m or invent 2.1 m, and do not add a second bowling HUD slot for it. No homepage fallback to `runup_speed_at_delivery_kmh`.
 
 ## Homepage / GIF rules (competitive)
 
 - Prefer **real Showcase takes** with trusted overlays over AI-generated “analysis” demos (rivals already look like phone-CV theater).
-- HUD: **few, readable, real** session metrics — or Can’t measure **per field**. Decorative or invented numbers break the trust rule. Do not blank pose-derived Run-up solely because the ball failed.
+- HUD: **few, readable, real** session metrics. KAN-331 retired Ready / Can't measure as a HUD headline. Decorative or invented numbers are still out. Do not blank pose-derived Run-up solely because the ball failed. When a delivery can't be measured, a brief reason is enough.
 - Impact on HUD/copy follows the copy gate above (contact time in this clip, not early/late). Head stability is a batting homepage hero; Contact time stays on detail lists. Release height stays **off** the public bowling HUD until calibrated and gated.
 - Front stride is not a gated API field — do not show it on homepage or batting progress/hero rows.
 - Logo / brand: simple vision/hardware mark (e.g. G + reticle) over illustrated batter / neon poster art (CricVision-adjacent) or consumer-app doodles (Matcha-adjacent).
 
 ## One-line positioning
 
-**Gabriella:** cricket net analysis with a camera the coach can place — side-on to see Bat and Head, front-on for planned pitch-map, wagon-wheel, and ball-path charts — and view-aware metrics for that view. Ready or Can't measure when the view cannot support a number; we never invent one. Not a phone app locked behind the stumps.
+**Gabriella:** bat speed and head stability per delivery, from a camera placed side-on, where the coach needs it. Pitch maps: coming, from a camera that can see the pitch. KAN-331 retired Ready / Can't measure as the headline. The exception stays in the batting and bowling footnotes only.

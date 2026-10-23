@@ -6,6 +6,8 @@ This file is **not** a second product contract. It only records how this marketi
 
 Related site copy: [competitive-positioning.md](./competitive-positioning.md) (Impact wording). Quality-gate behaviour is implemented in Modal / Showcase. This file records the **website-facing** lock so marketing copy does not describe the old overall-gate blank.
 
+**KAN-331 (2026-10-23):** Ready / Can't measure is retired as the public headline, hero sub-line, feature bullet, HUD label, tooltip, and meta description. Public pages lead with results: bat speed and head stability per delivery, from a camera placed side-on. The camera can sit where the coach needs it. Do not say “for every delivery,” “each delivery can return,” “from a phone,” or “phone view.” Do not claim Bat or Head from front-on. Front-on batting is planned charts only. Can't measure is a rare exception, not a theme: only the small footnotes on `batting.html` and `bowling.html`. Do not put that sentence in heroes or body copy, and do not headline “we don't invent a number.” The ball-speed tooltip is “Measured ball speed in this take (km/h).” Do not invent numbers or accuracy claims. Sample heroes stay Bat **10.6 km/h** and Head **45.9 cm** (`cricket-vision-hero.png` unchanged). Pitch maps public line: “coming, from a camera that can see the pitch” — no date. The per-metric rules below stay the product behavior (never invent a number). They are not the public pitch.
+
 ---
 
 ## Per-metric trust / fail-loud (critical)
@@ -63,7 +65,7 @@ Wire a small ⓘ next to every coach-facing metric label. Hover **and** tap/focu
 | Head stability | Hero | How much the head moved from downswing to contact (cm). Lower usually means steadier — not a technique grade. |
 | Run-up speed | Hero | Peak approach speed into the delivery in this take (km/h). |
 | Contact time in this clip | Detail only | Time from the start of this take to contact (ms). Use it to compare same-view sessions — not early vs late. |
-| Ball speed | Detail only | Measured ball speed in this take (km/h), only when the take is gated. |
+| Ball speed | Detail only | Measured ball speed in this take (km/h). Do not say Ready / Can't measure (KAN-331). |
 | Ball speed change through contact | Showcase Results detail only | Physics Δ through contact (km/h). Ball-dependent: needs `quality.gated === true`. Not a homepage hero. No extra marketing-tip string beyond this label. |
 | Front knee angle | Detail only | Front-knee flexion at plant in this take (degrees). 0° ≈ fully extended. |
 | Arm angular speed | Detail only | Peak arm angular speed in this take (°/s). |
