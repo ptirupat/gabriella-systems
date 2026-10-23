@@ -41,7 +41,7 @@ For traction with cricket academies and coaches in **US + India**, the highest R
 | Session auto-crop = must-have **once shipped**; do not claim early | Marketing must wait for KAN-138/139 |
 | Don’t race white-label ops | CricVision/Ludimos AMS is adjacent GTM, not Gabriella’s wedge |
 
-Sample Showcase numbers used on the marketing site (illustrative of locked fields, **not** competitive claims of superiority): Bat ~10.6 km/h, Head ~45.9 cm, Run-up ~20.4 km/h. Do not invent new Gabriella metrics for this report.
+Sample Showcase numbers on the marketing site are being replaced: the old Bat and Head samples were found to be wrong or unverified (2026-10-16), so this doc quotes no sample values until verified ones land. Do not invent new Gabriella metrics for this report.
 
 ---
 

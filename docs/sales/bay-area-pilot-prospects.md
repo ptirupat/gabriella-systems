@@ -14,7 +14,7 @@ Ages, programs, and contacts below are only the facts from this pass. A blank ce
 
 - Free for the academy/facility (no charge for the first pilots).
 - Capture: use a normal camera / phone / facility camera to record practice video — NOT the Gabriella hardware device we plan to build later.
-- Product under test: software analysis / coaching metrics on those tip crops (placement-first Ready / Can't measure trust), not device sales.
+- Product under test: software analysis / coaching metrics on those tip crops (bat speed at impact and head stability from a side-on view; front-on added once its count passes the gate), not device sales.
 - Outreach still only on Praveen’s go.
 
 ## Pilot value (safe claims — locked 2026-10-06)
@@ -22,8 +22,8 @@ Ages, programs, and contacts below are only the facts from this pass. A blank ce
 ### Features they use in the pilot
 
 - Delivery find from a short practice recording (tip crops; not “4K analysis” marketing).
-- Ready / Can't measure on each tip, with a plain reason when Can't measure.
-- Bat & Head when coaching side or front batting view allows (Ready only; not every tip).
+- Bat speed at impact and head stability from a side-on coaching view (front-on once its count passes the gate).
+- "Can't measure" is rare: only when the camera angle rules out a confident number, and it comes with a plain reason. Don't lead with it.
 - Capture with normal camera / phone / facility camera — NOT Gabriella hardware.
 - Coach-facing results for that session. Soft-hold naming Trim/review-on-video until Praveen unlocks.
 
@@ -31,7 +31,7 @@ Ages, programs, and contacts below are only the facts from this pass. A blank ce
 
 - Free first session: record → tips → metrics pack for that group.
 - Faster “what happened on that ball?” without buying hardware.
-- Trust signal coaches can stand behind: Ready vs Can't measure.
+- Numbers coaches can stand behind, checked against hand labels, from their own camera.
 - Coach feedback shapes the product for youth pathway batches.
 - No device sell / no lock-in for initial pilots.
 
@@ -93,22 +93,24 @@ No public contact is recorded here. Do not invent one.
 
 Draft for Praveen to personalize. Do not send. Outreach only when Praveen sends.
 
-**Subject:** Free coaching-metrics pilot for [Academy] — camera capture, no hardware
+Gate before any send (Praveen, 2026-10-22, KAN-331): bat speed and head stability must come back on 90% or more of side-on contact deliveries, and head stability on 90% or more of front-on deliveries. Leaves and misses aren't counted, hidden contact counts as a failure, n must be 30 or more per view per source, and the values must match hand labels within ML's tolerance. The 09-27 session can't pass (about two-thirds at best), so the check runs on a new off-side, square-on session. Praveen has to see the count. A phone filming side-on next to the GoPro must clear it too on 30 or more contact deliveries, reported separately, since pilot coaches will film on phones. Praveen gives the go.
+
+**Subject:** Free coaching-metrics pilot for [Academy]: your own camera, no hardware
 
 ```text
 Hi [First name / Coaching team],
 
-I’m Praveen Tirupattur, founder of Gabriella Systems. We build software that turns practice video into coaching metrics for cricket — bat, head, and related batting cues when the view allows, with a clear Ready / Can’t measure result so coaches know what is trusted.
+I'm Praveen Tirupattur, founder of Gabriella Systems. We build software that turns practice video into batting metrics for coaches. Film a practice side-on, and the software measures bat speed at impact and head stability for your coaches.
 
-We’re starting a small set of free initial pilots with Bay Area academies and youth programs. For these free pilots you would get:
-- A short practice recorded on a normal camera, phone, or your facility camera (no hardware purchase)
-- Deliveries found and cut into tips from that session
-- Bat and Head numbers where the coaching view allows, each marked Ready or Can’t measure with a clear reason
-- A metrics pack for your coaches after the session, plus a short feedback call
+We're running a small set of free pilots with Bay Area academies and youth programs. Here's how it works:
+- Your coaches film a normal practice on a phone or your facility camera. There's no hardware to buy.
+- They upload it to your academy's own portal, confirm the deliveries we find, and see each batter's results there.
+- Only your academy sees your players' video and results.
+- We do a short feedback call after the first sessions.
 
-We do not claim every tip measures, and we are not pitching charts or a capture device in this pilot.
+Charts like pitch maps are still coming.
 
-If you’re open to a short call or a session at [your nets / indoor lanes], reply with a good time and I’ll send a one-pager.
+If you're open to a short call, reply with a good time and I'll send a one-pager.
 
 Thanks,
 Praveen Tirupattur
@@ -119,9 +121,12 @@ praveen.tirupattur@gabriellasystems.com
 Notes:
 
 - Personalize To / academy name from the contact table; swap in the public contact.
-- Do not claim charts live (pitch map / wagon wheel / ball-track compare) until Product unlocks.
-- Do not name body-worn / umpire / empire capture. Do not name competitors.
-- Safe line: find deliveries + Ready where the view allows; some Ready / not every tip.
+- Pilot path is portal self-serve only: coaches upload, confirm deliveries and see results in their academy portal. Never offer "send us the video", staff tagging or Admin access.
+- Pitch maps: say "it's coming, from a camera that can see the pitch", with no date. Don't claim wagon wheel or ball-track compare.
+- Don't quote the old site samples (Bat 10.6 km/h, Head 45.9 cm); they are being replaced with verified values.
+- Don't name competitors or say what they can't do. Don't name umpire / body-worn capture.
+- No price in outreach; the pilot is free.
+- Lead with what coaches get: name the metrics (bat speed at impact, head stability) with no figure and no coverage claim such as "each delivery" or "per delivery", matching website #49. Don't say "most deliveries" or quote a rate until the 90% count (n of 30 or more per view, per source) has passed. Say side-on only until front-on passes. Mention "Can't measure" only if asked, as the rare case where the camera angle doesn't allow a confident number (Praveen, 2026-10-22).
 - Outreach still only when Praveen sends.
 
 ## Outreach status
