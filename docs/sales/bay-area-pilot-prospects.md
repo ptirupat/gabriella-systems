@@ -14,7 +14,7 @@ Ages, programs, and contacts below are only the facts from this pass. A blank ce
 
 - Free for the academy/facility (no charge for the first pilots).
 - Capture: use a normal camera / phone / facility camera to record practice video — NOT the Gabriella hardware device we plan to build later.
-- Product under test: software analysis / coaching metrics on those tip crops (Bat and Head for each delivery from a side-on view; front-on added once its count passes the gate), not device sales.
+- Product under test: software analysis / coaching metrics on those tip crops (bat speed at impact and head stability from a side-on view; front-on added once its count passes the gate), not device sales.
 - Outreach still only on Praveen’s go.
 
 ## Pilot value (safe claims — locked 2026-10-06)
@@ -22,7 +22,7 @@ Ages, programs, and contacts below are only the facts from this pass. A blank ce
 ### Features they use in the pilot
 
 - Delivery find from a short practice recording (tip crops; not “4K analysis” marketing).
-- Bat & Head for each delivery filmed from a side-on coaching view (front-on once its count passes the gate).
+- Bat speed at impact and head stability from a side-on coaching view (front-on once its count passes the gate).
 - "Can't measure" is rare: only when the camera angle rules out a confident number, and it comes with a plain reason. Don't lead with it.
 - Capture with normal camera / phone / facility camera — NOT Gabriella hardware.
 - Coach-facing results for that session. Soft-hold naming Trim/review-on-video until Praveen unlocks.
@@ -100,7 +100,7 @@ Gate before any send (Praveen, 2026-10-22, KAN-331): bat speed and head stabilit
 ```text
 Hi [First name / Coaching team],
 
-I'm Praveen Tirupattur, founder of Gabriella Systems. We build software that turns practice video into batting metrics for coaches. Film a practice side-on, and your coaches get bat speed and head stability for each delivery.
+I'm Praveen Tirupattur, founder of Gabriella Systems. We build software that turns practice video into batting metrics for coaches. Film a practice side-on, and the software measures bat speed at impact and head stability for your coaches.
 
 We're running a small set of free pilots with Bay Area academies and youth programs. Here's how it works:
 - Your coaches film a normal practice on a phone or your facility camera. There's no hardware to buy.
@@ -126,7 +126,7 @@ Notes:
 - Don't quote the old site samples (Bat 10.6 km/h, Head 45.9 cm); they are being replaced with verified values.
 - Don't name competitors or say what they can't do. Don't name umpire / body-worn capture.
 - No price in outreach; the pilot is free.
-- Lead with what coaches get, Bat and Head for each delivery. Don't say "most deliveries" or quote a rate until the 90% count (n of 30 or more per view, per source) has passed. Say side-on only until front-on passes. Mention "Can't measure" only if asked, as the rare case where the camera angle doesn't allow a confident number (Praveen, 2026-10-22).
+- Lead with what coaches get: name the metrics (bat speed at impact, head stability) with no figure and no coverage claim such as "each delivery" or "per delivery", matching website #49. Don't say "most deliveries" or quote a rate until the 90% count (n of 30 or more per view, per source) has passed. Say side-on only until front-on passes. Mention "Can't measure" only if asked, as the rare case where the camera angle doesn't allow a confident number (Praveen, 2026-10-22).
 - Outreach still only when Praveen sends.
 
 ## Outreach status
