@@ -93,7 +93,7 @@ No public contact is recorded here. Do not invent one.
 
 Draft for Praveen to personalize. Do not send. Outreach only when Praveen sends.
 
-Gate before any send (Praveen, 2026-10-22, KAN-331): Bat and Head must come back on 90% or more of side-on and front-on deliveries, reported as a count out of n, and the values must match hand labels within ML's tolerance. Praveen has to see the count. A short phone-filmed capture (about 10 deliveries) should clear it too, reported separately, since pilot coaches will film on phones. Praveen gives the go.
+Gate before any send (Praveen, 2026-10-22, KAN-331): bat speed and head stability must come back on 90% or more of side-on contact deliveries, and head stability on 90% or more of front-on deliveries. Leaves and misses aren't counted, hidden contact counts as a failure, n must be 30 or more per view per source, and the values must match hand labels within ML's tolerance. The 09-27 session can't pass (about two-thirds at best), so the check runs on a new off-side, square-on session. Praveen has to see the count. A short phone-filmed capture (about 10 deliveries) should clear it too, reported separately, since pilot coaches will film on phones. Praveen gives the go.
 
 **Subject:** Free coaching-metrics pilot for [Academy]: your own camera, no hardware
 
