@@ -93,22 +93,24 @@ No public contact is recorded here. Do not invent one.
 
 Draft for Praveen to personalize. Do not send. Outreach only when Praveen sends.
 
-**Subject:** Free coaching-metrics pilot for [Academy] — camera capture, no hardware
+Gate before any send (updated 2026-10-22): a side-on nets session must show a measured Bat and Head Ready rate of about 70% or more, Praveen has seen the count, and a short phone-filmed side-on capture (about 10 deliveries) should clear it too, since pilot coaches will film on phones. Praveen gives the go.
+
+**Subject:** Free coaching-metrics pilot for [Academy]: your own camera, no hardware
 
 ```text
 Hi [First name / Coaching team],
 
-I’m Praveen Tirupattur, founder of Gabriella Systems. We build software that turns practice video into coaching metrics for cricket — bat, head, and related batting cues when the view allows, with a clear Ready / Can’t measure result so coaches know what is trusted.
+I'm Praveen Tirupattur, founder of Gabriella Systems. We build software that turns practice video into batting metrics for coaches. Each delivery comes back Ready with Bat and Head numbers when the coaching view allows, or Can't measure with a plain reason, so your coaches know which numbers to trust.
 
-We’re starting a small set of free initial pilots with Bay Area academies and youth programs. For these free pilots you would get:
-- A short practice recorded on a normal camera, phone, or your facility camera (no hardware purchase)
-- Deliveries found and cut into tips from that session
-- Bat and Head numbers where the coaching view allows, each marked Ready or Can’t measure with a clear reason
-- A metrics pack for your coaches after the session, plus a short feedback call
+We're running a small set of free pilots with Bay Area academies and youth programs. Here's how it works:
+- Your coaches film a normal practice on a phone or your facility camera. There's no hardware to buy.
+- They upload it to your academy's own portal, confirm the deliveries we find, and see Ready / Can't measure results there.
+- Only your academy sees your players' video and results.
+- We do a short feedback call after the first sessions.
 
-We do not claim every tip measures, and we are not pitching charts or a capture device in this pilot.
+We don't claim every delivery measures, and charts like pitch maps are still coming.
 
-If you’re open to a short call or a session at [your nets / indoor lanes], reply with a good time and I’ll send a one-pager.
+If you're open to a short call, reply with a good time and I'll send a one-pager.
 
 Thanks,
 Praveen Tirupattur
@@ -119,9 +121,11 @@ praveen.tirupattur@gabriellasystems.com
 Notes:
 
 - Personalize To / academy name from the contact table; swap in the public contact.
-- Do not claim charts live (pitch map / wagon wheel / ball-track compare) until Product unlocks.
-- Do not name body-worn / umpire / empire capture. Do not name competitors.
-- Safe line: find deliveries + Ready where the view allows; some Ready / not every tip.
+- Pilot path is portal self-serve only: coaches upload, confirm deliveries and see results in their academy portal. Never offer "send us the video", staff tagging or Admin access.
+- Pitch maps: say "it's coming, from a camera that can see the pitch", with no date. Don't claim wagon wheel or ball-track compare.
+- Don't quote the old site samples (Bat 10.6 km/h, Head 45.9 cm); they are being replaced with verified values.
+- Don't name competitors or say what they can't do. Don't name umpire / body-worn capture.
+- No price in outreach; the pilot is free.
 - Outreach still only when Praveen sends.
 
 ## Outreach status
