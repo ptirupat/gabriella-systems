@@ -811,12 +811,19 @@ sup.fn-mark a:focus-visible {
     line-height: 1.35;
 }
 
-.compare-row strong.metric-placeholder {
-    font-size: 0.92rem;
+.compare-row strong.metric-placeholder,
+.clip-hud-row strong.metric-placeholder,
+.analysis-row strong.metric-placeholder {
+    font-size: 0.78rem;
     font-weight: 600;
-    line-height: 1.35;
+    line-height: 1.3;
     text-align: right;
-    max-width: 15rem;
+    max-width: 8.6rem;
+}
+
+.clip-hud-row strong.metric-placeholder,
+.analysis-row strong.metric-placeholder {
+    color: rgba(255, 255, 255, 0.86);
 }
 
 .placement-section {
@@ -2348,11 +2355,12 @@ sup.fn-mark a:focus-visible {
 }
 
 .hero-metric-card .metric-value.metric-unmeasured {
-    font-size: 1.05rem;
+    font-size: 0.95rem;
     font-weight: 600;
     letter-spacing: 0.01em;
     line-height: 1.25;
-    color: rgba(255, 255, 255, 0.82);
+    color: rgba(255, 255, 255, 0.88);
+    max-width: 9.6rem;
 }
 
 .hero-metric-card .metric-label {

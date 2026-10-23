@@ -6,6 +6,15 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 
 ---
 
+## 2026-10-22
+
+### Bat and Head sample numbers withdrawn
+
+- Public samples **Bat speed at impact 10.6 km/h** and **Head stability 45.9 cm** are withdrawn pending verified numbers. They came from a stale run that took the bat tip from the wrong mask piece. Do not republish them, including labelled "Sample".
+- `index.html` and `batting.html` keep the Bat and Head cards, HUD rows, and session rows. The value line is **Measured per delivery**. Run-up **20.4**, Ball **122**, Contact **800**, Arm **619**, and Front knee **155** are unchanged. No new numeric claim.
+- `assets/cricket-vision-hero.png` had no readable Bat or Head figure (OCR). One detected face region was blurred. GIF binaries in `assets/` were not edited.
+- Sections below that quote 10.6 / 45.9 describe the lock before this withdrawal.
+
 ## 2026-10-05
 
 ### Placement-first positioning (copy gate + About)
