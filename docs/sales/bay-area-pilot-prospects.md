@@ -93,7 +93,7 @@ No public contact is recorded here. Do not invent one.
 
 Draft for Praveen to personalize. Do not send. Outreach only when Praveen sends.
 
-Gate before any send (updated 2026-10-22): a side-on nets session must show a measured Bat and Head Ready rate of about 70% or more, Praveen has seen the count, and a short phone-filmed side-on capture (about 10 deliveries) should clear it too, since pilot coaches will film on phones. Praveen gives the go.
+Gate before any send (Praveen, 2026-10-22, KAN-331): Bat and Head must come back on 90% or more of side-on and front-on deliveries, reported as a count out of n, and the values must match hand labels within ML's tolerance. Praveen has to see the count. A short phone-filmed capture (about 10 deliveries) should clear it too, reported separately, since pilot coaches will film on phones. Praveen gives the go.
 
 **Subject:** Free coaching-metrics pilot for [Academy]: your own camera, no hardware
 
