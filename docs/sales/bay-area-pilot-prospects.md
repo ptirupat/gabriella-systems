@@ -14,7 +14,7 @@ Ages, programs, and contacts below are only the facts from this pass. A blank ce
 
 - Free for the academy/facility (no charge for the first pilots).
 - Capture: use a normal camera / phone / facility camera to record practice video — NOT the Gabriella hardware device we plan to build later.
-- Product under test: software analysis / coaching metrics on those tip crops (placement-first Ready / Can't measure trust), not device sales.
+- Product under test: software analysis / coaching metrics on those tip crops (Bat and Head results on most deliveries from a good side-on or front-on view), not device sales.
 - Outreach still only on Praveen’s go.
 
 ## Pilot value (safe claims — locked 2026-10-06)
@@ -22,8 +22,8 @@ Ages, programs, and contacts below are only the facts from this pass. A blank ce
 ### Features they use in the pilot
 
 - Delivery find from a short practice recording (tip crops; not “4K analysis” marketing).
-- Ready / Can't measure on each tip, with a plain reason when Can't measure.
-- Bat & Head when coaching side or front batting view allows (Ready only; not every tip).
+- Bat & Head results on most deliveries filmed from a side-on or front-on coaching view.
+- "Can't measure" is rare: only when the camera angle rules out a confident number, and it comes with a plain reason. Don't lead with it.
 - Capture with normal camera / phone / facility camera — NOT Gabriella hardware.
 - Coach-facing results for that session. Soft-hold naming Trim/review-on-video until Praveen unlocks.
 
@@ -31,7 +31,7 @@ Ages, programs, and contacts below are only the facts from this pass. A blank ce
 
 - Free first session: record → tips → metrics pack for that group.
 - Faster “what happened on that ball?” without buying hardware.
-- Trust signal coaches can stand behind: Ready vs Can't measure.
+- Numbers coaches can stand behind on most deliveries, measured confidently from their own camera.
 - Coach feedback shapes the product for youth pathway batches.
 - No device sell / no lock-in for initial pilots.
 
@@ -100,15 +100,15 @@ Gate before any send (updated 2026-10-22): a side-on nets session must show a me
 ```text
 Hi [First name / Coaching team],
 
-I'm Praveen Tirupattur, founder of Gabriella Systems. We build software that turns practice video into batting metrics for coaches. Each delivery comes back Ready with Bat and Head numbers when the coaching view allows, or Can't measure with a plain reason, so your coaches know which numbers to trust.
+I'm Praveen Tirupattur, founder of Gabriella Systems. We build software that turns practice video into batting metrics for coaches. Film a practice from the side or front, and your coaches get bat speed and head stability for the deliveries in it.
 
 We're running a small set of free pilots with Bay Area academies and youth programs. Here's how it works:
 - Your coaches film a normal practice on a phone or your facility camera. There's no hardware to buy.
-- They upload it to your academy's own portal, confirm the deliveries we find, and see Ready / Can't measure results there.
+- They upload it to your academy's own portal, confirm the deliveries we find, and see each batter's results there.
 - Only your academy sees your players' video and results.
 - We do a short feedback call after the first sessions.
 
-We don't claim every delivery measures, and charts like pitch maps are still coming.
+Charts like pitch maps are still coming.
 
 If you're open to a short call, reply with a good time and I'll send a one-pager.
 
@@ -126,6 +126,7 @@ Notes:
 - Don't quote the old site samples (Bat 10.6 km/h, Head 45.9 cm); they are being replaced with verified values.
 - Don't name competitors or say what they can't do. Don't name umpire / body-worn capture.
 - No price in outreach; the pilot is free.
+- Lead with results on most deliveries. Mention "Can't measure" only if asked, as the rare case where the camera angle doesn't allow a confident number (Praveen, 2026-10-22).
 - Outreach still only when Praveen sends.
 
 ## Outreach status
