@@ -14,7 +14,7 @@
 
 ## 1. Executive summary
 
-Gabriella’s wedge is **results from ordinary nets video** — **bat speed at impact** and **head stability** per delivery, from a camera placed side-on, with view-aware batting/bowling and locked heroes (those two for batting; bowling **Run-up** only). Do not claim Bat or Head from front-on, and do not say “for every delivery” or “from a phone.” **KAN-331** retired Ready / Can't measure as the public headline. When a delivery can't be measured, say why — that is an exception, not the pitch. Rivals win academy deals today by shipping **always-on numbers**, **auto delivery-crop**, **coach annotation / PDF / reels**, and (for some) **white-label academy ops**.
+Gabriella’s wedge is **results from ordinary nets video** — **bat speed at impact** and **head stability** per delivery, from a camera placed side-on, with view-aware batting/bowling and locked heroes (those two for batting; bowling **Run-up** only). Do not claim Bat or Head from front-on, and do not say “for every delivery” or “from a phone.” **KAN-331** retired Ready / Can't measure as the public headline. When a delivery can't be measured, say why only in the batting and bowling footnotes — that is an exception, not the pitch. Rivals win academy deals today by shipping **always-on numbers**, **auto delivery-crop**, **coach annotation / PDF / reels**, and (for some) **white-label academy ops**.
 
 For traction with cricket academies and coaches in **US + India**, the highest ROI path is:
 
