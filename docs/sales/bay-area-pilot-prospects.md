@@ -93,7 +93,7 @@ No public contact is recorded here. Do not invent one.
 
 Draft for Praveen to personalize. Do not send. Outreach only when Praveen sends.
 
-Gate before any send (Praveen, 2026-10-22, KAN-331): bat speed and head stability must come back on 90% or more of side-on contact deliveries, and head stability on 90% or more of front-on deliveries. Leaves and misses aren't counted, hidden contact counts as a failure, n must be 30 or more per view per source, and the values must match hand labels within ML's tolerance. The 09-27 session can't pass (about two-thirds at best), so the check runs on a new off-side, square-on session. Praveen has to see the count. A phone filming side-on next to the GoPro must clear it too on 30 or more contact deliveries, reported separately, since pilot coaches will film on phones. Praveen gives the go.
+Gate before any send (Praveen, 2026-10-25, KAN-331; supersedes the 90% and n of 30 set on 2026-10-22): bat speed at impact and head stability must be measured on at least 80% of side-on and front-on contact deliveries (bat speed counts on side-on only; head stability on both views), reported as a count out of n for each source, with at least 15 clips per view. Leaves and misses aren't counted and hidden contact counts as a failure. Values must agree with Data's hand labels within the KAN-331 tolerances. The 09-27 session can't pass, so the check runs on a new off-side, square-on session. The phone filming side-on next to the GoPro is reported separately, since pilot coaches will film on phones (its minimum clip count is waiting on Product to confirm it matches the new 15). Outreach stays on hold until Praveen has seen the counts and says go.
 
 **Subject:** Free coaching-metrics pilot for [Academy]: your own camera, no hardware
 
@@ -126,7 +126,7 @@ Notes:
 - Don't quote the old site samples (Bat 10.6 km/h, Head 45.9 cm); they are being replaced with verified values.
 - Don't name competitors or say what they can't do. Don't name umpire / body-worn capture.
 - No price in outreach; the pilot is free.
-- Lead with what coaches get: name the metrics (bat speed at impact, head stability) with no figure and no coverage claim such as "each delivery" or "per delivery", matching website #49. Don't say "most deliveries" or quote a rate until the 90% count (n of 30 or more per view, per source) has passed. Say side-on only until front-on passes. Mention "Can't measure" only if asked, as the rare case where the camera angle doesn't allow a confident number (Praveen, 2026-10-22).
+- Lead with what coaches get: name the metrics (bat speed at impact, head stability) with no figure and no coverage claim such as "each delivery" or "per delivery", matching website #49. Don't say "most deliveries" or quote a rate until the 80% count (n of 15 or more per view, per source) has passed. Say side-on only until front-on passes. Mention "Can't measure" only if asked, as the rare case where the camera angle doesn't allow a confident number (Praveen, 2026-10-22).
 - Outreach still only when Praveen sends.
 
 ## Outreach status
