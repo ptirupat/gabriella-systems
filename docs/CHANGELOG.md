@@ -8,6 +8,11 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 
 ## 2026-10-25
 
+### Clip HUD sits below the video on phones
+
+- At 640px and below, the Gabriella Vision panel on the homepage, `batting.html`, and `bowling.html` is a normal block under the clip: static position, the full width of the card, and a small gap. Wider layouts keep the overlay.
+- Metric names, copy, and the GIF files are unchanged. No numeric values were added.
+
 ### Batting and bowling GIFs restored
 
 - `assets/cricket_batting_15s.gif` and `assets/cricket_bowling_15s.gif` are back on the homepage dual-video section, `batting.html`, and `bowling.html`. Both were recut from cleared, face-blurred footage and added unmodified.
