@@ -11,6 +11,8 @@ Narrative of what the marketing site claims, what changed in September–October
 
 This is a static HTML site. Live analysis runs on Modal and is embedded from `demo.html` (Showcase) and `admin.html`.
 
+**2026-10-25:** On phones (640px and below), the Gabriella Vision clip HUD on the homepage, `batting.html`, and `bowling.html` sits under the clip as a full-width block with a small gap. The overlay on wider screens is unchanged. Metric names, copy, and the GIFs are unchanged. No numeric values were added.
+
 **2026-10-25:** The batting and bowling GIFs are back on the homepage and on `batting.html` and `bowling.html`. They were recut from cleared, face-blurred footage and added unmodified. Clip HUD overlays stay metric names only. The batting layout is unchanged. The bowling image is portrait, so it is height-capped and centered.
 
 **2026-10-23:** The remaining public samples were not verified, so Run-up, Ball speed, Contact time, Arm angular speed, and Front knee angle are withdrawn the same way as Bat and Head. Homepage cards use the metric name as the headline and drop the unit line. Clip HUDs, homepage session rows, and batting and bowling sample rows show the name only, with no value and no dash. **Coach-led** stays. No replacement figure and no coverage claim. Entries below that used to quote those samples now omit the figures. Do not republish them.

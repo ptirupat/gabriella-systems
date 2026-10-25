@@ -2248,6 +2248,18 @@ sup.fn-mark a:focus-visible {
     }
 }
 
+/* Phones: keep the Gabriella Vision panel under the clip so it does not cover the player. */
+@media (max-width: 640px) {
+    .clip-hud {
+        position: static;
+        top: auto;
+        left: auto;
+        width: 100%;
+        min-width: 0;
+        margin-top: 0.6rem;
+    }
+}
+
 @media (max-width: 560px) {
     .flow-grid {
         grid-template-columns: 1fr;
