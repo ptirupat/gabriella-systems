@@ -6,6 +6,13 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 
 ---
 
+## 2026-10-25
+
+### Batting and bowling GIFs restored
+
+- `assets/cricket_batting_15s.gif` and `assets/cricket_bowling_15s.gif` are back on the homepage dual-video section, `batting.html`, and `bowling.html`. Both were recut from cleared, face-blurred footage and added unmodified.
+- Clip HUD overlays are unchanged and still show metric names only. The batting layout is unchanged. The bowling image is portrait, so it is height-capped and centered.
+
 ## 2026-10-23
 
 ### Run-up, Ball, Contact, Arm, and Front knee samples withdrawn
