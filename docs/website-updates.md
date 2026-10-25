@@ -11,6 +11,8 @@ Narrative of what the marketing site claims, what changed in September–October
 
 This is a static HTML site. Live analysis runs on Modal and is embedded from `demo.html` (Showcase) and `admin.html`.
 
+**2026-10-25:** The batting and bowling GIFs are back on the homepage and on `batting.html` and `bowling.html`. They were recut from cleared, face-blurred footage and added unmodified. Clip HUD overlays stay metric names only. The batting layout is unchanged. The bowling image is portrait, so it is height-capped and centered.
+
 **2026-10-23:** The remaining public samples were not verified, so Run-up, Ball speed, Contact time, Arm angular speed, and Front knee angle are withdrawn the same way as Bat and Head. Homepage cards use the metric name as the headline and drop the unit line. Clip HUDs, homepage session rows, and batting and bowling sample rows show the name only, with no value and no dash. **Coach-led** stays. No replacement figure and no coverage claim. Entries below that used to quote those samples now omit the figures. Do not republish them.
 
 **2026-10-22:** Public Bat speed at impact **10.6 km/h** and Head stability **45.9 cm** samples were withdrawn pending verified numbers. They came from a stale run that took the bat tip from the wrong mask piece. Homepage hero cards show the metric name in the value slot and no unit line. Clip HUDs and session rows show the name only, with no value. No replacement figure. Entries below that quote those two samples describe the lock before this withdrawal. Do not republish them.
