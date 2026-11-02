@@ -8,6 +8,8 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 
 ## 2026-11-02
 
+- Pitch map and shot direction are marked (coming soon) where they are presented as a current product feature. The names under the example GIFs stay plain.
+
 ### Selected-example batting and bowling GIFs
 
 - `assets/cricket_batting_pitchmap_6s.gif`, `assets/cricket_batting_batspeed_4s.gif`, and `assets/cricket_bowling_knee_5s.gif` are on the homepage, `batting.html`, and `bowling.html`. The pitch-map file was replaced with an updated GIF and added unmodified. The other two were added unmodified.
