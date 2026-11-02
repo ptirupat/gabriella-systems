@@ -206,7 +206,6 @@ input:focus,textarea:focus,select:focus{outline:2px solid var(--navy-700);outlin
   .grid--2,.flow,.flow-grid,.grid--3,.grid--4,.four-col,.features-grid,.product-grid,.metrics-grid,.dual-cards,.compare-grid,.footer__grid,.footer-grid{grid-template-columns:1fr}
   .card,.feature-card,.product-card{padding:var(--s-5)}
   .clip__meta{padding:var(--s-4);display:grid}
-  .clip--portrait .clip__media{aspect-ratio:540/430}
   .footer__brand,.footer-brand{grid-column:auto}
 }
 @media (prefers-reduced-motion:reduce){
