@@ -8,6 +8,10 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 
 ## 2026-11-02
 
+- Site-wide refresh: one palette, type scale, spacing scale, button set, card, clip frame, nav, and footer. Showcase page and embed are unchanged. Closing call-to-action animation no longer hides the heading or buttons. Academies no longer scrolls sideways on a phone. Clip metric strips go full width on small screens. Legal TODO boxes are hidden, legal pages sit below the nav and stay out of the nav, footer, and sitemap, with noindex. Sports is in the footer. Sports and Research are in the sitemap. Buttons say Request a Pilot or Explore the Showcase.
+
+## 2026-11-02
+
 - Pitch map and shot direction are marked (coming soon) where they are presented as a current product feature. The names under the example GIFs stay plain.
 
 ### Selected-example batting and bowling GIFs

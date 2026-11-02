@@ -19,32 +19,24 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="index.html" class="nav-logo-link">
-                    <img src="assets/logo.png" alt="Gabriella Systems" class="nav-logo-img">
-                    <span class="nav-logo-wordmark">Gabriella</span>
-                    <i class="fas fa-house" aria-label="Home" style="font-size:0.7rem; color:var(--muted); margin-left:0.3rem; opacity:0.6; vertical-align:middle;"></i>
-                </a>
-            </div>
-            <div class="nav-menu" id="nav-menu">
-                <a href="services.html" class="nav-link active">Platform</a>
-                <a href="batting.html" class="nav-link">Batting</a>
-                <a href="bowling.html" class="nav-link">Bowling</a>
-                <a href="academies.html" class="nav-link">For Academies</a>
-                <a href="demo.html" class="nav-link">Showcase</a>
-                <a href="research.html" class="nav-link">Research</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="connect.html" class="nav-link">Connect</a>
-            </div>
-            <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
+    <header class="nav">
+  <div class="container nav__bar">
+    <a class="nav__brand" href="index.html" aria-label="Gabriella Systems home">
+      <img src="assets/logo.png" alt="" width="32" height="32"><span>Gabriella</span>
+    </a>
+    <nav class="nav__links" id="nav-links" aria-label="Main">
+      <a href="services.html" aria-current="page">Platform</a>
+      <a href="batting.html">Batting</a>
+      <a href="bowling.html">Bowling</a>
+      <a href="academies.html">For Academies</a>
+      <a href="demo.html">Showcase</a>
+      <a href="research.html">Research</a>
+      <a href="about.html">About</a>
+      <a class="btn btn--primary btn--sm nav__cta" href="connect.html?purpose=Pilot+Interest#interest-form">Request a Pilot</a>
     </nav>
+    <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+  </div>
+</header>
 
     <main class="subpage-main">
         <section class="page-hero">
@@ -149,7 +141,7 @@
                     <ul class="check-list">
                         <li><i class="fas fa-check"></i>Batting and bowling clip analysis</li>
                         <li><i class="fas fa-check"></i>Pose, bat, and ball overlays where visible</li>
-                        <li><i class="fas fa-check"></i>View-aware metrics, Ready when trusted or Can't measure with a plain reason</li>
+                        <li><i class="fas fa-check"></i>View-aware metrics, Ready when trusted or Can’t measure with a plain reason</li>
                         <li><i class="fas fa-check"></i>Phase breakdown for the action in frame</li>
                         <li><i class="fas fa-check"></i>Analysis of a submitted clip</li>
                         <li><i class="fas fa-check"></i>Portable capture hardware on the roadmap</li>
@@ -193,7 +185,7 @@
                     at your academy or training facility.
                 </p>
                 <div class="hero-actions">
-                    <a href="demo.html" class="cta-button">Watch the Showcase</a>
+                    <a href="demo.html" class="cta-button">Explore the Showcase</a>
                     <a href="connect.html?purpose=Pilot+Interest#interest-form" class="secondary-button">Request a Pilot</a>
                 </div>
             </div>
@@ -201,30 +193,20 @@
     </main>
 
         <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <span class="nav-logo-text">Gabriella Systems</span>
-                    <p>Computer vision for cricket performance — batting and bowling intelligence from ordinary video.</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Product</h4>
-                    <a href="services.html">Platform</a>
-                    <a href="batting.html">Batting</a>
-                    <a href="bowling.html">Bowling</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Company</h4>
-                    <a href="about.html">About</a>
-                    <a href="research.html">Research</a>
-                    <a href="connect.html">Connect</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Gabriella Systems. All rights reserved.</p>
-                </div>
-        </div>
-    </footer>
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a class="nav__brand nav__brand--dark" href="index.html"><img src="assets/logo.png" alt="" width="32" height="32"><span>Gabriella Systems</span></a>
+      <p>Computer vision for cricket performance — batting and bowling intelligence from ordinary video.</p>
+    </div>
+    <nav aria-label="Product"><h4>Product</h4>
+      <a href="services.html">Platform</a><a href="batting.html">Batting</a><a href="bowling.html">Bowling</a><a href="academies.html">For Academies</a><a href="demo.html">Showcase</a>
+    </nav>
+    <nav aria-label="Company"><h4>Company</h4>
+      <a href="about.html">About</a><a href="research.html">Research</a><a href="sports.html">Sports</a><a href="connect.html">Connect</a>
+    </nav>
+  </div>
+  <div class="container footer__base">© 2026 Gabriella Systems. All rights reserved.</div>
+</footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
