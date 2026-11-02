@@ -1952,6 +1952,17 @@ sup.fn-mark a:focus-visible {
     padding-top: 0.35rem;
 }
 
+/* List sits under the frame. The GIF already fills the picture, so the names are not overlaid. */
+.clip-hud.clip-hud-below {
+    position: static;
+    top: auto;
+    left: auto;
+    display: inline-block;
+    width: auto;
+    min-width: 13rem;
+    margin-top: 0.7rem;
+}
+
 .video-placeholder {
     position: relative;
     aspect-ratio: 16 / 9;

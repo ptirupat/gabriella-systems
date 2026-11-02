@@ -84,9 +84,8 @@
                         <h3>Bat</h3>
                         <ul class="check-list">
                             <li><i class="fas fa-check"></i><span>Bat path<sup class="fn-mark"><a href="#batting-metric-notes">&dagger;</a></sup></span></li>
-                            <li><i class="fas fa-check"></i>Bat speed at impact</li>
+                            <li><i class="fas fa-check"></i>Bat speed</li>
                             <li><i class="fas fa-check"></i><span>Bat angle<sup class="fn-mark"><a href="#batting-metric-notes">&dagger;</a></sup></span></li>
-                            <li><i class="fas fa-check"></i>Contact time in this clip</li>
                         </ul>
                     </article>
                     <article class="product-card">
@@ -95,7 +94,8 @@
                         </div>
                         <h3>Body</h3>
                         <ul class="check-list">
-                            <li><i class="fas fa-check"></i>Head stability</li>
+                            <li><i class="fas fa-check"></i>Pitch map</li>
+                            <li><i class="fas fa-check"></i>Shot direction</li>
                             <li><i class="fas fa-check"></i><span>Foot movement<sup class="fn-mark"><a href="#batting-metric-notes">&Dagger;</a></sup></span></li>
                             <li><i class="fas fa-check"></i><span>Stride length<sup class="fn-mark"><a href="#batting-metric-notes">&Dagger;</a></sup></span></li>
                             <li><i class="fas fa-check"></i>Joint positions</li>
@@ -136,10 +136,9 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td>Bat speed at impact</td><td><span class="badge-live">Live</span></td><td>When bat is tracked through contact frame</td></tr>
-                        <tr><td>Ball speed</td><td><span class="badge-live">Live</span></td><td>Ready when ball tracking is trusted; otherwise Can't measure (ball not seen, track broke, or impact missing)</td></tr>
-                        <tr><td>Contact time (per clip)</td><td><span class="badge-live">Live</span></td><td>When impact is found</td></tr>
-                        <tr><td>Head stability</td><td><span class="badge-live">Live</span></td><td>When pose estimation covers the head and shoulders</td></tr>
+                        <tr><td>Pitch map</td><td><span class="badge-conditional">Conditional</span></td><td>Estimated example in the clip. Length bands are a rough guide.</td></tr>
+                        <tr><td>Shot direction</td><td><span class="badge-conditional">Conditional</span></td><td>Estimated example in the clip.</td></tr>
+                        <tr><td>Bat speed</td><td><span class="badge-conditional">Conditional</span></td><td>Pipeline estimate in the clip. Labelled as an estimate.</td></tr>
                         <tr><td>Ball trajectory</td><td><span class="badge-conditional">Conditional</span></td><td>Requires sufficient ball visibility and appropriate camera angle</td></tr>
                         <tr><td>Bounce point</td><td><span class="badge-conditional">Conditional</span></td><td>Requires a view that captures the pitch area</td></tr>
                         <tr><td>Stride length, foot movement</td><td><span class="badge-conditional">Conditional</span></td><td>Requires full lower-body pose visibility</td></tr>
@@ -156,21 +155,30 @@
             <div class="container">
                 <div class="section-intro">
                     <p class="eyebrow">Selected examples</p>
-                    <h2>Front-on and side-on batting examples</h2>
+                    <h2>Batting examples</h2>
                     <p>Estimated values from our pipeline, not real measurements. For demonstration only.</p>
                 </div>
                 <div class="selected-examples">
-                    <figure class="selected-example">
+                    <figure class="selected-example demo-clip">
                         <img src="assets/cricket_batting_pitchmap_6s.gif"
-                             alt="Front-on nets batting example with ball path, an estimated pitch map, and estimated shot direction"
+                             alt="Batting example with an estimated pitch map and shot direction"
                              width="960" height="540">
-                        <figcaption>Front-on nets take. Ball path, pitch map, and shot direction are estimated. Length bands are a rough guide and are not checked for this net.</figcaption>
+                        <div class="clip-hud clip-hud-below">
+                            <p class="clip-hud-title">Gabriella Vision</p>
+                            <div class="clip-hud-row"><span>Pitch map</span></div>
+                            <div class="clip-hud-row"><span>Shot direction</span></div>
+                        </div>
+                        <figcaption>Pitch map and shot direction are estimated. Length bands are a rough guide and are not checked for this net.</figcaption>
                     </figure>
-                    <figure class="selected-example">
+                    <figure class="selected-example demo-clip">
                         <img src="assets/cricket_batting_batspeed_4s.gif"
-                             alt="Side-on nets batting example with ball path and an estimated bat speed around impact"
+                             alt="Batting example with an estimated bat speed"
                              width="960" height="540">
-                        <figcaption>Side-on nets take. Bat speed around impact is a pipeline estimate.</figcaption>
+                        <div class="clip-hud clip-hud-below">
+                            <p class="clip-hud-title">Gabriella Vision</p>
+                            <div class="clip-hud-row"><span>Bat speed</span></div>
+                        </div>
+                        <figcaption>Bat speed is a pipeline estimate.</figcaption>
                     </figure>
                 </div>
             </div>
@@ -184,19 +192,19 @@
                 </div>
                 <div class="features-grid">
                     <article class="feature-card">
-                        <i class="fas fa-clock"></i>
-                        <h3>When did contact happen in this take?</h3>
-                        <p>Contact timing in this take — measured in milliseconds from clip start to bat-ball contact. Useful as a same-view marker across sessions, not an early/late judgment.</p>
+                        <i class="fas fa-map"></i>
+                        <h3>Where did this ball pitch?</h3>
+                        <p>Pitch map is an estimated picture of where the ball bounced. The length bands are a rough guide and are not checked for this net.</p>
                     </article>
                     <article class="feature-card">
-                        <i class="fas fa-crosshairs"></i>
-                        <h3>Is my head staying still through the shot?</h3>
-                        <p>Pose overlays help coaches review head and upper-body stability through the shot — alongside bat and ball tracking where visible.</p>
+                        <i class="fas fa-location-arrow"></i>
+                        <h3>Which way did the shot go?</h3>
+                        <p>Shot direction is an estimated line from the nets. Shots missed or lost after contact are not drawn.</p>
                     </article>
                     <article class="feature-card">
-                        <i class="fas fa-chart-bar"></i>
-                        <h3>How consistent is my stride across the session?</h3>
-                        <p>Compare stride length and foot position across deliveries in the same session — where clips share a similar camera view and quality.</p>
+                        <i class="fas fa-baseball-bat-ball"></i>
+                        <h3>How fast was the bat?</h3>
+                        <p>Bat speed is a pipeline estimate for this take. It is labelled as an estimate, not a measured grade.</p>
                     </article>
                 </div>
             </div>
@@ -213,17 +221,14 @@
                     </p>
                 </div>
                 <div class="analysis-stack">
-                    <div class="analysis-row accent-green" data-metric-tip="bat-speed">
-                        <span>Bat speed at impact</span>
+                    <div class="analysis-row accent-green">
+                        <span>Pitch map</span>
                     </div>
-                    <div class="analysis-row accent-amber" data-metric-tip="head-stability">
-                        <span>Head stability</span>
+                    <div class="analysis-row accent-amber">
+                        <span>Shot direction</span>
                     </div>
-                    <div class="analysis-row accent-coral" data-metric-tip="ball-speed">
-                        <span>Ball speed</span>
-                    </div>
-                    <div class="analysis-row accent-teal" data-metric-tip="contact-time">
-                        <span>Contact time in this clip</span>
+                    <div class="analysis-row accent-coral">
+                        <span>Bat speed</span>
                     </div>
                     <div class="analysis-row">
                         <span>Same-view session review</span>

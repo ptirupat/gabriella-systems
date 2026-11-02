@@ -11,7 +11,7 @@ Narrative of what the marketing site claims, what changed in September–October
 
 This is a static HTML site. Live analysis runs on Modal and is embedded from `demo.html` (Showcase) and `admin.html`.
 
-**2026-11-02:** Selected-example GIFs, added unmodified. `batting.html` shows `assets/cricket_batting_pitchmap_6s.gif` and `assets/cricket_batting_batspeed_4s.gif`. `bowling.html` shows `assets/cricket_bowling_knee_5s.gif` only. Section header **Selected examples**. The label beside them is *Estimated values from our pipeline, not real measurements. For demonstration only.* Bowling page copy also says **More bowling analysis is coming soon.** No accuracy claim and no “typical” wording. The HTML clip HUD is not overlaid on these files. Homepage hero cards, homepage 15s clips, and session rows stay name-only. No numeric value was added in HTML. The front-on GIF’s pitch map, shot direction, and ball path are estimated examples, not a live calibrated-chart claim. The bowling frame is 540×430, so it is not height-capped as a portrait.
+**2026-11-02:** Selected-example GIFs on the homepage, `batting.html`, and `bowling.html`. `assets/cricket_batting_pitchmap_6s.gif` was replaced with an updated file and added unmodified. `assets/cricket_batting_batspeed_4s.gif` and `assets/cricket_bowling_knee_5s.gif` were added unmodified. Clip HUDs and metric lists name only what those GIFs show. Batting: **Pitch map**, **Shot direction**, **Bat speed**. Bowling: **Front knee angle**. **Ball speed**, **Head stability**, **Contact time**, **Run-up speed**, and **Arm angular speed** are off those lists. Section header **Selected examples**. The label is *Estimated values from our pipeline, not real measurements. For demonstration only.* Bowling page copy also says **More bowling analysis is coming soon.** The name list sits under each GIF. No numeric value was added in HTML.
 
 **2026-10-25:** On phones (640px and below), the Gabriella Vision clip HUD on the homepage, `batting.html`, and `bowling.html` sits under the clip as a full-width block with a small gap. The overlay on wider screens is unchanged. Metric names, copy, and the GIFs are unchanged. No numeric values were added.
 
@@ -83,19 +83,19 @@ Gabriella Vision is computer vision for cricket nets: coaches upload (or review)
 
 | Page | Role after the update |
 | --- | --- |
-| `index.html` | View-aware hero, pilot CTA, live/planned status chips, dual Showcase GIFs, batting/bowling intelligence lists, session-progress cards. |
+| `index.html` | View-aware hero, pilot CTA, live/planned status chips, selected-example GIFs, batting lists (Pitch map, Shot direction, Bat speed), bowling list (Front knee angle). |
 | `services.html` | Platform pipeline; software-first capture; view-aware batting vs bowling readouts; hardware on the roadmap. |
-| `batting.html` | Batting metrics suited to the camera view; selected-example GIFs (front-on pitch map, side-on bat speed) labelled as pipeline estimates; coaching questions; illustrative compare samples. |
-| `bowling.html` | Same section rhythm as batting: phase cards, Live/Conditional/Research status, one selected-example GIF, “More bowling analysis is coming soon.”, coaching questions, session intelligence. View-suited; no side-on-only meta description. Release height omitted. |
+| `batting.html` | Batting metrics suited to the camera view; selected-example GIFs labelled as pipeline estimates; lists are Pitch map, Shot direction, and Bat speed. |
+| `bowling.html` | Same section rhythm as batting, with one selected-example GIF. The metric list is Front knee angle. Copy includes “More bowling analysis is coming soon.” Release height omitted. |
 | `about.html` | Roadmap: live clip analysis → session workflows → portable capture hardware. |
 
 Related pages: `demo.html` (Showcase iframe), `connect.html` (Connect — pilot form), `academies.html`, `admin.html`.
 
 ## Homepage GIFs and HUD
 
-Homepage assets: `assets/cricket_batting_15s.gif`, `assets/cricket_bowling_15s.gif`.
+Homepage and mode-page examples: `assets/cricket_batting_pitchmap_6s.gif`, `assets/cricket_batting_batspeed_4s.gif`, `assets/cricket_bowling_knee_5s.gif`.
 
-**2026-11-02** mode-page examples (added unmodified; not used on the homepage): `assets/cricket_batting_pitchmap_6s.gif`, `assets/cricket_batting_batspeed_4s.gif`, `assets/cricket_bowling_knee_5s.gif`.
+Earlier homepage loops, still in `assets/` and not embedded on the pages: `assets/cricket_batting_15s.gif`, `assets/cricket_bowling_15s.gif`.
 
 | Commit | What landed |
 | --- | --- |

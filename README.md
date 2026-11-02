@@ -44,7 +44,7 @@ Product should review these for accuracy:
 - GSAP + ScrollTrigger (homepage motion)
 - Space Grotesk / Inter
 - Font Awesome
-- Assets in `assets/` (`logo.png`, `cricket_batting_15s.gif`, `cricket_bowling_15s.gif`, `cricket_batting_pitchmap_6s.gif`, `cricket_batting_batspeed_4s.gif`, `cricket_bowling_knee_5s.gif`, `cricket-vision-hero.png`). The 15s loops stay on the homepage. The three shorter GIFs are the selected examples on `batting.html` and `bowling.html`, added unmodified and labelled as pipeline estimates.
+- Assets in `assets/` (`logo.png`, `cricket_batting_pitchmap_6s.gif`, `cricket_batting_batspeed_4s.gif`, `cricket_bowling_knee_5s.gif`, `cricket-vision-hero.png`). Those three GIFs are the selected examples on the homepage, `batting.html`, and `bowling.html`, added unmodified and labelled as pipeline estimates. Clip HUD and metric lists name Pitch map, Shot direction, and Bat speed for batting, and Front knee angle for bowling.
 
 ## Local preview
 
@@ -60,5 +60,5 @@ PORT=9000 ./start-local.sh
 
 ## Related work and blockers
 
-- HUD implementation: [docs/homepage-hud-metrics.md](docs/homepage-hud-metrics.md) — batting **Bat speed at impact** (`bat_speed_at_impact_kmh`) + **Head stability** (`head_stability_cm`); bowling Run-up speed (`peak_runup_speed_kmh`) only (Release height omitted until calibrated — not a Can't measure placeholder). **Withdrawn 2026-10-22:** the public Bat **10.6 km/h** and Head **45.9 cm** samples are off the site pending verified numbers (stale run; bat tip from the wrong mask piece). **Withdrawn 2026-10-23:** the public Run-up, Ball, Contact, Arm angular speed, and Front knee samples are off the same way. Homepage cards show the metric name in the value slot and drop the unit line. HUD and session rows show the name only, with no value and no dash. Do not republish 10.6, 45.9, or those five samples. Showcase Results Δ **−11.1** is **Ball speed change through contact** (gallery **`batting-defense`**), not a homepage hero. Fail loud is **per metric** (untrusted Head → Can't measure on that slot; do not put Contact back on the hero row; pose-derived Run-up may show when pose is trusted even if ball `no_detection` blanks overall gated). Never pipeline-peak 36–39 or peak ~90. Contract lives in Modal PRODUCT.md.
+- HUD implementation: [docs/homepage-hud-metrics.md](docs/homepage-hud-metrics.md). Selected-example clip HUDs and metric lists name **Pitch map**, **Shot direction**, and **Bat speed** for batting, and **Front knee angle** for bowling. Ball speed, Head stability, Contact time, Run-up speed, and Arm angular speed are off those lists. No numeric value is added in HTML. The examples are labelled: Estimated values from our pipeline, not real measurements. For demonstration only.
 - Modal quality gate / `impact_offset_ms` live in the ML/Modal repo (not this tree). Showcase per-metric trust shipped in demo #20 (`c03cdbb` — re-verify there).

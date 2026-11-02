@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Dual GIF / media reveal on homepage
     if (document.querySelector('.dual-video')) {
-        gsap.from('.dual-video > div', {
+        gsap.from('.dual-video > div, .dual-video > figure', {
             scrollTrigger: { trigger: '.dual-video', start: 'top 82%' },
             opacity: 0,
             y: 28,

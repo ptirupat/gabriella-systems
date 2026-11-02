@@ -10,11 +10,11 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 
 ### Selected-example batting and bowling GIFs
 
-- Three GIFs were added unmodified: `assets/cricket_batting_pitchmap_6s.gif` (front-on pitch map and shot direction), `assets/cricket_batting_batspeed_4s.gif` (side-on bat speed), and `assets/cricket_bowling_knee_5s.gif` (front knee at front-foot contact).
-- `batting.html` shows the two batting GIFs. `bowling.html` shows the one bowling GIF. Both sections are headed **Selected examples**. The line beside them is: *Estimated values from our pipeline, not real measurements. For demonstration only.*
-- The bowling page also says **More bowling analysis is coming soon.** The bowling image is 540×430, so the old portrait height cap is not used.
-- These files include their own panels, so the HTML Gabriella Vision overlay is not placed on top of them. Homepage hero cards, the homepage 15s clips, and session rows are unchanged and still show metric names only. No numeric value was added in HTML. Figures inside the new GIFs stay in those files, labelled estimated, and do not restore the withdrawn samples.
-- Pitch map, shot direction, and ball path in the front-on GIF are estimated examples. They are not a live calibrated-chart claim.
+- `assets/cricket_batting_pitchmap_6s.gif`, `assets/cricket_batting_batspeed_4s.gif`, and `assets/cricket_bowling_knee_5s.gif` are on the homepage, `batting.html`, and `bowling.html`. The pitch-map file was replaced with an updated GIF and added unmodified. The other two were added unmodified.
+- Clip HUDs and metric lists name only what those GIFs show. Batting: **Pitch map**, **Shot direction**, **Bat speed**. Bowling: **Front knee angle**.
+- **Ball speed**, **Head stability**, **Contact time**, **Run-up speed**, and **Arm angular speed** are off those lists.
+- Section header **Selected examples**. The line beside the examples is: *Estimated values from our pipeline, not real measurements. For demonstration only.* The bowling page also says **More bowling analysis is coming soon.**
+- The HTML name list sits under each GIF. No numeric value was added in HTML.
 
 ## 2026-10-25
 
