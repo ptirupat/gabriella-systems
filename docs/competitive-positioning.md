@@ -97,6 +97,7 @@ Confirm in PRODUCT.md. This site currently implements:
 ## Homepage / GIF rules (competitive)
 
 - Prefer **real Showcase takes** with trusted overlays over AI-generated “analysis” demos (rivals already look like phone-CV theater).
+- **2026-11-02:** `batting.html` and `bowling.html` may show selected-example GIFs (estimated pitch map, shot direction, ball path, bat speed, or front knee). The required label is *Estimated values from our pipeline, not real measurements. For demonstration only.* These frames are not a live calibrated-chart claim and not a new homepage hero lock. Front-on pitch map, wagon wheel, and ball path stay planned as shipping guarantees. Do not add an accuracy claim or the word “typical.” The bowling page keeps **More bowling analysis is coming soon.**
 - HUD: **few, readable, real** session metrics — or Can’t measure **per field**. Decorative or invented numbers break the trust rule. Do not blank pose-derived Run-up solely because the ball failed.
 - Impact on HUD/copy follows the copy gate above (contact time in this clip, not early/late). Head stability is a batting homepage hero; Contact time stays on detail lists. Release height stays **off** the public bowling HUD until calibrated and gated.
 - Front stride is not a gated API field — do not show it on homepage or batting progress/hero rows.

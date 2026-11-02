@@ -71,7 +71,7 @@
                         <div class="hero-metric-card">
                             <span class="hero-sport-badge batting">Batting</span>
                             <span class="live-dot"></span>
-                            <span class="metric-value metric-unmeasured metric-label" data-metric-tip="bat-speed">Bat speed at impact</span>
+                            <span class="metric-value metric-unmeasured metric-label">Pitch map</span>
                             <div class="sparkline sparkline-unmeasured">
                                 <span style="height:60%"></span>
                                 <span style="height:65%"></span>
@@ -83,7 +83,7 @@
                         <div class="hero-metric-card">
                             <span class="hero-sport-badge batting">Batting</span>
                             <span class="live-dot"></span>
-                            <span class="metric-value metric-unmeasured metric-label" data-metric-tip="head-stability">Head stability</span>
+                            <span class="metric-value metric-unmeasured metric-label">Shot direction</span>
                             <div class="sparkline sparkline-unmeasured">
                                 <span style="height:55%"></span>
                                 <span style="height:62%"></span>
@@ -95,7 +95,7 @@
                         <div class="hero-metric-card">
                             <span class="hero-sport-badge bowling">Bowling</span>
                             <span class="live-dot"></span>
-                            <span class="metric-value metric-unmeasured metric-label" data-metric-tip="run-up">Run-up speed</span>
+                            <span class="metric-value metric-unmeasured metric-label">Front knee angle</span>
                             <div class="sparkline sparkline-unmeasured">
                                 <span style="height:70%"></span>
                                 <span style="height:80%"></span>
@@ -115,34 +115,37 @@
                     <p class="eyebrow">One analysis stack. View-aware results.</p>
                     <h2>Batting or bowling — Gabriella adapts to the action and the camera view.</h2>
                 </div>
-                <div class="dual-video">
-                    <div class="demo-clip">
-                        <img src="assets/cricket_batting_15s.gif"
-                             alt="Net batting session with pose and bat tracking overlays"
-                             style="width: 100%; border-radius: 8px; display: block;" />
-                        <div class="clip-hud">
+                <div class="dual-video selected-examples">
+                    <figure class="selected-example demo-clip">
+                        <img src="assets/cricket_batting_pitchmap_6s.gif"
+                             alt="Batting example with an estimated pitch map and shot direction"
+                             width="960" height="540">
+                        <div class="clip-hud clip-hud-below">
                             <p class="clip-hud-title">Gabriella Vision</p>
-                            <div class="clip-hud-row" data-metric-tip="bat-speed"><span>Bat speed at impact</span></div>
-                            <div class="clip-hud-row" data-metric-tip="head-stability"><span>Head stability</span></div>
-                            <div class="clip-hud-row" data-metric-tip="ball-speed"><span>Ball speed</span></div>
-                            <div class="clip-hud-row" data-metric-tip="contact-time"><span>Contact time</span></div>
-                            <p class="clip-hud-note">Session metrics from this take</p>
+                            <div class="clip-hud-row"><span>Pitch map</span></div>
+                            <div class="clip-hud-row"><span>Shot direction</span></div>
                         </div>
-                    </div>
-                    <div class="demo-clip" style="justify-self: center; width: min(100%, calc(70vh * 3 / 4)); max-width: 100%;">
-                        <img src="assets/cricket_bowling_15s.gif"
-                             alt="Bowling delivery with pose tracking overlay"
-                             style="width: 100%; height: auto; max-height: 70vh; object-fit: contain; display: block; margin: 0 auto; border-radius: 8px;" />
-                        <div class="clip-hud clip-hud-bowling">
+                    </figure>
+                    <figure class="selected-example demo-clip">
+                        <img src="assets/cricket_batting_batspeed_4s.gif"
+                             alt="Batting example with an estimated bat speed"
+                             width="960" height="540">
+                        <div class="clip-hud clip-hud-below">
                             <p class="clip-hud-title">Gabriella Vision</p>
-                            <div class="clip-hud-row" data-metric-tip="run-up"><span>Run-up speed</span></div>
-                            <div class="clip-hud-row" data-metric-tip="arm-speed"><span>Arm angular speed</span></div>
-                            <div class="clip-hud-row" data-metric-tip="front-knee"><span>Front knee angle</span></div>
-                            <p class="clip-hud-note">Session metrics from this take</p>
+                            <div class="clip-hud-row"><span>Bat speed</span></div>
                         </div>
-                    </div>
+                    </figure>
+                    <figure class="selected-example demo-clip example-bowling">
+                        <img src="assets/cricket_bowling_knee_5s.gif"
+                             alt="Bowling example with an estimated front knee angle"
+                             width="540" height="430">
+                        <div class="clip-hud clip-hud-bowling clip-hud-below">
+                            <p class="clip-hud-title">Gabriella Vision</p>
+                            <div class="clip-hud-row"><span>Front knee angle</span></div>
+                        </div>
+                    </figure>
                 </div>
-                <p class="demo-disclaimer"><i class="fas fa-circle-info" style="color:var(--amber);margin-right:0.3rem;"></i>Demonstration output from selected sample clips. Not independently validated. Measurement availability and accuracy depend on camera view, calibration, visibility, frame rate, and clip quality.</p>
+                <p class="demo-disclaimer"><i class="fas fa-circle-info" style="color:var(--amber);margin-right:0.3rem;"></i>Estimated values from our pipeline, not real measurements. For demonstration only.</p>
                 <div class="video-tagline">
                     <h3>Same vision stack. Results that match the take.</h3>
                     <a href="demo.html" class="cta-button">Explore the Showcase</a>
@@ -160,30 +163,17 @@
                     <article class="intelligence-card">
                         <h3><i class="fas fa-baseball-bat-ball"></i> Batting Intelligence</h3>
                         <ul>
-                            <li>Head stability</li>
-                            <li>Bat path and bat speed at impact</li>
-                            <li>Contact time in this clip</li>
-                            <li>Ball speed and ball tracking</li>
-                            <li><span>Delivery length cues<sup class="fn-mark"><a href="#home-metric-notes">&dagger;</a></sup></span></li>
-                            <li>Body pose overlays</li>
-                            <li>Shot-phase breakdown</li>
+                            <li>Pitch map</li>
+                            <li>Shot direction</li>
+                            <li>Bat speed</li>
                         </ul>
                     </article>
                     <article class="intelligence-card">
                         <h3><i class="fas fa-person-running"></i> Bowling Intelligence</h3>
                         <ul>
-                            <li>Run-up speed</li>
-                            <li>Release frame</li>
-                            <li>Front-knee flexion at plant</li>
-                            <li>Arm angular speed</li>
-                            <li><span>Ball speed<sup class="fn-mark"><a href="#home-metric-notes">*</a></sup></span></li>
-                            <li>Action-phase breakdown</li>
-                            <li>Body pose overlays</li>
+                            <li>Front knee angle</li>
                         </ul>
                     </article>
-                </div>
-                <div class="metric-footnotes" id="home-metric-notes">
-                    <p><sup>*</sup> Ready or Can't measure &middot; <sup>&dagger;</sup> view-dependent</p>
                 </div>
             </div>
         </section>
@@ -238,17 +228,14 @@
                 <div class="compare-grid">
                     <div class="compare-card">
                         <h4>Batting — Session Progress</h4>
-                        <div class="compare-row" data-metric-tip="bat-speed">
-                            <span>Bat speed at impact</span>
+                        <div class="compare-row">
+                            <span>Pitch map</span>
                         </div>
-                        <div class="compare-row" data-metric-tip="head-stability">
-                            <span>Head stability</span>
+                        <div class="compare-row">
+                            <span>Shot direction</span>
                         </div>
-                        <div class="compare-row" data-metric-tip="ball-speed">
-                            <span>Ball speed</span>
-                        </div>
-                        <div class="compare-row" data-metric-tip="contact-time">
-                            <span>Contact time in this clip</span>
+                        <div class="compare-row">
+                            <span>Bat speed</span>
                         </div>
                         <div class="compare-row">
                             <span>Same-view session review</span>
@@ -257,13 +244,7 @@
                     </div>
                     <div class="compare-card">
                         <h4>Bowling — Session Progress</h4>
-                        <div class="compare-row" data-metric-tip="run-up">
-                            <span>Run-up speed</span>
-                        </div>
-                        <div class="compare-row" data-metric-tip="arm-speed">
-                            <span>Arm angular speed</span>
-                        </div>
-                        <div class="compare-row" data-metric-tip="front-knee">
+                        <div class="compare-row">
                             <span>Front knee angle</span>
                         </div>
                         <div class="compare-row">

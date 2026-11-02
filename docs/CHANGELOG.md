@@ -6,6 +6,17 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 
 ---
 
+## 2026-11-02
+
+### Selected-example batting and bowling GIFs
+
+- `assets/cricket_batting_pitchmap_6s.gif`, `assets/cricket_batting_batspeed_4s.gif`, and `assets/cricket_bowling_knee_5s.gif` are on the homepage, `batting.html`, and `bowling.html`. The pitch-map file was replaced with an updated GIF and added unmodified. The other two were added unmodified.
+- Clip HUDs and metric lists name only what those GIFs show. Batting: **Pitch map**, **Shot direction**, **Bat speed**. Bowling: **Front knee angle**.
+- **Ball speed**, **Head stability**, **Contact time**, **Run-up speed**, and **Arm angular speed** are off those lists.
+- Section header **Selected examples**. The line beside the examples is: *Estimated values from our pipeline, not real measurements. For demonstration only.* The bowling page also says **More bowling analysis is coming soon.**
+- The HTML name list sits under each GIF. No numeric value was added in HTML.
+- Example GIFs now show a light body-pose outline.
+
 ## 2026-10-25
 
 ### Clip HUD sits below the video on phones

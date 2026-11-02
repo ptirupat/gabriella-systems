@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bowling Intelligence — Gabriella Systems</title>
-    <meta name="description" content="Computer vision for bowling analysis — run-up speed and action metrics from cricket clips, with results suited to the camera view.">
+    <meta name="description" content="Computer vision for bowling analysis — front knee angle and action metrics from cricket clips, with results suited to the camera view.">
         <meta property="og:type" content="website">
     <meta property="og:site_name" content="Gabriella Systems">
     <meta property="og:title" content="Bowling Intelligence — Gabriella Systems">
-    <meta property="og:description" content="Computer vision for bowling analysis — run-up speed and action metrics from cricket clips, with results suited to the camera view.">
+    <meta property="og:description" content="Computer vision for bowling analysis — front knee angle and action metrics from cricket clips, with results suited to the camera view.">
     <meta property="og:image" content="https://gabriellasystems.com/assets/cricket-vision-hero.png">
     <meta property="og:url" content="https://gabriellasystems.com/bowling.html">
     <meta name="twitter:card" content="summary_large_image">
@@ -53,9 +53,8 @@
                 <h1>Understand the complete bowling action</h1>
                 <p>
                     For bowling clips, Gabriella tracks the action through measurable stages and
-                    returns metrics and visualizations suited to that camera view — so coaches can
-                    review run-up speed, plus front-knee flexion at plant and arm angular speed
-                    where the take supports it.
+                    returns metrics and visualizations suited to that camera view. The sample on
+                    this page is front knee angle. More bowling analysis is coming soon.
                 </p>
             </div>
         </section>
@@ -73,7 +72,6 @@
                         </div>
                         <h3>Run-up</h3>
                         <ul class="check-list">
-                            <li><i class="fas fa-check"></i><span>Peak approach speed<sup class="fn-mark"><a href="#bowling-metric-notes">&Dagger;</a></sup></span></li>
                             <li><i class="fas fa-check"></i><span>Acceleration profile<sup class="fn-mark"><a href="#bowling-metric-notes">&dagger;</a></sup></span></li>
                             <li><i class="fas fa-check"></i><span>Same-view consistency<sup class="fn-mark"><a href="#bowling-metric-notes">&sect;</a></sup></span></li>
                         </ul>
@@ -95,7 +93,7 @@
                         </div>
                         <h3>Front-foot plant</h3>
                         <ul class="check-list">
-                            <li><i class="fas fa-check"></i><span>Front-knee flexion at plant <span class="metric-inline-tip">0° ≈ extended</span></span></li>
+                            <li><i class="fas fa-check"></i>Front knee angle</li>
                             <li><i class="fas fa-check"></i><span>Trunk position<sup class="fn-mark"><a href="#bowling-metric-notes">&dagger;</a></sup></span></li>
                             <li><i class="fas fa-check"></i><span>Stride length<sup class="fn-mark"><a href="#bowling-metric-notes">&Dagger;</a></sup></span></li>
                         </ul>
@@ -106,8 +104,6 @@
                         </div>
                         <h3>Arm, ball &amp; follow-through</h3>
                         <ul class="check-list">
-                            <li><i class="fas fa-check"></i><span>Arm angular speed<sup class="fn-mark"><a href="#bowling-metric-notes">&Dagger;</a></sup></span></li>
-                            <li><i class="fas fa-check"></i><span>Ball speed<sup class="fn-mark"><a href="#bowling-metric-notes">*</a></sup></span></li>
                             <li><i class="fas fa-check"></i><span>Follow-through alignment<sup class="fn-mark"><a href="#bowling-metric-notes">&dagger;</a></sup></span></li>
                         </ul>
                     </article>
@@ -134,10 +130,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td>Run-up speed</td><td><span class="badge-live">Live</span></td><td>When pose is trusted — may show even if the ball is not seen</td></tr>
-                        <tr><td>Arm angular speed</td><td><span class="badge-live">Live</span></td><td>When bowling-arm pose is ok</td></tr>
-                        <tr><td>Front-knee flexion at plant</td><td><span class="badge-live">Live</span></td><td>When front-leg pose is ok. 0° ≈ fully extended — a measured angle, not a technique grade</td></tr>
-                        <tr><td>Ball speed</td><td><span class="badge-conditional">Conditional</span></td><td>Ready when ball tracking is trusted; otherwise Can't measure (ball not seen, track broke, or impact missing)</td></tr>
+                        <tr><td>Front knee angle</td><td><span class="badge-conditional">Conditional</span></td><td>Pipeline estimate at front-foot contact. Labelled as an estimate.</td></tr>
                         <tr><td>Stride and gather position</td><td><span class="badge-conditional">Conditional</span></td><td>Requires lower-body visibility and a view that shows the approach</td></tr>
                         <tr><td>Follow-through alignment</td><td><span class="badge-conditional">Conditional</span></td><td>Where the bowler stays in frame after the delivery</td></tr>
                         <tr><td>Session-to-session comparison</td><td><span class="badge-conditional">Conditional</span></td><td>Requires clips from a comparable camera view and quality</td></tr>
@@ -149,19 +142,22 @@
 
         <section class="section muted-section">
             <div class="container">
-                <div class="demo-clip" style="width: min(100%, 900px, calc(70vh * 3 / 4)); max-width: 100%; margin: 0 auto;">
-                    <img src="assets/cricket_bowling_15s.gif"
-                         alt="Bowling delivery with pose tracking overlay"
-                         style="width: 100%; height: auto; max-height: 70vh; object-fit: contain; display: block; margin: 0 auto; border-radius: 8px;" />
-                    <div class="clip-hud clip-hud-bowling">
-                        <p class="clip-hud-title">Gabriella Vision</p>
-                        <div class="clip-hud-row" data-metric-tip="run-up"><span>Run-up speed</span></div>
-                        <div class="clip-hud-row" data-metric-tip="arm-speed"><span>Arm angular speed</span></div>
-                        <div class="clip-hud-row" data-metric-tip="front-knee"><span>Front knee angle</span></div>
-                        <p class="clip-hud-note">Session metrics from this take</p>
-                    </div>
-                    <p class="demo-disclaimer"><i class="fas fa-circle-info" style="color:var(--amber);margin-right:0.3rem;"></i>Demonstration output from selected sample clips. Not independently validated. Measurement availability and accuracy depend on camera view, calibration, visibility, frame rate, and clip quality.</p>
+                <div class="section-intro">
+                    <p class="eyebrow">Selected examples</p>
+                    <h2>Bowling example</h2>
+                    <p>Estimated values from our pipeline, not real measurements. For demonstration only.</p>
                 </div>
+                <figure class="selected-example example-bowling demo-clip">
+                    <img src="assets/cricket_bowling_knee_5s.gif"
+                         alt="Bowling example with an estimated front knee angle"
+                         width="540" height="430">
+                    <div class="clip-hud clip-hud-bowling clip-hud-below">
+                        <p class="clip-hud-title">Gabriella Vision</p>
+                        <div class="clip-hud-row"><span>Front knee angle</span></div>
+                    </div>
+                    <figcaption>Front knee angle is a pipeline estimate.</figcaption>
+                </figure>
+                <p class="example-coming-soon">More bowling analysis is coming soon.</p>
             </div>
         </section>
 
@@ -173,19 +169,9 @@
                 </div>
                 <div class="features-grid">
                     <article class="feature-card">
-                        <i class="fas fa-person-running"></i>
-                        <h3>How consistent is run-up speed across this session?</h3>
-                        <p>Peak approach speed from pose, compared across takes that share a similar view. A measured value — not a technique grade.</p>
-                    </article>
-                    <article class="feature-card">
                         <i class="fas fa-shoe-prints"></i>
-                        <h3>What was front-knee flexion at plant?</h3>
-                        <p>Knee angle of the front leg at front-foot plant in this take. 0° ≈ fully extended. An observed angle, not an ideal shape.</p>
-                    </article>
-                    <article class="feature-card">
-                        <i class="fas fa-gauge-high"></i>
-                        <h3>How fast was the bowling arm through the action?</h3>
-                        <p>Peak arm angular speed in this take, when pose supports it. Observed speed — not a technique grade.</p>
+                        <h3>What was the front knee angle?</h3>
+                        <p>Front knee angle at front-foot contact is a pipeline estimate for this take. It is labelled as an estimate, not a technique grade.</p>
                     </article>
                 </div>
             </div>
@@ -199,17 +185,11 @@
                     <p>
                         Review bowling metrics across clips when takes share a similar view and quality.
                         Longitudinal trends are the goal — strongest with consistent capture.
-                        Measured change, not an ideal angle. Front-knee flexion: 0° ≈ fully extended.
+                        The sample list on this page is front knee angle.
                     </p>
                 </div>
                 <div class="analysis-stack">
-                    <div class="analysis-row accent-green" data-metric-tip="run-up">
-                        <span>Run-up speed</span>
-                    </div>
-                    <div class="analysis-row accent-amber" data-metric-tip="arm-speed">
-                        <span>Arm angular speed</span>
-                    </div>
-                    <div class="analysis-row accent-coral" data-metric-tip="front-knee">
+                    <div class="analysis-row accent-coral">
                         <span>Front knee angle</span>
                     </div>
                     <div class="analysis-row">
