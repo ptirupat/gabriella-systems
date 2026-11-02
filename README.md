@@ -44,7 +44,7 @@ Product should review these for accuracy:
 - GSAP + ScrollTrigger (homepage motion)
 - Space Grotesk / Inter
 - Font Awesome
-- Assets in `assets/` (`logo.png`, `cricket_batting_15s.gif`, `cricket_bowling_15s.gif`, `cricket-vision-hero.png`)
+- Assets in `assets/` (`logo.png`, `cricket_batting_15s.gif`, `cricket_bowling_15s.gif`, `cricket_batting_pitchmap_6s.gif`, `cricket_batting_batspeed_4s.gif`, `cricket_bowling_knee_5s.gif`, `cricket-vision-hero.png`). The 15s loops stay on the homepage. The three shorter GIFs are the selected examples on `batting.html` and `bowling.html`, added unmodified and labelled as pipeline estimates.
 
 ## Local preview
 

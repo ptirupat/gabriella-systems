@@ -4,6 +4,8 @@
 
 This file is **not** a second product contract. It only records how this marketing site implements PRODUCT.md on homepage GIF HUD panels, hero metric cards, and session-progress cards. Sample *numbers* on the static site are illustrative; they must not invent gated values. If this file and PRODUCT.md conflict, **PRODUCT.md wins** — ping Product.
 
+**2026-11-02 selected examples:** `batting.html` and `bowling.html` now embed three unmodified GIFs (`cricket_batting_pitchmap_6s.gif`, `cricket_batting_batspeed_4s.gif`, `cricket_bowling_knee_5s.gif`) under **Selected examples**. The page label is *Estimated values from our pipeline, not real measurements. For demonstration only.* The bowling page also says **More bowling analysis is coming soon.** Those GIFs include their own panels, so the HTML clip HUD is not drawn on them. Homepage hero cards, the homepage 15s clips, and session rows are unchanged and still show names only. Do not copy a figure out of those GIFs onto a hero card, HUD row, or session row. That would republish a sample. Pitch map, shot direction, and ball path in the front-on file stay estimated examples, not a live calibrated-chart claim.
+
 Related site copy: [competitive-positioning.md](./competitive-positioning.md) (Impact wording). Quality-gate behaviour is implemented in Modal / Showcase. This file records the **website-facing** lock so marketing copy does not describe the old overall-gate blank.
 
 ---
@@ -98,9 +100,10 @@ Do not present delivery-stride speed (`19.8`) or **Delivery stride 1.82 m** as p
 
 | Surface | Files | Notes |
 | --- | --- | --- |
-| GIF HUD overlay | `assets/cricket_batting_15s.gif`, `assets/cricket_bowling_15s.gif` | Burned-in Gabriella Vision panel. GIF binaries were **not** regenerated in this Head-hero pass — HTML HUD/hero/progress numbers are the public samples. |
+| GIF HUD overlay | `assets/cricket_batting_15s.gif`, `assets/cricket_bowling_15s.gif` | Homepage only. Burned-in Gabriella Vision panel. HTML HUD numbers are names only. |
+| Selected examples | `assets/cricket_batting_pitchmap_6s.gif`, `assets/cricket_batting_batspeed_4s.gif` on `batting.html`; `assets/cricket_bowling_knee_5s.gif` on `bowling.html` | Added unmodified 2026-11-02. Full-frame files, no HTML clip HUD. Estimates stay inside the GIF. Not homepage heroes. |
 | Homepage hero cards | `index.html` (`.hero-metric-card`) | Locked set only: **Bat speed at impact** + **Head stability** + **Run-up speed**. All three cards show the name in the value slot and no unit line (Bat and Head withdrawn 2026-10-22; Run-up withdrawn 2026-10-23). No Contact, Ball, Δ ball speed, Arm, Front knee, or Release height cards. |
-| Clip HUD panels | `index.html`, `batting.html`, `bowling.html` | Richer rows allowed. Every sample row shows the metric name only, with no value (Bat and Head withdrawn 2026-10-22; Run-up, Ball, Contact, Arm, and Front knee withdrawn 2026-10-23). Batting page clip matches the batting homepage clip. |
+| Clip HUD panels | `index.html` | Homepage clips still show the metric name only, with no value (Bat and Head withdrawn 2026-10-22; Run-up, Ball, Contact, Arm, and Front knee withdrawn 2026-10-23). `batting.html` and `bowling.html` use the selected-example GIFs instead of this overlay. |
 | Session progress cards | `index.html`, `batting.html`, `bowling.html` | Detail/progress, not heroes. Batting and bowling rows show the metric name only, with no value. **Coach-led** stays. No Release height row. |
 
 Deeper capability lists (contact time, front-knee flexion at plant, arm angular speed, ball tracking, and so on) may still appear as pipeline outputs. They are **not** the homepage hero HUD.

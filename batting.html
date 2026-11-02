@@ -154,19 +154,24 @@
 
         <section class="section muted-section">
             <div class="container">
-                <div style="max-width: 900px; margin: 0 auto;" class="demo-clip">
-                    <img src="assets/cricket_batting_15s.gif"
-                         alt="Net batting session with pose and bat tracking overlays"
-                         style="width: 100%; border-radius: 8px; display: block;" />
-                    <div class="clip-hud">
-                        <p class="clip-hud-title">Gabriella Vision</p>
-                        <div class="clip-hud-row" data-metric-tip="bat-speed"><span>Bat speed at impact</span></div>
-                        <div class="clip-hud-row" data-metric-tip="head-stability"><span>Head stability</span></div>
-                        <div class="clip-hud-row" data-metric-tip="ball-speed"><span>Ball speed</span></div>
-                        <div class="clip-hud-row" data-metric-tip="contact-time"><span>Contact time</span></div>
-                        <p class="clip-hud-note">Session metrics from this take</p>
-                    </div>
-                    <p class="demo-disclaimer"><i class="fas fa-circle-info" style="color:var(--amber);margin-right:0.3rem;"></i>Demonstration output from selected sample clips. Not independently validated. Measurement availability and accuracy depend on camera view, calibration, visibility, frame rate, and clip quality.</p>
+                <div class="section-intro">
+                    <p class="eyebrow">Selected examples</p>
+                    <h2>Front-on and side-on batting examples</h2>
+                    <p>Estimated values from our pipeline, not real measurements. For demonstration only.</p>
+                </div>
+                <div class="selected-examples">
+                    <figure class="selected-example">
+                        <img src="assets/cricket_batting_pitchmap_6s.gif"
+                             alt="Front-on nets batting example with ball path, an estimated pitch map, and estimated shot direction"
+                             width="960" height="540">
+                        <figcaption>Front-on nets take. Ball path, pitch map, and shot direction are estimated. Length bands are a rough guide and are not checked for this net.</figcaption>
+                    </figure>
+                    <figure class="selected-example">
+                        <img src="assets/cricket_batting_batspeed_4s.gif"
+                             alt="Side-on nets batting example with ball path and an estimated bat speed around impact"
+                             width="960" height="540">
+                        <figcaption>Side-on nets take. Bat speed around impact is a pipeline estimate.</figcaption>
+                    </figure>
                 </div>
             </div>
         </section>

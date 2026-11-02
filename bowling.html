@@ -149,19 +149,18 @@
 
         <section class="section muted-section">
             <div class="container">
-                <div class="demo-clip" style="width: min(100%, 900px, calc(70vh * 3 / 4)); max-width: 100%; margin: 0 auto;">
-                    <img src="assets/cricket_bowling_15s.gif"
-                         alt="Bowling delivery with pose tracking overlay"
-                         style="width: 100%; height: auto; max-height: 70vh; object-fit: contain; display: block; margin: 0 auto; border-radius: 8px;" />
-                    <div class="clip-hud clip-hud-bowling">
-                        <p class="clip-hud-title">Gabriella Vision</p>
-                        <div class="clip-hud-row" data-metric-tip="run-up"><span>Run-up speed</span></div>
-                        <div class="clip-hud-row" data-metric-tip="arm-speed"><span>Arm angular speed</span></div>
-                        <div class="clip-hud-row" data-metric-tip="front-knee"><span>Front knee angle</span></div>
-                        <p class="clip-hud-note">Session metrics from this take</p>
-                    </div>
-                    <p class="demo-disclaimer"><i class="fas fa-circle-info" style="color:var(--amber);margin-right:0.3rem;"></i>Demonstration output from selected sample clips. Not independently validated. Measurement availability and accuracy depend on camera view, calibration, visibility, frame rate, and clip quality.</p>
+                <div class="section-intro">
+                    <p class="eyebrow">Selected examples</p>
+                    <h2>Bowling example</h2>
+                    <p>Estimated values from our pipeline, not real measurements. For demonstration only.</p>
                 </div>
+                <figure class="selected-example example-bowling">
+                    <img src="assets/cricket_bowling_knee_5s.gif"
+                         alt="Bowling delivery example with an estimated front-knee angle at front-foot contact"
+                         width="540" height="430">
+                    <figcaption>Front-knee angle at front-foot contact is a pipeline estimate.</figcaption>
+                </figure>
+                <p class="example-coming-soon">More bowling analysis is coming soon.</p>
             </div>
         </section>
 

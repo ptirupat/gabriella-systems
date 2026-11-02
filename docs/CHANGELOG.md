@@ -6,6 +6,16 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 
 ---
 
+## 2026-11-02
+
+### Selected-example batting and bowling GIFs
+
+- Three GIFs were added unmodified: `assets/cricket_batting_pitchmap_6s.gif` (front-on pitch map and shot direction), `assets/cricket_batting_batspeed_4s.gif` (side-on bat speed), and `assets/cricket_bowling_knee_5s.gif` (front knee at front-foot contact).
+- `batting.html` shows the two batting GIFs. `bowling.html` shows the one bowling GIF. Both sections are headed **Selected examples**. The line beside them is: *Estimated values from our pipeline, not real measurements. For demonstration only.*
+- The bowling page also says **More bowling analysis is coming soon.** The bowling image is 540×430, so the old portrait height cap is not used.
+- These files include their own panels, so the HTML Gabriella Vision overlay is not placed on top of them. Homepage hero cards, the homepage 15s clips, and session rows are unchanged and still show metric names only. No numeric value was added in HTML. Figures inside the new GIFs stay in those files, labelled estimated, and do not restore the withdrawn samples.
+- Pitch map, shot direction, and ball path in the front-on GIF are estimated examples. They are not a live calibrated-chart claim.
+
 ## 2026-10-25
 
 ### Clip HUD sits below the video on phones
