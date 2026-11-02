@@ -19,32 +19,24 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="index.html" class="nav-logo-link">
-                    <img src="assets/logo.png" alt="Gabriella Systems" class="nav-logo-img">
-                    <span class="nav-logo-wordmark">Gabriella</span>
-                    <i class="fas fa-house" aria-label="Home" style="font-size:0.7rem; color:var(--muted); margin-left:0.3rem; opacity:0.6; vertical-align:middle;"></i>
-                </a>
-            </div>
-            <div class="nav-menu" id="nav-menu">
-                <a href="services.html" class="nav-link">Platform</a>
-                <a href="batting.html" class="nav-link">Batting</a>
-                <a href="bowling.html" class="nav-link active">Bowling</a>
-                <a href="academies.html" class="nav-link">For Academies</a>
-                <a href="demo.html" class="nav-link">Showcase</a>
-                <a href="research.html" class="nav-link">Research</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="connect.html" class="nav-link">Connect</a>
-            </div>
-            <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
+    <header class="nav">
+  <div class="container nav__bar">
+    <a class="nav__brand" href="index.html" aria-label="Gabriella Systems home">
+      <img src="assets/logo.png" alt="" width="32" height="32"><span>Gabriella</span>
+    </a>
+    <nav class="nav__links" id="nav-links" aria-label="Main">
+      <a href="services.html">Platform</a>
+      <a href="batting.html">Batting</a>
+      <a href="bowling.html" aria-current="page">Bowling</a>
+      <a href="academies.html">For Academies</a>
+      <a href="demo.html">Showcase</a>
+      <a href="research.html">Research</a>
+      <a href="about.html">About</a>
+      <a class="btn btn--primary btn--sm nav__cta" href="connect.html?purpose=Pilot+Interest#interest-form">Request a Pilot</a>
     </nav>
+    <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+  </div>
+</header>
 
     <main class="subpage-main">
         <section class="page-hero">
@@ -109,7 +101,7 @@
                     </article>
                 </div>
                 <div class="metric-footnotes" id="bowling-metric-notes">
-                    <p><sup>*</sup> Ready or Can't measure &middot; <sup>&dagger;</sup> view-dependent &middot; <sup>&Dagger;</sup> pose-dependent &middot; <sup>&sect;</sup> same-view only</p>
+                    <p><sup>*</sup> Ready or Can’t measure &middot; <sup>&dagger;</sup> view-dependent &middot; <sup>&Dagger;</sup> pose-dependent &middot; <sup>&sect;</sup> same-view only</p>
                 </div>
             </div>
         </section>
@@ -119,7 +111,7 @@
                 <div class="section-intro" style="margin-bottom:1rem;">
                     <p class="eyebrow">What's live, conditional, and research-stage</p>
                     <h2>Capability status for bowling analysis</h2>
-                    <p style="color:var(--muted); font-size:0.9rem; max-width:640px;">Availability depends on camera view, calibration, visibility, and clip quality. The system reports "can't measure" when a metric cannot be reliably determined — it never substitutes a guess. Release height stays off this page until calibrated: no public metre, and no can't-measure slot.</p>
+                    <p style="color:var(--muted); font-size:0.9rem; max-width:640px;">Availability depends on camera view, calibration, visibility, and clip quality. The system reports "can’t measure" when a metric cannot be reliably determined — it never substitutes a guess. Release height stays off this page until calibrated: no public metre, and no can’t-measure slot.</p>
                 </div>
                 <table class="cap-status-table">
                     <thead>
@@ -134,7 +126,7 @@
                         <tr><td>Stride and gather position</td><td><span class="badge-conditional">Conditional</span></td><td>Requires lower-body visibility and a view that shows the approach</td></tr>
                         <tr><td>Follow-through alignment</td><td><span class="badge-conditional">Conditional</span></td><td>Where the bowler stays in frame after the delivery</td></tr>
                         <tr><td>Session-to-session comparison</td><td><span class="badge-conditional">Conditional</span></td><td>Requires clips from a comparable camera view and quality</td></tr>
-                        <tr><td>Release height</td><td><span class="badge-research">Research</span></td><td>Omitted until calibrated — not a public metre and not shown as a can't-measure slot</td></tr>
+                        <tr><td>Release height</td><td><span class="badge-research">Research</span></td><td>Omitted until calibrated — not a public metre and not shown as a can’t-measure slot</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -145,18 +137,19 @@
                 <div class="section-intro">
                     <p class="eyebrow">Selected examples</p>
                     <h2>Bowling example</h2>
-                    <p>Estimated values from our pipeline, not real measurements. For demonstration only.</p>
                 </div>
-                <figure class="selected-example example-bowling demo-clip">
-                    <img src="assets/cricket_bowling_knee_5s.gif"
-                         alt="Bowling example with an estimated front knee angle"
-                         width="540" height="430">
-                    <div class="clip-hud clip-hud-bowling clip-hud-below">
-                        <p class="clip-hud-title">Gabriella Vision</p>
-                        <div class="clip-hud-row"><span>Front knee angle</span></div>
+                <div class="clips">
+                <figure class="clip">
+                    <div class="clip__media" style="--ar:540/368">
+                        <img src="assets/cricket_bowling_knee_5s.gif" width="540" height="368" alt="Bowling example with estimated front knee angle">
                     </div>
-                    <figcaption>Front knee angle is a pipeline estimate.</figcaption>
+                    <figcaption class="clip__meta">
+                        <span class="clip__label">Gabriella Vision · Bowling</span>
+                        <ul class="chips"><li class="chip">Front knee angle</li></ul>
+                        <p class="clip__caption">Estimated values from our pipeline, not real measurements. For demonstration only.</p>
+                    </figcaption>
                 </figure>
+                </div>
                 <p class="example-coming-soon">More bowling analysis is coming soon.</p>
             </div>
         </section>
@@ -209,7 +202,7 @@
                     to bring objective bowling intelligence to your nets.
                 </p>
                 <div class="hero-actions">
-                    <a href="demo.html" class="cta-button">Try the Bowling Showcase</a>
+                    <a href="demo.html" class="cta-button">Explore the Showcase</a>
                     <a href="connect.html?purpose=Pilot+Interest#interest-form" class="secondary-button">Request a Pilot</a>
                 </div>
             </div>
@@ -217,30 +210,20 @@
     </main>
 
         <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <span class="nav-logo-text">Gabriella Systems</span>
-                    <p>Computer vision for cricket performance — batting and bowling intelligence from ordinary video.</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Product</h4>
-                    <a href="services.html">Platform</a>
-                    <a href="batting.html">Batting</a>
-                    <a href="bowling.html">Bowling</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Company</h4>
-                    <a href="about.html">About</a>
-                    <a href="research.html">Research</a>
-                    <a href="connect.html">Connect</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Gabriella Systems. All rights reserved.</p>
-                </div>
-        </div>
-    </footer>
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a class="nav__brand nav__brand--dark" href="index.html"><img src="assets/logo.png" alt="" width="32" height="32"><span>Gabriella Systems</span></a>
+      <p>Computer vision for cricket performance — batting and bowling intelligence from ordinary video.</p>
+    </div>
+    <nav aria-label="Product"><h4>Product</h4>
+      <a href="services.html">Platform</a><a href="batting.html">Batting</a><a href="bowling.html">Bowling</a><a href="academies.html">For Academies</a><a href="demo.html">Showcase</a>
+    </nav>
+    <nav aria-label="Company"><h4>Company</h4>
+      <a href="about.html">About</a><a href="research.html">Research</a><a href="sports.html">Sports</a><a href="connect.html">Connect</a>
+    </nav>
+  </div>
+  <div class="container footer__base">© 2026 Gabriella Systems. All rights reserved.</div>
+</footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Gabriella Systems — Computer Vision for Cricket Performance</title>
     <meta name="description" content="Computer vision for cricket performance — batting and bowling intelligence from one portable system.">
     <link rel="canonical" href="https://gabriellasystems.com/">
@@ -15,325 +15,218 @@
     <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="index.html" class="nav-logo-link">
-                    <img src="assets/logo.png" alt="Gabriella Systems" class="nav-logo-img">
-                    <span class="nav-logo-wordmark">Gabriella</span>
-                    <i class="fas fa-house" aria-label="Home" style="font-size:0.7rem; color:var(--muted); margin-left:0.3rem; opacity:0.6; vertical-align:middle;"></i>
-                </a>
-            </div>
-            <div class="nav-menu" id="nav-menu">
-                <a href="services.html" class="nav-link">Platform</a>
-                <a href="batting.html" class="nav-link">Batting</a>
-                <a href="bowling.html" class="nav-link">Bowling</a>
-                <a href="academies.html" class="nav-link">For Academies</a>
-                <a href="demo.html" class="nav-link">Showcase</a>
-                <a href="research.html" class="nav-link">Research</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="connect.html" class="nav-link">Connect</a>
-            </div>
-            <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <div class="container nav__bar">
+    <a class="nav__brand" href="index.html" aria-label="Gabriella Systems home">
+      <img src="assets/logo.png" alt="" width="32" height="32"><span>Gabriella</span>
+    </a>
+    <nav class="nav__links" id="nav-links" aria-label="Main">
+      <a href="services.html">Platform</a>
+      <a href="batting.html">Batting</a>
+      <a href="bowling.html">Bowling</a>
+      <a href="academies.html">For Academies</a>
+      <a href="demo.html">Showcase</a>
+      <a href="research.html">Research</a>
+      <a href="about.html">About</a>
+      <a class="btn btn--primary btn--sm nav__cta" href="connect.html?purpose=Pilot+Interest#interest-form">Request a Pilot</a>
     </nav>
-
-    <main>
-        <section class="hero cricket-hero">
-            <div class="container hero-split">
-                <div class="hero-left">
-                    <p class="eyebrow">Computer vision for cricket nets</p>
-                    <h1><span class="word">Analysis</span> <span class="word">that</span> <span class="word">fits</span> <span class="word">the</span> <span class="word">view.</span></h1>
-                    <p class="hero-copy">
-                        Phone apps lock to one setup behind the stumps. Our camera can sit where the coach needs it, including side-on, so Bat and Head come from a view that can see them. Metrics show Ready or Can’t measure with a plain reason. We never invent a number the camera cannot see.
-                    </p>
-                    <div class="hero-actions">
-                        <a href="connect.html?purpose=Pilot+Interest#interest-form" class="cta-button">Request a Pilot</a>
-                        <a href="demo.html" class="secondary-button">Explore the Showcase</a>
-                    </div>
-                    <div class="status-strip">
-                        <div class="status-item status-live"><i class="fas fa-circle"></i> <strong>Live:</strong> Batting &amp; bowling video analysis</div>
-                        <div class="status-item status-live"><i class="fas fa-circle"></i> <strong>Live:</strong> Pose, bat &amp; ball overlays</div>
-                        <div class="status-item status-planned"><i class="fas fa-compass-drafting"></i> <strong>Planned:</strong> Portable capture hardware</div>
-                    </div>
-                </div>
-                <div class="hero-right">
-                    <div class="hero-dashboard">
-                        <div class="hero-metric-card">
-                            <span class="hero-sport-badge batting">Batting</span>
-                            <span class="live-dot"></span>
-                            <span class="metric-value metric-unmeasured metric-label">Pitch map (coming soon)</span>
-                            <div class="sparkline sparkline-unmeasured">
-                                <span style="height:60%"></span>
-                                <span style="height:65%"></span>
-                                <span style="height:70%"></span>
-                                <span style="height:85%"></span>
-                                <span style="height:100%"></span>
-                            </div>
-                        </div>
-                        <div class="hero-metric-card">
-                            <span class="hero-sport-badge batting">Batting</span>
-                            <span class="live-dot"></span>
-                            <span class="metric-value metric-unmeasured metric-label">Shot direction (coming soon)</span>
-                            <div class="sparkline sparkline-unmeasured">
-                                <span style="height:55%"></span>
-                                <span style="height:62%"></span>
-                                <span style="height:70%"></span>
-                                <span style="height:88%"></span>
-                                <span style="height:100%"></span>
-                            </div>
-                        </div>
-                        <div class="hero-metric-card">
-                            <span class="hero-sport-badge bowling">Bowling</span>
-                            <span class="live-dot"></span>
-                            <span class="metric-value metric-unmeasured metric-label">Front knee angle</span>
-                            <div class="sparkline sparkline-unmeasured">
-                                <span style="height:70%"></span>
-                                <span style="height:80%"></span>
-                                <span style="height:85%"></span>
-                                <span style="height:95%"></span>
-                                <span style="height:100%"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="container">
-                <div class="section-intro">
-                    <p class="eyebrow">One analysis stack. View-aware results.</p>
-                    <h2>Batting or bowling — Gabriella adapts to the action and the camera view.</h2>
-                </div>
-                <div class="dual-video selected-examples">
-                    <figure class="selected-example demo-clip">
-                        <img src="assets/cricket_batting_pitchmap_6s.gif"
-                             alt="Batting example with an estimated pitch map and shot direction"
-                             width="960" height="540">
-                        <div class="clip-hud clip-hud-below">
-                            <p class="clip-hud-title">Gabriella Vision</p>
-                            <div class="clip-hud-row"><span>Pitch map</span></div>
-                            <div class="clip-hud-row"><span>Shot direction</span></div>
-                        </div>
-                    </figure>
-                    <figure class="selected-example demo-clip">
-                        <img src="assets/cricket_batting_batspeed_4s.gif"
-                             alt="Batting example with an estimated bat speed"
-                             width="960" height="540">
-                        <div class="clip-hud clip-hud-below">
-                            <p class="clip-hud-title">Gabriella Vision</p>
-                            <div class="clip-hud-row"><span>Bat speed</span></div>
-                        </div>
-                    </figure>
-                    <figure class="selected-example demo-clip example-bowling">
-                        <img src="assets/cricket_bowling_knee_5s.gif"
-                             alt="Bowling example with an estimated front knee angle"
-                             width="540" height="430">
-                        <div class="clip-hud clip-hud-bowling clip-hud-below">
-                            <p class="clip-hud-title">Gabriella Vision</p>
-                            <div class="clip-hud-row"><span>Front knee angle</span></div>
-                        </div>
-                    </figure>
-                </div>
-                <p class="demo-disclaimer"><i class="fas fa-circle-info" style="color:var(--amber);margin-right:0.3rem;"></i>Estimated values from our pipeline, not real measurements. For demonstration only.</p>
-                <div class="video-tagline">
-                    <h3>Same vision stack. Results that match the take.</h3>
-                    <a href="demo.html" class="cta-button">Explore the Showcase</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="section muted-section">
-            <div class="container">
-                <div class="section-intro">
-                    <p class="eyebrow">One system. Multiple perspectives.</p>
-                    <h2>Batting and bowling intelligence from one analysis stack</h2>
-                </div>
-                <div class="dual-cards">
-                    <article class="intelligence-card">
-                        <h3><i class="fas fa-baseball-bat-ball"></i> Batting Intelligence</h3>
-                        <ul>
-                            <li>Pitch map (coming soon)</li>
-                            <li>Shot direction (coming soon)</li>
-                            <li>Bat speed</li>
-                        </ul>
-                    </article>
-                    <article class="intelligence-card">
-                        <h3><i class="fas fa-person-running"></i> Bowling Intelligence</h3>
-                        <ul>
-                            <li>Front knee angle</li>
-                        </ul>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="section technology-band">
-            <div class="container">
-                <div class="section-intro">
-                    <p class="eyebrow" style="color: #ffd86b;">How it works</p>
-                    <h2>From raw video to coaching-ready evidence</h2>
-                </div>
-                <div class="flow-grid">
-                    <article class="flow-card">
-                        <i class="fas fa-video"></i>
-                        <h3>Capture</h3>
-                        <p>Purpose-built cricket vision system</p>
-                    </article>
-                    <article class="flow-card">
-                        <i class="fas fa-eye"></i>
-                        <h3>Understand</h3>
-                        <p>Find the player, bat, ball, and key moments</p>
-                    </article>
-                    <article class="flow-card">
-                        <i class="fas fa-ruler-combined"></i>
-                        <h3>Measure</h3>
-                        <p>Speed, angles, timing, trajectory</p>
-                    </article>
-                    <article class="flow-card">
-                        <i class="fas fa-chart-line"></i>
-                        <h3>Learn</h3>
-                        <p>Compare delivery, session, history</p>
-                    </article>
-                    <article class="flow-card">
-                        <i class="fas fa-arrow-trend-up"></i>
-                        <h3>Improve</h3>
-                        <p>Objective evidence for coaches</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="container">
-                <div class="section-intro">
-                    <p class="eyebrow">Compare with care</p>
-                    <h2>One delivery is useful. Trends need a comparable view.</h2>
-                    <p>
-                        Coaches can review metrics across clips and sessions when takes share a
-                        similar view and quality. Automatic longitudinal comparison is the product
-                        thesis — strongest once capture is consistent.
-                    </p>
-                </div>
-                <div class="compare-grid">
-                    <div class="compare-card">
-                        <h4>Batting — Session Progress</h4>
-                        <div class="compare-row">
-                            <span>Pitch map (coming soon)</span>
-                        </div>
-                        <div class="compare-row">
-                            <span>Shot direction (coming soon)</span>
-                        </div>
-                        <div class="compare-row">
-                            <span>Bat speed</span>
-                        </div>
-                        <div class="compare-row">
-                            <span>Same-view session review</span>
-                            <strong>Coach-led</strong>
-                        </div>
-                    </div>
-                    <div class="compare-card">
-                        <h4>Bowling — Session Progress</h4>
-                        <div class="compare-row">
-                            <span>Front knee angle</span>
-                        </div>
-                        <div class="compare-row">
-                            <span>Same-view session review</span>
-                            <strong>Coach-led</strong>
-                        </div>
-                    </div>
-                </div>
-                <p class="compare-disclaimer">Illustrative sample data — session trends need comparable views and clip quality.</p>
-            </div>
-        </section>
-
-        <section class="section technology-band">
-            <div class="container split-layout">
-                <div>
-                    <p class="eyebrow" style="color: #ffd86b;">Gabriella Vision</p>
-                    <h2>Built for cricket analysis, not generic sports CV</h2>
-                    <p>
-                        The software is tuned for cricket actions — finding the player, bat, and ball,
-                        then selecting batting or bowling metrics from the clip. Purpose-built capture
-                        hardware is on the roadmap to make session-to-session comparison even more consistent.
-                    </p>
-                    <a href="services.html" class="text-link">Learn about the platform <i class="fas fa-chevron-right"></i></a>
-                </div>
-                <div class="analysis-stack">
-                    <div class="analysis-row accent-green">
-                        <span>View-aware batting &amp; bowling analysis</span>
-                        <strong><i class="fas fa-check"></i></strong>
-                    </div>
-                    <div class="analysis-row accent-amber">
-                        <span>Pose, bat &amp; ball overlays</span>
-                        <strong><i class="fas fa-check"></i></strong>
-                    </div>
-                    <div class="analysis-row accent-coral">
-                        <span>Sample clip metrics in the Showcase</span>
-                        <strong><i class="fas fa-check"></i></strong>
-                    </div>
-                    <div class="analysis-row accent-teal">
-                        <span>Portable capture hardware (planned)</span>
-                        <strong><i class="fas fa-clock"></i></strong>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section final-cta">
-            <div class="container narrow">
-                <p class="eyebrow">Cricket academy pilots</p>
-                <h2>Bring performance intelligence to your nets</h2>
-                <p>
-                    We're piloting Gabriella Vision with academies, coaches, and performance programs.
-                    Tell us how you train — we'll map batting and bowling analysis to your workflow.
-                </p>
-                <div class="hero-actions">
-                    <a href="connect.html?purpose=Pilot+Interest#interest-form" class="cta-button">Request a Pilot</a>
-                    <a href="demo.html" class="secondary-button">Try the Showcase</a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <span class="nav-logo-text">Gabriella Systems</span>
-                    <p>Computer vision for cricket performance — batting and bowling intelligence from ordinary video.</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Product</h4>
-                    <a href="services.html">Platform</a>
-                    <a href="batting.html">Batting</a>
-                    <a href="bowling.html">Bowling</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Company</h4>
-                    <a href="about.html">About</a>
-                    <a href="research.html">Research</a>
-                    <a href="connect.html">Connect</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Gabriella Systems. All rights reserved.</p>
-                </div>
+    <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main id="main">
+  <section class="hero">
+    <div class="container hero__grid">
+      <div>
+        <p class="eyebrow eyebrow--dark">Computer vision for cricket nets</p>
+        <h1 class="display">Analysis that fits the view.</h1>
+        <p class="lead">Phone apps lock to one setup behind the stumps. Our camera can sit where the coach needs it, including side-on, so Bat and Head come from a view that can see them. Metrics show Ready or Can’t measure with a plain reason. We never invent a number the camera cannot see.</p>
+        <div class="actions">
+          <a class="btn btn--primary" href="connect.html?purpose=Pilot+Interest#interest-form">Request a Pilot</a>
+          <a class="btn btn--secondary-dark" href="demo.html">Explore the Showcase</a>
         </div>
-    </footer>
+        <ul class="status">
+          <li><span class="dot dot--live"></span><b>Live:</b> Batting &amp; bowling video analysis</li>
+          <li><span class="dot dot--live"></span><b>Live:</b> Pose, bat &amp; ball overlays</li>
+          <li><span class="dot dot--planned"></span><b>Planned:</b> Portable capture hardware</li>
+        </ul>
+      </div>
+      <div class="hero__panel" aria-label="Metrics overview">
+        <p class="eyebrow eyebrow--dark">Gabriella Vision</p>
+        <div class="metric"><span class="metric__tag">Batting</span><span class="metric__name">Pitch map <span class="soon">(coming soon)</span></span></div>
+        <div class="metric"><span class="metric__tag">Batting</span><span class="metric__name">Shot direction <span class="soon">(coming soon)</span></span></div>
+        <div class="metric"><span class="metric__tag">Bowling</span><span class="metric__name">Front knee angle</span></div>
+      </div>
+    </div>
+  </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="script.js"></script>
+  <section class="section">
+    <div class="container">
+      <header class="intro">
+        <p class="eyebrow">One analysis stack. View-aware results.</p>
+        <h2>Batting or bowling — Gabriella adapts to the action and the camera view.</h2>
+      </header>
+      <div class="clips">
+        <figure class="clip">
+          <div class="clip__media" style="--ar:960/540">
+            <img src="assets/cricket_batting_pitchmap_6s.gif" width="960" height="540" alt="Batting example with an estimated pitch map and shot direction">
+          </div>
+          <figcaption class="clip__meta">
+            <span class="clip__label">Gabriella Vision · Batting</span>
+            <ul class="chips">
+              <li class="chip chip--soon">Pitch map</li>
+              <li class="chip chip--soon">Shot direction</li>
+            </ul>
+            <p class="clip__caption">Pitch map and shot direction are estimated. Length bands are a rough guide and are not checked for this net.</p>
+          </figcaption>
+        </figure>
+        <figure class="clip">
+          <div class="clip__media" style="--ar:960/516">
+            <img src="assets/cricket_batting_batspeed_4s.gif" width="960" height="516" alt="Batting example with estimated bat speed">
+          </div>
+          <figcaption class="clip__meta">
+            <span class="clip__label">Gabriella Vision · Batting</span>
+            <ul class="chips"><li class="chip">Bat speed</li></ul>
+            <p class="clip__caption">Estimated values from our pipeline, not real measurements. For demonstration only.</p>
+          </figcaption>
+        </figure>
+        <figure class="clip">
+          <div class="clip__media" style="--ar:540/368">
+            <img src="assets/cricket_bowling_knee_5s.gif" width="540" height="368" alt="Bowling example with estimated front knee angle">
+          </div>
+          <figcaption class="clip__meta">
+            <span class="clip__label">Gabriella Vision · Bowling</span>
+            <ul class="chips"><li class="chip">Front knee angle</li></ul>
+            <p class="clip__caption">Estimated values from our pipeline, not real measurements. For demonstration only.</p>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="tagline">
+        <h3>Same vision stack. Results that match the take.</h3>
+        <a class="btn btn--secondary" href="demo.html">Explore the Showcase</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--soft">
+    <div class="container">
+      <header class="intro">
+        <p class="eyebrow">One system. Multiple perspectives.</p>
+        <h2>Batting and bowling intelligence from one analysis stack</h2>
+      </header>
+      <div class="grid grid--2">
+        <article class="card">
+          <div class="card__icon"><i class="fas fa-baseball-bat-ball" aria-hidden="true"></i></div>
+          <h3 class="card__title">Batting intelligence</h3>
+          <ul class="card__list">
+            <li>Pitch map (coming soon)</li>
+            <li>Shot direction (coming soon)</li>
+            <li>Bat speed</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="card__icon"><i class="fas fa-person-running" aria-hidden="true"></i></div>
+          <h3 class="card__title">Bowling intelligence</h3>
+          <ul class="card__list"><li>Front knee angle</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark">
+    <div class="container">
+      <header class="intro">
+        <p class="eyebrow eyebrow--dark">How it works</p>
+        <h2>From raw video to coaching-ready evidence</h2>
+      </header>
+      <ol class="flow">
+        <li class="card card--dark"><span class="flow__n">01</span><h3 class="card__title">Capture</h3><p class="card__body">Purpose-built cricket vision system</p></li>
+        <li class="card card--dark"><span class="flow__n">02</span><h3 class="card__title">Understand</h3><p class="card__body">Find the player, bat, ball, and key moments</p></li>
+        <li class="card card--dark"><span class="flow__n">03</span><h3 class="card__title">Measure</h3><p class="card__body">Speed, angles, timing, trajectory</p></li>
+        <li class="card card--dark"><span class="flow__n">04</span><h3 class="card__title">Learn</h3><p class="card__body">Compare delivery, session, history</p></li>
+        <li class="card card--dark"><span class="flow__n">05</span><h3 class="card__title">Improve</h3><p class="card__body">Objective evidence for coaches</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <header class="intro">
+        <p class="eyebrow">Compare with care</p>
+        <h2>One delivery is useful. Trends need a comparable view.</h2>
+        <p class="lead lead--light">Coaches can review metrics across clips and sessions when takes share a similar view and quality. Automatic longitudinal comparison is the product thesis — strongest once capture is consistent.</p>
+      </header>
+      <div class="grid grid--2">
+        <article class="card">
+          <h3 class="card__title">Batting — session progress</h3>
+          <dl class="rows">
+            <div><dt>Pitch map <span class="soon soon--light">(coming soon)</span></dt></div>
+            <div><dt>Shot direction <span class="soon soon--light">(coming soon)</span></dt></div>
+            <div><dt>Bat speed</dt></div>
+            <div><dt>Same-view session review</dt><dd>Coach-led</dd></div>
+          </dl>
+        </article>
+        <article class="card">
+          <h3 class="card__title">Bowling — session progress</h3>
+          <dl class="rows">
+            <div><dt>Front knee angle</dt></div>
+            <div><dt>Same-view session review</dt><dd>Coach-led</dd></div>
+          </dl>
+        </article>
+      </div>
+      <p class="footnote">Illustrative sample data — session trends need comparable views and clip quality.</p>
+    </div>
+  </section>
+
+  <section class="section section--dark">
+    <div class="container split">
+      <div>
+        <p class="eyebrow eyebrow--dark">Gabriella Vision</p>
+        <h2>Built for cricket analysis, not generic sports CV</h2>
+        <p class="lead">The software is tuned for cricket actions — finding the player, bat, and ball, then selecting batting or bowling metrics from the clip. Purpose-built capture hardware is on the roadmap to make session-to-session comparison even more consistent.</p>
+        <a class="btn btn--ghost-dark" href="services.html">Learn about the platform <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+      </div>
+      <ul class="checks card card--dark">
+        <li><i class="fas fa-check" aria-hidden="true"></i>View-aware batting &amp; bowling analysis</li>
+        <li><i class="fas fa-check" aria-hidden="true"></i>Pose, bat &amp; ball overlays</li>
+        <li><i class="fas fa-check" aria-hidden="true"></i>Sample clip metrics in the Showcase</li>
+        <li class="is-planned"><i class="fas fa-clock" aria-hidden="true"></i>Portable capture hardware (planned)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section cta">
+    <div class="container cta__inner">
+      <p class="eyebrow eyebrow--dark">Cricket academy pilots</p>
+      <h2>Bring performance intelligence to your nets</h2>
+      <p class="lead">We’re piloting Gabriella Vision with academies, coaches, and performance programs. Tell us how you train — we’ll map batting and bowling analysis to your workflow.</p>
+      <div class="actions actions--center">
+        <a class="btn btn--primary" href="connect.html?purpose=Pilot+Interest#interest-form">Request a Pilot</a>
+        <a class="btn btn--secondary-dark" href="demo.html">Explore the Showcase</a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a class="nav__brand nav__brand--dark" href="index.html"><img src="assets/logo.png" alt="" width="32" height="32"><span>Gabriella Systems</span></a>
+      <p>Computer vision for cricket performance — batting and bowling intelligence from ordinary video.</p>
+    </div>
+    <nav aria-label="Product"><h4>Product</h4>
+      <a href="services.html">Platform</a><a href="batting.html">Batting</a><a href="bowling.html">Bowling</a><a href="academies.html">For Academies</a><a href="demo.html">Showcase</a>
+    </nav>
+    <nav aria-label="Company"><h4>Company</h4>
+      <a href="about.html">About</a><a href="research.html">Research</a><a href="sports.html">Sports</a><a href="connect.html">Connect</a>
+    </nav>
+  </div>
+  <div class="container footer__base">© 2026 Gabriella Systems. All rights reserved.</div>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>
