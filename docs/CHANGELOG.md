@@ -15,6 +15,7 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 - **Ball speed**, **Head stability**, **Contact time**, **Run-up speed**, and **Arm angular speed** are off those lists.
 - Section header **Selected examples**. The line beside the examples is: *Estimated values from our pipeline, not real measurements. For demonstration only.* The bowling page also says **More bowling analysis is coming soon.**
 - The HTML name list sits under each GIF. No numeric value was added in HTML.
+- Example GIFs now show a light body-pose outline.
 
 ## 2026-10-25
 

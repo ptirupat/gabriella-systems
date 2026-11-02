@@ -11,6 +11,8 @@ Narrative of what the marketing site claims, what changed in September–October
 
 This is a static HTML site. Live analysis runs on Modal and is embedded from `demo.html` (Showcase) and `admin.html`.
 
+Example GIFs now show a light body-pose outline.
+
 **2026-11-02:** Selected-example GIFs on the homepage, `batting.html`, and `bowling.html`. `assets/cricket_batting_pitchmap_6s.gif` was replaced with an updated file and added unmodified. `assets/cricket_batting_batspeed_4s.gif` and `assets/cricket_bowling_knee_5s.gif` were added unmodified. Clip HUDs and metric lists name only what those GIFs show. Batting: **Pitch map**, **Shot direction**, **Bat speed**. Bowling: **Front knee angle**. **Ball speed**, **Head stability**, **Contact time**, **Run-up speed**, and **Arm angular speed** are off those lists. Section header **Selected examples**. The label is *Estimated values from our pipeline, not real measurements. For demonstration only.* Bowling page copy also says **More bowling analysis is coming soon.** The name list sits under each GIF. No numeric value was added in HTML.
 
 **2026-10-25:** On phones (640px and below), the Gabriella Vision clip HUD on the homepage, `batting.html`, and `bowling.html` sits under the clip as a full-width block with a small gap. The overlay on wider screens is unchanged. Metric names, copy, and the GIFs are unchanged. No numeric values were added.
