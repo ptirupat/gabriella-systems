@@ -10,9 +10,9 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 
 ### Results first; do not pitch Ready / Can't measure
 
-- The refreshed homepage still said “Metrics show Ready or Can’t measure with a plain reason.” That sentence, and the same pitch on `batting.html`, `bowling.html`, `services.html`, `sports.html`, `research.html`, `academies.html`, and the ball-speed tooltip in `script.js`, now says a missing or untrusted metric shows a short reason beside that result.
-- No new metrics, sample numbers, or accuracy claims. Coming-soon labels and the estimated-value line on the selected-example clips are unchanged. Showcase, demo, and GIF files are unchanged.
-- `docs/PRODUCT.md` and `docs/METRICS_CATALOG.md` are not in this repo. The website-facing note is in [homepage-hud-metrics.md](./homepage-hud-metrics.md) and [competitive-positioning.md](./competitive-positioning.md). Dated entries below stay as the record of earlier locks.
+- Website copy only. The refreshed homepage still said “Metrics show Ready or Can’t measure with a plain reason.” That pitch, and the same pitch on `batting.html`, `bowling.html`, `services.html`, `sports.html`, `research.html`, `academies.html`, and the ball-speed tooltip in `script.js`, now describes a missing or untrusted metric as a short reason beside that result. Do not pitch Ready / Can’t measure as a feature or headline. In the product UI, Can’t measure may remain a rare inline note with a plain reason.
+- No new metrics, sample numbers, or accuracy claims. Coming-soon labels and the estimated-value line on the selected-example clips are unchanged. Showcase, demo, and GIF files are unchanged. The Showcase per-metric table in [homepage-hud-metrics.md](./homepage-hud-metrics.md) is unchanged.
+- `docs/PRODUCT.md` and `docs/METRICS_CATALOG.md` are not in this repo. Dated entries below stay as the record of earlier locks and are not a live website pitch.
 
 ## 2026-11-02
 
