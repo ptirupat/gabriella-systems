@@ -6,6 +6,14 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 
 ---
 
+## 2026-11-09
+
+### Results first; do not pitch Ready / Can't measure
+
+- The refreshed homepage still said “Metrics show Ready or Can’t measure with a plain reason.” That sentence, and the same pitch on `batting.html`, `bowling.html`, `services.html`, `sports.html`, `research.html`, `academies.html`, and the ball-speed tooltip in `script.js`, now says a missing or untrusted metric shows a short reason beside that result.
+- No new metrics, sample numbers, or accuracy claims. Coming-soon labels and the estimated-value line on the selected-example clips are unchanged. Showcase, demo, and GIF files are unchanged.
+- `docs/PRODUCT.md` and `docs/METRICS_CATALOG.md` are not in this repo. The website-facing note is in [homepage-hud-metrics.md](./homepage-hud-metrics.md) and [competitive-positioning.md](./competitive-positioning.md). Dated entries below stay as the record of earlier locks.
+
 ## 2026-11-02
 
 - Site-wide refresh: one palette, type scale, spacing scale, button set, card, clip frame, nav, and footer. Showcase page and embed are unchanged. Closing call-to-action animation no longer hides the heading or buttons. Academies no longer scrolls sideways on a phone. Clip metric strips go full width on small screens. Legal TODO boxes are hidden, legal pages sit below the nav and stay out of the nav, footer, and sitemap, with noindex. Sports is in the footer. Sports and Research are in the sitemap. Buttons say Request a Pilot or Explore the Showcase.
