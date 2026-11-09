@@ -23,6 +23,13 @@ document.addEventListener('DOMContentLoaded', () => {
         navMenu?.classList.toggle('active', open);
         hamburger.setAttribute('aria-expanded', String(open));
     });
+    const burger = document.getElementById('burger');
+    const navLinks = document.getElementById('nav-links');
+    burger?.addEventListener('click', () => {
+        const open = navLinks?.classList.toggle('is-open');
+        burger.setAttribute('aria-expanded', String(Boolean(open)));
+        burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    });
     navMenu?.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', () => {
             hamburger?.classList.remove('active');
@@ -62,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .from('.hero-left .eyebrow',   { opacity: 0, y: 22, duration: 0.5, ease: 'power2.out' })
             .from('.hero-left .word',      { opacity: 0, y: 32, stagger: 0.07, duration: 0.5, ease: 'power2.out' }, '-=0.2')
             .from('.hero-left .hero-copy', { opacity: 0, y: 20, duration: 0.5, ease: 'power2.out' }, '-=0.2')
-            .from('.hero-actions',         { opacity: 0, y: 18, duration: 0.4, ease: 'power2.out' }, '-=0.2')
+            .from('.hero-split .hero-actions', { opacity: 0, y: 18, duration: 0.4, ease: 'power2.out' }, '-=0.2')
             .from('.status-strip',         { opacity: 0, duration: 0.4, ease: 'power1.out' }, '-=0.1')
             .from('.hero-metric-card',     { opacity: 0, scale: 0.82, y: 20, stagger: 0.14, duration: 0.55, ease: 'back.out(1.3)' }, '-=0.35');
 
@@ -105,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Dual GIF / media reveal on homepage
     if (document.querySelector('.dual-video')) {
-        gsap.from('.dual-video > div', {
+        gsap.from('.dual-video > div, .dual-video > figure', {
             scrollTrigger: { trigger: '.dual-video', start: 'top 82%' },
             opacity: 0,
             y: 28,
@@ -144,12 +151,13 @@ document.addEventListener('DOMContentLoaded', () => {
             duration: 0.6,
             stagger: 0.1,
             ease: 'power2.out',
+            clearProps: 'opacity,transform',
         });
     }
 
-    // Scroll-triggered section heading slide-in (skip intros already animated above)
+    // One heading tween. Skip intros and the closing CTA so it is not animated twice.
     gsap.utils.toArray('section h2').forEach(h2 => {
-        if (h2.closest('.section-intro')) return;
+        if (h2.closest('.section-intro, .intro, .final-cta, .cta')) return;
         gsap.from(h2, {
             scrollTrigger: { trigger: h2, start: 'top 86%' },
             opacity: 0,
@@ -234,7 +242,7 @@ const METRIC_TIPS = {
     'head-stability': 'How much the head moved from downswing to contact (cm). Lower usually means steadier — not a technique grade.',
     'run-up': 'Peak approach speed into the delivery in this take (km/h).',
     'contact-time': 'Time from the start of this take to contact (ms). Use it to compare same-view sessions — not early vs late.',
-    'ball-speed': 'Measured ball speed in this take (km/h).',
+    'ball-speed': 'Measured ball speed in this take (km/h). Ready when tracking is trusted; otherwise Can\'t measure.',
     'front-knee': 'Front-knee flexion at plant in this take (degrees). 0° ≈ fully extended.',
     'arm-speed': 'Peak arm angular speed in this take (°/s).',
 };

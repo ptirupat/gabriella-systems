@@ -19,32 +19,24 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="index.html" class="nav-logo-link">
-                    <img src="assets/logo.png" alt="Gabriella Systems" class="nav-logo-img">
-                    <span class="nav-logo-wordmark">Gabriella</span>
-                    <i class="fas fa-house" aria-label="Home" style="font-size:0.7rem; color:var(--muted); margin-left:0.3rem; opacity:0.6; vertical-align:middle;"></i>
-                </a>
-            </div>
-            <div class="nav-menu" id="nav-menu">
-                <a href="services.html" class="nav-link">Platform</a>
-                <a href="batting.html" class="nav-link">Batting</a>
-                <a href="bowling.html" class="nav-link">Bowling</a>
-                <a href="academies.html" class="nav-link active">For Academies</a>
-                <a href="demo.html" class="nav-link">Showcase</a>
-                <a href="research.html" class="nav-link">Research</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="connect.html" class="nav-link">Connect</a>
-            </div>
-            <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
+    <header class="nav">
+  <div class="container nav__bar">
+    <a class="nav__brand" href="index.html" aria-label="Gabriella Systems home">
+      <img src="assets/logo.png" alt="" width="32" height="32"><span>Gabriella</span>
+    </a>
+    <nav class="nav__links" id="nav-links" aria-label="Main">
+      <a href="services.html">Platform</a>
+      <a href="batting.html">Batting</a>
+      <a href="bowling.html">Bowling</a>
+      <a href="academies.html" aria-current="page">For Academies</a>
+      <a href="demo.html">Showcase</a>
+      <a href="research.html">Research</a>
+      <a href="about.html">About</a>
+      <a class="btn btn--primary btn--sm nav__cta" href="connect.html?purpose=Pilot+Interest#interest-form">Request a Pilot</a>
     </nav>
+    <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+  </div>
+</header>
 
     <main class="subpage-main">
         <section class="page-hero">
@@ -52,7 +44,7 @@
                 <p class="eyebrow">For Academies</p>
                 <h1>One system. Every player. Objective progress.</h1>
                 <p>
-                    We're piloting Gabriella Vision with cricket academies. The pilot workflow
+                    We’re piloting Gabriella Vision with cricket academies. The pilot workflow
                     uses existing camera equipment and the Gabriella software to bring batting and
                     bowling analysis to your nets — without requiring specialist hardware to start.
                 </p>
@@ -69,12 +61,12 @@
                     <article class="feature-card">
                         <i class="fas fa-baseball-bat-ball"></i>
                         <h3>Batters</h3>
-                        <p>Track batting development across sessions — head stability, timing, stride, and bat speed trends.</p>
+                        <p>Track batting development across sessions — pitch map (coming soon), shot direction (coming soon), and bat speed.</p>
                     </article>
                     <article class="feature-card">
                         <i class="fas fa-person-running"></i>
                         <h3>Bowlers</h3>
-                        <p>Track bowling mechanics — run-up speed, front-knee flexion at plant, arm angular speed, and ball speed progression.</p>
+                        <p>Track bowling mechanics — front knee angle. More bowling analysis is coming soon.</p>
                     </article>
                     <article class="feature-card">
                         <i class="fas fa-clipboard-check"></i>
@@ -96,12 +88,12 @@
                     <p class="eyebrow" style="color: #ffd86b;">Pilot workflow</p>
                     <h2>Designed to grow with your academy</h2>
                     <p>
-                        The pilot workflow is designed to analyse sessions using existing camera recordings
+                        The pilot workflow is designed to analyze sessions using existing camera recordings
                         from your nets. Purpose-built capture hardware is on the roadmap to improve consistency,
                         but is not required to participate in the pilot.
                     </p>
                     <p>
-                        Each analysed session adds to a player's development record. Pilot terms and session scope are discussed individually.
+                        Each analyzed session adds to a player's development record. Pilot terms and session scope are discussed individually.
                     </p>
                 </div>
                 <div class="analysis-stack">
@@ -110,7 +102,7 @@
                         <strong>Discussed individually</strong>
                     </div>
                     <div class="analysis-row accent-amber">
-                        <span>Sessions analysed</span>
+                        <span>Sessions analyzed</span>
                         <strong>Selected pilot sessions</strong>
                     </div>
                     <div class="analysis-row accent-coral">
@@ -128,7 +120,7 @@
         <section class="section" id="academy-pilot">
             <div class="container">
                 <div class="section-intro">
-                    <p class="eyebrow">Academy pilot programme</p>
+                    <p class="eyebrow">Academy pilot program</p>
                     <h2>What the pilot involves</h2>
                     <p style="color:var(--muted); max-width:640px;">
                         We are selecting academies for a structured pilot of Gabriella Vision. Here is
@@ -153,8 +145,8 @@
                             <div class="pilot-item">
                                 <h4><i class="fas fa-video" style="color:var(--teal);"></i> Supported recording setup</h4>
                                 <ul>
-                                    <li>A camera placed where the coach needs it</li>
-                                    <li>Side-on for Bat and Head. Front-on batting is for planned charts.</li>
+                                    <li>Existing smartphone, tablet, or fixed camera at the nets</li>
+                                    <li>Side-on or front-on view (affects which metrics are available)</li>
                                     <li>Minimum 30 fps recommended for reliable tracking</li>
                                     <li>Good lighting and unobstructed view of player, bat, and ball</li>
                                 </ul>
@@ -170,8 +162,8 @@
                             <div class="pilot-item">
                                 <h4><i class="fas fa-ruler-combined" style="color:var(--teal);"></i> What Gabriella measures</h4>
                                 <ul>
-                                    <li>Batting: bat speed at impact and head stability per delivery, plus contact time and ball speed, from a camera placed side-on</li>
-                                    <li>Bowling: run-up speed, arm angular speed, front-knee angle at plant</li>
+                                    <li>Batting: pitch map (coming soon), shot direction (coming soon), bat speed</li>
+                                    <li>Bowling: front knee angle</li>
                                     <li>Pose overlays across the action</li>
                                     <li>Phase breakdowns where the take supports it</li>
                                 </ul>
@@ -189,12 +181,12 @@
 
                             <div class="pilot-item">
                                 <h4><i class="fas fa-shield" style="color:var(--teal);"></i> Data ownership and privacy</h4>
-                                <p>Video uploads and analysis outputs belong to the academy. Gabriella Systems does not use pilot session videos for model training without separate written consent. Data handling policies are being finalised — contact <a href="mailto:info@gabriellasystems.com" style="color:var(--teal);">info@gabriellasystems.com</a> with questions.</p>
+                                <p>Video uploads and analysis outputs belong to the academy. Gabriella Systems does not use pilot session videos for training without separate written consent. Data handling policies are being finalized — contact <a href="mailto:info@gabriellasystems.com" style="color:var(--teal);">info@gabriellasystems.com</a> with questions.</p>
                             </div>
 
                             <div class="pilot-item">
                                 <h4><i class="fas fa-check-circle" style="color:var(--green);"></i> Pilot success criteria</h4>
-                                <p>Defined together at the start of the pilot. Submitted clips are reviewed for bat speed, head stability, and the other delivery results. Coach feedback is captured. No improvement guarantees are made.</p>
+                                <p>Defined together at the start of the pilot. Submitted clips are reviewed for deliveries; metrics show Ready when trusted or Can’t measure with a plain reason — never invent numbers. Coach feedback is captured. No improvement guarantees are made.</p>
                             </div>
                         </div>
 
@@ -213,42 +205,32 @@
             <div class="container narrow">
                 <h2>Request an academy pilot</h2>
                 <p>
-                    We're working with academies to pilot Gabriella Vision for their
+                    We’re working with academies to pilot Gabriella Vision for their
                     batting and bowling training sessions. Tell us about your setup.
                 </p>
                 <div class="hero-actions">
                     <a href="connect.html?purpose=Pilot+Interest#interest-form" class="cta-button">Request a Pilot</a>
-                    <a href="demo.html" class="secondary-button">See the Showcase</a>
+                    <a href="demo.html" class="secondary-button">Explore the Showcase</a>
                 </div>
             </div>
         </section>
     </main>
 
         <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <span class="nav-logo-text">Gabriella Systems</span>
-                    <p>Computer vision for cricket performance — batting and bowling intelligence from ordinary video.</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Product</h4>
-                    <a href="services.html">Platform</a>
-                    <a href="batting.html">Batting</a>
-                    <a href="bowling.html">Bowling</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Company</h4>
-                    <a href="about.html">About</a>
-                    <a href="research.html">Research</a>
-                    <a href="connect.html">Connect</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Gabriella Systems. All rights reserved.</p>
-                </div>
-        </div>
-    </footer>
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a class="nav__brand nav__brand--dark" href="index.html"><img src="assets/logo.png" alt="" width="32" height="32"><span>Gabriella Systems</span></a>
+      <p>Computer vision for cricket performance — batting and bowling intelligence from ordinary video.</p>
+    </div>
+    <nav aria-label="Product"><h4>Product</h4>
+      <a href="services.html">Platform</a><a href="batting.html">Batting</a><a href="bowling.html">Bowling</a><a href="academies.html">For Academies</a><a href="demo.html">Showcase</a>
+    </nav>
+    <nav aria-label="Company"><h4>Company</h4>
+      <a href="about.html">About</a><a href="research.html">Research</a><a href="sports.html">Sports</a><a href="connect.html">Connect</a>
+    </nav>
+  </div>
+  <div class="container footer__base">© 2026 Gabriella Systems. All rights reserved.</div>
+</footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>

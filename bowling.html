@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bowling Intelligence — Gabriella Systems</title>
-    <meta name="description" content="Computer vision for bowling analysis — run-up speed and action metrics from cricket clips, with results suited to the camera view.">
+    <meta name="description" content="Computer vision for bowling analysis: front knee angle today, with more bowling analysis coming soon.">
         <meta property="og:type" content="website">
     <meta property="og:site_name" content="Gabriella Systems">
     <meta property="og:title" content="Bowling Intelligence — Gabriella Systems">
-    <meta property="og:description" content="Computer vision for bowling analysis — run-up speed and action metrics from cricket clips, with results suited to the camera view.">
+    <meta property="og:description" content="Computer vision for bowling analysis: front knee angle today, with more bowling analysis coming soon.">
     <meta property="og:image" content="https://gabriellasystems.com/assets/cricket-vision-hero.png">
     <meta property="og:url" content="https://gabriellasystems.com/bowling.html">
     <meta name="twitter:card" content="summary_large_image">
@@ -19,32 +19,24 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="index.html" class="nav-logo-link">
-                    <img src="assets/logo.png" alt="Gabriella Systems" class="nav-logo-img">
-                    <span class="nav-logo-wordmark">Gabriella</span>
-                    <i class="fas fa-house" aria-label="Home" style="font-size:0.7rem; color:var(--muted); margin-left:0.3rem; opacity:0.6; vertical-align:middle;"></i>
-                </a>
-            </div>
-            <div class="nav-menu" id="nav-menu">
-                <a href="services.html" class="nav-link">Platform</a>
-                <a href="batting.html" class="nav-link">Batting</a>
-                <a href="bowling.html" class="nav-link active">Bowling</a>
-                <a href="academies.html" class="nav-link">For Academies</a>
-                <a href="demo.html" class="nav-link">Showcase</a>
-                <a href="research.html" class="nav-link">Research</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="connect.html" class="nav-link">Connect</a>
-            </div>
-            <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
+    <header class="nav">
+  <div class="container nav__bar">
+    <a class="nav__brand" href="index.html" aria-label="Gabriella Systems home">
+      <img src="assets/logo.png" alt="" width="32" height="32"><span>Gabriella</span>
+    </a>
+    <nav class="nav__links" id="nav-links" aria-label="Main">
+      <a href="services.html">Platform</a>
+      <a href="batting.html">Batting</a>
+      <a href="bowling.html" aria-current="page">Bowling</a>
+      <a href="academies.html">For Academies</a>
+      <a href="demo.html">Showcase</a>
+      <a href="research.html">Research</a>
+      <a href="about.html">About</a>
+      <a class="btn btn--primary btn--sm nav__cta" href="connect.html?purpose=Pilot+Interest#interest-form">Request a Pilot</a>
     </nav>
+    <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+  </div>
+</header>
 
     <main class="subpage-main">
         <section class="page-hero">
@@ -53,9 +45,8 @@
                 <h1>Understand the complete bowling action</h1>
                 <p>
                     For bowling clips, Gabriella tracks the action through measurable stages and
-                    returns metrics and visualizations suited to that camera view — so coaches can
-                    review run-up speed, plus front-knee flexion at plant and arm angular speed
-                    where the take supports it.
+                    returns metrics and visualizations suited to that camera view. The sample on
+                    this page is front knee angle. More bowling analysis is coming soon.
                 </p>
             </div>
         </section>
@@ -73,7 +64,6 @@
                         </div>
                         <h3>Run-up</h3>
                         <ul class="check-list">
-                            <li><i class="fas fa-check"></i><span>Peak approach speed<sup class="fn-mark"><a href="#bowling-metric-notes">&Dagger;</a></sup></span></li>
                             <li><i class="fas fa-check"></i><span>Acceleration profile<sup class="fn-mark"><a href="#bowling-metric-notes">&dagger;</a></sup></span></li>
                             <li><i class="fas fa-check"></i><span>Same-view consistency<sup class="fn-mark"><a href="#bowling-metric-notes">&sect;</a></sup></span></li>
                         </ul>
@@ -95,7 +85,7 @@
                         </div>
                         <h3>Front-foot plant</h3>
                         <ul class="check-list">
-                            <li><i class="fas fa-check"></i><span>Front-knee flexion at plant <span class="metric-inline-tip">0° ≈ extended</span></span></li>
+                            <li><i class="fas fa-check"></i>Front knee angle</li>
                             <li><i class="fas fa-check"></i><span>Trunk position<sup class="fn-mark"><a href="#bowling-metric-notes">&dagger;</a></sup></span></li>
                             <li><i class="fas fa-check"></i><span>Stride length<sup class="fn-mark"><a href="#bowling-metric-notes">&Dagger;</a></sup></span></li>
                         </ul>
@@ -106,14 +96,12 @@
                         </div>
                         <h3>Arm, ball &amp; follow-through</h3>
                         <ul class="check-list">
-                            <li><i class="fas fa-check"></i><span>Arm angular speed<sup class="fn-mark"><a href="#bowling-metric-notes">&Dagger;</a></sup></span></li>
-                            <li><i class="fas fa-check"></i><span>Ball speed<sup class="fn-mark"><a href="#bowling-metric-notes">*</a></sup></span></li>
                             <li><i class="fas fa-check"></i><span>Follow-through alignment<sup class="fn-mark"><a href="#bowling-metric-notes">&dagger;</a></sup></span></li>
                         </ul>
                     </article>
                 </div>
                 <div class="metric-footnotes" id="bowling-metric-notes">
-                    <p><sup>*</sup> When a delivery can't be measured, we say why &middot; <sup>&dagger;</sup> view-dependent &middot; <sup>&Dagger;</sup> pose-dependent &middot; <sup>&sect;</sup> same-view only</p>
+                    <p><sup>*</sup> Ready or Can’t measure &middot; <sup>&dagger;</sup> view-dependent &middot; <sup>&Dagger;</sup> pose-dependent &middot; <sup>&sect;</sup> same-view only</p>
                 </div>
             </div>
         </section>
@@ -123,7 +111,7 @@
                 <div class="section-intro" style="margin-bottom:1rem;">
                     <p class="eyebrow">What's live, conditional, and research-stage</p>
                     <h2>Capability status for bowling analysis</h2>
-                    <p style="color:var(--muted); font-size:0.9rem; max-width:640px;">Run-up speed and the other bowling results per delivery, from a camera placed side-on. Availability still depends on camera view, calibration, visibility, and clip quality. Release height stays off this page until it is calibrated.</p>
+                    <p style="color:var(--muted); font-size:0.9rem; max-width:640px;">Availability depends on camera view, calibration, visibility, and clip quality. The system reports "can’t measure" when a metric cannot be reliably determined — it never substitutes a guess. Release height stays off this page until calibrated: no public metre, and no can’t-measure slot.</p>
                 </div>
                 <table class="cap-status-table">
                     <thead>
@@ -134,14 +122,11 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td>Run-up speed</td><td><span class="badge-live">Live</span></td><td>When pose is trusted — may show even if the ball is not seen</td></tr>
-                        <tr><td>Arm angular speed</td><td><span class="badge-live">Live</span></td><td>When bowling-arm pose is ok</td></tr>
-                        <tr><td>Front-knee flexion at plant</td><td><span class="badge-live">Live</span></td><td>When front-leg pose is ok. 0° ≈ fully extended — a measured angle, not a technique grade</td></tr>
-                        <tr><td>Ball speed</td><td><span class="badge-conditional">Conditional</span></td><td>Ball speed for this delivery when the ball is tracked through the take</td></tr>
+                        <tr><td>Front knee angle</td><td><span class="badge-conditional">Conditional</span></td><td>Pipeline estimate at front-foot contact. Labelled as an estimate.</td></tr>
                         <tr><td>Stride and gather position</td><td><span class="badge-conditional">Conditional</span></td><td>Requires lower-body visibility and a view that shows the approach</td></tr>
                         <tr><td>Follow-through alignment</td><td><span class="badge-conditional">Conditional</span></td><td>Where the bowler stays in frame after the delivery</td></tr>
                         <tr><td>Session-to-session comparison</td><td><span class="badge-conditional">Conditional</span></td><td>Requires clips from a comparable camera view and quality</td></tr>
-                        <tr><td>Release height</td><td><span class="badge-research">Research</span></td><td>Omitted until calibrated</td></tr>
+                        <tr><td>Release height</td><td><span class="badge-research">Research</span></td><td>Omitted until calibrated — not a public metre and not shown as a can’t-measure slot</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -149,19 +134,23 @@
 
         <section class="section muted-section">
             <div class="container">
-                <div style="max-width: 900px; margin: 0 auto;" class="demo-clip">
-                    <img src="assets/cricket_bowling_15s.gif"
-                         alt="Bowling analysis — annotated clip with pose overlay and delivery metrics"
-                         style="width: 100%; border-radius: 8px; display: block;" />
-                    <div class="clip-hud clip-hud-bowling">
-                        <p class="clip-hud-title">Gabriella Vision</p>
-                        <div class="clip-hud-row" data-metric-tip="run-up"><span>Run-up speed</span><strong>20.4 km/h</strong></div>
-                        <div class="clip-hud-row" data-metric-tip="arm-speed"><span>Arm angular speed</span><strong>619 °/s</strong></div>
-                        <div class="clip-hud-row" data-metric-tip="front-knee"><span>Front knee angle</span><strong>155°</strong></div>
-                        <p class="clip-hud-note">Session metrics from this take</p>
-                    </div>
-                    <p class="demo-disclaimer"><i class="fas fa-circle-info" style="color:var(--amber);margin-right:0.3rem;"></i>Demonstration output from selected sample clips. Not independently validated. Measurement availability and accuracy depend on camera view, calibration, visibility, frame rate, and clip quality.</p>
+                <div class="section-intro">
+                    <p class="eyebrow">Selected examples</p>
+                    <h2>Bowling example</h2>
                 </div>
+                <div class="clips">
+                <figure class="clip">
+                    <div class="clip__media" style="--ar:540/368">
+                        <img src="assets/cricket_bowling_knee_5s.gif" width="540" height="368" alt="Bowling example with estimated front knee angle">
+                    </div>
+                    <figcaption class="clip__meta">
+                        <span class="clip__label">Gabriella Vision · Bowling</span>
+                        <ul class="chips"><li class="chip">Front knee angle</li></ul>
+                        <p class="clip__caption">Estimated values from our pipeline, not real measurements. For demonstration only.</p>
+                    </figcaption>
+                </figure>
+                </div>
+                <p class="example-coming-soon">More bowling analysis is coming soon.</p>
             </div>
         </section>
 
@@ -173,19 +162,9 @@
                 </div>
                 <div class="features-grid">
                     <article class="feature-card">
-                        <i class="fas fa-person-running"></i>
-                        <h3>How consistent is run-up speed across this session?</h3>
-                        <p>Peak approach speed from pose, compared across takes that share a similar view. A measured value — not a technique grade.</p>
-                    </article>
-                    <article class="feature-card">
                         <i class="fas fa-shoe-prints"></i>
-                        <h3>What was front-knee flexion at plant?</h3>
-                        <p>Knee angle of the front leg at front-foot plant in this take. 0° ≈ fully extended. An observed angle, not an ideal shape.</p>
-                    </article>
-                    <article class="feature-card">
-                        <i class="fas fa-gauge-high"></i>
-                        <h3>How fast was the bowling arm through the action?</h3>
-                        <p>Peak arm angular speed in this take, when pose supports it. Observed speed — not a technique grade.</p>
+                        <h3>What was the front knee angle?</h3>
+                        <p>Front knee angle at front-foot contact is a pipeline estimate for this take. It is labelled as an estimate, not a technique grade.</p>
                     </article>
                 </div>
             </div>
@@ -199,21 +178,12 @@
                     <p>
                         Review bowling metrics across clips when takes share a similar view and quality.
                         Longitudinal trends are the goal — strongest with consistent capture.
-                        Measured change, not an ideal angle. Front-knee flexion: 0° ≈ fully extended.
+                        The sample list on this page is front knee angle.
                     </p>
                 </div>
                 <div class="analysis-stack">
-                    <div class="analysis-row accent-green" data-metric-tip="run-up">
-                        <span>Run-up speed</span>
-                        <strong>20.4 km/h</strong>
-                    </div>
-                    <div class="analysis-row accent-amber" data-metric-tip="arm-speed">
-                        <span>Arm angular speed</span>
-                        <strong>619 °/s</strong>
-                    </div>
-                    <div class="analysis-row accent-coral" data-metric-tip="front-knee">
+                    <div class="analysis-row accent-coral">
                         <span>Front knee angle</span>
-                        <strong>155°</strong>
                     </div>
                     <div class="analysis-row">
                         <span>Same-view session review</span>
@@ -232,7 +202,7 @@
                     to bring objective bowling intelligence to your nets.
                 </p>
                 <div class="hero-actions">
-                    <a href="demo.html" class="cta-button">Try the Bowling Showcase</a>
+                    <a href="demo.html" class="cta-button">Explore the Showcase</a>
                     <a href="connect.html?purpose=Pilot+Interest#interest-form" class="secondary-button">Request a Pilot</a>
                 </div>
             </div>
@@ -240,30 +210,20 @@
     </main>
 
         <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <span class="nav-logo-text">Gabriella Systems</span>
-                    <p>Computer vision for cricket performance — batting and bowling intelligence from ordinary video.</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Product</h4>
-                    <a href="services.html">Platform</a>
-                    <a href="batting.html">Batting</a>
-                    <a href="bowling.html">Bowling</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Company</h4>
-                    <a href="about.html">About</a>
-                    <a href="research.html">Research</a>
-                    <a href="connect.html">Connect</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Gabriella Systems. All rights reserved.</p>
-                </div>
-        </div>
-    </footer>
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a class="nav__brand nav__brand--dark" href="index.html"><img src="assets/logo.png" alt="" width="32" height="32"><span>Gabriella Systems</span></a>
+      <p>Computer vision for cricket performance — batting and bowling intelligence from ordinary video.</p>
+    </div>
+    <nav aria-label="Product"><h4>Product</h4>
+      <a href="services.html">Platform</a><a href="batting.html">Batting</a><a href="bowling.html">Bowling</a><a href="academies.html">For Academies</a><a href="demo.html">Showcase</a>
+    </nav>
+    <nav aria-label="Company"><h4>Company</h4>
+      <a href="about.html">About</a><a href="research.html">Research</a><a href="sports.html">Sports</a><a href="connect.html">Connect</a>
+    </nav>
+  </div>
+  <div class="container footer__base">© 2026 Gabriella Systems. All rights reserved.</div>
+</footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>

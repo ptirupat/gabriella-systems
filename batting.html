@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Batting Intelligence — Gabriella Systems</title>
-    <meta name="description" content="Bat speed and head stability per delivery, from a camera placed side-on.">
+    <meta name="description" content="Objective measurement of ball, bat, body and outcome from every delivery a batter faces.">
         <meta property="og:type" content="website">
     <meta property="og:site_name" content="Gabriella Systems">
     <meta property="og:title" content="Batting Intelligence — Gabriella Systems">
-    <meta property="og:description" content="Bat speed and head stability per delivery, from a camera placed side-on.">
+    <meta property="og:description" content="Objective measurement of ball, bat, body and outcome from every delivery a batter faces.">
     <meta property="og:image" content="https://gabriellasystems.com/assets/cricket-vision-hero.png">
     <meta property="og:url" content="https://gabriellasystems.com/batting.html">
     <meta name="twitter:card" content="summary_large_image">
@@ -19,32 +19,24 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="index.html" class="nav-logo-link">
-                    <img src="assets/logo.png" alt="Gabriella Systems" class="nav-logo-img">
-                    <span class="nav-logo-wordmark">Gabriella</span>
-                    <i class="fas fa-house" aria-label="Home" style="font-size:0.7rem; color:var(--muted); margin-left:0.3rem; opacity:0.6; vertical-align:middle;"></i>
-                </a>
-            </div>
-            <div class="nav-menu" id="nav-menu">
-                <a href="services.html" class="nav-link">Platform</a>
-                <a href="batting.html" class="nav-link active">Batting</a>
-                <a href="bowling.html" class="nav-link">Bowling</a>
-                <a href="academies.html" class="nav-link">For Academies</a>
-                <a href="demo.html" class="nav-link">Showcase</a>
-                <a href="research.html" class="nav-link">Research</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="connect.html" class="nav-link">Connect</a>
-            </div>
-            <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
+    <header class="nav">
+  <div class="container nav__bar">
+    <a class="nav__brand" href="index.html" aria-label="Gabriella Systems home">
+      <img src="assets/logo.png" alt="" width="32" height="32"><span>Gabriella</span>
+    </a>
+    <nav class="nav__links" id="nav-links" aria-label="Main">
+      <a href="services.html">Platform</a>
+      <a href="batting.html" aria-current="page">Batting</a>
+      <a href="bowling.html">Bowling</a>
+      <a href="academies.html">For Academies</a>
+      <a href="demo.html">Showcase</a>
+      <a href="research.html">Research</a>
+      <a href="about.html">About</a>
+      <a class="btn btn--primary btn--sm nav__cta" href="connect.html?purpose=Pilot+Interest#interest-form">Request a Pilot</a>
     </nav>
+    <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+  </div>
+</header>
 
     <main class="subpage-main">
         <section class="page-hero">
@@ -61,7 +53,7 @@
         <section class="section">
             <div class="container">
                 <div class="section-intro">
-                    <p class="eyebrow">Four dimensions of a delivery</p>
+                    <p class="eyebrow">Four dimensions of every delivery</p>
                     <h2>Ball, bat, body, and outcome — where the clip and view allow</h2>
                 </div>
                 <div class="product-grid four-col">
@@ -84,9 +76,8 @@
                         <h3>Bat</h3>
                         <ul class="check-list">
                             <li><i class="fas fa-check"></i><span>Bat path<sup class="fn-mark"><a href="#batting-metric-notes">&dagger;</a></sup></span></li>
-                            <li><i class="fas fa-check"></i>Bat speed at impact</li>
+                            <li><i class="fas fa-check"></i>Bat speed</li>
                             <li><i class="fas fa-check"></i><span>Bat angle<sup class="fn-mark"><a href="#batting-metric-notes">&dagger;</a></sup></span></li>
-                            <li><i class="fas fa-check"></i>Contact time in this clip</li>
                         </ul>
                     </article>
                     <article class="product-card">
@@ -95,7 +86,8 @@
                         </div>
                         <h3>Body</h3>
                         <ul class="check-list">
-                            <li><i class="fas fa-check"></i>Head stability</li>
+                            <li><i class="fas fa-check"></i>Pitch map (coming soon)</li>
+                            <li><i class="fas fa-check"></i>Shot direction (coming soon)</li>
                             <li><i class="fas fa-check"></i><span>Foot movement<sup class="fn-mark"><a href="#batting-metric-notes">&Dagger;</a></sup></span></li>
                             <li><i class="fas fa-check"></i><span>Stride length<sup class="fn-mark"><a href="#batting-metric-notes">&Dagger;</a></sup></span></li>
                             <li><i class="fas fa-check"></i>Joint positions</li>
@@ -115,7 +107,7 @@
                     </article>
                 </div>
                 <div class="metric-footnotes" id="batting-metric-notes">
-                    <p><sup>*</sup> When a delivery can't be measured, we say why &middot; <sup>&dagger;</sup> view-dependent &middot; <sup>&Dagger;</sup> pose-dependent &middot; <sup>&sect;</sup> same-view only &middot; Bat-ball contact is not a technique grade</p>
+                    <p><sup>*</sup> Ready or Can’t measure &middot; <sup>&dagger;</sup> view-dependent &middot; <sup>&Dagger;</sup> pose-dependent &middot; <sup>&sect;</sup> same-view only &middot; Bat-ball contact is not a technique grade</p>
                 </div>
             </div>
         </section>
@@ -125,7 +117,7 @@
                 <div class="section-intro" style="margin-bottom:1rem;">
                     <p class="eyebrow">What's live, conditional, and research-stage</p>
                     <h2>Capability status for batting analysis</h2>
-                    <p style="color:var(--muted); font-size:0.9rem; max-width:640px;">Bat speed and head stability per delivery, from a camera placed side-on. Availability still depends on camera view, calibration, visibility, and clip quality.</p>
+                    <p style="color:var(--muted); font-size:0.9rem; max-width:640px;">Availability depends on camera view, calibration, visibility, and clip quality. The system reports "can’t measure" when a metric cannot be reliably determined — it never substitutes a guess.</p>
                 </div>
                 <table class="cap-status-table">
                     <thead>
@@ -136,10 +128,9 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td>Bat speed at impact</td><td><span class="badge-live">Live</span></td><td>When bat is tracked through contact frame</td></tr>
-                        <tr><td>Ball speed</td><td><span class="badge-live">Live</span></td><td>Ball speed for this delivery when the ball is tracked through the take</td></tr>
-                        <tr><td>Contact time (per clip)</td><td><span class="badge-live">Live</span></td><td>When impact is found</td></tr>
-                        <tr><td>Head stability</td><td><span class="badge-live">Live</span></td><td>When pose estimation covers the head and shoulders</td></tr>
+                        <tr><td>Pitch map</td><td><span class="badge-conditional">Coming soon</span></td><td>Estimated example in the clip. Length bands are a rough guide.</td></tr>
+                        <tr><td>Shot direction</td><td><span class="badge-conditional">Coming soon</span></td><td>Estimated example in the clip.</td></tr>
+                        <tr><td>Bat speed</td><td><span class="badge-conditional">Conditional</span></td><td>Pipeline estimate in the clip. Labelled as an estimate.</td></tr>
                         <tr><td>Ball trajectory</td><td><span class="badge-conditional">Conditional</span></td><td>Requires sufficient ball visibility and appropriate camera angle</td></tr>
                         <tr><td>Bounce point</td><td><span class="badge-conditional">Conditional</span></td><td>Requires a view that captures the pitch area</td></tr>
                         <tr><td>Stride length, foot movement</td><td><span class="badge-conditional">Conditional</span></td><td>Requires full lower-body pose visibility</td></tr>
@@ -154,19 +145,34 @@
 
         <section class="section muted-section">
             <div class="container">
-                <div style="max-width: 900px; margin: 0 auto;" class="demo-clip">
-                    <img src="assets/cricket_batting_15s.gif"
-                         alt="Batting analysis — annotated clip with pose, bat, and ball overlays"
-                         style="width: 100%; border-radius: 8px; display: block;" />
-                    <div class="clip-hud">
-                        <p class="clip-hud-title">Gabriella Vision</p>
-                        <div class="clip-hud-row" data-metric-tip="bat-speed"><span>Bat speed at impact</span><strong>10.6 km/h</strong></div>
-                        <div class="clip-hud-row" data-metric-tip="head-stability"><span>Head stability</span><strong>45.9 cm</strong></div>
-                        <div class="clip-hud-row" data-metric-tip="ball-speed"><span>Ball speed</span><strong>122 km/h</strong></div>
-                        <div class="clip-hud-row" data-metric-tip="contact-time"><span>Contact time</span><strong>800 ms</strong></div>
-                        <p class="clip-hud-note">Session metrics from this take</p>
-                    </div>
-                    <p class="demo-disclaimer"><i class="fas fa-circle-info" style="color:var(--amber);margin-right:0.3rem;"></i>Demonstration output from selected sample clips. Not independently validated. Measurement availability and accuracy depend on camera view, calibration, visibility, frame rate, and clip quality.</p>
+                <div class="section-intro">
+                    <p class="eyebrow">Selected examples</p>
+                    <h2>Batting examples</h2>
+                </div>
+                <div class="clips">
+                    <figure class="clip">
+                        <div class="clip__media" style="--ar:960/540">
+                            <img src="assets/cricket_batting_pitchmap_6s.gif" width="960" height="540" alt="Batting example with an estimated pitch map and shot direction">
+                        </div>
+                        <figcaption class="clip__meta">
+                            <span class="clip__label">Gabriella Vision · Batting</span>
+                            <ul class="chips">
+                                <li class="chip chip--soon">Pitch map</li>
+                                <li class="chip chip--soon">Shot direction</li>
+                            </ul>
+                            <p class="clip__caption">Pitch map and shot direction are estimated. Length bands are a rough guide and are not checked for this net.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="clip">
+                        <div class="clip__media" style="--ar:960/516">
+                            <img src="assets/cricket_batting_batspeed_4s.gif" width="960" height="516" alt="Batting example with estimated bat speed">
+                        </div>
+                        <figcaption class="clip__meta">
+                            <span class="clip__label">Gabriella Vision · Batting</span>
+                            <ul class="chips"><li class="chip">Bat speed</li></ul>
+                            <p class="clip__caption">Estimated values from our pipeline, not real measurements. For demonstration only.</p>
+                        </figcaption>
+                    </figure>
                 </div>
             </div>
         </section>
@@ -179,19 +185,19 @@
                 </div>
                 <div class="features-grid">
                     <article class="feature-card">
-                        <i class="fas fa-clock"></i>
-                        <h3>When did contact happen in this take?</h3>
-                        <p>Contact timing in this take — measured in milliseconds from clip start to bat-ball contact. Useful as a same-view marker across sessions, not an early/late judgment.</p>
+                        <i class="fas fa-map"></i>
+                        <h3>Where did this ball pitch?</h3>
+                        <p>Pitch map is an estimated picture of where the ball bounced. The length bands are a rough guide and are not checked for this net.</p>
                     </article>
                     <article class="feature-card">
-                        <i class="fas fa-crosshairs"></i>
-                        <h3>Is my head staying still through the shot?</h3>
-                        <p>Pose overlays help coaches review head and upper-body stability through the shot — alongside bat and ball tracking where visible.</p>
+                        <i class="fas fa-location-arrow"></i>
+                        <h3>Which way did the shot go?</h3>
+                        <p>Shot direction is an estimated line from the nets. Shots missed or lost after contact are not drawn.</p>
                     </article>
                     <article class="feature-card">
-                        <i class="fas fa-chart-bar"></i>
-                        <h3>How consistent is my stride across the session?</h3>
-                        <p>Compare stride length and foot position across deliveries in the same session — where clips share a similar camera view and quality.</p>
+                        <i class="fas fa-baseball-bat-ball"></i>
+                        <h3>How fast was the bat?</h3>
+                        <p>Bat speed is a pipeline estimate for this take. It is labelled as an estimate, not a measured grade.</p>
                     </article>
                 </div>
             </div>
@@ -208,21 +214,14 @@
                     </p>
                 </div>
                 <div class="analysis-stack">
-                    <div class="analysis-row accent-green" data-metric-tip="bat-speed">
-                        <span>Bat speed at impact</span>
-                        <strong>10.6 km/h</strong>
+                    <div class="analysis-row accent-green">
+                        <span>Pitch map (coming soon)</span>
                     </div>
-                    <div class="analysis-row accent-amber" data-metric-tip="head-stability">
-                        <span>Head stability</span>
-                        <strong>45.9 cm</strong>
+                    <div class="analysis-row accent-amber">
+                        <span>Shot direction (coming soon)</span>
                     </div>
-                    <div class="analysis-row accent-coral" data-metric-tip="ball-speed">
-                        <span>Ball speed</span>
-                        <strong>122 km/h</strong>
-                    </div>
-                    <div class="analysis-row accent-teal" data-metric-tip="contact-time">
-                        <span>Contact time in this clip</span>
-                        <strong>800 ms</strong>
+                    <div class="analysis-row accent-coral">
+                        <span>Bat speed</span>
                     </div>
                     <div class="analysis-row">
                         <span>Same-view session review</span>
@@ -241,7 +240,7 @@
                     to bring objective batting intelligence to your nets.
                 </p>
                 <div class="hero-actions">
-                    <a href="demo.html" class="cta-button">Try the Batting Showcase</a>
+                    <a href="demo.html" class="cta-button">Explore the Showcase</a>
                     <a href="connect.html?purpose=Pilot+Interest#interest-form" class="secondary-button">Request a Pilot</a>
                 </div>
             </div>
@@ -249,30 +248,20 @@
     </main>
 
         <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <span class="nav-logo-text">Gabriella Systems</span>
-                    <p>Computer vision for cricket performance — batting and bowling intelligence from ordinary video.</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Product</h4>
-                    <a href="services.html">Platform</a>
-                    <a href="batting.html">Batting</a>
-                    <a href="bowling.html">Bowling</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Company</h4>
-                    <a href="about.html">About</a>
-                    <a href="research.html">Research</a>
-                    <a href="connect.html">Connect</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Gabriella Systems. All rights reserved.</p>
-                </div>
-        </div>
-    </footer>
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a class="nav__brand nav__brand--dark" href="index.html"><img src="assets/logo.png" alt="" width="32" height="32"><span>Gabriella Systems</span></a>
+      <p>Computer vision for cricket performance — batting and bowling intelligence from ordinary video.</p>
+    </div>
+    <nav aria-label="Product"><h4>Product</h4>
+      <a href="services.html">Platform</a><a href="batting.html">Batting</a><a href="bowling.html">Bowling</a><a href="academies.html">For Academies</a><a href="demo.html">Showcase</a>
+    </nav>
+    <nav aria-label="Company"><h4>Company</h4>
+      <a href="about.html">About</a><a href="research.html">Research</a><a href="sports.html">Sports</a><a href="connect.html">Connect</a>
+    </nav>
+  </div>
+  <div class="container footer__base">© 2026 Gabriella Systems. All rights reserved.</div>
+</footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>

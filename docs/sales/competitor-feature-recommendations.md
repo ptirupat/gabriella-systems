@@ -14,7 +14,7 @@
 
 ## 1. Executive summary
 
-Gabriella’s wedge is **results from ordinary nets video** — **bat speed at impact** and **head stability** per delivery, from a camera placed side-on, with view-aware batting/bowling and locked heroes (those two for batting; bowling **Run-up** only). Do not claim Bat or Head from front-on, and do not say “for every delivery” or “from a phone.” **KAN-331** retired Ready / Can't measure as the public headline. When a delivery can't be measured, say why only in the batting and bowling footnotes — that is an exception, not the pitch. Rivals win academy deals today by shipping **always-on numbers**, **auto delivery-crop**, **coach annotation / PDF / reels**, and (for some) **white-label academy ops**.
+Gabriella’s wedge is **honest, gated session metrics from ordinary nets video** — fail-loud **Can't measure** per field, view-aware batting/bowling, locked heroes (**Bat speed at impact** + **Head stability**; bowling **Run-up** only). Rivals win academy deals today by shipping **always-on numbers**, **auto delivery-crop**, **coach annotation / PDF / reels**, and (for some) **white-label academy ops**.
 
 For traction with cricket academies and coaches in **US + India**, the highest ROI path is:
 
@@ -41,7 +41,7 @@ For traction with cricket academies and coaches in **US + India**, the highest R
 | Session auto-crop = must-have **once shipped**; do not claim early | Marketing must wait for KAN-138/139 |
 | Don’t race white-label ops | CricVision/Ludimos AMS is adjacent GTM, not Gabriella’s wedge |
 
-Sample Showcase numbers used on the marketing site (illustrative of locked fields, **not** competitive claims of superiority): Bat ~10.6 km/h, Head ~45.9 cm, Run-up ~20.4 km/h. Do not invent new Gabriella metrics for this report.
+Sample Showcase numbers: the public Bat and Head samples were withdrawn on 2026-10-22 pending verified numbers (stale run; bat tip from the wrong mask piece). On 2026-10-23 the public Run-up, Ball, Contact, Arm angular speed, and Front knee samples were withdrawn the same way. This report quotes no sample value for those metrics. The field names are illustrative of locked fields, **not** competitive claims of superiority. Do not invent new Gabriella metrics for this report.
 
 ---
 

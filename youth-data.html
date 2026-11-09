@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Youth Athlete Data &amp; Parental Consent — Gabriella Systems</title>
     <meta name="description" content="Gabriella Systems policy on video and data involving athletes under 18, including parental consent requirements.">
@@ -12,7 +13,7 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        .legal-page { max-width: 740px; margin: 0 auto; padding: 60px 0 80px; }
+        .legal-page { max-width: 740px; margin: 0 auto; padding: 0; }
         .legal-page h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
         .legal-date { font-size: 0.84rem; color: var(--muted); margin-bottom: 2.5rem; }
         .legal-page h2 { font-size: 1.15rem; margin: 2rem 0 0.6rem; color: var(--ink); }
@@ -26,31 +27,26 @@
     </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="index.html" class="nav-logo-link">
-                    <img src="assets/logo.png" alt="Gabriella Systems" class="nav-logo-img">
-                    <span class="nav-logo-wordmark">Gabriella</span>
-                </a>
-            </div>
-            <div class="nav-menu" id="nav-menu">
-                <a href="services.html" class="nav-link">Platform</a>
-                <a href="batting.html" class="nav-link">Batting</a>
-                <a href="bowling.html" class="nav-link">Bowling</a>
-                <a href="academies.html" class="nav-link">For Academies</a>
-                <a href="demo.html" class="nav-link">Showcase</a>
-                <a href="research.html" class="nav-link">Research</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="connect.html" class="nav-link">Connect</a>
-            </div>
-            <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
+    <header class="nav">
+  <div class="container nav__bar">
+    <a class="nav__brand" href="index.html" aria-label="Gabriella Systems home">
+      <img src="assets/logo.png" alt="" width="32" height="32"><span>Gabriella</span>
+    </a>
+    <nav class="nav__links" id="nav-links" aria-label="Main">
+      <a href="services.html">Platform</a>
+      <a href="batting.html">Batting</a>
+      <a href="bowling.html">Bowling</a>
+      <a href="academies.html">For Academies</a>
+      <a href="demo.html">Showcase</a>
+      <a href="research.html">Research</a>
+      <a href="about.html">About</a>
+      <a class="btn btn--primary btn--sm nav__cta" href="connect.html?purpose=Pilot+Interest#interest-form">Request a Pilot</a>
     </nav>
+    <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+  </div>
+</header>
 
-    <main>
+    <main class="legal">
         <div class="container">
             <div class="legal-page">
                 <p class="eyebrow">Legal</p>
@@ -61,11 +57,11 @@
 
                 <div class="callout-important">
                     <h3><i class="fas fa-user-shield" style="color:var(--teal); margin-right:0.4rem;"></i> Key requirement</h3>
-                    <p>Before uploading video of any athlete under 18 to Gabriella Systems' services, the uploading party <strong>must obtain verifiable written consent</strong> from a parent or legal guardian of that athlete. Gabriella Systems relies on the academy, coach, or organisation to obtain and retain this consent.</p>
+                    <p>Before uploading video of any athlete under 18 to Gabriella Systems' services, the uploading party <strong>must obtain verifiable written consent</strong> from a parent or legal guardian of that athlete. Gabriella Systems relies on the academy, coach, or organization to obtain and retain this consent.</p>
                 </div>
 
                 <h2>1. Who this policy applies to</h2>
-                <p>This policy applies to any person or organisation that uploads, submits, or shares video content featuring athletes under 18 years of age through any Gabriella Systems service, including the Showcase and any pilot programme.</p>
+                <p>This policy applies to any person or organization that uploads, submits, or shares video content featuring athletes under 18 years of age through any Gabriella Systems service, including the Showcase and any pilot program.</p>
 
                 <h2>2. Parental consent requirements</h2>
                 <p>Academies and coaches using Gabriella Systems' services with athletes under 18 must:</p>
@@ -110,30 +106,20 @@
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <span class="nav-logo-text">Gabriella Systems</span>
-                    <p>Computer vision for cricket performance — batting and bowling intelligence from ordinary video.</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Product</h4>
-                    <a href="services.html">Platform</a>
-                    <a href="batting.html">Batting</a>
-                    <a href="bowling.html">Bowling</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Company</h4>
-                    <a href="about.html">About</a>
-                    <a href="research.html">Research</a>
-                    <a href="connect.html">Connect</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Gabriella Systems. All rights reserved.</p>
-                </div>
-        </div>
-    </footer>
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a class="nav__brand nav__brand--dark" href="index.html"><img src="assets/logo.png" alt="" width="32" height="32"><span>Gabriella Systems</span></a>
+      <p>Computer vision for cricket performance — batting and bowling intelligence from ordinary video.</p>
+    </div>
+    <nav aria-label="Product"><h4>Product</h4>
+      <a href="services.html">Platform</a><a href="batting.html">Batting</a><a href="bowling.html">Bowling</a><a href="academies.html">For Academies</a><a href="demo.html">Showcase</a>
+    </nav>
+    <nav aria-label="Company"><h4>Company</h4>
+      <a href="about.html">About</a><a href="research.html">Research</a><a href="sports.html">Sports</a><a href="connect.html">Connect</a>
+    </nav>
+  </div>
+  <div class="container footer__base">© 2026 Gabriella Systems. All rights reserved.</div>
+</footer>
     <script src="script.js"></script>
 </body>
 </html>

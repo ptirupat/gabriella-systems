@@ -2,8 +2,8 @@ Most practice video ends as a replay.
 
 This one returned numbers coaches can actually compare:
 
-• Bat speed at impact — 10.6 km/h
-• Head stability — 45.9 cm
+• Bat speed at impact
+• Head stability
 
 Same clip. View-aware metrics. No guessed zeros.
 
