@@ -86,7 +86,7 @@
                         </div>
                         <h3>Body</h3>
                         <ul class="check-list">
-                            <li><i class="fas fa-check"></i>Pitch map (coming soon)</li>
+                            <li><i class="fas fa-check"></i>Pitch map (estimated)</li>
                             <li><i class="fas fa-check"></i>Shot direction (estimated)</li>
                             <li><i class="fas fa-check"></i><span>Foot movement<sup class="fn-mark"><a href="#batting-metric-notes">&Dagger;</a></sup></span></li>
                             <li><i class="fas fa-check"></i><span>Stride length<sup class="fn-mark"><a href="#batting-metric-notes">&Dagger;</a></sup></span></li>
@@ -128,7 +128,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td>Pitch map</td><td><span class="badge-conditional">Coming soon</span></td><td>Shown greyed out in the example clip.</td></tr>
+                        <tr><td>Pitch map</td><td><span class="badge-live">Live</span></td><td>Estimated picture of where the ball bounced. When bounce is not seen, the panel shows Not measured.</td></tr>
                         <tr><td>Shot direction</td><td><span class="badge-live">Live</span></td><td>Estimated direction from the nets. Shots lost after contact are not drawn.</td></tr>
                         <tr><td>Ball speed</td><td><span class="badge-conditional">Conditional</span></td><td>Rough estimate, shown with a ±20% band. Requires a clear view of the ball.</td></tr>
                         <tr><td>Ball trajectory</td><td><span class="badge-conditional">Conditional</span></td><td>Requires sufficient ball visibility and appropriate camera angle</td></tr>
@@ -152,27 +152,27 @@
                 <div class="clips">
                     <figure class="clip">
                         <div class="clip__media" style="--ar:960/540">
-                            <img src="assets/batting_v79_front.gif" width="960" height="540" alt="Batting example with a ball track, estimated shot direction, body pose, and a rough ball speed estimate. The pitch map panel is marked coming soon.">
+                            <img src="assets/cricket_batting_front_on.gif" width="960" height="540" alt="Front-on batting example with a ball track, body pose, estimated pitch map, estimated shot direction, and a rough ball speed estimate.">
                         </div>
                         <figcaption class="clip__meta">
-                            <span class="clip__label">Gabriella Vision · Batting</span>
+                            <span class="clip__label">Gabriella Vision · Batting · Front-on</span>
                             <ul class="chips">
                                 <li class="chip">Ball track</li>
                                 <li class="chip">Shot direction (estimated)</li>
                                 <li class="chip">Ball speed (rough estimate, ±20%)</li>
                                 <li class="chip">Body pose</li>
-                                <li class="chip chip--soon">Pitch map (coming soon)</li>
+                                <li class="chip">Pitch map (estimated)</li>
                             </ul>
                             <p class="clip__caption">Estimated values from our pipeline, not real measurements. For demonstration only.</p>
                         </figcaption>
                     </figure>
                     <figure class="clip">
                         <div class="clip__media clip__media--fit" style="--ar:960/540">
-                            <img src="assets/batting_v79_side_v2.gif" width="640" height="452" alt="Batting example showing body pose only">
+                            <img src="assets/cricket_batting_side_on.gif" width="640" height="452" alt="Side-on batting example. The side-on view shows batter pose only, estimated.">
                         </div>
                         <figcaption class="clip__meta">
-                            <span class="clip__label">Gabriella Vision · Batting</span>
-                            <ul class="chips"><li class="chip">Body pose only</li></ul>
+                            <span class="clip__label">Gabriella Vision · Batting · Side-on</span>
+                            <ul class="chips"><li class="chip">Batter pose only (estimated)</li></ul>
                             <p class="clip__caption">Estimated values from our pipeline, not real measurements. For demonstration only.</p>
                         </figcaption>
                     </figure>
@@ -189,8 +189,8 @@
                 <div class="features-grid">
                     <article class="feature-card">
                         <i class="fas fa-map"></i>
-                        <h3>Where did this ball pitch? <span class="soon soon--light">(coming soon)</span></h3>
-                        <p>Pitch map is coming soon. It will show an estimated picture of where the ball bounced.</p>
+                        <h3>Where did this ball pitch?</h3>
+                        <p>Pitch map is an estimated picture of where the ball bounced. When bounce is not seen, the panel shows Not measured.</p>
                     </article>
                     <article class="feature-card">
                         <i class="fas fa-location-arrow"></i>
@@ -218,7 +218,7 @@
                 </div>
                 <div class="analysis-stack">
                     <div class="analysis-row accent-green">
-                        <span>Pitch map (coming soon)</span>
+                        <span>Pitch map (estimated)</span>
                     </div>
                     <div class="analysis-row accent-amber">
                         <span>Shot direction (estimated)</span>

@@ -4,12 +4,12 @@ Living notes for Gabriella Systems competitive positioning. Update when we learn
 
 Copy gate for live site wording: [competitive-positioning.md](./competitive-positioning.md). Do not fork homepage hero metrics here.
 
-Last updated: 2026-11-09
+Last updated: 2026-11-10
 
 ## Gabriella wedge (reminder)
 
 - Movable camera: it can sit where the coach needs it, including side-on so we can see Bat and Head. Phone apps lock behind the stumps. The edge is that placement choice (side-on vs front-on), not a known lens, height, or distance.
-- Front-on batting is the view for pitch map, wagon wheel, and ball path / ball-track compare. Those charts are planned adds — not live until bounce, leave, and overlay paths exist.
+- Front-on batting is the view for pitch map, shot direction, and ball path / ball-track compare. Those charts are live as estimates, not exact measurements. When bounce is not seen, the pitch map panel shows Not measured.
 - Side-on batting is for Bat, Head, both-foot movement, bat lift, and distance to pitch of the ball. Each is Ready or Can't measure. None of the new side-on fields are live until a labeled side-on session exists.
 - Ready / Can't measure is the trust rule (never invent a number). Do not pitch Ready / Can’t measure as a feature or headline.
 - View-aware batting & bowling; heroes locked separately in PRODUCT. Do not claim Bat or Head from bowling-end or front-on-only views, “we analyzed the session,” or native 4K analysis.

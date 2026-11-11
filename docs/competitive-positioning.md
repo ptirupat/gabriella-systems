@@ -2,7 +2,9 @@
 
 Short Marketing note for website and product copy. Keep claims aligned with this — not a full GTM brief. Sales GTM and outreach drafts live under [docs/sales/](./sales/) (repo-only). The formal SportVot collaboration plan also lives under [docs/sales/sportvot-collaboration-plan.md](./sales/sportvot-collaboration-plan.md). Sales GTM includes the [competitor feature recommendations](./sales/competitor-feature-recommendations.md) report (repo-only; not a live-site claims doc).
 
-Updated: 2026-11-09
+Updated: 2026-11-10
+
+**2026-11-10:** Front-on batting pitch map, shot direction, and ball track are live as estimates on the website examples and in production. They are no longer described as planned adds. Keep "estimated" / rough-estimate wording. Do not publish a pitch length in metres.
 
 **2026-11-09:** Website copy only. Do not pitch Ready / Can’t measure as a feature or headline. Public pages describe a missing or untrusted metric with a short reason beside that result. In the product UI, Can’t measure may remain a rare inline note with a plain reason. This pass does not change Showcase. Sections below that name Can’t measure as the per-metric state are the existing contract, not a live website pitch. Do not add a metric, a sample number, or an accuracy claim. Coming-soon labels and the estimated-value line stay. `docs/PRODUCT.md` and `docs/METRICS_CATALOG.md` are not in this repo.
 
@@ -31,7 +33,7 @@ Hawk-Eye — elite multi-camera tracking; not our academy-net price or form fact
 ## Named rivals (class + Gabriella wedge)
 
 **Ludimos** — Phone-first AI cricket coaching + academy ops (consumer Skills/Showcase + Pavilion/360° AMS).  
-**Wedge:** A camera the coach can place, with view-aware charts and metrics for that view, versus phone apps locked behind the stumps and always-on phone-CV numbers. Front-on batting charts (pitch map, wagon wheel, ball path) are planned adds, not live claims. Ready / Can't measure stays the trust rule — never invent a number. Do not pitch Ready / Can’t measure as a feature or headline. Session auto-crop is must-have parity once shipped (KAN-138/139) — do not claim it early.
+**Wedge:** A camera the coach can place, with view-aware charts and metrics for that view, versus phone apps locked behind the stumps and always-on phone-CV numbers. Front-on batting charts (pitch map, shot direction, ball path) are live as estimates, not exact measurements. Ready / Can't measure stays the trust rule — never invent a number. Do not pitch Ready / Can’t measure as a feature or headline. Session auto-crop is must-have parity once shipped (KAN-138/139) — do not claim it early.
 
 **Kabuni** — Youth cricket development + AI coaching brand (India-first: PlayOS + Super Coaches + schools + league pathway), not a clip/AMS SaaS peer.  
 **Wedge:** Placement and view-aware charts/metrics versus access, cues, and a celebrity pathway — not a phone app locked behind the stumps. Do not treat Kabuni as our metric competitor or copy junior-league GTM. Ready / Can't measure stays the trust rule — never invent a number. Do not pitch Ready / Can’t measure as a feature or headline.
@@ -54,7 +56,7 @@ Hawk-Eye — elite multi-camera tracking; not our academy-net price or form fact
 ## Our wedge (what we own in copy)
 
 1. **Movable camera / placement** — The camera can sit where the coach needs it, including **side-on**, so we can see Bat and Head. Phone apps lock to one setup behind the stumps. The edge is that placement choice (side-on vs front-on), not a known lens, height, or distance versus a tripod.
-   - **Front-on batting** is the view for pitch map, wagon wheel, and ball path / ball-track compare. Those charts are **planned adds**, not live claims — they wait until bounce, leave, and overlay paths exist.
+   - **Front-on batting** is the view for pitch map, shot direction, and ball path / ball-track compare. Those charts are **live as estimates**, not exact measurements. When bounce is not seen, the pitch map panel shows Not measured.
    - **Side-on batting** is for Bat, Head, both-foot movement, bat lift, and distance to pitch of the ball. Each is Ready or Can't measure. None of the new side-on fields are live until a labeled side-on session exists. Do not pitch Ready / Can’t measure as a feature or headline.
    - Do **not** claim Bat or Head from bowling-end or front-on-only views that cannot see them. Do **not** claim “we analyzed the session” or native 4K analysis.
 2. **Depth + multi-model stack** (depth / ball-bat / pose) as a **quality** story vs RGB-only phone CV — not as “more metrics.”

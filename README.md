@@ -32,7 +32,7 @@ Product should review these for accuracy:
 - `services.html` — Platform (software-first pipeline; hardware on the roadmap).
 - `batting.html` / `bowling.html` — Mode-specific analysis pages.
 - `academies.html` — Academy / pilot positioning.
-- `demo.html` — Live Showcase (Modal iframe).
+- `demo.html` — Showcase page: live Modal embed is hidden while it is updated; a gallery of additional batting examples sits below the note.
 - `about.html` — Mission, vision, leadership, and product roadmap.
 - `robots.txt` / `sitemap.xml` — crawl hints for search and generative engines.
 - `connect.html` — Connect: pilot / inquiry form.
@@ -44,7 +44,7 @@ Product should review these for accuracy:
 - GSAP + ScrollTrigger (homepage motion)
 - Space Grotesk / Inter
 - Font Awesome
-- Assets in `assets/` (`logo.png`, `batting_v79_front.gif`, `batting_v79_side_v2.gif`, `batting_v79_b.gif`, `cricket_bowling_knee_5s.gif`, `cricket-vision-hero.png`). `batting_v79_front.gif` and `batting_v79_side_v2.gif` are the batting selected examples on the homepage and `batting.html`; `cricket_bowling_knee_5s.gif` is the bowling example on the homepage and `bowling.html`; `batting_v79_b.gif` is in the Showcase gallery on `demo.html`. All were added unmodified and are labelled as pipeline estimates. Batting metric lists name Ball track, Shot direction (estimated), Ball speed (rough estimate, ±20%), Body pose, and Pitch map (coming soon). Bowling lists name Front knee angle.
+- Assets in `assets/` (`logo.png`, `cricket_batting_front_on.gif`, `cricket_batting_side_on.gif`, `cricket_batting_showcase_1.gif`, `cricket_batting_showcase_2.gif`, `cricket_bowling_knee_5s.gif`, `cricket-vision-hero.png`). `cricket_batting_front_on.gif` and `cricket_batting_side_on.gif` are the batting selected examples on the homepage and `batting.html`; `cricket_bowling_knee_5s.gif` is the bowling example on the homepage and `bowling.html`; the two showcase GIFs are in the Showcase gallery on `demo.html`. All were added unmodified and are labelled as pipeline estimates. Batting metric lists name Ball track, Shot direction (estimated), Ball speed (rough estimate, ±20%), Body pose, and Pitch map (estimated). Bowling lists name Front knee angle.
 
 ## Local preview
 
@@ -60,5 +60,5 @@ PORT=9000 ./start-local.sh
 
 ## Related work and blockers
 
-- HUD implementation: [docs/homepage-hud-metrics.md](docs/homepage-hud-metrics.md). Since 2026-11-10, batting example metric lists name **Ball track**, **Shot direction (estimated)**, **Ball speed (rough estimate, ±20%)**, **Body pose**, and **Pitch map (coming soon)**; bowling lists name **Front knee angle**. Head stability, Contact time, Run-up speed, Arm angular speed, and bat speed are off those lists. No numeric value is added in HTML. The examples are labelled: Estimated values from our pipeline, not real measurements. For demonstration only.
+- HUD implementation: [docs/homepage-hud-metrics.md](docs/homepage-hud-metrics.md). Since 2026-11-10, batting example metric lists name **Ball track**, **Shot direction (estimated)**, **Ball speed (rough estimate, ±20%)**, **Body pose**, and **Pitch map (estimated)**; bowling lists name **Front knee angle**. Head stability, Contact time, Run-up speed, Arm angular speed, and bat speed are off those lists. No numeric value is added in HTML. The examples are labelled: Estimated values from our pipeline, not real measurements. For demonstration only.
 - Modal quality gate / `impact_offset_ms` live in the ML/Modal repo (not this tree). Showcase per-metric trust shipped in demo #20 (`c03cdbb` — re-verify there).
