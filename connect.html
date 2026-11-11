@@ -43,370 +43,16 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-pages.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-
-    <style>
-        /* ── Connect page ─────────────────────────────────────────────────── */
-
-        /* Hero */
-        .connect-hero {
-            background:
-                radial-gradient(ellipse 55% 60% at 85% 15%, rgba(247,39,114,0.2) 0%, transparent 60%),
-                radial-gradient(ellipse 40% 50% at 5% 85%, rgba(255,154,120,0.12) 0%, transparent 55%),
-                linear-gradient(145deg, #01091a 0%, #031E49 40%, #064B91 80%, #021030 100%);
-            padding: 96px 0 80px;
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
-        .connect-hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background:
-                linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px),
-                linear-gradient(0deg,  rgba(255,255,255,0.025) 1px, transparent 1px);
-            background-size: 44px 44px;
-            pointer-events: none;
-        }
-        .connect-hero .eyebrow { color: var(--amber); }
-        .connect-hero h1 {
-            font-size: clamp(2.4rem, 5.5vw, 4rem);
-            letter-spacing: -0.03em;
-            line-height: 1.06;
-            max-width: 820px;
-            margin-bottom: 1.2rem;
-        }
-        .connect-hero p {
-            font-size: 1.08rem;
-            color: rgba(255,255,255,0.82);
-            max-width: 620px;
-            line-height: 1.65;
-            margin-bottom: 1.8rem;
-        }
-        .connect-hero-actions {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-        .linkedin-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.82rem 1.4rem;
-            background: rgba(255,255,255,0.1);
-            color: white;
-            border: 1px solid rgba(255,255,255,0.28);
-            border-radius: 12px;
-            font-weight: 700;
-            font-size: 0.9rem;
-            text-decoration: none;
-            transition: background 0.2s ease;
-        }
-        .linkedin-btn:hover { background: rgba(255,255,255,0.2); }
-
-        /* Global reach band */
-        .global-band {
-            background: var(--soft);
-            border-top: 1px solid var(--line);
-            border-bottom: 1px solid var(--line);
-            padding: 20px 0;
-        }
-        .global-band-inner {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .global-band-text {
-            font-size: 0.88rem;
-            color: var(--muted);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        .global-band-text i { color: var(--teal); }
-        .sport-pill {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.35rem;
-            font-size: 0.78rem;
-            font-weight: 700;
-            padding: 4px 12px;
-            border-radius: 999px;
-            border: 1px solid var(--line);
-            color: var(--muted);
-            background: var(--paper);
-        }
-
-        /* Pathway cards grid */
-        .pathway-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-        .pathway-card {
-            background: var(--paper);
-            border: 1px solid var(--line);
-            border-radius: 16px;
-            padding: 28px 26px;
-            display: flex;
-            flex-direction: column;
-            transition: box-shadow 0.25s ease, transform 0.25s ease, border-color 0.2s ease;
-            cursor: pointer;
-        }
-        .pathway-card:hover {
-            box-shadow: 0 0 0 2px var(--green), 0 16px 40px rgba(3,30,73,0.12);
-            transform: translateY(-4px);
-            border-color: transparent;
-        }
-        .pathway-card.active {
-            box-shadow: 0 0 0 2px var(--green), 0 16px 40px rgba(3,30,73,0.12);
-            border-color: transparent;
-        }
-        .pathway-icon {
-            width: 48px; height: 48px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-            color: white;
-        }
-        .pathway-icon.p1 { background: linear-gradient(135deg, var(--teal), #0a3d7a); }
-        .pathway-icon.p2 { background: linear-gradient(135deg, var(--green), #c9165a); }
-        .pathway-icon.p3 { background: linear-gradient(135deg, var(--amber), #e07050); }
-        .pathway-icon.p4 { background: linear-gradient(135deg, #4a5e8a, var(--teal)); }
-
-        .pathway-number {
-            font-size: 0.68rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            color: var(--muted);
-            margin-bottom: 0.4rem;
-        }
-        .pathway-card h3 {
-            font-size: 1.05rem;
-            color: var(--ink);
-            margin-bottom: 0.35rem;
-        }
-        .pathway-audience {
-            font-size: 0.76rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--teal);
-            margin-bottom: 0.7rem;
-        }
-        .pathway-card p {
-            font-size: 0.87rem;
-            color: var(--muted);
-            line-height: 1.6;
-            flex: 1;
-            margin-bottom: 1.2rem;
-        }
-        .pathway-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            padding: 0.65rem 1.1rem;
-            border-radius: 10px;
-            font-size: 0.84rem;
-            font-weight: 700;
-            border: 1.5px solid var(--line);
-            color: var(--teal);
-            background: transparent;
-            cursor: pointer;
-            transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease;
-            text-align: left;
-            align-self: flex-start;
-        }
-        .pathway-btn:hover, .pathway-card.active .pathway-btn {
-            background: var(--teal);
-            border-color: var(--teal);
-            color: white;
-        }
-
-        /* Interest form */
-        .interest-form-wrap {
-            background: var(--paper);
-            border: 1px solid var(--line);
-            border-radius: 18px;
-            padding: 36px 40px;
-            margin-top: 2.5rem;
-            box-shadow: 0 4px 24px rgba(3,30,73,0.07);
-        }
-        @media (max-width: 600px) { .interest-form-wrap { padding: 24px 20px; } }
-
-        .preview-banner {
-            background: rgba(255,154,120,0.1);
-            border: 1px solid rgba(255,154,120,0.3);
-            border-radius: 10px;
-            padding: 12px 16px;
-            font-size: 0.82rem;
-            color: var(--muted);
-            margin-bottom: 1.8rem;
-            display: flex;
-            align-items: flex-start;
-            gap: 0.6rem;
-            line-height: 1.55;
-        }
-        .preview-banner i { color: var(--amber); flex-shrink: 0; margin-top: 2px; }
-
-        .form-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem 1.4rem;
-        }
-        @media (max-width: 640px) { .form-grid { grid-template-columns: 1fr; } }
-        .form-group { display: flex; flex-direction: column; gap: 0.35rem; }
-        .form-group.full { grid-column: 1 / -1; }
-        .form-group label {
-            font-size: 0.8rem;
-            font-weight: 700;
-            color: var(--ink);
-        }
-        .form-group label .opt {
-            font-weight: 400;
-            color: var(--muted);
-            margin-left: 0.25rem;
-        }
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            border: 1.5px solid var(--line);
-            border-radius: 10px;
-            padding: 0.7rem 0.9rem;
-            font-family: inherit;
-            font-size: 0.9rem;
-            color: var(--ink);
-            background: var(--paper);
-            transition: border-color 0.18s ease;
-            outline: none;
-        }
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus { border-color: var(--teal); box-shadow: 0 0 0 3px rgba(6,75,145,0.1); }
-        .form-group textarea { resize: vertical; min-height: 90px; }
-
-        /* Pathway selector pills in form */
-        .pathway-selector {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-        .pathway-selector label {
-            display: flex;
-            align-items: center;
-            gap: 0.4rem;
-            padding: 6px 12px;
-            border: 1.5px solid var(--line);
-            border-radius: 999px;
-            font-size: 0.78rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: border-color 0.18s ease, background 0.18s ease;
-            color: var(--muted);
-        }
-        .pathway-selector input[type="radio"] { display: none; }
-        .pathway-selector input[type="radio"]:checked + span {
-            /* handled via JS below */
-        }
-        .pathway-selector label.selected {
-            border-color: var(--teal);
-            background: rgba(6,75,145,0.07);
-            color: var(--teal);
-        }
-
-        /* Consent */
-        .consent-block {
-            display: flex;
-            align-items: flex-start;
-            gap: 0.7rem;
-            margin-top: 0.5rem;
-        }
-        .consent-block input[type="checkbox"] {
-            width: 18px; height: 18px;
-            flex-shrink: 0;
-            margin-top: 2px;
-            accent-color: var(--teal);
-            cursor: pointer;
-        }
-        .consent-block label {
-            font-size: 0.8rem;
-            color: var(--muted);
-            line-height: 1.55;
-            cursor: pointer;
-        }
-
-        /* Submit notice */
-        .form-submit-area {
-            margin-top: 1.4rem;
-            display: flex;
-            align-items: center;
-            gap: 1.2rem;
-            flex-wrap: wrap;
-        }
-        .submit-disabled {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.85rem 1.6rem;
-            border-radius: 12px;
-            background: var(--line);
-            color: var(--muted);
-            font-weight: 700;
-            font-size: 0.9rem;
-            cursor: not-allowed;
-            border: none;
-        }
-        .privacy-note {
-            font-size: 0.76rem;
-            color: var(--muted);
-            line-height: 1.5;
-        }
-
-        /* Legal notice */
-        .legal-notice {
-            background: var(--soft);
-            border-left: 3px solid var(--line);
-            border-radius: 0 10px 10px 0;
-            padding: 16px 20px;
-            margin-top: 1.8rem;
-            font-size: 0.8rem;
-            color: var(--muted);
-            line-height: 1.6;
-        }
-
-        /* Reduce motion */
-        @media (prefers-reduced-motion: reduce) {
-            .pathway-card, .pathway-btn { transition: none; }
-        }
-
-        /* Focus states */
-        a:focus-visible,
-        button:focus-visible,
-        input:focus-visible,
-        select:focus-visible,
-        textarea:focus-visible {
-            outline: 2px solid var(--teal);
-            outline-offset: 2px;
-        }
-    </style>
 </head>
 <body>
     <header class="nav">
   <div class="container nav__bar">
     <a class="nav__brand" href="index.html" aria-label="Gabriella Systems home">
-      <img src="assets/logo.png" alt="" width="32" height="32"><span>Gabriella</span>
+      <img src="assets/logo-64.png" alt="" width="32" height="32"><span>Gabriella</span>
     </a>
     <nav class="nav__links" id="nav-links" aria-label="Main">
       <a href="services.html">Platform</a>
@@ -635,7 +281,7 @@
 
                             <!-- Purpose -->
                             <div class="form-group">
-                                <label for="cf-purpose">Purpose <span style="color:var(--coral);">*</span></label>
+                                <label for="cf-purpose">Purpose <span class="req-mark">*</span></label>
                                 <select id="cf-purpose" name="purpose" required>
                                     <option value="" disabled selected>Select a purpose</option>
                                     <option value="Pilot Interest">Pilot — evaluate Gabriella at my academy or club</option>
@@ -647,13 +293,13 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="cf-name">Full name <span style="color:var(--coral);">*</span></label>
+                                <label for="cf-name">Full name <span class="req-mark">*</span></label>
                                 <input type="text" id="cf-name" name="name" autocomplete="name" required
                                        placeholder="Your full name">
                             </div>
 
                             <div class="form-group">
-                                <label for="cf-email">Email address <span style="color:var(--coral);">*</span></label>
+                                <label for="cf-email">Email address <span class="req-mark">*</span></label>
                                 <input type="email" id="cf-email" name="email" autocomplete="email" required
                                        placeholder="you@organization.com">
                             </div>
@@ -677,7 +323,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="cf-message">Message <span style="color:var(--coral);">*</span></label>
+                                <label for="cf-message">Message <span class="req-mark">*</span></label>
                                 <textarea id="cf-message" name="message" required rows="4"
                                           placeholder="Tell us about your context and what you would like to explore."></textarea>
                             </div>
@@ -692,7 +338,7 @@
                                     I understand that this submission does not create an employment,
                                     contractor, advisory, research, partnership or compensation relationship,
                                     and that no obligation arises from this expression of interest.
-                                    <span style="color:var(--coral);">*</span>
+                                    <span class="req-mark">*</span>
                                 </label>
                             </div>
 
@@ -745,7 +391,7 @@
     <footer class="footer">
   <div class="container footer__grid">
     <div class="footer__brand">
-      <a class="nav__brand nav__brand--dark" href="index.html"><img src="assets/logo.png" alt="" width="32" height="32"><span>Gabriella Systems</span></a>
+      <a class="nav__brand nav__brand--dark" href="index.html"><img src="assets/logo-64.png" alt="" width="32" height="32"><span>Gabriella Systems</span></a>
       <p>Computer vision for cricket performance — batting and bowling intelligence from ordinary video.</p>
     </div>
     <nav aria-label="Product"><h4>Product</h4>

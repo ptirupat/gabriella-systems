@@ -14,7 +14,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -22,7 +22,7 @@
     <header class="nav">
   <div class="container nav__bar">
     <a class="nav__brand" href="index.html" aria-label="Gabriella Systems home">
-      <img src="assets/logo.png" alt="" width="32" height="32"><span>Gabriella</span>
+      <img src="assets/logo-64.png" alt="" width="32" height="32"><span>Gabriella</span>
     </a>
     <nav class="nav__links" id="nav-links" aria-label="Main">
       <a href="services.html">Platform</a>
@@ -69,8 +69,8 @@
                         <tbody>
                             <tr><td>Ball track</td><td><span class="status-pill status-pill--live">Live</span></td><td>When the ball is visible</td></tr>
                             <tr><td>Body pose overlay</td><td><span class="status-pill status-pill--live">Live</span></td><td>When the player is visible</td></tr>
-                            <tr><td>Pitch map</td><td><span class="status-pill status-pill--live">Live</span></td><td>Estimated. The panel shows Not measured if bounce is not seen.</td></tr>
-                            <tr><td>Shot direction</td><td><span class="status-pill status-pill--live">Live</span></td><td>Estimated. Not drawn if the shot is lost after contact.</td></tr>
+                            <tr><td>Pitch map</td><td><span class="status-pill status-pill--soon" data-metric-switch="pitch-map">Coming soon</span></td><td>Estimated. The panel shows Not measured if bounce is not seen.</td></tr>
+                            <tr><td>Shot direction</td><td><span class="status-pill status-pill--soon" data-metric-switch="shot-direction">Coming soon</span></td><td>Estimated. Not drawn if the shot is lost after contact.</td></tr>
                             <tr><td>Bat speed</td><td><span class="status-pill status-pill--soon">Coming soon</span></td><td>Not shown on current example clips</td></tr>
                             <tr><td>Session-to-session trends</td><td><span class="status-pill status-pill--soon">Coming soon</span></td><td>Needs a comparable view; coach-led today</td></tr>
                             <tr><td>Portable capture hardware</td><td><span class="status-pill status-pill--planned">Planned</span></td><td>Software works with existing cameras first</td></tr>
@@ -94,10 +94,11 @@
                         </div>
                         <h3>Ball</h3>
                         <ul class="check-list">
-                            <li><i class="fas fa-check"></i><span>Speed<sup class="fn-mark"><a href="#batting-metric-notes">*</a></sup></span></li>
-                            <li><i class="fas fa-check"></i><span>Trajectory<sup class="fn-mark"><a href="#batting-metric-notes">&dagger;</a></sup></span></li>
-                            <li><i class="fas fa-check"></i><span>Line and length<sup class="fn-mark"><a href="#batting-metric-notes">&dagger;</a></sup></span></li>
-                            <li><i class="fas fa-check"></i><span>Bounce point<sup class="fn-mark"><a href="#batting-metric-notes">&dagger;</a></sup></span></li>
+                            <li><span class="status-pill status-pill--estimate">Conditional</span><span>Speed<sup class="fn-mark"><a href="#batting-metric-notes">*</a></sup></span></li>
+                            <li><span class="status-pill status-pill--conditional">Conditional</span><span>Trajectory<sup class="fn-mark"><a href="#batting-metric-notes">&dagger;</a></sup></span></li>
+                            <li><span class="status-pill status-pill--conditional">Conditional</span><span>Line and length<sup class="fn-mark"><a href="#batting-metric-notes">&dagger;</a></sup></span></li>
+                            <li><span class="status-pill status-pill--conditional">Conditional</span><span>Bounce point<sup class="fn-mark"><a href="#batting-metric-notes">&dagger;</a></sup></span></li>
+                            <li><span class="status-pill status-pill--soon" data-metric-switch="pitch-map">Coming soon</span><span>Pitch map (estimated)</span></li>
                         </ul>
                     </article>
                     <article class="product-card">
@@ -106,9 +107,9 @@
                         </div>
                         <h3>Bat</h3>
                         <ul class="check-list">
-                            <li><i class="fas fa-check"></i><span>Bat path<sup class="fn-mark"><a href="#batting-metric-notes">&dagger;</a></sup></span></li>
+                            <li><span class="status-pill status-pill--conditional">Conditional</span><span>Bat path<sup class="fn-mark"><a href="#batting-metric-notes">&dagger;</a></sup></span></li>
                             <li><span class="status-pill status-pill--soon">Coming soon</span><span>Bat speed</span></li>
-                            <li><i class="fas fa-check"></i><span>Bat angle<sup class="fn-mark"><a href="#batting-metric-notes">&dagger;</a></sup></span></li>
+                            <li><span class="status-pill status-pill--conditional">Conditional</span><span>Bat angle<sup class="fn-mark"><a href="#batting-metric-notes">&dagger;</a></sup></span></li>
                         </ul>
                     </article>
                     <article class="product-card">
@@ -117,11 +118,9 @@
                         </div>
                         <h3>Body</h3>
                         <ul class="check-list">
-                            <li><i class="fas fa-check"></i>Pitch map (estimated)</li>
-                            <li><i class="fas fa-check"></i>Shot direction (estimated)</li>
-                            <li><i class="fas fa-check"></i><span>Foot movement<sup class="fn-mark"><a href="#batting-metric-notes">&Dagger;</a></sup></span></li>
-                            <li><i class="fas fa-check"></i><span>Stride length<sup class="fn-mark"><a href="#batting-metric-notes">&Dagger;</a></sup></span></li>
-                            <li><i class="fas fa-check"></i>Joint positions</li>
+                            <li><span class="status-pill status-pill--conditional">Conditional</span><span>Foot movement<sup class="fn-mark"><a href="#batting-metric-notes">&Dagger;</a></sup></span></li>
+                            <li><span class="status-pill status-pill--conditional">Conditional</span><span>Stride length<sup class="fn-mark"><a href="#batting-metric-notes">&Dagger;</a></sup></span></li>
+                            <li><span class="status-pill status-pill--live">Live</span><span>Joint positions</span></li>
                         </ul>
                     </article>
                     <article class="product-card">
@@ -130,10 +129,11 @@
                         </div>
                         <h3>Outcome</h3>
                         <ul class="check-list">
-                            <li><i class="fas fa-check"></i><span>Contact location<sup class="fn-mark"><a href="#batting-metric-notes">&dagger;</a></sup></span></li>
-                            <li><i class="fas fa-check"></i><span>Shot trajectory<sup class="fn-mark"><a href="#batting-metric-notes">&dagger;</a></sup></span></li>
-                            <li><i class="fas fa-check"></i><span>Bat-ball contact<sup class="fn-mark"><a href="#batting-metric-notes">*</a></sup></span></li>
-                            <li><i class="fas fa-check"></i><span>Session review<sup class="fn-mark"><a href="#batting-metric-notes">&sect;</a></sup></span></li>
+                            <li><span class="status-pill status-pill--soon" data-metric-switch="shot-direction">Coming soon</span><span>Shot direction (estimated)</span></li>
+                            <li><span class="status-pill status-pill--conditional">Conditional</span><span>Contact location<sup class="fn-mark"><a href="#batting-metric-notes">&dagger;</a></sup></span></li>
+                            <li><span class="status-pill status-pill--research">Research</span><span>Shot trajectory<sup class="fn-mark"><a href="#batting-metric-notes">&dagger;</a></sup></span></li>
+                            <li><span class="status-pill status-pill--conditional">Conditional</span><span>Bat-ball contact<sup class="fn-mark"><a href="#batting-metric-notes">*</a></sup></span></li>
+                            <li><span class="status-pill status-pill--conditional">Conditional</span><span>Session review<sup class="fn-mark"><a href="#batting-metric-notes">&sect;</a></sup></span></li>
                         </ul>
                     </article>
                 </div>
@@ -159,8 +159,8 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td>Pitch map</td><td><span class="badge-live">Live</span></td><td>Estimated picture of where the ball bounced. When bounce is not seen, the panel shows Not measured.</td></tr>
-                        <tr><td>Shot direction</td><td><span class="badge-live">Live</span></td><td>Estimated direction from the nets. Shots lost after contact are not drawn.</td></tr>
+                        <tr><td>Pitch map</td><td><span class="status-pill status-pill--soon" data-metric-switch="pitch-map">Coming soon</span></td><td>Estimated picture of where the ball bounced. When bounce is not seen, the panel shows Not measured.</td></tr>
+                        <tr><td>Shot direction</td><td><span class="status-pill status-pill--soon" data-metric-switch="shot-direction">Coming soon</span></td><td>Estimated direction from the nets. Shots lost after contact are not drawn.</td></tr>
                         <tr><td>Ball speed</td><td><span class="badge-conditional">Conditional</span></td><td>Rough estimate, shown with a ±20% band. Requires a clear view of the ball.</td></tr>
                         <tr><td>Ball trajectory</td><td><span class="badge-conditional">Conditional</span></td><td>Requires sufficient ball visibility and appropriate camera angle</td></tr>
                         <tr><td>Bounce point</td><td><span class="badge-conditional">Conditional</span></td><td>Requires a view that captures the pitch area</td></tr>
@@ -183,20 +183,24 @@
                 <div class="clips">
                     <figure class="clip clip--with-metrics">
                         <div class="clip__media" style="--ar:960/540">
-                            <img src="assets/cricket_batting_front_on.gif" width="960" height="540" alt="Front-on batting example with a ball track, body pose, estimated pitch map, estimated shot direction, and a rough ball speed estimate.">
+                            <video autoplay muted loop playsinline poster="assets/cricket_batting_front_on.jpg" width="960" height="540" aria-label="Batting example with a ball track, body pose, estimated pitch map, estimated shot direction, and a rough ball speed estimate." data-gif="assets/cricket_batting_front_on.gif">
+              <source src="assets/cricket_batting_front_on.webm" type="video/webm">
+              <source src="assets/cricket_batting_front_on.mp4" type="video/mp4">
+            </video>
+            <noscript><img src="assets/cricket_batting_front_on.gif" width="960" height="540" alt="Batting example with a ball track, body pose, estimated pitch map, estimated shot direction, and a rough ball speed estimate."></noscript>
                         </div>
                         <div class="metric-strip">
                           <article class="result-card">
                             <p class="result-card__name">Pitch map</p>
                             <p class="result-card__value">Full</p>
                             <p class="result-card__qual">Estimated</p>
-                            <p class="result-card__status"><span class="status-pill status-pill--live">Live</span></p>
+                            <p class="result-card__status"><span class="status-pill status-pill--soon" data-metric-switch="pitch-map">Coming soon</span></p>
                           </article>
                           <article class="result-card">
                             <p class="result-card__name">Shot direction</p>
                             <p class="result-card__value">Leg side</p>
                             <p class="result-card__qual">Estimated</p>
-                            <p class="result-card__status"><span class="status-pill status-pill--live">Live</span></p>
+                            <p class="result-card__status"><span class="status-pill status-pill--soon" data-metric-switch="shot-direction">Coming soon</span></p>
                           </article>
                           <article class="result-card">
                             <p class="result-card__name">Ball speed</p>
@@ -217,13 +221,23 @@
                             <p class="result-card__status"><span class="status-pill status-pill--live">Live</span></p>
                           </article>
                         </div>
-                        <figcaption class="clip__meta">
-                            <span class="clip__label">Gabriella Vision · Batting · Front-on</span>
+                                  <div class="clip-helper">
+            <p>Nets session.</p>
+            <p>Pitch map: rough band only. Bands are a visual guide and are not yet checked for this net setup.</p>
+            <p>Shot direction: a longer line means a stronger shot. Left-handers are mirrored. Shots missed or lost after contact are not drawn.</p>
+            <p>The ball may not be shown around contact.</p>
+          </div>
+          <figcaption class="clip__meta">
+                            <span class="clip__label">Gabriella Vision · Batting · View A</span>
                         </figcaption>
                     </figure>
                     <figure class="clip clip--with-metrics">
                         <div class="clip__media clip__media--fit" style="--ar:960/540">
-                            <img src="assets/cricket_batting_side_on.gif" width="640" height="452" alt="Side-on batting example. The side-on view shows batter pose only, estimated.">
+                            <video autoplay muted loop playsinline poster="assets/cricket_batting_side_on.jpg" width="640" height="452" aria-label="Batting example. This camera view shows batter pose only, estimated." data-gif="assets/cricket_batting_side_on.gif">
+              <source src="assets/cricket_batting_side_on.webm" type="video/webm">
+              <source src="assets/cricket_batting_side_on.mp4" type="video/mp4">
+            </video>
+            <noscript><img src="assets/cricket_batting_side_on.gif" width="640" height="452" alt="Batting example. This camera view shows batter pose only, estimated."></noscript>
                         </div>
                         <div class="metric-strip">
                           <article class="result-card">
@@ -234,7 +248,7 @@
                           </article>
                         </div>
                         <figcaption class="clip__meta">
-                            <span class="clip__label">Gabriella Vision · Batting · Side-on</span>
+                            <span class="clip__label">Gabriella Vision · Batting · View B</span>
                         </figcaption>
                     </figure>
                 </div>
@@ -315,7 +329,7 @@
         <footer class="footer">
   <div class="container footer__grid">
     <div class="footer__brand">
-      <a class="nav__brand nav__brand--dark" href="index.html"><img src="assets/logo.png" alt="" width="32" height="32"><span>Gabriella Systems</span></a>
+      <a class="nav__brand nav__brand--dark" href="index.html"><img src="assets/logo-64.png" alt="" width="32" height="32"><span>Gabriella Systems</span></a>
       <p>Computer vision for cricket performance — batting and bowling intelligence from ordinary video.</p>
     </div>
     <nav aria-label="Product"><h4>Product</h4>

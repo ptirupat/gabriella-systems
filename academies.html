@@ -14,7 +14,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -22,7 +22,7 @@
     <header class="nav">
   <div class="container nav__bar">
     <a class="nav__brand" href="index.html" aria-label="Gabriella Systems home">
-      <img src="assets/logo.png" alt="" width="32" height="32"><span>Gabriella</span>
+      <img src="assets/logo-64.png" alt="" width="32" height="32"><span>Gabriella</span>
     </a>
     <nav class="nav__links" id="nav-links" aria-label="Main">
       <a href="services.html">Platform</a>
@@ -70,8 +70,8 @@
                         <tbody>
                             <tr><td>Ball track</td><td><span class="status-pill status-pill--live">Live</span></td><td>When the ball is visible</td></tr>
                             <tr><td>Body pose overlay</td><td><span class="status-pill status-pill--live">Live</span></td><td>When the player is visible</td></tr>
-                            <tr><td>Pitch map</td><td><span class="status-pill status-pill--live">Live</span></td><td>Estimated. The panel shows Not measured if bounce is not seen.</td></tr>
-                            <tr><td>Shot direction</td><td><span class="status-pill status-pill--live">Live</span></td><td>Estimated. Not drawn if the shot is lost after contact.</td></tr>
+                            <tr><td>Pitch map</td><td><span class="status-pill status-pill--soon" data-metric-switch="pitch-map">Coming soon</span></td><td>Estimated. The panel shows Not measured if bounce is not seen.</td></tr>
+                            <tr><td>Shot direction</td><td><span class="status-pill status-pill--soon" data-metric-switch="shot-direction">Coming soon</span></td><td>Estimated. Not drawn if the shot is lost after contact.</td></tr>
                             <tr><td>Front knee angle</td><td><span class="status-pill status-pill--live">Live</span></td><td>Pipeline estimate at front-foot contact, labelled as an estimate</td></tr>
                             <tr><td>Bat speed</td><td><span class="status-pill status-pill--soon">Coming soon</span></td><td>Not shown on current example clips</td></tr>
                             <tr><td>Session-to-session trends</td><td><span class="status-pill status-pill--soon">Coming soon</span></td><td>Needs a comparable view; coach-led today</td></tr>
@@ -178,7 +178,7 @@
                                 <h4><i class="fas fa-video" style="color:var(--teal);"></i> Supported recording setup</h4>
                                 <ul>
                                     <li>Existing smartphone, tablet, or fixed camera at the nets</li>
-                                    <li>Side-on or front-on view (affects which metrics are available)</li>
+                                    <li>The camera view you use affects which metrics are available</li>
                                     <li>Minimum 30 fps recommended for reliable tracking</li>
                                     <li>Good lighting and unobstructed view of player, bat, and ball</li>
                                 </ul>
@@ -251,7 +251,7 @@
         <footer class="footer">
   <div class="container footer__grid">
     <div class="footer__brand">
-      <a class="nav__brand nav__brand--dark" href="index.html"><img src="assets/logo.png" alt="" width="32" height="32"><span>Gabriella Systems</span></a>
+      <a class="nav__brand nav__brand--dark" href="index.html"><img src="assets/logo-64.png" alt="" width="32" height="32"><span>Gabriella Systems</span></a>
       <p>Computer vision for cricket performance — batting and bowling intelligence from ordinary video.</p>
     </div>
     <nav aria-label="Product"><h4>Product</h4>
