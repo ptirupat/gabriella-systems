@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Showcase — Gabriella Systems</title>
     <meta name="description" content="Cricket vision showcase — sample batting clips with ball tracking, body pose, and rough ball speed estimates.">
-        <meta property="og:type" content="website">
+    <meta property="og:type" content="website">
     <meta property="og:site_name" content="Gabriella Systems">
     <meta property="og:title" content="Cricket Vision Showcase — Gabriella Systems">
     <meta property="og:description" content="Cricket vision showcase — sample batting clips with ball tracking, body pose, and rough ball speed estimates.">
@@ -14,123 +14,34 @@
     <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles-showcase.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-demo.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        .demo-embed-wrapper {
-            position: relative;
-            width: 100%;
-            min-height: 600px;
-        }
-        .demo-embed-frame {
-            width: 100%;
-            min-height: 480px;
-            height: 580px;
-            border: 1px solid var(--line);
-            border-radius: 8px;
-            background: var(--soft);
-            box-shadow: 0 10px 28px rgba(17, 32, 29, 0.08);
-            display: block;
-            transition: height 0.3s ease;
-        }
-        .demo-loading {
-            position: absolute;
-            inset: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 1.2rem;
-            background: var(--soft);
-            border: 1px solid var(--line);
-            border-radius: 8px;
-            pointer-events: none;
-            transition: opacity 0.4s ease;
-            z-index: 2;
-        }
-        .demo-loading.hidden {
-            opacity: 0;
-        }
-        .demo-loading-spinner {
-            width: 44px;
-            height: 44px;
-            border: 3px solid var(--line);
-            border-top-color: var(--teal);
-            border-radius: 50%;
-            animation: spin 0.9s linear infinite;
-        }
-        .demo-loading-text {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: var(--muted);
-            letter-spacing: 0.01em;
-        }
-        .demo-loading-sub {
-            font-size: 0.82rem;
-            color: var(--muted);
-            opacity: 0.7;
-            margin-top: -0.7rem;
-        }
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-        .demo-note {
-            color: var(--muted);
-            font-size: 0.92rem;
-            margin-top: 0.8rem;
-        }
-        .demo-note i { color: var(--green); }
-        .demo-paused {
-            border: 1px solid var(--line);
-            border-radius: 8px;
-            background: var(--soft);
-            padding: 1.4rem 1.2rem;
-            text-align: center;
-            color: var(--muted);
-            font-size: 0.98rem;
-        }
-        .demo-paused i { color: var(--teal); margin-right: 0.4rem; }
-        .showcase-gallery .section-intro { margin-bottom: 1.4rem; }
-        .gallery-caption {
-            color: var(--muted);
-            font-size: 0.92rem;
-            line-height: 1.55;
-            margin-top: 0.7rem;
-        }
-    </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="index.html" class="nav-logo-link">
-                    <img src="assets/logo.png" alt="Gabriella Systems" class="nav-logo-img">
-                    <span class="nav-logo-wordmark">Gabriella</span>
-                    <i class="fas fa-house" aria-label="Home" style="font-size:0.7rem; color:var(--muted); margin-left:0.3rem; opacity:0.6; vertical-align:middle;"></i>
-                </a>
-            </div>
-            <div class="nav-menu" id="nav-menu">
-                <a href="services.html" class="nav-link">Platform</a>
-                <a href="batting.html" class="nav-link">Batting</a>
-                <a href="bowling.html" class="nav-link">Bowling</a>
-                <a href="academies.html" class="nav-link">For Academies</a>
-                <a href="demo.html" class="nav-link active">Showcase</a>
-                <a href="research.html" class="nav-link">Research</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="connect.html?purpose=Pilot+Interest#interest-form" class="nav-cta-btn">Request a Pilot</a>
-            </div>
-            <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <div class="container nav__bar">
+    <a class="nav__brand" href="index.html" aria-label="Gabriella Systems home">
+      <img src="assets/logo-64.png" alt="" width="32" height="32"><span>Gabriella</span>
+    </a>
+    <nav class="nav__links" id="nav-links" aria-label="Main">
+      <a href="services.html">Platform</a>
+      <a href="batting.html">Batting</a>
+      <a href="bowling.html">Bowling</a>
+      <a href="academies.html">For Academies</a>
+      <a href="demo.html" aria-current="page">Showcase</a>
+      <a href="research.html">Research</a>
+      <a href="about.html">About</a>
+      <a class="btn btn--primary btn--sm nav__cta" href="connect.html?purpose=Pilot+Interest#interest-form">Request a Pilot</a>
     </nav>
+    <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+  </div>
+</header>
 
-    <main class="subpage-main">
-        <section class="demo-hero">
+    <main id="main" class="subpage-main">
+        <section class="page-hero">
             <div class="container narrow">
                 <p class="eyebrow">Showcase</p>
                 <h1>Cricket Vision Showcase</h1>
@@ -141,7 +52,7 @@
             </div>
         </section>
 
-        <section class="section demo-workspace">
+        <section class="section">
             <div class="container">
                 <div class="demo-embed-wrapper">
                     <div class="demo-loading" id="demo-loading">
@@ -158,7 +69,6 @@
                         onload="
                             document.getElementById('demo-loading').classList.add('hidden');
                             setTimeout(()=>document.getElementById('demo-loading').remove(),500);
-                            // Auto-fit height to actual content after load
                             const frame = document.getElementById('demo-frame');
                             try {
                                 const h = frame.contentDocument?.documentElement?.scrollHeight;
@@ -169,46 +79,51 @@
                 </div>
                 <p class="demo-note">
                     <i class="fas fa-circle-info"></i>
-                    Sample clips play instantly. Speeds are rough estimates from video, not radar readings.
+                    Sample clips play instantly.
                 </p>
                 <p class="demo-note">
                     <i class="fas fa-rotate-right"></i>
-                    If the showcase doesn't load within 30 seconds, <a href="demo.html" style="color:var(--teal); font-weight:600;">refresh the page</a> — the analysis engine may be starting up after inactivity.
+                    If the showcase doesn't load within 30 seconds, <a href="demo.html">refresh the page</a> — the analysis engine may be starting up after inactivity.
                 </p>
                 <p class="demo-note">
                     <i class="fas fa-shield"></i>
-                    Uploaded clips are deleted within 30 days. See our <a href="data-retention.html" style="color:var(--teal);">Data retention page</a>. See our <a href="privacy.html" style="color:var(--teal);">Privacy policy</a>.
+                    Uploaded clips are deleted within 30 days. See our <a href="data-retention.html">Data retention page</a>. See our <a href="privacy.html">Privacy policy</a>.
                 </p>
-                <p class="demo-disclaimer"><i class="fas fa-circle-info" style="color:var(--amber);margin-right:0.3rem;"></i>Demonstration output from selected recorded example clips. Not independently validated. Measurement availability depends on view, calibration, visibility, frame rate, and clip quality.</p>
+                <p class="demo-disclaimer"><i class="fas fa-circle-info" aria-hidden="true"></i> Demonstration output from selected recorded example clips. Measurement availability depends on the camera view you use, visibility, frame rate, and clip quality.</p>
                 <div class="showcase-next">
-                    <a class="cta-button" href="#showcase-gallery">Explore examples</a>
-                    <a class="secondary-button" href="connect.html?purpose=Pilot+Interest#interest-form">Request a Pilot</a>
+                    <a class="btn btn--primary" href="#showcase-gallery">Explore examples</a>
+                    <a class="btn btn--secondary" href="connect.html?purpose=Pilot+Interest#interest-form">Request a Pilot</a>
                 </div>
             </div>
         </section>
 
-        <section class="section showcase-gallery" id="showcase-gallery">
+        <section class="section section--soft showcase-gallery" id="showcase-gallery">
             <div class="container">
-                <div class="section-intro">
+                <header class="intro">
                     <p class="eyebrow">Showcase gallery</p>
                     <h2>More examples</h2>
-                </div>
-                <div class="selected-examples">
-                    <!-- To add a clip, copy one <figure class="selected-example"> block below and change the image, alt text, and caption. -->
-                    <figure class="selected-example clip--with-metrics">
-                        <img src="assets/cricket_batting_showcase_1.gif" width="960" height="540" alt="Front-on batting example with a ball track, body pose, estimated pitch map, estimated shot direction, and a rough ball speed estimate.">
+                </header>
+                <div class="clips">
+                    <figure class="clip clip--with-metrics selected-example">
+                        <div class="clip__media" style="--ar:960/540">
+                            <video autoplay muted loop playsinline poster="assets/cricket_batting_showcase_1.jpg" width="960" height="540" aria-label="Batting example with a ball track, body pose, estimated pitch map, estimated shot direction, and a rough ball speed estimate." data-gif="assets/cricket_batting_showcase_1.gif">
+              <source src="assets/cricket_batting_showcase_1.webm" type="video/webm">
+              <source src="assets/cricket_batting_showcase_1.mp4" type="video/mp4">
+            </video>
+            <noscript><img src="assets/cricket_batting_showcase_1.gif" width="960" height="540" alt="Batting example with a ball track, body pose, estimated pitch map, estimated shot direction, and a rough ball speed estimate."></noscript>
+                        </div>
                         <div class="metric-strip">
                           <article class="result-card">
                             <p class="result-card__name">Pitch map</p>
                             <p class="result-card__value">Full</p>
                             <p class="result-card__qual">Estimated</p>
-                            <p class="result-card__status"><span class="status-pill status-pill--live">Live</span></p>
+                            <p class="result-card__status"><span class="status-pill status-pill--soon" data-metric-switch="pitch-map">Coming soon</span></p>
                           </article>
                           <article class="result-card">
                             <p class="result-card__name">Shot direction</p>
                             <p class="result-card__value">Leg side</p>
                             <p class="result-card__qual">Estimated</p>
-                            <p class="result-card__status"><span class="status-pill status-pill--live">Live</span></p>
+                            <p class="result-card__status"><span class="status-pill status-pill--soon" data-metric-switch="shot-direction">Coming soon</span></p>
                           </article>
                           <article class="result-card">
                             <p class="result-card__name">Ball speed</p>
@@ -229,24 +144,37 @@
                             <p class="result-card__status"><span class="status-pill status-pill--live">Live</span></p>
                           </article>
                         </div>
-                        <figcaption>
-                            <p class="gallery-caption">Recorded front-on batting example.</p>
+                        <div class="clip-helper">
+                          <p>Nets session.</p>
+                          <p>Pitch map: rough band only. Bands are a visual guide and are not yet checked for this net setup.</p>
+                          <p>Shot direction: a longer line means a stronger shot. Left-handers are mirrored. Shots missed or lost after contact are not drawn.</p>
+                          <p>The ball may not be shown around contact.</p>
+                        </div>
+                        <figcaption class="clip__meta">
+                            <span class="clip__label">Gabriella Vision · Batting · View A</span>
+                            <p class="gallery-caption">Recorded batting example.</p>
                         </figcaption>
                     </figure>
-                    <figure class="selected-example clip--with-metrics">
-                        <img src="assets/cricket_batting_showcase_2.gif" width="960" height="540" alt="Front-on batting example with a ball track, body pose, estimated shot direction, and a rough ball speed estimate. The pitch map panel shows Not measured.">
+                    <figure class="clip clip--with-metrics selected-example">
+                        <div class="clip__media" style="--ar:960/540">
+                            <video autoplay muted loop playsinline poster="assets/cricket_batting_showcase_2.jpg" width="960" height="540" aria-label="Batting example with a ball track, body pose, estimated shot direction, and a rough ball speed estimate. The pitch map panel shows Not measured." data-gif="assets/cricket_batting_showcase_2.gif">
+              <source src="assets/cricket_batting_showcase_2.webm" type="video/webm">
+              <source src="assets/cricket_batting_showcase_2.mp4" type="video/mp4">
+            </video>
+            <noscript><img src="assets/cricket_batting_showcase_2.gif" width="960" height="540" alt="Batting example with a ball track, body pose, estimated shot direction, and a rough ball speed estimate. The pitch map panel shows Not measured."></noscript>
+                        </div>
                         <div class="metric-strip">
                           <article class="result-card">
                             <p class="result-card__name">Pitch map</p>
                             <p class="result-card__value">Not measured</p>
                             <p class="result-card__qual">Bounce not seen</p>
-                            <p class="result-card__status"><span class="status-pill status-pill--live">Live</span></p>
+                            <p class="result-card__status"><span class="status-pill status-pill--soon" data-metric-switch="pitch-map">Coming soon</span></p>
                           </article>
                           <article class="result-card">
                             <p class="result-card__name">Shot direction</p>
                             <p class="result-card__value">Off side</p>
                             <p class="result-card__qual">Estimated</p>
-                            <p class="result-card__status"><span class="status-pill status-pill--live">Live</span></p>
+                            <p class="result-card__status"><span class="status-pill status-pill--soon" data-metric-switch="shot-direction">Coming soon</span></p>
                           </article>
                           <article class="result-card">
                             <p class="result-card__name">Ball speed</p>
@@ -267,58 +195,44 @@
                             <p class="result-card__status"><span class="status-pill status-pill--live">Live</span></p>
                           </article>
                         </div>
-                        <figcaption>
-                            <p class="gallery-caption">Recorded front-on batting example.</p>
+                        <div class="clip-helper">
+                          <p>Nets session.</p>
+                          <p>Pitch map shows Not measured when bounce is not seen. Bands are a visual guide and are not yet checked for this net setup.</p>
+                          <p>Shot direction: a longer line means a stronger shot. Left-handers are mirrored. Shots missed or lost after contact are not drawn.</p>
+                          <p>The ball may not be shown around contact.</p>
+                        </div>
+                        <figcaption class="clip__meta">
+                            <span class="clip__label">Gabriella Vision · Batting · View B</span>
+                            <p class="gallery-caption">Recorded batting example.</p>
                         </figcaption>
                     </figure>
                 </div>
                 <p class="clip-group-note">Estimated values from our pipeline, not real measurements. For demonstration only.</p>
             </div>
         </section>
-
     </main>
 
-        <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <span class="nav-logo-text">Gabriella Systems</span>
-                    <p>Computer vision for cricket performance — batting and bowling intelligence from ordinary video.</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Product</h4>
-                    <a href="services.html">Platform</a>
-                    <a href="batting.html">Batting</a>
-                    <a href="bowling.html">Bowling</a>
-                    <a href="academies.html">For Academies</a>
-                    <a href="demo.html">Showcase</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Company</h4>
-                    <a href="about.html">About</a>
-                    <a href="research.html">Research</a>
-                    <a href="sports.html">Sports</a>
-                    <a href="connect.html">Connect</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Legal</h4>
-                    <a href="privacy.html">Privacy</a>
-                    <a href="terms.html">Terms</a>
-                    <a href="youth-data.html">Youth data</a>
-                    <a href="data-retention.html">Data retention</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Gabriella Systems. All rights reserved.</p>
-                </div>
-        </div>
-    </footer>
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a class="nav__brand nav__brand--dark" href="index.html"><img src="assets/logo-64.png" alt="" width="32" height="32"><span>Gabriella Systems</span></a>
+      <p>Computer vision for cricket performance — batting and bowling intelligence from ordinary video.</p>
+    </div>
+    <nav aria-label="Product"><h4>Product</h4>
+      <a href="services.html">Platform</a><a href="batting.html">Batting</a><a href="bowling.html">Bowling</a><a href="academies.html">For Academies</a><a href="demo.html">Showcase</a>
+    </nav>
+    <nav aria-label="Company"><h4>Company</h4>
+      <a href="about.html">About</a><a href="research.html">Research</a><a href="sports.html">Sports</a><a href="connect.html">Connect</a>
+    </nav>
+    <nav aria-label="Legal"><h4>Legal</h4>
+      <a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="youth-data.html">Youth data</a><a href="data-retention.html">Data retention</a>
+    </nav>
+  </div>
+  <div class="container footer__base">© 2026 Gabriella Systems. All rights reserved.</div>
+</footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
     <script>
-    // Resize iframe to match embedded app content height
     (function () {
         const frame = document.getElementById('demo-frame');
         if (!frame) return;
@@ -333,18 +247,15 @@
             } catch (e) { /* cross-origin — ignore */ }
         }
 
-        // Listen for height messages from the embedded app
         window.addEventListener('message', function (e) {
-            if (typeof e.data === 'object' && e.data.type === 'resize' && e.data.height) {
+            if (typeof e.data === 'object' && e.data && e.data.type === 'resize' && e.data.height) {
                 frame.style.height = Math.max(300, e.data.height) + 'px';
             }
-            // Also handle plain number messages
             if (typeof e.data === 'number' && e.data > 300) {
                 frame.style.height = e.data + 'px';
             }
         });
 
-        // Retry height check a few times after load for SPAs that render late
         frame.addEventListener('load', () => {
             [300, 800, 2000].forEach(ms => setTimeout(fitFrame, ms));
         });

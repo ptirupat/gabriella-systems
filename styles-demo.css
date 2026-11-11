@@ -1,0 +1,19 @@
+/* Thin Showcase add-on. Layout, nav, footer, and metric cards come from styles.css. */
+.demo-embed-wrapper{position:relative;width:100%;min-height:600px}
+.demo-embed-frame{width:100%;min-height:480px;height:580px;border:1px solid var(--line);border-radius:var(--r-sm);background:var(--surface-soft);box-shadow:var(--sh-1);display:block;transition:height .3s ease}
+.demo-loading{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--s-5);background:var(--surface-soft);border:1px solid var(--line);border-radius:var(--r-sm);pointer-events:none;transition:opacity .4s ease;z-index:2}
+.demo-loading.hidden{opacity:0}
+.demo-loading-spinner{width:44px;height:44px;border:3px solid var(--line);border-top-color:var(--navy-700);border-radius:50%;animation:demo-spin .9s linear infinite}
+.demo-loading-text{font:600 var(--fs-small)/1.4 var(--f-head);color:var(--navy-500)}
+.demo-loading-sub{font-size:var(--fs-small);color:var(--navy-500);margin-top:-12px}
+@keyframes demo-spin{to{transform:rotate(360deg)}}
+.demo-note{color:var(--navy-500);font-size:var(--fs-small);margin-top:var(--s-3)}
+.demo-note a{color:var(--navy-700);font-weight:600}
+.demo-note i{color:var(--navy-700);margin-right:6px}
+.demo-disclaimer{text-align:left;margin-top:var(--s-4)}
+.showcase-next{display:flex;flex-wrap:wrap;gap:var(--s-3);margin-top:var(--s-5)}
+.gallery-caption{color:var(--on-dark-muted);font-size:var(--fs-small);line-height:1.55;margin:0}
+@media (prefers-reduced-motion:reduce){
+  .demo-loading-spinner{animation:none}
+  .demo-embed-frame{transition:none}
+}
