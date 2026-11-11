@@ -6,6 +6,17 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 
 ---
 
+## 2026-11-10
+
+### New batting examples, Showcase gallery, live demo hidden (open PR #48)
+
+- Homepage and `batting.html` **Selected examples**: `assets/batting_v79_front.gif` and `assets/batting_v79_side_v2.gif` replace `assets/cricket_batting_pitchmap_6s.gif` and `assets/cricket_batting_batspeed_4s.gif`, which are removed. New GIFs were added unmodified. The first shows ball track, shot direction, body pose, and a rough ball speed estimate, with a greyed pitch map panel marked coming soon. The second shows body pose only. It keeps its own size inside the same 16:9 card (`.clip__media--fit` in `styles.css`), centered, not cropped or stretched. The bowling example is unchanged.
+- Batting metric lists: **Ball track**, **Shot direction (estimated)**, **Ball speed (rough estimate, ±20%)**, **Body pose**, **Pitch map (coming soon)**. Bat speed is off the batting example lists and the batting feature cards. Shot direction drops "(coming soon)" on the homepage, `batting.html`, `academies.html`, and `sports.html`; Pitch map keeps it. No pitch length or band text.
+- `demo.html`: the live demo embed is hidden while it is updated. No frame and no link render. A note reads *The live demo is being updated. Check back soon.* The original embed block sits in one HTML comment for a one-change restore. New **Showcase gallery** section shows `assets/batting_v79_b.gif` (ball track, shot direction, rough ball speed estimate, body pose; pitch map panel shows Not measured). Add a clip by copying one `<figure class="selected-example">` block.
+- Every sample carries: *Estimated values from our pipeline, not real measurements. For demonstration only.*
+- `script.js` ball-speed tooltip now says rough estimate with a ±20% band (replaces the earlier wording).
+- The 2026-11-09 copy changes below are kept.
+
 ## 2026-11-09
 
 ### Results first; do not pitch Ready / Can't measure

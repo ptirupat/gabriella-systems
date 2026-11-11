@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Showcase — Gabriella Systems</title>
-    <meta name="description" content="Live cricket vision demo — batting and bowling analysis with ball tracking, pose estimation, and speed measurement.">
+    <meta name="description" content="Cricket vision showcase — sample batting clips with ball tracking, body pose, and rough ball speed estimates.">
         <meta property="og:type" content="website">
     <meta property="og:site_name" content="Gabriella Systems">
     <meta property="og:title" content="Cricket Vision Showcase — Gabriella Systems">
-    <meta property="og:description" content="Live cricket vision demo — batting and bowling analysis with ball tracking, pose estimation, and speed measurement.">
+    <meta property="og:description" content="Cricket vision showcase — sample batting clips with ball tracking, body pose, and rough ball speed estimates.">
     <meta property="og:image" content="https://gabriellasystems.com/assets/cricket-vision-hero.png">
     <meta property="og:url" content="https://gabriellasystems.com/demo.html">
     <meta name="twitter:card" content="summary_large_image">
@@ -82,6 +82,23 @@
             margin-top: 0.8rem;
         }
         .demo-note i { color: var(--green); }
+        .demo-paused {
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: var(--soft);
+            padding: 1.4rem 1.2rem;
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.98rem;
+        }
+        .demo-paused i { color: var(--teal); margin-right: 0.4rem; }
+        .showcase-gallery .section-intro { margin-bottom: 1.4rem; }
+        .gallery-caption {
+            color: var(--muted);
+            font-size: 0.92rem;
+            line-height: 1.55;
+            margin-top: 0.7rem;
+        }
     </style>
 </head>
 <body>
@@ -115,17 +132,21 @@
     <main class="subpage-main">
         <section class="demo-hero">
             <div class="container narrow">
-                <p class="eyebrow">Live showcase</p>
+                <p class="eyebrow">Showcase</p>
                 <h1>Cricket Vision Showcase</h1>
                 <p>
                     See cricket analysis in action. Browse sample clips to see how the system
-                    tracks the ball, bat, and player to produce objective performance data.
+                    tracks the ball and the batter.
                 </p>
             </div>
         </section>
 
         <section class="section demo-workspace">
             <div class="container">
+                <!-- LIVE DEMO EMBED: hidden on 2026-11-10 while the live demo is updated.
+                     To switch it back on in one change: delete the "demo-paused" note below
+                     and delete these instruction lines plus the "ORIGINAL EMBED END" line so the block below renders again.
+                     ORIGINAL EMBED START
                 <div class="demo-embed-wrapper">
                     <div class="demo-loading" id="demo-loading">
                         <div class="demo-loading-spinner"></div>
@@ -163,6 +184,29 @@
                     Uploaded clips are processed to generate this analysis. Our privacy policy is being finalised — contact <a href="mailto:info@gabriellasystems.com" style="color:var(--teal);">info@gabriellasystems.com</a> with any data handling questions.
                 </p>
                 <p class="demo-disclaimer"><i class="fas fa-circle-info" style="color:var(--amber);margin-right:0.3rem;"></i>Demonstration output from selected sample clips. Not independently validated. Measurement availability and accuracy depend on camera view, calibration, visibility, frame rate, and clip quality.</p>
+                ORIGINAL EMBED END -->
+                <div class="demo-paused" id="demo-paused">
+                    <p><i class="fas fa-circle-info" aria-hidden="true"></i>The live demo is being updated. Check back soon.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section showcase-gallery" id="showcase-gallery">
+            <div class="container">
+                <div class="section-intro">
+                    <p class="eyebrow">Showcase gallery</p>
+                    <h2>Sample batting clips</h2>
+                </div>
+                <div class="selected-examples">
+                    <!-- To add a clip, copy one <figure class="selected-example"> block below and change the image, alt text, and caption. -->
+                    <figure class="selected-example">
+                        <img src="assets/batting_v79_b.gif" width="960" height="540" alt="Batting example with a ball track, estimated shot direction, body pose, and a rough ball speed estimate. The pitch map panel shows Not measured.">
+                        <figcaption>
+                            <p class="gallery-caption">Ball track, shot direction (estimated), ball speed (rough estimate, ±20%), and body pose. The pitch map panel shows Not measured.</p>
+                            <p class="demo-disclaimer">Estimated values from our pipeline, not real measurements. For demonstration only.</p>
+                        </figcaption>
+                    </figure>
+                </div>
             </div>
         </section>
 
