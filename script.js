@@ -1,5 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // Pause autoplaying example clips when the viewer prefers reduced motion.
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.querySelectorAll('video[autoplay]').forEach(v => {
+            v.removeAttribute('autoplay');
+            v.pause();
+        });
+    }
+
+
     // ── Navbar ──────────────────────────────────────────────────────────────
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', () => {
@@ -68,6 +77,25 @@ document.addEventListener('DOMContentLoaded', () => {
     wireMetricTips();
 
     // ── GSAP animations (only if GSAP is loaded) ─────────────────────────────
+
+    document.querySelectorAll('video[data-gif]').forEach(v => {
+        const fallback = () => {
+            if (v.dataset.fallbackApplied) return;
+            v.dataset.fallbackApplied = '1';
+            const img = document.createElement('img');
+            img.src = v.dataset.gif;
+            img.width = v.getAttribute('width') || undefined;
+            img.height = v.getAttribute('height') || undefined;
+            img.alt = v.getAttribute('aria-label') || '';
+            v.replaceWith(img);
+        };
+        v.addEventListener('error', fallback);
+        v.querySelectorAll('source').forEach(s => s.addEventListener('error', () => {
+            // only swap if the video cannot play any source
+            if (v.networkState === HTMLMediaElement.NETWORK_NO_SOURCE) fallback();
+        }));
+    });
+
     if (typeof gsap === 'undefined') return;
 
     gsap.registerPlugin(ScrollTrigger);

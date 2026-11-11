@@ -154,8 +154,8 @@ a {
 
 .nav-link:hover,
 .nav-link.active {
-    color: var(--green);
-    background: rgba(6, 75, 145, 0.1);
+    color: #064B91;
+    background: #E8EEF7;
 }
 
 .hamburger {

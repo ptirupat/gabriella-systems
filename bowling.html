@@ -14,7 +14,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -22,7 +22,7 @@
     <header class="nav">
   <div class="container nav__bar">
     <a class="nav__brand" href="index.html" aria-label="Gabriella Systems home">
-      <img src="assets/logo.png" alt="" width="32" height="32"><span>Gabriella</span>
+      <img src="assets/logo-64.png" alt="" width="32" height="32"><span>Gabriella</span>
     </a>
     <nav class="nav__links" id="nav-links" aria-label="Main">
       <a href="services.html">Platform</a>
@@ -170,7 +170,11 @@
                 <div class="clips">
                 <figure class="clip clip--with-metrics">
                     <div class="clip__media" style="--ar:540/368">
-                        <img src="assets/cricket_bowling_knee_5s.gif" width="540" height="368" alt="Bowling example with estimated front knee angle">
+                        <video autoplay muted loop playsinline poster="assets/cricket_bowling_knee_5s.jpg" width="540" height="368" aria-label="Bowling example with estimated front knee angle." data-gif="assets/cricket_bowling_knee_5s.gif">
+              <source src="assets/cricket_bowling_knee_5s.webm" type="video/webm">
+              <source src="assets/cricket_bowling_knee_5s.mp4" type="video/mp4">
+            </video>
+            <noscript><img src="assets/cricket_bowling_knee_5s.gif" width="540" height="368" alt="Bowling example with estimated front knee angle."></noscript>
                     </div>
                     <div class="metric-strip">
                       <article class="result-card">
@@ -248,7 +252,7 @@
         <footer class="footer">
   <div class="container footer__grid">
     <div class="footer__brand">
-      <a class="nav__brand nav__brand--dark" href="index.html"><img src="assets/logo.png" alt="" width="32" height="32"><span>Gabriella Systems</span></a>
+      <a class="nav__brand nav__brand--dark" href="index.html"><img src="assets/logo-64.png" alt="" width="32" height="32"><span>Gabriella Systems</span></a>
       <p>Computer vision for cricket performance — batting and bowling intelligence from ordinary video.</p>
     </div>
     <nav aria-label="Product"><h4>Product</h4>
