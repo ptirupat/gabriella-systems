@@ -25,10 +25,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     const burger = document.getElementById('burger');
     const navLinks = document.getElementById('nav-links');
+    const setMainMenu = open => {
+        navLinks?.classList.toggle('is-open', open);
+        burger?.classList.toggle('is-open', open);
+        document.body.classList.toggle('nav-open', open);
+        burger?.setAttribute('aria-expanded', String(Boolean(open)));
+        burger?.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    };
     burger?.addEventListener('click', () => {
-        const open = navLinks?.classList.toggle('is-open');
-        burger.setAttribute('aria-expanded', String(Boolean(open)));
-        burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        setMainMenu(!navLinks?.classList.contains('is-open'));
+    });
+    navLinks?.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => setMainMenu(false));
+    });
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') setMainMenu(false);
     });
     navMenu?.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', () => {
