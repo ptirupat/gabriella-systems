@@ -4,6 +4,10 @@
 
 This file is **not** a second product contract. It only records how this marketing site implements PRODUCT.md on homepage GIF HUD panels, hero metric cards, and session-progress cards. Sample *numbers* on the static site are illustrative; they must not invent gated values. If this file and PRODUCT.md conflict, **PRODUCT.md wins** — ping Product.
 
+**2026-11-09 website copy:** Do not pitch Ready / Can’t measure as a feature or headline. On the marketing pages, a missing or untrusted metric is described as a short reason beside that result. In the product UI, Can’t measure may remain a rare inline note with a plain reason. This note does not change Showcase. The per-metric table and the regeneration and as-of sections below still describe that existing behavior. They are not a live website pitch.
+
+**2026-11-10 selected examples:** The homepage and `batting.html` now embed `cricket_batting_front_on.gif` and `cricket_batting_side_on.gif`; `bowling.html` and the homepage keep `cricket_bowling_knee_5s.gif`; `demo.html` has `cricket_batting_showcase_1.gif` and `cricket_batting_showcase_2.gif` in a Showcase gallery. Batting lists name Ball track, Shot direction (estimated), Ball speed (rough estimate, ±20%), Body pose, and Pitch map (estimated). The second batting GIF is batter pose only, estimated, with no numbers. The 2026-11-02 note below is historical.
+
 **2026-11-02 selected examples:** The homepage, `batting.html`, and `bowling.html` embed `cricket_batting_pitchmap_6s.gif`, `cricket_batting_batspeed_4s.gif`, and `cricket_bowling_knee_5s.gif` under **Selected examples**. The pitch-map file was replaced with an updated GIF. All three were added unmodified. The page label is *Estimated values from our pipeline, not real measurements. For demonstration only.* The bowling page also says **More bowling analysis is coming soon.** Clip HUDs and metric lists name only what those GIFs show: batting **Pitch map**, **Shot direction**, **Bat speed**; bowling **Front knee angle**. Ball speed, Head stability, Contact time, Run-up speed, and Arm angular speed are off those lists. The name list sits under each GIF. Do not copy a figure out of a GIF into HTML.
 
 Related site copy: [competitive-positioning.md](./competitive-positioning.md) (Impact wording). Quality-gate behaviour is implemented in Modal / Showcase. This file records the **website-facing** lock so marketing copy does not describe the old overall-gate blank.
@@ -100,9 +104,9 @@ Do not present delivery-stride speed (`19.8`) or **Delivery stride 1.82 m** as p
 
 | Surface | Files | Notes |
 | --- | --- | --- |
-| Selected examples | `assets/cricket_batting_pitchmap_6s.gif`, `assets/cricket_batting_batspeed_4s.gif`, `assets/cricket_bowling_knee_5s.gif` on `index.html`, `batting.html`, and `bowling.html` | Added unmodified 2026-11-02. The pitch-map file was replaced with an updated GIF. Name list sits under the frame. |
-| Homepage hero cards | `index.html` (`.hero-metric-card`) | **Pitch map**, **Shot direction**, **Front knee angle**. Names only. |
-| Clip HUD panels | `index.html`, `batting.html`, `bowling.html` | Batting frames list **Pitch map** and **Shot direction**, or **Bat speed**. Bowling lists **Front knee angle**. |
+| Selected examples | `assets/cricket_batting_front_on.gif`, `assets/cricket_batting_side_on.gif` on `index.html` and `batting.html`; `assets/cricket_bowling_knee_5s.gif` on `index.html` and `bowling.html`; `assets/cricket_batting_showcase_1.gif` and `assets/cricket_batting_showcase_2.gif` in the `demo.html` Showcase gallery | Batting files added unmodified 2026-11-10; bowling file 2026-11-02. Name list sits under the frame. |
+| Homepage hero cards | `index.html` (`.hero-metric-card`) | **Pitch map (estimated)**, **Shot direction (estimated)**, **Front knee angle**. Names only. |
+| Clip HUD panels | `index.html`, `batting.html`, `bowling.html` | First batting frame lists **Ball track**, **Shot direction (estimated)**, **Ball speed (rough estimate, ±20%)**, **Body pose**, **Pitch map (estimated)**; second lists **Batter pose only (estimated)**. Bowling lists **Front knee angle**. |
 | Session progress cards | `index.html`, `batting.html`, `bowling.html` | Same names as the clip HUDs. **Coach-led** stays. |
 
 Deeper capability notes may still appear outside the clip HUD and session lists. Those lists themselves stay on the names in the table above.

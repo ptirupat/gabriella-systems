@@ -2,7 +2,11 @@
 
 Short Marketing note for website and product copy. Keep claims aligned with this — not a full GTM brief. Sales GTM and outreach drafts live under [docs/sales/](./sales/) (repo-only). The formal SportVot collaboration plan also lives under [docs/sales/sportvot-collaboration-plan.md](./sales/sportvot-collaboration-plan.md). Sales GTM includes the [competitor feature recommendations](./sales/competitor-feature-recommendations.md) report (repo-only; not a live-site claims doc).
 
-Updated: 2026-10-06
+Updated: 2026-11-10
+
+**2026-11-10:** Front-on batting pitch map, shot direction, and ball track are live as estimates on the website examples and in production. They are no longer described as planned adds. Keep "estimated" / rough-estimate wording. Do not publish a pitch length in metres.
+
+**2026-11-09:** Website copy only. Do not pitch Ready / Can’t measure as a feature or headline. Public pages describe a missing or untrusted metric with a short reason beside that result. In the product UI, Can’t measure may remain a rare inline note with a plain reason. This pass does not change Showcase. Sections below that name Can’t measure as the per-metric state are the existing contract, not a live website pitch. Do not add a metric, a sample number, or an accuracy claim. Coming-soon labels and the estimated-value line stay. `docs/PRODUCT.md` and `docs/METRICS_CATALOG.md` are not in this repo.
 
 Living competitor tracker (class, capture, pricing signals, gaps): [competitors.md](./competitors.md). This file remains the **copy gate** for live site claims. Modal [PRODUCT.md](https://github.com/Gabriella-Systems/modal/blob/main/docs/PRODUCT.md) is product source of truth — do not fork hero metrics here.
 
@@ -29,19 +33,19 @@ Hawk-Eye — elite multi-camera tracking; not our academy-net price or form fact
 ## Named rivals (class + Gabriella wedge)
 
 **Ludimos** — Phone-first AI cricket coaching + academy ops (consumer Skills/Showcase + Pavilion/360° AMS).  
-**Wedge:** A camera the coach can place, with view-aware charts and metrics for that view, versus phone apps locked behind the stumps and always-on phone-CV numbers. Front-on batting charts (pitch map, wagon wheel, ball path) are planned adds, not live claims. Ready / Can't measure is the trust rule — never invent a number — not the headline. Session auto-crop is must-have parity once shipped (KAN-138/139) — do not claim it early.
+**Wedge:** A camera the coach can place, with view-aware charts and metrics for that view, versus phone apps locked behind the stumps and always-on phone-CV numbers. Front-on batting charts (pitch map, shot direction, ball path) are live as estimates, not exact measurements. Ready / Can't measure stays the trust rule — never invent a number. Do not pitch Ready / Can’t measure as a feature or headline. Session auto-crop is must-have parity once shipped (KAN-138/139) — do not claim it early.
 
 **Kabuni** — Youth cricket development + AI coaching brand (India-first: PlayOS + Super Coaches + schools + league pathway), not a clip/AMS SaaS peer.  
-**Wedge:** Placement and view-aware charts/metrics versus access, cues, and a celebrity pathway — not a phone app locked behind the stumps. Do not treat Kabuni as our metric competitor or copy junior-league GTM. Ready / Can't measure stays a trust rule, not the pitch.
+**Wedge:** Placement and view-aware charts/metrics versus access, cues, and a celebrity pathway — not a phone app locked behind the stumps. Do not treat Kabuni as our metric competitor or copy junior-league GTM. Ready / Can't measure stays the trust rule — never invent a number. Do not pitch Ready / Can’t measure as a feature or headline.
 
 **CricVision** — Academy OS + AI video coaching (white-label app/website, parent/coach chat, attendance/payments, PDFs/reels, plus CV on practice clips). Phone/smartphone-oriented. Public academy pricing checked 2026-09-28: Basic $199/mo (3 coaches / 30 players), Pro $399/mo (5 coaches / 75 players). Built by BOSC Tech Labs (public case study).  
-**Wedge:** Closer to Ludimos (academy OS, phone capture) than to a movable camera with view-aware charts and metrics. Medium GTM threat on academy sales; low threat on placement unless they leave the behind-the-stumps lock and match view-aware readouts. Don’t race white-label ops. Own where the camera sits and what that view can show. Ready / Can't measure stays the trust rule.
+**Wedge:** Closer to Ludimos (academy OS, phone capture) than to a movable camera with view-aware charts and metrics. Medium GTM threat on academy sales; low threat on placement unless they leave the behind-the-stumps lock and match view-aware readouts. Don’t race white-label ops. Own where the camera sits and what that view can show. Ready / Can't measure stays the trust rule — never invent a number. Do not pitch Ready / Can’t measure as a feature or headline.
 
 **3rd-Eye.TV** — Match-day officiating and association sports-tech (India; V6 Sports / HPMC sports division; certified DRS framing). Sports DeepMind is a claimed suite (player/tournament management, live scoring, video analysis, match streaming, umpire assessment, performance analytics) — not a public academy SaaS price.  
 **Wedge:** Adjacent / low direct threat. Buyer is boards and tournaments, not coaches placing a camera at the nets. Thin overlap is ball-track and performance-analytics language. We sell view-aware nets metrics from a camera the coach can place — not phone apps locked behind the stumps. Watchlist if SDM coaching products expand into nets phone analysis.
 
 **Level Up Sportslytics** — Hardware+CV cricket analytics (Singapore; partner-venue multi-cam install, walk-in capture, expanding SG → India).  
-**Wedge:** They own installed multi-cam nets; we own a camera the coach can place, with view-aware session metrics and a portable / academy workflow. Do not compete on “broadcast-level” slogans. Ready / Can't measure stays the trust rule, not the headline. Multi-camera stays **roadmap** for Gabriella.
+**Wedge:** They own installed multi-cam nets; we own a camera the coach can place, with view-aware session metrics and a portable / academy workflow. Do not compete on “broadcast-level” slogans. Ready / Can't measure stays the trust rule — never invent a number. Do not pitch Ready / Can’t measure as a feature or headline. Multi-camera stays **roadmap** for Gabriella.
 
 ## Category pattern (what rivals do)
 
@@ -52,13 +56,13 @@ Hawk-Eye — elite multi-camera tracking; not our academy-net price or form fact
 ## Our wedge (what we own in copy)
 
 1. **Movable camera / placement** — The camera can sit where the coach needs it, including **side-on**, so we can see Bat and Head. Phone apps lock to one setup behind the stumps. The edge is that placement choice (side-on vs front-on), not a known lens, height, or distance versus a tripod.
-   - **Front-on batting** is the view for pitch map, wagon wheel, and ball path / ball-track compare. Those charts are **planned adds**, not live claims — they wait until bounce, leave, and overlay paths exist.
-   - **Side-on batting** is for Bat, Head, both-foot movement, bat lift, and distance to pitch of the ball. Each is Ready or Can't measure. None of the new side-on fields are live until a labeled side-on session exists.
+   - **Front-on batting** is the view for pitch map, shot direction, and ball path / ball-track compare. Those charts are **live as estimates**, not exact measurements. When bounce is not seen, the pitch map panel shows Not measured.
+   - **Side-on batting** is for Bat, Head, both-foot movement, bat lift, and distance to pitch of the ball. Each is Ready or Can't measure. None of the new side-on fields are live until a labeled side-on session exists. Do not pitch Ready / Can’t measure as a feature or headline.
    - Do **not** claim Bat or Head from bowling-end or front-on-only views that cannot see them. Do **not** claim “we analyzed the session” or native 4K analysis.
 2. **Depth + multi-model stack** (depth / ball-bat / pose) as a **quality** story vs RGB-only phone CV — not as “more metrics.”
 3. **View-aware analysis** — batting vs bowling and camera view drive which metrics and visualizations we show. Do **not** claim “batting = front-on only” or “bowling = side-on only.” Front-on vs side-on above is which batting readouts fit the placement, not a fixed recipe.
 4. **Calibrated portable capture** — product/roadmap moat for hardware; do **not** sell live upload-software as already shipping calibrated hardware capture.
-5. **Trust rule (Ready / Can't measure, per metric)** — not the headline. Missing quality or missing number → **Can't measure** / null, never a guessed number. Ball-dependent fields need `quality.gated === true`. Pose-derived fields (especially bowling Run-up) may still show when pose is trusted even if overall gated is false because the ball failed. We never invent numbers.
+5. **Trust rule (Ready / Can't measure, per metric).** Do not pitch Ready / Can’t measure as a feature or headline. Missing quality or missing number → **Can't measure** / null, never a guessed number. Ball-dependent fields need `quality.gated === true`. Pose-derived fields (especially bowling Run-up) may still show when pose is trusted even if overall gated is false because the ball failed. We never invent numbers.
 
 ## Claim vs don’t claim
 
@@ -98,11 +102,11 @@ Confirm in PRODUCT.md. This site currently implements:
 
 - Prefer **real Showcase takes** with trusted overlays over AI-generated “analysis” demos (rivals already look like phone-CV theater).
 - **2026-11-02:** `batting.html` and `bowling.html` may show selected-example GIFs (estimated pitch map, shot direction, ball path, bat speed, or front knee). The required label is *Estimated values from our pipeline, not real measurements. For demonstration only.* These frames are not a live calibrated-chart claim and not a new homepage hero lock. Front-on pitch map, wagon wheel, and ball path stay planned as shipping guarantees. Do not add an accuracy claim or the word “typical.” The bowling page keeps **More bowling analysis is coming soon.**
-- HUD: **few, readable, real** session metrics — or Can’t measure **per field**. Decorative or invented numbers break the trust rule. Do not blank pose-derived Run-up solely because the ball failed.
+- HUD: **few, readable, real** session metrics — or Can’t measure **per field**. Do not pitch Ready / Can’t measure as a feature or headline. Decorative or invented numbers break the trust rule. Do not blank pose-derived Run-up solely because the ball failed.
 - Impact on HUD/copy follows the copy gate above (contact time in this clip, not early/late). Head stability is a batting homepage hero; Contact time stays on detail lists. Release height stays **off** the public bowling HUD until calibrated and gated.
 - Front stride is not a gated API field — do not show it on homepage or batting progress/hero rows.
 - Logo / brand: simple vision/hardware mark (e.g. G + reticle) over illustrated batter / neon poster art (CricVision-adjacent) or consumer-app doodles (Matcha-adjacent).
 
 ## One-line positioning
 
-**Gabriella:** cricket net analysis with a camera the coach can place — side-on to see Bat and Head, front-on for planned pitch-map, wagon-wheel, and ball-path charts — and view-aware metrics for that view. Ready or Can't measure when the view cannot support a number; we never invent one. Not a phone app locked behind the stumps.
+**Gabriella:** cricket net analysis with a camera the coach can place — side-on to see Bat and Head, front-on for planned pitch-map, wagon-wheel, and ball-path charts — and view-aware metrics for that view. Do not pitch Ready / Can’t measure as a feature or headline. We never invent a number. Not a phone app locked behind the stumps.

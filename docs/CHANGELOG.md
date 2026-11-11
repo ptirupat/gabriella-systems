@@ -6,6 +6,25 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 
 ---
 
+## 2026-11-10
+
+### New batting examples, Showcase gallery, live demo hidden (open PR #48)
+
+- Homepage and `batting.html` **Selected examples**: `assets/cricket_batting_front_on.gif` (front-on) and `assets/cricket_batting_side_on.gif` (side-on) replace `assets/cricket_batting_pitchmap_6s.gif` and `assets/cricket_batting_batspeed_4s.gif`, which are removed. The new GIFs were added unmodified. The front-on clip shows ball track, estimated shot direction, estimated pitch map, body pose, and a rough ball speed estimate with a ±20% band. The side-on clip shows batter pose only, estimated, with no numbers. It keeps its own size inside the same 16:9 card (`.clip__media--fit` in `styles.css`), centered, not cropped or stretched. The bowling example is unchanged.
+- Batting metric lists: **Ball track**, **Shot direction (estimated)**, **Ball speed (rough estimate, ±20%)**, **Body pose**, **Pitch map (estimated)**. Bat speed is off the selected-example lists (the front-on example does not claim bat speed; the side-on example carries no numbers). Bat speed remains on the batting feature card as a coaching-view result. Shot direction and Pitch map drop "(coming soon)" on the homepage, `batting.html`, `academies.html`, and `sports.html`; both stay marked estimated. No pitch length in metres is published, and no numeric value is copied into HTML.
+- `demo.html`: the live demo embed is hidden while it is updated. No frame and no link render. A note reads *The live demo is being updated. Check back soon.* The original embed block sits in one HTML comment for a one-change restore. A **Showcase gallery** (**More examples**) below it shows two further front-on clips, `assets/cricket_batting_showcase_1.gif` and `assets/cricket_batting_showcase_2.gif`. Public filenames do not use clip ids.
+- Every sample carries: *Estimated values from our pipeline, not real measurements. For demonstration only.*
+- `script.js` ball-speed tooltip now says rough estimate with a ±20% band (replaces the earlier wording).
+- The 2026-11-09 copy changes below are kept.
+
+## 2026-11-09
+
+### Results first; do not pitch Ready / Can't measure
+
+- Website copy only. The refreshed homepage still said “Metrics show Ready or Can’t measure with a plain reason.” That pitch, and the same pitch on `batting.html`, `bowling.html`, `services.html`, `sports.html`, `research.html`, `academies.html`, and the ball-speed tooltip in `script.js`, now describes a missing or untrusted metric as a short reason beside that result. Do not pitch Ready / Can’t measure as a feature or headline. In the product UI, Can’t measure may remain a rare inline note with a plain reason.
+- No new metrics, sample numbers, or accuracy claims. Coming-soon labels and the estimated-value line on the selected-example clips are unchanged. Showcase, demo, and GIF files are unchanged. The Showcase per-metric table in [homepage-hud-metrics.md](./homepage-hud-metrics.md) is unchanged.
+- `docs/PRODUCT.md` and `docs/METRICS_CATALOG.md` are not in this repo. Dated entries below stay as the record of earlier locks and are not a live website pitch.
+
 ## 2026-11-02
 
 - Site-wide refresh: one palette, type scale, spacing scale, button set, card, clip frame, nav, and footer. Showcase page and embed are unchanged. Closing call-to-action animation no longer hides the heading or buttons. Academies no longer scrolls sideways on a phone. Clip metric strips go full width on small screens. Legal TODO boxes are hidden, legal pages sit below the nav and stay out of the nav, footer, and sitemap, with noindex. Sports is in the footer. Sports and Research are in the sitemap. Buttons say Request a Pilot or Explore the Showcase.

@@ -4,14 +4,14 @@ Living notes for Gabriella Systems competitive positioning. Update when we learn
 
 Copy gate for live site wording: [competitive-positioning.md](./competitive-positioning.md). Do not fork homepage hero metrics here.
 
-Last updated: 2026-10-06
+Last updated: 2026-11-10
 
 ## Gabriella wedge (reminder)
 
 - Movable camera: it can sit where the coach needs it, including side-on so we can see Bat and Head. Phone apps lock behind the stumps. The edge is that placement choice (side-on vs front-on), not a known lens, height, or distance.
-- Front-on batting is the view for pitch map, wagon wheel, and ball path / ball-track compare. Those charts are planned adds — not live until bounce, leave, and overlay paths exist.
+- Front-on batting is the view for pitch map, shot direction, and ball path / ball-track compare. Those charts are live as estimates, not exact measurements. When bounce is not seen, the pitch map panel shows Not measured.
 - Side-on batting is for Bat, Head, both-foot movement, bat lift, and distance to pitch of the ball. Each is Ready or Can't measure. None of the new side-on fields are live until a labeled side-on session exists.
-- Ready / Can't measure is the trust rule (never invent a number) — not the headline
+- Ready / Can't measure is the trust rule (never invent a number). Do not pitch Ready / Can’t measure as a feature or headline.
 - View-aware batting & bowling; heroes locked separately in PRODUCT. Do not claim Bat or Head from bowling-end or front-on-only views, “we analyzed the session,” or native 4K analysis.
 - Portable capture hardware planned
 - Roadmap: baseball & softball (same placement and view-aware session metrics; Ready / Can't measure stays the trust rule) — not live claims
@@ -35,7 +35,7 @@ Last updated: 2026-10-06
 
 **Do not copy:** Absolute cm/broadcast claims without method; “no gear” when geometry matters; checklist maximalism; skeleton = deep biomechanics; fake testimonials.
 
-**Gabriella wedge vs Ludimos:** A camera the coach can place, with view-aware charts and metrics for that view — not a phone app locked behind the stumps. Ready / Can't measure stays the trust rule. Session auto-crop is parity once shipped; do not claim it early.
+**Gabriella wedge vs Ludimos:** A camera the coach can place, with view-aware charts and metrics for that view — not a phone app locked behind the stumps. Ready / Can't measure stays the trust rule. Do not pitch Ready / Can’t measure as a feature or headline. Session auto-crop is parity once shipped; do not claim it early.
 
 ---
 
@@ -79,7 +79,7 @@ Last updated: 2026-10-06
 
 **Do not copy:** White-label ops as our wedge; technique scores as gated session truth; “no calibration” as permission to publish untrusted numbers.
 
-**Gabriella wedge vs CricVision:** Don’t race white-label ops. Own camera placement and view-aware charts/metrics versus phone capture locked behind the stumps. Ready / Can't measure stays the trust rule.
+**Gabriella wedge vs CricVision:** Don’t race white-label ops. Own camera placement and view-aware charts/metrics versus phone capture locked behind the stumps. Ready / Can't measure stays the trust rule. Do not pitch Ready / Can’t measure as a feature or headline.
 
 ---
 
@@ -141,7 +141,7 @@ Last updated: 2026-10-06
 
 **Do not copy:** the 90% / 10K+ / 100+ / <10 min counters; implying a phone behind the stumps matches professional speed, beehive, pitch map, or release-point equipment; “tracks every ball, shot and movement” as a completeness claim; the CrickRoo name/logo.
 
-**Gabriella wedge vs CrickRoo:** A camera the coach can place, with view-aware bat and body metrics where that view allows — not a consumer freemium ball-tracking app locked behind the stumps. Ready / Can't measure stays the trust rule.
+**Gabriella wedge vs CrickRoo:** A camera the coach can place, with view-aware bat and body metrics where that view allows — not a consumer freemium ball-tracking app locked behind the stumps. Ready / Can't measure stays the trust rule. Do not pitch Ready / Can’t measure as a feature or headline.
 
 ---
 
@@ -161,7 +161,7 @@ Last updated: 2026-10-06
 
 **Do not copy:** “Broadcast-level” claims; always-on venue numbers as if they were gated session truth; competing as if we already ship calibrated multi-cam (we do not).
 
-**Gabriella wedge vs Level Up:** They own installed multi-cam nets; we own a camera the coach can place, with view-aware session metrics and a portable / academy workflow. Compete on placement — not on broadcast slogans. Ready / Can't measure stays the trust rule, not the headline.
+**Gabriella wedge vs Level Up:** They own installed multi-cam nets; we own a camera the coach can place, with view-aware session metrics and a portable / academy workflow. Compete on placement — not on broadcast slogans. Ready / Can't measure stays the trust rule. Do not pitch Ready / Can’t measure as a feature or headline.
 
 ---
 
@@ -218,20 +218,20 @@ Multi-sport academies (Shantigram / Riverfront) with cricket infrastructure: nat
 
 **Why they fit Gabriella:** Scale academy + real nets + coach-led model.
 
-**Pitch angle:** Session metrics from a camera the coach can place across net takes — Ready / Can't measure, portable or fixed later. Do not sell live upload-software as already shipping calibrated multi-cam hardware.
+**Pitch angle:** Session metrics from a camera the coach can place across net takes. Do not pitch Ready / Can’t measure as a feature or headline. Portable or fixed later. Do not sell live upload-software as already shipping calibrated multi-cam hardware.
 
 ---
 
 ## Competitive implication for Gabriella claims
 
-1. Own **camera placement** and view-aware charts/metrics (side-on for Bat and Head; front-on batting for planned pitch map, wagon wheel, and ball-path compare). Ready / Can't measure is the trust rule — never invent a number the view cannot support.
+1. Own **camera placement** and view-aware charts/metrics (side-on for Bat and Head; front-on batting for planned pitch map, wagon wheel, and ball-path compare). Ready / Can't measure stays the trust rule. Do not pitch Ready / Can’t measure as a feature or headline. Do not invent a number the view cannot support.
 2. Ludimos parity on **session auto delivery-crop** is must-have once shipped; don’t claim early.
 3. Differentiate Kabuni as **pathway/brand**, not as our metric competitor.
 4. Cricket-primary SEO; baseball/softball as roadmap only.
-5. CricVision is an academy-sales peer (white-label ops + phone/camera coaching). Medium GTM threat there. Low threat on placement and view-aware metrics unless they leave a behind-the-stumps lock. Don’t race white-label ops; own where the camera sits and what that view can show. Ready / Can’t measure stays the trust rule.
+5. CricVision is an academy-sales peer (white-label ops + phone/camera coaching). Medium GTM threat there. Low threat on placement and view-aware metrics unless they leave a behind-the-stumps lock. Don’t race white-label ops; own where the camera sits and what that view can show. Ready / Can't measure stays the trust rule. Do not pitch Ready / Can’t measure as a feature or headline.
 6. 3rd-Eye.TV is adjacent match-day DRS / association tech. Low direct threat. Watchlist only if Sports DeepMind moves into nets phone analysis.
-7. CrickRoo is an early AU phone ball-tracking app (players/parents plus academy custom). Adjacent. Don’t race freemium ball speed; own placement and view-aware bat/body metrics where the view allows. Ready / Can’t measure stays the trust rule.
-8. Level Up owns **installed multi-cam nets**; compete on placement and a portable / academy workflow — not on “broadcast-level” slogans. Multi-camera stays roadmap for us. Ready / Can't measure stays the trust rule, not the headline.
+7. CrickRoo is an early AU phone ball-tracking app (players/parents plus academy custom). Adjacent. Don’t race freemium ball speed; own placement and view-aware bat/body metrics where the view allows. Ready / Can't measure stays the trust rule. Do not pitch Ready / Can’t measure as a feature or headline.
+8. Level Up owns **installed multi-cam nets**; compete on placement and a portable / academy workflow — not on “broadcast-level” slogans. Multi-camera stays roadmap for us. Ready / Can't measure stays the trust rule. Do not pitch Ready / Can’t measure as a feature or headline.
 9. Ball2Data is **adjacent** (match/broadcast); WellPlayed is **watchlist** until real CV ships.
 10. Keep Adani Sportsline Academies (and similar academies) in the **lead list**, not the rival list.
 
