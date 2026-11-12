@@ -28,7 +28,7 @@ function applyMetricStatus() {
     const WORDS = { 3: 'Three', 4: 'Four', 5: 'Five', 6: 'Six' };
     const word = WORDS[availableCount] || String(availableCount);
     document.querySelectorAll('[data-hero-count]').forEach((el) => {
-        el.textContent = word + ' things Gabriella measures from your nets video';
+        el.textContent = word + ' things Gabriella estimates from your nets video';
     });
 
     document.querySelectorAll('[data-metric-switch-item]').forEach((el) => {
