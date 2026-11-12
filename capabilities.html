@@ -144,7 +144,7 @@
           <p class="lead lead--light" style="margin:16px 0">What was the body doing?</p>
           <p style="margin:0 0 16px;color:var(--navy-900)">A pose overlay on the intended player, used for both batting and bowling.</p>
           <ul class="cap-tags"><li>Batting</li><li>Bowling</li></ul>
-          <p class="works-when" style="margin-top:16px"><strong>Works when</strong> The player is in frame. This is the unifier across batting and bowling.</p>
+          <p class="works-when" style="margin-top:16px"><strong>Works when</strong> The player is in frame.</p>
         </div>
       </div>
     </article>
@@ -192,7 +192,7 @@
             <span class="status-pill status-pill--available">Available now</span>
           </div>
           <p class="lead lead--light" style="margin:16px 0">How fast was it?</p>
-          <p style="margin:0 0 16px;color:var(--navy-900)">A rough estimate of ball speed with a plus or minus 20 percent band. It is not a radar reading, and we do not headline a tighter number.</p>
+          <p style="margin:0 0 16px;color:var(--navy-900)">A rough estimate of ball speed with a plus or minus 20 percent band. It is not a radar reading.</p>
           <ul class="cap-tags"><li>Batting</li><li>Bowling</li></ul>
           <p class="works-when" style="margin-top:16px"><strong>Works when</strong> The ball is visible through enough of the flight. This is a rough estimate with a ±20% band, not a radar reading.</p>
         </div>
@@ -246,35 +246,35 @@
               <td data-label="Front-on (behind the bowler, facing the batter)">Yes</td>
               <td data-label="Side-on">Yes</td>
               <td data-label="Bowler’s end">Yes, when pose stays on the intended player</td>
-              <td data-label="Works when">The player is in frame. This is the unifier across batting and bowling.</td>
+              <td data-label="Works when">The player is in frame.</td>
             </tr>
             <tr>
               <th scope="row">Front knee angle</th>
-              <td data-label="Front-on (behind the bowler, facing the batter)">Not the public example</td>
+              <td data-label="Front-on (behind the bowler, facing the batter)">Possible when the front leg is visible at landing</td>
               <td data-label="Side-on">Possible when the front leg is visible at plant</td>
-              <td data-label="Bowler’s end">Yes — current public example</td>
+              <td data-label="Bowler’s end">Yes</td>
               <td data-label="Works when">A bowling delivery with the front leg visible at landing. Shown as an estimate.</td>
             </tr>
             <tr>
               <th scope="row">Ball speed</th>
-              <td data-label="Front-on (behind the bowler, facing the batter)">Yes — current public example</td>
+              <td data-label="Front-on (behind the bowler, facing the batter)">Yes</td>
               <td data-label="Side-on">Possible with a trusted scale</td>
               <td data-label="Bowler’s end">When the ball track is trusted</td>
               <td data-label="Works when">The ball is visible through enough of the flight. This is a rough estimate with a ±20% band, not a radar reading.</td>
             </tr>
             <tr>
               <th scope="row">Bat-ball contact (in development)</th>
-              <td data-label="Front-on (behind the bowler, facing the batter)">Yes, once a clip is cut</td>
-              <td data-label="Side-on">Yes, once a clip is cut</td>
-              <td data-label="Bowler’s end">Not this card</td>
-              <td data-label="Works when">Contact is visible in the clip. Copy must not say early or late.</td>
+              <td data-label="Front-on (behind the bowler, facing the batter)">Yes</td>
+              <td data-label="Side-on">Yes</td>
+              <td data-label="Bowler’s end">No</td>
+              <td data-label="Works when">Contact is visible in the clip.</td>
             </tr>
             <tr>
               <th scope="row">Session comparison (in development)</th>
               <td data-label="Front-on (behind the bowler, facing the batter)">Only against another front-on session</td>
               <td data-label="Side-on">Only against another side-on session</td>
               <td data-label="Bowler’s end">Only against the same position</td>
-              <td data-label="Works when">The same camera position, comparable clips, and real values. Illustrative cards are not enough.</td>
+              <td data-label="Works when">The same camera position, comparable clips, and real session values.</td>
             </tr>
             <tr>
               <th scope="row">Bounce line (in development)</th>
@@ -302,20 +302,20 @@
               <td data-label="Front-on (behind the bowler, facing the batter)">Yes</td>
               <td data-label="Side-on">No</td>
               <td data-label="Bowler’s end">No</td>
-              <td data-label="Works when">Front-on, bounce seen, enough trusted post-bounce track. Do not claim swing or spin until that is actually computed.</td>
+              <td data-label="Works when">Front-on, bounce seen, and enough of the ball path after the bounce.</td>
             </tr>
             <tr>
               <th scope="row">Release-to-contact time (in development)</th>
               <td data-label="Front-on (behind the bowler, facing the batter)">Yes, if release is in frame</td>
               <td data-label="Side-on">Yes, if release is in frame</td>
               <td data-label="Bowler’s end">Yes, if release is in frame</td>
-              <td data-label="Works when">A trusted release and a trusted impact. Do not invent a release when the hand is out of frame.</td>
+              <td data-label="Works when">Release and impact are both visible, with the bowling hand in frame at release.</td>
             </tr>
             <tr>
               <th scope="row">Head stability (in development)</th>
               <td data-label="Front-on (behind the bowler, facing the batter)">Yes — sideways movement</td>
               <td data-label="Side-on">Yes — forward or vertical</td>
-              <td data-label="Bowler’s end">Not this card</td>
+              <td data-label="Bowler’s end">No</td>
               <td data-label="Works when">Pose stays on the batter. Release and contact in frame for this estimate.</td>
             </tr>
             <tr>
@@ -337,7 +337,7 @@
               <td data-label="Front-on (behind the bowler, facing the batter)">Not the intended view</td>
               <td data-label="Side-on">Yes</td>
               <td data-label="Bowler’s end">No</td>
-              <td data-label="Works when">Side-on, both ankles visible. Do not invent height.</td>
+              <td data-label="Works when">Side-on, both ankles visible.</td>
             </tr>
             <tr>
               <th scope="row">Front knee bend at contact (in development)</th>
@@ -350,15 +350,22 @@
               <th scope="row">Backlift height (in development)</th>
               <td data-label="Front-on (behind the bowler, facing the batter)">Yes</td>
               <td data-label="Side-on">Yes</td>
-              <td data-label="Bowler’s end">Not this card</td>
-              <td data-label="Works when">Hands stay in frame through the lift. No bat detection required.</td>
+              <td data-label="Bowler’s end">No</td>
+              <td data-label="Works when">Hands stay in frame through the lift.</td>
             </tr>
             <tr>
               <th scope="row">Contact point relative to body (in development)</th>
               <td data-label="Front-on (behind the bowler, facing the batter)">Not the intended view</td>
               <td data-label="Side-on">Yes</td>
               <td data-label="Bowler’s end">No</td>
-              <td data-label="Works when">Side-on, contact visible. Copy must not say early or late as timing.</td>
+              <td data-label="Works when">Side-on, contact visible.</td>
+            </tr>
+            <tr>
+              <th scope="row">Bat speed (in development)</th>
+              <td data-label="Front-on (behind the bowler, facing the batter)">Possible if the bat is visible at impact</td>
+              <td data-label="Side-on">Possible if the bat is visible at impact</td>
+              <td data-label="Bowler’s end">Possible if the bat is visible at impact</td>
+              <td data-label="Works when">The bat is visible at impact.</td>
             </tr>
             <tr>
               <th scope="row">Knee brace through release (in development)</th>
@@ -372,7 +379,7 @@
               <td data-label="Front-on (behind the bowler, facing the batter)">Not the intended view</td>
               <td data-label="Side-on">Yes</td>
               <td data-label="Bowler’s end">Possible if both feet are visible</td>
-              <td data-label="Works when">Pose on the bowler, both feet visible at landing. Do not invent height.</td>
+              <td data-label="Works when">Pose on the bowler, both feet visible at landing.</td>
             </tr>
             <tr>
               <th scope="row">Trunk side bend at release (in development)</th>
@@ -431,70 +438,6 @@
       <div class="accuracy-block">
         <p>Gabriella estimates results from ordinary video. When we cannot trust a result, we say so and leave it blank. Ball speed is a rough estimate with a plus or minus 20 percent band, not a radar reading. Pitch map and shot direction are estimates from the ball path, not a survey of the pitch.</p>
         <p class="estimate-line">Estimated from ordinary video, not exact measurements.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section--soft" id="in-development">
-    <div class="container">
-      <header class="intro">
-        <p class="eyebrow">Next</p>
-        <h2>In development</h2>
-        <p class="lead lead--light">These are not available now. There are no dates attached, and they will not appear as cards on Home until a public clip or real data exists.</p>
-      </header>
-      <div class="dev-groups">
-        <div class="dev-featured">
-          <article class="card">
-            <div class="cap-card__top">
-              <h3>Bat-ball contact</h3>
-              <span class="status-pill status-pill--developing">In development</span>
-            </div>
-            <p class="card__body">Did bat meet ball? This stays in development until a clean public clip is ready. Copy will not describe contact as early or late.</p>
-          </article>
-          <article class="card">
-            <div class="cap-card__top">
-              <h3>Session comparison</h3>
-              <span class="status-pill status-pill--developing">In development</span>
-            </div>
-            <p class="card__body">What changed since last time? This stays in development until a real comparison exists from the same camera position. Illustrative cards are not enough.</p>
-          </article>
-        </div>
-        <div>
-          <h3>Ball</h3>
-          <ul class="dev-list">
-            <li><strong>Length label.</strong> A plain length word — for example full, good, or short.</li>
-            <li><strong>Bounce line (off / middle / leg).</strong> Whether the ball pitched off, middle, or leg.</li>
-            <li><strong>Session pitch-map heatmap and wagon wheel.</strong> Grouping and scoring areas across a whole session.</li>
-            <li><strong>Deviation off the pitch.</strong> Movement from the angle change at the bounce. We will not claim swing or spin until that is actually computed.</li>
-            <li><strong>Release-to-contact time.</strong> How long the batter had to react, when both release and contact are in frame.</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Batter</h3>
-          <ul class="dev-list">
-            <li><strong>Head stability.</strong> Head movement from release to contact.</li>
-            <li><strong>Head over base.</strong> Head offset from the front foot or feet midpoint at contact.</li>
-            <li><strong>Front foot or back foot.</strong> Direction the front ankle moves from stance to contact.</li>
-            <li><strong>Stride length and stance width.</strong> Ankle separation as a fraction of leg length. We will not invent height.</li>
-            <li><strong>Front knee bend at contact.</strong> The batter’s front knee angle at contact.</li>
-            <li><strong>Backlift height.</strong> Peak wrist height versus the shoulder.</li>
-            <li><strong>Contact point relative to the body.</strong> Contact versus the head and front foot. Copy will not say early or late as timing.</li>
-            <li><strong>Bat speed.</strong> Speed of the bat at impact. This is not an Available now card.</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Bowler</h3>
-          <ul class="dev-list">
-            <li><strong>Knee brace through release.</strong> Front knee angle from landing to release: braced, flexing, or extending.</li>
-            <li><strong>Delivery stride length.</strong> Back-foot to front-foot landing as a fraction of height. We will not invent height.</li>
-            <li><strong>Trunk side bend at release.</strong> Shoulder-to-hip line versus vertical.</li>
-            <li><strong>Trunk forward lean at release.</strong> The same line from the side.</li>
-            <li><strong>Arm slot at release.</strong> Shoulder-to-wrist line versus vertical.</li>
-            <li><strong>Relative release height.</strong> Wrist height at release as a percent of standing height, not an absolute metre value.</li>
-            <li><strong>Front arm height.</strong> Non-bowling wrist height at back-foot landing.</li>
-            <li><strong>Run-up rhythm.</strong> Step count and step-timing consistency from the ankles.</li>
-          </ul>
-        </div>
       </div>
     </div>
   </section>
