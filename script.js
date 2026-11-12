@@ -21,9 +21,10 @@ function applyMetricStatus() {
         }
     });
 
-    const switchIds = ['pitch-map', 'shot-direction', 'body-pose'];
+    const switchIds = ['ball-tracking', 'pitch-map', 'shot-direction', 'body-pose'];
+    const alwaysAvailable = 2; // Front knee angle, Ball speed
     const availableSwitchCount = switchIds.filter((k) => (STATUS[k] || 'available') === 'available').length;
-    const availableCount = 3 + availableSwitchCount;
+    const availableCount = alwaysAvailable + availableSwitchCount;
     const WORDS = { 3: 'Three', 4: 'Four', 5: 'Five', 6: 'Six' };
     const word = WORDS[availableCount] || String(availableCount);
     document.querySelectorAll('[data-hero-count]').forEach((el) => {

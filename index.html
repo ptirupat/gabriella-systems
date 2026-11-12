@@ -44,7 +44,7 @@
       <h1 class="display" data-hero-count>Six things Gabriella measures from your nets video</h1>
       <p class="lead">From ordinary nets video, Gabriella shows ball tracking, pitch map, shot direction, body pose, front knee angle, and a rough ball speed estimate.</p>
       <ul class="hero-cap-list" data-hero-list>
-            <li>Ball tracking</li>
+            <li data-metric-switch-item="ball-tracking">Ball tracking</li>
             <li data-metric-switch-item="pitch-map">Pitch map</li>
             <li data-metric-switch-item="shot-direction">Shot direction</li>
             <li data-metric-switch-item="body-pose">Body pose</li>
@@ -66,7 +66,7 @@
         <p class="lead lead--light">Six results from ordinary nets video. Each card links to a longer description, how it works, and when it can be shown.</p>
       </header>
       <div class="cap-grid" data-home-cap-grid>
-        <article class="cap-card" data-cap-card>
+        <article class="cap-card" data-cap-card data-metric-switch-card="ball-tracking">
             <div class="cap-card__media" style="--ar:960/540">
               <video autoplay muted loop playsinline poster="assets/ball_tracking.jpg" width="960" height="540" aria-label="Batting example showing a ball track, body pose, estimated pitch map, estimated shot direction, and a rough ball speed estimate." data-gif="assets/ball_tracking.gif">
                 <source src="assets/ball_tracking.mp4" type="video/mp4">
@@ -76,7 +76,7 @@
           <div class="cap-card__body">
             <div class="cap-card__top">
               <h3>Ball tracking</h3>
-              <span class="status-pill status-pill--available">Available now</span>
+              <span class="status-pill status-pill--available" data-metric-switch="ball-tracking">Available now</span>
             </div>
             <p>See where the ball travelled on a batting or bowling delivery.</p>
             <ul class="cap-tags"><li>Batting</li><li>Bowling</li></ul>
