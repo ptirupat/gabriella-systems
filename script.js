@@ -1,4 +1,53 @@
+
+function applyMetricStatus() {
+    const STATUS = window.GABRIELLA_METRIC_STATUS || {};
+    const LABELS = { available: 'Available now', developing: 'In development' };
+    const PILL = { available: 'status-pill--available', developing: 'status-pill--developing' };
+    const valid = new Set(['available', 'developing']);
+
+    document.querySelectorAll('[data-metric-switch]').forEach((el) => {
+        const key = el.getAttribute('data-metric-switch');
+        const state = STATUS[key];
+        if (!valid.has(state)) return;
+        el.textContent = LABELS[state];
+        if (el.classList.contains('status-pill')) {
+            el.classList.remove(
+                'status-pill--available',
+                'status-pill--developing',
+                'status-pill--live',
+                'status-pill--soon'
+            );
+            el.classList.add(PILL[state]);
+        }
+    });
+
+    const switchIds = ['pitch-map', 'shot-direction', 'body-pose'];
+    const availableSwitchCount = switchIds.filter((k) => (STATUS[k] || 'available') === 'available').length;
+    const availableCount = 3 + availableSwitchCount;
+    const WORDS = { 3: 'Three', 4: 'Four', 5: 'Five', 6: 'Six' };
+    const word = WORDS[availableCount] || String(availableCount);
+    document.querySelectorAll('[data-hero-count]').forEach((el) => {
+        el.textContent = word + ' things Gabriella measures from your nets video';
+    });
+
+    document.querySelectorAll('[data-metric-switch-item]').forEach((el) => {
+        const key = el.getAttribute('data-metric-switch-item');
+        const state = STATUS[key] || 'available';
+        el.hidden = state !== 'available';
+    });
+
+    document.querySelectorAll('[data-home-cap-grid] [data-cap-card]').forEach((card) => {
+        const key = card.getAttribute('data-metric-switch-card');
+        if (!key) return;
+        const state = STATUS[key] || 'available';
+        card.hidden = state !== 'available';
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+
+    applyMetricStatus();
+
 
     // Pause autoplaying example clips when the viewer prefers reduced motion.
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {

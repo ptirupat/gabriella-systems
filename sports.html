@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sports — Gabriella Systems</title>
-    <meta name="description" content="Gabriella Systems builds movement intelligence for bat-and-ball sports. Cricket analysis is live. Baseball and softball are in development.">
+    <meta name="description" content="Gabriella Systems builds movement intelligence for bat-and-ball sports. Cricket analysis is available now. Baseball and softball are in development.">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Gabriella Systems">
     <meta property="og:title" content="Sports — Gabriella Systems">
-    <meta property="og:description" content="Cricket analysis is live. Baseball and softball coming soon.">
+    <meta property="og:description" content="Cricket analysis is available now. Baseball and softball are in development.">
     <meta property="og:image" content="https://gabriellasystems.com/assets/cricket-vision-hero.png">
     <meta property="og:url" content="https://gabriellasystems.com/sports.html">
     <meta name="twitter:card" content="summary_large_image">
@@ -26,12 +26,9 @@
       <img src="assets/logo-64.png" alt="" width="32" height="32"><span>Gabriella</span>
     </a>
     <nav class="nav__links" id="nav-links" aria-label="Main">
-      <a href="services.html">Platform</a>
-      <a href="batting.html">Batting</a>
-      <a href="bowling.html">Bowling</a>
+      <a href="capabilities.html">Capabilities</a>
       <a href="academies.html">For Academies</a>
       <a href="demo.html">Showcase</a>
-      <a href="research.html">Research</a>
       <a href="about.html">About</a>
       <a class="btn btn--primary btn--sm nav__cta" href="connect.html?purpose=Pilot+Interest#interest-form">Request a Pilot</a>
     </nav>
@@ -39,7 +36,7 @@
   </div>
 </header>
 
-    <main class="subpage-main">
+    <main id="main" class="subpage-main">
 
         <!-- HERO -->
         <section class="page-hero">
@@ -59,7 +56,7 @@
                 <header class="intro">
                     <p class="eyebrow">Status</p>
                     <h2>What we measure today</h2>
-                    <p class="lead lead--light">These are the results our pipeline can return when the clip supports them. If a result cannot be trusted, we show a short reason instead of inventing a number.</p>
+                    <p class="lead lead--light">These are the results Gabriella can return when the clip supports them. If a result cannot be trusted, we show a short reason instead of inventing a number.</p>
                 </header>
                 <div class="measure-table-wrap">
                     <table class="measure-table">
@@ -71,15 +68,15 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr><td>Ball track</td><td><span class="status-pill status-pill--live">Live</span></td><td>When the ball is visible</td></tr>
-                            <tr><td>Body pose overlay</td><td><span class="status-pill status-pill--live">Live</span></td><td>When the player is visible</td></tr>
-                            <tr><td>Pitch map</td><td><span class="status-pill status-pill--soon" data-metric-switch="pitch-map">Coming soon</span></td><td>Estimated. The panel shows Not measured if bounce is not seen.</td></tr>
-                            <tr><td>Shot direction</td><td><span class="status-pill status-pill--soon" data-metric-switch="shot-direction">Coming soon</span></td><td>Estimated. Not drawn if the shot is lost after contact.</td></tr>
-                            <tr><td>Front knee angle</td><td><span class="status-pill status-pill--live">Live</span></td><td>Pipeline estimate at front-foot contact, labelled as an estimate</td></tr>
-                            <tr><td>Bat speed</td><td><span class="status-pill status-pill--soon">Coming soon</span></td><td>Not shown on current example clips</td></tr>
-                            <tr><td>Session-to-session trends</td><td><span class="status-pill status-pill--soon">Coming soon</span></td><td>Needs a comparable view; coach-led today</td></tr>
-                            <tr><td>Portable capture hardware</td><td><span class="status-pill status-pill--planned">Planned</span></td><td>Software works with existing cameras first</td></tr>
-                        </tbody>
+                    <tr><td>Ball tracking</td><td><span class="status-pill status-pill--available">Available now</span></td><td>When the ball is visible</td></tr>
+                    <tr><td>Pitch map</td><td><span class="status-pill status-pill--available" data-metric-switch="pitch-map">Available now</span></td><td>Estimated. The panel shows Not measured if bounce is not seen.</td></tr>
+                    <tr><td>Shot direction</td><td><span class="status-pill status-pill--available" data-metric-switch="shot-direction">Available now</span></td><td>Estimated. Not drawn if the shot is lost after contact.</td></tr>
+                    <tr><td>Body pose</td><td><span class="status-pill status-pill--available" data-metric-switch="body-pose">Available now</span></td><td>When the player is visible</td></tr>
+                    <tr><td>Front knee angle</td><td><span class="status-pill status-pill--available">Available now</span></td><td>Estimate at front-foot contact, labelled as an estimate</td></tr>
+                    <tr><td>Ball speed</td><td><span class="status-pill status-pill--available">Available now</span></td><td>Rough estimate with a ±20% band, not a radar reading</td></tr>
+                    <tr><td>Bat-ball contact</td><td><span class="status-pill status-pill--developing">In development</span></td><td>In development until a clean public clip is ready</td></tr>
+                    <tr><td>Session comparison</td><td><span class="status-pill status-pill--developing">In development</span></td><td>In development until a real, same-position comparison exists</td></tr>
+                </tbody>
                     </table>
                 </div>
                 <p class="footnote">Coming later: other bowling measures, baseball/softball, weight transfer, post-contact shot trajectory, and calibrated release height.</p>
@@ -114,7 +111,7 @@
                         </div>
                         <div class="sport-body">
                             <ul class="sport-features">
-                                <li><i class="fas fa-check-circle"></i>Batting: pitch map (estimated), shot direction (estimated)</li>
+                                <li><i class="fas fa-check-circle"></i>Batting and bowling: ball tracking, pitch map, shot direction, body pose, front knee angle, and a rough ball speed estimate</li>
                                 <li><i class="fas fa-check-circle"></i>Bowling: front knee angle</li>
                                 <li><i class="fas fa-check-circle"></i>Ball and bat tracking where visible</li>
                                 <li><i class="fas fa-check-circle"></i>Body pose overlays on each frame</li>
@@ -196,7 +193,7 @@
                     with body pose overlays on each frame.
                     Sport-specific phases and metric definitions sit on top of that.
                 </p>
-                <a href="services.html" class="cta-button">
+                <a href="capabilities.html" class="cta-button">
                     <i class="fas fa-layer-group"></i>&nbsp; See the platform
                 </a>
             </div>
@@ -208,13 +205,13 @@
   <div class="container footer__grid">
     <div class="footer__brand">
       <a class="nav__brand nav__brand--dark" href="index.html"><img src="assets/logo-64.png" alt="" width="32" height="32"><span>Gabriella Systems</span></a>
-      <p>Computer vision for cricket performance — batting and bowling intelligence from ordinary video.</p>
+      <p>Computer vision for cricket performance — batting and bowling from ordinary video.</p>
     </div>
     <nav aria-label="Product"><h4>Product</h4>
-      <a href="services.html">Platform</a><a href="batting.html">Batting</a><a href="bowling.html">Bowling</a><a href="academies.html">For Academies</a><a href="demo.html">Showcase</a>
+      <a href="capabilities.html">Capabilities</a><a href="academies.html">For Academies</a><a href="demo.html">Showcase</a>
     </nav>
     <nav aria-label="Company"><h4>Company</h4>
-      <a href="about.html">About</a><a href="research.html">Research</a><a href="sports.html">Sports</a><a href="connect.html">Connect</a>
+      <a href="about.html">About</a><a href="sports.html">Sports</a><a href="connect.html">Connect</a>
     </nav>
     <nav aria-label="Legal"><h4>Legal</h4>
       <a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="youth-data.html">Youth data</a><a href="data-retention.html">Data retention</a>
@@ -225,6 +222,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="script.js"></script>
+    <script src="metric-status.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

@@ -20,18 +20,16 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <header class="nav">
+    <a class="skip" href="#main">Skip to content</a>
+<header class="nav">
   <div class="container nav__bar">
     <a class="nav__brand" href="index.html" aria-label="Gabriella Systems home">
       <img src="assets/logo-64.png" alt="" width="32" height="32"><span>Gabriella</span>
     </a>
     <nav class="nav__links" id="nav-links" aria-label="Main">
-      <a href="services.html">Platform</a>
-      <a href="batting.html">Batting</a>
-      <a href="bowling.html">Bowling</a>
+      <a href="capabilities.html">Capabilities</a>
       <a href="academies.html">For Academies</a>
       <a href="demo.html">Showcase</a>
-      <a href="research.html">Research</a>
       <a href="about.html" aria-current="page">About</a>
       <a class="btn btn--primary btn--sm nav__cta" href="connect.html?purpose=Pilot+Interest#interest-form">Request a Pilot</a>
     </nav>
@@ -39,7 +37,7 @@
   </div>
 </header>
 
-    <main class="subpage-main">
+    <main id="main" class="subpage-main">
 
         <!-- HERO ─────────────────────────────────────────────────────────── -->
         <section class="page-hero">
@@ -73,11 +71,9 @@
                     </div>
                     <div class="mv-card vision">
                         <p class="mv-label">Vision</p>
-                        <h2>A future where every athlete is measured accurately, fairly, and with full transparency</h2>
+                        <h2>Clear about what we measure, and what we can't yet</h2>
                         <p>
-                            AI in sport earns trust by being explicit
-                            about what it can measure, what it cannot, and why — across every
-                            camera view, every skill level, and every stage of athletic development.
+                            Gabriella shows coaches what our software picks up from ordinary net video, and is clear about what it can't measure yet.
                         </p>
                     </div>
                 </div>
@@ -156,7 +152,7 @@
                     <div class="value-card">
                         <i class="fas fa-camera"></i>
                         <h3>Place the camera for the view</h3>
-                        <p>Place the camera where the coach needs it, so Bat and Head come from a view that can see them. An estimated pitch map, estimated shot direction, and ball track are available when the camera view supports them. Pitch map and shot direction are coming soon in the production app; examples are labelled estimated.</p>
+                        <p>Place the camera where the coach needs it, so the results you care about come from a view that can see them. Ball tracking, an estimated pitch map, estimated shot direction, and body pose are available when the conditions for that result are met. When we cannot trust a result, we say so and leave it blank.</p>
                     </div>
                     <div class="value-card">
                         <i class="fas fa-user-check"></i>
@@ -205,11 +201,75 @@
                         </p>
                     </div>
                     <div class="research-bridge-cta">
-                        <a href="research.html">
+                        <a href="#research">
                             <i class="fas fa-flask"></i> View Research
                         </a>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- RESEARCH (merged from research.html) ─────────────────────────── -->
+        <section class="section section--soft research-merge" id="research">
+            <div class="container">
+                <header class="intro">
+                    <p class="eyebrow">Research</p>
+                    <h2>Four questions driving our research</h2>
+                    <p class="lead lead--light">Each pillar is an open set of research questions — not a finished product. Research publications are in development and will be announced following formal review.</p>
+                </header>
+                <div class="pillar-grid">
+                    <div class="pillar-card">
+                        <div class="pillar-icon navy"><i class="fas fa-eye"></i></div>
+                        <h3>Athlete Perception</h3>
+                        <p class="pillar-tagline">Understanding athletes, equipment, and movement from ordinary video.</p>
+                        <ul class="pillar-topics">
+                            <li>Human pose and movement understanding</li>
+                            <li>Bat and ball tracking</li>
+                            <li>Temporal action understanding</li>
+                            <li>Key moments in the action</li>
+                            <li>Occlusion and viewpoint robustness</li>
+                        </ul>
+                    </div>
+                    <div class="pillar-card">
+                        <div class="pillar-icon coral"><i class="fas fa-person-running"></i></div>
+                        <h3>Movement Intelligence</h3>
+                        <p class="pillar-tagline">Moving beyond pose estimation toward understanding how movement unfolds through time.</p>
+                        <ul class="pillar-topics">
+                            <li>Batting sequence and timing</li>
+                            <li>Bowling phase analysis</li>
+                            <li>Hip–shoulder coordination</li>
+                            <li>Repetition consistency</li>
+                            <li>Session-to-session change</li>
+                            <li>Interpretable movement metrics</li>
+                        </ul>
+                    </div>
+                    <div class="pillar-card">
+                        <div class="pillar-icon amber"><i class="fas fa-shield"></i></div>
+                        <h3>Trustworthy Sports AI</h3>
+                        <p class="pillar-tagline">Sports AI should communicate when its measurements are reliable — and when they are not.</p>
+                        <ul class="pillar-topics">
+                            <li>View-aware measurement</li>
+                            <li>Analysis confidence</li>
+                            <li>Uncertainty estimation</li>
+                            <li>Metric reliability</li>
+                            <li>Camera-angle sensitivity</li>
+                            <li>Transparent limitations</li>
+                            <li>Reproducible measurement</li>
+                        </ul>
+                    </div>
+                    <div class="pillar-card">
+                        <div class="pillar-icon mag"><i class="fas fa-user-shield"></i></div>
+                        <h3>Youth Safety &amp; Responsible AI</h3>
+                        <p class="pillar-tagline">AI for young athletes should be designed differently.</p>
+                        <p style="font-size:0.88rem; color:var(--muted); line-height:1.6; margin-bottom:1rem;">
+                            Young athletes are not simply smaller versions of adult athletes. Age, developmental stage, coaching context, privacy, and how feedback is communicated can all affect whether AI is useful.
+                        </p>
+                        <ul class="pillar-topics">
+                            <li>What safeguards should exist for video of minors?</li>
+                        </ul>
+                    </div>
+                </div>
+                <p style="max-width:720px;margin:2rem auto 0;color:var(--navy-500);font-size:0.95rem;line-height:1.6;">Current work starts with cricket batting and bowling, and is intended to extend to baseball and softball. We welcome research conversations — use the research option on <a href="connect.html?purpose=Research+Conversations#interest-form">Connect</a>.</p>
             </div>
         </section>
 
@@ -228,12 +288,12 @@
                     <strong style="color:var(--ink);">Team details to be added.</strong> Individual founder information will be published when ready. If you would like to speak with the team directly, please <a href="connect.html" style="color:var(--teal);">get in touch</a>.
                 </div>
 
-                <div style="margin-top:2rem;">
+                <div style="margin-top:2rem;" id="leadership">
                     <p class="eyebrow">Scientific Advisory</p>
                     <p style="font-size:0.95rem; line-height:1.7; color:var(--muted); max-width:640px;">
                         <strong style="color:var(--ink);">Prof. Mubarak Shah</strong> — Scientific Advisor, Computer Vision.<br>
                         Distinguished Professor of Computer Science at UCF and founding director of the Center for Research in Computer Vision. Fellow of IEEE, AAAI, IAPR, and ACM.
-                        <a href="research.html#leadership" style="color:var(--teal);">See full advisory profile →</a>
+                        <a href="#leadership" style="color:var(--teal);">See full advisory profile →</a>
                     </p>
                     <p style="font-size:0.78rem; color:var(--muted); margin-top:0.5rem; font-style:italic;">UCF does not sponsor or endorse Gabriella Systems.</p>
                 </div>
@@ -260,7 +320,7 @@
                             <div class="timeline-line"></div>
                         </div>
                         <div class="timeline-content-clean">
-                            <p class="timeline-phase">Live today</p>
+                            <p class="timeline-phase">Available now</p>
                             <h3>Batting &amp; bowling video analysis</h3>
                             <p>Pose, bat, and ball tracking with view-aware metrics and overlays from cricket clips in the Showcase. The camera view decides what we can show; we do not invent a number when it cannot.</p>
                         </div>
@@ -334,13 +394,13 @@
   <div class="container footer__grid">
     <div class="footer__brand">
       <a class="nav__brand nav__brand--dark" href="index.html"><img src="assets/logo-64.png" alt="" width="32" height="32"><span>Gabriella Systems</span></a>
-      <p>Computer vision for cricket performance — batting and bowling intelligence from ordinary video.</p>
+      <p>Computer vision for cricket performance — batting and bowling from ordinary video.</p>
     </div>
     <nav aria-label="Product"><h4>Product</h4>
-      <a href="services.html">Platform</a><a href="batting.html">Batting</a><a href="bowling.html">Bowling</a><a href="academies.html">For Academies</a><a href="demo.html">Showcase</a>
+      <a href="capabilities.html">Capabilities</a><a href="academies.html">For Academies</a><a href="demo.html">Showcase</a>
     </nav>
     <nav aria-label="Company"><h4>Company</h4>
-      <a href="about.html">About</a><a href="research.html">Research</a><a href="sports.html">Sports</a><a href="connect.html">Connect</a>
+      <a href="about.html">About</a><a href="sports.html">Sports</a><a href="connect.html">Connect</a>
     </nav>
     <nav aria-label="Legal"><h4>Legal</h4>
       <a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="youth-data.html">Youth data</a><a href="data-retention.html">Data retention</a>
@@ -348,9 +408,9 @@
   </div>
   <div class="container footer__base">© 2026 Gabriella Systems. All rights reserved.</div>
 </footer>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="script.js"></script>
+<script src="metric-status.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
