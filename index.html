@@ -59,8 +59,8 @@
       </div>
       <div class="hero__panel" aria-label="Metrics overview">
         <p class="eyebrow eyebrow--dark">Gabriella Vision</p>
-        <div class="metric"><span class="metric__tag">Batting</span><span class="metric__name">Pitch map (estimated)</span><span class="soon" data-metric-switch="pitch-map">Coming soon</span></div>
-        <div class="metric"><span class="metric__tag">Batting</span><span class="metric__name">Shot direction (estimated)</span><span class="soon" data-metric-switch="shot-direction">Coming soon</span></div>
+        <div class="metric"><span class="metric__tag">Batting</span><span class="metric__name">Pitch map (estimated)</span><span class="live" data-metric-switch="pitch-map">Live</span></div>
+        <div class="metric"><span class="metric__tag">Batting</span><span class="metric__name">Shot direction (estimated)</span><span class="live" data-metric-switch="shot-direction">Live</span></div>
         <div class="metric"><span class="metric__tag">Bowling</span><span class="metric__name">Front knee angle</span></div>
       </div>
     </div>
@@ -85,8 +85,8 @@
                 <tbody>
                     <tr><td>Ball track</td><td><span class="status-pill status-pill--live">Live</span></td><td>When the ball is visible</td></tr>
                     <tr><td>Body pose overlay</td><td><span class="status-pill status-pill--live">Live</span></td><td>When the player is visible</td></tr>
-                    <tr><td>Pitch map</td><td><span class="status-pill status-pill--soon" data-metric-switch="pitch-map">Coming soon</span></td><td>Estimated. The panel shows Not measured if bounce is not seen.</td></tr>
-                    <tr><td>Shot direction</td><td><span class="status-pill status-pill--soon" data-metric-switch="shot-direction">Coming soon</span></td><td>Estimated. Not drawn if the shot is lost after contact.</td></tr>
+                    <tr><td>Pitch map</td><td><span class="status-pill status-pill--live" data-metric-switch="pitch-map">Live</span></td><td>Estimated, live for batting (supported camera angles). Shows Not measured when the bounce isn't clear.</td></tr>
+                    <tr><td>Shot direction</td><td><span class="status-pill status-pill--live" data-metric-switch="shot-direction">Live</span></td><td>Estimated, live for batting (supported camera angles). Not drawn if the shot is lost after contact.</td></tr>
                     <tr><td>Front knee angle</td><td><span class="status-pill status-pill--live">Live</span></td><td>Pipeline estimate at front-foot contact, labelled as an estimate</td></tr>
                     <tr><td>Bat speed</td><td><span class="status-pill status-pill--soon">Coming soon</span></td><td>Not shown on current example clips</td></tr>
                     <tr><td>Session-to-session trends</td><td><span class="status-pill status-pill--soon">Coming soon</span></td><td>Needs a comparable view; coach-led today</td></tr>
@@ -118,13 +118,13 @@
               <p class="result-card__name">Pitch map</p>
               <p class="result-card__value">Full</p>
               <p class="result-card__qual">Estimated</p>
-              <p class="result-card__status"><span class="status-pill status-pill--soon" data-metric-switch="pitch-map">Coming soon</span></p>
+              <p class="result-card__status"><span class="status-pill status-pill--live" data-metric-switch="pitch-map">Live</span></p>
             </article>
             <article class="result-card">
               <p class="result-card__name">Shot direction</p>
               <p class="result-card__value">Leg side</p>
               <p class="result-card__qual">Estimated</p>
-              <p class="result-card__status"><span class="status-pill status-pill--soon" data-metric-switch="shot-direction">Coming soon</span></p>
+              <p class="result-card__status"><span class="status-pill status-pill--live" data-metric-switch="shot-direction">Live</span></p>
             </article>
             <article class="result-card">
               <p class="result-card__name">Ball speed</p>
@@ -217,10 +217,10 @@
           <h3 class="card__title">Batting intelligence</h3>
           <ul class="card__list">
             <li>Ball track</li>
-            <li>Shot direction (estimated, coming soon)</li>
+            <li>Shot direction (estimated)</li>
             <li>Ball speed (rough estimate, ±20%)</li>
             <li>Body pose</li>
-            <li>Pitch map (estimated, coming soon)</li>
+            <li>Pitch map (estimated)</li>
           </ul>
         </article>
         <article class="card">
@@ -259,8 +259,8 @@
         <article class="card">
           <h3 class="card__title">Batting — session progress</h3>
           <dl class="rows">
-            <div><dt>Pitch map (estimated, coming soon)</dt><dd>Values appear when a session has comparable clips</dd></div>
-            <div><dt>Shot direction (estimated, coming soon)</dt><dd>Values appear when a session has comparable clips</dd></div>
+            <div><dt>Pitch map (estimated)</dt><dd>Live for batting (supported camera angles). Values appear when a session has comparable clips</dd></div>
+            <div><dt>Shot direction (estimated)</dt><dd>Live for batting (supported camera angles). Values appear when a session has comparable clips</dd></div>
             <div><dt>Ball speed (rough estimate, ±20%)</dt><dd>Values appear when a session has comparable clips</dd></div>
             <div><dt>Same-view session review</dt><dd>Coach-led</dd></div>
           </dl>
