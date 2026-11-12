@@ -69,8 +69,8 @@
                         <tbody>
                             <tr><td>Ball track</td><td><span class="status-pill status-pill--live">Live</span></td><td>When the ball is visible</td></tr>
                             <tr><td>Body pose overlay</td><td><span class="status-pill status-pill--live">Live</span></td><td>When the player is visible</td></tr>
-                            <tr><td>Pitch map</td><td><span class="status-pill status-pill--soon" data-metric-switch="pitch-map">Coming soon</span></td><td>Estimated. The panel shows Not measured if bounce is not seen.</td></tr>
-                            <tr><td>Shot direction</td><td><span class="status-pill status-pill--soon" data-metric-switch="shot-direction">Coming soon</span></td><td>Estimated. Not drawn if the shot is lost after contact.</td></tr>
+                            <tr><td>Pitch map</td><td><span class="status-pill status-pill--live" data-metric-switch="pitch-map">Live</span></td><td>Estimated, live for batting (supported camera angles). Shows Not measured when the bounce isn't clear.</td></tr>
+                            <tr><td>Shot direction</td><td><span class="status-pill status-pill--live" data-metric-switch="shot-direction">Live</span></td><td>Estimated, live for batting (supported camera angles). Not drawn if the shot is lost after contact.</td></tr>
                             <tr><td>Bat speed</td><td><span class="status-pill status-pill--soon">Coming soon</span></td><td>Not shown on current example clips</td></tr>
                             <tr><td>Session-to-session trends</td><td><span class="status-pill status-pill--soon">Coming soon</span></td><td>Needs a comparable view; coach-led today</td></tr>
                             <tr><td>Portable capture hardware</td><td><span class="status-pill status-pill--planned">Planned</span></td><td>Software works with existing cameras first</td></tr>
@@ -98,7 +98,7 @@
                             <li><span class="status-pill status-pill--conditional">Conditional</span><span>Trajectory<sup class="fn-mark"><a href="#batting-metric-notes">&dagger;</a></sup></span></li>
                             <li><span class="status-pill status-pill--conditional">Conditional</span><span>Line and length<sup class="fn-mark"><a href="#batting-metric-notes">&dagger;</a></sup></span></li>
                             <li><span class="status-pill status-pill--conditional">Conditional</span><span>Bounce point<sup class="fn-mark"><a href="#batting-metric-notes">&dagger;</a></sup></span></li>
-                            <li><span class="status-pill status-pill--soon" data-metric-switch="pitch-map">Coming soon</span><span>Pitch map (estimated)</span></li>
+                            <li><span class="status-pill status-pill--live" data-metric-switch="pitch-map">Live</span><span>Pitch map (estimated)</span></li>
                         </ul>
                     </article>
                     <article class="product-card">
@@ -129,7 +129,7 @@
                         </div>
                         <h3>Outcome</h3>
                         <ul class="check-list">
-                            <li><span class="status-pill status-pill--soon" data-metric-switch="shot-direction">Coming soon</span><span>Shot direction (estimated)</span></li>
+                            <li><span class="status-pill status-pill--live" data-metric-switch="shot-direction">Live</span><span>Shot direction (estimated)</span></li>
                             <li><span class="status-pill status-pill--conditional">Conditional</span><span>Contact location<sup class="fn-mark"><a href="#batting-metric-notes">&dagger;</a></sup></span></li>
                             <li><span class="status-pill status-pill--research">Research</span><span>Shot trajectory<sup class="fn-mark"><a href="#batting-metric-notes">&dagger;</a></sup></span></li>
                             <li><span class="status-pill status-pill--conditional">Conditional</span><span>Bat-ball contact<sup class="fn-mark"><a href="#batting-metric-notes">*</a></sup></span></li>
@@ -159,8 +159,8 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td>Pitch map</td><td><span class="status-pill status-pill--soon" data-metric-switch="pitch-map">Coming soon</span></td><td>Estimated picture of where the ball bounced. When bounce is not seen, the panel shows Not measured.</td></tr>
-                        <tr><td>Shot direction</td><td><span class="status-pill status-pill--soon" data-metric-switch="shot-direction">Coming soon</span></td><td>Estimated direction from the nets. Shots lost after contact are not drawn.</td></tr>
+                        <tr><td>Pitch map</td><td><span class="status-pill status-pill--live" data-metric-switch="pitch-map">Live</span></td><td>Estimated, live for batting (supported camera angles). Shows Not measured when the bounce isn't clear.</td></tr>
+                        <tr><td>Shot direction</td><td><span class="status-pill status-pill--live" data-metric-switch="shot-direction">Live</span></td><td>Estimated, live for batting (supported camera angles). Not drawn if the shot is lost after contact.</td></tr>
                         <tr><td>Ball speed</td><td><span class="badge-conditional">Conditional</span></td><td>Rough estimate, shown with a ±20% band. Requires a clear view of the ball.</td></tr>
                         <tr><td>Ball trajectory</td><td><span class="badge-conditional">Conditional</span></td><td>Requires sufficient ball visibility and appropriate camera angle</td></tr>
                         <tr><td>Bounce point</td><td><span class="badge-conditional">Conditional</span></td><td>Requires a view that captures the pitch area</td></tr>
@@ -194,13 +194,13 @@
                             <p class="result-card__name">Pitch map</p>
                             <p class="result-card__value">Full</p>
                             <p class="result-card__qual">Estimated</p>
-                            <p class="result-card__status"><span class="status-pill status-pill--soon" data-metric-switch="pitch-map">Coming soon</span></p>
+                            <p class="result-card__status"><span class="status-pill status-pill--live" data-metric-switch="pitch-map">Live</span></p>
                           </article>
                           <article class="result-card">
                             <p class="result-card__name">Shot direction</p>
                             <p class="result-card__value">Leg side</p>
                             <p class="result-card__qual">Estimated</p>
-                            <p class="result-card__status"><span class="status-pill status-pill--soon" data-metric-switch="shot-direction">Coming soon</span></p>
+                            <p class="result-card__status"><span class="status-pill status-pill--live" data-metric-switch="shot-direction">Live</span></p>
                           </article>
                           <article class="result-card">
                             <p class="result-card__name">Ball speed</p>
@@ -294,10 +294,10 @@
                 </div>
                 <div class="analysis-stack">
                     <div class="analysis-row accent-green">
-                        <span>Pitch map (estimated, coming soon)</span>
+                        <span>Pitch map (estimated)</span>
                     </div>
                     <div class="analysis-row accent-amber">
-                        <span>Shot direction (estimated, coming soon)</span>
+                        <span>Shot direction (estimated)</span>
                     </div>
                     <div class="analysis-row accent-coral">
                         <span>Ball speed (rough estimate, ±20%)</span>

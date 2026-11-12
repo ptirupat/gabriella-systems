@@ -96,6 +96,7 @@ body.nav-open{overflow:hidden}
 .metric__tag{font:600 var(--fs-micro)/1.2 var(--f-body);letter-spacing:.1em;text-transform:uppercase;color:var(--on-dark-muted)}
 .metric__name{font:600 var(--fs-h4)/1.3 var(--f-head);color:#fff}
 .soon{color:var(--planned);font:500 var(--fs-small)/1 var(--f-body)}
+.live{color:var(--live);font:500 var(--fs-small)/1 var(--f-body)}
 .soon--light{color:var(--navy-500)}
 
 .notice{display:flex;gap:var(--s-3);align-items:flex-start;max-width:960px;margin:var(--s-4) auto 0;padding:var(--s-4) var(--s-5);background:#fff8f3;border-left:3px solid var(--amber);border-radius:var(--r-sm);font-size:var(--fs-small);color:var(--navy-900)}
