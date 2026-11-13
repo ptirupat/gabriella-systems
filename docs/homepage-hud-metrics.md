@@ -123,7 +123,7 @@ These are product/ops blockers, not missing copy in this PR:
 
 When regenerating GIFs, burn the pairs from **PRODUCT.md**: batting **Bat speed at impact** + **Head stability**; bowling **Run-up speed only** until Release height is calibrated and gated. Fail loud is **per metric**. If a *locked batting* field is untrusted or null, burn **Can't measure** / **—** in that slot — do **not** burn Contact time as a substitute homepage *hero*. Do **not** blank pose-derived Run-up solely because overall gated is false from a ball fail (Slow Motion Run-up + `no_detection` is the example). Do **not** burn a public Run-up, Ball, Contact, Arm, or Front knee sample figure. Do **not** burn pipeline-peak 36–39 or peak ~90. Do **not** burn Release height as Can't measure / can't be determined / Measured when calibration supports it. Do **not** burn a public **1.09 m** release height. Do not burn early-vs-late Impact wording. Do not burn Ball speed, Ball speed change through contact, Arm angular speed, Front knee, or Contact time as homepage *hero* peaks. Do not burn Front stride.
 
-This site embeds Showcase at `https://gabriellasystems--cricket-demo-web.modal.run`. Do not cite Modal SHAs from this repo — re-verify in the ML/Modal tree. Demo #20 (`c03cdbb`) is that external tree.
+This site embeds Showcase at `https://gabriellasystems--coach-portal.modal.run`. Do not cite Modal SHAs from this repo — re-verify in the ML/Modal tree. Demo #20 (`c03cdbb`) is that external tree.
 
 ---
 
