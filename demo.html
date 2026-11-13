@@ -48,6 +48,20 @@
     </div>
   </section>
 
+  <section class="section" id="showcase-embed">
+    <div class="container">
+      <div class="demo-embed-wrapper">
+        <iframe
+            class="demo-embed-frame"
+            id="demo-frame"
+            src="https://gabriellasystems--coach-portal.modal.run/?embed=1"
+            title="Cricket Vision interactive batting demo"
+            allow="fullscreen">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
   <section class="section section--soft" id="showcase-gallery">
     <div class="container">
       <header class="intro">
@@ -200,5 +214,36 @@
 </footer>
 <script src="metric-status.js"></script>
 <script src="script.js"></script>
+<script>
+(function () {
+    const frame = document.getElementById('demo-frame');
+    if (!frame) return;
+    const ALLOWED_ORIGIN = 'https://gabriellasystems--coach-portal.modal.run';
+
+    function fitFrame() {
+        try {
+            const h = frame.contentDocument?.documentElement?.scrollHeight
+                   || frame.contentWindow?.document?.body?.scrollHeight;
+            if (h && h > 300) {
+                frame.style.height = h + 'px';
+            }
+        } catch (e) { /* cross-origin — ignore */ }
+    }
+
+    window.addEventListener('message', function (e) {
+        if (e.origin !== ALLOWED_ORIGIN) return;
+        if (typeof e.data === 'object' && e.data && e.data.type === 'resize' && e.data.height) {
+            frame.style.height = Math.max(300, e.data.height) + 'px';
+        }
+        if (typeof e.data === 'number' && e.data > 300) {
+            frame.style.height = e.data + 'px';
+        }
+    });
+
+    frame.addEventListener('load', () => {
+        [300, 800, 2000].forEach(ms => setTimeout(fitFrame, ms));
+    });
+}());
+</script>
 </body>
 </html>
