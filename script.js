@@ -8,8 +8,6 @@ function applyMetricStatus() {
     document.querySelectorAll('[data-metric-switch]').forEach((el) => {
         const key = el.getAttribute('data-metric-switch');
         const state = STATUS[key];
-        if (!valid.has(state)) return;
-        el.textContent = LABELS[state];
         if (el.classList.contains('status-pill')) {
             el.classList.remove(
                 'status-pill--available',
@@ -17,7 +15,18 @@ function applyMetricStatus() {
                 'status-pill--live',
                 'status-pill--soon'
             );
-            el.classList.add(PILL[state]);
+        }
+        // Show a badge only when a switch is in development. Never write "Available now".
+        if (state === 'developing') {
+            el.textContent = LABELS.developing;
+            el.hidden = false;
+            el.removeAttribute('hidden');
+            if (el.classList.contains('status-pill')) {
+                el.classList.add(PILL.developing);
+            }
+        } else {
+            el.textContent = '';
+            el.hidden = true;
         }
     });
 
@@ -28,7 +37,7 @@ function applyMetricStatus() {
     const WORDS = { 3: 'Three', 4: 'Four', 5: 'Five', 6: 'Six' };
     const word = WORDS[availableCount] || String(availableCount);
     document.querySelectorAll('[data-hero-count]').forEach((el) => {
-        el.textContent = word + ' things Gabriella estimates from your nets video';
+        el.textContent = word + ' things a coach can see from one nets clip';
     });
 
     document.querySelectorAll('[data-metric-switch-item]').forEach((el) => {
