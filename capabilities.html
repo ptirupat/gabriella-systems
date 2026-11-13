@@ -217,7 +217,6 @@
               <th scope="col">Front-on (behind the bowler, facing the batter)</th>
               <th scope="col">Side-on</th>
               <th scope="col">Bowler’s end</th>
-              <th scope="col">Works when</th>
             </tr>
           </thead>
           <tbody>
@@ -226,75 +225,60 @@
               <td data-label="Front-on (behind the bowler, facing the batter)">Yes</td>
               <td data-label="Side-on">Yes, if the ball stays in view</td>
               <td data-label="Bowler’s end">Yes, if the ball stays in view</td>
-              <td data-label="Works when">The ball is visible for enough of the delivery.</td>
             </tr>
             <tr>
               <th scope="row">Pitch map</th>
               <td data-label="Front-on (behind the bowler, facing the batter)">Yes — this is the view that works</td>
               <td data-label="Side-on">No</td>
               <td data-label="Bowler’s end">No</td>
-              <td data-label="Works when">Front-on batting, a bounce is seen, and the pitch edges are visible. Otherwise the card says it was not estimated.</td>
             </tr>
             <tr>
               <th scope="row">Shot direction</th>
               <td data-label="Front-on (behind the bowler, facing the batter)">Yes — this is the view that works</td>
               <td data-label="Side-on">No</td>
               <td data-label="Bowler’s end">No</td>
-              <td data-label="Works when">Front-on batting, contact is clear, and the ball is still visible after contact.</td>
             </tr>
             <tr>
               <th scope="row">Body pose</th>
               <td data-label="Front-on (behind the bowler, facing the batter)">Yes</td>
               <td data-label="Side-on">Yes</td>
               <td data-label="Bowler’s end">Yes, when pose stays on the intended player</td>
-              <td data-label="Works when">The player is in frame.</td>
             </tr>
             <tr>
               <th scope="row">Front knee angle</th>
               <td data-label="Front-on (behind the bowler, facing the batter)">Possible when the front leg is visible at landing</td>
               <td data-label="Side-on">Possible when the front leg is visible at plant</td>
               <td data-label="Bowler’s end">Yes</td>
-              <td data-label="Works when">A bowling delivery with the front leg visible at landing. Shown as an estimate.</td>
             </tr>
             <tr>
               <th scope="row">Ball speed</th>
               <td data-label="Front-on (behind the bowler, facing the batter)">Yes</td>
               <td data-label="Side-on">Possible with a trusted scale</td>
               <td data-label="Bowler’s end">When the ball track is trusted</td>
-              <td data-label="Works when">The ball is visible through enough of the flight. This is a rough estimate with a ±20% band, not a radar reading.</td>
             </tr>
             </tbody>
         </table>
       </div>
 
       <div class="in-dev-list" id="in-development" style="max-width:720px;margin:32px auto 0">
-        <h3 style="margin:0 0 12px;color:var(--navy-900)">In development</h3>
-        <p class="lead lead--light" style="margin:0 0 16px">These results are not available yet.</p>
+        <h3 style="margin:0 0 12px;color:var(--navy-900)">Coming next</h3>
+        <p class="lead lead--light" style="margin:0 0 16px">We're building these with our pilot academies:</p>
         <ul class="card__list">
-            <li>Bat-ball contact</li>
-            <li>Session comparison</li>
-            <li>Bounce line</li>
-            <li>Length label</li>
-            <li>Session heatmap and wagon wheel</li>
-            <li>Deviation off the pitch</li>
-            <li>Release-to-contact time</li>
-            <li>Head stability</li>
-            <li>Head over base</li>
-            <li>Front foot or back foot</li>
-            <li>Batter stride and stance width</li>
-            <li>Front knee bend at contact</li>
-            <li>Backlift height</li>
-            <li>Contact point relative to body</li>
-            <li>Bat speed</li>
-            <li>Knee brace through release</li>
-            <li>Delivery stride length</li>
-            <li>Trunk side bend at release</li>
-            <li>Trunk forward lean at release</li>
-            <li>Arm slot at release</li>
-            <li>Relative release height</li>
-            <li>Front arm height</li>
-            <li>Run-up rhythm</li>
+          <li>Line and length labels, with a session heatmap and wagon wheel</li>
+          <li>Head stability for batters</li>
+          <li>Front foot or back foot, with stride length</li>
+          <li>Knee brace through release for bowlers</li>
         </ul>
+        <p class="lead lead--light" style="margin:16px 0 0">Pilot academies help decide what we build next.</p>
+        <details class="roadmap-details">
+          <summary>Full roadmap</summary>
+          <ul class="card__list">
+            <li>Ball: deviation off the pitch, release-to-contact time</li>
+            <li>Batter: head over base, front knee bend at contact, backlift height, contact point, bat-ball contact, bat speed</li>
+            <li>Bowler: delivery stride, trunk side bend, trunk forward lean, arm slot, relative release height, front arm height, run-up rhythm</li>
+            <li>Session: session-to-session comparison</li>
+          </ul>
+        </details>
       </div>
     </div>
   </section>
@@ -333,7 +317,7 @@
       <a href="capabilities.html">Capabilities</a><a href="academies.html">For Academies</a><a href="demo.html">Showcase</a><a href="https://gabriellasystems--coach-portal.modal.run/login">Coach login</a>
     </nav>
     <nav aria-label="Company"><h4>Company</h4>
-      <a href="about.html">About</a><a href="sports.html">Sports</a><a href="connect.html">Connect</a>
+      <a href="about.html">About</a><a href="connect.html">Connect</a>
     </nav>
     <nav aria-label="Legal"><h4>Legal</h4>
       <a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="youth-data.html">Youth data</a><a href="data-retention.html">Data retention</a>
