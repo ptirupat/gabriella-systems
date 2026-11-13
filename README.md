@@ -2,7 +2,7 @@
 
 Static marketing site for Gabriella Systems: computer vision for cricket batting and bowling analysis, aimed at academies, coaches, and performance programs.
 
-Live analysis is not implemented in this repo. The Showcase and admin UIs are Modal embeds (`gabriellasystems--cricket-demo-web.modal.run`). Since 2026-11-10 the Showcase embed on `demo.html` is hidden behind a short note while the live demo is updated; the original block is kept in an HTML comment there.
+Live analysis is not implemented in this repo. The Showcase and admin UIs are Modal embeds (`gabriellasystems--coach-portal.modal.run`). Since 2026-11-10 the Showcase embed on `demo.html` is hidden behind a short note while the live demo is updated; the original block is kept in an HTML comment there.
 
 ## Current positioning
 

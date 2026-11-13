@@ -333,4 +333,4 @@ Not the focus of this file, but useful background:
 
 ## External (not in this repo)
 
-The Showcase embed and contact API point at Modal (`gabriellasystems--cricket-demo-web.modal.run`). Quality-gate fields such as `impact_offset_ms` live in the ML/Modal repo. Product notes mention Modal PR #1 merged to `master` as `8fcab5d`; **this website repo does not reference that SHA** — treat it as external and re-verify in the Modal repo.
+The Showcase embed and contact API point at Modal (`gabriellasystems--coach-portal.modal.run`). Quality-gate fields such as `impact_offset_ms` live in the ML/Modal repo. Product notes mention Modal PR #1 merged to `master` as `8fcab5d`; **this website repo does not reference that SHA** — treat it as external and re-verify in the Modal repo.

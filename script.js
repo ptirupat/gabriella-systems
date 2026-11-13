@@ -545,7 +545,7 @@ function handleFormSubmit(form) {
         }
 
         try {
-            const r = await fetch('https://gabriellasystems--cricket-demo-web.modal.run/api/contact', {
+            const r = await fetch('https://gabriellasystems--coach-portal.modal.run/api/contact', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data),
