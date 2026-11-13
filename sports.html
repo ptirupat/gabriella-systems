@@ -30,6 +30,7 @@
       <a href="academies.html">For Academies</a>
       <a href="demo.html">Showcase</a>
       <a href="about.html">About</a>
+      <a class="nav__login" href="https://gabriellasystems--cricket-demo-web.modal.run/login">Coach login</a>
       <a class="btn btn--primary btn--sm nav__cta" href="connect.html?purpose=Pilot+Interest#interest-form">Request a Pilot</a>
     </nav>
     <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
@@ -68,12 +69,12 @@
                             </tr>
                         </thead>
                         <tbody>
-                    <tr><td>Ball tracking</td><td><span class="status-pill status-pill--available" data-metric-switch="ball-tracking">Available now</span></td><td>When the ball is visible</td></tr>
-                    <tr><td>Pitch map</td><td><span class="status-pill status-pill--available" data-metric-switch="pitch-map">Available now</span></td><td>Estimated. The panel shows Not estimated if bounce is not seen.</td></tr>
-                    <tr><td>Shot direction</td><td><span class="status-pill status-pill--available" data-metric-switch="shot-direction">Available now</span></td><td>Estimated. Not drawn if the shot is lost after contact.</td></tr>
-                    <tr><td>Body pose</td><td><span class="status-pill status-pill--available" data-metric-switch="body-pose">Available now</span></td><td>When the player is visible</td></tr>
-                    <tr><td>Front knee angle</td><td><span class="status-pill status-pill--available">Available now</span></td><td>Estimate at front-foot contact, labelled as an estimate</td></tr>
-                    <tr><td>Ball speed</td><td><span class="status-pill status-pill--available">Available now</span></td><td>Rough estimate with a ±20% band, not a radar reading</td></tr>
+                    <tr><td>Ball tracking</td><td><span class="status-pill" hidden data-metric-switch="ball-tracking"></span></td><td>When the ball is visible</td></tr>
+                    <tr><td>Pitch map</td><td><span class="status-pill" hidden data-metric-switch="pitch-map"></span></td><td>Estimated. The panel shows Not estimated if bounce is not seen.</td></tr>
+                    <tr><td>Shot direction</td><td><span class="status-pill" hidden data-metric-switch="shot-direction"></span></td><td>Estimated. Not drawn if the shot is lost after contact.</td></tr>
+                    <tr><td>Body pose</td><td><span class="status-pill" hidden data-metric-switch="body-pose"></span></td><td>When the player is visible</td></tr>
+                    <tr><td>Front knee angle</td><td><span class="status-pill" hidden></span></td><td>Estimate at front-foot contact, labelled as an estimate</td></tr>
+                    <tr><td>Ball speed</td><td><span class="status-pill" hidden></span></td><td>Rough estimate with a ±20% band, not a radar reading</td></tr>
                     <tr><td>Bat-ball contact</td><td><span class="status-pill status-pill--developing">In development</span></td><td>In development until a clean public clip is ready</td></tr>
                     <tr><td>Session comparison</td><td><span class="status-pill status-pill--developing">In development</span></td><td>In development until a real, same-position comparison exists</td></tr>
                 </tbody>

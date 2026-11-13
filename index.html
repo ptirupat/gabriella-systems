@@ -32,6 +32,7 @@
       <a href="academies.html">For Academies</a>
       <a href="demo.html">Showcase</a>
       <a href="about.html">About</a>
+      <a class="nav__login" href="https://gabriellasystems--cricket-demo-web.modal.run/login">Coach login</a>
       <a class="btn btn--primary btn--sm nav__cta" href="connect.html?purpose=Pilot+Interest#interest-form">Request a Pilot</a>
     </nav>
     <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
@@ -41,16 +42,8 @@
   <section class="hero">
     <div class="container">
       <p class="eyebrow eyebrow--dark">Computer vision for cricket nets</p>
-      <h1 class="display" data-hero-count>Six things Gabriella estimates from your nets video</h1>
+      <h1 class="display" data-hero-count>Six things a coach can see from one nets clip</h1>
       <p class="lead">From ordinary nets video, Gabriella shows ball tracking, pitch map, shot direction, body pose, front knee angle, and a rough ball speed estimate.</p>
-      <ul class="hero-cap-list" data-hero-list>
-            <li data-metric-switch-item="ball-tracking">Ball tracking</li>
-            <li data-metric-switch-item="pitch-map">Pitch map</li>
-            <li data-metric-switch-item="shot-direction">Shot direction</li>
-            <li data-metric-switch-item="body-pose">Body pose</li>
-            <li>Front knee angle</li>
-            <li>Ball speed</li>
-      </ul>
       <div class="actions" style="margin-top:32px">
         <a class="btn btn--primary" href="connect.html?purpose=Pilot+Interest#interest-form">Request a Pilot</a>
         <a class="btn btn--secondary-dark" href="capabilities.html">See capabilities</a>
@@ -61,22 +54,22 @@
   <section class="section" id="capabilities">
     <div class="container">
       <header class="intro">
-        <p class="eyebrow">Available now</p>
+        <p class="eyebrow">From one nets clip</p>
         <h2>What Gabriella estimates today</h2>
         <p class="lead lead--light">Six results from ordinary nets video. Each card links to a longer description, how it works, and when it can be shown.</p>
       </header>
       <div class="cap-grid" data-home-cap-grid>
         <article class="cap-card" data-cap-card data-metric-switch-card="ball-tracking">
             <div class="cap-card__media" style="--ar:960/540">
-              <video autoplay muted loop playsinline poster="assets/ball_tracking.jpg" width="960" height="540" aria-label="Batting example showing a ball track, body pose, estimated pitch map, estimated shot direction, and a rough ball speed estimate." data-gif="assets/ball_tracking.gif">
-                <source src="assets/ball_tracking.mp4" type="video/mp4">
+              <video autoplay muted loop playsinline poster="assets/ball_tracking_card.jpg" width="960" height="540" aria-label="Batting example showing a ball track, body pose, estimated pitch map, estimated shot direction, and a rough ball speed estimate." data-gif="assets/ball_tracking_card.gif">
+                <source src="assets/ball_tracking_card.mp4" type="video/mp4">
               </video>
-              <noscript><img src="assets/ball_tracking.gif" width="960" height="540" alt="Batting example showing a ball track, body pose, estimated pitch map, estimated shot direction, and a rough ball speed estimate."></noscript>
+              <noscript><img src="assets/ball_tracking_card.gif" width="960" height="540" alt="Batting example showing a ball track, body pose, estimated pitch map, estimated shot direction, and a rough ball speed estimate."></noscript>
             </div>
           <div class="cap-card__body">
             <div class="cap-card__top">
               <h3>Ball tracking</h3>
-              <span class="status-pill status-pill--available" data-metric-switch="ball-tracking">Available now</span>
+              <span class="status-pill" hidden data-metric-switch="ball-tracking"></span>
             </div>
             <p>See where the ball travelled on a batting or bowling delivery.</p>
             <ul class="cap-tags"><li>Batting</li><li>Bowling</li></ul>
@@ -85,15 +78,15 @@
         </article>
         <article class="cap-card" data-cap-card data-metric-switch-card="pitch-map">
             <div class="cap-card__media" style="--ar:960/540">
-              <video autoplay muted loop playsinline poster="assets/pitch_map.jpg" width="960" height="540" aria-label="Batting example showing an estimated pitch map, a ball track, body pose, estimated shot direction, and a rough ball speed estimate." data-gif="assets/pitch_map.gif">
-                <source src="assets/pitch_map.mp4" type="video/mp4">
+              <video autoplay muted loop playsinline poster="assets/pitch_map_card.jpg" width="960" height="540" aria-label="Batting example showing an estimated pitch map." data-gif="assets/pitch_map_card.gif">
+                <source src="assets/pitch_map_card.mp4" type="video/mp4">
               </video>
-              <noscript><img src="assets/pitch_map.gif" width="960" height="540" alt="Batting example showing an estimated pitch map, a ball track, body pose, estimated shot direction, and a rough ball speed estimate."></noscript>
+              <noscript><img src="assets/pitch_map_card.gif" width="960" height="540" alt="Batting example showing an estimated pitch map."></noscript>
             </div>
           <div class="cap-card__body">
             <div class="cap-card__top">
               <h3>Pitch map</h3>
-              <span class="status-pill status-pill--available" data-metric-switch="pitch-map">Available now</span>
+              <span class="status-pill" hidden data-metric-switch="pitch-map"></span>
             </div>
             <p>An estimated map of where the ball bounced. If the bounce is not clear, the card says it was not estimated.</p>
             <ul class="cap-tags"><li>Batting</li></ul>
@@ -102,15 +95,15 @@
         </article>
         <article class="cap-card" data-cap-card data-metric-switch-card="shot-direction">
             <div class="cap-card__media" style="--ar:960/540">
-              <video autoplay muted loop playsinline poster="assets/ball_tracking.jpg" width="960" height="540" aria-label="Batting example showing a ball track, body pose, estimated pitch map, estimated shot direction, and a rough ball speed estimate." data-gif="assets/ball_tracking.gif">
-                <source src="assets/ball_tracking.mp4" type="video/mp4">
+              <video autoplay muted loop playsinline poster="assets/shot_direction_card.jpg" width="960" height="540" aria-label="Batting example showing an estimated shot direction." data-gif="assets/shot_direction_card.gif">
+                <source src="assets/shot_direction_card.mp4" type="video/mp4">
               </video>
-              <noscript><img src="assets/ball_tracking.gif" width="960" height="540" alt="Batting example showing a ball track, body pose, estimated pitch map, estimated shot direction, and a rough ball speed estimate."></noscript>
+              <noscript><img src="assets/shot_direction_card.gif" width="960" height="540" alt="Batting example showing an estimated shot direction."></noscript>
             </div>
           <div class="cap-card__body">
             <div class="cap-card__top">
               <h3>Shot direction</h3>
-              <span class="status-pill status-pill--available" data-metric-switch="shot-direction">Available now</span>
+              <span class="status-pill" hidden data-metric-switch="shot-direction"></span>
             </div>
             <p>An estimated direction for the shot — off, straight, or leg. Not drawn when contact is unclear or the ball is lost after contact.</p>
             <ul class="cap-tags"><li>Batting</li></ul>
@@ -119,15 +112,15 @@
         </article>
         <article class="cap-card" data-cap-card data-metric-switch-card="body-pose">
             <div class="cap-card__media cap-card__media--fit" style="--ar:640/452">
-              <video autoplay muted loop playsinline poster="assets/body_pose.jpg" width="640" height="452" aria-label="Batting example showing body pose on the batter." data-gif="assets/body_pose.gif">
-                <source src="assets/body_pose.mp4" type="video/mp4">
+              <video autoplay muted loop playsinline poster="assets/body_pose_card.jpg" width="640" height="452" aria-label="Batting example showing body pose on the batter." data-gif="assets/body_pose_card.gif">
+                <source src="assets/body_pose_card.mp4" type="video/mp4">
               </video>
-              <noscript><img src="assets/body_pose.gif" width="640" height="452" alt="Batting example showing body pose on the batter."></noscript>
+              <noscript><img src="assets/body_pose_card.gif" width="640" height="452" alt="Batting example showing body pose on the batter."></noscript>
             </div>
           <div class="cap-card__body">
             <div class="cap-card__top">
               <h3>Body pose</h3>
-              <span class="status-pill status-pill--available" data-metric-switch="body-pose">Available now</span>
+              <span class="status-pill" hidden data-metric-switch="body-pose"></span>
             </div>
             <p>A pose overlay on the intended player, for batting and bowling.</p>
             <ul class="cap-tags"><li>Batting</li><li>Bowling</li></ul>
@@ -136,15 +129,15 @@
         </article>
         <article class="cap-card" data-cap-card>
             <div class="cap-card__media cap-card__media--fit" style="--ar:540/348">
-              <video autoplay muted loop playsinline poster="assets/front_knee_angle.jpg" width="540" height="348" aria-label="Bowling example showing an estimated front knee angle." data-gif="assets/front_knee_angle.gif">
-                <source src="assets/front_knee_angle.mp4" type="video/mp4">
+              <video autoplay muted loop playsinline poster="assets/front_knee_angle_card.jpg" width="540" height="348" aria-label="Bowling example showing an estimated front knee angle." data-gif="assets/front_knee_angle_card.gif">
+                <source src="assets/front_knee_angle_card.mp4" type="video/mp4">
               </video>
-              <noscript><img src="assets/front_knee_angle.gif" width="540" height="348" alt="Bowling example showing an estimated front knee angle."></noscript>
+              <noscript><img src="assets/front_knee_angle_card.gif" width="540" height="348" alt="Bowling example showing an estimated front knee angle."></noscript>
             </div>
           <div class="cap-card__body">
             <div class="cap-card__top">
               <h3>Front knee angle</h3>
-              <span class="status-pill status-pill--available">Available now</span>
+              <span class="status-pill" hidden></span>
             </div>
             <p>An estimated angle of the bowler&#x27;s front knee at landing, labelled as an estimate.</p>
             <ul class="cap-tags"><li>Bowling</li></ul>
@@ -153,15 +146,15 @@
         </article>
         <article class="cap-card" data-cap-card>
             <div class="cap-card__media" style="--ar:960/540">
-              <video autoplay muted loop playsinline poster="assets/pitch_map.jpg" width="960" height="540" aria-label="Batting example showing an estimated pitch map, a ball track, body pose, estimated shot direction, and a rough ball speed estimate." data-gif="assets/pitch_map.gif">
-                <source src="assets/pitch_map.mp4" type="video/mp4">
+              <video autoplay muted loop playsinline poster="assets/ball_speed_card.jpg" width="960" height="540" aria-label="Batting example showing a rough ball speed estimate." data-gif="assets/ball_speed_card.gif">
+                <source src="assets/ball_speed_card.mp4" type="video/mp4">
               </video>
-              <noscript><img src="assets/pitch_map.gif" width="960" height="540" alt="Batting example showing an estimated pitch map, a ball track, body pose, estimated shot direction, and a rough ball speed estimate."></noscript>
+              <noscript><img src="assets/ball_speed_card.gif" width="960" height="540" alt="Batting example showing a rough ball speed estimate."></noscript>
             </div>
           <div class="cap-card__body">
             <div class="cap-card__top">
               <h3>Ball speed</h3>
-              <span class="status-pill status-pill--available">Available now</span>
+              <span class="status-pill" hidden></span>
             </div>
             <p>A rough estimate of ball speed with a plus or minus 20 percent band, not a radar reading.</p>
             <ul class="cap-tags"><li>Batting</li><li>Bowling</li></ul>
@@ -185,11 +178,11 @@
         </article>
         <article class="how-step">
           <h3>Upload</h3>
-          <p>Send the clip to Gabriella.</p>
+          <p>Upload clips through the Gabriella coach portal.</p>
         </article>
         <article class="how-step">
           <h3>Review</h3>
-          <p>See the results for that delivery, or a clear note when something could not be estimated.</p>
+          <p>Results appear in the portal for each delivery, with a clear note when something couldn't be estimated.</p>
         </article>
       </div>
     </div>
@@ -197,7 +190,7 @@
 
   <section class="section" id="accuracy-line">
     <div class="container">
-      <p class="accuracy-line">Gabriella estimates results from ordinary video. When we cannot trust a result, we say so and leave it blank. <a href="capabilities.html#accuracy">Read how we talk about accuracy</a>.</p>
+      <p class="accuracy-line">Gabriella estimates results from ordinary video. When we cannot trust a result, we say so and leave it blank. Estimated from ordinary video, not exact measurements. <a href="capabilities.html#accuracy">Read how we talk about accuracy</a>.</p>
     </div>
   </section>
 
