@@ -372,3 +372,7 @@ sup.fn-mark a{color:inherit;text-decoration:none}
 
 /* Lead on a light section. Global .lead is the on-dark muted color; do not change it. */
 .lead--on-light{color:var(--navy-900)}
+
+.roadmap-details{margin-top:20px}
+.roadmap-details summary{cursor:pointer;font:600 var(--fs-small)/1.4 var(--f-body);color:var(--navy-900)}
+.roadmap-details[open] summary{margin-bottom:12px}

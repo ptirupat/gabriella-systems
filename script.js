@@ -1,7 +1,7 @@
 
 function applyMetricStatus() {
     const STATUS = window.GABRIELLA_METRIC_STATUS || {};
-    const LABELS = { available: 'Available now', developing: 'In development' };
+    const LABELS = { developing: 'In development' };
     const PILL = { available: 'status-pill--available', developing: 'status-pill--developing' };
     const valid = new Set(['available', 'developing']);
 
@@ -16,7 +16,7 @@ function applyMetricStatus() {
                 'status-pill--soon'
             );
         }
-        // Show a badge only when a switch is in development. Never write "Available now".
+        // Show a badge only when a switch is in development.
         if (state === 'developing') {
             el.textContent = LABELS.developing;
             el.hidden = false;
@@ -28,16 +28,6 @@ function applyMetricStatus() {
             el.textContent = '';
             el.hidden = true;
         }
-    });
-
-    const switchIds = ['ball-tracking', 'pitch-map', 'shot-direction', 'body-pose'];
-    const alwaysAvailable = 2; // Front knee angle, Ball speed
-    const availableSwitchCount = switchIds.filter((k) => (STATUS[k] || 'available') === 'available').length;
-    const availableCount = alwaysAvailable + availableSwitchCount;
-    const WORDS = { 3: 'Three', 4: 'Four', 5: 'Five', 6: 'Six' };
-    const word = WORDS[availableCount] || String(availableCount);
-    document.querySelectorAll('[data-hero-count]').forEach((el) => {
-        el.textContent = word + ' things a coach can see from one nets clip';
     });
 
     document.querySelectorAll('[data-metric-switch-item]').forEach((el) => {
@@ -528,13 +518,23 @@ function handleFormSubmit(form) {
         btn.disabled = true;
         btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending…';
 
+        let message = form.querySelector('[name="message"]')?.value?.trim() || '';
+        const extras = [];
+        const country = form.querySelector('[name="country"]')?.value?.trim();
+        const players = form.querySelector('[name="players"]')?.value?.trim();
+        const camera  = form.querySelector('[name="camera_setup"]')?.value?.trim();
+        if (country) extras.push('Country: ' + country);
+        if (players) extras.push('Players: ' + players);
+        if (camera)  extras.push('Camera setup: ' + camera);
+        if (extras.length) message = message + (message ? '\n' : '') + extras.join('\n');
+
         const data = {
             name:         form.querySelector('[name="name"]')?.value?.trim(),
             email:        form.querySelector('[name="email"]')?.value?.trim(),
             organization: form.querySelector('[name="organization"]')?.value?.trim() || '',
             role:         form.querySelector('[name="role"]')?.value || '',
             interest:     form.querySelector('[name="interest"]')?.value || '',
-            message:      form.querySelector('[name="message"]')?.value?.trim(),
+            message,
         };
 
         if (!data.name || !data.email || !data.message) {

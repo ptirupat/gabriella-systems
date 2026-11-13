@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connect With Gabriella — Gabriella Systems</title>
-    <meta name="description" content="Register interest in a cricket academy pilot, research conversations, or advisory discussions with Gabriella Systems.">
+    <meta name="description" content="We're selecting academies for a structured pilot. Register interest in a cricket academy pilot, research conversations, or advisory discussions with Gabriella Systems.">
     <meta name="keywords" content="cricket academy pilot, cricket analytics, sports computer vision, responsible sports AI, athlete movement analysis">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Gabriella Systems">
     <meta property="og:title" content="Connect With Gabriella — Gabriella Systems">
-    <meta property="og:description" content="Register interest in a cricket academy pilot, research conversations, or advisory discussions with Gabriella Systems.">
+    <meta property="og:description" content="We're selecting academies for a structured pilot. Register interest in a cricket academy pilot, research conversations, or advisory discussions with Gabriella Systems.">
     <meta property="og:image" content="https://gabriellasystems.com/assets/cricket-vision-hero.png">
     <meta property="og:url" content="https://gabriellasystems.com/connect.html">
     <meta name="twitter:card" content="summary_large_image">
@@ -75,8 +75,7 @@
                 <h1 id="connect-h1">Let’s talk about cricket in your nets</h1>
                 <p>
                     Gabriella Systems welcomes conversations with cricket coaches, academies, and
-                    researchers. We are gathering expressions of interest for academy pilots and
-                    related conversations. Work starts with cricket; baseball and softball may follow.
+                    researchers. We're selecting academies for a structured pilot.
                 </p>
                 <div class="connect-hero-actions">
                     <a href="#pathways" class="cta-button">
@@ -98,10 +97,6 @@
                         Welcoming interest from coaching environments worldwide
                     </p>
                     <span class="sport-pill">🏏 Cricket</span>
-                    <p class="global-band-text">
-                        <i class="fas fa-map-marker-alt"></i>
-                        Diverse athlete populations &amp; recording conditions
-                    </p>
                 </div>
             </div>
         </div>
@@ -183,8 +178,7 @@
                         <h2 id="connect-form-h2">Get in touch</h2>
                         <p>
                             Select a pathway above or use the form directly.
-                            We read every message and respond to relevant enquiries
-                            within a few working days.
+                            We read every message and respond to relevant inquiries.
                         </p>
 
                         <div class="contact-item">
@@ -239,7 +233,7 @@
                             <i class="fas fa-circle-check" style="font-size:2rem; color:var(--teal); margin-bottom:0.8rem; display:block;" aria-hidden="true"></i>
                             <h3 style="font-size:1.05rem; color:var(--ink); margin-bottom:0.4rem;">Message received</h3>
                             <p style="font-size:0.88rem; color:var(--muted); max-width:360px; margin:0 auto 1rem; line-height:1.6;">
-                                Thank you — we will be in touch if your enquiry is a good fit.
+                                Thanks, we'll be in touch soon.
                             </p>
                             <a href="https://www.linkedin.com/company/gabriella-systems" target="_blank"
                                rel="noopener noreferrer"
@@ -263,7 +257,7 @@
                                     <option value="Pilot Interest">Pilot — evaluate Gabriella at my academy or club</option>
                                     <option value="Research Conversations">Research — institutional research conversation</option>
                                     <option value="Advisory Interest">Advisory — subject-matter expert introducing background</option>
-                                    <option value="General">General enquiry</option>
+                                    <option value="General">General inquiry</option>
                                 </select>
                             </div>
 
@@ -280,7 +274,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="cf-org">Organisation or affiliation</label>
+                                <label for="cf-org">Organization or affiliation</label>
                                 <input type="text" id="cf-org" name="organization" autocomplete="organization"
                                        placeholder="Academy, university, club or employer">
                             </div>
@@ -288,13 +282,26 @@
                             <div class="form-group">
                                 <label for="cf-sport">Sport</label>
                                 <select id="cf-sport" name="sport">
-                                    <option value="">Select sport (optional)</option>
-                                    <option value="Cricket">Cricket</option>
-                                    <option value="Baseball">Baseball</option>
-                                    <option value="Softball">Softball</option>
-                                    <option value="Multiple">Multiple sports</option>
-                                    <option value="Other">Other / Not sport-specific</option>
+                                    <option value="Cricket" selected>Cricket</option>
                                 </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cf-country">Country</label>
+                                <input type="text" id="cf-country" name="country" autocomplete="country-name"
+                                       placeholder="Optional">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cf-players">Number of players</label>
+                                <input type="text" id="cf-players" name="players" inputmode="numeric"
+                                       placeholder="Optional">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cf-camera">Camera setup</label>
+                                <input type="text" id="cf-camera" name="camera_setup"
+                                       placeholder="Optional — how you usually film">
                             </div>
 
                             <div class="form-group">
@@ -363,7 +370,7 @@
       <a href="capabilities.html">Capabilities</a><a href="academies.html">For Academies</a><a href="demo.html">Showcase</a><a href="https://gabriellasystems--coach-portal.modal.run/login">Coach login</a>
     </nav>
     <nav aria-label="Company"><h4>Company</h4>
-      <a href="about.html">About</a><a href="sports.html">Sports</a><a href="connect.html">Connect</a>
+      <a href="about.html">About</a><a href="connect.html">Connect</a>
     </nav>
     <nav aria-label="Legal"><h4>Legal</h4>
       <a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="youth-data.html">Youth data</a><a href="data-retention.html">Data retention</a>
@@ -446,7 +453,15 @@
             const email   = document.getElementById('cf-email').value.trim();
             const org     = document.getElementById('cf-org').value.trim();
             const sport   = document.getElementById('cf-sport').value;
-            const message = document.getElementById('cf-message').value.trim();
+            let message = document.getElementById('cf-message').value.trim();
+            const extras = [];
+            const country = document.getElementById('cf-country')?.value.trim();
+            const players = document.getElementById('cf-players')?.value.trim();
+            const camera  = document.getElementById('cf-camera')?.value.trim();
+            if (country) extras.push('Country: ' + country);
+            if (players) extras.push('Players: ' + players);
+            if (camera)  extras.push('Camera setup: ' + camera);
+            if (extras.length) message = message + (message ? '\n' : '') + extras.join('\n');
 
             if (!purpose) { showError('Please select a purpose.'); return; }
             if (!name || !email || !message) { showError('Please complete all required fields.'); return; }
