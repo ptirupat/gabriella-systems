@@ -49,14 +49,15 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+    <a class="skip" href="#main">Skip to content</a>
     <header class="nav">
   <div class="container nav__bar">
     <a class="nav__brand" href="index.html" aria-label="Gabriella Systems home">
       <img src="assets/logo-64.png" alt="" width="32" height="32"><span>Gabriella</span>
     </a>
     <nav class="nav__links" id="nav-links" aria-label="Main">
-      <a href="capabilities.html">Capabilities</a>
-      <a href="academies.html">For Academies</a>
+      <a href="capabilities.html">Product</a>
+      <a href="academies.html">Academies</a>
       <a href="demo.html">Showcase</a>
       <a href="about.html">About</a>
       <a class="nav__login" href="https://gabriellasystems--coach-portal.modal.run/login">Coach login</a>
@@ -119,9 +120,7 @@
                         <h3>Pilot Interest</h3>
                         <p class="pathway-audience">Coaches · Academies · Clubs · Athlete development programs</p>
                         <p>
-                            Interested in helping evaluate how video intelligence could support
-                            real coaching environments? Cricket academies, clubs, and coaches may
-                            register interest in a pilot.
+                            Coaches and academies can register interest in a pilot and tell us how they train.
                         </p>
                         <button class="pathway-btn" type="button" aria-controls="interest-form">
                             Request a Pilot <i class="fas fa-arrow-right"></i>
@@ -135,11 +134,7 @@
                         <h3>Research Conversations</h3>
                         <p class="pathway-audience">Universities · Laboratories · Established researchers</p>
                         <p>
-                            We welcome preliminary conversations about institutionally approved
-                            research related to athlete movement, sports video understanding,
-                            responsible AI and performance evaluation. Any collaboration would
-                            require separate institutional, legal, data-rights and authorship
-                            agreements.
+                            Universities and researchers can ask about athlete movement, sports video, and responsible AI.
                         </p>
                         <button class="pathway-btn" type="button" aria-controls="interest-form">
                             Start a research conversation <i class="fas fa-arrow-right"></i>
@@ -153,9 +148,7 @@
                         <h3>Advisory Interest</h3>
                         <p class="pathway-audience">Coaching · Biomechanics · Responsible AI · Sports technology · Commercialization</p>
                         <p>
-                            Subject-matter experts may introduce their background for consideration
-                            if a formally scoped advisory need arises. Submitting interest does not
-                            establish an advisory appointment or obligation for either party.
+                            Experts in coaching, biomechanics, responsible AI, or sports technology can introduce their background.
                         </p>
                         <button class="pathway-btn" type="button" aria-controls="interest-form">
                             Register Advisory Interest <i class="fas fa-arrow-right"></i>
@@ -200,7 +193,7 @@
                         <div class="contact-item">
                             <i class="fas fa-clock"></i>
                             <div>
-                                <strong>Response window</strong>
+                                <strong>Office hours</strong>
                                 <span>Monday to Friday, 9:00 AM – 6:00 PM ET</span>
                             </div>
                         </div>
@@ -216,12 +209,6 @@
                             </div>
                         </div>
 
-                        <p style="font-size:0.76rem; color:var(--muted); line-height:1.55; margin-top:1.5rem;
-                                   border-top:1px solid var(--line); padding-top:1rem;">
-                            Submission does not create an employment, contractor, advisory,
-                            research, partnership or compensation relationship. Any future
-                            engagement requires separate written agreements.
-                        </p>
                     </div>
 
                     <!-- Right: form ─────────────────────────────────────── -->
@@ -231,9 +218,9 @@
                              style="display:none; background:rgba(6,75,145,0.07); border:1px solid rgba(6,75,145,0.2);
                                     border-radius:12px; padding:28px 24px; text-align:center;">
                             <i class="fas fa-circle-check" style="font-size:2rem; color:var(--teal); margin-bottom:0.8rem; display:block;" aria-hidden="true"></i>
-                            <h3 style="font-size:1.05rem; color:var(--ink); margin-bottom:0.4rem;">Message received</h3>
+                            <h3 style="font-size:1.05rem; color:var(--ink); margin-bottom:0.4rem;">Thanks for writing</h3>
                             <p style="font-size:0.88rem; color:var(--muted); max-width:360px; margin:0 auto 1rem; line-height:1.6;">
-                                Thanks, we'll be in touch soon.
+                                We're glad you reached out. Someone at Gabriella will read your note and write back.
                             </p>
                             <a href="https://www.linkedin.com/company/gabriella-systems" target="_blank"
                                rel="noopener noreferrer"
@@ -280,26 +267,19 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="cf-sport">Sport</label>
-                                <select id="cf-sport" name="sport">
-                                    <option value="Cricket" selected>Cricket</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="cf-country">Country</label>
+                                <label for="cf-country">Which country are you in?</label>
                                 <input type="text" id="cf-country" name="country" autocomplete="country-name"
                                        placeholder="Optional">
                             </div>
 
                             <div class="form-group">
-                                <label for="cf-players">Number of players</label>
+                                <label for="cf-players">How many players do you coach?</label>
                                 <input type="text" id="cf-players" name="players" inputmode="numeric"
                                        placeholder="Optional">
                             </div>
 
                             <div class="form-group">
-                                <label for="cf-camera">Camera setup</label>
+                                <label for="cf-camera">What camera do you film with?</label>
                                 <input type="text" id="cf-camera" name="camera_setup"
                                        placeholder="Optional — how you usually film">
                             </div>
@@ -311,7 +291,7 @@
                             </div>
 
                             <p style="font-size:0.8rem; color:var(--muted); line-height:1.55; margin:0 0 1rem;">
-                                By sending this message, you agree to our <a href="privacy.html">Privacy policy</a>.
+                                By sending this message you agree to our <a href="privacy.html">Privacy policy</a>. Sending it does not create an employment, contractor, advisory, research, partnership, or compensation relationship.
                             </p>
 
                             <p id="connect-form-error" role="alert"
@@ -364,10 +344,10 @@
   <div class="container footer__grid">
     <div class="footer__brand">
       <a class="nav__brand nav__brand--dark" href="index.html"><img src="assets/logo-64.png" alt="" width="32" height="32"><span>Gabriella Systems</span></a>
-      <p>Computer vision for cricket performance — batting and bowling from ordinary video.</p>
+      <p>Computer vision for cricket performance — batting and bowling from ordinary video. Baseball and softball later.</p>
     </div>
     <nav aria-label="Product"><h4>Product</h4>
-      <a href="capabilities.html">Capabilities</a><a href="academies.html">For Academies</a><a href="demo.html">Showcase</a><a href="https://gabriellasystems--coach-portal.modal.run/login">Coach login</a>
+      <a href="capabilities.html">Product</a><a href="academies.html">Academies</a><a href="demo.html">Showcase</a><a href="https://gabriellasystems--coach-portal.modal.run/login">Coach login</a>
     </nav>
     <nav aria-label="Company"><h4>Company</h4>
       <a href="about.html">About</a><a href="connect.html">Connect</a>
@@ -379,8 +359,6 @@
   <div class="container footer__base">© 2026 Gabriella Systems. All rights reserved.</div>
 </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="metric-status.js"></script>
 <script src="script.js"></script>
     <script>
@@ -452,7 +430,8 @@
             const name    = document.getElementById('cf-name').value.trim();
             const email   = document.getElementById('cf-email').value.trim();
             const org     = document.getElementById('cf-org').value.trim();
-            const sport   = document.getElementById('cf-sport').value;
+            const sportEl = document.getElementById('cf-sport');
+            const sport   = sportEl ? sportEl.value : '';
             let message = document.getElementById('cf-message').value.trim();
             const extras = [];
             const country = document.getElementById('cf-country')?.value.trim();
