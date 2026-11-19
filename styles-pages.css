@@ -1065,3 +1065,24 @@
             line-height: 1.7;
         }
 
+/* Contact list: icon beside the label and value. Wrapped lines stay in the text column. */
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+}
+.contact-item > i {
+    flex: 0 0 1.15rem;
+    width: 1.15rem;
+    text-align: center;
+    line-height: 1;
+}
+.contact-item > div {
+    min-width: 0;
+}
+.contact-item strong,
+.contact-item span,
+.contact-item a {
+    display: inline;
+}
+

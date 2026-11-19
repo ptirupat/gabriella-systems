@@ -2,7 +2,7 @@
 
 Static marketing site for Gabriella Systems: computer vision for cricket batting and bowling analysis, aimed at academies, coaches, and performance programs.
 
-Live analysis is not implemented in this repo. The Showcase and admin UIs are Modal embeds (`gabriellasystems--coach-portal.modal.run`). Since 2026-11-10 the Showcase embed on `demo.html` is hidden behind a short note while the live demo is updated; the original block is kept in an HTML comment there.
+Live analysis is not implemented in this repo. The Showcase and admin UIs are Modal embeds (`gabriellasystems--coach-portal.modal.run`). The Showcase page keeps the coach-portal iframe.
 
 ## Current positioning
 
@@ -32,7 +32,7 @@ Product should review these for accuracy:
 - `services.html` — Platform (software-first pipeline; hardware on the roadmap).
 - `batting.html` / `bowling.html` — Mode-specific analysis pages.
 - `academies.html` — Academy / pilot positioning.
-- `demo.html` — Showcase page: live Modal embed is hidden while it is updated; a gallery of additional batting examples sits below the note.
+- `demo.html` — Showcase page: coach-portal iframe, with links to Product and Connect.
 - `about.html` — Mission, vision, leadership, and product roadmap.
 - `robots.txt` / `sitemap.xml` — crawl hints for search and generative engines.
 - `connect.html` — Connect: pilot / inquiry form.
