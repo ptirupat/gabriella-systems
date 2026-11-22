@@ -3,9 +3,8 @@
  * and Body pose.
  *
  * Flip ONE value in GABRIELLA_METRIC_STATUS. On page load, every
- * [data-metric-switch] label on every page updates to match, the Home
- * hero count and list follow, and a flipped card is removed from the
- * Home capability grid.
+ * [data-metric-switch] label on every page updates to match, and a
+ * flipped card is removed from the Home capability grid.
  *
  * Allowed values:
  *   "available"   → no badge (never shown)
