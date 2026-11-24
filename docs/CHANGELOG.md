@@ -8,7 +8,7 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 
 ## 2026-11-24
 
-### Showcase clips are match and practice video (open draft PR)
+### Showcase clips are match and practice video
 
 - The Showcase heading on `demo.html` is now “Sample clips from real match and practice video.” It was “Sample clips from ordinary nets video.”
 - One line on the Showcase hero: “The analysis works whether the camera is fixed or on the move.”
