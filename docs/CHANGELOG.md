@@ -8,6 +8,10 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 
 ## 2026-11-24
 
+### Home page lead
+
+- The home page lead no longer includes the sentence “Dedicated hardware comes later.” The lead still says the software works with the camera you have. The home page meta, Open Graph, and Twitter descriptions did not include that sentence, so they are unchanged. Other pages are unchanged.
+
 ### Connect purpose choices
 
 - The Connect purpose dropdown keeps two choices: **Pilot (evaluate Gabriella at my academy or club)** and **General inquiry**. Research and Advisory are removed. The hidden Research and Advisory pathway cards, and the script map that preselected those purposes, are removed. No Research-only or Advisory-only fields, validation, or thank-you copy were on the form.
