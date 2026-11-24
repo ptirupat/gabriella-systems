@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Product — Gabriella Systems</title>
-    <meta name="description" content="What Gabriella estimates from one delivery: ball tracking, pitch map, shot direction, body pose, front knee angle, and a rough ball speed estimate.">
+    <meta name="description" content="Batting and bowling analysis from your nets video, filmed from more than one viewpoint.">
     <link rel="canonical" href="https://gabriellasystems.com/capabilities.html">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Gabriella Systems">
     <meta property="og:title" content="Product — Gabriella Systems">
-    <meta property="og:description" content="What Gabriella estimates from one delivery: ball tracking, pitch map, shot direction, body pose, front knee angle, and a rough ball speed estimate.">
+    <meta property="og:description" content="Batting and bowling analysis from your nets video, filmed from more than one viewpoint.">
     <meta property="og:image" content="https://gabriellasystems.com/assets/cricket-vision-hero.png">
     <meta property="og:url" content="https://gabriellasystems.com/capabilities.html">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:description" content="What Gabriella estimates from one delivery: ball tracking, pitch map, shot direction, body pose, front knee angle, and a rough ball speed estimate.">
+    <meta name="twitter:description" content="Batting and bowling analysis from your nets video, filmed from more than one viewpoint.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -42,13 +42,14 @@
   <section class="page-hero">
     <div class="container narrow">
       <p class="eyebrow eyebrow--dark">Product</p>
-      <h1>What Gabriella estimates from your nets video</h1>
-      <p>Six results from one delivery. Each section has a clip, a plain description, and when that result can be shown. The software works with the camera you have. Dedicated hardware comes later.</p>
+      <h1>Batting and bowling analysis from your nets video, filmed from more than one viewpoint.</h1>
+      <p>Film from more than one angle, and Gabriella reads each view for the analysis it can see. Each section has a clip, a plain description, and when that result can be shown. The software works with the camera you have.</p>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
+    <h2 class="cap-group" id="batting">Batting</h2>
     <article class="cap-section" id="ball-tracking">
       <div class="cap-section__grid">
         <figure class="clip">
@@ -68,9 +69,9 @@
             <span class="status-pill" hidden data-metric-switch="ball-tracking"></span>
           </div>
           <p class="lead lead--light" style="margin:16px 0">Where did the ball travel?</p>
-          <p style="margin:0 0 16px;color:var(--navy-900)">Gabriella draws the path of the ball through the delivery so coaches can see where it traveled.</p>
-          <ul class="cap-tags"><li>Batting</li><li>Bowling</li></ul>
-          <p class="works-when" style="margin-top:16px"><strong>Works when</strong> The ball is visible for enough of the delivery.</p>
+          <p style="margin:0 0 16px;color:var(--navy-900)">A 3D path of the ball through the delivery, with no numbers on the path.</p>
+          <ul class="cap-tags"><li>Front-on</li></ul>
+          <p class="works-when" style="margin-top:16px"><strong>Works when</strong> Front-on batting, and the ball is visible for enough of the delivery.</p>
         </div>
       </div>
     </article>
@@ -94,7 +95,7 @@
           </div>
           <p class="lead lead--light" style="margin:16px 0">Where did it pitch?</p>
           <p style="margin:0 0 16px;color:var(--navy-900)">An estimated map of where the ball bounced, shown as a rough length band. If the bounce is not clear, the card says it was not estimated.</p>
-          <ul class="cap-tags"><li>Batting</li></ul>
+          <ul class="cap-tags"><li>Front-on</li></ul>
           <p class="works-when" style="margin-top:16px"><strong>Works when</strong> Front-on batting, a bounce is seen, and the pitch edges are visible. Otherwise the card says it was not estimated.</p>
         </div>
       </div>
@@ -118,58 +119,9 @@
             <span class="status-pill" hidden data-metric-switch="shot-direction"></span>
           </div>
           <p class="lead lead--light" style="margin:16px 0">Which way did the shot go?</p>
-          <p style="margin:0 0 16px;color:var(--navy-900)">An estimated direction for the shot — off, straight, or leg. It is not drawn when contact is unclear or the ball is lost after contact.</p>
-          <ul class="cap-tags"><li>Batting</li></ul>
+          <p style="margin:0 0 16px;color:var(--navy-900)">An estimated direction for the shot — off, straight, or leg. Contact time is only a detail of that delivery, not a separate analysis. It is not drawn when contact is unclear or the ball is lost after contact.</p>
+          <ul class="cap-tags"><li>Front-on</li></ul>
           <p class="works-when" style="margin-top:16px"><strong>Works when</strong> Front-on batting, contact is clear, and the ball is still visible after contact.</p>
-        </div>
-      </div>
-    </article>
-    <article class="cap-section" id="body-pose">
-      <div class="cap-section__grid">
-        <figure class="clip">
-            <div class="clip__media clip__media--fit" style="--ar:640/452">
-              <video autoplay muted loop playsinline poster="assets/body_pose_card.jpg" width="640" height="452" aria-label="Batting example showing body pose on the batter." data-gif="assets/body_pose_card.gif">
-                <source src="assets/body_pose_card.mp4" type="video/mp4">
-              </video>
-              <noscript><img src="assets/body_pose_card.gif" width="640" height="452" alt="Batting example showing body pose on the batter."></noscript>
-            </div>
-          <figcaption class="clip__meta">
-            <span class="clip__label">Body pose</span>
-          </figcaption>
-        </figure>
-        <div>
-          <div class="cap-card__top">
-            <h2>Body pose</h2>
-            <span class="status-pill" hidden data-metric-switch="body-pose"></span>
-          </div>
-          <p class="lead lead--light" style="margin:16px 0">What was the body doing?</p>
-          <p style="margin:0 0 16px;color:var(--navy-900)">A pose overlay on the intended player, used for both batting and bowling.</p>
-          <ul class="cap-tags"><li>Batting</li><li>Bowling</li></ul>
-          <p class="works-when" style="margin-top:16px"><strong>Works when</strong> The player is in frame.</p>
-        </div>
-      </div>
-    </article>
-    <article class="cap-section" id="front-knee-angle">
-      <div class="cap-section__grid">
-        <figure class="clip">
-            <div class="clip__media clip__media--fit" style="--ar:540/348">
-              <video autoplay muted loop playsinline poster="assets/front_knee_angle_card.jpg" width="540" height="348" aria-label="Bowling example showing an estimated front knee angle." data-gif="assets/front_knee_angle_card.gif">
-                <source src="assets/front_knee_angle_card.mp4" type="video/mp4">
-              </video>
-              <noscript><img src="assets/front_knee_angle_card.gif" width="540" height="348" alt="Bowling example showing an estimated front knee angle."></noscript>
-            </div>
-          <figcaption class="clip__meta">
-            <span class="clip__label">Front knee angle</span>
-          </figcaption>
-        </figure>
-        <div>
-          <div class="cap-card__top">
-            <h2>Front knee angle</h2>
-            <span class="status-pill" hidden></span>
-          </div>
-          <p class="lead lead--light" style="margin:16px 0">An estimate of the bowler&#x27;s front knee angle at landing.</p>
-          <ul class="cap-tags"><li>Bowling</li></ul>
-          <p class="works-when" style="margin-top:16px"><strong>Works when</strong> A bowling delivery with the front leg visible at landing.</p>
         </div>
       </div>
     </article>
@@ -192,12 +144,102 @@
             <span class="status-pill" hidden></span>
           </div>
           <p class="lead lead--light" style="margin:16px 0">A rough estimate, not a radar reading.</p>
-          <p style="margin:0 0 16px;color:var(--navy-900)">Shown with the other results for that delivery. <a href="#accuracy">How accurate is it?</a></p>
-          <ul class="cap-tags"><li>Batting</li><li>Bowling</li></ul>
+          <p style="margin:0 0 16px;color:var(--navy-900)"><a href="#accuracy">How accurate is it?</a></p>
+          <ul class="cap-tags"><li>Front-on</li></ul>
           <p class="works-when" style="margin-top:16px"><strong>Works when</strong> The ball is visible through enough of the flight.</p>
         </div>
       </div>
     </article>
+    <article class="cap-section" id="bat-speed">
+      <div>
+        <div class="cap-card__top">
+          <h2>Bat speed</h2>
+        </div>
+        <p class="lead lead--light" style="margin:16px 0">An estimate from side-on video only.</p>
+        <p style="margin:0 0 16px;color:var(--navy-900)">An estimate of how fast the bat is moving at contact. Side-on is the view for this analysis.</p>
+        <ul class="cap-tags"><li>Side-on</li></ul>
+        <p class="works-when" style="margin-top:16px"><strong>Works when</strong> Side-on batting, with the bat visible at contact.</p>
+      </div>
+    </article>
+    <article class="cap-section" id="body-pose">
+      <div class="cap-section__grid">
+        <figure class="clip">
+            <div class="clip__media clip__media--fit" style="--ar:640/452">
+              <video autoplay muted loop playsinline poster="assets/body_pose_card.jpg" width="640" height="452" aria-label="Batting example showing body pose on the batter." data-gif="assets/body_pose_card.gif">
+                <source src="assets/body_pose_card.mp4" type="video/mp4">
+              </video>
+              <noscript><img src="assets/body_pose_card.gif" width="640" height="452" alt="Batting example showing body pose on the batter."></noscript>
+            </div>
+          <figcaption class="clip__meta">
+            <span class="clip__label">Body pose</span>
+          </figcaption>
+        </figure>
+        <div>
+          <div class="cap-card__top">
+            <h2>Body pose</h2>
+            <span class="status-pill" hidden data-metric-switch="body-pose"></span>
+          </div>
+          <p class="lead lead--light" style="margin:16px 0">What was the body doing?</p>
+          <p style="margin:0 0 16px;color:var(--navy-900)">A pose overlay on the batter.</p>
+          <ul class="cap-tags"><li>Front-on</li><li>Side-on</li></ul>
+          <p class="works-when" style="margin-top:16px"><strong>Works when</strong> The batter is in frame.</p>
+        </div>
+      </div>
+    </article>
+    <div class="in-dev-list" id="batting-in-development">
+      <h3>In development</h3>
+      <ul class="card__list">
+        <li>Side-on footwork</li>
+        <li>Bat lift</li>
+        <li>Distance to the pitch of the ball</li>
+        <li>Head stability</li>
+      </ul>
+    </div>
+    <h2 class="cap-group" id="bowling">Bowling</h2>
+    <article class="cap-section" id="front-knee-angle">
+      <div class="cap-section__grid">
+        <figure class="clip">
+            <div class="clip__media clip__media--fit" style="--ar:540/348">
+              <video autoplay muted loop playsinline poster="assets/front_knee_angle_card.jpg" width="540" height="348" aria-label="Bowling example showing an estimated front knee angle." data-gif="assets/front_knee_angle_card.gif">
+                <source src="assets/front_knee_angle_card.mp4" type="video/mp4">
+              </video>
+              <noscript><img src="assets/front_knee_angle_card.gif" width="540" height="348" alt="Bowling example showing an estimated front knee angle."></noscript>
+            </div>
+          <figcaption class="clip__meta">
+            <span class="clip__label">Front knee angle</span>
+          </figcaption>
+        </figure>
+        <div>
+          <div class="cap-card__top">
+            <h2>Front knee angle</h2>
+            <span class="status-pill" hidden></span>
+          </div>
+          <p class="lead lead--light" style="margin:16px 0">An estimate of the bowler&#x27;s front knee angle at landing.</p>
+          <ul class="cap-tags"><li>Side-on</li></ul>
+          <p class="works-when" style="margin-top:16px"><strong>Works when</strong> A bowling delivery with the front leg visible at landing.</p>
+        </div>
+      </div>
+    </article>
+    <article class="cap-section" id="run-up-speed">
+      <!-- Clip placeholder: thumbnail pending Praveen's review. Do not add a clip until that review. -->
+      <div>
+        <div class="cap-card__top">
+          <h2>Run-up speed</h2>
+        </div>
+        <p class="lead lead--light" style="margin:16px 0">An estimate of how fast the bowler is moving into the crease, from side-on video.</p>
+        <ul class="cap-tags"><li>Side-on</li></ul>
+        <p class="works-when" style="margin-top:16px"><strong>Works when</strong> Side-on bowling, with the approach in view.</p>
+      </div>
+    </article>
+    <div class="in-dev-list" id="bowling-in-development">
+      <h3>In development</h3>
+      <ul class="card__list">
+        <li>Arm speed</li>
+        <li>Release</li>
+      </ul>
+    </div>
+    <p class="more-analyses">More batting and bowling analyses are being added as we train on more footage.</p>
+
     </div>
   </section>
 
@@ -221,9 +263,9 @@
           <tbody>
             <tr>
               <th scope="row">Ball tracking</th>
-              <td data-label="Front-on (behind the bowler, facing the batter)">Yes</td>
-              <td data-label="Side-on">Yes, if the ball stays in view</td>
-              <td data-label="Bowler’s end">Yes, if the ball stays in view</td>
+              <td data-label="Front-on (behind the bowler, facing the batter)">Yes — this is the view that works</td>
+              <td data-label="Side-on">No</td>
+              <td data-label="Bowler’s end">No</td>
             </tr>
             <tr>
               <th scope="row">Pitch map</th>
@@ -241,7 +283,7 @@
               <th scope="row">Body pose</th>
               <td data-label="Front-on (behind the bowler, facing the batter)">Yes</td>
               <td data-label="Side-on">Yes</td>
-              <td data-label="Bowler’s end">Yes, when pose stays on the intended player</td>
+              <td data-label="Bowler’s end">Yes, when pose stays on the batter</td>
             </tr>
             <tr>
               <th scope="row">Front knee angle</th>
@@ -251,33 +293,24 @@
             </tr>
             <tr>
               <th scope="row">Ball speed</th>
-              <td data-label="Front-on (behind the bowler, facing the batter)">Yes</td>
-              <td data-label="Side-on">Possible with a trusted scale</td>
-              <td data-label="Bowler’s end">When the ball track is trusted</td>
+              <td data-label="Front-on (behind the bowler, facing the batter)">Yes — this is the view that works</td>
+              <td data-label="Side-on">No</td>
+              <td data-label="Bowler’s end">No</td>
+            </tr>
+            <tr>
+              <th scope="row">Bat speed</th>
+              <td data-label="Front-on (behind the bowler, facing the batter)">No</td>
+              <td data-label="Side-on">Yes — this is the view that works</td>
+              <td data-label="Bowler’s end">No</td>
+            </tr>
+            <tr>
+              <th scope="row">Run-up speed</th>
+              <td data-label="Front-on (behind the bowler, facing the batter)">No</td>
+              <td data-label="Side-on">Yes — this is the view that works</td>
+              <td data-label="Bowler’s end">No</td>
             </tr>
             </tbody>
         </table>
-      </div>
-
-      <div class="in-dev-list" id="in-development" style="max-width:720px;margin:32px auto 0">
-        <h3 style="margin:0 0 12px;color:var(--navy-900)">In development</h3>
-        <p class="lead lead--light" style="margin:0 0 16px">We're building these with our pilot academies:</p>
-        <ul class="card__list">
-          <li>Line and length labels, with a session heatmap and wagon wheel</li>
-          <li>Head stability for batters</li>
-          <li>Front foot or back foot, with stride length</li>
-          <li>Knee brace through release for bowlers</li>
-        </ul>
-        <p class="lead lead--light" style="margin:16px 0 0">Pilot academies help decide what we build next.</p>
-        <details class="roadmap-details">
-          <summary>Full roadmap</summary>
-          <ul class="card__list">
-            <li>Ball: deviation off the pitch, release-to-contact time</li>
-            <li>Batter: head over base, knee bend at contact, backlift height, contact point, bat-ball contact</li>
-            <li>Bowler: delivery stride, trunk side bend, trunk forward lean, arm slot, front arm height, run-up rhythm</li>
-            <li>Session: session-to-session comparison</li>
-          </ul>
-        </details>
       </div>
     </div>
   </section>

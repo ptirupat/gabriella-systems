@@ -11,6 +11,8 @@ Narrative of what the marketing site claims, what changed in September–October
 
 This is a static HTML site. Live analysis runs on Modal and is embedded from `demo.html` (Showcase) and `admin.html`.
 
+**2026-11-24:** Product page hero (`capabilities.html`) drops the sentence “Dedicated hardware comes later.” The hero still says the software works with the camera you have. About, Academies, and every other page keep their existing hardware wording.
+
 **2026-11-24:** Home page lead (`index.html`) drops the sentence “Dedicated hardware comes later.” The lead still says the software works with the camera you have. The home page meta, Open Graph, and Twitter descriptions did not include that sentence. Other pages are unchanged.
 
 **2026-11-24:** Connect purpose choices are Pilot (evaluate Gabriella at my academy or club) and General inquiry. Research and Advisory are off the dropdown. The hidden pathway cards and script map that preselected those purposes are removed. The About link that used `?purpose=Research+Conversations` now selects General inquiry. The empty “Select a purpose” default and the contact endpoint are unchanged. No cookies or analytics.

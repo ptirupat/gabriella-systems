@@ -8,6 +8,10 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 
 ## 2026-11-24
 
+### Product hero
+
+- The Product page hero (`capabilities.html`) no longer includes the sentence “Dedicated hardware comes later.” The hero still says the software works with the camera you have. About, Academies, and every other page keep their existing hardware wording.
+
 ### Home page lead
 
 - The home page lead no longer includes the sentence “Dedicated hardware comes later.” The lead still says the software works with the camera you have. The home page meta, Open Graph, and Twitter descriptions did not include that sentence, so they are unchanged. Other pages are unchanged.
