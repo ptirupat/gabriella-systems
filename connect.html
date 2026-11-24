@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connect With Gabriella — Gabriella Systems</title>
-    <meta name="description" content="We're selecting academies for a structured pilot. Register interest in a cricket academy pilot, research conversations, or advisory discussions with Gabriella Systems.">
+    <meta name="description" content="We're selecting academies for a structured pilot. Register interest in a cricket academy pilot or send a general inquiry to Gabriella Systems.">
     <meta name="keywords" content="cricket academy pilot, cricket analytics, sports computer vision, responsible sports AI, athlete movement analysis">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Gabriella Systems">
     <meta property="og:title" content="Connect With Gabriella — Gabriella Systems">
-    <meta property="og:description" content="We're selecting academies for a structured pilot. Register interest in a cricket academy pilot, research conversations, or advisory discussions with Gabriella Systems.">
+    <meta property="og:description" content="We're selecting academies for a structured pilot. Register interest in a cricket academy pilot or send a general inquiry to Gabriella Systems.">
     <meta property="og:image" content="https://gabriellasystems.com/assets/cricket-vision-hero.png">
     <meta property="og:url" content="https://gabriellasystems.com/connect.html">
     <meta name="twitter:card" content="summary_large_image">
@@ -23,7 +23,7 @@
                 "@type": "WebPage",
                 "name": "Connect With Gabriella",
                 "url": "https://gabriellasystems.com/connect.html",
-                "description": "Register nonbinding expressions of interest in a cricket academy pilot, research conversations, or advisory discussions with Gabriella Systems.",
+                "description": "Register nonbinding expressions of interest in a cricket academy pilot or a general inquiry with Gabriella Systems.",
                 "isPartOf": { "@type": "WebSite", "url": "https://gabriellasystems.com" }
             },
             {
@@ -81,7 +81,7 @@
         <section class="section is-hidden" id="pathways" hidden aria-labelledby="pathways-h2">
             <div class="container">
                 <div class="section-intro" style="margin-bottom:1.6rem; text-align:left; margin-left:0; margin-right:0;">
-                    <p class="eyebrow">Three pathways</p>
+                    <p class="eyebrow">Pilot</p>
                     <h2 id="pathways-h2">How you can register interest</h2>
 
                 </div>
@@ -102,35 +102,6 @@
                         </button>
                     </article>
 
-                    <!-- Pathway 2 -->
-                    <article class="pathway-card" data-pathway="Research Conversations" aria-label="Pathway 2: Research Conversations">
-                        <div class="pathway-icon p2" aria-hidden="true"><i class="fas fa-flask"></i></div>
-                        <p class="pathway-number">Pathway 2</p>
-                        <h3>Research Conversations</h3>
-                        <p class="pathway-audience">Universities · Laboratories · Established researchers</p>
-                        <p>
-                            Universities and researchers can ask about athlete movement, sports video, and responsible AI.
-                        </p>
-                        <button class="pathway-btn" type="button" aria-controls="interest-form">
-                            Start a research conversation <i class="fas fa-arrow-right"></i>
-                        </button>
-                    </article>
-
-                    <!-- Pathway 3 -->
-                    <article class="pathway-card" data-pathway="Advisory Interest" aria-label="Pathway 3: Advisory Interest">
-                        <div class="pathway-icon p3" aria-hidden="true"><i class="fas fa-user-tie"></i></div>
-                        <p class="pathway-number">Pathway 3</p>
-                        <h3>Advisory Interest</h3>
-                        <p class="pathway-audience">Coaching · Biomechanics · Responsible AI · Sports technology · Commercialization</p>
-                        <p>
-                            Experts in coaching, biomechanics, responsible AI, or sports technology can introduce their background.
-                        </p>
-                        <button class="pathway-btn" type="button" aria-controls="interest-form">
-                            Register Advisory Interest <i class="fas fa-arrow-right"></i>
-                        </button>
-                    </article>
-
-
                 </div>
             </div>
         </section>
@@ -139,7 +110,7 @@
         <!-- CONTACT FORM + INFO ──────────────────────────────────────────── -->
         <section class="section muted-section" id="interest-form" aria-labelledby="connect-form-h2">
             <div class="container">
-                <p class="lead lead--light">Send a note about a pilot or a research conversation.</p>
+                <p class="lead lead--light">Send a note about a pilot or a general inquiry.</p>
                 <div class="contact-grid">
 
                     <!-- Left: contact info ──────────────────────────────── -->
@@ -213,9 +184,7 @@
                                 <label for="cf-purpose">Purpose <span class="req-mark">*</span></label>
                                 <select id="cf-purpose" name="purpose" required>
                                     <option value="" disabled selected>Select a purpose</option>
-                                    <option value="Pilot Interest">Pilot — evaluate Gabriella at my academy or club</option>
-                                    <option value="Research Conversations">Research — institutional research conversation</option>
-                                    <option value="Advisory Interest">Advisory — subject-matter expert introducing background</option>
+                                    <option value="Pilot Interest">Pilot (evaluate Gabriella at my academy or club)</option>
                                     <option value="General">General inquiry</option>
                                 </select>
                             </div>
@@ -383,8 +352,6 @@
         // ── Pathway card → pre-select purpose in inline form ───────────────
         const purposeMap = {
             'Pilot Interest':            'Pilot Interest',
-            'Research Conversations':    'Research Conversations',
-            'Advisory Interest':         'Advisory Interest',
             'Future Paid Opportunities': 'General',
         };
 
