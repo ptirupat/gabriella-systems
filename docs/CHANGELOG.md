@@ -6,6 +6,14 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 
 ---
 
+## 2026-11-24
+
+### Connect purpose choices
+
+- The Connect purpose dropdown keeps two choices: **Pilot (evaluate Gabriella at my academy or club)** and **General inquiry**. Research and Advisory are removed. The hidden Research and Advisory pathway cards, and the script map that preselected those purposes, are removed. No Research-only or Advisory-only fields, validation, or thank-you copy were on the form.
+- The About research section link that opened Connect with `?purpose=Research+Conversations` now opens Connect with General inquiry selected (`?purpose=General#interest-form`).
+- The empty “Select a purpose” default and the contact endpoint are unchanged. No cookies or analytics were added.
+
 ## 2026-11-11
 
 ### Capabilities-led site restructure (open draft PR, unmerged)
