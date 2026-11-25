@@ -8,6 +8,16 @@ Related: [website-updates.md](./website-updates.md) (claims policy), [homepage-h
 
 ## 2026-11-24
 
+### Branded 404, match and practice wording, terms estimates, social tags
+
+- New `404.html` uses the current nav, footer, styles, and head pattern, with root-relative links so it still works when GitHub Pages serves it for a missing path. The heading is “Page not found”, with a short line and links to Home, Product, Showcase, and Connect. `robots` is noindex. It is not in `sitemap.xml`.
+- The Product H1 (`capabilities.html`) and the same sentence in its meta, Open Graph, and Twitter descriptions now read “Batting and bowling analysis from real match and practice video, filmed from more than one viewpoint.” They said “from your nets video”.
+- The home lead under “What you'll see” uses that same sentence, then still points to Product. Invites to film your own nets are unchanged: “Film the nets…”, “Bring this to your nets”, Showcase “See this in your nets”, and the upload step.
+- The Connect H1 is now “Let's talk about your cricket video”. It was “Let's talk about cricket in your nets”.
+- Terms now say “angle estimates”, “any estimate”, and “definitive estimates” where they said “angle measurements”, “any measurement”, and “definitive measurements”. “analysis pipeline” is now “the software that analyzes video”. The rest of the terms are unchanged.
+- About, Connect, Privacy, and Terms now include a canonical URL (`https://gabriellasystems.com/<page>.html`), Open Graph title, description, url, type, and image, and Twitter card, title, description, and image. The image is `https://gabriellasystems.com/assets/cricket-vision-hero.png`, the same file the home and Product pages use. Each page’s existing meta description is the Open Graph and Twitter description. Tags that were already present stay; the missing ones are filled in.
+- No clips, images, cookies, analytics, third-party scripts, DNS, CNAME, or `metric-status.js` switch values were changed.
+
 ### Showcase clips are match and practice video
 
 - The Showcase heading on `demo.html` is now “Sample clips from real match and practice video.” It was “Sample clips from ordinary nets video.”
